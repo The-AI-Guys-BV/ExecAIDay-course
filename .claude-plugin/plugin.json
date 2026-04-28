@@ -1,0 +1,11 @@
+{
+  "name": "execaiday",
+  "version": "0.1.0",
+  "description": "ExecAIDay workshop: Claude Cowork training for C-level executives. Includes 26 skills, 16 module walkthroughs (via /teach), starter templates, and reference materials.",
+  "author": {
+    "name": "Tijn van der Zant",
+    "email": "tijn.vanderzant@gmail.com"
+  },
+  "homepage": "https://execaiday.com",
+  "repository": "https://github.com/The-AI-Guys-BV/ExecAIDay-course"
+}

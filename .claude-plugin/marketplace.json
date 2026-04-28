@@ -1,0 +1,15 @@
+{
+  "name": "execaiday-marketplace",
+  "owner": {
+    "name": "The AI Guys BV",
+    "email": "tijn.vanderzant@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "execaiday",
+      "source": "./",
+      "description": "ExecAIDay workshop plugin — 26 skills, 16 modules, templates, references for the in-person Claude Cowork training course.",
+      "version": "0.1.0"
+    }
+  ]
+}
