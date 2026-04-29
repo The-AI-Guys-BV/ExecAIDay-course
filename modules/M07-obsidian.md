@@ -2,12 +2,14 @@
 
 ## Why this module matters
 
-Obsidian is your knowledge layer — free, local-first, and the same files Cowork reads. Daily notes, references, capture, all linked via `[[wikilinks]]`. Once Obsidian is set up, the vault you mounted in M01 has a proper interface — graph view, a daily-note workflow, and a small set of Obsidian plugins that turn the vault into a working surface (calendar view, templates, weekly/monthly notes, task lists, command palette helper).
+Obsidian is your knowledge layer — free, local-first, and the same files Cowork reads. Daily notes, references, capture, all linked via `[[wikilinks]]`. By the end of this module the vault you mounted in M01 has a real interface (graph view + daily notes), and you've installed five small plugins that most Obsidian users run. The exact button-by-button steps are in Beginner / Getting Started below.
 
 ## What you'll do
 
 - Open Obsidian on the vault you mounted in M01 — same files Cowork sees.
-- Turn on Obsidian's daily-notes workflow (one core toggle + five small plugins: a calendar view, templates, weekly/monthly notes, tasks, and a command palette helper).
+- Open Obsidian's **Settings** (gear icon, bottom-left). Follow the four steps below: turn on the **Daily notes** core plugin, switch on **Community plugins**, install five named plugins (**Calendar**, **Templater**, **Periodic Notes**, **Tasks**, **Commander**), and configure the Daily Notes folder + date format.
+- Use Claude (from your existing Workshop Cowork Project, where the vault is mounted) to write directly into your vault — journal entries, edits, summaries.
+- Optionally: create a second Cowork Project that mounts **only** the vault, for knowledge-focused work.
 - Watch Claude write into today's daily note while Obsidian renders the change live.
 
 ---
@@ -34,11 +36,34 @@ You'll see:
 - The current open note in the main pane.
 - The graph view (icon top-right, shape varies by Obsidian version) showing how notes link.
 
-### How vault + Cowork interact
+### Your vault IS a Cowork project
 
-Same files, two interfaces. Edit a file in Obsidian; Cowork sees the edit on next read. Edit a file from Cowork (Claude writes into it); Obsidian re-renders live (file watching).
+The Cowork Project you made in M01 already mounts your vault. That means **Claude can read every note in your vault and write back to any of them.** Your vault isn't a passive archive — it's a workspace Claude operates on directly.
 
-You'll see this in the exercise at the end.
+Same files, two interfaces. Edit a file in Obsidian; Cowork sees the edit on next read. Ask Claude in Cowork to write something; Obsidian re-renders the change live (file watching).
+
+Try a few of these in Cowork now:
+
+```
+Write a 5-line journal entry about how the workshop is going so far,
+in journal voice. Save to today's daily note in my vault.
+```
+
+```
+Read all my notes in <vault>/References/ and tell me what topics
+I have the most material on.
+```
+
+```
+Open <vault>/About Me.md and tighten the section on stakeholders —
+remove repetition, keep my voice.
+```
+
+Each of those writes into your vault. Watch Obsidian re-render.
+
+**Optional second Cowork Project — "Vault only".** Some people prefer a dedicated Cowork Project that mounts ONLY the vault (no work folder), used for vault-focused work — knowledge curation, journaling, references. Create it in Cowork → New Project → mount the vault only. Use it when you want Claude focused on knowledge, not project work.
+
+You'll see live editing again in the exercise at the end.
 
 ### Obsidian basics
 

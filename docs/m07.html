@@ -30,7 +30,7 @@
       <span class="breadcrumb"><a href="index.html">All modules</a> &nbsp;/&nbsp; Personalize</span>
     </div>
     <h1>M07 — Obsidian</h1>
-    <p class="lede">Obsidian is your knowledge layer — free, local-first, and the same files Cowork reads. Daily notes, references, capture, all linked via <code>[[wikilinks]]</code>. Once Obsidian is set up, the vault you mounted in M01 has a proper interface — graph view, a daily-note workflow, and a small set of Obsidian plugins that turn the vault into a working surface (calendar view, templates, weekly/monthly notes, task lists, command palette helper).</p>
+    <p class="lede">Obsidian is your knowledge layer — free, local-first, and the same files Cowork reads. Daily notes, references, capture, all linked via <code>[[wikilinks]]</code>. By the end of this module the vault you mounted in M01 has a real interface (graph view + daily notes), and you've installed five small plugins that most Obsidian users run. The exact button-by-button steps are in Beginner / Getting Started below.</p>
   </div>
 </header>
 
@@ -38,7 +38,9 @@
 <h2>What you'll do</h2>
 <ul>
 <li>Open Obsidian on the vault you mounted in M01 — same files Cowork sees.</li>
-<li>Turn on Obsidian's daily-notes workflow (one core toggle + five small plugins: a calendar view, templates, weekly/monthly notes, tasks, and a command palette helper).</li>
+<li>Open Obsidian's <strong>Settings</strong> (gear icon, bottom-left). Follow the four steps below: turn on the <strong>Daily notes</strong> core plugin, switch on <strong>Community plugins</strong>, install five named plugins (<strong>Calendar</strong>, <strong>Templater</strong>, <strong>Periodic Notes</strong>, <strong>Tasks</strong>, <strong>Commander</strong>), and configure the Daily Notes folder + date format.</li>
+<li>Use Claude (from your existing Workshop Cowork Project, where the vault is mounted) to write directly into your vault — journal entries, edits, summaries.</li>
+<li>Optionally: create a second Cowork Project that mounts <strong>only</strong> the vault, for knowledge-focused work.</li>
 <li>Watch Claude write into today's daily note while Obsidian renders the change live.</li>
 </ul>
 <h2>Introduction</h2>
@@ -59,9 +61,25 @@
 <li>The current open note in the main pane.</li>
 <li>The graph view (icon top-right, shape varies by Obsidian version) showing how notes link.</li>
 </ul>
-<h3>How vault + Cowork interact</h3>
-<p>Same files, two interfaces. Edit a file in Obsidian; Cowork sees the edit on next read. Edit a file from Cowork (Claude writes into it); Obsidian re-renders live (file watching).</p>
-<p>You'll see this in the exercise at the end.</p>
+<h3>Your vault IS a Cowork project</h3>
+<p>The Cowork Project you made in M01 already mounts your vault. That means <strong>Claude can read every note in your vault and write back to any of them.</strong> Your vault isn't a passive archive — it's a workspace Claude operates on directly.</p>
+<p>Same files, two interfaces. Edit a file in Obsidian; Cowork sees the edit on next read. Ask Claude in Cowork to write something; Obsidian re-renders the change live (file watching).</p>
+<p>Try a few of these in Cowork now:</p>
+<pre><code>
+Write a 5-line journal entry about how the workshop is going so far,
+in journal voice. Save to today's daily note in my vault.
+</code></pre>
+<pre><code>
+Read all my notes in &lt;vault&gt;/References/ and tell me what topics
+I have the most material on.
+</code></pre>
+<pre><code>
+Open &lt;vault&gt;/About Me.md and tighten the section on stakeholders —
+remove repetition, keep my voice.
+</code></pre>
+<p>Each of those writes into your vault. Watch Obsidian re-render.</p>
+<p><strong>Optional second Cowork Project — "Vault only".</strong> Some people prefer a dedicated Cowork Project that mounts ONLY the vault (no work folder), used for vault-focused work — knowledge curation, journaling, references. Create it in Cowork → New Project → mount the vault only. Use it when you want Claude focused on knowledge, not project work.</p>
+<p>You'll see live editing again in the exercise at the end.</p>
 <h3>Obsidian basics</h3>
 <ul>
 <li><code>Cmd/Ctrl + O</code> — open quick-switcher to find any note.</li>
