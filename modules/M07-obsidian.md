@@ -2,15 +2,13 @@
 
 ## Why this module matters
 
-Obsidian is your knowledge layer — free, local-first, and the same files Cowork reads. Daily notes, references, capture, all linked via `[[wikilinks]]`. By the end of this module the vault you mounted in M01 has a real interface (graph view + daily notes), and you've installed five small plugins that most Obsidian users run. The exact button-by-button steps are in Beginner / Getting Started below.
+Obsidian is your knowledge layer — free, local-first, and the same files Cowork reads. Daily notes, references, capture, all linked via `[[wikilinks]]`. Once Obsidian is open on the vault you mounted in M01, Claude can read and write every note in there from Cowork.
 
 ## What you'll do
 
 - Open Obsidian on the vault you mounted in M01 — same files Cowork sees.
-- Open Obsidian's **Settings** (gear icon, bottom-left). Follow the four steps below: turn on the **Daily notes** core plugin, switch on **Community plugins**, install five named plugins (**Calendar**, **Templater**, **Periodic Notes**, **Tasks**, **Commander**), and configure the Daily Notes folder + date format.
 - Use Claude (from your existing Workshop Cowork Project, where the vault is mounted) to write directly into your vault — journal entries, edits, summaries.
-- Optionally: create a second Cowork Project that mounts **only** the vault, for knowledge-focused work.
-- Watch Claude write into today's daily note while Obsidian renders the change live.
+- Optionally: create a second Cowork Project that mounts **only** the vault, or a part of the vault, for focused knowledge work.
 
 ---
 
@@ -73,73 +71,49 @@ You'll see live editing again in the exercise at the end.
 - Daily notes — open today's daily note via the Daily Notes plugin (calendar icon, or `Cmd/Ctrl + Shift + D`).
 - Graph view — visualize how your notes link. Becomes meaningful after weeks of use.
 
-## Intermediate
-
-### Set up Obsidian's daily-notes workflow
-
-You'll enable one Obsidian core plugin and install five small community plugins. Together they turn the empty vault into a working daily-note surface — a calendar in the sidebar, templates for new notes, support for weekly/monthly notes, in-note task lists, and a command palette helper. This is the vanilla "starter set" most Obsidian users run.
-
-Obsidian has two plugin types: **Core plugins** (built in) and **Community plugins** (third-party, opt-in).
-
-**Step 1 — Enable Daily Notes (core).**
-
-Open Obsidian Settings (gear icon, bottom-left). Go to **Core plugins**. Find **Daily notes** in the list, toggle it ON.
-
-**Step 2 — Turn on Community plugins.**
-
-In Settings, go to **Community plugins**. The first time you visit this screen, Obsidian shows "Restricted mode" with a button that says **Turn on community plugins**. Click it and confirm the warning dialog (community plugins run third-party code; the five we use below are widely-trusted standards).
-
-**Step 3 — Install the five community plugins.**
-
-Still in **Settings → Community plugins**, click **Browse**. A search dialog opens. For each plugin below, type the name into the search box, click the result, click **Install**, then click **Enable**. Close the dialog and repeat:
-
-1. **Calendar** — visual calendar to navigate daily / weekly / monthly notes.
-2. **Templater** — template-driven note creation (date math, headers, etc.).
-3. **Periodic Notes** — extends Daily Notes to weekly, monthly, quarterly, yearly.
-4. **Tasks** — checkbox-style task tracking inside notes (separate from your GTD; useful for tactical lists).
-5. **Commander** — adds buttons / command palette entries for the plugins above.
-
-**Step 4 — Configure Daily Notes.**
-
-Settings → **Daily notes**. Set:
-- **New file location:** `Daily Notes/`
-- **Date format:** `YYYY-MM-DD` (matches the convention in `Daily Notes/claude.md`).
-- **Template file location:** leave blank for now (you can add a Templater-driven template later).
-
-If anything in steps 1–4 doesn't match what you see on screen, your assistant will sort it.
-
-### How Claude reads daily notes
-
-Claude reads your Daily Notes when relevant — for example, the `/weekly-review` skill reads the past 7 days' notes to surface accomplishments. Claude treats them as journal voice (per `Daily Notes/claude.md`).
-
-Don't worry about Claude misreading them. The `claude.md` in the Daily Notes folder tells Claude to expect first-person reflective content.
-
 ## Advanced
 
-### Plugins beyond the starter set
+### Create a new Cowork Project with your vault (or part of it)
 
-Worth exploring later (not in workshop):
-- **Dataview** — query your notes as a database.
-- **Excalidraw** — draw directly in notes.
-- **Outliner** — better bullet management.
-- **Note Refactor** — split long notes into linked smaller ones.
+The Workshop Cowork Project from M01 mounts your **whole** vault plus your work folder. That's the general-purpose project. Sometimes you want a Cowork Project scoped to your vault only, or to a slice of it.
 
-Don't install everything at once. Add as you encounter need.
+**How to create one:**
 
-### Obsidian Sync (optional)
+1. In Cowork, top-left of the sidebar, click **+ New Project**.
+2. Name it. Examples: "Vault" (whole vault), "Sales strategy" (one Areas subfolder), "Board notes" (References subfolder), "Journaling" (Daily Notes only).
+3. Click **Mount folder** (or the equivalent in the New Project dialog).
+4. Pick the folder:
+   - **Whole vault** — select the vault root folder (the one Obsidian opens onto).
+   - **Part of the vault** — drill into the vault and select a subfolder, e.g., `<vault>/Areas/Sales-strategy/` or `<vault>/References/Customers/`.
+5. Optionally mount additional folders (a project folder from your work folder, the shared team folder, etc.).
+6. Save.
 
-If you want your vault on your phone too, Obsidian Sync is the cleanest path. Otherwise, the vault stays on your laptop.
+You now have a second Cowork Project. Switch between projects with the project switcher (top-left of the sidebar).
 
-NOT required for the workshop architecture. Sync is a personal-preference layer.
+### How vault + Cowork Project work together
 
-### Templater patterns
+A Cowork Project is a **scope**: it tells Claude which folders to consider. Inside that scope, Claude:
 
-Templater can create complex note structures from a template. Useful for:
-- Daily note template with sections you always want (today's calendar pulled from Cowork later, intentions, gratitude, etc.).
-- Project note template (separate from project folders — these are knowledge-layer notes about projects).
-- Meeting note template (we'll see this in M15).
+- **Reads every file** in the mounted folder(s).
+- **Writes to any file** when you ask. (`/capture`, an artifact that saves to a file, "edit this note" prompts — all land in the mounted folders.)
+- **Reads `claude.md` at every level.** Closer-to-the-file wins. So if you mount `<vault>/Areas/Sales-strategy/`, Claude reads `<vault>/claude.md` (your About Me pointer), then `<vault>/Areas/claude.md` (if it exists), then `<vault>/Areas/Sales-strategy/claude.md`. You can drop a `claude.md` into a subfolder to give Claude project-specific guidance scoped to that area.
+- **Has its own session memory.** Each Cowork Project keeps a separate `memory.md` of patterns Claude has learned. The Workshop project doesn't share memory with your Vault project.
 
-You'll iterate on templates over weeks. Don't optimize on Day 1.
+**Picking a scope:**
+
+- **Whole vault mounted** — for general knowledge work, journaling, cross-vault queries ("summarize everything I have on Sales").
+- **Subfolder mounted** — for focused work where you don't want Claude pulling unrelated vault content into context. Example: a "Board notes" Cowork Project mounting only `<vault>/Areas/Board/` so Claude doesn't pull from your Sales notes.
+- **Vault + work folder** — the M01 Workshop pattern. Most flexible. Claude can pull a meeting note from the vault into a project deliverable in the work folder.
+- **Vault + shared team folder** — for collaborative work where you want personal vault context plus shared materials. (Covered in M16.)
+
+### What stays in the vault, what goes in the work folder
+
+Quick test for where to write:
+- **Permanent knowledge** (a new fact, a person's bio, a meeting note) → vault.
+- **Bounded deliverable** (a memo for the Q3 board, a script for an investor call) → project folder in the work folder.
+- **Today's reflection / capture / loose note** → vault Daily Notes or vault Inbox.
+
+Claude reads both folders in the Workshop project. The line between vault and work folder is YOUR discipline, not Cowork's. Mount accordingly.
 
 ---
 
@@ -169,8 +143,6 @@ Expected: Claude lists files (probably just today's, plus any pre-existing). If 
 ## Common issues
 
 - **Obsidian doesn't see the files Claude wrote** — Obsidian uses file watching; sometimes needs a manual refresh (right-click the file browser → Refresh).
-- **Daily note has wrong date** — check Daily Notes plugin settings; default format must match `YYYY-MM-DD`.
-- **Plugins fail to install** — usually a network issue; retry. Or use Obsidian's BRAT plugin to install from GitHub directly.
 - **Vault feels empty** — that's correct on Day 1. Content accumulates over weeks.
 
 ## References

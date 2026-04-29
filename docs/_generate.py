@@ -186,8 +186,9 @@ TEMPLATE = """<!DOCTYPE html>
     <div class="module-hero-icon" style="background: var(--{phase}-soft); color: var(--{phase});">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">{icon}</svg>
     </div>
-    <div class="eyebrow">
+    <div class="eyebrow eyebrow-row">
       <span class="breadcrumb"><a href="index.html">All modules</a> &nbsp;/&nbsp; {phase_label}</span>
+      <a class="hero-slides-link" href="slides/m{num_padded}.html">▶ View slide deck</a>
     </div>
     <h1>{num} — {title}</h1>
     <p class="lede">{lede}</p>

@@ -263,6 +263,29 @@ a:hover { color: var(--accent); }
   border-bottom: 1px solid var(--line);
 }
 .module-hero .eyebrow { display: flex; align-items: center; gap: 12px; }
+.module-hero .eyebrow-row {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.hero-slides-link {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: var(--accent) !important;
+  text-decoration: none !important;
+  padding: 8px 14px;
+  border: 1px solid var(--accent);
+  border-radius: 100px;
+  background: var(--bg-card);
+  transition: background 0.15s, color 0.15s, transform 0.1s;
+}
+.hero-slides-link:hover {
+  background: var(--accent);
+  color: var(--bg-card) !important;
+  transform: translateY(-1px);
+}
 .breadcrumb { color: var(--subtle); }
 .breadcrumb a { color: var(--subtle); }
 .breadcrumb a:hover { color: var(--ink); }
