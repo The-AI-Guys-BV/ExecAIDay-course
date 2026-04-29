@@ -11,13 +11,9 @@ You walk out as an executive with 7 custom Claude skills + a meta-skill (`/skill
 - Tour Cowork's built-in slash commands.
 - Try `/skill-creator` to build a NEW skill from scratch.
 
-## Time
-
-~75 minutes.
-
 ---
 
-## Section 1 — Introduction (~5 min)
+## Section 1 — Introduction
 
 A skill in 2026 Cowork is a slash command. Same thing, two names. `/teach` and "the teach skill" refer to the same file: `~/.claude/skills/teach/SKILL.md` (or in our case, the version inside this plugin's `skills/teach/`).
 
@@ -34,7 +30,7 @@ The 7 core skills you'll use throughout the workshop and after:
 
 Plus 19 GTD skills (covered in M13) and Cowork built-ins (covered later in this module).
 
-## Section 2 — Beginner / Getting Started (~20 min)
+## Section 2 — Beginner / Getting Started
 
 ### The 7 core skills, one demo each
 
@@ -64,7 +60,7 @@ Claude pulls the next event on your calendar, attendee context, prior notes, rec
 
 Each skill has a SKILL.md you can read. They're in the plugin at `skills/<name>/SKILL.md`.
 
-## Section 3 — Intermediate (~25 min)
+## Section 3 — Intermediate
 
 ### The in-workshop install of `/help-me-prompt`
 
@@ -114,7 +110,7 @@ Plus document built-ins:
 
 You don't need to memorize all of these. Type `/skills` to see what's available right now.
 
-## Section 4 — Advanced (~25 min)
+## Section 4 — Advanced
 
 ### `/skill-creator` — build a new skill
 

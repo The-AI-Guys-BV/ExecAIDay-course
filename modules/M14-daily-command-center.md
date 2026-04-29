@@ -10,13 +10,9 @@ The morning-brief artifact you built Day 1 grows up. By end of M14 it's a full s
 - Add tiles: today's calendar, GTD next-actions top 5, Slack mentions overnight, email urgent + drafts waiting, morning brief narrative, stale waiting-fors.
 - Add Obsidian daily note integration (yesterday's reflections feed today's view).
 
-## Time
-
-~60 minutes.
-
 ---
 
-## Section 1 — Introduction (~5 min)
+## Section 1 — Introduction
 
 You built a simple live artifact in Day 1 closing — three panels: calendar, urgent email, Slack mentions. That artifact has been firing every morning since.
 
@@ -24,7 +20,7 @@ Today we expand it. Now that GTD is live (M13), we can add: top 5 next actions, 
 
 The result is one artifact you open in the morning, look at for 2 minutes, then know what matters for the day. No app-hopping. No "let me check Slack, then email, then Notion."
 
-## Section 2 — Beginner / Getting Started (~15 min)
+## Section 2 — Beginner / Getting Started
 
 ### Reopen the Day 1 artifact
 
@@ -46,7 +42,7 @@ We're adding tiles. Each tile is one source. The full set:
 
 That's 7 tiles. Layout: 2-column grid; calendar + narrative on the left, GTD + email + Slack + waiting-fors on the right.
 
-## Section 3 — Intermediate (~25 min)
+## Section 3 — Intermediate
 
 ### Add the new tiles
 
@@ -90,7 +86,7 @@ Close the artifact. Close Cowork entirely. Wait 10 minutes. Reopen Cowork, reope
 
 Each tile re-queries. Calendar shows updated events. GTD shows updated next-actions. Slack shows fresh mentions. Yesterday's-note shows yesterday (relative to current open).
 
-## Section 4 — Advanced (~15 min)
+## Section 4 — Advanced
 
 ### Custom tiles per workflow
 

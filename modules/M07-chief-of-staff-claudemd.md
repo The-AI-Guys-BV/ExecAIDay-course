@@ -11,13 +11,9 @@ The vault root `claude.md` is the highest-priority context Cowork has about you.
 - Watch Claude read your `about-me` and surface 3 non-obvious things — recognition shock.
 - Compare an email draft pre-`claude.md` (generic) vs post-`claude.md` (matches your voice).
 
-## Time
-
-~75 minutes.
-
 ---
 
-## Section 1 — Introduction (~5 min)
+## Section 1 — Introduction
 
 You have a chief of staff right now. You probably don't think of them that way. They're whoever knows your priorities, your quirks, your stakeholders, the things you do and don't say in writing. They've earned that knowledge over years.
 
@@ -27,7 +23,7 @@ The brief lives at `<vault>/claude.md`. Roughly 30 lines, 4 sections. Written th
 
 Once it exists: every email Claude drafts sounds more like you. Every analysis takes your priorities into account. Every artifact reflects your taste. The chief-of-staff brief is the highest-leverage file in the workshop.
 
-## Section 2 — Beginner / Getting Started (~25 min)
+## Section 2 — Beginner / Getting Started
 
 ### The interview
 
@@ -69,7 +65,7 @@ Answer naturally. Don't over-engineer. The brief is meant to be ~30 lines — sh
 
 Claude synthesizes your answers into the brief at `<vault>/claude.md`. Watch Obsidian render it as you go. Edit any line if you don't like the synthesis.
 
-## Section 3 — Intermediate (~25 min)
+## Section 3 — Intermediate
 
 ### Populate `about-me/`
 
@@ -110,7 +106,7 @@ Watch the output. It should:
 
 If it doesn't, the brief isn't doing its job. Edit and retest.
 
-## Section 4 — Advanced (~15 min)
+## Section 4 — Advanced
 
 ### Maintaining the brief over time
 

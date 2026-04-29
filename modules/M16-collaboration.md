@@ -10,13 +10,9 @@ You + Claude is exec superpower. You + your team + Claude is exec leverage. M16 
 - Pair up (2-3 per group) and collaborate live on a pre-seeded fake project.
 - Run multi-connector magic: Claude reads Slack + Notion + Gmail in one shot during the collaboration scenario.
 
-## Time
-
-~75 minutes.
-
 ---
 
-## Section 1 — Introduction (~5 min)
+## Section 1 — Introduction
 
 Three collaboration surfaces you'll touch:
 
@@ -26,7 +22,7 @@ Three collaboration surfaces you'll touch:
 
 Sales reality: workshop targets same-company cohorts when possible (so the collaboration exercise is realistic). Mixed cohorts run the pairs exercise on a pre-seeded fake project.
 
-## Section 2 — Beginner / Getting Started (~20 min)
+## Section 2 — Beginner / Getting Started
 
 ### Shared Notion page
 
@@ -64,7 +60,7 @@ Pair up (2-3 people). Pre-seeded scenario your assistant provides:
 
 Goal: collaboratively produce a one-page memo summarizing the project state, with Claude reading from all sources.
 
-## Section 3 — Intermediate (~30 min)
+## Section 3 — Intermediate
 
 ### Multi-connector magic — the micro-win
 
@@ -91,11 +87,11 @@ Try one or two during the in-room exercise:
 
 **Scenario B — Joint decision.** Use Claude to synthesize different stakeholders' positions (per Slack and Notion threads) and propose a path forward. Both pair members feed in their context; Claude produces one synthesis.
 
-**Scenario C — Joint status update.** Generate a 5-minute team standup brief from all the sources together. Pair refines.
+**Scenario C — Joint status update.** Generate a  team standup brief from all the sources together. Pair refines.
 
 The point isn't the specific scenario — it's that two people doing the same workflow in their respective Cowork instances produce the same answers from the same sources. The team gets consistency.
 
-## Section 4 — Advanced (~20 min)
+## Section 4 — Advanced
 
 ### Multi-Cowork-Project patterns for sensitive work
 

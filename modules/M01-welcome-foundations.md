@@ -12,13 +12,9 @@ You start the workshop with a working Cowork Project, a tutor (`/teach`) that wa
 - Walk through 18 foundational concepts inside the workspace you just built.
 - See the hallucination demo and learn to calibrate trust.
 
-## Time
-
-~75 minutes (instructor sets the pace).
-
 ---
 
-## Section 1 — Introduction (~5 min)
+## Section 1 — Introduction
 
 You showed up. The plugin is installed (you'll verify in a minute). Your IT team set up your connectors during onboarding. Cowork is ready.
 
@@ -26,7 +22,7 @@ This module's job is to make sure all that work has actually given you a usable 
 
 The single most important thing in this module: by the end, you'll have a Cowork Project (a workspace) with both your folders mounted, and `/teach` will walk you through any future module on command. That's your safety net. If you ever miss something or want to revisit, `/teach M07` or `/teach Skills` is permanent office hours.
 
-## Section 2 — Beginner / Getting Started (~20 min)
+## Section 2 — Beginner / Getting Started
 
 ### Step 1 — Verify install
 
@@ -60,7 +56,7 @@ This is the first skill install. Your assistant will give you the install prompt
 
 Type `/teach M02`. Claude reads the M02 module file and starts walking it. Don't actually do M02 now (you'll do it next anyway), but see how `/teach` opens, lists the section, and waits for you. Type "exit" to close out.
 
-## Section 3 — Intermediate (~30 min)
+## Section 3 — Intermediate
 
 The 18 basic concepts. We'll go through them inside the Cowork Project you just built — every concept becomes concrete because the workspace they describe is the one you're sitting in.
 
@@ -87,7 +83,7 @@ Don't try to memorize. Recognize. You'll re-encounter every concept in later mod
 
 For full definitions, see the References section of this plugin (`references/17-basic-concepts.md` and `references/context-and-context-rot.md`). `/teach` will walk either reference.
 
-## Section 4 — Advanced (~15 min)
+## Section 4 — Advanced
 
 ### Data privacy + company policy
 

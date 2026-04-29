@@ -10,13 +10,9 @@
 - Run the cross-app chain: Excel analysis → PowerPoint slides → Word memo, all sharing context.
 - Use template magic — your actual company PowerPoint template + Claude → on-brand slides matching your company style.
 
-## Time
-
-~60 minutes.
-
 ---
 
-## Section 1 — Introduction (~5 min)
+## Section 1 — Introduction
 
 You've used Word, Excel, PowerPoint for years. The Claude add-ins live INSIDE those apps. Open Word, click Claude in the ribbon, sidebar opens, you can ask Claude to help with the document.
 
@@ -24,7 +20,7 @@ What's new in 2026: cross-app shared context. Start an analysis in Excel. Ask Po
 
 This is the workflow you've actually wanted for years.
 
-## Section 2 — Beginner / Getting Started (~15 min)
+## Section 2 — Beginner / Getting Started
 
 ### Verify add-ins
 
@@ -59,7 +55,7 @@ Claude rewrites the slide content.
 
 These are the per-app moves. Useful, but not the headline.
 
-## Section 3 — Intermediate (~25 min)
+## Section 3 — Intermediate
 
 ### The cross-app chain
 
@@ -108,7 +104,7 @@ Claude reads the template's master slides, fonts, color palette, and produces sl
 
 The output is recognizably yours. That's the felt micro-win.
 
-## Section 4 — Advanced (~15 min)
+## Section 4 — Advanced
 
 ### PowerPoint template reading
 
@@ -152,7 +148,7 @@ The Word add-in launched April 2026, completing the suite. Excel and PowerPoint 
 
 Your actual company PowerPoint template + Claude → on-brand slides matching your company's fonts, colors, and masters. The output looks like YOURS, not Claude's default.
 
-5 slides on a topic relevant to you, in your company's actual visual identity, in 2 minutes. That's the felt moment.
+5 slides on a topic relevant to you, in your company's actual visual identity, . That's the felt moment.
 
 ## Verification checkpoint
 

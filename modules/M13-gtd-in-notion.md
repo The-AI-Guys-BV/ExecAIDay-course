@@ -13,13 +13,9 @@ David Allen's GTD, but you never have to open Notion. The 19 GTD skills make it 
 - Try `/whats-next`, `/waiting-for`, `/process-inbox`.
 - Combine a scheduled task + GTD: weekly review every Monday morning.
 
-## Time
-
-~75 minutes.
-
 ---
 
-## Section 1 — Introduction (~5 min)
+## Section 1 — Introduction
 
 GTD's core insight: your brain is for having ideas, not holding them. Externalize everything into a trusted system. Then your brain is free to think.
 
@@ -32,7 +28,7 @@ The five steps:
 
 This module gives you the Cowork-driven version of all five.
 
-## Section 2 — Beginner / Getting Started (~20 min)
+## Section 2 — Beginner / Getting Started
 
 ### Tour the GTD Notion template
 
@@ -80,7 +76,7 @@ Try filtered:
 
 Shows only items estimated <15 min. Useful when you have a small chunk of time.
 
-## Section 3 — Intermediate (~30 min)
+## Section 3 — Intermediate
 
 ### `/process-inbox`
 
@@ -136,7 +132,7 @@ Tell me to run /weekly-review now. Surface as a Slack DM to me with the link to 
 
 Now every Monday you get the nudge. Skill does the heavy lifting.
 
-## Section 4 — Advanced (~20 min)
+## Section 4 — Advanced
 
 ### Higher horizons skills
 
@@ -166,7 +162,7 @@ Lands in the Tickler database. Surfaces 3 weeks from now via `/tickler review`.
 
 Walks: what got done today, what's still open, what's tomorrow's #1. Logs to today's Daily Note + creates next-actions in Notion.
 
-5-minute end-of-day discipline. The point is the daily review, not the time savings.
+ end-of-day discipline. The point is the daily review, not the time savings.
 
 ### Team GTD considerations
 

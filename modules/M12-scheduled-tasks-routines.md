@@ -10,23 +10,19 @@ Claude works while you sleep. The morning brief that lands on your phone before 
 - Add a second scheduled task or Routine relevant to your workflow.
 - Learn the difference: Desktop tasks (local, 1-min granularity, awake+open required) vs Routines (cloud, 1-hour min, always-on).
 
-## Time
-
-~60 minutes.
-
 ---
 
-## Section 1 — Introduction (~5 min)
+## Section 1 — Introduction
 
 A scheduled task is a Claude prompt that runs on a schedule. You set it once; it fires at the cadence you specify.
 
 Two flavors:
-- **Desktop scheduled tasks** — run on your laptop, when Cowork is open. 1-minute granularity. Can read local files (your work folder, your vault).
+- **Desktop scheduled tasks** — run on your laptop, when Cowork is open.  granularity. Can read local files (your work folder, your vault).
 - **Routines** — run on Anthropic's cloud infrastructure regardless of laptop state. 1-hour minimum interval. Cannot access local files.
 
 Which to use depends on the task. Most workshop tasks are Desktop (need local file access). Always-on monitoring or daily summaries that don't need local files → Routines.
 
-## Section 2 — Beginner / Getting Started (~15 min)
+## Section 2 — Beginner / Getting Started
 
 ### Review the morning brief
 
@@ -52,7 +48,7 @@ So: a 9am task whose laptop slept all day may run at 11pm on wake. The guardrail
 
 Full reference: `references/scheduled-task-patterns.md`.
 
-## Section 3 — Intermediate (~20 min)
+## Section 3 — Intermediate
 
 ### Add a second scheduled task
 
@@ -102,7 +98,7 @@ Don't use Routines for:
 
 Routines are configured separately in Cowork → Settings → Routines.
 
-## Section 4 — Advanced (~20 min)
+## Section 4 — Advanced
 
 ### Guardrail prompt patterns
 

@@ -10,13 +10,9 @@ Obsidian is your knowledge layer — free, local-first, and the same files Cowor
 - Install the plugin starter set: Daily Notes, Calendar, Templater, Periodic Notes, Tasks, Commander.
 - Watch Claude write into today's daily note while Obsidian renders the change live.
 
-## Time
-
-~45 minutes.
-
 ---
 
-## Section 1 — Introduction (~5 min)
+## Section 1 — Introduction
 
 You have a vault. It's a folder of Markdown files. Cowork reads them as plain text. Obsidian renders them as a knowledge graph with bidirectional links, daily notes, plugins for everything.
 
@@ -27,7 +23,7 @@ The three-layer model from M01:
 
 This module sets up the third layer. Obsidian is one tool; you'll have it open on a second monitor or alongside Cowork.
 
-## Section 2 — Beginner / Getting Started (~15 min)
+## Section 2 — Beginner / Getting Started
 
 ### Open Obsidian on your vault
 
@@ -52,7 +48,7 @@ You'll see this in the micro-win at the end.
 - Daily notes — open today's daily note via the Daily Notes plugin (calendar icon, or `Cmd/Ctrl + Shift + D`).
 - Graph view — visualize how your notes link. Becomes meaningful after weeks of use.
 
-## Section 3 — Intermediate (~15 min)
+## Section 3 — Intermediate
 
 ### Plugin starter set
 
@@ -76,7 +72,7 @@ Claude reads your Daily Notes when relevant — for example, the `/weekly-review
 
 Don't worry about Claude misreading them. The `claude.md` in the Daily Notes folder tells Claude to expect first-person reflective content.
 
-## Section 4 — Advanced (~10 min)
+## Section 4 — Advanced
 
 ### Plugins beyond the starter set
 

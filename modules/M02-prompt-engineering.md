@@ -11,13 +11,9 @@ The single biggest variable in whether Claude is useful or wasteful is the promp
 - Try metaprompting via `/help-me-prompt` (you'll install this skill in M11; here you'll see the concept).
 - Quick voice mention (Wispr / Superwhisper / Voibe — installed in onboarding).
 
-## Time
-
-~60 minutes.
-
 ---
 
-## Section 1 — Introduction (~5 min)
+## Section 1 — Introduction
 
 Most people prompt Claude by saying what they want. That's not enough.
 
@@ -27,7 +23,7 @@ Skip the role, you get generic. Skip the context, Claude guesses. Skip the forma
 
 This module gives you the framework explicitly so the moves are conscious. After a week of using it, it'll be habit.
 
-## Section 2 — Beginner / Getting Started (~20 min)
+## Section 2 — Beginner / Getting Started
 
 R-C-T-F-C, with one example:
 
@@ -47,7 +43,7 @@ offer. Comp will be competitive but not the highest she could get.
 T: Write a follow-up email making the verbal offer and requesting a call this week to
 walk through specifics.
 
-F: 4 short paragraphs. No subject line. Closing requests a 30-minute call. Tone: warm,
+F: 4 short paragraphs. No subject line. Closing requests a  call. Tone: warm,
 confident, not pushy.
 
 C: Don't mention specific compensation numbers. Don't sound like a form letter. No
@@ -65,7 +61,7 @@ The five elements:
 
 Full reference: `references/rctfc-framework.md`.
 
-## Section 3 — Intermediate (~20 min)
+## Section 3 — Intermediate
 
 The 10 anti-patterns. Recognize them in your own prompting and you'll catch yourself before sending a sloppy prompt:
 
@@ -82,7 +78,7 @@ The 10 anti-patterns. Recognize them in your own prompting and you'll catch your
 
 Full reference with examples: `references/10-anti-patterns.md`.
 
-## Section 4 — Advanced (~15 min)
+## Section 4 — Advanced
 
 ### Metaprompting via `/help-me-prompt`
 

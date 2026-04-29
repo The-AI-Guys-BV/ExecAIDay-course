@@ -1,4 +1,4 @@
-# M09 — Browser + Chrome (deep-live, ~45 min)
+# M09 — Browser + Chrome
 
 ## Why this module matters
 
@@ -11,13 +11,9 @@ Claude in Chrome means Claude can navigate, record, replay, and coordinate acros
 - Replay the workflow on demand.
 - Run a multi-tab task (competitive intel across 6 sites → one comparison).
 
-## Time
-
-~45 minutes (deep-live).
-
 ---
 
-## Section 1 — Introduction (~3 min)
+## Section 1 — Introduction
 
 A connector handles structured data — your inbox, your calendar, your Notion. A browser handles everything else: portals without APIs, dashboards behind logins, sites with no MCP integration. Claude in Chrome is for those.
 
@@ -28,7 +24,7 @@ Three killer capabilities:
 
 Plus side capabilities: console log reading (debugging), real-site navigation (pull a fact from a portal you can't get to via connector).
 
-## Section 2 — Beginner / Getting Started (~10 min)
+## Section 2 — Beginner / Getting Started
 
 ### Open the side panel
 
@@ -51,7 +47,7 @@ Examples:
 
 Claude reads the page and returns the value. First proof Chrome works.
 
-## Section 3 — Intermediate (~20 min)
+## Section 3 — Intermediate
 
 ### Record-and-replay
 
@@ -107,7 +103,7 @@ Examples worth scheduling:
 
 Output goes to Cowork (you specify destination — file, Slack post, email, etc.).
 
-## Section 4 — Advanced (~10 min)
+## Section 4 — Advanced
 
 ### Console log reading
 
@@ -147,7 +143,7 @@ Tijn picks default. Three options, all staged:
 2. Record-a-workflow: you perform 3 steps, Claude records, you replay.
 3. Multi-tab intel: 6 competitor sites → comparison table.
 
-The default is to do all 3 — they take ~30 minutes combined. Picking one stages a deeper exploration of that capability.
+The default is to do all 3 — they go together. Picking one stages a deeper exploration of that capability.
 
 ## Verification checkpoint
 

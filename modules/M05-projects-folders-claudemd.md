@@ -11,13 +11,9 @@ This is the structural module. Two folder shapes, two senses of "project," and o
 - Run `/new-project` for the first time — scaffold the workshop's first project folder (`course/`) and watch the synthesis interview produce a tailored `claude.md`.
 - Pull workshop content from Notion into `course/Source Materials/` — your first content move.
 
-## Time
-
-~75 minutes.
-
 ---
 
-## Section 1 — Introduction (~5 min)
+## Section 1 — Introduction
 
 Cowork has built-in concepts; we have folder conventions; the two interlock. This is how:
 
@@ -29,7 +25,7 @@ Cowork has built-in concepts; we have folder conventions; the two interlock. Thi
 
 That's the whole architecture. M05 makes it concrete.
 
-## Section 2 — Beginner / Getting Started (~20 min)
+## Section 2 — Beginner / Getting Started
 
 ### The two folder shapes
 
@@ -76,7 +72,7 @@ Closer-to-the-file wins. So when Claude is working in `<work-folder>/q3-deck/Wor
 
 The project `claude.md` doesn't restate the chief-of-staff brief — it only mentions deviations.
 
-## Section 3 — Intermediate (~30 min)
+## Section 3 — Intermediate
 
 ### Run `/new-project` for the first time
 
@@ -116,7 +112,7 @@ Claude reads `docs/welcome.md` and `docs/how-to-start.md` from the installed plu
 
 This is the pattern: Source Materials gets the raw inputs (from anywhere — plugin, web, email, conversation transcripts). Working Files is where you iterate. Deliverables is what you ship.
 
-## Section 4 — Advanced (~15 min)
+## Section 4 — Advanced
 
 ### Multi-Cowork-Project patterns
 

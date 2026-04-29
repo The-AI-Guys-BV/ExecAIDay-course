@@ -10,19 +10,15 @@ Cowork is on. Time to know where things are and what to set so it behaves like Y
 - Configure 5 exec-relevant settings.
 - Set data-sharing / telemetry toggles deliberately.
 
-## Time
-
-~30 minutes.
-
 ---
 
-## Section 1 — Introduction (~3 min)
+## Section 1 — Introduction
 
 You already turned Cowork on in M01 when you created your Cowork Project. This module isn't about activating Cowork; it's about KNOWING the workspace you're in so the rest of the workshop isn't a treasure hunt mid-demo.
 
 Five UI elements you'll recognize on sight by the end of this module. Five settings you'll set deliberately. That's the whole module.
 
-## Section 2 — Beginner / Getting Started (~10 min)
+## Section 2 — Beginner / Getting Started
 
 The 5 named UI elements (treasure hunt — find each in your Cowork window):
 
@@ -34,7 +30,7 @@ The 5 named UI elements (treasure hunt — find each in your Cowork window):
 
 Find each one in your window. Tell your assistant when you've found all 5.
 
-## Section 3 — Intermediate (~10 min)
+## Section 3 — Intermediate
 
 The 5 settings to set deliberately. Defaults are reasonable but not yours.
 
@@ -62,7 +58,7 @@ Settings → Connectors → Per-Project. By default, all connectors are availabl
 
 Customize → Skills. By default, all installed skills are enabled. You can disable skills you never use to reduce slash command clutter. (Worth noting; not action-required.)
 
-## Section 4 — Advanced (~10 min)
+## Section 4 — Advanced
 
 ### Data-sharing / telemetry toggles
 

@@ -11,13 +11,9 @@ The jaw-drop arc. Inbox, drafts, calendar — your real data, in Cowork, working
 - Run R-C-T-F-C from M02 on a real email — the callback exercise.
 - Walk the 3-step micro-win arc: inbox read-back → live draft → calendar + email chain.
 
-## Time
-
-~75 minutes.
-
 ---
 
-## Section 1 — Introduction (~5 min)
+## Section 1 — Introduction
 
 A connector is an authenticated bridge between Claude and your services. Set up during IT onboarding, scoped to specific permissions. When Claude needs your inbox, it queries via the connector. When you ask "what's on my calendar today," same.
 
@@ -25,7 +21,7 @@ You don't authenticate per use. The connector is always-on once set up. Claude p
 
 This module: verify your connectors, run a real R-C-T-F-C prompt on a real email, and experience the 3-step jaw-drop arc.
 
-## Section 2 — Beginner / Getting Started (~20 min)
+## Section 2 — Beginner / Getting Started
 
 ### Verify connectors
 
@@ -49,9 +45,9 @@ What's in my inbox right now? Top 5, with one-line summaries.
 
 Claude queries Gmail / M365, returns 5 emails with brief summaries. This is the first jaw-drop. Real data, real surface, no setup beyond what's already done.
 
-## Section 3 — Intermediate (~30 min)
+## Section 3 — Intermediate
 
-### R-C-T-F-C callback on a real email (~10 min)
+### R-C-T-F-C callback on a real email
 
 Find an email in your inbox that needs a reply. The kind of email you'd normally spend 5–10 minutes on. Then:
 
@@ -103,7 +99,7 @@ that's directly tagged for my attention. Pull from real data.
 
 Claude composes a 1-page narrative brief from calendar + email + Slack. This is what M14 builds into a daily live artifact dashboard. For now, see the data flow working.
 
-## Section 4 — Advanced (~15 min)
+## Section 4 — Advanced
 
 ### Connector quirks
 

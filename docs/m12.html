@@ -41,17 +41,15 @@
 <li>Add a second scheduled task or Routine relevant to your workflow.</li>
 <li>Learn the difference: Desktop tasks (local, 1-min granularity, awake+open required) vs Routines (cloud, 1-hour min, always-on).</li>
 </ul>
-<h2>Time</h2>
-<p>~60 minutes.</p>
-<h2>Section 1 — Introduction (~5 min)</h2>
+<h2>Section 1 — Introduction</h2>
 <p>A scheduled task is a Claude prompt that runs on a schedule. You set it once; it fires at the cadence you specify.</p>
 <p>Two flavors:</p>
 <ul>
-<li><strong>Desktop scheduled tasks</strong> — run on your laptop, when Cowork is open. 1-minute granularity. Can read local files (your work folder, your vault).</li>
+<li><strong>Desktop scheduled tasks</strong> — run on your laptop, when Cowork is open.  granularity. Can read local files (your work folder, your vault).</li>
 <li><strong>Routines</strong> — run on Anthropic's cloud infrastructure regardless of laptop state. 1-hour minimum interval. Cannot access local files.</li>
 </ul>
 <p>Which to use depends on the task. Most workshop tasks are Desktop (need local file access). Always-on monitoring or daily summaries that don't need local files → Routines.</p>
-<h2>Section 2 — Beginner / Getting Started (~15 min)</h2>
+<h2>Section 2 — Beginner / Getting Started</h2>
 <h3>Review the morning brief</h3>
 <p>If your workshop is on Day 2, you should have received a morning brief this morning via:</p>
 <ul>
@@ -71,7 +69,7 @@
 </ul>
 <p>So: a 9am task whose laptop slept all day may run at 11pm on wake. The guardrail prompt pattern is what prevents this from being a problem.</p>
 <p>Full reference: <code>references/scheduled-task-patterns.md</code>.</p>
-<h2>Section 3 — Intermediate (~20 min)</h2>
+<h2>Section 3 — Intermediate</h2>
 <h3>Add a second scheduled task</h3>
 <p>Pick a real recurring task. Examples:</p>
 <ul>
@@ -116,7 +114,7 @@
 <li>Anything that needs to read project <code>claude.md</code>s.</li>
 </ul>
 <p>Routines are configured separately in Cowork → Settings → Routines.</p>
-<h2>Section 4 — Advanced (~20 min)</h2>
+<h2>Section 4 — Advanced</h2>
 <h3>Guardrail prompt patterns</h3>
 <p>Every scheduled task should have a guardrail. The pattern:</p>
 <pre><code>

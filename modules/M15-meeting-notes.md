@@ -11,13 +11,9 @@ Meeting transcripts → Obsidian daily note → Claude processes → follow-up e
 - Try gap analysis: Claude cross-references the transcript vs your existing Notion notes, surfaces commitments you missed.
 - Generate follow-up emails routed to `drafts-inbox`.
 
-## Time
-
-~60 minutes.
-
 ---
 
-## Section 1 — Introduction (~5 min)
+## Section 1 — Introduction
 
 Most execs already have a meeting-note tool. Granola, Bluedot, and Fellow's bot-less mode are the ones the workshop locks on (Fireflies retired — bot-based, poor fit for sensitive exec meetings).
 
@@ -27,7 +23,7 @@ This matters in 2026 because Microsoft Teams is rolling out third-party bot dete
 
 This module: the pipeline from meeting → notes → action.
 
-## Section 2 — Beginner / Getting Started (~15 min)
+## Section 2 — Beginner / Getting Started
 
 ### Verify your meeting-note tool
 
@@ -50,7 +46,7 @@ When a real meeting happens:
 
 Workshop default: tool dumps transcripts to a folder in your vault, e.g., `<vault>/Meeting Transcripts/`. Or directly into your Daily Note for the meeting's day.
 
-## Section 3 — Intermediate (~25 min)
+## Section 3 — Intermediate
 
 ### Run a full pipeline on a real meeting
 
@@ -101,7 +97,7 @@ Save to drafts-inbox for me to review.
 
 Claude drafts. Lands in your drafts inbox. You review, edit, send.
 
-## Section 4 — Advanced (~15 min)
+## Section 4 — Advanced
 
 ### Recurring meeting context-stitching
 

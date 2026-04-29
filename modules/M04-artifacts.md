@@ -10,13 +10,9 @@ Live artifacts (April 2026 headline) are how Claude becomes a persistent surface
 - Build a simple live artifact, close Cowork, reopen — watch it pull fresh data.
 - Find the sidebar, restore a previous version.
 
-## Time
-
-~45 minutes.
-
 ---
 
-## Section 1 — Introduction (~5 min)
+## Section 1 — Introduction
 
 An artifact is a generated output Claude renders inline alongside its text response. Could be a document, a dashboard, a chart, a small interactive HTML page, a Mermaid diagram, a data visualization.
 
@@ -24,7 +20,7 @@ The 2026 headline: **live artifacts** auto-refresh on reopen. So the dashboard i
 
 This module: see artifact types, build one live artifact, see version history. The big payoff comes in M14 when we build the Daily Command Center artifact.
 
-## Section 2 — Beginner / Getting Started (~10 min)
+## Section 2 — Beginner / Getting Started
 
 Artifact types you can ask Claude to generate:
 
@@ -46,7 +42,7 @@ color, with the current day highlighted.
 
 Cowork generates the artifact, opens the artifact sidebar on the right, renders the HTML inline.
 
-## Section 3 — Intermediate (~15 min)
+## Section 3 — Intermediate
 
 ### Live artifacts — the headline
 
@@ -78,7 +74,7 @@ Known bug: sometimes the sidebar shows two artifacts' content interleaved. Worka
 
 If your assistant sees this, they'll flag and reset.
 
-## Section 4 — Advanced (~10 min)
+## Section 4 — Advanced
 
 ### Sharing limit (current as of April 2026)
 
