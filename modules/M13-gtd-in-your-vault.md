@@ -2,7 +2,7 @@
 
 ## Why this module matters
 
-David Allen's GTD, but stored as plain markdown files in your Obsidian vault. The 19 GTD skills make it work from Cowork — capture, process, query, review. Your vault is the database; Cowork is the interface; Obsidian is the read-side. This is the module where your task management gets unified — no more sticky notes, no more inbox-as-todo-list, no more "let me write that down somewhere."
+David Allen's GTD, but stored as files in your Obsidian vault. The 19 GTD skills make it work from Cowork — capture, process, query, review. Your vault is the database; Cowork is the interface; Obsidian is the read-side. This is the module where your task management gets unified — no more sticky notes, no more inbox-as-todo-list, no more "let me write that down somewhere."
 
 > Methodology credit: **David Allen's Getting Things Done** (2001, revised 2015). The five-step GTD method (capture, clarify, organize, reflect, engage) is what these skills operationalize. We didn't invent the method — we built the interface.
 
@@ -15,7 +15,7 @@ David Allen's GTD, but stored as plain markdown files in your Obsidian vault. Th
 
 ---
 
-## Section 1 — Introduction
+## Introduction
 
 GTD's core insight: your brain is for having ideas, not holding them. Externalize everything into a trusted system. Then your brain is free to think.
 
@@ -26,9 +26,9 @@ The five steps:
 4. **Reflect** — review weekly. What's stale? What needs my attention?
 5. **Engage** — choose what to do based on context, energy, time available.
 
-This module gives you the Cowork-driven version of all five — backed by markdown files in your vault.
+This module gives you the Cowork-driven version of all five — backed by files in your vault.
 
-## Section 2 — Beginner / Getting Started
+## Beginner / Getting Started
 
 ### Tour the GTD vault layout
 
@@ -36,7 +36,7 @@ Open Obsidian. Navigate to `<vault>/gtd/`. You'll see:
 
 - `inbox.md` — capture surface. Everything new goes here first as a bullet.
 - `next-actions.md` — single-step items. Bullets with `#context/...`, `#energy/...`, `#time/...` tags.
-- `projects/` — folder, one MD per project. Outcome at top, stakeholders, deadline, current next-action linked.
+- `projects/` — folder, one file per project. Outcome at top, stakeholders, deadline, current next-action linked.
 - `waiting-for.md` — delegated items, bullets with `@person:...`.
 - `someday.md` — might do later, not committed.
 - `tickler.md` — defer-to-future items, bullets with `surface:YYYY-MM-DD`.
@@ -46,7 +46,7 @@ Open Obsidian. Navigate to `<vault>/gtd/`. You'll see:
 
 References live in `<vault>/References/` as you already use them.
 
-The 19 GTD skills read and write these files. You normally don't open them by hand — but they ARE plain markdown, so you can if you want.
+The 19 GTD skills read and write these files. You normally don't open them by hand — but they ARE plain-text files, so you can if you want.
 
 ### Tag conventions
 
@@ -94,7 +94,7 @@ Try filtered:
 
 Shows only `#time/quick` items. Useful when you have a small chunk of time.
 
-## Section 3 — Intermediate
+## Intermediate
 
 ### `/process-inbox`
 
@@ -154,7 +154,7 @@ Now every Monday you get the nudge. The skill does the heavy lifting.
 
 You can capture from your phone. The Claude mobile app + Dispatch (March 2026) routes voice/text requests to your desktop Cowork, which runs `/capture`, which appends the bullet to `<vault>/gtd/inbox.md`. Same for `/whats-next`, `/waiting-for`, `/today`. See M12 for setup.
 
-## Section 4 — Advanced
+## Advanced
 
 ### Higher horizons skills
 

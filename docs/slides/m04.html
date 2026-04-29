@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M04 Artifacts — Slides — ExecAIDay</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../slides.css">
+</head>
+<body>
+
+<div class="deck" data-deck>
+
+  <section class="slide slide-title">
+    <div class="slide-inner">
+      <div class="title-icon" style="background: var(--foundation-soft); color: var(--foundation);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      </div>
+      <div class="title-eyebrow">Foundation</div>
+      <h1 class="title-num">M04</h1>
+      <h2 class="title-name">Artifacts</h2>
+    </div>
+  </section>
+
+  <section class="slide slide-why">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Why this module matters</div>
+      <p class="slide-lede">Live artifacts (April 2026 headline) are how Claude becomes a persistent surface in your work, not a one-shot answer. A dashboard you build today reopens tomorrow with fresh data. That's the difference between asking Claude a question and having Claude maintain a view.</p>
+    </div>
+  </section>
+
+  <section class="slide slide-what">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">What you'll do</div>
+      <div class="slide-list">
+        <ul>
+<li>See the artifact kinds you'll actually use: documents, dashboards, diagrams.</li>
+<li>Build a simple live artifact, close Cowork, reopen — watch it pull fresh data.</li>
+<li>Find the sidebar, restore a previous version.</li>
+</ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-try">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Try this</div>
+      <div class="slide-try-body">
+        <p>Build the GTD-Inbox live artifact above. With the artifact open, in another Cowork tab type <code>/capture remind me to test the live artifact</code>. Watch your new item appear in the artifact when it refreshes. That's "live" — not a screenshot, a surface that updates.</p>
+<p>In M14 you'll build the full version that pulls calendar, email, Slack, and your vault GTD together. For now, one live tile is enough to feel the difference.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="deck-chrome">
+  <a href="../m04.html" class="deck-back">← Back to M04</a>
+  <div class="deck-counter"><span data-current>1</span> / <span data-total>4</span></div>
+  <div class="deck-nav">
+    <button data-prev aria-label="Previous slide">←</button>
+    <button data-next aria-label="Next slide">→</button>
+  </div>
+</div>
+
+<script>
+(function() {
+  const slides = document.querySelectorAll('.slide');
+  const total = slides.length;
+  document.querySelector('[data-total]').textContent = total;
+  let idx = 0;
+  const counter = document.querySelector('[data-current]');
+  function show(n) {
+    idx = Math.max(0, Math.min(total - 1, n));
+    slides.forEach((s, i) => s.classList.toggle('active', i === idx));
+    counter.textContent = idx + 1;
+  }
+  show(0);
+  document.querySelector('[data-prev]').addEventListener('click', () => show(idx - 1));
+  document.querySelector('[data-next]').addEventListener('click', () => show(idx + 1));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); show(idx + 1); }
+    if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(idx - 1); }
+    if (e.key === 'Home') { show(0); }
+    if (e.key === 'End') { show(total - 1); }
+  });
+})();
+</script>
+
+</body>
+</html>

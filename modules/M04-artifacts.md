@@ -12,7 +12,7 @@ Live artifacts (April 2026 headline) are how Claude becomes a persistent surface
 
 ---
 
-## Section 1 — Introduction
+## Introduction
 
 An artifact is a generated output Claude renders inline alongside its text response. For executives, the kinds that matter are documents you can edit, dashboards you can re-open, and diagrams that explain a flow.
 
@@ -20,7 +20,7 @@ The 2026 headline: **live artifacts** auto-refresh on reopen. So the dashboard i
 
 This module: see the kinds, build one live artifact, see version history. The big payoff comes in M14 when we build the Daily Command Center artifact.
 
-## Section 2 — Beginner / Getting Started
+## Beginner / Getting Started
 
 The artifact kinds you'll actually ask for:
 
@@ -39,7 +39,7 @@ different color, with today highlighted.
 
 Cowork generates the artifact, opens the artifact sidebar on the right, renders it inline.
 
-## Section 3 — Intermediate
+## Intermediate
 
 ### Live artifacts — the headline
 
@@ -54,7 +54,7 @@ Read fresh from the file each time the artifact opens.
 
 Cowork builds the artifact, reads <vault>/gtd/inbox.md, and renders the inbox items. Close the artifact panel. Close Cowork entirely. Reopen tomorrow. Reopen this artifact. It pulls fresh data — your CURRENT inbox, not yesterday's snapshot.
 
-That's live. The full Daily Command Center artifact in M14 — pulling calendar, email, Slack, and your vault GTD all together — only works after the rest of your connectors come online in M08.
+That's live. The full Daily Command Center artifact in M14 — pulling calendar, email, Slack, and your vault GTD all together — only works after the rest of your connectors come online in M09.
 
 ### Sidebar access
 
@@ -71,7 +71,7 @@ Known bug: sometimes the sidebar shows two artifacts' content interleaved. Worka
 
 If your assistant sees this, they'll flag and reset.
 
-## Section 4 — Advanced
+## Advanced
 
 ### Sharing limit (current as of April 2026)
 
@@ -89,7 +89,7 @@ Useful when a Claude edit makes the artifact worse and you want to roll back.
 
 Artifacts compose with skills. A skill can produce an artifact as its output. Examples:
 - `/today` could output a brief artifact instead of text.
-- A skill you build later (M11) could maintain a project tracker artifact.
+- A skill you build later (M05) could maintain a project tracker artifact.
 
 The pattern: skill = trigger; artifact = persistent visible surface.
 

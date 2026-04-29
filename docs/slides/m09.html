@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M09 Connectors — Slides — ExecAIDay</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../slides.css">
+</head>
+<body>
+
+<div class="deck" data-deck>
+
+  <section class="slide slide-title">
+    <div class="slide-inner">
+      <div class="title-icon" style="background: var(--connect-soft); color: var(--connect);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+      </div>
+      <div class="title-eyebrow">Connect</div>
+      <h1 class="title-num">M09</h1>
+      <h2 class="title-name">Connectors</h2>
+    </div>
+  </section>
+
+  <section class="slide slide-why">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Why this module matters</div>
+      <p class="slide-lede">The jaw-drop arc. Inbox, drafts, calendar — your real data, in Cowork, working immediately. Up to here, the workshop was setup and orientation. M09 is where the system becomes useful in your actual workflow.</p>
+    </div>
+  </section>
+
+  <section class="slide slide-what">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">What you'll do</div>
+      <div class="slide-list">
+        <ul>
+<li>Verify connectors: Gmail / M365, Calendar, Drive, Slack, plus your custom apps (Asana / Monday / Jira / Linear / SFDC / HubSpot / etc.).</li>
+<li>Run R-C-T-F-C from M02 on a real email — the callback exercise.</li>
+<li>Walk the 3-step arc: inbox read-back → live draft → calendar + email chain.</li>
+</ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-try">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Try this</div>
+      <div class="slide-try-body">
+        <p>Walk through all three steps in order:
+1. Inbox read-back. Jaw-drop #1.
+2. Live drafts that appear in your actual email Drafts folder. Jaw-drop #2.
+3. Calendar + email chain narrative. Jaw-drop #3.</p>
+<p>By the end, "Cowork as a system" has become real to you.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="deck-chrome">
+  <a href="../m09.html" class="deck-back">← Back to M09</a>
+  <div class="deck-counter"><span data-current>1</span> / <span data-total>4</span></div>
+  <div class="deck-nav">
+    <button data-prev aria-label="Previous slide">←</button>
+    <button data-next aria-label="Next slide">→</button>
+  </div>
+</div>
+
+<script>
+(function() {
+  const slides = document.querySelectorAll('.slide');
+  const total = slides.length;
+  document.querySelector('[data-total]').textContent = total;
+  let idx = 0;
+  const counter = document.querySelector('[data-current]');
+  function show(n) {
+    idx = Math.max(0, Math.min(total - 1, n));
+    slides.forEach((s, i) => s.classList.toggle('active', i === idx));
+    counter.textContent = idx + 1;
+  }
+  show(0);
+  document.querySelector('[data-prev]').addEventListener('click', () => show(idx - 1));
+  document.querySelector('[data-next]').addEventListener('click', () => show(idx + 1));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); show(idx + 1); }
+    if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(idx - 1); }
+    if (e.key === 'Home') { show(0); }
+    if (e.key === 'End') { show(total - 1); }
+  });
+})();
+</script>
+
+</body>
+</html>

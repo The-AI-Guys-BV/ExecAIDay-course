@@ -1,4 +1,4 @@
-# M10 — Office Add-ins
+# M11 — Office Add-ins
 
 ## Why this module matters
 
@@ -12,7 +12,7 @@
 
 ---
 
-## Section 1 — Introduction
+## Introduction
 
 You've used Word, Excel, PowerPoint for years. The Claude add-ins live INSIDE those apps. Open Word, click Claude in the ribbon, sidebar opens, you can ask Claude to help with the document.
 
@@ -20,7 +20,7 @@ What's new in 2026: cross-app shared context. Start an analysis in Excel. Ask Po
 
 This is the workflow you've actually wanted for years.
 
-## Section 2 — Beginner / Getting Started
+## Beginner / Getting Started
 
 ### Verify add-ins
 
@@ -55,7 +55,7 @@ Claude rewrites the slide content.
 
 These are the per-app moves. Useful, but not the headline.
 
-## Section 3 — Intermediate
+## Intermediate
 
 ### The cross-app chain
 
@@ -104,7 +104,7 @@ Claude reads the template's master slides, fonts, color palette, and produces sl
 
 The output is recognizably yours. That's the felt moment.
 
-## Section 4 — Advanced
+## Advanced
 
 ### PowerPoint template reading
 
@@ -168,5 +168,5 @@ Expected: Claude in Word references the Excel analysis from earlier. If it can't
 
 ## References
 
-- M11 — skills (the Office workflow can become a custom skill).
+- M05 — skills (the Office workflow can become a custom skill).
 - `references/what-not-to-use-claude-for.md` — math at scale caveat.

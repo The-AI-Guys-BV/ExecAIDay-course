@@ -1,4 +1,4 @@
-# M06 — Obsidian
+# M07 — Obsidian
 
 ## Why this module matters
 
@@ -12,18 +12,18 @@ Obsidian is your knowledge layer — free, local-first, and the same files Cowor
 
 ---
 
-## Section 1 — Introduction
+## Introduction
 
-You have a vault. It's a folder of Markdown files. Cowork reads them as plain text. Obsidian renders them as a knowledge graph with bidirectional links, daily notes, plugins for everything.
+You have a vault. It's a folder of plain-text notes. Cowork reads them. Obsidian renders them as a knowledge graph with bidirectional links, daily notes, plugins for everything.
 
 The three-layer model from M01:
 - **Cowork folders = work files** (project folders, bounded work).
-- **Vault GTD = task management** (what you're doing — plain markdown files in `<vault>/gtd/`).
+- **Vault GTD = task management** (what you're doing — files in `<vault>/gtd/`).
 - **Obsidian = knowledge** (what you know — research, daily reflection, references).
 
 This module sets up the third layer. Obsidian is one tool; you'll have it open on a second monitor or alongside Cowork.
 
-## Section 2 — Beginner / Getting Started
+## Beginner / Getting Started
 
 ### Open Obsidian on your vault
 
@@ -48,7 +48,7 @@ You'll see this in the exercise at the end.
 - Daily notes — open today's daily note via the Daily Notes plugin (calendar icon, or `Cmd/Ctrl + Shift + D`).
 - Graph view — visualize how your notes link. Becomes meaningful after weeks of use.
 
-## Section 3 — Intermediate
+## Intermediate
 
 ### Set up Obsidian's daily-notes workflow
 
@@ -89,7 +89,7 @@ Claude reads your Daily Notes when relevant — for example, the `/weekly-review
 
 Don't worry about Claude misreading them. The `claude.md` in the Daily Notes folder tells Claude to expect first-person reflective content.
 
-## Section 4 — Advanced
+## Advanced
 
 ### Plugins beyond the starter set
 
@@ -101,7 +101,7 @@ Worth exploring later (not in workshop):
 
 Don't install everything at once. Add as you encounter need.
 
-### Obsidian Sync (optional, $4/month)
+### Obsidian Sync (optional)
 
 If you want your vault on your phone too, Obsidian Sync is the cleanest path. Otherwise, the vault stays on your laptop.
 
@@ -151,5 +151,5 @@ Expected: Claude lists files (probably just today's, plus any pre-existing). If 
 ## References
 
 - `templates/vault-starter/` — what was scaffolded into your vault.
-- M07 — writing the chief-of-staff brief in Obsidian.
+- M06 — writing the chief-of-staff brief in Obsidian.
 - M15 — meeting notes that land in Daily Notes.

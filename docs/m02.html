@@ -39,15 +39,15 @@
 <ul>
 <li>Learn R-C-T-F-C with worked examples.</li>
 <li>Walk through the 10 anti-patterns to recognize and avoid.</li>
-<li>Try metaprompting via <code>/help-me-prompt</code> (you'll install this skill in M11; here you'll see the concept).</li>
+<li>Try metaprompting via <code>/help-me-prompt</code> (you'll install this skill in M05; here you'll see the concept).</li>
 <li>Quick voice mention (Wispr / Superwhisper / Voibe / FloWstay).</li>
 </ul>
-<h2>Section 1 — Introduction</h2>
+<h2>Introduction</h2>
 <p>Most people prompt Claude by saying what they want. That's not enough.</p>
 <p>Better: tell Claude <strong>who it's being</strong>, <strong>what context it needs</strong>, <strong>the specific task</strong>, <strong>the output format</strong>, and <strong>what NOT to do</strong>. Five elements, in any order. Each one shifts the output.</p>
 <p>Skip the role, you get generic. Skip the context, Claude guesses. Skip the format, you get walls of prose. Skip the constraints, Claude hedges and pads.</p>
 <p>This module gives you the framework explicitly so the moves are conscious. With practice, it becomes habit.</p>
-<h2>Section 2 — Beginner / Getting Started</h2>
+<h2>Beginner / Getting Started</h2>
 <p>R-C-T-F-C, with one example:</p>
 <p><strong>Bad prompt:</strong></p>
 <pre><code>
@@ -80,7 +80,7 @@ C: Don't mention specific compensation numbers. Don't sound like a form letter. 
 <li><strong>C — Constraints.</strong> What NOT to do. The 2026 edge.</li>
 </ul>
 <p>Full reference: <code>references/rctfc-framework.md</code>.</p>
-<h2>Section 3 — Intermediate</h2>
+<h2>Intermediate</h2>
 <p>The 10 anti-patterns. Recognize them in your own prompting and you'll catch yourself before sending a sloppy prompt:</p>
 <ol>
 <li><strong>"Help me with X"</strong> — vague. Use a specific verb.</li>
@@ -95,14 +95,14 @@ C: Don't mention specific compensation numbers. Don't sound like a form letter. 
 <li><strong>No constraints</strong> — Claude hedges and pads. Tell it what NOT to do.</li>
 </ol>
 <p>Full reference with examples: <code>references/10-anti-patterns.md</code>.</p>
-<h2>Section 4 — Advanced</h2>
+<h2>Advanced</h2>
 <h3>Metaprompting via <code>/help-me-prompt</code></h3>
 <p>When you find yourself about to send a sloppy prompt, type:</p>
 <pre><code>
 /help-me-prompt help me write a follow-up email to a candidate I want to hire
 </code></pre>
-<p>The skill (which you'll install in M11) takes your draft and rewrites it in R-C-T-F-C structure. It catches the anti-patterns automatically.</p>
-<p>This is the meta-move: instead of remembering all 5 elements + 10 anti-patterns, use a skill that enforces them. You'll install <code>/help-me-prompt</code> for real in M11; for now, see the concept.</p>
+<p>The skill (which you'll install in M05) takes your draft and rewrites it in R-C-T-F-C structure. It catches the anti-patterns automatically.</p>
+<p>This is the meta-move: instead of remembering all 5 elements + 10 anti-patterns, use a skill that enforces them. You'll install <code>/help-me-prompt</code> for real in M05; for now, see the concept.</p>
 <h3>Voice + prompting</h3>
 <p>Voice tools (Wispr / Superwhisper / Voibe / FloWstay — <a href="https://flowstay.app">flowstay.app</a>) transcribe what you say into your active text field. So you can speak prompts instead of typing them.</p>
 <p>The trick: even when speaking, structure the prompt as R-C-T-F-C. Voice → text → R-C-T-F-C → Claude. Don't degrade your prompt quality just because you're talking.</p>
@@ -114,9 +114,9 @@ C: Don't mention specific compensation numbers. Don't sound like a form letter. 
 <li>Second prompt: act on the output of the first.</li>
 <li>Third prompt: format / verify / refine.</li>
 </ol>
-<p>Each link is its own R-C-T-F-C. The chain is the workflow. You'll see this pattern in M11 when we look at skills (which are pre-written prompt chains).</p>
+<p>Each link is its own R-C-T-F-C. The chain is the workflow. You'll see this pattern in M05 when we look at skills (which are pre-written prompt chains).</p>
 <h2>Try this</h2>
-<p>Take a prompt you wrote yesterday — a real one, from your inbox or a recent Claude session. Run it through <code>/help-me-prompt</code> (in your head, since the skill installs in M11). Identify which of the 5 elements were missing. Rewrite. Send the new version. See the difference.</p>
+<p>Take a prompt you wrote yesterday — a real one, from your inbox or a recent Claude session. Run it through <code>/help-me-prompt</code> (in your head, since the skill installs in M05). Identify which of the 5 elements were missing. Rewrite. Send the new version. See the difference.</p>
 <h2>Verification checkpoint</h2>
 <p>In Cowork, type:</p>
 <pre><code>
@@ -132,6 +132,15 @@ Rewrite the email below to be 30% shorter without losing factual content. Tone s
 <li><strong>Output has AI tells</strong> — add explicit constraints against them ("No 'I hope this helps,' no 'let me know if'").</li>
 <li><strong>Output ignored a constraint</strong> — Claude sometimes drifts. Repeat the constraint in a new prompt: "Same task, but enforce <constraint>."</li>
 </ul>
+
+  <div class="slides-cta">
+    <a href="slides/m02.html" class="slides-cta-link">
+      <span class="slides-cta-label">Slide deck</span>
+      <span class="slides-cta-title">View the M02 overview slides</span>
+      <span class="slides-cta-meta">For presenting · keyboard arrows to navigate</span>
+    </a>
+  </div>
+
   <nav class="module-nav">
     <a class="nav-link prev" href="m01.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M01 — Welcome + Foundations</div></a>
     <a class="nav-link next" href="m03.html"><div class="nav-link-label">Next →</div><div class="nav-link-title">M03 — Cowork UI + Settings</div></a>

@@ -41,7 +41,7 @@
 <li>Add a second scheduled task or Routine relevant to your workflow.</li>
 <li>Learn the difference: Desktop tasks (local, 1-min granularity, awake+open required) vs Routines (cloud, 1-hour min, always-on).</li>
 </ul>
-<h2>Section 1 — Introduction</h2>
+<h2>Introduction</h2>
 <p>A scheduled task is a Claude prompt that runs on a schedule. You set it once; it fires at the cadence you specify.</p>
 <p>Two flavors:</p>
 <ul>
@@ -49,7 +49,7 @@
 <li><strong>Routines</strong> — run on Anthropic's cloud infrastructure regardless of laptop state. 1-hour minimum interval. Cannot access local files.</li>
 </ul>
 <p>Which to use depends on the task. Most workshop tasks are Desktop (need local file access). Always-on monitoring or daily summaries that don't need local files → Routines.</p>
-<h2>Section 2 — Beginner / Getting Started</h2>
+<h2>Beginner / Getting Started</h2>
 <h3>Review the morning brief</h3>
 <p>If your workshop is on Day 2, you should have received a morning brief this morning via:</p>
 <ul>
@@ -59,7 +59,7 @@
 </ul>
 <p>The Day 1 closing set up this scheduled task. Open the artifact now — you'll see today's calendar, urgent emails, draft replies pending, Slack mentions overnight.</p>
 <p>Walk through the task itself: Settings → Scheduled tasks. The morning-brief task is there with its prompt, schedule, and last-run status.</p>
-<p>Look at the prompt. It's a multi-step instruction: read calendar, read email triage, read Slack mentions, format as artifact + Slack post + .md file. Notice the guardrail line at the top: "If running > late, summarize what was missed instead of executing the original brief."</p>
+<p>Look at the prompt. It's a multi-step instruction: read calendar, read email triage, read Slack mentions, format as artifact + Slack post + saved file. Notice the guardrail line at the top: "If running > late, summarize what was missed instead of executing the original brief."</p>
 <h3>How scheduled task mechanics work</h3>
 <ul>
 <li>Desktop task at 7am with laptop closed: SKIPPED.</li>
@@ -69,7 +69,7 @@
 </ul>
 <p>So: a 9am task whose laptop slept all day may run at 11pm on wake. The guardrail prompt pattern is what prevents this from being a problem.</p>
 <p>Full reference: <code>references/scheduled-task-patterns.md</code>.</p>
-<h2>Section 3 — Intermediate</h2>
+<h2>Intermediate</h2>
 <h3>Add a second scheduled task</h3>
 <p>Pick a real recurring task. Examples:</p>
 <ul>
@@ -124,7 +124,7 @@ SKIP — return only "Skipped weekly status — too late to be useful."
 <li>A few seconds of latency is normal.</li>
 </ul>
 <p>This closes the mobile-capture gap that previously justified Notion. Voice-driven, hands-free, GTD from your phone.</p>
-<h2>Section 4 — Advanced</h2>
+<h2>Advanced</h2>
 <h3>Guardrail prompt patterns</h3>
 <p>Every scheduled task should have a guardrail. The pattern:</p>
 <pre><code>
@@ -168,8 +168,17 @@ List my active scheduled tasks. For each, what's the schedule and what's the out
 <li><strong>Routine timing is off</strong> — Routines run on Anthropic's clock, not your local time. Specify timezone in the prompt.</li>
 <li><strong>Output went to wrong destination</strong> — task config issue; check the destination field.</li>
 </ul>
+
+  <div class="slides-cta">
+    <a href="slides/m12.html" class="slides-cta-link">
+      <span class="slides-cta-label">Slide deck</span>
+      <span class="slides-cta-title">View the M12 overview slides</span>
+      <span class="slides-cta-meta">For presenting · keyboard arrows to navigate</span>
+    </a>
+  </div>
+
   <nav class="module-nav">
-    <a class="nav-link prev" href="m11.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M11 — Skills + Slash Commands</div></a>
+    <a class="nav-link prev" href="m11.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M11 — Office Add-ins</div></a>
     <a class="nav-link next" href="m13.html"><div class="nav-link-label">Next →</div><div class="nav-link-title">M13 — GTD in your vault</div></a>
   </nav>
 </main>

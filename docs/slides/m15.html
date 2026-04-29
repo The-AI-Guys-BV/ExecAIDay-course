@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M15 Meeting Notes — Slides — ExecAIDay</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../slides.css">
+</head>
+<body>
+
+<div class="deck" data-deck>
+
+  <section class="slide slide-title">
+    <div class="slide-inner">
+      <div class="title-icon" style="background: var(--system-soft); color: var(--system);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      </div>
+      <div class="title-eyebrow">System</div>
+      <h1 class="title-num">M15</h1>
+      <h2 class="title-name">Meeting Notes</h2>
+    </div>
+  </section>
+
+  <section class="slide slide-why">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Why this module matters</div>
+      <p class="slide-lede">Meeting transcripts → Obsidian daily note → Claude processes → follow-up emails drafted, commitments tracked, gaps surfaced. The pipeline turns hours of meetings per week into a tracked, actioned, never-forgotten stream.</p>
+    </div>
+  </section>
+
+  <section class="slide slide-what">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">What you'll do</div>
+      <div class="slide-list">
+        <ul>
+<li>Verify your meeting-note tool (Granola / Bluedot / Fellow — picked in questionnaire).</li>
+<li>Run a full pipeline: meeting captured → transcript in Obsidian daily note → Claude processes into a structured note in your vault.</li>
+<li>Try gap analysis: Claude cross-references the transcript vs your existing vault notes, surfaces commitments you missed.</li>
+<li>Push commitments into your GTD inbox at <vault>/gtd/inbox.md.</li>
+<li>Generate follow-up emails routed to <code>drafts-inbox</code>.</li>
+</ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-try">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Try this</div>
+      <div class="slide-try-body">
+        <p><strong>Gap analysis.</strong> Claude cross-references meeting transcript vs your project's claude.md, surfaces missed commitments. The realization: Claude caught something you would have missed.</p>
+<p><strong>Follow-up email generation.</strong> Routes to drafts-inbox, ready for your review. End-to-end pipeline working.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="deck-chrome">
+  <a href="../m15.html" class="deck-back">← Back to M15</a>
+  <div class="deck-counter"><span data-current>1</span> / <span data-total>4</span></div>
+  <div class="deck-nav">
+    <button data-prev aria-label="Previous slide">←</button>
+    <button data-next aria-label="Next slide">→</button>
+  </div>
+</div>
+
+<script>
+(function() {
+  const slides = document.querySelectorAll('.slide');
+  const total = slides.length;
+  document.querySelector('[data-total]').textContent = total;
+  let idx = 0;
+  const counter = document.querySelector('[data-current]');
+  function show(n) {
+    idx = Math.max(0, Math.min(total - 1, n));
+    slides.forEach((s, i) => s.classList.toggle('active', i === idx));
+    counter.textContent = idx + 1;
+  }
+  show(0);
+  document.querySelector('[data-prev]').addEventListener('click', () => show(idx - 1));
+  document.querySelector('[data-next]').addEventListener('click', () => show(idx + 1));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); show(idx + 1); }
+    if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(idx - 1); }
+    if (e.key === 'Home') { show(0); }
+    if (e.key === 'End') { show(total - 1); }
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>M09 Browser + Chrome — ExecAIDay</title>
-<meta name="description" content="Browser + Chrome — module M09 of the ExecAIDay Claude Cowork training workshop.">
+<title>M09 Connectors — ExecAIDay</title>
+<meta name="description" content="Connectors — module M09 of the ExecAIDay Claude Cowork training workshop.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -24,136 +24,133 @@
 <header class="module-hero">
   <div class="container">
     <div class="module-hero-icon" style="background: var(--connect-soft); color: var(--connect);">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/><line x1="10.88" y1="21.94" x2="15.46" y2="14"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
     </div>
     <div class="eyebrow">
       <span class="breadcrumb"><a href="index.html">All modules</a> &nbsp;/&nbsp; Connect</span>
     </div>
-    <h1>M09 — Browser + Chrome</h1>
-    <p class="lede">Claude in Chrome means Claude can navigate, record, replay, and coordinate across tabs. Connectors give Claude your data; Chrome gives Claude your screen. The deepest live exercise of the workshop.</p>
+    <h1>M09 — Connectors</h1>
+    <p class="lede">The jaw-drop arc. Inbox, drafts, calendar — your real data, in Cowork, working immediately. Up to here, the workshop was setup and orientation. M09 is where the system becomes useful in your actual workflow.</p>
   </div>
 </header>
 
 <main class="content container">
 <h2>What you'll do</h2>
 <ul>
-<li>Open the Claude in Chrome side panel.</li>
-<li>Record a 3-step workflow on a real site (CRM / dashboard / portal).</li>
-<li>Replay the workflow on demand.</li>
-<li>Run a multi-tab task (competitive intel across 6 sites → one comparison).</li>
+<li>Verify connectors: Gmail / M365, Calendar, Drive, Slack, plus your custom apps (Asana / Monday / Jira / Linear / SFDC / HubSpot / etc.).</li>
+<li>Run R-C-T-F-C from M02 on a real email — the callback exercise.</li>
+<li>Walk the 3-step arc: inbox read-back → live draft → calendar + email chain.</li>
 </ul>
-<h2>Section 1 — Introduction</h2>
-<p>A connector handles your major systems — your inbox, your calendar, your file storage. A browser handles everything else: portals without a built-in connector, dashboards behind logins, websites that aren't on the connector list. Claude in Chrome is for those.</p>
-<p>Three killer capabilities:</p>
+<h2>Introduction</h2>
+<p>A connector is an authenticated bridge between Claude and your services, scoped to specific permissions. When Claude needs your inbox, it queries via the connector. When you ask "what's on my calendar today," same.</p>
+<p>You don't authenticate per use. The connector is always-on once set up. Claude pulls fresh data per query — your inbox isn't continuously streaming to Anthropic, but Claude can fetch what it needs when relevant.</p>
+<p>This module: verify your connectors, run a real R-C-T-F-C prompt on a real email, and experience the 3-step jaw-drop arc.</p>
+<h2>Beginner / Getting Started</h2>
+<h3>Verify connectors</h3>
+<p>In Cowork → Customize → Connectors. You should see:</p>
 <ul>
-<li><strong>Record-and-replay:</strong> Claude watches you do a task once, then repeats it on command.</li>
-<li><strong>Multi-tab:</strong> Claude opens N tabs, pulls data from each, synthesizes.</li>
-<li><strong>Scheduled Chrome tasks:</strong> the same record-and-replay, but on a schedule.</li>
+<li><strong>Gmail or Microsoft 365</strong> (whichever your company uses). Status: Connected.</li>
+<li><strong>Calendar</strong> (Google Calendar or M365 calendar). Connected.</li>
+<li><strong>Drive</strong> (Google Drive or OneDrive). Connected.</li>
+<li><strong>Slack</strong> (if your team uses it). Connected.</li>
+<li><strong>Custom apps</strong> (Asana / Monday / Jira / Linear / SFDC / HubSpot / ClickUp / etc.) — only the ones you flagged in the questionnaire.</li>
 </ul>
-<p>Plus side capabilities: console log reading (debugging), real-site navigation (pull a fact from a portal you can't get to via connector).</p>
-<h2>Section 2 — Beginner / Getting Started</h2>
-<h3>Open the side panel</h3>
-<p>In Chrome (or Brave), click the Claude extension icon. Side panel opens on the right. You'll see chat-like interface, like Cowork but operating on the active browser tab.</p>
-<p>If the extension isn't installed: your assistant will install it now.</p>
-<h3>One-fact navigation</h3>
-<p>Pick a portal you actually use — your CRM, a dashboard, a vendor portal. Open it in a tab. In the side panel:</p>
+<p>If any are missing or disconnected: your assistant will sort it now. Don't proceed without verification — the rest of the module relies on these.</p>
+<h3>Quick inbox read-back</h3>
+<p>Type:</p>
 <pre><code>
-Pull the [specific fact] from this page. Just the value, no commentary.
+What's in my inbox right now? Top 5, with one-line summaries.
 </code></pre>
-<p>Examples:</p>
-<ul>
-<li>"Pull total active accounts from the dashboard."</li>
-<li>"Pull the next renewal date from the customer profile open in this tab."</li>
-<li>"Pull the Q3 revenue from the report on this page."</li>
-</ul>
-<p>Claude reads the page and returns the value. First proof Chrome works.</p>
-<h2>Section 3 — Intermediate</h2>
-<h3>Record-and-replay</h3>
-<p>Pick a 3-step task you do often. Examples:</p>
-<ul>
-<li>Log into your CRM, navigate to a specific report, screenshot.</li>
-<li>Open a vendor portal, check a status, summarize.</li>
-<li>Open a knowledge-base page, copy a section, paste into another tool.</li>
-</ul>
-<p>In the Claude in Chrome side panel:</p>
+<p>Claude queries Gmail / M365, returns 5 emails with brief summaries. This is the first jaw-drop. Real data, real surface, no setup beyond what's already done.</p>
+<h2>Intermediate</h2>
+<h3>R-C-T-F-C callback on a real email</h3>
+<p>Find an email in your inbox that needs a reply. The kind of email you'd normally spend a while on. Then:</p>
 <pre><code>
-I'm going to do a 3-step task. Watch what I do, then I'll ask you to replay it later.
-</code></pre>
-<p>Then perform the 3 steps. Claude records each click and form input.</p>
-<p>When done:</p>
-<pre><code>
-Save this workflow as "&lt;name&gt;".
-</code></pre>
-<p>Then test:</p>
-<pre><code>
-Replay the workflow.
-</code></pre>
-<p>Claude does the 3 steps without you. The first time you watch this happen, it feels like magic. After a few replays it feels normal.</p>
-<h3>Multi-tab task</h3>
-<p>Pick a task that benefits from cross-site comparison. Example:</p>
-<pre><code>
-Open these 6 competitor websites in new tabs. From each, pull pricing info, primary
-target customer, and one differentiator they emphasize on the homepage. Compile into
-a comparison table.
+R: You're an executive recruiter coaching me on candidate communications. (Or whatever role fits the email.)
 
-URLs: [paste 6 URLs]
+C: I'm a [your role]. The email pasted below is from [sender, role]. Background: [what you know
+about the relationship and the topic].
+
+T: Draft a reply.
+
+F: 3 short paragraphs. No subject line. [Tone instruction.]
+
+C: Don't include AI-flavored closers. Don't make commitments I haven't already made. Stay
+under 200 words.
+
+[paste the email]
 </code></pre>
-<p>Claude opens each, reads, compiles. The output is a table you couldn't have built faster manually.</p>
-<h3>Scheduled Chrome tasks</h3>
-<p>Once a workflow is recorded, you can schedule it to run automatically. Open Claude in Chrome → Workflows → click your saved workflow → Schedule.</p>
-<p>Examples worth scheduling:</p>
-<ul>
-<li>Daily 8am: pull yesterday's CRM dashboard snapshot.</li>
-<li>Weekly Monday: pull updated customer health scores.</li>
-<li>Before each board meeting: pull current ARR from the dashboard.</li>
-</ul>
-<p>Output goes to Cowork (you specify destination — file, Slack post, email, etc.).</p>
-<h2>Section 4 — Advanced</h2>
-<h3>Console log reading</h3>
-<p>Claude in Chrome can read browser console logs. Useful when something is broken on a page you control:</p>
+<p>Send. Compare to what you would have written. Faster + better, when R-C-T-F-C is real-life applied.</p>
+<p>This is the M02 callback — the framework on real data.</p>
+<h3>The 3-step arc</h3>
+<p><strong>Step 1 — Inbox read-back (the jaw-drop).</strong></p>
 <pre><code>
-Read the console logs on this page. What errors are there? What might be causing the
-form submission to fail?
+What's in my inbox right now? Group by sender, last 24h, with one-line summary per email.
+Skip newsletters and automated notifications.
 </code></pre>
-<p>Claude reads, identifies errors, suggests fixes. Engineering-flavored move; useful even for non-engineers when a page misbehaves.</p>
-<h3>Multi-tab coordination at scale</h3>
-<p>The 6-site competitive intel demo is the simple version. Bigger:</p>
+<p>Claude returns a triaged view. Already useful — that's a lot of mental sorting compressed.</p>
+<p><strong>Step 2 — Live drafts.</strong></p>
+<pre><code>
+For the 3 emails that need a reply, draft replies. Match my voice (per chief-of-staff brief).
+Save each as a draft to Outlook / Gmail (whichever connector is in use).
+</code></pre>
+<p>Claude drafts. The drafts appear in your Drafts folder — visible on your phone, on Outlook on the web, anywhere you check email.</p>
+<p>If you're on M365 and the native draft write isn't working, Zapier MCP handles it. You won't see Zapier UI; the drafts just appear.</p>
+<p><strong>Step 3 — Calendar + email chain.</strong></p>
+<pre><code>
+Today's brief: meetings, urgent emails, drafts pending review, plus anything from Slack
+that's directly tagged for my attention. Pull from real data.
+</code></pre>
+<p>Claude composes a 1-page narrative brief from calendar + email + Slack. This is what M14 builds into a daily live artifact dashboard. For now, see the data flow working.</p>
+<h2>Advanced</h2>
+<h3>Connector quirks</h3>
+<p>Worth knowing without dwelling on:</p>
 <ul>
-<li>Pull data from 30 customer portals to verify renewal dates.</li>
-<li>Cross-reference 10 vendor sites against your contracts.</li>
-<li>Compile a daily snapshot of 15 industry-relevant news sites.</li>
+<li><strong>Gmail OAuth</strong> routes through the Google Drive flow (legacy infrastructure). If the auth dance felt weird, that's why.</li>
+<li><strong>Gmail draft creation</strong> needs the <code>gmail.modify</code> scope. If drafts aren't being created, check the scope.</li>
+<li><strong>M365 Outlook</strong> native connector is read-only in the most conservative read of Anthropic's docs. Drafts are created via Zapier MCP for M365 execs.</li>
+<li><strong>Microsoft Teams chat</strong> is read-only via M365 connector. Sending messages programmatically isn't supported.</li>
+<li><strong>Google Calendar</strong> has full write scope (create / modify / delete events natively).</li>
 </ul>
-<p>The pattern: list the URLs, specify what to pull from each, specify the output format. Claude does the work serially or in parallel depending on the task.</p>
-<p>Watch out: rate limits. Some sites flag unusual traffic. Don't run a 50-tab job hourly.</p>
-<h3>Combining Chrome with skills</h3>
-<p>A skill can call into Chrome. Custom skill example:</p>
-<ul>
-<li><code>/customer-snapshot &lt;name&gt;</code> opens the customer's record in your CRM, pulls health scores, opens their public website, summarizes recent news, returns a one-page brief.</li>
-</ul>
-<p>You'll build skills in M11 with <code>/skill-creator</code>. Chrome integration is a natural extension.</p>
-<h2>Try this</h2>
-<p>Tijn picks default. Three options, all staged:</p>
+<p>Full list: <code>references/connector-quirks.md</code>.</p>
+<h3>Disabling a connector for a session</h3>
+<p>Sometimes you're working on something where you don't want connector data to mix in. Settings → Connectors → toggle off for the current Cowork Project.</p>
+<p>You'll re-enable when done. Useful for sensitive work (M&A, board prep, exec personnel).</p>
+<h3>Microsoft Teams bot ban (May–June 2026)</h3>
+<p>Teams is rolling out third-party bot detection. By default, organizer approval is required for any third-party bot to join a meeting. This affects bot-based recording tools (Fireflies, Otter default, Fellow's bot mode). It does NOT affect bot-less tools (Granola / Bluedot / Fellow's bot-less mode), which capture system audio locally without joining the meeting.</p>
+<p>Workshop's locked meeting-note stack (M15) is bot-less. Unaffected.</p>
+<h2>Try this — 3-step arc</h2>
+<p>Walk through all three steps in order:</p>
 <ol>
-<li>Real-site navigation: Claude pulls a specific fact from your actual CRM / dashboard.</li>
-<li>Record-a-workflow: you perform 3 steps, Claude records, you replay.</li>
-<li>Multi-tab intel: 6 competitor sites → comparison table.</li>
+<li>Inbox read-back. Jaw-drop #1.</li>
+<li>Live drafts that appear in your actual email Drafts folder. Jaw-drop #2.</li>
+<li>Calendar + email chain narrative. Jaw-drop #3.</li>
 </ol>
-<p>The default is to do all 3 — they go together. Picking one stages a deeper exploration of that capability.</p>
+<p>By the end, "Cowork as a system" has become real to you.</p>
 <h2>Verification checkpoint</h2>
 <pre><code>
-What workflows have I saved in Claude in Chrome?
+List the connectors active in this Cowork Project. For each, what scope is granted?
 </code></pre>
-<p>Expected: Claude lists the workflow(s) you saved during the module. If empty, the save didn't take — re-record.</p>
+<p>Expected: Claude lists Gmail/M365, Calendar, Drive, Slack, plus your custom apps. Scopes vary; key check is that nothing says "not connected." If something is disconnected, fix before continuing.</p>
 <h2>Common issues</h2>
 <ul>
-<li><strong>Side panel doesn't open</strong> — extension not installed or blocked by browser policy. Reinstall.</li>
-<li><strong>Recorded workflow fails on replay</strong> — page state changed (logged out, layout updated). Re-record.</li>
-<li><strong>Multi-tab job hangs</strong> — site is slow or rate-limiting. Reduce parallelism, retry.</li>
-<li><strong>Workflow needs auth</strong> — the extension follows your existing browser session. If you weren't logged in, log in and re-record.</li>
+<li><strong>Inbox read-back returns nothing</strong> — connector scope might be wrong. Check Customize → Connectors.</li>
+<li><strong>Drafts not appearing in Outlook (M365)</strong> — Zapier MCP not set up. Your assistant will fix.</li>
+<li><strong>Slack returns DMs only when expected to return channels</strong> — connector scope is account-only by default; expand if needed.</li>
+<li><strong>Custom CRM connector slow</strong> — many CRMs have rate limits. Be patient or query smaller windows.</li>
 </ul>
+
+  <div class="slides-cta">
+    <a href="slides/m09.html" class="slides-cta-link">
+      <span class="slides-cta-label">Slide deck</span>
+      <span class="slides-cta-title">View the M09 overview slides</span>
+      <span class="slides-cta-meta">For presenting · keyboard arrows to navigate</span>
+    </a>
+  </div>
+
   <nav class="module-nav">
-    <a class="nav-link prev" href="m08.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M08 — Connectors</div></a>
-    <a class="nav-link next" href="m10.html"><div class="nav-link-label">Next →</div><div class="nav-link-title">M10 — Office Add-ins</div></a>
+    <a class="nav-link prev" href="m08.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M08 — Projects, Folders, claude.md</div></a>
+    <a class="nav-link next" href="m10.html"><div class="nav-link-label">Next →</div><div class="nav-link-title">M10 — Browser + Chrome</div></a>
   </nav>
 </main>
 

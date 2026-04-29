@@ -1,0 +1,259 @@
+/* ExecAIDay slide-deck CSS — minimal, premium, presentable.
+   Each module's slide deck is a separate HTML page in docs/slides/.
+   Navigate with arrow keys, space, or the on-screen buttons. */
+
+:root {
+  --bg: #FAFAF8;
+  --bg-card: #FFFFFF;
+  --ink: #18181B;
+  --muted: #52525B;
+  --subtle: #71717A;
+  --line: #E4E4E7;
+  --accent: #C2410C;
+
+  --foundation: #475569;
+  --foundation-soft: #F1F5F9;
+  --personalize: #6366F1;
+  --personalize-soft: #EEF2FF;
+  --connect: #059669;
+  --connect-soft: #ECFDF5;
+  --automate: #D97706;
+  --automate-soft: #FEF3C7;
+  --system: #BE185D;
+  --system-soft: #FDF2F8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-feature-settings: 'cv11', 'ss01';
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+/* The deck container holds all slides; only the active one is visible. */
+.deck {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 80px 120px;
+}
+
+.slide.active {
+  display: flex;
+}
+
+.slide-inner {
+  max-width: 1080px;
+  width: 100%;
+}
+
+.slide-eyebrow {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+/* Title slide */
+.slide-title .slide-inner {
+  text-align: left;
+}
+
+.title-icon {
+  width: 84px;
+  height: 84px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.title-icon svg { width: 44px; height: 44px; }
+
+.title-eyebrow {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--subtle);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.title-num {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.title-name {
+  font-size: 76px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--ink);
+  max-width: 1000px;
+}
+
+/* Why slide */
+.slide-lede {
+  font-size: 38px;
+  font-weight: 500;
+  letter-spacing: -0.018em;
+  line-height: 1.3;
+  color: var(--ink);
+  max-width: 980px;
+}
+
+/* What you'll do slide */
+.slide-list ul {
+  list-style: none;
+  padding: 0;
+}
+.slide-list li {
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: -0.012em;
+  line-height: 1.4;
+  color: var(--ink);
+  padding: 18px 0 18px 44px;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+.slide-list li:last-child { border-bottom: none; }
+.slide-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 32px;
+  width: 24px;
+  height: 2px;
+  background: var(--accent);
+}
+.slide-list li code {
+  background: #F1EFEA;
+  padding: 2px 8px;
+  border-radius: 5px;
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.85em;
+  font-weight: 500;
+  border: 1px solid #E5E2D9;
+}
+.slide-list li strong { font-weight: 600; }
+
+/* Try this slide */
+.slide-try-body p {
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: -0.012em;
+  line-height: 1.5;
+  color: var(--ink);
+  margin-bottom: 24px;
+  max-width: 1000px;
+}
+.slide-try-body p:last-child { margin-bottom: 0; }
+.slide-try-body p strong { font-weight: 600; }
+.slide-try-body code {
+  background: #1C1B1F;
+  color: #F4F3EF;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.78em;
+}
+
+/* Bottom chrome — back link, slide counter, nav arrows */
+.deck-chrome {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 32px;
+  background: linear-gradient(to top, var(--bg) 60%, rgba(250, 250, 248, 0));
+  z-index: 100;
+}
+.deck-back {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg-card);
+  transition: border-color 0.15s, color 0.15s;
+}
+.deck-back:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+.deck-counter {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--subtle);
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.deck-nav {
+  display: flex;
+  gap: 8px;
+}
+.deck-nav button {
+  width: 44px;
+  height: 44px;
+  font-size: 18px;
+  border: 1px solid var(--line);
+  background: var(--bg-card);
+  border-radius: 8px;
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color 0.15s, transform 0.1s;
+}
+.deck-nav button:hover { border-color: var(--ink); }
+.deck-nav button:active { transform: scale(0.96); }
+
+/* Responsive — keep slides readable on smaller screens */
+@media (max-width: 1024px) {
+  .slide { padding: 48px 56px 96px; }
+  .title-name { font-size: 56px; }
+  .slide-lede { font-size: 30px; }
+  .slide-list li { font-size: 24px; }
+  .slide-try-body p { font-size: 24px; }
+}
+
+@media (max-width: 640px) {
+  .slide { padding: 32px 24px 88px; }
+  .title-name { font-size: 38px; }
+  .title-icon { width: 64px; height: 64px; }
+  .title-icon svg { width: 32px; height: 32px; }
+  .slide-lede { font-size: 22px; }
+  .slide-list li { font-size: 18px; padding: 14px 0 14px 36px; }
+  .slide-list li::before { top: 25px; width: 18px; }
+  .slide-try-body p { font-size: 18px; }
+  .deck-chrome { padding: 12px 16px; }
+  .deck-back { font-size: 12px; padding: 8px 10px; }
+  .deck-nav button { width: 40px; height: 40px; }
+}

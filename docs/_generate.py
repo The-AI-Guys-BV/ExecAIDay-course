@@ -12,13 +12,13 @@ MODULES = [
     ("M02", "Prompt Engineering", "foundation", "M02-prompt-engineering.md", '<path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>'),
     ("M03", "Cowork UI + Settings", "foundation", "M03-cowork-ui-settings.md", '<rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/>'),
     ("M04", "Artifacts", "foundation", "M04-artifacts.md", '<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>'),
-    ("M05", "Projects, Folders, claude.md", "personalize", "M05-projects-folders-claudemd.md", '<path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>'),
-    ("M06", "Obsidian", "personalize", "M06-obsidian.md", '<circle cx="12" cy="12" r="2"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><line x1="6.5" y1="6.5" x2="10.5" y2="10.5"/><line x1="17.5" y1="6.5" x2="13.5" y2="10.5"/><line x1="6.5" y1="17.5" x2="10.5" y2="13.5"/><line x1="17.5" y1="17.5" x2="13.5" y2="13.5"/>'),
-    ("M07", "Chief of Staff claude.md", "personalize", "M07-chief-of-staff-claudemd.md", '<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>'),
-    ("M08", "Connectors", "connect", "M08-connectors.md", '<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>'),
-    ("M09", "Browser + Chrome", "connect", "M09-browser-chrome.md", '<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/><line x1="10.88" y1="21.94" x2="15.46" y2="14"/>'),
-    ("M10", "Office Add-ins", "connect", "M10-office-add-ins.md", '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>'),
-    ("M11", "Skills + Slash Commands", "automate", "M11-skills-slash-commands.md", '<polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/>'),
+    ("M05", "Skills + Slash Commands", "foundation", "M05-skills-slash-commands.md", '<polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/>'),
+    ("M06", "Chief of Staff Brief", "personalize", "M06-chief-of-staff-claudemd.md", '<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>'),
+    ("M07", "Obsidian", "personalize", "M07-obsidian.md", '<circle cx="12" cy="12" r="2"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><line x1="6.5" y1="6.5" x2="10.5" y2="10.5"/><line x1="17.5" y1="6.5" x2="13.5" y2="10.5"/><line x1="6.5" y1="17.5" x2="10.5" y2="13.5"/><line x1="17.5" y1="17.5" x2="13.5" y2="13.5"/>'),
+    ("M08", "Projects, Folders, claude.md", "personalize", "M08-projects-folders-claudemd.md", '<path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>'),
+    ("M09", "Connectors", "connect", "M09-connectors.md", '<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>'),
+    ("M10", "Browser + Chrome", "connect", "M10-browser-chrome.md", '<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/><line x1="10.88" y1="21.94" x2="15.46" y2="14"/>'),
+    ("M11", "Office Add-ins", "connect", "M11-office-add-ins.md", '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>'),
     ("M12", "Scheduled Tasks + Routines", "automate", "M12-scheduled-tasks-routines.md", '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>'),
     ("M13", "GTD in your vault", "system", "M13-gtd-in-your-vault.md", '<path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>'),
     ("M14", "Daily Command Center", "system", "M14-daily-command-center.md", '<rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/>'),
@@ -196,6 +196,15 @@ TEMPLATE = """<!DOCTYPE html>
 
 <main class="content container">
 {body}
+
+  <div class="slides-cta">
+    <a href="slides/m{num_padded}.html" class="slides-cta-link">
+      <span class="slides-cta-label">Slide deck</span>
+      <span class="slides-cta-title">View the {num} overview slides</span>
+      <span class="slides-cta-meta">For presenting · keyboard arrows to navigate</span>
+    </a>
+  </div>
+
   <nav class="module-nav">
     {prev_link}
     {next_link}
@@ -234,6 +243,132 @@ def body_from_md(md: str) -> str:
     return md_to_html(md)
 
 
+def what_youll_do_from_md(md: str) -> str:
+    """Pull the 'What you'll do' bullets, return as a <ul> string."""
+    m = re.search(r"## What you'll do\s*\n+(.*?)(?=\n##|\n---)", md, re.DOTALL)
+    if not m:
+        return ""
+    block = m.group(1).strip()
+    items = []
+    for line in block.split("\n"):
+        line = line.strip()
+        if line.startswith("- "):
+            items.append(f"<li>{inline(line[2:])}</li>")
+    if not items:
+        return ""
+    return "<ul>\n" + "\n".join(items) + "\n</ul>"
+
+
+def try_this_from_md(md: str) -> str:
+    """Pull the 'Try this' / 'Try these' section content as HTML."""
+    m = re.search(r"## Try (?:this|these)[^\n]*\n+(.*?)(?=\n##|\n---|$)", md, re.DOTALL)
+    if not m:
+        return ""
+    block = m.group(1).strip()
+    # Render the first paragraph as the slide content; keep simple.
+    paragraphs = [p.strip() for p in block.split("\n\n") if p.strip()]
+    out = []
+    for p in paragraphs[:2]:  # first two paragraphs at most
+        if p.startswith("- ") or p.startswith("**"):
+            out.append(f"<p>{inline(p)}</p>")
+        elif p.startswith("```"):
+            continue
+        else:
+            out.append(f"<p>{inline(p)}</p>")
+    return "\n".join(out)
+
+
+SLIDES_TEMPLATE = """<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{num} {title} — Slides — ExecAIDay</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../slides.css">
+</head>
+<body>
+
+<div class="deck" data-deck>
+
+  <section class="slide slide-title">
+    <div class="slide-inner">
+      <div class="title-icon" style="background: var(--{phase}-soft); color: var(--{phase});">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">{icon}</svg>
+      </div>
+      <div class="title-eyebrow">{phase_label}</div>
+      <h1 class="title-num">{num}</h1>
+      <h2 class="title-name">{title}</h2>
+    </div>
+  </section>
+
+  <section class="slide slide-why">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Why this module matters</div>
+      <p class="slide-lede">{lede}</p>
+    </div>
+  </section>
+
+  <section class="slide slide-what">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">What you'll do</div>
+      <div class="slide-list">
+        {what}
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-try">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Try this</div>
+      <div class="slide-try-body">
+        {try_this}
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="deck-chrome">
+  <a href="../m{num_padded}.html" class="deck-back">← Back to {num}</a>
+  <div class="deck-counter"><span data-current>1</span> / <span data-total>4</span></div>
+  <div class="deck-nav">
+    <button data-prev aria-label="Previous slide">←</button>
+    <button data-next aria-label="Next slide">→</button>
+  </div>
+</div>
+
+<script>
+(function() {{
+  const slides = document.querySelectorAll('.slide');
+  const total = slides.length;
+  document.querySelector('[data-total]').textContent = total;
+  let idx = 0;
+  const counter = document.querySelector('[data-current]');
+  function show(n) {{
+    idx = Math.max(0, Math.min(total - 1, n));
+    slides.forEach((s, i) => s.classList.toggle('active', i === idx));
+    counter.textContent = idx + 1;
+  }}
+  show(0);
+  document.querySelector('[data-prev]').addEventListener('click', () => show(idx - 1));
+  document.querySelector('[data-next]').addEventListener('click', () => show(idx + 1));
+  document.addEventListener('keydown', (e) => {{
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {{ e.preventDefault(); show(idx + 1); }}
+    if (e.key === 'ArrowLeft' || e.key === 'PageUp') {{ e.preventDefault(); show(idx - 1); }}
+    if (e.key === 'Home') {{ show(0); }}
+    if (e.key === 'End') {{ show(total - 1); }}
+  }});
+}})();
+</script>
+
+</body>
+</html>
+"""
+
+
 def main():
     for i, (num, title, phase, fname, icon) in enumerate(MODULES):
         md_path = MOD_DIR / fname
@@ -254,8 +389,10 @@ def main():
         else:
             next_link = '<a class="nav-link next" href="index.html"><div class="nav-link-label">Course complete</div><div class="nav-link-title">Back to overview</div></a>'
 
+        num_padded = f"{int(num[1:]):02d}"
         html = TEMPLATE.format(
             num=num,
+            num_padded=num_padded,
             title=title,
             phase=phase,
             phase_label=PHASE_LABELS[phase],
@@ -266,9 +403,30 @@ def main():
             next_link=next_link,
         )
 
-        out_path = OUT / f"m{int(num[1:]):02d}.html"
+        out_path = OUT / f"m{num_padded}.html"
         out_path.write_text(html, encoding="utf-8")
         print(f"Wrote {out_path.name}")
+
+        # Slide deck for the module.
+        md = md_path.read_text(encoding="utf-8")
+        what = what_youll_do_from_md(md)
+        try_this = try_this_from_md(md)
+        slides_html = SLIDES_TEMPLATE.format(
+            num=num,
+            num_padded=num_padded,
+            title=title,
+            phase=phase,
+            phase_label=PHASE_LABELS[phase],
+            icon=icon,
+            lede=lede,
+            what=what,
+            try_this=try_this,
+        )
+        slides_dir = OUT / "slides"
+        slides_dir.mkdir(exist_ok=True)
+        slides_path = slides_dir / f"m{num_padded}.html"
+        slides_path.write_text(slides_html, encoding="utf-8")
+        print(f"Wrote slides/{slides_path.name}")
 
 
 if __name__ == "__main__":

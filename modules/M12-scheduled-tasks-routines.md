@@ -12,7 +12,7 @@ Claude works while you sleep. The morning brief that lands on your phone before 
 
 ---
 
-## Section 1 — Introduction
+## Introduction
 
 A scheduled task is a Claude prompt that runs on a schedule. You set it once; it fires at the cadence you specify.
 
@@ -22,7 +22,7 @@ Two flavors:
 
 Which to use depends on the task. Most workshop tasks are Desktop (need local file access). Always-on monitoring or daily summaries that don't need local files → Routines.
 
-## Section 2 — Beginner / Getting Started
+## Beginner / Getting Started
 
 ### Review the morning brief
 
@@ -35,7 +35,7 @@ The Day 1 closing set up this scheduled task. Open the artifact now — you'll s
 
 Walk through the task itself: Settings → Scheduled tasks. The morning-brief task is there with its prompt, schedule, and last-run status.
 
-Look at the prompt. It's a multi-step instruction: read calendar, read email triage, read Slack mentions, format as artifact + Slack post + .md file. Notice the guardrail line at the top: "If running > late, summarize what was missed instead of executing the original brief."
+Look at the prompt. It's a multi-step instruction: read calendar, read email triage, read Slack mentions, format as artifact + Slack post + saved file. Notice the guardrail line at the top: "If running > late, summarize what was missed instead of executing the original brief."
 
 ### How scheduled task mechanics work
 
@@ -48,7 +48,7 @@ So: a 9am task whose laptop slept all day may run at 11pm on wake. The guardrail
 
 Full reference: `references/scheduled-task-patterns.md`.
 
-## Section 3 — Intermediate
+## Intermediate
 
 ### Add a second scheduled task
 
@@ -113,7 +113,7 @@ Caveats:
 
 This closes the mobile-capture gap that previously justified Notion. Voice-driven, hands-free, GTD from your phone.
 
-## Section 4 — Advanced
+## Advanced
 
 ### Guardrail prompt patterns
 

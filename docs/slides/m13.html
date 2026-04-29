@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M13 GTD in your vault — Slides — ExecAIDay</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../slides.css">
+</head>
+<body>
+
+<div class="deck" data-deck>
+
+  <section class="slide slide-title">
+    <div class="slide-inner">
+      <div class="title-icon" style="background: var(--system-soft); color: var(--system);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      </div>
+      <div class="title-eyebrow">System</div>
+      <h1 class="title-num">M13</h1>
+      <h2 class="title-name">GTD in your vault</h2>
+    </div>
+  </section>
+
+  <section class="slide slide-why">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Why this module matters</div>
+      <p class="slide-lede">David Allen's GTD, but stored as files in your Obsidian vault. The 19 GTD skills make it work from Cowork — capture, process, query, review. Your vault is the database; Cowork is the interface; Obsidian is the read-side. This is the module where your task management gets unified — no more sticky notes, no more inbox-as-todo-list, no more "let me write that down somewhere."</p>
+    </div>
+  </section>
+
+  <section class="slide slide-what">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">What you'll do</div>
+      <div class="slide-list">
+        <ul>
+<li>Tour the GTD vault layout (<code>&lt;vault&gt;/gtd/inbox.md</code>, <code>next-actions.md</code>, <code>projects/</code>, <code>waiting-for.md</code>, <code>someday.md</code>, <code>tickler.md</code>, plus higher horizons).</li>
+<li>Run <code>/capture</code> — watch the item appear as a bullet in <code>inbox.md</code> without you opening Obsidian.</li>
+<li>Try <code>/whats-next</code>, <code>/waiting-for</code>, <code>/process-inbox</code>.</li>
+<li>Combine a scheduled task + GTD: weekly review every Monday morning.</li>
+</ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-try">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Try this</div>
+      <div class="slide-try-body">
+        <p><code>/capture remind me to follow up with the legal team on the trademark filing</code> in Cowork. Open <code>&lt;vault&gt;/gtd/inbox.md</code> in Obsidian. The bullet is there with <code>created:&lt;today&gt;</code>. You never opened the file by hand. Infrastructure-as-interface proof.</p>
+<p>The pattern repeats: capture from Cowork, process from Cowork, query from Cowork, review from Cowork. The vault is the database; Cowork is your interface.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="deck-chrome">
+  <a href="../m13.html" class="deck-back">← Back to M13</a>
+  <div class="deck-counter"><span data-current>1</span> / <span data-total>4</span></div>
+  <div class="deck-nav">
+    <button data-prev aria-label="Previous slide">←</button>
+    <button data-next aria-label="Next slide">→</button>
+  </div>
+</div>
+
+<script>
+(function() {
+  const slides = document.querySelectorAll('.slide');
+  const total = slides.length;
+  document.querySelector('[data-total]').textContent = total;
+  let idx = 0;
+  const counter = document.querySelector('[data-current]');
+  function show(n) {
+    idx = Math.max(0, Math.min(total - 1, n));
+    slides.forEach((s, i) => s.classList.toggle('active', i === idx));
+    counter.textContent = idx + 1;
+  }
+  show(0);
+  document.querySelector('[data-prev]').addEventListener('click', () => show(idx - 1));
+  document.querySelector('[data-next]').addEventListener('click', () => show(idx + 1));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); show(idx + 1); }
+    if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(idx - 1); }
+    if (e.key === 'Home') { show(0); }
+    if (e.key === 'End') { show(total - 1); }
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-# M09 — Browser + Chrome
+# M10 — Browser + Chrome
 
 ## Why this module matters
 
@@ -13,7 +13,7 @@ Claude in Chrome means Claude can navigate, record, replay, and coordinate acros
 
 ---
 
-## Section 1 — Introduction
+## Introduction
 
 A connector handles your major systems — your inbox, your calendar, your file storage. A browser handles everything else: portals without a built-in connector, dashboards behind logins, websites that aren't on the connector list. Claude in Chrome is for those.
 
@@ -24,7 +24,7 @@ Three killer capabilities:
 
 Plus side capabilities: console log reading (debugging), real-site navigation (pull a fact from a portal you can't get to via connector).
 
-## Section 2 — Beginner / Getting Started
+## Beginner / Getting Started
 
 ### Open the side panel
 
@@ -47,7 +47,7 @@ Examples:
 
 Claude reads the page and returns the value. First proof Chrome works.
 
-## Section 3 — Intermediate
+## Intermediate
 
 ### Record-and-replay
 
@@ -103,7 +103,7 @@ Examples worth scheduling:
 
 Output goes to Cowork (you specify destination — file, Slack post, email, etc.).
 
-## Section 4 — Advanced
+## Advanced
 
 ### Console log reading
 
@@ -132,7 +132,7 @@ Watch out: rate limits. Some sites flag unusual traffic. Don't run a 50-tab job 
 A skill can call into Chrome. Custom skill example:
 - `/customer-snapshot <name>` opens the customer's record in your CRM, pulls health scores, opens their public website, summarizes recent news, returns a one-page brief.
 
-You'll build skills in M11 with `/skill-creator`. Chrome integration is a natural extension.
+You'll build skills in M05 with `/skill-creator`. Chrome integration is a natural extension.
 
 ---
 
@@ -162,5 +162,5 @@ Expected: Claude lists the workflow(s) you saved during the module. If empty, th
 
 ## References
 
-- M11 — building custom skills with `/skill-creator` that can incorporate Chrome.
+- M05 — building custom skills with `/skill-creator` that can incorporate Chrome.
 - M12 — scheduled tasks (the scheduling layer for Chrome workflows).

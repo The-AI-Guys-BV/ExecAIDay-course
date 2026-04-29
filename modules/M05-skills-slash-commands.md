@@ -1,8 +1,8 @@
-# M11 — Skills + Slash Commands
+# M05 — Skills + Slash Commands
 
 ## Why this module matters
 
-You walk out as an executive with 7 custom Claude skills + a meta-skill (`/skill-creator`) that lets you build new ones forever. Up to here, you've been using Cowork's defaults. M11 is the autonomy moment — you're equipped to extend Cowork on your own.
+You walk out as an executive with 7 custom Claude skills + a meta-skill (`/skill-creator`) that lets you build new ones forever. Up to here, you've been using Cowork's defaults. M05 is the autonomy moment — you're equipped to extend Cowork on your own.
 
 ## What you'll do
 
@@ -13,7 +13,7 @@ You walk out as an executive with 7 custom Claude skills + a meta-skill (`/skill
 
 ---
 
-## Section 1 — Introduction
+## Introduction
 
 A skill in 2026 Cowork is a slash command. Same thing, two names. `/teach` and "the teach skill" refer to the same file: `~/.claude/skills/teach/SKILL.md` (or in our case, the version inside this plugin's `skills/teach/`).
 
@@ -30,7 +30,7 @@ The 7 core skills you'll use throughout the workshop and after:
 
 Plus 19 GTD skills (covered in M13) and Cowork built-ins (covered later in this module).
 
-## Section 2 — Beginner / Getting Started
+## Beginner / Getting Started
 
 ### The 7 core skills, one demo each
 
@@ -38,7 +38,7 @@ Plus 19 GTD skills (covered in M13) and Cowork built-ins (covered later in this 
 
 **`/help-me-prompt <draft>`** — sharpens any prompt. You'll install this in Section 3.
 
-**`/new-project <name>`** — already used in M05.
+**`/new-project <name>`** — already used in M08.
 
 **`/meeting-prep <meeting title or "next">`** — generates a pre-meeting brief. Try:
 ```
@@ -60,7 +60,7 @@ Claude pulls the next event on your calendar, attendee context, prior notes, rec
 
 Each skill has a SKILL.md you can read. They're in the plugin at `skills/<name>/SKILL.md`.
 
-## Section 3 — Intermediate
+## Intermediate
 
 ### The in-workshop install of `/help-me-prompt`
 
@@ -110,7 +110,7 @@ Plus document built-ins:
 
 You don't need to memorize all of these. Type the Skills list (Customize → Skills) to see what's available right now.
 
-## Section 4 — Advanced
+## Advanced
 
 ### `/skill-creator` — build a new skill
 

@@ -12,7 +12,7 @@ You + Claude is exec superpower. You + your team + Claude is exec leverage. M16 
 
 ---
 
-## Section 1 — Introduction
+## Introduction
 
 Three collaboration surfaces you'll touch:
 
@@ -21,7 +21,7 @@ Three collaboration surfaces you'll touch:
 
 Sales reality: workshop targets same-company cohorts when possible (so the collaboration exercise is realistic). Mixed cohorts run the pairs exercise on a pre-seeded fake project.
 
-## Section 2 — Beginner / Getting Started
+## Beginner / Getting Started
 
 ### Shared Cowork folder
 
@@ -46,7 +46,7 @@ Pair up (2-3 people). Pre-seeded scenario your assistant provides:
 
 Goal: collaboratively produce a one-page memo summarizing the project state, with Claude reading from all sources.
 
-## Section 3 — Intermediate
+## Intermediate
 
 ### Multi-connector magic
 
@@ -77,7 +77,7 @@ Try one or two during the in-room exercise:
 
 The point isn't the specific scenario — it's that two people doing the same workflow in their respective Cowork instances produce the same answers from the same sources. The team gets consistency.
 
-## Section 4 — Advanced
+## Advanced
 
 ### Multi-Cowork-Project patterns for sensitive work
 
@@ -125,6 +125,6 @@ Expected: Claude lists Slack channel(s), email thread(s), shared folder content.
 
 ## References
 
-- M08 — connectors (foundation).
+- M09 — connectors (foundation).
 - M13 — GTD considerations for team.
 - M14 — Daily Command Center (could include shared sources for team-aware morning briefs).

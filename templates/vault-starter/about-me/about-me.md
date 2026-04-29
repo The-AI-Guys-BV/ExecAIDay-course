@@ -2,7 +2,7 @@
 
 Module 07 fills this in via interview. Until then, Cowork knows nothing personal beyond what's in the chief-of-staff brief.
 
-Sections to expect after M07:
+Sections to expect after M06:
 - Role and current focus
 - How I communicate
 - What I value, what I avoid

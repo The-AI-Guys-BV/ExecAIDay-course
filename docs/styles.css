@@ -45,6 +45,21 @@ body {
 a { color: var(--ink); text-decoration: none; }
 a:hover { color: var(--accent); }
 
+/* Content links — body prose inside module pages and the cover page lede.
+   Styled distinctly so readers can see what's clickable. */
+.content a,
+.lede a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+.content a:hover,
+.lede a:hover {
+  color: var(--ink);
+  text-decoration-thickness: 2px;
+}
+
 .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
 
 /* Top nav */
@@ -275,56 +290,108 @@ a:hover { color: var(--accent); }
 }
 .module-hero-icon svg { width: 44px; height: 44px; }
 
-.content { padding: 56px 0; }
+.content { padding: 56px 0 72px; }
 .content h2 {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 600;
-  letter-spacing: -0.015em;
-  margin-bottom: 16px;
-  margin-top: 48px;
+  letter-spacing: -0.018em;
+  line-height: 1.25;
+  margin-bottom: 18px;
+  margin-top: 56px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+  color: var(--ink);
 }
-.content h2:first-child { margin-top: 0; }
+.content h2:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
 .content h3 {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 600;
+  letter-spacing: -0.005em;
   margin-bottom: 12px;
-  margin-top: 24px;
+  margin-top: 32px;
   color: var(--ink);
 }
 .content p {
-  font-size: 16px;
+  font-size: 16.5px;
   color: var(--ink);
-  margin-bottom: 16px;
-  line-height: 1.7;
+  margin-bottom: 18px;
+  line-height: 1.72;
   max-width: 680px;
 }
+.content p strong { font-weight: 600; color: var(--ink); }
 .content ul, .content ol {
-  margin-bottom: 20px;
-  padding-left: 24px;
+  margin-bottom: 22px;
+  padding-left: 26px;
   max-width: 680px;
 }
 .content li {
-  font-size: 16px;
-  margin-bottom: 8px;
-  line-height: 1.65;
+  font-size: 16.5px;
+  margin-bottom: 10px;
+  line-height: 1.7;
   color: var(--ink);
 }
-.content code {
-  background: var(--foundation-soft);
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 13px;
+.content li::marker { color: var(--subtle); }
+.content li > ul, .content li > ol {
+  margin-top: 8px;
+  margin-bottom: 4px;
 }
-.content blockquote {
-  border-left: 3px solid var(--accent);
-  padding: 16px 20px;
-  background: var(--bg-card);
+/* Inline code — small, distinct, readable */
+.content code {
+  background: #F1EFEA;
+  color: #18181B;
+  padding: 2px 7px;
+  border-radius: 5px;
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 13.5px;
+  font-weight: 500;
+  border: 1px solid #E5E2D9;
+  white-space: nowrap;
+}
+
+/* Fenced code blocks — prompts, commands, examples.
+   Dark surface so they stand apart from prose; readable size. */
+.content pre {
+  background: #1C1B1F;
+  color: #F4F3EF;
+  padding: 20px 24px;
   border-radius: var(--r-md);
   margin: 24px 0;
-  color: var(--muted);
-  font-size: 15px;
+  overflow-x: auto;
+  max-width: 820px;
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 14px;
+  line-height: 1.7;
+  border: 1px solid #2A292F;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
 }
+.content pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 400;
+  border: none;
+  border-radius: 0;
+  white-space: pre;
+}
+
+.content blockquote {
+  border-left: 3px solid var(--accent);
+  padding: 16px 22px;
+  background: var(--bg-card);
+  border-radius: var(--r-md);
+  margin: 28px 0;
+  color: var(--muted);
+  font-size: 15.5px;
+  line-height: 1.65;
+  max-width: 680px;
+}
+.content blockquote p { margin-bottom: 0; }
 
 .callout {
   border: 1px solid var(--line);
@@ -372,6 +439,58 @@ a:hover { color: var(--accent); }
 }
 .section-card-time {
   font-size: 12px;
+  color: var(--muted);
+}
+
+/* Slide-deck CTA — link to per-module slides */
+.slides-cta {
+  margin-top: 48px;
+  max-width: 680px;
+}
+.slides-cta-link {
+  display: block;
+  padding: 24px 28px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  text-decoration: none !important;
+  transition: border-color 0.15s, transform 0.1s;
+  position: relative;
+}
+.slides-cta-link:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+.slides-cta-link::after {
+  content: "→";
+  position: absolute;
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  color: var(--accent);
+  transition: transform 0.15s;
+}
+.slides-cta-link:hover::after { transform: translateY(-50%) translateX(4px); }
+.slides-cta-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.slides-cta-title {
+  display: block;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.slides-cta-meta {
+  display: block;
+  font-size: 13px;
   color: var(--muted);
 }
 
@@ -463,6 +582,13 @@ a:hover { color: var(--accent); }
   .nav-link.next { text-align: left; }
   .hero { padding: 56px 0 48px; }
   .section { padding: 48px 0; }
+  .content pre {
+    font-size: 13.5px;
+    padding: 16px 18px;
+    border-radius: 6px;
+  }
+  .content h2 { font-size: 22px; margin-top: 40px; }
+  .content h3 { font-size: 16.5px; margin-top: 24px; }
 }
 
 @media (max-width: 480px) {

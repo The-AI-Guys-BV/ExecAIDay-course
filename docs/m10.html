@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>M10 Office Add-ins — ExecAIDay</title>
-<meta name="description" content="Office Add-ins — module M10 of the ExecAIDay Claude Cowork training workshop.">
+<title>M10 Browser + Chrome — ExecAIDay</title>
+<meta name="description" content="Browser + Chrome — module M10 of the ExecAIDay Claude Cowork training workshop.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -24,129 +24,145 @@
 <header class="module-hero">
   <div class="container">
     <div class="module-hero-icon" style="background: var(--connect-soft); color: var(--connect);">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/><line x1="10.88" y1="21.94" x2="15.46" y2="14"/></svg>
     </div>
     <div class="eyebrow">
       <span class="breadcrumb"><a href="index.html">All modules</a> &nbsp;/&nbsp; Connect</span>
     </div>
-    <h1>M10 — Office Add-ins</h1>
-    <p class="lede">2026 killer feature: cross-app shared context. Analyze in Excel → build deck in PowerPoint → draft memo in Word — all remembering the analysis. The Excel → PPT → Word chain is what makes Office add-ins more than three independent assistants.</p>
+    <h1>M10 — Browser + Chrome</h1>
+    <p class="lede">Claude in Chrome means Claude can navigate, record, replay, and coordinate across tabs. Connectors give Claude your data; Chrome gives Claude your screen. The deepest live exercise of the workshop.</p>
   </div>
 </header>
 
 <main class="content container">
 <h2>What you'll do</h2>
 <ul>
-<li>Verify Word, Excel, PowerPoint add-ins.</li>
-<li>Run the cross-app chain: Excel analysis → PowerPoint slides → Word memo, all sharing context.</li>
-<li>Use template magic — your actual company PowerPoint template + Claude → on-brand slides matching your company style.</li>
+<li>Open the Claude in Chrome side panel.</li>
+<li>Record a 3-step workflow on a real site (CRM / dashboard / portal).</li>
+<li>Replay the workflow on demand.</li>
+<li>Run a multi-tab task (competitive intel across 6 sites → one comparison).</li>
 </ul>
-<h2>Section 1 — Introduction</h2>
-<p>You've used Word, Excel, PowerPoint for years. The Claude add-ins live INSIDE those apps. Open Word, click Claude in the ribbon, sidebar opens, you can ask Claude to help with the document.</p>
-<p>What's new in 2026: cross-app shared context. Start an analysis in Excel. Ask PowerPoint Claude to "build slides from the Excel analysis." It does. Ask Word Claude to "draft a memo summarizing the Excel + PPT work." It does. The conversation persists across apps.</p>
-<p>This is the workflow you've actually wanted for years.</p>
-<h2>Section 2 — Beginner / Getting Started</h2>
-<h3>Verify add-ins</h3>
-<p>Open Word. Look for Claude in the ribbon (top of the window).</p>
-<p>Same for Excel and PowerPoint.</p>
-<p>If any are missing: your assistant fixes now. AppSource → search "Claude" → install.</p>
-<h3>Single-app moves</h3>
-<p>In Word, with the Claude sidebar open:</p>
-<pre><code>
-Rewrite this paragraph to be 30% shorter without losing factual content. Preserve formatting.
-</code></pre>
-<p>Claude rewrites in place.</p>
-<p>In Excel:</p>
-<pre><code>
-For column F, write a formula that calculates [whatever]. Apply to rows 2-50.
-</code></pre>
-<p>Claude writes the formula and applies it.</p>
-<p>In PowerPoint:</p>
-<pre><code>
-Make this slide cleaner. Reduce text by 50%. Keep all the data points.
-</code></pre>
-<p>Claude rewrites the slide content.</p>
-<p>These are the per-app moves. Useful, but not the headline.</p>
-<h2>Section 3 — Intermediate</h2>
-<h3>The cross-app chain</h3>
-<p>Pick a real piece of work. Example: a board prep deck.</p>
-<p><strong>Step 1 — Excel.</strong> Open the financial model.</p>
-<pre><code>
-Analyze the Q3 vs Q2 trajectory in this sheet. Identify the top 3 positive trends and
-top 3 risks. Write your findings as comments in the relevant cells.
-</code></pre>
-<p>Claude analyzes, drops comments. You review.</p>
-<p><strong>Step 2 — PowerPoint.</strong> Open your company's deck template.</p>
-<pre><code>
-Build a 4-slide section for the board deck based on the Excel analysis we just did.
-Use my company template. Each trend or risk is one slide with the supporting data point
-prominent and a one-line takeaway.
-</code></pre>
-<p>Claude generates 4 slides. They're on-brand because they use the template.</p>
-<p><strong>Step 3 — Word.</strong> Open the memo doc.</p>
-<pre><code>
-Draft a 1-page memo summarizing the Excel analysis and the slide narrative. Audience: my
-board chair, who'll read this before the meeting. Tone: factual, not optimistic, not
-defensive.
-</code></pre>
-<p>Claude drafts. You review.</p>
-<p>The point: the conversation persisted. Claude remembered the Excel analysis when building the PowerPoint slides. Remembered the slide narrative when drafting the Word memo. No re-explaining the context three times.</p>
-<h3>Template magic</h3>
-<p>Your company has a PowerPoint template with specific fonts, colors, masters. Default Claude PPT output uses Claude's bland defaults. Template magic fixes this:</p>
-<p>In PowerPoint with your company template open:</p>
-<pre><code>
-Build me 5 slides about [topic] using this template. Match the fonts, colors, and slide
-masters exactly.
-</code></pre>
-<p>Claude reads the template's master slides, fonts, color palette, and produces slides that look like YOUR company's slides — not Claude's defaults.</p>
-<p>The output is recognizably yours. That's the felt moment.</p>
-<h2>Section 4 — Advanced</h2>
-<h3>PowerPoint template reading</h3>
-<p>PowerPoint templates have:</p>
+<h2>Introduction</h2>
+<p>A connector handles your major systems — your inbox, your calendar, your file storage. A browser handles everything else: portals without a built-in connector, dashboards behind logins, websites that aren't on the connector list. Claude in Chrome is for those.</p>
+<p>Three killer capabilities:</p>
 <ul>
-<li>Slide masters (layout templates).</li>
-<li>Theme fonts.</li>
-<li>Theme colors.</li>
-<li>Reusable elements (logos, footers).</li>
+<li><strong>Record-and-replay:</strong> Claude watches you do a task once, then repeats it on command.</li>
+<li><strong>Multi-tab:</strong> Claude opens N tabs, pulls data from each, synthesizes.</li>
+<li><strong>Scheduled Chrome tasks:</strong> the same record-and-replay, but on a schedule.</li>
 </ul>
-<p>Claude reads all of these. When you ask for slides "using this template," Claude maps content to the appropriate slide master, picks colors from the theme, uses theme fonts.</p>
-<p>You don't need to specify "use Calibri 11pt with the company blue." Just "use this template" — Claude infers.</p>
-<h3>Excel formulas + financial models</h3>
-<p>Beyond per-cell formulas, Claude can:</p>
-<ul>
-<li>Audit a financial model (find broken references, inconsistent assumptions).</li>
-<li>Build a sensitivity analysis (run scenarios on input variables).</li>
-<li>Explain a model in plain language.</li>
-</ul>
-<p>For high-stakes models that go to a board pack: ALWAYS verify the math externally. Claude is improved at math but is not a calculator. (See <code>references/what-not-to-use-claude-for.md</code>.)</p>
-<h3>Word with tracked changes</h3>
-<p>For documents going through revision cycles:</p>
+<p>Plus side capabilities: console log reading (debugging), real-site navigation (pull a fact from a portal you can't get to via connector).</p>
+<h2>Beginner / Getting Started</h2>
+<h3>Open the side panel</h3>
+<p>In Chrome (or Brave), click the Claude extension icon. Side panel opens on the right. You'll see chat-like interface, like Cowork but operating on the active browser tab.</p>
+<p>If the extension isn't installed: your assistant will install it now.</p>
+<h3>One-fact navigation</h3>
+<p>Pick a portal you actually use — your CRM, a dashboard, a vendor portal. Open it in a tab. In the side panel:</p>
 <pre><code>
-Suggest edits to this document as tracked changes. Don't apply them — just propose.
+Pull the [specific fact] from this page. Just the value, no commentary.
 </code></pre>
-<p>Claude reviews, surfaces edits, you accept or reject one by one. Useful for legal docs, contracts, anything where the edit history matters.</p>
-<h3>Available on which plans</h3>
-<p>Pro / Max / Team / Enterprise. Free plan does not include Office add-ins.</p>
-<p>The Word add-in launched April 2026, completing the suite. Excel and PowerPoint shipped earlier.</p>
-<h2>Try this — template magic</h2>
-<p>Your actual company PowerPoint template + Claude → on-brand slides matching your company's fonts, colors, and masters. The output looks like YOURS, not Claude's default.</p>
-<p>5 slides on a topic relevant to you, in your company's actual visual identity, . That's the felt moment.</p>
+<p>Examples:</p>
+<ul>
+<li>"Pull total active accounts from the dashboard."</li>
+<li>"Pull the next renewal date from the customer profile open in this tab."</li>
+<li>"Pull the Q3 revenue from the report on this page."</li>
+</ul>
+<p>Claude reads the page and returns the value. First proof Chrome works.</p>
+<h2>Intermediate</h2>
+<h3>Record-and-replay</h3>
+<p>Pick a 3-step task you do often. Examples:</p>
+<ul>
+<li>Log into your CRM, navigate to a specific report, screenshot.</li>
+<li>Open a vendor portal, check a status, summarize.</li>
+<li>Open a knowledge-base page, copy a section, paste into another tool.</li>
+</ul>
+<p>In the Claude in Chrome side panel:</p>
+<pre><code>
+I'm going to do a 3-step task. Watch what I do, then I'll ask you to replay it later.
+</code></pre>
+<p>Then perform the 3 steps. Claude records each click and form input.</p>
+<p>When done:</p>
+<pre><code>
+Save this workflow as "&lt;name&gt;".
+</code></pre>
+<p>Then test:</p>
+<pre><code>
+Replay the workflow.
+</code></pre>
+<p>Claude does the 3 steps without you. The first time you watch this happen, it feels like magic. After a few replays it feels normal.</p>
+<h3>Multi-tab task</h3>
+<p>Pick a task that benefits from cross-site comparison. Example:</p>
+<pre><code>
+Open these 6 competitor websites in new tabs. From each, pull pricing info, primary
+target customer, and one differentiator they emphasize on the homepage. Compile into
+a comparison table.
+
+URLs: [paste 6 URLs]
+</code></pre>
+<p>Claude opens each, reads, compiles. The output is a table you couldn't have built faster manually.</p>
+<h3>Scheduled Chrome tasks</h3>
+<p>Once a workflow is recorded, you can schedule it to run automatically. Open Claude in Chrome → Workflows → click your saved workflow → Schedule.</p>
+<p>Examples worth scheduling:</p>
+<ul>
+<li>Daily 8am: pull yesterday's CRM dashboard snapshot.</li>
+<li>Weekly Monday: pull updated customer health scores.</li>
+<li>Before each board meeting: pull current ARR from the dashboard.</li>
+</ul>
+<p>Output goes to Cowork (you specify destination — file, Slack post, email, etc.).</p>
+<h2>Advanced</h2>
+<h3>Console log reading</h3>
+<p>Claude in Chrome can read browser console logs. Useful when something is broken on a page you control:</p>
+<pre><code>
+Read the console logs on this page. What errors are there? What might be causing the
+form submission to fail?
+</code></pre>
+<p>Claude reads, identifies errors, suggests fixes. Engineering-flavored move; useful even for non-engineers when a page misbehaves.</p>
+<h3>Multi-tab coordination at scale</h3>
+<p>The 6-site competitive intel demo is the simple version. Bigger:</p>
+<ul>
+<li>Pull data from 30 customer portals to verify renewal dates.</li>
+<li>Cross-reference 10 vendor sites against your contracts.</li>
+<li>Compile a daily snapshot of 15 industry-relevant news sites.</li>
+</ul>
+<p>The pattern: list the URLs, specify what to pull from each, specify the output format. Claude does the work serially or in parallel depending on the task.</p>
+<p>Watch out: rate limits. Some sites flag unusual traffic. Don't run a 50-tab job hourly.</p>
+<h3>Combining Chrome with skills</h3>
+<p>A skill can call into Chrome. Custom skill example:</p>
+<ul>
+<li><code>/customer-snapshot &lt;name&gt;</code> opens the customer's record in your CRM, pulls health scores, opens their public website, summarizes recent news, returns a one-page brief.</li>
+</ul>
+<p>You'll build skills in M05 with <code>/skill-creator</code>. Chrome integration is a natural extension.</p>
+<h2>Try this</h2>
+<p>Tijn picks default. Three options, all staged:</p>
+<ol>
+<li>Real-site navigation: Claude pulls a specific fact from your actual CRM / dashboard.</li>
+<li>Record-a-workflow: you perform 3 steps, Claude records, you replay.</li>
+<li>Multi-tab intel: 6 competitor sites → comparison table.</li>
+</ol>
+<p>The default is to do all 3 — they go together. Picking one stages a deeper exploration of that capability.</p>
 <h2>Verification checkpoint</h2>
-<p>After the cross-app chain:</p>
 <pre><code>
-[In Word, with the memo open]: What's in the Excel analysis we did earlier in this session?
+What workflows have I saved in Claude in Chrome?
 </code></pre>
-<p>Expected: Claude in Word references the Excel analysis from earlier. If it can't, the cross-app shared context isn't working — restart Office, retry.</p>
+<p>Expected: Claude lists the workflow(s) you saved during the module. If empty, the save didn't take — re-record.</p>
 <h2>Common issues</h2>
 <ul>
-<li><strong>Add-in doesn't appear in ribbon</strong> — install from AppSource; verify license tier (Pro/Max/Team/Enterprise).</li>
-<li><strong>Template magic produces wrong colors</strong> — template's theme colors may not be set; check Theme Designer in PowerPoint.</li>
-<li><strong>Cross-app context lost</strong> — ensure same Claude account is signed in across all three apps. Different accounts = different context.</li>
-<li><strong>Word tracked changes don't appear</strong> — Word's Track Changes feature must be enabled (Review → Track Changes).</li>
+<li><strong>Side panel doesn't open</strong> — extension not installed or blocked by browser policy. Reinstall.</li>
+<li><strong>Recorded workflow fails on replay</strong> — page state changed (logged out, layout updated). Re-record.</li>
+<li><strong>Multi-tab job hangs</strong> — site is slow or rate-limiting. Reduce parallelism, retry.</li>
+<li><strong>Workflow needs auth</strong> — the extension follows your existing browser session. If you weren't logged in, log in and re-record.</li>
 </ul>
+
+  <div class="slides-cta">
+    <a href="slides/m10.html" class="slides-cta-link">
+      <span class="slides-cta-label">Slide deck</span>
+      <span class="slides-cta-title">View the M10 overview slides</span>
+      <span class="slides-cta-meta">For presenting · keyboard arrows to navigate</span>
+    </a>
+  </div>
+
   <nav class="module-nav">
-    <a class="nav-link prev" href="m09.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M09 — Browser + Chrome</div></a>
-    <a class="nav-link next" href="m11.html"><div class="nav-link-label">Next →</div><div class="nav-link-title">M11 — Skills + Slash Commands</div></a>
+    <a class="nav-link prev" href="m09.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M09 — Connectors</div></a>
+    <a class="nav-link next" href="m11.html"><div class="nav-link-label">Next →</div><div class="nav-link-title">M11 — Office Add-ins</div></a>
   </nav>
 </main>
 

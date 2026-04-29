@@ -14,21 +14,21 @@ You start the workshop with a working Cowork Project, a tutor (`/teach`) that wa
 
 ---
 
-## Section 1 — Introduction
+## Introduction
 
-What's already installed on your machine when you sit down:
+Tools and accounts you need installed before the workshop starts. Each item below has the exact link to the installer or signup page. If anything is missing, tell your assistant — they install it now and you keep moving.
 
-- **Claude Desktop with Cowork** — the workspace you'll spend the workshop in.
-- **The ExecAIDay course plugin** — installed from the workshop's marketplace. Provides `/teach` and the 19 GTD skills you'll use throughout. You'll verify it shortly.
-- **Obsidian** — the knowledge layer. Free, local-first. Reads the same vault files Cowork sees.
-- **Your connectors** — Gmail or M365, Calendar, Drive, Slack, plus your custom apps (Asana / Jira / Linear / SFDC / etc., depending on what you use). Authenticated and scoped during onboarding.
-- **A starter vault and a starter work folder** — placed in your filesystem during onboarding. You'll mount both in your Cowork Project below.
+- **Claude Desktop with Cowork.** This is the workspace you'll spend the workshop in. Download from [claude.com/download](https://claude.com/download) for Mac or Windows. Sign in with your Anthropic Max account.
+- **Obsidian.** Free, local-first knowledge tool. Reads the same vault files Cowork sees. Download from [obsidian.md/download](https://obsidian.md/download).
+- **The ExecAIDay course plugin.** Provides `/teach` and the 19 GTD skills you'll use throughout the workshop. Marketplace URL: [github.com/The-AI-Guys-BV/ExecAIDay-course](https://github.com/The-AI-Guys-BV/ExecAIDay-course). To install inside Cowork: open the **Customize** sidebar → **Personal plugins** → click **+**, paste the marketplace URL above, then install the `execaiday` plugin from the list that appears.
+- **Your connectors.** Gmail or M365, Calendar, Drive, Slack, plus your custom apps (Asana / Jira / Linear / SFDC / etc., depending on what you use). Authenticated and scoped to your account inside Cowork's **Customize → Connectors** panel.
+- **A starter vault and a starter work folder.** Already placed on your filesystem at the path your assistant gave you. You'll mount both in your Cowork Project below.
 
-This module's job is to confirm all that work has actually given you a usable workspace, and to give you the words for the next 15 modules. Most of what we cover here is vocabulary — concepts you'll hear used the whole workshop. We're not building anything yet; we're orienting.
+This module's job is to confirm all that has given you a usable workspace, and to give you the words for the next 15 modules. Most of what we cover here is vocabulary — concepts you'll hear used the whole workshop. We're not building anything yet; we're orienting.
 
-The single most important thing in this module: by the end, you'll have a Cowork Project (a workspace) with both your folders mounted, and `/teach` will walk you through any future module on command. That's your safety net. If you ever miss something or want to revisit, `/teach M07` or `/teach Skills` is permanent office hours.
+The single most important thing in this module: by the end, you'll have a Cowork Project (a workspace) with both your folders mounted, and `/teach` will walk you through any future module on command. That's your safety net. If you ever miss something or want to revisit, `/teach M06` or `/teach Skills` is permanent office hours.
 
-## Section 2 — Beginner / Getting Started
+## Beginner / Getting Started
 
 ### Step 1 — Verify install
 
@@ -50,13 +50,13 @@ Both mounted in the same Cowork Project. This is load-bearing — the architectu
 
 ### Step 3 — Install `/teach`
 
-This is the first skill install. Your assistant will give you the install prompt. Paste it into Cowork. Claude writes the SKILL.md file. Confirm it worked by typing `/teach` (no arguments). You should see a list of modules.
+This is the first skill install. Your assistant will give you the install prompt. Paste it into Cowork. Claude writes the skill file. Confirm it worked by typing `/teach` (no arguments). You should see a list of modules.
 
 ### Step 4 — First teach demo
 
 Type `/teach M02`. Claude reads the M02 module file and starts walking it. Don't actually do M02 now (you'll do it next anyway), but see how `/teach` opens, lists the section, and waits for you. Type "exit" to close out.
 
-## Section 3 — Intermediate
+## Intermediate
 
 The 18 basic concepts. We'll go through them inside the Cowork Project you just built — every concept becomes concrete because the workspace they describe is the one you're sitting in.
 
@@ -67,7 +67,7 @@ Don't try to memorize. Recognize. You'll re-encounter every concept in later mod
 3. **Models** — Opus 4.7 (slow, deep), Sonnet 4.6 (balanced, default), Haiku 4.5 (fast).
 4. **Chat vs Cowork modes** — single conversation vs persistent workspace.
 5. **Plans** — Free / Pro / Max / Team / Enterprise. You're on Max minimum (plugins).
-6. **Skills** — slash commands installed on your machine. Skill IS slash command (2026 model).
+6. **Skills** — slash commands installed on your machine.
 7. **Connectors** — bridges to your services (Gmail, Calendar, Slack, etc.).
 8. **MCP** — the wire format under connectors. You don't deal with it directly.
 9. **Artifacts** — generated outputs. Live artifacts auto-refresh on reopen.
@@ -83,7 +83,7 @@ Don't try to memorize. Recognize. You'll re-encounter every concept in later mod
 
 For full definitions, see the References section of this plugin (`references/17-basic-concepts.md` and `references/context-and-context-rot.md`). `/teach` will walk either reference.
 
-## Section 4 — Advanced
+## Advanced
 
 ### Data privacy + company policy
 
@@ -102,12 +102,6 @@ For details: `references/data-privacy.md`.
 - **"What should I do" life decisions** — Claude can think through options; the decision is yours.
 
 For details: `references/what-not-to-use-claude-for.md`.
-
-### Cost overview
-
-Workshop assumes Max plan ($N/month per user). Plus connector subscription costs (varies). Plus optional Wispr Flow / Granola / Bluedot etc. (~$10-20/month each).
-
-Total monthly stack cost typically $80–180 per exec. One slide; not the workshop's focus.
 
 ---
 

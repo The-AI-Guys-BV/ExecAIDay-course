@@ -8,12 +8,12 @@ The single biggest variable in whether Claude is useful or wasteful is the promp
 
 - Learn R-C-T-F-C with worked examples.
 - Walk through the 10 anti-patterns to recognize and avoid.
-- Try metaprompting via `/help-me-prompt` (you'll install this skill in M11; here you'll see the concept).
+- Try metaprompting via `/help-me-prompt` (you'll install this skill in M05; here you'll see the concept).
 - Quick voice mention (Wispr / Superwhisper / Voibe / FloWstay).
 
 ---
 
-## Section 1 — Introduction
+## Introduction
 
 Most people prompt Claude by saying what they want. That's not enough.
 
@@ -23,7 +23,7 @@ Skip the role, you get generic. Skip the context, Claude guesses. Skip the forma
 
 This module gives you the framework explicitly so the moves are conscious. With practice, it becomes habit.
 
-## Section 2 — Beginner / Getting Started
+## Beginner / Getting Started
 
 R-C-T-F-C, with one example:
 
@@ -61,7 +61,7 @@ The five elements:
 
 Full reference: `references/rctfc-framework.md`.
 
-## Section 3 — Intermediate
+## Intermediate
 
 The 10 anti-patterns. Recognize them in your own prompting and you'll catch yourself before sending a sloppy prompt:
 
@@ -78,7 +78,7 @@ The 10 anti-patterns. Recognize them in your own prompting and you'll catch your
 
 Full reference with examples: `references/10-anti-patterns.md`.
 
-## Section 4 — Advanced
+## Advanced
 
 ### Metaprompting via `/help-me-prompt`
 
@@ -88,9 +88,9 @@ When you find yourself about to send a sloppy prompt, type:
 /help-me-prompt help me write a follow-up email to a candidate I want to hire
 ```
 
-The skill (which you'll install in M11) takes your draft and rewrites it in R-C-T-F-C structure. It catches the anti-patterns automatically.
+The skill (which you'll install in M05) takes your draft and rewrites it in R-C-T-F-C structure. It catches the anti-patterns automatically.
 
-This is the meta-move: instead of remembering all 5 elements + 10 anti-patterns, use a skill that enforces them. You'll install `/help-me-prompt` for real in M11; for now, see the concept.
+This is the meta-move: instead of remembering all 5 elements + 10 anti-patterns, use a skill that enforces them. You'll install `/help-me-prompt` for real in M05; for now, see the concept.
 
 ### Voice + prompting
 
@@ -108,13 +108,13 @@ When a task is too complex for one prompt, chain prompts:
 2. Second prompt: act on the output of the first.
 3. Third prompt: format / verify / refine.
 
-Each link is its own R-C-T-F-C. The chain is the workflow. You'll see this pattern in M11 when we look at skills (which are pre-written prompt chains).
+Each link is its own R-C-T-F-C. The chain is the workflow. You'll see this pattern in M05 when we look at skills (which are pre-written prompt chains).
 
 ---
 
 ## Try this
 
-Take a prompt you wrote yesterday — a real one, from your inbox or a recent Claude session. Run it through `/help-me-prompt` (in your head, since the skill installs in M11). Identify which of the 5 elements were missing. Rewrite. Send the new version. See the difference.
+Take a prompt you wrote yesterday — a real one, from your inbox or a recent Claude session. Run it through `/help-me-prompt` (in your head, since the skill installs in M05). Identify which of the 5 elements were missing. Rewrite. Send the new version. See the difference.
 
 ## Verification checkpoint
 
@@ -139,4 +139,4 @@ Expected: a tighter version, same content, no AI-flavored padding ("I hope this 
 
 - `references/rctfc-framework.md` — full framework with worked examples.
 - `references/10-anti-patterns.md` — anti-patterns with before/after.
-- `skills/help-me-prompt/SKILL.md` — the metaprompting skill (installed in M11).
+- `skills/help-me-prompt/SKILL.md` — the metaprompting skill (installed in M05).

@@ -43,18 +43,18 @@
 <li>Walk through 18 foundational concepts inside the workspace you just built.</li>
 <li>See the hallucination demo and learn to calibrate trust.</li>
 </ul>
-<h2>Section 1 — Introduction</h2>
-<p>What's already installed on your machine when you sit down:</p>
+<h2>Introduction</h2>
+<p>Tools and accounts you need installed before the workshop starts. Each item below has the exact link to the installer or signup page. If anything is missing, tell your assistant — they install it now and you keep moving.</p>
 <ul>
-<li><strong>Claude Desktop with Cowork</strong> — the workspace you'll spend the workshop in.</li>
-<li><strong>The ExecAIDay course plugin</strong> — installed from the workshop's marketplace. Provides <code>/teach</code> and the 19 GTD skills you'll use throughout. You'll verify it shortly.</li>
-<li><strong>Obsidian</strong> — the knowledge layer. Free, local-first. Reads the same vault files Cowork sees.</li>
-<li><strong>Your connectors</strong> — Gmail or M365, Calendar, Drive, Slack, plus your custom apps (Asana / Jira / Linear / SFDC / etc., depending on what you use). Authenticated and scoped during onboarding.</li>
-<li><strong>A starter vault and a starter work folder</strong> — placed in your filesystem during onboarding. You'll mount both in your Cowork Project below.</li>
+<li><strong>Claude Desktop with Cowork.</strong> This is the workspace you'll spend the workshop in. Download from <a href="https://claude.com/download">claude.com/download</a> for Mac or Windows. Sign in with your Anthropic Max account.</li>
+<li><strong>Obsidian.</strong> Free, local-first knowledge tool. Reads the same vault files Cowork sees. Download from <a href="https://obsidian.md/download">obsidian.md/download</a>.</li>
+<li><strong>The ExecAIDay course plugin.</strong> Provides <code>/teach</code> and the 19 GTD skills you'll use throughout the workshop. Marketplace URL: <a href="https://github.com/The-AI-Guys-BV/ExecAIDay-course">github.com/The-AI-Guys-BV/ExecAIDay-course</a>. To install inside Cowork: open the <strong>Customize</strong> sidebar → <strong>Personal plugins</strong> → click <strong>+</strong>, paste the marketplace URL above, then install the <code>execaiday</code> plugin from the list that appears.</li>
+<li><strong>Your connectors.</strong> Gmail or M365, Calendar, Drive, Slack, plus your custom apps (Asana / Jira / Linear / SFDC / etc., depending on what you use). Authenticated and scoped to your account inside Cowork's <strong>Customize → Connectors</strong> panel.</li>
+<li><strong>A starter vault and a starter work folder.</strong> Already placed on your filesystem at the path your assistant gave you. You'll mount both in your Cowork Project below.</li>
 </ul>
-<p>This module's job is to confirm all that work has actually given you a usable workspace, and to give you the words for the next 15 modules. Most of what we cover here is vocabulary — concepts you'll hear used the whole workshop. We're not building anything yet; we're orienting.</p>
-<p>The single most important thing in this module: by the end, you'll have a Cowork Project (a workspace) with both your folders mounted, and <code>/teach</code> will walk you through any future module on command. That's your safety net. If you ever miss something or want to revisit, <code>/teach M07</code> or <code>/teach Skills</code> is permanent office hours.</p>
-<h2>Section 2 — Beginner / Getting Started</h2>
+<p>This module's job is to confirm all that has given you a usable workspace, and to give you the words for the next 15 modules. Most of what we cover here is vocabulary — concepts you'll hear used the whole workshop. We're not building anything yet; we're orienting.</p>
+<p>The single most important thing in this module: by the end, you'll have a Cowork Project (a workspace) with both your folders mounted, and <code>/teach</code> will walk you through any future module on command. That's your safety net. If you ever miss something or want to revisit, <code>/teach M06</code> or <code>/teach Skills</code> is permanent office hours.</p>
+<h2>Beginner / Getting Started</h2>
 <h3>Step 1 — Verify install</h3>
 <p>In your Claude Desktop, switch to the <strong>Cowork</strong> tab. You should see a sidebar on the left with sections including Customize, Plugins, your Cowork Projects.</p>
 <p>If you don't see the Cowork tab at all: tell your assistant.</p>
@@ -68,10 +68,10 @@
 </ul>
 <p>Both mounted in the same Cowork Project. This is load-bearing — the architecture relies on Cowork seeing both folders together.</p>
 <h3>Step 3 — Install <code>/teach</code></h3>
-<p>This is the first skill install. Your assistant will give you the install prompt. Paste it into Cowork. Claude writes the SKILL.md file. Confirm it worked by typing <code>/teach</code> (no arguments). You should see a list of modules.</p>
+<p>This is the first skill install. Your assistant will give you the install prompt. Paste it into Cowork. Claude writes the skill file. Confirm it worked by typing <code>/teach</code> (no arguments). You should see a list of modules.</p>
 <h3>Step 4 — First teach demo</h3>
 <p>Type <code>/teach M02</code>. Claude reads the M02 module file and starts walking it. Don't actually do M02 now (you'll do it next anyway), but see how <code>/teach</code> opens, lists the section, and waits for you. Type "exit" to close out.</p>
-<h2>Section 3 — Intermediate</h2>
+<h2>Intermediate</h2>
 <p>The 18 basic concepts. We'll go through them inside the Cowork Project you just built — every concept becomes concrete because the workspace they describe is the one you're sitting in.</p>
 <p>Don't try to memorize. Recognize. You'll re-encounter every concept in later modules with use cases.</p>
 <ol>
@@ -80,7 +80,7 @@
 <li><strong>Models</strong> — Opus 4.7 (slow, deep), Sonnet 4.6 (balanced, default), Haiku 4.5 (fast).</li>
 <li><strong>Chat vs Cowork modes</strong> — single conversation vs persistent workspace.</li>
 <li><strong>Plans</strong> — Free / Pro / Max / Team / Enterprise. You're on Max minimum (plugins).</li>
-<li><strong>Skills</strong> — slash commands installed on your machine. Skill IS slash command (2026 model).</li>
+<li><strong>Skills</strong> — slash commands installed on your machine.</li>
 <li><strong>Connectors</strong> — bridges to your services (Gmail, Calendar, Slack, etc.).</li>
 <li><strong>MCP</strong> — the wire format under connectors. You don't deal with it directly.</li>
 <li><strong>Artifacts</strong> — generated outputs. Live artifacts auto-refresh on reopen.</li>
@@ -95,7 +95,7 @@
 <li><strong>Context rot</strong> — quality degrades as a session's context grows. Open a new chat per task. The single most important habit you'll build this workshop.</li>
 </ol>
 <p>For full definitions, see the References section of this plugin (<code>references/17-basic-concepts.md</code> and <code>references/context-and-context-rot.md</code>). <code>/teach</code> will walk either reference.</p>
-<h2>Section 4 — Advanced</h2>
+<h2>Advanced</h2>
 <h3>Data privacy + company policy</h3>
 <p>When you type into Cowork, your prompt + relevant context goes to Anthropic's infrastructure. On Max plan, Anthropic doesn't train on your data. Connector data flows through when needed for a response — your inbox isn't continuously streaming. Local files in mounted folders go through when Claude reads them.</p>
 <p>Your company has its own AI policy. Your IT contact is who to ask if unsure.</p>
@@ -109,9 +109,6 @@
 <li><strong>"What should I do" life decisions</strong> — Claude can think through options; the decision is yours.</li>
 </ul>
 <p>For details: <code>references/what-not-to-use-claude-for.md</code>.</p>
-<h3>Cost overview</h3>
-<p>Workshop assumes Max plan ($N/month per user). Plus connector subscription costs (varies). Plus optional Wispr Flow / Granola / Bluedot etc. (~$10-20/month each).</p>
-<p>Total monthly stack cost typically $80–180 per exec. One slide; not the workshop's focus.</p>
 <h2>Try this</h2>
 <p>Type <code>/teach</code> (no arguments). Claude lists the 16 modules. You pick one. Claude walks it patiently, one section at a time. The hallucination demo follows immediately as a trust-calibration moment — your instructor demonstrates Claude making something up confidently, then you watch it self-correct when given evidence.</p>
 <h2>Verification checkpoint</h2>
@@ -125,6 +122,15 @@ What folders am I currently mounting in this Cowork Project?
 <li><strong>Cowork Project doesn't see one of the folders.</strong> Re-mount it; confirm the path. Some MDM-managed laptops require explicit folder permission.</li>
 <li><strong><code>/teach</code> not auto-discovered after install.</strong> Restart Cowork. If still not visible, check <code>~/.claude/skills/teach/SKILL.md</code> exists.</li>
 </ul>
+
+  <div class="slides-cta">
+    <a href="slides/m01.html" class="slides-cta-link">
+      <span class="slides-cta-label">Slide deck</span>
+      <span class="slides-cta-title">View the M01 overview slides</span>
+      <span class="slides-cta-meta">For presenting · keyboard arrows to navigate</span>
+    </a>
+  </div>
+
   <nav class="module-nav">
     <div class="nav-link disabled"><div class="nav-link-label">Start</div><div class="nav-link-title">First module</div></div>
     <a class="nav-link next" href="m02.html"><div class="nav-link-label">Next →</div><div class="nav-link-title">M02 — Prompt Engineering</div></a>

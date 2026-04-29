@@ -1,4 +1,4 @@
-# M07 — Chief of Staff Brief
+# M06 — Chief of Staff Brief
 
 ## Why this module matters
 
@@ -15,7 +15,7 @@ The brief lives as a regular Obsidian note: `About Me.md` at the root of your va
 
 ---
 
-## Section 1 — Introduction
+## Introduction
 
 You have a chief of staff right now. You probably don't think of them that way. They're whoever knows your priorities, your quirks, your stakeholders, the things you do and don't say in writing. They've earned that knowledge over years.
 
@@ -29,7 +29,7 @@ Roughly 30 lines, 4 sections. Written through an interactive interview.
 
 Once it exists: every email Claude drafts sounds more like you. Every analysis takes your priorities into account. Every artifact reflects your taste.
 
-## Section 2 — Beginner / Getting Started
+## Beginner / Getting Started
 
 ### The interview
 
@@ -71,7 +71,7 @@ Answer naturally. Don't over-engineer. The brief is meant to be ~30 lines — sh
 
 Claude synthesizes your answers into `<vault>/About Me.md` and writes the one-line pointer into `<vault>/claude.md`. Watch Obsidian render `About Me.md` live as Claude writes it. Edit any line you don't like.
 
-## Section 3 — Intermediate
+## Intermediate
 
 ### Add the longer-form context
 
@@ -111,7 +111,7 @@ Watch the output. It should:
 
 If it doesn't, the brief isn't doing its job. Edit and retest.
 
-## Section 4 — Advanced
+## Advanced
 
 ### Maintaining the brief over time
 

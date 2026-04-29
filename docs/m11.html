@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>M11 Skills + Slash Commands — ExecAIDay</title>
-<meta name="description" content="Skills + Slash Commands — module M11 of the ExecAIDay Claude Cowork training workshop.">
+<title>M11 Office Add-ins — ExecAIDay</title>
+<meta name="description" content="Office Add-ins — module M11 of the ExecAIDay Claude Cowork training workshop.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -23,145 +23,138 @@
 
 <header class="module-hero">
   <div class="container">
-    <div class="module-hero-icon" style="background: var(--automate-soft); color: var(--automate);">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+    <div class="module-hero-icon" style="background: var(--connect-soft); color: var(--connect);">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
     </div>
     <div class="eyebrow">
-      <span class="breadcrumb"><a href="index.html">All modules</a> &nbsp;/&nbsp; Automate</span>
+      <span class="breadcrumb"><a href="index.html">All modules</a> &nbsp;/&nbsp; Connect</span>
     </div>
-    <h1>M11 — Skills + Slash Commands</h1>
-    <p class="lede">You walk out as an executive with 7 custom Claude skills + a meta-skill (<code>/skill-creator</code>) that lets you build new ones forever. Up to here, you've been using Cowork's defaults. M11 is the autonomy moment — you're equipped to extend Cowork on your own.</p>
+    <h1>M11 — Office Add-ins</h1>
+    <p class="lede">2026 killer feature: cross-app shared context. Analyze in Excel → build deck in PowerPoint → draft memo in Word — all remembering the analysis. The Excel → PPT → Word chain is what makes Office add-ins more than three independent assistants.</p>
   </div>
 </header>
 
 <main class="content container">
 <h2>What you'll do</h2>
 <ul>
-<li>Walk through the 7 core skills (5 pre-installed via this plugin + the in-workshop install of <code>/help-me-prompt</code>).</li>
-<li>Install <code>/help-me-prompt</code> in-workshop — paste the install prompt, watch Claude write the skill, see it in action.</li>
-<li>Tour Cowork's built-in slash commands.</li>
-<li>Try <code>/skill-creator</code> to build a NEW skill from scratch.</li>
+<li>Verify Word, Excel, PowerPoint add-ins.</li>
+<li>Run the cross-app chain: Excel analysis → PowerPoint slides → Word memo, all sharing context.</li>
+<li>Use template magic — your actual company PowerPoint template + Claude → on-brand slides matching your company style.</li>
 </ul>
-<h2>Section 1 — Introduction</h2>
-<p>A skill in 2026 Cowork is a slash command. Same thing, two names. <code>/teach</code> and "the teach skill" refer to the same file: <code>~/.claude/skills/teach/SKILL.md</code> (or in our case, the version inside this plugin's <code>skills/teach/</code>).</p>
-<p>Cowork auto-discovers skills from the filesystem. When you install a plugin, all the skills inside it become available. When you write a SKILL.md in <code>~/.claude/skills/&lt;name&gt;/SKILL.md</code>, that becomes a slash command too.</p>
-<p>The 7 core skills you'll use throughout the workshop and after:</p>
-<ol>
-<li><code>/teach</code> — patient tutor.</li>
-<li><code>/help-me-prompt</code> — R-C-T-F-C sharpener.</li>
-<li><code>/new-project</code> — scaffold a project + GTD entry + tailored claude.md.</li>
-<li><code>/meeting-prep</code> — pre-meeting brief.</li>
-<li><code>/weekly-review</code> — Monday morning GTD walkthrough.</li>
-<li><code>/drafts-inbox</code> — email drafts triage.</li>
-<li><code>/email-triage</code> — inbox classification.</li>
-</ol>
-<p>Plus 19 GTD skills (covered in M13) and Cowork built-ins (covered later in this module).</p>
-<h2>Section 2 — Beginner / Getting Started</h2>
-<h3>The 7 core skills, one demo each</h3>
-<p><strong><code>/teach &lt;module&gt;</code></strong> — already used. Walks any module.</p>
-<p><strong><code>/help-me-prompt &lt;draft&gt;</code></strong> — sharpens any prompt. You'll install this in Section 3.</p>
-<p><strong><code>/new-project &lt;name&gt;</code></strong> — already used in M05.</p>
-<p><strong><code>/meeting-prep &lt;meeting title or "next"&gt;</code></strong> — generates a pre-meeting brief. Try:</p>
+<h2>Introduction</h2>
+<p>You've used Word, Excel, PowerPoint for years. The Claude add-ins live INSIDE those apps. Open Word, click Claude in the ribbon, sidebar opens, you can ask Claude to help with the document.</p>
+<p>What's new in 2026: cross-app shared context. Start an analysis in Excel. Ask PowerPoint Claude to "build slides from the Excel analysis." It does. Ask Word Claude to "draft a memo summarizing the Excel + PPT work." It does. The conversation persists across apps.</p>
+<p>This is the workflow you've actually wanted for years.</p>
+<h2>Beginner / Getting Started</h2>
+<h3>Verify add-ins</h3>
+<p>Open Word. Look for Claude in the ribbon (top of the window).</p>
+<p>Same for Excel and PowerPoint.</p>
+<p>If any are missing: your assistant fixes now. AppSource → search "Claude" → install.</p>
+<h3>Single-app moves</h3>
+<p>In Word, with the Claude sidebar open:</p>
 <pre><code>
-/meeting-prep next
+Rewrite this paragraph to be 30% shorter without losing factual content. Preserve formatting.
 </code></pre>
-<p>Claude pulls the next event on your calendar, attendee context, prior notes, recent emails, related vault GTD projects. One-page brief.</p>
-<p><strong><code>/weekly-review</code></strong> — walks the GTD weekly review interactively. Try a quick run; you can exit anytime.</p>
-<p><strong><code>/drafts-inbox new</code></strong> — scans inbox for emails needing replies, drafts them. Try:</p>
+<p>Claude rewrites in place.</p>
+<p>In Excel:</p>
 <pre><code>
-/drafts-inbox new
+For column F, write a formula that calculates [whatever]. Apply to rows 2-50.
 </code></pre>
-<p><strong><code>/email-triage</code></strong> — classifies inbox into urgent / reply / read / archive / delete. Try:</p>
+<p>Claude writes the formula and applies it.</p>
+<p>In PowerPoint:</p>
 <pre><code>
-/email-triage today
+Make this slide cleaner. Reduce text by 50%. Keep all the data points.
 </code></pre>
-<p>Each skill has a SKILL.md you can read. They're in the plugin at <code>skills/&lt;name&gt;/SKILL.md</code>.</p>
-<h2>Section 3 — Intermediate</h2>
-<h3>The in-workshop install of <code>/help-me-prompt</code></h3>
-<p>Even though <code>/help-me-prompt</code> is already in this plugin, you'll do a manual install too — both for the pedagogy (you experience the install pattern) and as a fallback if the plugin path ever fails.</p>
-<p>Your assistant gives you the install prompt. Paste into Cowork:</p>
+<p>Claude rewrites the slide content.</p>
+<p>These are the per-app moves. Useful, but not the headline.</p>
+<h2>Intermediate</h2>
+<h3>The cross-app chain</h3>
+<p>Pick a real piece of work. Example: a board prep deck.</p>
+<p><strong>Step 1 — Excel.</strong> Open the financial model.</p>
 <pre><code>
-Create a skill at ~/.claude/skills/help-me-prompt/SKILL.md with exactly this content:
-
-[full SKILL.md body — assistant pastes the rest]
-
-Confirm when the file is written and readable.
+Analyze the Q3 vs Q2 trajectory in this sheet. Identify the top 3 positive trends and
+top 3 risks. Write your findings as comments in the relevant cells.
 </code></pre>
-<p>Claude writes the file. You confirm.</p>
-<p>Now <code>/help-me-prompt</code> is available two ways: from the plugin AND from your manual install. Use either. (If both exist, the most-recently-modified wins by Cowork's default.)</p>
-<p>Try it:</p>
+<p>Claude analyzes, drops comments. You review.</p>
+<p><strong>Step 2 — PowerPoint.</strong> Open your company's deck template.</p>
 <pre><code>
-/help-me-prompt help me write an email to my CFO about the Q3 budget overage
+Build a 4-slide section for the board deck based on the Excel analysis we just did.
+Use my company template. Each trend or risk is one slide with the supporting data point
+prominent and a one-line takeaway.
 </code></pre>
-<p>Claude returns a sharpened R-C-T-F-C version. Compare to your draft.</p>
-<h3>Cowork's built-in slash commands</h3>
-<p>These ship with Cowork itself, not from any plugin. Available in any Cowork Project:</p>
+<p>Claude generates 4 slides. They're on-brand because they use the template.</p>
+<p><strong>Step 3 — Word.</strong> Open the memo doc.</p>
+<pre><code>
+Draft a 1-page memo summarizing the Excel analysis and the slide narrative. Audience: my
+board chair, who'll read this before the meeting. Tone: factual, not optimistic, not
+defensive.
+</code></pre>
+<p>Claude drafts. You review.</p>
+<p>The point: the conversation persisted. Claude remembered the Excel analysis when building the PowerPoint slides. Remembered the slide narrative when drafting the Word memo. No re-explaining the context three times.</p>
+<h3>Template magic</h3>
+<p>Your company has a PowerPoint template with specific fonts, colors, masters. Default Claude PPT output uses Claude's bland defaults. Template magic fixes this:</p>
+<p>In PowerPoint with your company template open:</p>
+<pre><code>
+Build me 5 slides about [topic] using this template. Match the fonts, colors, and slide
+masters exactly.
+</code></pre>
+<p>Claude reads the template's master slides, fonts, color palette, and produces slides that look like YOUR company's slides — not Claude's defaults.</p>
+<p>The output is recognizably yours. That's the felt moment.</p>
+<h2>Advanced</h2>
+<h3>PowerPoint template reading</h3>
+<p>PowerPoint templates have:</p>
 <ul>
-<li><strong><code>/skill-creator</code></strong> — interviews you about a task, drafts a skill, generates test prompts, iterates. The HEADLINE built-in.</li>
-<li><strong><code>/simplify</code></strong> — simplify content (text, code, diagrams).</li>
-<li><strong><code>/review</code></strong> — review content (catch issues, suggest improvements).</li>
-<li><strong><code>/batch</code></strong> — apply a prompt to many similar items.</li>
-<li><strong><code>/loop</code></strong> — repeat a prompt at an interval within the session.</li>
-<li><strong><code>/debug</code></strong> — debugging assistance.</li>
-<li><strong>the Skills list (Customize → Skills)</strong> — list all available skills in this session.</li>
+<li>Slide masters (layout templates).</li>
+<li>Theme fonts.</li>
+<li>Theme colors.</li>
+<li>Reusable elements (logos, footers).</li>
 </ul>
-<p>Plus document built-ins:</p>
+<p>Claude reads all of these. When you ask for slides "using this template," Claude maps content to the appropriate slide master, picks colors from the theme, uses theme fonts.</p>
+<p>You don't need to specify "use Calibri 11pt with the company blue." Just "use this template" — Claude infers.</p>
+<h3>Excel formulas + financial models</h3>
+<p>Beyond per-cell formulas, Claude can:</p>
 <ul>
-<li><strong><code>/pdf</code></strong> — generate or process PDFs.</li>
-<li><strong><code>/docx</code></strong> — Word documents.</li>
-<li><strong><code>/pptx</code></strong> — PowerPoint.</li>
-<li><strong><code>/xlsx</code></strong> — Excel.</li>
-<li><strong><code>/canvas-design</code></strong> — drawing / illustration.</li>
-<li><strong><code>/algorithmic-art</code></strong> — generative visuals.</li>
+<li>Audit a financial model (find broken references, inconsistent assumptions).</li>
+<li>Build a sensitivity analysis (run scenarios on input variables).</li>
+<li>Explain a model in plain language.</li>
 </ul>
-<p>You don't need to memorize all of these. Type the Skills list (Customize → Skills) to see what's available right now.</p>
-<h2>Section 4 — Advanced</h2>
-<h3><code>/skill-creator</code> — build a new skill</h3>
-<p>Pick something you do often that's not yet a skill. Examples:</p>
-<ul>
-<li>A weekly customer status report with specific format.</li>
-<li>A specific email template you send often (specific kind of follow-up).</li>
-<li>A pre-1:1 brief you compose for each direct report.</li>
-<li>A specific kind of analysis you run on incoming data.</li>
-</ul>
-<p>Run:</p>
+<p>For high-stakes models that go to a board pack: ALWAYS verify the math externally. Claude is improved at math but is not a calculator. (See <code>references/what-not-to-use-claude-for.md</code>.)</p>
+<h3>Word with tracked changes</h3>
+<p>For documents going through revision cycles:</p>
 <pre><code>
-/skill-creator
+Suggest edits to this document as tracked changes. Don't apply them — just propose.
 </code></pre>
-<p>The skill interviews you:</p>
-<ul>
-<li>What's the trigger? What command name?</li>
-<li>What inputs does it take?</li>
-<li>What does it do? (Walks the steps with you.)</li>
-<li>What's the output format?</li>
-<li>Edge cases / failure modes.</li>
-<li>Test cases (it generates test prompts to verify).</li>
-</ul>
-<p>At the end, it writes the SKILL.md to <code>~/.claude/skills/&lt;your-skill-name&gt;/SKILL.md</code>. Cowork auto-discovers. You have a new slash command.</p>
-<p>This is the autonomy moment. Post-workshop, you don't need to come back to Tijn's team to extend the system. <code>/skill-creator</code> is how you keep building.</p>
-<h3>Plugin namespacing</h3>
-<p>If a plugin's skill name collides with another, namespacing applies. E.g., <code>/teach@execaiday</code> vs <code>/teach@another-plugin</code>. Default: most-recently-modified wins (or use the explicit namespace to disambiguate).</p>
-<p>You won't usually hit this. If you do, your assistant flags.</p>
-<h3>Disabling skills you don't use</h3>
-<p>Customize → Skills. Toggle off skills you never call. Reduces clutter when typing <code>/</code>.</p>
-<p>You can disable plugin skills too — though disabling a workshop skill defeats the purpose.</p>
-<h2>Try this</h2>
-<p>All 7 core skills work in real demos. The in-workshop install of <code>/help-me-prompt</code> succeeded. You can see every available skill in Customize → Skills.</p>
-<p>"You're an executive with 7 custom Claude skills, plus the ability to build more on demand." Public commitment moment.</p>
+<p>Claude reviews, surfaces edits, you accept or reject one by one. Useful for legal docs, contracts, anything where the edit history matters.</p>
+<h3>Available on which plans</h3>
+<p>Pro / Max / Team / Enterprise. Free plan does not include Office add-ins.</p>
+<p>The Word add-in launched April 2026, completing the suite. Excel and PowerPoint shipped earlier.</p>
+<h2>Try this — template magic</h2>
+<p>Your actual company PowerPoint template + Claude → on-brand slides matching your company's fonts, colors, and masters. The output looks like YOURS, not Claude's default.</p>
+<p>5 slides on a topic relevant to you, in your company's actual visual identity, . That's the felt moment.</p>
 <h2>Verification checkpoint</h2>
+<p>After the cross-app chain:</p>
 <pre><code>
-Open Customize → Skills
+[In Word, with the memo open]: What's in the Excel analysis we did earlier in this session?
 </code></pre>
-<p>Expected: lists all installed skills. Should include the 7 core, the 19 GTD (covered in M13 but already installed via this plugin), the Cowork built-ins, plus any custom skills you built via <code>/skill-creator</code>.</p>
-<p>If the Skills list (Customize → Skills) returns nothing or partial, the plugin may be incompletely installed.</p>
+<p>Expected: Claude in Word references the Excel analysis from earlier. If it can't, the cross-app shared context isn't working — restart Office, retry.</p>
 <h2>Common issues</h2>
 <ul>
-<li><strong>Install fumble: skill SKILL.md has wrong YAML frontmatter</strong> — file written but not auto-discovered. Restart Cowork; if still failing, check the frontmatter syntax matches <code>name:</code> and <code>description:</code> at minimum.</li>
-<li><strong>Skill works in plugin but not after manual install</strong> — path mismatch (e.g., <code>~/.claude/skills/foo.md</code> instead of <code>~/.claude/skills/foo/SKILL.md</code>). Skills must be in their own subfolder.</li>
-<li><strong><code>/skill-creator</code> doesn't run</strong> — it's a Cowork built-in; if missing, Cowork version may be older. Update.</li>
+<li><strong>Add-in doesn't appear in ribbon</strong> — install from AppSource; verify license tier (Pro/Max/Team/Enterprise).</li>
+<li><strong>Template magic produces wrong colors</strong> — template's theme colors may not be set; check Theme Designer in PowerPoint.</li>
+<li><strong>Cross-app context lost</strong> — ensure same Claude account is signed in across all three apps. Different accounts = different context.</li>
+<li><strong>Word tracked changes don't appear</strong> — Word's Track Changes feature must be enabled (Review → Track Changes).</li>
 </ul>
+
+  <div class="slides-cta">
+    <a href="slides/m11.html" class="slides-cta-link">
+      <span class="slides-cta-label">Slide deck</span>
+      <span class="slides-cta-title">View the M11 overview slides</span>
+      <span class="slides-cta-meta">For presenting · keyboard arrows to navigate</span>
+    </a>
+  </div>
+
   <nav class="module-nav">
-    <a class="nav-link prev" href="m10.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M10 — Office Add-ins</div></a>
+    <a class="nav-link prev" href="m10.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M10 — Browser + Chrome</div></a>
     <a class="nav-link next" href="m12.html"><div class="nav-link-label">Next →</div><div class="nav-link-title">M12 — Scheduled Tasks + Routines</div></a>
   </nav>
 </main>

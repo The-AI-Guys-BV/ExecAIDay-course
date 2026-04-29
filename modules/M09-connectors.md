@@ -1,8 +1,8 @@
-# M08 — Connectors
+# M09 — Connectors
 
 ## Why this module matters
 
-The jaw-drop arc. Inbox, drafts, calendar — your real data, in Cowork, working immediately. Up to here, the workshop was setup and orientation. M08 is where the system becomes useful in your actual workflow.
+The jaw-drop arc. Inbox, drafts, calendar — your real data, in Cowork, working immediately. Up to here, the workshop was setup and orientation. M09 is where the system becomes useful in your actual workflow.
 
 ## What you'll do
 
@@ -12,7 +12,7 @@ The jaw-drop arc. Inbox, drafts, calendar — your real data, in Cowork, working
 
 ---
 
-## Section 1 — Introduction
+## Introduction
 
 A connector is an authenticated bridge between Claude and your services, scoped to specific permissions. When Claude needs your inbox, it queries via the connector. When you ask "what's on my calendar today," same.
 
@@ -20,7 +20,7 @@ You don't authenticate per use. The connector is always-on once set up. Claude p
 
 This module: verify your connectors, run a real R-C-T-F-C prompt on a real email, and experience the 3-step jaw-drop arc.
 
-## Section 2 — Beginner / Getting Started
+## Beginner / Getting Started
 
 ### Verify connectors
 
@@ -43,7 +43,7 @@ What's in my inbox right now? Top 5, with one-line summaries.
 
 Claude queries Gmail / M365, returns 5 emails with brief summaries. This is the first jaw-drop. Real data, real surface, no setup beyond what's already done.
 
-## Section 3 — Intermediate
+## Intermediate
 
 ### R-C-T-F-C callback on a real email
 
@@ -97,7 +97,7 @@ that's directly tagged for my attention. Pull from real data.
 
 Claude composes a 1-page narrative brief from calendar + email + Slack. This is what M14 builds into a daily live artifact dashboard. For now, see the data flow working.
 
-## Section 4 — Advanced
+## Advanced
 
 ### Connector quirks
 
