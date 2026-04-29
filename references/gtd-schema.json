@@ -1,0 +1,142 @@
+{
+  "$schema": "https://execaiday.com/schemas/gtd-schema-v1.json",
+  "version": "1.0.0",
+  "description": "Canonical Notion GTD database schema for the ExecAIDay workshop. Every GTD-touching skill validates against this. The /setup-gtd skill builds these databases in the user's Notion master.",
+  "databases": {
+    "inbox": {
+      "name": "Inbox",
+      "purpose": "Capture surface — items pre-clarification.",
+      "properties": {
+        "Title": { "type": "title", "required": true },
+        "Body": { "type": "rich_text", "required": false },
+        "Captured At": { "type": "date", "required": true },
+        "Source": { "type": "select", "options": ["Cowork capture", "Email forward", "Manual", "Voice", "Other"], "required": true },
+        "Status": { "type": "select", "options": ["Inbox", "Processed"], "default": "Inbox", "required": true }
+      }
+    },
+    "next_actions": {
+      "name": "Next Actions",
+      "purpose": "Single-step physical actions.",
+      "properties": {
+        "Action": { "type": "title", "required": true },
+        "Context": { "type": "select", "options": ["@calls", "@desk", "@errands", "@anywhere", "@home", "@office", "@waiting"], "required": true },
+        "Energy": { "type": "select", "options": ["high", "medium", "low"], "required": true },
+        "Time Estimate": { "type": "select", "options": ["<5min", "<15min", "<30min", "<1h", "<2h", ">2h"], "required": true },
+        "Status": { "type": "select", "options": ["Active", "In Progress", "Done", "Delegated", "Cancelled"], "default": "Active", "required": true },
+        "Project": { "type": "relation", "database": "projects", "required": false },
+        "Created": { "type": "created_time" },
+        "Updated": { "type": "last_edited_time" },
+        "Due": { "type": "date", "required": false }
+      }
+    },
+    "projects": {
+      "name": "Projects",
+      "purpose": "Multi-step outcomes — bounded work.",
+      "properties": {
+        "Name": { "type": "title", "required": true },
+        "Outcome": { "type": "rich_text", "required": true },
+        "Status": { "type": "select", "options": ["Active", "On Hold", "Completed", "Cancelled"], "default": "Active", "required": true },
+        "Stakeholders": { "type": "multi_select", "required": false },
+        "Deadline": { "type": "date", "required": false },
+        "Next Action": { "type": "relation", "database": "next_actions", "required": false },
+        "Folder Path": { "type": "url", "required": false, "description": "Cowork file-system project folder path"},
+        "Linked Goals": { "type": "relation", "database": "goals", "required": false },
+        "Linked Areas": { "type": "relation", "database": "areas", "required": false },
+        "Created": { "type": "created_time" },
+        "Updated": { "type": "last_edited_time" }
+      }
+    },
+    "waiting_for": {
+      "name": "Waiting For",
+      "purpose": "Items delegated or pending external action.",
+      "properties": {
+        "Item": { "type": "title", "required": true },
+        "Person": { "type": "rich_text", "required": true },
+        "Project": { "type": "relation", "database": "projects", "required": false },
+        "Date Sent": { "type": "date", "required": true },
+        "Expected By": { "type": "date", "required": false },
+        "Status": { "type": "select", "options": ["Waiting", "Done", "Cancelled", "Stale"], "default": "Waiting", "required": true },
+        "Last Followup": { "type": "date", "required": false }
+      }
+    },
+    "someday": {
+      "name": "Someday Maybe",
+      "purpose": "Possible future commitments — uncommitted.",
+      "properties": {
+        "Item": { "type": "title", "required": true },
+        "Category": { "type": "select", "options": ["career", "reading", "travel", "personal", "learning", "other"], "required": false },
+        "Added": { "type": "created_time" },
+        "Notes": { "type": "rich_text", "required": false }
+      }
+    },
+    "reference": {
+      "name": "Reference",
+      "purpose": "Factual references — facts, links, lookups.",
+      "properties": {
+        "Title": { "type": "title", "required": true },
+        "Body": { "type": "rich_text", "required": false },
+        "Topic": { "type": "multi_select", "required": false },
+        "Source": { "type": "select", "options": ["Cowork reference-add", "Manual", "Email", "Web", "Other"], "required": true },
+        "Added": { "type": "created_time" },
+        "URL": { "type": "url", "required": false }
+      }
+    },
+    "tickler": {
+      "name": "Tickler",
+      "purpose": "Future-dated items — surface on a specific day.",
+      "properties": {
+        "Item": { "type": "title", "required": true },
+        "Surface Date": { "type": "date", "required": true },
+        "Created": { "type": "created_time" },
+        "Source Note": { "type": "rich_text", "required": false },
+        "Status": { "type": "select", "options": ["Pending", "Surfaced", "Processed", "Dropped"], "default": "Pending", "required": true }
+      }
+    },
+    "areas": {
+      "name": "Areas of Focus",
+      "purpose": "Ongoing responsibility domains.",
+      "properties": {
+        "Name": { "type": "title", "required": true },
+        "Description": { "type": "rich_text", "required": true },
+        "Linked Projects": { "type": "relation", "database": "projects", "required": false },
+        "Status": { "type": "select", "options": ["Active", "Inactive"], "default": "Active", "required": true }
+      }
+    },
+    "goals": {
+      "name": "Goals",
+      "purpose": "1–2 year outcomes.",
+      "properties": {
+        "Goal": { "type": "title", "required": true },
+        "Target": { "type": "rich_text", "required": true, "description": "Date or measurable outcome"},
+        "Status": { "type": "select", "options": ["On Track", "At Risk", "Drifting", "Achieved", "Abandoned"], "default": "On Track", "required": true },
+        "Linked Area": { "type": "relation", "database": "areas", "required": false },
+        "Linked Projects": { "type": "relation", "database": "projects", "required": false }
+      }
+    },
+    "vision": {
+      "name": "Vision",
+      "purpose": "3–5 year direction. Single page, not a multi-row DB. Stored as page rather than database.",
+      "type": "page",
+      "structure": "Single page in Notion master, free-form text, optional sections (purpose, identity, world we want, milestones)."
+    },
+    "meeting_notes": {
+      "name": "Meeting Notes",
+      "purpose": "Processed meeting transcripts — commitments, decisions, follow-ups.",
+      "properties": {
+        "Title": { "type": "title", "required": true, "description": "Auto: <date> – <topic or attendees>"},
+        "Date": { "type": "date", "required": true },
+        "Attendees": { "type": "multi_select", "required": true },
+        "Linked Project": { "type": "relation", "database": "projects", "required": false },
+        "Commitments": { "type": "rich_text", "required": false },
+        "Decisions": { "type": "rich_text", "required": false },
+        "Follow-ups": { "type": "rich_text", "required": false },
+        "Transcript URL": { "type": "url", "required": false }
+      }
+    }
+  },
+  "validation": {
+    "required_databases": ["inbox", "next_actions", "projects", "waiting_for", "someday", "reference", "tickler"],
+    "optional_databases": ["areas", "goals", "vision", "meeting_notes"],
+    "naming_tolerance": "Database names match case-insensitively, ignoring trailing emoji or whitespace. 'Inbox' matches 'Inbox', 'inbox', 'Inbox 📥'."
+  }
+}

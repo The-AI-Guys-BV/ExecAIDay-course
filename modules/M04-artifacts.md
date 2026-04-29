@@ -1,0 +1,131 @@
+# M04 — Artifacts
+
+## Why this module matters
+
+Live artifacts (April 2026 headline) are how Claude becomes a persistent surface in your work, not a one-shot answer. A dashboard you build today reopens tomorrow with fresh data. That's the difference between asking Claude a question and having Claude maintain a view.
+
+## What you'll do
+
+- See artifact types: HTML, React, SVG, Mermaid, Markdown, PDF, code snippets, data visualizations.
+- Build a simple live artifact, close Cowork, reopen — watch it pull fresh data.
+- Find the sidebar, restore a previous version.
+
+## Time
+
+~45 minutes.
+
+---
+
+## Section 1 — Introduction (~5 min)
+
+An artifact is a generated output Claude renders inline alongside its text response. Could be a document, a dashboard, a chart, a small interactive HTML page, a Mermaid diagram, a data visualization.
+
+The 2026 headline: **live artifacts** auto-refresh on reopen. So the dashboard isn't a snapshot — it's a re-runnable view that pulls fresh data each time you open it. Daily morning brief, weekly status, project tracker — these become living surfaces, not stale screenshots.
+
+This module: see artifact types, build one live artifact, see version history. The big payoff comes in M14 when we build the Daily Command Center artifact.
+
+## Section 2 — Beginner / Getting Started (~10 min)
+
+Artifact types you can ask Claude to generate:
+
+- **HTML** — a self-contained interactive page (forms, calculators, mini-dashboards).
+- **React** — single-file React components.
+- **SVG** — vector graphics (logos, diagrams, illustrations).
+- **Mermaid** — flowcharts, sequence diagrams, architecture diagrams.
+- **Markdown** — long-form documents.
+- **PDF** — formatted documents (rendered Markdown or React).
+- **Code snippets** — runnable code in any language.
+- **Data visualizations** — charts via Recharts, Plotly, D3, or Chart.js.
+
+Try one now. In Cowork:
+
+```
+Make me an HTML page showing the days of the week in a 2x4 grid, each in a different
+color, with the current day highlighted.
+```
+
+Cowork generates the artifact, opens the artifact sidebar on the right, renders the HTML inline.
+
+## Section 3 — Intermediate (~15 min)
+
+### Live artifacts — the headline
+
+A regular artifact is a snapshot. A LIVE artifact pulls fresh data each time it opens. Same artifact ID, fresh content.
+
+Build one. In Cowork:
+
+```
+Build me a live artifact that shows my next 3 calendar events for today.
+Read fresh from the calendar connector each time the artifact opens.
+```
+
+Cowork builds the artifact, queries your calendar, renders the events. Now: close the artifact panel. Close Cowork entirely. Reopen tomorrow morning. Reopen this artifact (find it in the artifacts list). It pulls fresh data — your NEW next-3 events for the new day.
+
+That's live. Behind the scenes, the artifact has Claude code that queries the calendar at render time.
+
+### Sidebar access
+
+Right side of Cowork. Opens when an artifact is generated. Shows:
+- The current artifact in the main pane.
+- A list of recent artifacts in this Cowork Project (left of main pane).
+- Version history for the current artifact (top right).
+
+Click an old version to view it. Click "Restore" to bring it back as the current version.
+
+### Bug #28161 — sidebar conflation
+
+Known bug: sometimes the sidebar shows two artifacts' content interleaved. Workaround: close the sidebar entirely, reopen the specific artifact you want. Anthropic is tracking; expect a fix in a future Cowork release.
+
+If your assistant sees this, they'll flag and reset.
+
+## Section 4 — Advanced (~10 min)
+
+### Sharing limit (current as of April 2026)
+
+You can't share live artifacts with other users yet — they're own-use only. So your live artifacts are private to you. (Static artifacts can be exported and shared as files, but the live-refresh capability is account-bound.)
+
+This will likely change in coming releases. Watch the changelog.
+
+### Version history + restore
+
+Every edit to an artifact creates a new version. The artifact sidebar shows the version list with timestamps. You can:
+- Click any version to view it (read-only).
+- Click "Restore this version" to bring it back as current.
+
+Useful when a Claude edit makes the artifact worse and you want to roll back.
+
+### Building artifacts as part of workflows
+
+Artifacts compose with skills. A skill can produce an artifact as its output. Examples:
+- `/today` could output a brief artifact instead of text (Tijn's call; default is text).
+- A custom skill you build with `/skill-creator` (M11) could maintain a project tracker artifact.
+
+The pattern: skill = trigger; artifact = persistent visible surface.
+
+---
+
+## Micro-win
+
+Build a simple live artifact (the calendar one above is a fine choice). Close Cowork. Reopen tomorrow morning. Reopen the artifact. Watch it pull fresh data. That's the proof that this isn't text — it's a living surface.
+
+## Verification checkpoint
+
+After building your first live artifact, type:
+
+```
+Show me the artifact I just built. What data source does it query?
+```
+
+Expected: Claude lists the artifact and identifies the connector(s) it queries (e.g., "Calendar via the Calendar connector"). If Claude says "I don't see an artifact," the artifact didn't save — try building again.
+
+## Common issues
+
+- **Bug #28161** (sidebar conflation) — close + reopen sidebar.
+- **Live artifact doesn't refresh** — it might be a static artifact, not live. Ask Claude to "make this artifact live" and rebuild.
+- **Artifact disappears on Cowork restart** — check the artifacts list in the sidebar; sometimes the active artifact pointer resets but the artifact is still there.
+- **Sharing isn't available** — current limitation, not a bug.
+
+## References
+
+- M14 — Daily Command Center, where you'll build the workshop's flagship live artifact.
+- `references/connector-quirks.md` — bug #28161 and other connector / artifact quirks.
