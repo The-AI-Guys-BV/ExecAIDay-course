@@ -16,9 +16,15 @@ You start the workshop with a working Cowork Project, a tutor (`/teach`) that wa
 
 ## Section 1 — Introduction
 
-You showed up. The plugin is installed (you'll verify in a minute). Your IT team set up your connectors during onboarding. Cowork is ready.
+What's already installed on your machine when you sit down:
 
-This module's job is to make sure all that work has actually given you a usable workspace, and to give you the words for the next 14 modules. Most of what we cover here is vocabulary — concepts you'll hear used the whole workshop. We're not building anything yet; we're orienting.
+- **Claude Desktop with Cowork** — the workspace you'll spend the workshop in.
+- **The ExecAIDay course plugin** — installed from the workshop's marketplace. Provides `/teach` and the 19 GTD skills you'll use throughout. You'll verify it shortly.
+- **Obsidian** — the knowledge layer. Free, local-first. Reads the same vault files Cowork sees.
+- **Your connectors** — Gmail or M365, Calendar, Drive, Slack, plus your custom apps (Asana / Jira / Linear / SFDC / etc., depending on what you use). Authenticated and scoped during onboarding.
+- **A starter vault and a starter work folder** — placed in your filesystem during onboarding. You'll mount both in your Cowork Project below.
+
+This module's job is to confirm all that work has actually given you a usable workspace, and to give you the words for the next 15 modules. Most of what we cover here is vocabulary — concepts you'll hear used the whole workshop. We're not building anything yet; we're orienting.
 
 The single most important thing in this module: by the end, you'll have a Cowork Project (a workspace) with both your folders mounted, and `/teach` will walk you through any future module on command. That's your safety net. If you ever miss something or want to revisit, `/teach M07` or `/teach Skills` is permanent office hours.
 
