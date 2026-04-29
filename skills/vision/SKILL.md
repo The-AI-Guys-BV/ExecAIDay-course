@@ -53,5 +53,5 @@ Walk the user through revision:
 ## Failure modes
 
 1. **No Vision document** → ask if user wants to start one; offer minimal template (a paragraph, no schema).
-2. **Vision is in vault not Notion** (or vice versa) → check both, prefer the one specified in user's `claude.md`.
+2. **Vision file not found** → suggest setting it up.
 3. **User abandons mid-update** → don't overwrite the existing Vision; save partial draft as `vision-draft.md`.

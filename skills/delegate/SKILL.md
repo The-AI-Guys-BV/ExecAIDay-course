@@ -8,7 +8,7 @@ description: Delegates a next action — drafts the delegation email, creates th
 When invoked, do the four things needed to delegate cleanly:
 
 1. Draft the delegation email.
-2. Create a Waiting-For entry in Notion.
+2. Create a Waiting-For entry in `<vault>/gtd/waiting-for.md`.
 3. Mark the original Next Action as Delegated.
 4. Confirm with the user before sending.
 
@@ -20,7 +20,7 @@ When invoked, do the four things needed to delegate cleanly:
 
 ## Step 1 — locate or capture the action
 
-If the action is already in Next-Actions DB, locate it. Otherwise, capture it inline (skill creates a Next-Action, then immediately delegates it).
+If the action is already in `<vault>/gtd/next-actions.md`, locate it. Otherwise, capture it inline (skill creates a Next-Action, then immediately delegates it).
 
 ## Step 2 — draft the email
 
@@ -46,8 +46,8 @@ Show the draft to the user. Offer:
 
 ## Step 3 — Create the Waiting-For entry
 
-In Notion:
-- Title: `<action> — <person>`
+Vault entry:
+- To: `<action> — <person>`
 - Person: `<person>`
 - Linked from: original Next-Action.
 - Linked project: same as Next-Action's project, if any.
@@ -63,9 +63,9 @@ Mark Status = "Delegated" (or move to Done if user prefers).
 ```
 Delegated to <person>.
 - Email: <sent / draft saved / not sent>
-- Waiting-for: tracked in Notion
-- Next-Action: marked Delegated
-- Follow up if you haven't heard by <date+7>.
+- Waiting-for: tracked in `<vault>/gtd/waiting-for.md`
+- Append bullet to `<vault>/gtd/waiting-for.md` with `@person:<name>` and `due:<date+7>` tags.
+- Follow up if you haven't heard by date+7.
 ```
 
 ## Don't
@@ -79,5 +79,5 @@ Delegated to <person>.
 
 1. **Email connector can't send** → save as draft, tell user to send manually.
 2. **Person not in user's contacts** → ask user for email address.
-3. **No Notion** → save the waiting-for to vault `Inbox/` as fallback.
+3. **No vault** → save the waiting-for to vault `Inbox/` as fallback.
 4. **Action is unclear** → ask one clarifying question before drafting.

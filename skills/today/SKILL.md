@@ -16,8 +16,8 @@ When invoked, produce a focused snapshot of today.
 
 In parallel:
 - Calendar: today's events (Calendar connector).
-- Notion GTD: top 5 next actions, by priority + age.
-- Notion GTD: stale waiting-fors (>7 days).
+- Top 5 next actions from `<vault>/gtd/next-actions.md`.
+- Stale waiting-fors from `<vault>/gtd/waiting-for.md` (>7 days).
 - Drafts inbox: drafts pending review.
 - Slack mentions overnight (last 16h).
 - Email urgent (per `/email-triage` heuristics, today only).
@@ -64,5 +64,5 @@ Top 3 per category, no context. Two-paragraph version.
 ## Failure modes
 
 1. **Calendar connector down** → skip calendar section, flag.
-2. **Notion connector down** → skip GTD sections, flag.
+2. **Vault not available** → skip GTD sections, flag.
 3. **No mentions / drafts / urgent items** → omit those sections.

@@ -5,7 +5,7 @@ description: Manages the Someday/Maybe list — things you might do but aren't c
 
 # /someday — Someday/Maybe Management
 
-When invoked, manage the user's Someday/Maybe list in Notion.
+When invoked, manage the user's Someday/Maybe list in `<vault>/gtd/someday.md`.
 
 ## Trigger
 
@@ -16,7 +16,7 @@ When invoked, manage the user's Someday/Maybe list in Notion.
 
 ## /someday (default — list)
 
-Query Notion Someday DB. Present grouped by category if categorized, otherwise flat list:
+Read `<vault>/gtd/someday.md`. Present grouped by category if categorized, otherwise flat list:
 ```
 # Someday / Maybe
 
@@ -34,7 +34,7 @@ Query Notion Someday DB. Present grouped by category if categorized, otherwise f
 
 ## /someday add
 
-Append directly to Someday DB. Skip Inbox. One-line confirmation.
+Append directly to `<vault>/gtd/someday.md`. Skip Inbox. One-line confirmation.
 
 ## /someday review
 
@@ -56,5 +56,5 @@ After review, suggest: "Run /someday review again in 6 months — Someday lists 
 
 ## Failure modes
 
-1. **Notion not connected** → tell user.
-2. **Someday DB empty** → say so; suggest capturing future-maybe items there as they come up.
+1. **Vault not set up** → tell user.
+2. **Someday list empty** → say so; suggest capturing future-maybe items there as they come up.

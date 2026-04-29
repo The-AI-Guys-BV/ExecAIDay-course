@@ -16,7 +16,7 @@ When invoked, manage the user's Goals (GTD horizon: 1–2 year outcomes).
 
 ## /goals (list)
 
-Query Notion Goals DB. Present:
+Read `<vault>/gtd/goals.md`. Present:
 ```
 # Goals (1–2 year)
 
@@ -31,7 +31,7 @@ Ask:
 - Target (date or measurable outcome).
 - Linked Area (optional).
 
-Append to Notion.
+Append to `<vault>/gtd/goals.md`.
 
 ## /goals <goal-name>
 

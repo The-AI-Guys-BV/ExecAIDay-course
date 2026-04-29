@@ -24,7 +24,7 @@ The 5 named UI elements (treasure hunt — find each in your Cowork window):
 
 1. **Project switcher.** Top-left of the Cowork sidebar. Lists your Cowork Projects; click to switch.
 2. **Mounted folders panel.** In the project sidebar — shows which local folders this Cowork Project is reading.
-3. **Connectors panel.** Customize → Connectors. Lists connected services (Gmail, Notion, etc.).
+3. **Connectors panel.** Customize → Connectors. Lists connected services (Gmail, Calendar, Slack, etc.).
 4. **Skills / slash commands panel.** Customize → Skills. Lists installed skills (you'll see the 26 from this plugin once you install it).
 5. **Artifacts sidebar.** Right side, opens when an artifact is generated. Holds version history.
 

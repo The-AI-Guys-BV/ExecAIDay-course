@@ -17,8 +17,8 @@ When invoked, surface next actions matching the user's current available time, e
 
 ## Pre-flight
 
-- Notion connected.
-- GTD Next-Actions DB has fields for: Context, Energy (high/medium/low), Time-estimate.
+- Vault mounted with `<vault>/gtd/next-actions.md`.
+- Bullets use tags: `#context/`, `#energy/`, `#time/` for filtering.
 
 ## Step 1 — gather state
 
@@ -32,7 +32,7 @@ If user typed with parameters, skip the questions for the parameters they provid
 
 ## Step 2 — filter and present
 
-Query Next-Actions DB with the filters. Present:
+Read `<vault>/gtd/next-actions.md` with the filters. Present:
 ```
 # Available now — <context> · <time> · <energy>
 
@@ -51,16 +51,16 @@ If list is long, show top 5 + "<N more, narrow filter to see fewer>."
 
 After presenting, offer: "Want me to start one? Type the number or paste the action text."
 
-If user picks one, mark Status = "In Progress" in Notion. Skill exits cleanly. User does the action; runs `/done <action>` (a separate skill or manual Notion update) when finished.
+If user picks one, skill exits cleanly. User does the action; mark done when finished.
 
 ## Don't
 
-- Don't suggest items that don't match the filters.
+- Don't surface items that don't match all filters.
 - Don't auto-start an action without confirmation.
 - Don't combine two unrelated suggestions ("Maybe you could also...").
 
 ## Failure modes
 
-1. **Notion fields missing** (no Context / Energy / Time) → fall back to all next actions; advise updating GTD template.
+1. **Tags missing** (no `#context/` / `#energy/` / `#time/`) → fall back to all next actions; advise adding tags.
 2. **Empty filter result** → say so; offer to widen filter.
 3. **Energy field empty on most items** → use action text length / type as a heuristic (long writing = high energy, short calls = low).

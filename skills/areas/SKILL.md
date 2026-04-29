@@ -16,7 +16,7 @@ When invoked, manage the user's Areas of Focus (GTD higher-altitude horizon — 
 
 ## /areas (list)
 
-Query Notion Areas DB. Present:
+Read `<vault>/gtd/areas.md`. Present:
 ```
 # Areas of Focus
 
@@ -27,7 +27,7 @@ Query Notion Areas DB. Present:
 
 ## /areas add
 
-Append to Notion Areas DB. Ask for one-line description if input is just a name.
+Append to `<vault>/gtd/areas.md`. Ask for one-line description if input is just a name.
 
 ## /areas <area-name>
 
@@ -66,5 +66,5 @@ Present:
 
 ## Failure modes
 
-1. **No Areas DB in Notion** → suggest setting up; offer template structure.
+1. **File not set up** → suggest setting up; offer template.
 2. **No projects/actions tagged with this area** → say so; offer to add tags retroactively.

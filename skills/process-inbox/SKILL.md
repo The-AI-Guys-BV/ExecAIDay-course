@@ -16,15 +16,15 @@ For each Inbox item:
 2. **Is it actionable?**
    - **No** → three sub-options:
      - **Trash** (no future use)
-     - **Reference** (might want later → moves to Notion Reference DB or vault `References/`)
-     - **Someday/Maybe** (might do later → moves to Notion Someday DB)
+     - **Reference** (might want later → moves to vault `References/` folder or vault `References/`)
+     - **Someday/Maybe** (might do later → moves to `<vault>/gtd/someday.md`)
    - **Yes** → continue to step 3.
 
 3. **What's the next concrete physical action?** User answers. Capture it.
 
 4. **Is the next action the only one needed (single-step) or part of a multi-step project?**
-   - Single-step → moves to Next Actions DB with that action.
-   - Multi-step → ask: project name? Outcome? Move to Projects DB; the action goes to Next Actions DB linked to the project.
+   - Single-step → appends to `<vault>/gtd/next-actions.md` with that action.
+   - Multi-step → ask: project name? Outcome? Create `<vault>/gtd/projects/<slug>.md`; the action goes to `<vault>/gtd/next-actions.md` linked to the project.
 
 5. **Will it take less than 2 minutes?**
    - Yes → tell user "Do it now." Wait for confirmation. Mark Done.
@@ -34,7 +34,7 @@ For each Inbox item:
    - Me (now or scheduled) → keep in Next Actions or schedule via Tickler.
    - Delegate → move to Waiting-For; offer to draft delegation email via `/drafts-inbox`.
 
-7. **Move the item.** Apply the user's choices to Notion.
+7. **Move the item.** Apply the user's choices: delete from `<vault>/gtd/inbox.md`, append to destination file with appropriate tags.
 
 8. **Continue or pause?** Ask: "N items left. Continue or pause?" Honor either.
 
@@ -46,7 +46,7 @@ For each Inbox item:
 
 ## Pre-flight
 
-- Notion MCP must be connected.
+- vault operations must be connected.
 - GTD master must have Inbox, Next Actions, Projects, Waiting-For, Someday, Reference databases. If any are missing, tell user to fix the GTD template.
 
 ## Discipline
@@ -68,6 +68,6 @@ For each Inbox item:
 ## Failure modes
 
 1. **Inbox is empty** → tell user "Inbox is clean," exit.
-2. **Notion write fails mid-process** → save state, tell user which items were processed, ask to retry.
-3. **User wants to bulk-trash** → confirm count, do it, log to `memory.md`.
+2. **Vault write fails mid-process** → save state, tell user which items were processed, ask to retry.
+3. **User wants to bulk-trash** → confirm count, do it, log to `<vault>/Daily Notes/` `memory.md`.
 4. **Item is so unclear the user can't make a decision** → leave in Inbox, mark with note "needs more context," move to next.

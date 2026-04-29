@@ -13,10 +13,10 @@ When invoked, surface items the user is waiting on others to deliver.
 - `/waiting-for stale` — only items waited >7 days.
 - `/waiting-for <person>` — items waiting on a specific person.
 
-## Step 1 — query Notion
+## Step 1 — read vault
 
-Notion GTD Waiting-For DB. Filter:
-- Status = Waiting.
+Read `<vault>/gtd/waiting-for.md`. Filter:
+- Bullets not marked done (no `#status/done` tag).
 - Apply trigger-specific filters.
 
 ## Step 2 — present
@@ -45,7 +45,7 @@ For `stale` filter, surface "needs follow-up" prominently:
 
 For each stale item, offer:
 - Draft follow-up email (`/drafts-inbox`)
-- Update expected date in Notion
+- Update expected date in `<vault>/gtd/waiting-for.md`
 - Mark as no longer waiting (move to Done or Trash)
 
 User picks per item or batches.
@@ -54,10 +54,10 @@ User picks per item or batches.
 
 - Don't suggest follow-up unprompted on non-stale items.
 - Don't draft follow-up emails without explicit user request.
-- Don't pull the user's email history to verify whether something has actually been delivered — that's brittle. Trust the Notion state.
+- Don't pull the user's email history to verify whether something has actually been delivered — that's brittle. Trust the vault state.
 
 ## Failure modes
 
-1. **Notion not connected** → tell user.
+1. **Vault not set up** → tell user.
 2. **Empty waiting-for list** → tell user; suggest reviewing if anything they're waiting on isn't tracked yet.
 3. **Person's name doesn't match exactly** → fuzzy match by first name; if multiple matches, ask.

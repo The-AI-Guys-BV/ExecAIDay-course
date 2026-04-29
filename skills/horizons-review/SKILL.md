@@ -25,7 +25,7 @@ If the last review was recent (per `memory.md` log), suggest skipping or doing a
 
 ## Step 1 — Areas of Focus
 
-Pull current Areas list from Notion (Areas DB).
+Read `<vault>/gtd/areas.md`.
 
 Walk one at a time:
 1. Show the area + its current description.
@@ -37,19 +37,19 @@ After all areas: ask if there's a NEW area to add. (e.g., new role, new responsi
 
 ## Step 2 — Goals
 
-Pull Goals (1–2 year horizon) from Notion (Goals DB).
+Read `<vault>/gtd/goals.md`.
 
 For each:
 1. Show goal + current target.
 2. Ask: "Progress? On track?"
 3. Ask: "Any projects driving this that aren't in your Projects list yet?"
-4. Update Notion with status.
+4. Update `<vault>/gtd/goals.md` with status.
 
 After all goals: ask if there's a new goal to add.
 
 ## Step 3 — Vision
 
-Pull Vision (3–5 year horizon) from Notion (Vision page or DB).
+Read `<vault>/gtd/vision.md`.
 
 This is rarely changed. Surface it. Ask:
 - Does it still feel right?
@@ -75,6 +75,6 @@ Log the review date in `<vault>/about-me/horizons-log.md`.
 
 ## Failure modes
 
-1. **No Areas / Goals / Vision in Notion** → ask user if they want to set them up; offer template.
+1. **Files not set up** → ask user if they want to set them up; offer template.
 2. **Last review was very recent** → ask if they want to do a fresh review or skip.
 3. **User wants to skip a section** → honor.

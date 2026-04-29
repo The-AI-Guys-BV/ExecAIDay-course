@@ -23,9 +23,9 @@ User lists. You don't generate; you record. Append to today's Daily Note in vaul
 Ask: "What's still open that I should know about for tomorrow?"
 
 User lists. For each:
-- If it's a next-action → append to Notion Next-Actions DB (skill creates it).
+- If it's a next-action → append to `<vault>/gtd/next-actions.md`.
 - If it's something to remember → append to today's Daily Note under `## Loose ends`.
-- If it's a waiting-for → ask who they're waiting on, create Notion Waiting-For.
+- If it's waiting-for someone → append to `<vault>/gtd/waiting-for.md` with `@person:<name>` tag.
 
 ## Step 3 — tomorrow's intention
 
@@ -59,5 +59,5 @@ End. Don't ask follow-up questions. Don't suggest more reflection.
 ## Failure modes
 
 1. **Daily Note for today doesn't exist** → create it, then append.
-2. **Notion not connected** → save next-actions and waiting-fors to vault `Inbox/` for `/process-inbox` to pick up later.
+2. **vault not set up** → save next-actions and waiting-fors to vault `Inbox/` for `/process-inbox` to pick up later.
 3. **User abandons mid-checkout** → save partial state, exit cleanly. They can rerun.

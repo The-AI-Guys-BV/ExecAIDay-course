@@ -16,11 +16,11 @@ When invoked, surface and action stale items across the GTD system.
 
 ## Pre-flight
 
-Notion connected. GTD master in Notion.
+Vault mounted with GTD files in `<vault>/gtd/`.
 
-## Step 1 — pull stale items
+## Step 1 — identify stale items
 
-Stale thresholds (all configurable in user's `claude.md`; defaults below):
+Stale thresholds (default, user can override):`claude.md`; defaults below):
 - **Next actions:** not updated in >14 days.
 - **Waiting-fors:** waiting >7 days.
 - **Projects:** no next-action updated in >14 days, OR project page itself not edited in >30 days.
@@ -78,6 +78,6 @@ Stale review complete.
 
 ## Failure modes
 
-1. **Notion not connected** → tell user.
+1. **Vault not set up** → tell user.
 2. **No stale items** → say so, exit cheerfully.
 3. **User abandons mid-review** → save state, allow resume.

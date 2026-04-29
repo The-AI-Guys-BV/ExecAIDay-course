@@ -5,7 +5,7 @@ description: Surfaces the user's GTD next actions. Filters by context, energy, t
 
 # /whats-next — GTD Next Actions Query
 
-When invoked, surface the user's next actions from Notion.
+When invoked, surface the user's next actions from `<vault>/gtd/next-actions.md`.
 
 ## Trigger
 
@@ -14,10 +14,10 @@ When invoked, surface the user's next actions from Notion.
 - `/whats-next quick` — only items estimated <15 min.
 - `/whats-next <project>` — filter to actions for a specific project.
 
-## Step 1 — query Notion
+## Step 1 — read vault
 
-Notion GTD Next Actions DB. Filter:
-- Status = Active.
+Read `<vault>/gtd/next-actions.md`. Filter:
+- Bullets not marked done (no `#status/done` tag).
 - Apply trigger-specific filters.
 
 ## Step 2 — present
@@ -49,12 +49,12 @@ If filtered (e.g., `/whats-next quick`):
 ## Don't
 
 - Don't pull more than 30 items in one view. If list is longer, offer to paginate or filter.
-- Don't fabricate next actions; only list what's in Notion.
+- Don't fabricate next actions; only list what's in `<vault>/gtd/next-actions.md`.
 - Don't suggest what to work on. Just surface the list.
-- Don't write to Notion in this skill — read-only.
+- Read-only skill; don't modify vault in this skill.
 
 ## Failure modes
 
-1. **Notion not connected** → tell user.
+1. **Vault not set up** → tell user.
 2. **No active next actions** → tell user the list is empty; suggest `/process-inbox` if Inbox has items.
 3. **Filter matches zero items** → tell user the filter is empty; show full list as fallback.

@@ -16,7 +16,7 @@ When invoked, defer items to future dates or review what's surfaced for today.
 
 ## Step 1 — defer
 
-Append to Notion Tickler DB:
+Append to `<vault>/gtd/tickler.md`:
 - Item title.
 - Surface date (parsed from input).
 - Created date.
@@ -26,7 +26,7 @@ Confirm one-line: `Tickler set: "<item>" on <date>.`
 
 ## Step 2 — review (`/tickler review`)
 
-Query Tickler DB:
+Read `<vault>/gtd/tickler.md`:
 - Surface date <= today, not yet processed.
 - Surface date in the next 7 days (heads-up).
 
@@ -45,7 +45,7 @@ Present:
 
 Walk each "Surfacing today" item with the user. For each:
 - **Capture to Inbox** — moves to Inbox for `/process-inbox`.
-- **Convert to next-action** — moves to Next-Actions DB.
+- **Convert to next-action** — moves to `<vault>/gtd/next-actions.md`.
 - **Defer further** — set new tickler date.
 - **Drop** — archive, no longer relevant.
 
@@ -56,11 +56,11 @@ Show next 30 days of upcoming ticklers, sorted by date. No actions; just visibil
 ## Don't
 
 - Don't auto-process surfaced ticklers — let user decide each.
-- Don't fabricate ticklers. Only show what's in Notion.
+- Don't fabricate ticklers. Only show what's in `<vault>/gtd/tickler.md`.
 - Don't recommend default deferral periods unless user asks.
 
 ## Failure modes
 
-1. **Notion not connected** → save tickler to vault `Tickler/<surface-date>.md`.
+1. **vault not set up** → save tickler to vault `Tickler/<surface-date>.md`.
 2. **Date parsing fails** → ask user for ISO date.
-3. **No Tickler DB in Notion** → suggest setting it up; fall back to vault Tickler folder.
+3. **No tickler file** → suggest setting it up.

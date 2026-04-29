@@ -15,7 +15,7 @@ Claude in Chrome means Claude can navigate, record, replay, and coordinate acros
 
 ## Section 1 — Introduction
 
-A connector handles your major systems — your inbox, your calendar, your Notion. A browser handles everything else: portals without a built-in connector, dashboards behind logins, websites that aren't on the connector list. Claude in Chrome is for those.
+A connector handles your major systems — your inbox, your calendar, your file storage. A browser handles everything else: portals without a built-in connector, dashboards behind logins, websites that aren't on the connector list. Claude in Chrome is for those.
 
 Three killer capabilities:
 - **Record-and-replay:** Claude watches you do a task once, then repeats it on command.
@@ -54,7 +54,7 @@ Claude reads the page and returns the value. First proof Chrome works.
 Pick a 3-step task you do often. Examples:
 - Log into your CRM, navigate to a specific report, screenshot.
 - Open a vendor portal, check a status, summarize.
-- Open a Notion page, copy a section, paste into another tool.
+- Open a knowledge-base page, copy a section, paste into another tool.
 
 In the Claude in Chrome side panel:
 

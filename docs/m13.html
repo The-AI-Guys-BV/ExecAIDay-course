@@ -30,15 +30,15 @@
       <span class="breadcrumb"><a href="index.html">All modules</a> &nbsp;/&nbsp; System</span>
     </div>
     <h1>M13 — GTD in Notion</h1>
-    <p class="lede">David Allen's GTD, but you never have to open Notion. The 19 GTD skills make it work from Cowork — capture, process, query, review. The Notion database is infrastructure; Claude is the interface. This is the module where your task management gets unified — no more sticky notes, no more inbox-as-todo-list, no more "let me write that down somewhere."</p>
+    <p class="lede">David Allen's GTD, but stored as plain markdown files in your Obsidian vault. The 19 GTD skills make it work from Cowork — capture, process, query, review. Your vault is the database; Cowork is the interface; Obsidian is the read-side. This is the module where your task management gets unified — no more sticky notes, no more inbox-as-todo-list, no more "let me write that down somewhere."</p>
   </div>
 </header>
 
 <main class="content container">
 <h2>What you'll do</h2>
 <ul>
-<li>Tour the GTD Notion template (Inbox, Next Actions, Projects, Waiting For, Someday/Maybe, Reference, Weekly Review).</li>
-<li>Run <code>/capture</code> — watch the item appear in Notion's Inbox without you opening Notion.</li>
+<li>Tour the GTD vault layout (<code>&lt;vault&gt;/gtd/inbox.md</code>, <code>next-actions.md</code>, <code>projects/</code>, <code>waiting-for.md</code>, <code>someday.md</code>, <code>tickler.md</code>, plus higher horizons).</li>
+<li>Run <code>/capture</code> — watch the item appear as a bullet in <code>inbox.md</code> without you opening Obsidian.</li>
 <li>Try <code>/whats-next</code>, <code>/waiting-for</code>, <code>/process-inbox</code>.</li>
 <li>Combine a scheduled task + GTD: weekly review every Monday morning.</li>
 </ul>
@@ -52,32 +52,45 @@
 <li><strong>Reflect</strong> — review weekly. What's stale? What needs my attention?</li>
 <li><strong>Engage</strong> — choose what to do based on context, energy, time available.</li>
 </ol>
-<p>This module gives you the Cowork-driven version of all five.</p>
+<p>This module gives you the Cowork-driven version of all five — backed by markdown files in your vault.</p>
 <h2>Section 2 — Beginner / Getting Started</h2>
-<h3>Tour the GTD Notion template</h3>
-<p>Open the workshop's Notion master. Navigate to the GTD section. You'll see databases:</p>
+<h3>Tour the GTD vault layout</h3>
+<p>Open Obsidian. Navigate to <code>&lt;vault&gt;/gtd/</code>. You'll see:</p>
 <ul>
-<li><strong>Inbox</strong> — capture surface. Everything new goes here first.</li>
-<li><strong>Next Actions</strong> — single-step things you can do (with Context, Energy, Time-estimate, Project link).</li>
-<li><strong>Projects</strong> — multi-step outcomes (with Outcome statement, Stakeholders, Deadline, Next-Action link).</li>
-<li><strong>Waiting For</strong> — things you've delegated or are waiting on someone else for.</li>
-<li><strong>Someday/Maybe</strong> — might do later, not committed.</li>
-<li><strong>Reference</strong> — facts and notes you want findable.</li>
-<li><strong>Weekly Review</strong> — checklist for your weekly walkthrough.</li>
+<li><code>inbox.md</code> — capture surface. Everything new goes here first as a bullet.</li>
+<li><code>next-actions.md</code> — single-step items. Bullets with <code>#context/...</code>, <code>#energy/...</code>, <code>#time/...</code> tags.</li>
+<li><code>projects/</code> — folder, one MD per project. Outcome at top, stakeholders, deadline, current next-action linked.</li>
+<li><code>waiting-for.md</code> — delegated items, bullets with <code>@person:...</code>.</li>
+<li><code>someday.md</code> — might do later, not committed.</li>
+<li><code>tickler.md</code> — defer-to-future items, bullets with <code>surface:YYYY-MM-DD</code>.</li>
+<li><code>areas.md</code> — ongoing responsibility domains.</li>
+<li><code>goals.md</code> — 1–2 yr outcomes.</li>
+<li><code>vision.md</code> — 3–5 yr direction.</li>
 </ul>
-<p>Plus higher horizons:</p>
+<p>References live in <code>&lt;vault&gt;/References/</code> as you already use them.</p>
+<p>The 19 GTD skills read and write these files. You normally don't open them by hand — but they ARE plain markdown, so you can if you want.</p>
+<h3>Tag conventions</h3>
+<p>Inline tags only. No YAML frontmatter. Examples on a next-action bullet:</p>
+<pre><code>
+- [ ] Follow up with legal team on trademark filing #context/calls #energy/low #time/quick @project:trademark-filing created:2026-04-29
+</code></pre>
+<p>Tag list:</p>
 <ul>
-<li><strong>Areas of Focus</strong> — ongoing responsibility domains.</li>
-<li><strong>Goals</strong> — 1-2 year outcomes.</li>
-<li><strong>Vision</strong> — 3-5 year direction.</li>
+<li>Context: <code>#context/calls</code>, <code>#context/desk</code>, <code>#context/errands</code>, <code>#context/anywhere</code>.</li>
+<li>Energy: <code>#energy/high</code>, <code>#energy/medium</code>, <code>#energy/low</code>.</li>
+<li>Time: <code>#time/quick</code>, <code>#time/medium</code>, <code>#time/long</code>.</li>
+<li>People: <code>@person:john</code>.</li>
+<li>Projects: <code>@project:q3-board-deck</code>.</li>
+<li>Dates: <code>created:</code>, <code>due:</code>, <code>surface:</code> followed by <code>YYYY-MM-DD</code>.</li>
+<li>Status: <code>#status/active</code> (default), <code>#status/done</code>, <code>#status/cancelled</code>.</li>
 </ul>
-<p>This is the GTD database structure. Most of the time, you won't open Notion at all. The skills do the work.</p>
+<p>The skills filter and sort by these tags. You don't have to memorize them — <code>/process-inbox</code> adds them when you clarify items.</p>
 <h3><code>/capture</code> — your first GTD move</h3>
 <p>In Cowork:</p>
 <pre><code>
 /capture remind me to follow up with the legal team on the trademark filing
 </code></pre>
-<p>Boom. Item appears in your Notion GTD Inbox. You never opened Notion. That's the felt moment.</p>
+<p>Boom. A new bullet appears in <code>&lt;vault&gt;/gtd/inbox.md</code>. You never opened Obsidian. That's the felt moment.</p>
 <p>Try a few more captures over the day. Build the habit.</p>
 <h3><code>/whats-next</code></h3>
 <pre><code>
@@ -88,7 +101,7 @@
 <pre><code>
 /whats-next quick
 </code></pre>
-<p>Shows only quick items. Useful when you have a small chunk of time.</p>
+<p>Shows only <code>#time/quick</code> items. Useful when you have a small chunk of time.</p>
 <h2>Section 3 — Intermediate</h2>
 <h3><code>/process-inbox</code></h3>
 <p>The clarifying step. Walks each Inbox item with you and asks the GTD questions:</p>
@@ -103,22 +116,22 @@
 <pre><code>
 /process-inbox
 </code></pre>
-<p>Walk through 3-5 items. The skill enforces the GTD discipline — you don't just dump items into "later," you actively decide.</p>
+<p>Walk through 3–5 items. The skill adds the right tags, moves the bullet from <code>inbox.md</code> to the right destination file (<code>next-actions.md</code>, <code>waiting-for.md</code>, <code>someday.md</code>, <code>projects/&lt;slug&gt;.md</code>, etc.). You don't dump items into "later" — you actively decide.</p>
 <h3><code>/waiting-for</code></h3>
 <pre><code>
 /waiting-for
 </code></pre>
-<p>Lists what you're waiting on, grouped by person.</p>
+<p>Reads <code>&lt;vault&gt;/gtd/waiting-for.md</code>, lists items grouped by person.</p>
 <pre><code>
 /waiting-for stale
 </code></pre>
-<p>Surfaces items waited >7 days. For each, offers: follow up (drafts via <code>/drafts-inbox</code>), push deadline, cancel, wait longer.</p>
+<p>Surfaces items waited >7 days (computed from <code>created:</code> tag). For each, offers: follow up (drafts via <code>/drafts-inbox</code>), push deadline, cancel, wait longer.</p>
 <h3><code>/delegate</code></h3>
 <p>When a next action is for someone else:</p>
 <pre><code>
 /delegate Send me the Q3 numbers to John
 </code></pre>
-<p>Skill drafts the delegation email, creates the Waiting-For entry in Notion, marks the original Next-Action as delegated. You confirm before the email sends.</p>
+<p>Skill drafts the delegation email, appends a bullet to <code>&lt;vault&gt;/gtd/waiting-for.md</code> with <code>@person:john created:&lt;today&gt;</code>, and moves the original next-action bullet (if it was already in <code>next-actions.md</code>) — adding <code>#status/cancelled</code>. You confirm before the email sends.</p>
 <h3>Combining scheduled task + GTD</h3>
 <p>Set up a Monday morning weekly review:</p>
 <p>In Cowork → Settings → Scheduled tasks → New:</p>
@@ -130,14 +143,16 @@
 <pre><code>
 Tell me to run /weekly-review now. Surface as a Slack DM to me with the link to today's review.
 </code></pre>
-<p>Now every Monday you get the nudge. Skill does the heavy lifting.</p>
+<p>Now every Monday you get the nudge. The skill does the heavy lifting.</p>
+<h3>Mobile capture via Dispatch</h3>
+<p>You can capture from your phone. The Claude mobile app + Dispatch (March 2026) routes voice/text requests to your desktop Cowork, which runs <code>/capture</code>, which appends the bullet to <code>&lt;vault&gt;/gtd/inbox.md</code>. Same for <code>/whats-next</code>, <code>/waiting-for</code>, <code>/today</code>. See M12 for setup.</p>
 <h2>Section 4 — Advanced</h2>
 <h3>Higher horizons skills</h3>
 <p>GTD has horizons above next actions. Most workflows live at next-actions and projects (the ground level). The higher horizons matter quarterly+.</p>
 <ul>
-<li><code>/areas</code> — ongoing responsibility domains.</li>
-<li><code>/goals</code> — 1-2 year outcomes.</li>
-<li><code>/vision</code> — 3-5 year direction.</li>
+<li><code>/areas</code> — ongoing responsibility domains (<code>&lt;vault&gt;/gtd/areas.md</code>).</li>
+<li><code>/goals</code> — 1–2 yr outcomes (<code>&lt;vault&gt;/gtd/goals.md</code>).</li>
+<li><code>/vision</code> — 3–5 yr direction (<code>&lt;vault&gt;/gtd/vision.md</code>).</li>
 <li><code>/horizons-review</code> — full walkthrough.</li>
 </ul>
 <p>Don't try to set all three on Day 1. Let them accumulate as you reflect.</p>
@@ -146,31 +161,34 @@ Tell me to run /weekly-review now. Surface as a Slack DM to me with the link to 
 <pre><code>
 /tickler review the Q4 hiring plan in 3 weeks
 </code></pre>
-<p>Lands in the Tickler database. Surfaces 3 weeks from now via <code>/tickler review</code>.</p>
+<p>Appends a bullet to <code>&lt;vault&gt;/gtd/tickler.md</code> with <code>surface:2026-05-20</code> (3 weeks from today). Surfaces 3 weeks from now via <code>/tickler review</code>.</p>
 <h3><code>/checkout</code> — end of day</h3>
 <pre><code>
 /checkout
 </code></pre>
-<p>Walks: what got done today, what's still open, what's tomorrow's #1. Logs to today's Daily Note + creates next-actions in Notion.</p>
+<p>Walks: what got done today, what's still open, what's tomorrow's #1. Appends a closing block to today's daily note in <code>&lt;vault&gt;/Daily Notes/&lt;today&gt;.md</code>. Creates next-actions in <code>next-actions.md</code> if you mention any.</p>
 <p>End-of-day discipline. The point is the daily review, not the time savings.</p>
+<h3>Why files instead of a database</h3>
+<p>Trade-off, plainly. A database (Notion, Airtable) gives you structured fields, joins, and a polished mobile app. Files give you: zero subscriptions, plain-text portability, version control, native Obsidian integration (backlinks, search, graph), and one home for tasks + knowledge. Plus Dispatch closes the mobile-capture gap.</p>
+<p>For an executive working primarily from one laptop with cloud-synced vault, files win.</p>
 <h3>Team GTD considerations</h3>
 <p>Workshop's locked decision: team GTD only works if EVERY team member does their personal GTD. One laggard contaminates the system. Don't push team GTD on people who haven't done personal first.</p>
-<p>External collaborators are out — keep team GTD inside the org. Notion sharing permissions get thorny fast.</p>
+<p>External collaborators are out — keep team GTD inside the org.</p>
 <p>If your team is interested, run them through this workshop too. Otherwise, your personal GTD works fine standalone.</p>
 <h2>Try this</h2>
-<p><code>/capture remind me to follow up with the legal team on the trademark filing</code> in Cowork. Item appears in your Notion GTD Inbox. You never opened Notion. Infrastructure-as-interface proof.</p>
-<p>The pattern repeats: capture from Cowork, process from Cowork, query from Cowork, review from Cowork. Notion is the database; Cowork is your interface.</p>
+<p><code>/capture remind me to follow up with the legal team on the trademark filing</code> in Cowork. Open <code>&lt;vault&gt;/gtd/inbox.md</code> in Obsidian. The bullet is there with <code>created:&lt;today&gt;</code>. You never opened the file by hand. Infrastructure-as-interface proof.</p>
+<p>The pattern repeats: capture from Cowork, process from Cowork, query from Cowork, review from Cowork. The vault is the database; Cowork is your interface.</p>
 <h2>Verification checkpoint</h2>
 <pre><code>
-What's in my Notion Inbox right now?
+What's in my GTD inbox right now? Read &lt;vault&gt;/gtd/inbox.md.
 </code></pre>
-<p>Expected: Claude lists Inbox items including the one you just captured. If the count is 0 or doesn't include your capture, your assistant should check the Notion connector setup.</p>
+<p>Expected: Claude lists Inbox items including the one you just captured. If the count is 0 or doesn't include your capture, your assistant should check the vault path and <code>&lt;vault&gt;/gtd/inbox.md</code> exists.</p>
 <h2>Common issues</h2>
 <ul>
-<li><strong><code>/capture</code> writes to wrong place in Notion</strong> — connector setup issue. Your assistant fixes.</li>
-<li><strong><code>/process-inbox</code> items stay in Inbox after processing</strong> — skill should move items; if it doesn't, check Notion connector has write permission.</li>
-<li><strong><code>/waiting-for</code> shows zero items</strong> — either no waiting-fors yet (correct) or DB filter mismatch.</li>
-<li><strong>Higher-horizon skills (/areas, /goals, /vision) fail</strong> — those DBs may not be in your Notion master yet. Suggest setting up before running them.</li>
+<li><strong><code>/capture</code> writes to wrong place</strong> — <code>&lt;vault&gt;/gtd/inbox.md</code> doesn't exist or vault path is off. Your assistant fixes.</li>
+<li><strong><code>/process-inbox</code> items stay in inbox after processing</strong> — skill should remove the bullet from <code>inbox.md</code> and write it to the destination file. If it doesn't, check Cowork has write permission to the vault.</li>
+<li><strong><code>/waiting-for</code> shows zero items</strong> — either no waiting-fors yet (correct) or <code>waiting-for.md</code> is empty.</li>
+<li><strong>Higher-horizon skills (/areas, /goals, /vision) fail</strong> — those files may not exist yet. Run <code>/areas</code>, <code>/goals</code>, or <code>/vision</code> once with no args; the skill creates the file with a stub.</li>
 </ul>
   <nav class="module-nav">
     <a class="nav-link prev" href="m12.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M12 — Scheduled Tasks + Routines</div></a>

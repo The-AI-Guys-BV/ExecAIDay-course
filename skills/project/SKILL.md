@@ -14,18 +14,18 @@ When invoked, surface everything about one project.
 
 ## Step 1 — locate the project
 
-Fuzzy-match by project name in Notion Projects DB. If multiple matches, ask. If zero, ask user to retype or list active projects.
+Fuzzy-match by project name in files in `<vault>/gtd/projects/`. If multiple matches, ask. If zero, ask user to retype or list active projects.
 
 ## Step 2 — pull related context
 
 For the located project:
-1. **Project record:** outcome, status, stakeholders, deadline, all fields from the Notion page.
-2. **Active next action(s):** filter Next-Actions DB by Project link.
-3. **Waiting-for items:** filter Waiting-For DB by Project link.
+1. **Project record:** read from `<vault>/gtd/projects/<slug>.md`, extract outcome, status, stakeholders, deadline.
+2. **Active next action(s):** search `<vault>/gtd/next-actions.md` for bullets tagged `@project:<slug>`.
+3. **Waiting-for items:** search `<vault>/gtd/waiting-for.md` for bullets tagged `@project:<slug>`.
 4. **Project folder:** check work folder for matching project subfolder. List file count in `Source Materials/`, `Working Files/`, `Deliverables/`.
 5. **Recent emails:** search inbox for emails tagged with the project (if email connector supports tagging) or with project name in subject. Last 5.
 6. **Slack threads:** search Slack for project name. Last 5 threads.
-7. **Notion sub-pages:** any pages linked from the project page in Notion. List titles.
+7. **Related files:** any other markdown files in the project folder or vault.
 
 ## Step 3 — present
 
@@ -56,7 +56,7 @@ For the located project:
 ### Slack (last 5 threads)
 - <channel> — <thread starter> — <date>
 
-## Linked Notion pages
+## Related vault files
 - <title> — <url>
 ```
 

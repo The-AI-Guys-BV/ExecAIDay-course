@@ -1,6 +1,6 @@
 ---
 name: meeting-prep
-description: Prepares for an upcoming meeting. Pulls calendar event details, attendee history, prior meeting notes, related Notion pages, and recent emails with the attendees. Produces a one-page brief. Use /meeting-prep <meeting title or "next meeting">.
+description: Prepares for an upcoming meeting. Pulls calendar event details, attendee history, prior meeting notes, vault projects, and recent emails with attendees. Produces a one-page brief. Use /meeting-prep <meeting title or "next meeting">.
 ---
 
 # /meeting-prep — Pre-Meeting Brief
@@ -27,9 +27,9 @@ For the located meeting:
 
 1. **Attendees** — list from the calendar invite. Distinguish organizer from attendees from optional.
 2. **Prior meetings** — search for previous meetings with the same attendees in the last 6 months. List up to 5 by date + title.
-3. **Meeting notes** — check the user's Obsidian Daily Notes folder and Notion meeting-notes database for prior notes referencing these attendees or this meeting series.
+3. **Meeting notes** — check Daily Notes in `<vault>/Daily Notes/` for prior notes on these attendees or meeting series.
 4. **Email thread** — search Gmail / M365 for recent emails (last 30 days) involving the attendees. Pull subjects + 1-line previews of the last 5.
-5. **Notion projects** — search the user's Notion GTD master for active projects that might relate (match by attendee name or topic keyword from meeting title).
+5. **Related vault projects** in `<vault>/gtd/projects/` — match by attendee name or topic keyword.
 6. **Documents** — if the meeting invite has attachments or linked docs, list them. Don't read them in full unless the user asks.
 
 ## Step 3 — produce the brief
@@ -49,7 +49,7 @@ One page. Fixed structure:
 ## Prior context
 - **Last meeting:** <date>, <topic, what was decided>
 - **Recent emails:** <2–3 most relevant subjects + 1-line of each>
-- **Related Notion projects:** <names + status>
+- **Related vault projects in `<vault>/gtd/projects/`:** <names + status>
 
 ## Likely agenda items
 - <inferred from prior context + invite description>
@@ -62,7 +62,7 @@ One page. Fixed structure:
 - <2–3 questions the user should have considered before this meeting>
 
 ## Documents to review
-- <links to attached docs or relevant Notion pages>
+- <links to attached docs or relevant vault files>
 ```
 
 ## Don't
@@ -75,7 +75,7 @@ One page. Fixed structure:
 
 ## Failure modes
 
-1. **No calendar connector** → ask user to provide meeting title + key attendees manually; produce a partial brief from email + Notion only.
+1. **No calendar connector** → ask user to provide meeting title + key attendees manually; produce a brief from email + vault only.
 2. **Attendees match multiple people** (e.g., common first name) → ask user to disambiguate.
 3. **Meeting in <30 min** → still produce the brief; flag at top: "Meeting starts in N minutes."
 4. **Prior notes folder location unknown** → check the user's Obsidian vault path from `claude.md` context; if not specified, ask.

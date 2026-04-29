@@ -44,7 +44,7 @@ Plus 19 GTD skills (covered in M13) and Cowork built-ins (covered later in this 
 ```
 /meeting-prep next
 ```
-Claude pulls the next event on your calendar, attendee context, prior notes, recent emails, related Notion projects. One-page brief.
+Claude pulls the next event on your calendar, attendee context, prior notes, recent emails, related vault GTD projects. One-page brief.
 
 **`/weekly-review`** — walks the GTD weekly review interactively. Try a quick run; you can exit anytime.
 

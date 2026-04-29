@@ -1,6 +1,6 @@
 ---
 name: reference-find
-description: Searches the Reference store — Notion Reference DB and vault References/ — for a topic, keyword, or person. Use /reference-find <query>.
+description: Searches the Reference store — vault `References/` folder and vault References/ — for a topic, keyword, or person. Use /reference-find <query>.
 ---
 
 # /reference-find — Search Reference
@@ -9,14 +9,14 @@ When invoked, search across the user's Reference sources and surface matches.
 
 ## Trigger
 
-- `/reference-find <query>` — search both Notion Reference DB and vault `References/`.
+- `/reference-find <query>` — search both vault `References/` folder and vault `References/`.
 - `/reference-find topic: <topic>` — filter to a specific topic tag.
-- `/reference-find <query> notion` — Notion only.
+
 - `/reference-find <query> vault` — vault only.
 
 ## Step 1 — search both stores in parallel
 
-- **Notion Reference DB:** query via Notion MCP search; match title and body.
+- **vault `References/` folder:** query via vault operations search; match title and body.
 - **Vault `References/`:** Read all `.md` files; grep for query (case-insensitive).
 
 ## Step 2 — present results
@@ -24,11 +24,7 @@ When invoked, search across the user's Reference sources and surface matches.
 ```
 # Reference results — "<query>"
 
-## From Notion (N matches)
-- <title> — <topic, if any> — <date> — <Notion URL>
-  > <1-line snippet of match>
-
-## From vault (N matches)
+## Results (N matches)
 - <filename> — <last modified>
   > <1-line snippet of match>
 ```
@@ -38,7 +34,7 @@ Sort by relevance (title match > body match) then recency.
 ## Step 3 — offer to open or fetch
 
 After listing, offer:
-- "Open #<N>" — opens the page (Notion URL or Read the vault file).
+- "Open #<N>" — Read the vault file for more context.
 - "Pull #<N> into context" — Read the file/page in full so user can ask follow-ups.
 
 ## Don't

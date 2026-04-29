@@ -1,11 +1,11 @@
 ---
 name: capture
-description: Quick GTD capture — appends to the Notion Inbox database without opening Notion. Use /capture <thing>.
+description: Quick GTD capture — appends to `<vault>/gtd/inbox.md` with `created:<today>` tag. Use /capture <thing>.
 ---
 
 # /capture — GTD Inbox Capture
 
-When invoked, append the user's input to the Notion GTD Inbox database. Fast. Single round trip.
+When invoked, append the user's input to the `<vault>/gtd/inbox.md`. Fast. Single round trip.
 
 ## Trigger
 
@@ -14,11 +14,9 @@ When invoked, append the user's input to the Notion GTD Inbox database. Fast. Si
 
 ## Step 1 — write to Inbox
 
-Use Notion MCP to append a new page to the Inbox database in the user's GTD master:
-- **Title:** the captured text (truncate to 100 chars; full text in body if longer).
-- **Body:** full text + ISO timestamp on a separate line.
-- **Status:** "Inbox" (default).
-- **Source:** "Cowork capture" (auto-tag).
+Append a bullet to `<vault>/gtd/inbox.md` with the captured text. Use tag `created:<today>`.
+- **Bullet format:** `- [ ] <text> created:YYYY-MM-DD`
+- Keep text verbatim; no enrichment.
 
 ## Step 2 — confirm
 
@@ -44,7 +42,7 @@ End. Do NOT:
 
 ## Failure modes
 
-1. **Notion not connected** → save the capture to `<vault>/Inbox/<timestamp>-<slug>.md` instead. Tell user: "Notion is offline; saved to vault Inbox. Run /capture again later to push to Notion, or run /process-inbox which will move local-Inbox items to Notion."
-2. **Notion Inbox database not found** → tell user the GTD master may be incomplete; ask to verify the GTD template is set up.
+1. **Vault write fails** → tell user; offer to save draft locally and retry later.
+2. **`<vault>/gtd/inbox.md` not found** → tell user the GTD master may be incomplete; ask to verify the GTD template is set up.
 3. **User input is empty** → ask: "What needs capturing?"
 4. **Input is suspiciously long** (>500 chars) → still capture, but suggest: "Captured. This is longer than usual — consider running /process-inbox soon to clarify."

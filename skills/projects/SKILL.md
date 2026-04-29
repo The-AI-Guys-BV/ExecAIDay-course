@@ -5,7 +5,7 @@ description: Lists active GTD projects. Use /projects to see active, /projects a
 
 # /projects — GTD Projects List
 
-When invoked, surface projects from Notion.
+When invoked, surface projects from `<vault>/gtd/projects/`.
 
 ## Trigger
 
@@ -16,7 +16,7 @@ When invoked, surface projects from Notion.
 
 ## Step 1 — query
 
-Notion GTD Projects DB. Filter by trigger.
+Read all files in `<vault>/gtd/projects/`. Filter by trigger.
 
 ## Step 2 — present
 
@@ -41,11 +41,11 @@ For `/projects <keyword>`, filter inline; if zero matches, list active projects 
 ## Don't
 
 - Don't include archived projects unless `all` is specified.
-- Don't summarize project status — list the facts in Notion.
+- Don't summarize project status — list the facts from vault files.
 - Don't recommend which to focus on.
 
 ## Failure modes
 
-1. **Notion not connected** → tell user.
+1. **Projects folder not set up** → tell user.
 2. **No projects** → suggest `/new-project` to start one.
 3. **Project DB schema mismatched** (missing Outcome / Next-Action / Stakeholders fields) → list what's there, flag schema issue.
