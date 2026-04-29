@@ -44,7 +44,7 @@
 </ul>
 <h2>Section 1 — Introduction</h2>
 <p>A skill in 2026 Cowork is a slash command. Same thing, two names. <code>/teach</code> and "the teach skill" refer to the same file: <code>~/.claude/skills/teach/SKILL.md</code> (or in our case, the version inside this plugin's <code>skills/teach/</code>).</p>
-<p>Cowork auto-discovers skills from the filesystem. When you install a plugin, all the skills inside it become available. When you write a SKILL.md in <code>~/.claude/skills/<name>/SKILL.md</code>, that becomes a slash command too.</p>
+<p>Cowork auto-discovers skills from the filesystem. When you install a plugin, all the skills inside it become available. When you write a SKILL.md in <code>~/.claude/skills/&lt;name&gt;/SKILL.md</code>, that becomes a slash command too.</p>
 <p>The 7 core skills you'll use throughout the workshop and after:</p>
 <ol>
 <li><code>/teach</code> — patient tutor.</li>
@@ -58,10 +58,10 @@
 <p>Plus 19 GTD skills (covered in M13) and Cowork built-ins (covered later in this module).</p>
 <h2>Section 2 — Beginner / Getting Started</h2>
 <h3>The 7 core skills, one demo each</h3>
-<p><strong><code>/teach <module></code></strong> — already used. Walks any module.</p>
-<p><strong><code>/help-me-prompt <draft></code></strong> — sharpens any prompt. You'll install this in Section 3.</p>
-<p><strong><code>/new-project <name></code></strong> — already used in M05.</p>
-<p><strong><code>/meeting-prep <meeting title or "next"></code></strong> — generates a pre-meeting brief. Try:</p>
+<p><strong><code>/teach &lt;module&gt;</code></strong> — already used. Walks any module.</p>
+<p><strong><code>/help-me-prompt &lt;draft&gt;</code></strong> — sharpens any prompt. You'll install this in Section 3.</p>
+<p><strong><code>/new-project &lt;name&gt;</code></strong> — already used in M05.</p>
+<p><strong><code>/meeting-prep &lt;meeting title or "next"&gt;</code></strong> — generates a pre-meeting brief. Try:</p>
 <pre><code>
 /meeting-prep next
 </code></pre>
@@ -75,7 +75,7 @@
 <pre><code>
 /email-triage today
 </code></pre>
-<p>Each skill has a SKILL.md you can read. They're in the plugin at <code>skills/<name>/SKILL.md</code>.</p>
+<p>Each skill has a SKILL.md you can read. They're in the plugin at <code>skills/&lt;name&gt;/SKILL.md</code>.</p>
 <h2>Section 3 — Intermediate</h2>
 <h3>The in-workshop install of <code>/help-me-prompt</code></h3>
 <p>Even though <code>/help-me-prompt</code> is already in this plugin, you'll do a manual install too — both for the pedagogy (you experience the install pattern) and as a fallback if the plugin path ever fails.</p>
@@ -137,7 +137,7 @@ Confirm when the file is written and readable.
 <li>Edge cases / failure modes.</li>
 <li>Test cases (it generates test prompts to verify).</li>
 </ul>
-<p>At the end, it writes the SKILL.md to <code>~/.claude/skills/<your-skill-name>/SKILL.md</code>. Cowork auto-discovers. You have a new slash command.</p>
+<p>At the end, it writes the SKILL.md to <code>~/.claude/skills/&lt;your-skill-name&gt;/SKILL.md</code>. Cowork auto-discovers. You have a new slash command.</p>
 <p>This is the autonomy moment. Post-workshop, you don't need to come back to Tijn's team to extend the system. <code>/skill-creator</code> is how you keep building.</p>
 <h3>Plugin namespacing</h3>
 <p>If a plugin's skill name collides with another, namespacing applies. E.g., <code>/teach@execaiday</code> vs <code>/teach@another-plugin</code>. Default: most-recently-modified wins (or use the explicit namespace to disambiguate).</p>
@@ -145,7 +145,7 @@ Confirm when the file is written and readable.
 <h3>Disabling skills you don't use</h3>
 <p>Customize → Skills. Toggle off skills you never call. Reduces clutter when typing <code>/</code>.</p>
 <p>You can disable plugin skills too — though disabling a workshop skill defeats the purpose.</p>
-<h2>Micro-win</h2>
+<h2>Try this</h2>
 <p>All 7 core skills work in real demos. The in-workshop install of <code>/help-me-prompt</code> succeeded. You can see every available skill in Customize → Skills.</p>
 <p>"You're an executive with 7 custom Claude skills, plus the ability to build more on demand." Public commitment moment.</p>
 <h2>Verification checkpoint</h2>

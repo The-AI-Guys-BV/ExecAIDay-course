@@ -2,12 +2,12 @@
 
 ## Why this module matters
 
-Cowork is on. Time to know where things are and what to set so it behaves like YOU want, not like the default. Five UI elements to recognize, five settings to configure deliberately, plus the data-sharing toggles you should set with intention rather than leaving on default.
+Cowork is on. Time to know where things are and what to set so it behaves like YOU want, not like the default. Five UI elements to recognize, four settings to configure deliberately, plus the data-sharing toggles you should set with intention rather than leaving on default.
 
 ## What you'll do
 
 - Treasure-hunt the 5 named UI elements.
-- Configure 5 exec-relevant settings.
+- Configure 4 exec-relevant settings.
 - Set data-sharing / telemetry toggles deliberately.
 
 ---
@@ -16,7 +16,7 @@ Cowork is on. Time to know where things are and what to set so it behaves like Y
 
 You already turned Cowork on in M01 when you created your Cowork Project. This module isn't about activating Cowork; it's about KNOWING the workspace you're in so the rest of the workshop isn't a treasure hunt mid-demo.
 
-Five UI elements you'll recognize on sight by the end of this module. Five settings you'll set deliberately. That's the whole module.
+Five UI elements you'll recognize on sight by the end of this module. Four settings you'll set deliberately. That's the whole module.
 
 ## Section 2 — Beginner / Getting Started
 
@@ -32,7 +32,7 @@ Find each one in your window. Tell your assistant when you've found all 5.
 
 ## Section 3 — Intermediate
 
-The 5 settings to set deliberately. Defaults are reasonable but not yours.
+The 4 settings to set deliberately. Defaults are reasonable but not yours.
 
 ### 1. Default model
 
@@ -40,21 +40,15 @@ In Settings → Models. Three choices: Opus 4.7 / Sonnet 4.6 / Haiku 4.5.
 
 **Recommendation for execs:** Sonnet 4.6 default. Switch to Opus 4.7 for complex reasoning (board-level analysis, strategic writing). Switch to Haiku 4.5 for fast triage / classification.
 
-### 2. Voice input
-
-In Settings → Voice. Pick the voice tool installed during onboarding (Wispr / Superwhisper / Voibe). Set it as default.
-
-If voice not enabled: skip this. You can still type prompts.
-
-### 3. Theme
+### 2. Theme
 
 Settings → Appearance. Light / Dark / System. Personal preference. (Yes, this matters — you're going to spend hours in here. Make it comfortable.)
 
-### 4. Connector visibility
+### 3. Connector visibility
 
 Settings → Connectors → Per-Project. By default, all connectors are available in every Cowork Project. For sensitive Cowork Projects (M&A, legal), you may want to disable certain connectors per project. We'll touch this in M16.
 
-### 5. Skill enable/disable
+### 4. Skill enable/disable
 
 Customize → Skills. By default, all installed skills are enabled. You can disable skills you never use to reduce slash command clutter. (Worth noting; not action-required.)
 
@@ -73,7 +67,7 @@ These toggles don't change Claude's quality dramatically — they're about your 
 
 ### Account-level vs project-level settings
 
-Some settings (theme, default model, voice) are account-level. Some (connector visibility) are per-Cowork-Project.
+Some settings (theme, default model) are account-level. Some (connector visibility) are per-Cowork-Project.
 
 The mental model: account-level settings affect every Cowork Project; per-project settings let you have a "sensitive work" Cowork Project that disables most connectors and a "default work" one that has them all on.
 
@@ -85,22 +79,21 @@ The mental model: account-level settings affect every Cowork Project; per-projec
 
 ---
 
-## Micro-win
+## Try this
 
-The 5 settings configured to YOUR preference, not the defaults. You spent 5 deliberate decisions on how Cowork behaves. Small win, real ownership.
+The 4 settings configured to YOUR preference, not the defaults. You made 4 deliberate decisions on how Cowork behaves. Small win, real ownership.
 
 ## Verification checkpoint
 
 ```
-What's my default model right now, and what voice tool is configured?
+What's my default model right now?
 ```
 
-Expected: Claude reports the model + voice tool you set. If it can't answer (says "I don't know"), the settings might not have saved — check Settings.
+Expected: Claude reports the model you set. If it can't answer (says "I don't know"), the setting might not have saved — check Settings.
 
 ## Common issues
 
 - **Setting doesn't persist after restart.** Known issue if Cowork v2.1.115 or older. Update to v2.1.116+.
-- **Voice input not working.** Mac: System Settings → Privacy → Microphone → grant Cowork. Windows: Settings → Privacy → Microphone.
 - **Theme doesn't apply.** Restart Cowork; sometimes mid-session theme changes don't take.
 
 ## References

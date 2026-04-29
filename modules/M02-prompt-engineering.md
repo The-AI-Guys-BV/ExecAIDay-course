@@ -9,7 +9,7 @@ The single biggest variable in whether Claude is useful or wasteful is the promp
 - Learn R-C-T-F-C with worked examples.
 - Walk through the 10 anti-patterns to recognize and avoid.
 - Try metaprompting via `/help-me-prompt` (you'll install this skill in M11; here you'll see the concept).
-- Quick voice mention (Wispr / Superwhisper / Voibe — installed in onboarding).
+- Quick voice mention (Wispr / Superwhisper / Voibe / FloWstay — installed in onboarding).
 
 ---
 
@@ -56,7 +56,7 @@ The five elements:
 - **R — Role.** Who Claude is being. Specific.
 - **C — Context.** What Claude needs to know that isn't obvious.
 - **T — Task.** One specific verb-driven ask.
-- **F — Format.** Output shape: bullets, JSON, 2-paragraph email, code block.
+- **F — Format.** Output shape: bullets, a table, a 2-paragraph email, a one-page memo.
 - **C — Constraints.** What NOT to do. The 2026 edge.
 
 Full reference: `references/rctfc-framework.md`.
@@ -94,7 +94,7 @@ This is the meta-move: instead of remembering all 5 elements + 10 anti-patterns,
 
 ### Voice + prompting
 
-Voice tools (Wispr / Superwhisper / Voibe) are installed during onboarding. They transcribe what you say into your active text field. So you can speak prompts instead of typing them.
+Voice tools (Wispr / Superwhisper / Voibe / FloWstay — [flowstay.app](https://flowstay.app)) are installed during onboarding. They transcribe what you say into your active text field. So you can speak prompts instead of typing them.
 
 The trick: even when speaking, structure the prompt as R-C-T-F-C. Voice → text → R-C-T-F-C → Claude. Don't degrade your prompt quality just because you're talking.
 
@@ -112,7 +112,7 @@ Each link is its own R-C-T-F-C. The chain is the workflow. You'll see this patte
 
 ---
 
-## Micro-win
+## Try this
 
 Take a prompt you wrote yesterday — a real one, from your inbox or a recent Claude session. Run it through `/help-me-prompt` (in your head, since the skill installs in M11). Identify which of the 5 elements were missing. Rewrite. Send the new version. See the difference.
 

@@ -7,8 +7,9 @@ Meeting transcripts → Obsidian daily note → Claude processes → follow-up e
 ## What you'll do
 
 - Verify your meeting-note tool (Granola / Bluedot / Fellow — picked in questionnaire, installed in IT onboarding).
-- Run a full pipeline: meeting captured → transcript in Obsidian daily note → Claude processes into Notion.
-- Try gap analysis: Claude cross-references the transcript vs your existing Notion notes, surfaces commitments you missed.
+- Run a full pipeline: meeting captured → transcript in Obsidian daily note → Claude processes into a structured note in your vault.
+- Try gap analysis: Claude cross-references the transcript vs your existing vault notes, surfaces commitments you missed.
+- Push commitments into your GTD next-actions in Notion.
 - Generate follow-up emails routed to `drafts-inbox`.
 
 ---
@@ -39,10 +40,10 @@ When a real meeting happens:
 2. **Tool transcribes.** Some tools transcribe in real-time; some after the meeting.
 3. **Transcript lands.** Where? Configurable — most tools have:
    - A native dashboard (their app).
-   - Sync to specific cloud locations (Notion, Drive, etc.).
+   - Sync to a cloud folder (Drive, Dropbox, etc.).
    - Local file output.
 4. **You point Cowork at the transcript.**
-5. **Claude processes** into Notion (commitments, decisions, action items).
+5. **Claude processes** into a structured note in your vault, and pushes commitments into your GTD next-actions.
 
 Workshop default: tool dumps transcripts to a folder in your vault, e.g., `<vault>/Meeting Transcripts/`. Or directly into your Daily Note for the meeting's day.
 
@@ -59,26 +60,27 @@ Read the transcript at <path-to-transcript>. Process it:
 - List commitments (who promised what, by when).
 - List decisions made.
 - List open questions / things requiring follow-up.
-- Save to Notion meeting-notes DB as a new entry, with cross-links to attendees and any related projects.
+Save the structured note to my vault under Meeting Notes/<date>-<title>.md.
+Then for each commitment that's mine, /capture it into my GTD inbox.
 ```
 
-Claude reads the transcript, structures the output, writes to Notion.
+Claude reads the transcript, structures the output, writes the meeting note into your vault, and captures each of your commitments into your GTD inbox.
 
-Verify in Notion: the new meeting note is there with structured commitments, decisions, follow-ups.
+Verify in your vault: the new meeting note is there with structured commitments, decisions, follow-ups. Verify in your Notion GTD inbox: the commitments showed up.
 
 ### Gap analysis
 
 This is where the pipeline pays off uniquely. Claude can cross-reference what was said in the meeting vs what's in your existing notes:
 
 ```
-Cross-reference today's meeting transcript with the active project page for [project].
-What was committed in the meeting that isn't yet in the project page? What was decided
-that contradicts existing project state?
+Cross-reference today's meeting transcript with the project's claude.md and Working
+Files in <work-folder>/<project>/. What was committed in the meeting that isn't
+yet in the project? What was decided that contradicts the project's current state?
 ```
 
 Claude surfaces gaps. Example outputs:
-- "You committed to deliver X by Friday; the project's deadline says next Wednesday. Mismatch."
-- "John raised a risk about [thing] in the meeting; not in the project's risks section."
+- "You committed to deliver X by Friday; the project's claude.md says next Wednesday. Mismatch."
+- "John raised a risk about [thing] in the meeting; not in the project's Working Files."
 - "Decision was made to deprecate Y; project still lists Y as active."
 
 You decide what to update.
@@ -134,9 +136,9 @@ The Teams bot ban (May–June 2026) is a separate issue — about which TOOLS ca
 
 ---
 
-## Micro-wins (both)
+## Try these
 
-**Gap analysis.** Claude cross-references meeting transcript vs Notion notes, surfaces missed commitments. The realization: Claude caught something you would have missed.
+**Gap analysis.** Claude cross-references meeting transcript vs your project's claude.md, surfaces missed commitments. The realization: Claude caught something you would have missed.
 
 **Follow-up email generation.** Routes to drafts-inbox, ready for your review. End-to-end pipeline working.
 
@@ -153,7 +155,7 @@ Expected: Claude reads the most recent transcript file and lists decisions. If i
 - **Tool isn't capturing** — system audio permission missing on Mac (System Settings → Privacy → Screen Recording / Microphone). On Windows, similar permission flow.
 - **Transcript location mismatch** — your tool dumps to a different location than your vault expects. Configure either side to match.
 - **Claude reads the wrong transcript** — be specific in your prompt about which meeting / which date.
-- **Sensitive meeting accidentally captured** — delete the transcript. If it's already in Notion, delete that too. The architecture is your discipline; it doesn't auto-protect.
+- **Sensitive meeting accidentally captured** — delete the transcript and any vault note Claude wrote from it. The architecture is your discipline; it doesn't auto-protect.
 
 ## References
 

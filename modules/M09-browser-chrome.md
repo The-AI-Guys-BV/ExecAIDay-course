@@ -15,7 +15,7 @@ Claude in Chrome means Claude can navigate, record, replay, and coordinate acros
 
 ## Section 1 — Introduction
 
-A connector handles structured data — your inbox, your calendar, your Notion. A browser handles everything else: portals without APIs, dashboards behind logins, sites with no MCP integration. Claude in Chrome is for those.
+A connector handles your major systems — your inbox, your calendar, your Notion. A browser handles everything else: portals without a built-in connector, dashboards behind logins, websites that aren't on the connector list. Claude in Chrome is for those.
 
 Three killer capabilities:
 - **Record-and-replay:** Claude watches you do a task once, then repeats it on command.
@@ -136,7 +136,7 @@ You'll build skills in M11 with `/skill-creator`. Chrome integration is a natura
 
 ---
 
-## Micro-win
+## Try this
 
 Tijn picks default. Three options, all staged:
 1. Real-site navigation: Claude pulls a specific fact from your actual CRM / dashboard.

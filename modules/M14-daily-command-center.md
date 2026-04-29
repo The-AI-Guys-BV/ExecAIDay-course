@@ -115,7 +115,7 @@ This will change in coming releases. When it does, "team morning brief" becomes 
 
 ---
 
-## Micro-win
+## Try this
 
 The artifact built Day 1 has now grown into your actual every-morning view. Open it tomorrow morning — it's richer than today, fully personalized, all sources flowing into one pane.
 
@@ -134,7 +134,7 @@ Expected: Claude opens the artifact, identifies the 7 (or more) tiles, and says 
 - **Tile shows stale data on reopen** — live refresh isn't happening; ensure the tile prompt says "pull fresh on each open."
 - **Layout broken on reflow** — too many tiles for the column structure; reduce or move some to a second artifact.
 - **Bug #28161** (sidebar conflation) shows two artifacts mixed — close + reopen sidebar.
-- **One source returns nothing** — connector scope, query parameters, or the source DB schema. Debug per tile.
+- **One source returns nothing** — the connector might not be granted access to that source, or the query is off. Have your assistant fix per tile.
 
 ## References
 

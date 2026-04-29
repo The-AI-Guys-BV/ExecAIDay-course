@@ -61,7 +61,7 @@
 </ul>
 <h3>How vault + Cowork interact</h3>
 <p>Same files, two interfaces. Edit a file in Obsidian; Cowork sees the edit on next read. Edit a file from Cowork (Claude writes into it); Obsidian re-renders live (file watching).</p>
-<p>You'll see this in the micro-win at the end.</p>
+<p>You'll see this in the exercise at the end.</p>
 <h3>Obsidian basics</h3>
 <ul>
 <li><code>Cmd/Ctrl + O</code> — open quick-switcher to find any note.</li>
@@ -72,21 +72,28 @@
 </ul>
 <h2>Section 3 — Intermediate</h2>
 <h3>Plugin starter set</h3>
-<p>In Obsidian: Settings → Community plugins → Browse. Install and enable:</p>
+<p>Obsidian has two plugin types: <strong>Core plugins</strong> (built in) and <strong>Community plugins</strong> (third-party, opt-in).</p>
+<p><strong>Step 1 — Enable Daily Notes (core).</strong></p>
+<p>Open Obsidian Settings (gear icon, bottom-left). Go to <strong>Core plugins</strong>. Find <strong>Daily notes</strong> in the list, toggle it ON.</p>
+<p><strong>Step 2 — Turn on Community plugins.</strong></p>
+<p>In Settings, go to <strong>Community plugins</strong>. The first time you visit this screen, Obsidian shows "Restricted mode" with a button that says <strong>Turn on community plugins</strong>. Click it and confirm the warning dialog (community plugins run third-party code; the five we use below are widely-trusted standards).</p>
+<p><strong>Step 3 — Install the five community plugins.</strong></p>
+<p>Still in <strong>Settings → Community plugins</strong>, click <strong>Browse</strong>. A search dialog opens. For each plugin below, type the name into the search box, click the result, click <strong>Install</strong>, then click <strong>Enable</strong>. Close the dialog and repeat:</p>
 <ol>
-<li><strong>Daily Notes</strong> (core, usually pre-enabled). Creates <code>Daily Notes/YYYY-MM-DD.md</code> on demand or daily.</li>
 <li><strong>Calendar</strong> — visual calendar to navigate daily / weekly / monthly notes.</li>
 <li><strong>Templater</strong> — template-driven note creation (date math, headers, etc.).</li>
 <li><strong>Periodic Notes</strong> — extends Daily Notes to weekly, monthly, quarterly, yearly.</li>
 <li><strong>Tasks</strong> — checkbox-style task tracking inside notes (separate from your GTD; useful for tactical lists).</li>
-<li><strong>Commander</strong> — adds command palette items for the above.</li>
+<li><strong>Commander</strong> — adds buttons / command palette entries for the plugins above.</li>
 </ol>
-<p>After installing, configure Daily Notes:</p>
+<p><strong>Step 4 — Configure Daily Notes.</strong></p>
+<p>Settings → <strong>Daily notes</strong>. Set:</p>
 <ul>
-<li>Folder: <code>Daily Notes/</code></li>
-<li>Date format: <code>YYYY-MM-DD</code> (matches the convention in <code>Daily Notes/claude.md</code>).</li>
-<li>Template: skip for now (you can add a Templater-driven template later).</li>
+<li><strong>New file location:</strong> <code>Daily Notes/</code></li>
+<li><strong>Date format:</strong> <code>YYYY-MM-DD</code> (matches the convention in <code>Daily Notes/claude.md</code>).</li>
+<li><strong>Template file location:</strong> leave blank for now (you can add a Templater-driven template later).</li>
 </ul>
+<p>If anything in steps 1–4 doesn't match what you see on screen, your assistant will sort it.</p>
 <h3>How Claude reads daily notes</h3>
 <p>Claude reads your Daily Notes when relevant — for example, the <code>/weekly-review</code> skill reads the past 7 days' notes to surface accomplishments. Claude treats them as journal voice (per <code>Daily Notes/claude.md</code>).</p>
 <p>Don't worry about Claude misreading them. The <code>claude.md</code> in the Daily Notes folder tells Claude to expect first-person reflective content.</p>
@@ -111,13 +118,13 @@
 <li>Meeting note template (we'll see this in M15).</li>
 </ul>
 <p>You'll iterate on templates over weeks. Don't optimize on Day 1.</p>
-<h2>Micro-win</h2>
+<h2>Try this</h2>
 <p>In Cowork:</p>
 <pre><code>
 Write a paragraph reflecting on what you've learned in the workshop so far.
 Save it to today's daily note in my vault. Use journal voice — first person, reflective, brief.
 </code></pre>
-<p>Claude reads <code>Daily Notes/claude.md</code> (which says journal voice), writes the paragraph, saves to <code><vault>/Daily Notes/<today>.md</code>.</p>
+<p>Claude reads <code>Daily Notes/claude.md</code> (which says journal voice), writes the paragraph, saves to <code>&lt;vault&gt;/Daily Notes/&lt;today&gt;.md</code>.</p>
 <p>Watch Obsidian. The note updates live in front of you.</p>
 <h2>Verification checkpoint</h2>
 <p>In Cowork:</p>

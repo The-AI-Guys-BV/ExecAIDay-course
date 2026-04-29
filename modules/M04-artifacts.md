@@ -6,7 +6,7 @@ Live artifacts (April 2026 headline) are how Claude becomes a persistent surface
 
 ## What you'll do
 
-- See artifact types: HTML, React, SVG, Mermaid, Markdown, PDF, code snippets, data visualizations.
+- See the artifact kinds you'll actually use: documents, dashboards, diagrams.
 - Build a simple live artifact, close Cowork, reopen — watch it pull fresh data.
 - Find the sidebar, restore a previous version.
 
@@ -14,33 +14,30 @@ Live artifacts (April 2026 headline) are how Claude becomes a persistent surface
 
 ## Section 1 — Introduction
 
-An artifact is a generated output Claude renders inline alongside its text response. Could be a document, a dashboard, a chart, a small interactive HTML page, a Mermaid diagram, a data visualization.
+An artifact is a generated output Claude renders inline alongside its text response. For executives, the kinds that matter are documents you can edit, dashboards you can re-open, and diagrams that explain a flow.
 
 The 2026 headline: **live artifacts** auto-refresh on reopen. So the dashboard isn't a snapshot — it's a re-runnable view that pulls fresh data each time you open it. Daily morning brief, weekly status, project tracker — these become living surfaces, not stale screenshots.
 
-This module: see artifact types, build one live artifact, see version history. The big payoff comes in M14 when we build the Daily Command Center artifact.
+This module: see the kinds, build one live artifact, see version history. The big payoff comes in M14 when we build the Daily Command Center artifact.
 
 ## Section 2 — Beginner / Getting Started
 
-Artifact types you can ask Claude to generate:
+The artifact kinds you'll actually ask for:
 
-- **HTML** — a self-contained interactive page (forms, calculators, mini-dashboards).
-- **React** — single-file React components.
-- **SVG** — vector graphics (logos, diagrams, illustrations).
-- **Mermaid** — flowcharts, sequence diagrams, architecture diagrams.
-- **Markdown** — long-form documents.
-- **PDF** — formatted documents (rendered Markdown or React).
-- **Code snippets** — runnable code in any language.
-- **Data visualizations** — charts via Recharts, Plotly, D3, or Chart.js.
+- **Documents** — long-form writing (briefs, memos, reports).
+- **Interactive pages** — a self-contained dashboard or mini-tool you can click around in.
+- **Diagrams** — flowcharts, org charts, process diagrams (Mermaid does these in plain English: "draw me a flow from A to B to C").
+
+You don't write any code. You describe what you want; Claude builds it.
 
 Try one now. In Cowork:
 
 ```
-Make me an HTML page showing the days of the week in a 2x4 grid, each in a different
-color, with the current day highlighted.
+Make me an interactive page showing the days of the week in a 2x4 grid, each in a
+different color, with today highlighted.
 ```
 
-Cowork generates the artifact, opens the artifact sidebar on the right, renders the HTML inline.
+Cowork generates the artifact, opens the artifact sidebar on the right, renders it inline.
 
 ## Section 3 — Intermediate
 
@@ -51,13 +48,13 @@ A regular artifact is a snapshot. A LIVE artifact pulls fresh data each time it 
 Build one. In Cowork:
 
 ```
-Build me a live artifact that shows my next 3 calendar events for today.
-Read fresh from the calendar connector each time the artifact opens.
+Build me a live artifact that shows the items currently in my Notion GTD Inbox.
+Read fresh from Notion each time the artifact opens.
 ```
 
-Cowork builds the artifact, queries your calendar, renders the events. Now: close the artifact panel. Close Cowork entirely. Reopen tomorrow morning. Reopen this artifact (find it in the artifacts list). It pulls fresh data — your NEW next-3 events for the new day.
+Cowork builds the artifact, queries Notion (your only connected connector at this point — set up in M01), and renders the inbox items. Close the artifact panel. Close Cowork entirely. Reopen tomorrow. Reopen this artifact. It pulls fresh data — your CURRENT inbox, not yesterday's snapshot.
 
-That's live. Behind the scenes, the artifact has Claude code that queries the calendar at render time.
+That's live. The full Daily Command Center artifact in M14 — pulling calendar, email, Slack, Notion all together — only works after the rest of your connectors come online in M08.
 
 ### Sidebar access
 
@@ -80,8 +77,6 @@ If your assistant sees this, they'll flag and reset.
 
 You can't share live artifacts with other users yet — they're own-use only. So your live artifacts are private to you. (Static artifacts can be exported and shared as files, but the live-refresh capability is account-bound.)
 
-This will likely change in coming releases. Watch the changelog.
-
 ### Version history + restore
 
 Every edit to an artifact creates a new version. The artifact sidebar shows the version list with timestamps. You can:
@@ -93,16 +88,18 @@ Useful when a Claude edit makes the artifact worse and you want to roll back.
 ### Building artifacts as part of workflows
 
 Artifacts compose with skills. A skill can produce an artifact as its output. Examples:
-- `/today` could output a brief artifact instead of text (Tijn's call; default is text).
-- A custom skill you build with `/skill-creator` (M11) could maintain a project tracker artifact.
+- `/today` could output a brief artifact instead of text.
+- A skill you build later (M11) could maintain a project tracker artifact.
 
 The pattern: skill = trigger; artifact = persistent visible surface.
 
 ---
 
-## Micro-win
+## Try this
 
-Build a simple live artifact (the calendar one above is a fine choice). Close Cowork. Reopen tomorrow morning. Reopen the artifact. Watch it pull fresh data. That's the proof that this isn't text — it's a living surface.
+Build the Notion-Inbox live artifact above. With the artifact open, in another Cowork tab type `/capture remind me to test the live artifact`. Watch your new item appear in the artifact when it refreshes. That's "live" — not a screenshot, a surface that updates.
+
+In M14 you'll build the full version that pulls calendar, email, Slack, and Notion together. For now, one live tile is enough to feel the difference.
 
 ## Verification checkpoint
 
@@ -112,7 +109,7 @@ After building your first live artifact, type:
 Show me the artifact I just built. What data source does it query?
 ```
 
-Expected: Claude lists the artifact and identifies the connector(s) it queries (e.g., "Calendar via the Calendar connector"). If Claude says "I don't see an artifact," the artifact didn't save — try building again.
+Expected: Claude lists the artifact and identifies that it queries Notion. If Claude says "I don't see an artifact," the artifact didn't save — try building again.
 
 ## Common issues
 

@@ -77,7 +77,7 @@
 <pre><code>
 /capture remind me to follow up with the legal team on the trademark filing
 </code></pre>
-<p>Boom. Item appears in your Notion GTD Inbox. You never opened Notion. That's the felt micro-win.</p>
+<p>Boom. Item appears in your Notion GTD Inbox. You never opened Notion. That's the felt moment.</p>
 <p>Try a few more captures over the day. Build the habit.</p>
 <h3><code>/whats-next</code></h3>
 <pre><code>
@@ -157,17 +157,17 @@ Tell me to run /weekly-review now. Surface as a Slack DM to me with the link to 
 <p>Workshop's locked decision: team GTD only works if EVERY team member does their personal GTD. One laggard contaminates the system. Don't push team GTD on people who haven't done personal first.</p>
 <p>External collaborators are out — keep team GTD inside the org. Notion sharing permissions get thorny fast.</p>
 <p>If your team is interested, run them through this workshop too. Otherwise, your personal GTD works fine standalone.</p>
-<h2>Micro-win</h2>
+<h2>Try this</h2>
 <p><code>/capture remind me to follow up with the legal team on the trademark filing</code> in Cowork. Item appears in your Notion GTD Inbox. You never opened Notion. Infrastructure-as-interface proof.</p>
 <p>The pattern repeats: capture from Cowork, process from Cowork, query from Cowork, review from Cowork. Notion is the database; Cowork is your interface.</p>
 <h2>Verification checkpoint</h2>
 <pre><code>
 What's in my Notion Inbox right now?
 </code></pre>
-<p>Expected: Claude lists Inbox items including the one you just captured. If the count is 0 or doesn't include your capture, the connector or DB schema may be off.</p>
+<p>Expected: Claude lists Inbox items including the one you just captured. If the count is 0 or doesn't include your capture, your assistant should check the Notion connector setup.</p>
 <h2>Common issues</h2>
 <ul>
-<li><strong><code>/capture</code> writes to wrong DB</strong> — Notion connector scope or DB schema mismatch. Your assistant fixes.</li>
+<li><strong><code>/capture</code> writes to wrong place in Notion</strong> — connector setup issue. Your assistant fixes.</li>
 <li><strong><code>/process-inbox</code> items stay in Inbox after processing</strong> — skill should move items; if it doesn't, check Notion connector has write permission.</li>
 <li><strong><code>/waiting-for</code> shows zero items</strong> — either no waiting-fors yet (correct) or DB filter mismatch.</li>
 <li><strong>Higher-horizon skills (/areas, /goals, /vision) fail</strong> — those DBs may not be in your Notion master yet. Suggest setting up before running them.</li>

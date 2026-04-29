@@ -144,8 +144,11 @@ def md_to_html(md_text: str) -> str:
 
 def inline(text: str) -> str:
     """Inline formatting: bold, italic, code, links."""
-    # Inline code
-    text = re.sub(r"`([^`]+)`", r"<code>\1</code>", text)
+    def _esc_code(m):
+        body = m.group(1).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+        return f"<code>{body}</code>"
+    # Inline code (HTML-escape contents so e.g. <work-folder> renders literally)
+    text = re.sub(r"`([^`]+)`", _esc_code, text)
     # Bold
     text = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", text)
     # Italic (single asterisk, careful)

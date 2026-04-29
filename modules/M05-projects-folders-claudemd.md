@@ -9,7 +9,7 @@ This is the structural module. Two folder shapes, two senses of "project," and o
 - Learn the two folder shapes: project folders (bounded work, three buckets) vs stream folders (recurring, flat).
 - Disambiguate the two senses of "project": Cowork Project (the app's workspace) vs project folder (the file-system shape).
 - Run `/new-project` for the first time — scaffold the workshop's first project folder (`course/`) and watch the synthesis interview produce a tailored `claude.md`.
-- Pull workshop content from Notion into `course/Source Materials/` — your first content move.
+- Pull workshop content from the plugin into `course/Source Materials/` — your first content move.
 
 ---
 
@@ -63,12 +63,13 @@ These collide on the word "project." Both must be used together: a Cowork Projec
 
 ### Why every folder has `claude.md` + `memory.md`
 
-So Cowork has per-folder context. The vault root `claude.md` is your chief-of-staff brief (M07 writes that). The work-folder root `claude.md` is your work-context defaults. Each project folder's `claude.md` adds project-specific overrides.
+So Cowork has per-folder context. The vault root `claude.md` is a one-line pointer to your chief-of-staff brief — `About Me.md` in your vault (M07 writes both). The work-folder root `claude.md` is your work-context defaults. Each project folder's `claude.md` adds project-specific overrides.
 
-Closer-to-the-file wins. So when Claude is working in `<work-folder>/q3-deck/Working Files/draft.md`, the priority is:
-1. `q3-deck/claude.md` (most specific — project context).
-2. `<work-folder>/claude.md` (work-context defaults).
-3. `<vault>/claude.md` (chief-of-staff brief).
+Closer-to-the-file wins. So when Claude works on a file at `[work-folder]/q3-deck/Working Files/draft.md`, it reads in this order, with later files overriding earlier ones:
+
+1. `[vault]/claude.md` → which points to `[vault]/About Me.md` (chief-of-staff brief).
+2. `[work-folder]/claude.md` (work-context defaults).
+3. `[work-folder]/q3-deck/claude.md` (project context — most specific).
 
 The project `claude.md` doesn't restate the chief-of-staff brief — it only mentions deviations.
 
@@ -136,7 +137,7 @@ This is where the architecture pays off. The two folders are different in shape 
 
 ---
 
-## Micro-win
+## Try this
 
 Run `/new-project course` (or whatever name you prefer). Skill interviews you, scaffolds the folder, synthesizes a tailored `claude.md`, creates the GTD project entry in Notion. First content pulled from this plugin into `course/Source Materials/`. You now have your first project folder, your first GTD project entry, and the muscle for `/new-project`.
 

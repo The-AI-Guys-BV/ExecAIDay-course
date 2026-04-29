@@ -151,7 +151,7 @@ You can disable plugin skills too — though disabling a workshop skill defeats 
 
 ---
 
-## Micro-win
+## Try this
 
 All 7 core skills work in real demos. The in-workshop install of `/help-me-prompt` succeeded. You can see every available skill in Customize → Skills.
 

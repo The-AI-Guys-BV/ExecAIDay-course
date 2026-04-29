@@ -38,8 +38,9 @@
 <h2>What you'll do</h2>
 <ul>
 <li>Verify your meeting-note tool (Granola / Bluedot / Fellow — picked in questionnaire, installed in IT onboarding).</li>
-<li>Run a full pipeline: meeting captured → transcript in Obsidian daily note → Claude processes into Notion.</li>
-<li>Try gap analysis: Claude cross-references the transcript vs your existing Notion notes, surfaces commitments you missed.</li>
+<li>Run a full pipeline: meeting captured → transcript in Obsidian daily note → Claude processes into a structured note in your vault.</li>
+<li>Try gap analysis: Claude cross-references the transcript vs your existing vault notes, surfaces commitments you missed.</li>
+<li>Push commitments into your GTD next-actions in Notion.</li>
 <li>Generate follow-up emails routed to <code>drafts-inbox</code>.</li>
 </ul>
 <h2>Section 1 — Introduction</h2>
@@ -60,14 +61,14 @@
 </ol>
 <ul>
 <li>A native dashboard (their app).</li>
-<li>Sync to specific cloud locations (Notion, Drive, etc.).</li>
+<li>Sync to a cloud folder (Drive, Dropbox, etc.).</li>
 <li>Local file output.</li>
 </ul>
 <ol>
 <li><strong>You point Cowork at the transcript.</strong></li>
-<li><strong>Claude processes</strong> into Notion (commitments, decisions, action items).</li>
+<li><strong>Claude processes</strong> into a structured note in your vault, and pushes commitments into your GTD next-actions.</li>
 </ol>
-<p>Workshop default: tool dumps transcripts to a folder in your vault, e.g., <code><vault>/Meeting Transcripts/</code>. Or directly into your Daily Note for the meeting's day.</p>
+<p>Workshop default: tool dumps transcripts to a folder in your vault, e.g., <code>&lt;vault&gt;/Meeting Transcripts/</code>. Or directly into your Daily Note for the meeting's day.</p>
 <h2>Section 3 — Intermediate</h2>
 <h3>Run a full pipeline on a real meeting</h3>
 <p>Pick a recent real meeting (in your tool's history). Or use today's most recent.</p>
@@ -77,21 +78,22 @@ Read the transcript at &lt;path-to-transcript&gt;. Process it:
 - List commitments (who promised what, by when).
 - List decisions made.
 - List open questions / things requiring follow-up.
-- Save to Notion meeting-notes DB as a new entry, with cross-links to attendees and any related projects.
+Save the structured note to my vault under Meeting Notes/&lt;date&gt;-&lt;title&gt;.md.
+Then for each commitment that's mine, /capture it into my GTD inbox.
 </code></pre>
-<p>Claude reads the transcript, structures the output, writes to Notion.</p>
-<p>Verify in Notion: the new meeting note is there with structured commitments, decisions, follow-ups.</p>
+<p>Claude reads the transcript, structures the output, writes the meeting note into your vault, and captures each of your commitments into your GTD inbox.</p>
+<p>Verify in your vault: the new meeting note is there with structured commitments, decisions, follow-ups. Verify in your Notion GTD inbox: the commitments showed up.</p>
 <h3>Gap analysis</h3>
 <p>This is where the pipeline pays off uniquely. Claude can cross-reference what was said in the meeting vs what's in your existing notes:</p>
 <pre><code>
-Cross-reference today's meeting transcript with the active project page for [project].
-What was committed in the meeting that isn't yet in the project page? What was decided
-that contradicts existing project state?
+Cross-reference today's meeting transcript with the project's claude.md and Working
+Files in &lt;work-folder&gt;/&lt;project&gt;/. What was committed in the meeting that isn't
+yet in the project? What was decided that contradicts the project's current state?
 </code></pre>
 <p>Claude surfaces gaps. Example outputs:</p>
 <ul>
-<li>"You committed to deliver X by Friday; the project's deadline says next Wednesday. Mismatch."</li>
-<li>"John raised a risk about [thing] in the meeting; not in the project's risks section."</li>
+<li>"You committed to deliver X by Friday; the project's claude.md says next Wednesday. Mismatch."</li>
+<li>"John raised a risk about [thing] in the meeting; not in the project's Working Files."</li>
 <li>"Decision was made to deprecate Y; project still lists Y as active."</li>
 </ul>
 <p>You decide what to update.</p>
@@ -132,8 +134,8 @@ next but didn't?
 <h3>Compliance recording considerations</h3>
 <p>Some industries (financial services, healthcare, certain client work) require recording disclosure or prohibit recording entirely. Your meeting-note tool is a recording tool. Check with your compliance team before workshop runs.</p>
 <p>The Teams bot ban (May–June 2026) is a separate issue — about which TOOLS can join, not whether recording is permitted.</p>
-<h2>Micro-wins (both)</h2>
-<p><strong>Gap analysis.</strong> Claude cross-references meeting transcript vs Notion notes, surfaces missed commitments. The realization: Claude caught something you would have missed.</p>
+<h2>Try these</h2>
+<p><strong>Gap analysis.</strong> Claude cross-references meeting transcript vs your project's claude.md, surfaces missed commitments. The realization: Claude caught something you would have missed.</p>
 <p><strong>Follow-up email generation.</strong> Routes to drafts-inbox, ready for your review. End-to-end pipeline working.</p>
 <h2>Verification checkpoint</h2>
 <pre><code>
@@ -145,7 +147,7 @@ What was decided in the most recent meeting I have a transcript for? Pull from t
 <li><strong>Tool isn't capturing</strong> — system audio permission missing on Mac (System Settings → Privacy → Screen Recording / Microphone). On Windows, similar permission flow.</li>
 <li><strong>Transcript location mismatch</strong> — your tool dumps to a different location than your vault expects. Configure either side to match.</li>
 <li><strong>Claude reads the wrong transcript</strong> — be specific in your prompt about which meeting / which date.</li>
-<li><strong>Sensitive meeting accidentally captured</strong> — delete the transcript. If it's already in Notion, delete that too. The architecture is your discipline; it doesn't auto-protect.</li>
+<li><strong>Sensitive meeting accidentally captured</strong> — delete the transcript and any vault note Claude wrote from it. The architecture is your discipline; it doesn't auto-protect.</li>
 </ul>
   <nav class="module-nav">
     <a class="nav-link prev" href="m14.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M14 — Daily Command Center</div></a>

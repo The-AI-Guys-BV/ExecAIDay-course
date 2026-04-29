@@ -139,7 +139,7 @@ The skill does the work; the task automates the trigger.
 
 ---
 
-## Micro-win
+## Try this
 
 You added a second scheduled task or Routine relevant to your workflow. Confirmed it's set up correctly. Anticipation: it'll fire on its schedule and the next morning (or week) you'll have a new automated artifact in your stack.
 

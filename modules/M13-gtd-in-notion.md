@@ -57,7 +57,7 @@ In Cowork:
 /capture remind me to follow up with the legal team on the trademark filing
 ```
 
-Boom. Item appears in your Notion GTD Inbox. You never opened Notion. That's the felt micro-win.
+Boom. Item appears in your Notion GTD Inbox. You never opened Notion. That's the felt moment.
 
 Try a few more captures over the day. Build the habit.
 
@@ -174,7 +174,7 @@ If your team is interested, run them through this workshop too. Otherwise, your 
 
 ---
 
-## Micro-win
+## Try this
 
 `/capture remind me to follow up with the legal team on the trademark filing` in Cowork. Item appears in your Notion GTD Inbox. You never opened Notion. Infrastructure-as-interface proof.
 
@@ -186,11 +186,11 @@ The pattern repeats: capture from Cowork, process from Cowork, query from Cowork
 What's in my Notion Inbox right now?
 ```
 
-Expected: Claude lists Inbox items including the one you just captured. If the count is 0 or doesn't include your capture, the connector or DB schema may be off.
+Expected: Claude lists Inbox items including the one you just captured. If the count is 0 or doesn't include your capture, your assistant should check the Notion connector setup.
 
 ## Common issues
 
-- **`/capture` writes to wrong DB** — Notion connector scope or DB schema mismatch. Your assistant fixes.
+- **`/capture` writes to wrong place in Notion** — connector setup issue. Your assistant fixes.
 - **`/process-inbox` items stay in Inbox after processing** — skill should move items; if it doesn't, check Notion connector has write permission.
 - **`/waiting-for` shows zero items** — either no waiting-fors yet (correct) or DB filter mismatch.
 - **Higher-horizon skills (/areas, /goals, /vision) fail** — those DBs may not be in your Notion master yet. Suggest setting up before running them.

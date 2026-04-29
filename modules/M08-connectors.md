@@ -9,7 +9,7 @@ The jaw-drop arc. Inbox, drafts, calendar — your real data, in Cowork, working
 - Verify connectors set up in IT onboarding: Gmail / M365, Calendar, Drive, Slack, plus your custom apps (Asana / Monday / Jira / Linear / SFDC / HubSpot / etc.).
 - Notion is already connected from M01.
 - Run R-C-T-F-C from M02 on a real email — the callback exercise.
-- Walk the 3-step micro-win arc: inbox read-back → live draft → calendar + email chain.
+- Walk the 3-step arc: inbox read-back → live draft → calendar + email chain.
 
 ---
 
@@ -71,7 +71,7 @@ Send. Compare to what you would have written. Faster + better, when R-C-T-F-C is
 
 This is the M02 callback — the framework on real data.
 
-### The 3-step micro-win arc
+### The 3-step arc
 
 **Step 1 — Inbox read-back (the jaw-drop).**
 ```
@@ -127,7 +127,7 @@ Workshop's locked meeting-note stack (M15) is bot-less. Unaffected.
 
 ---
 
-## Micro-win — 3-step arc
+## Try this — 3-step arc
 
 Walk through all three steps in order:
 1. Inbox read-back. Jaw-drop #1.

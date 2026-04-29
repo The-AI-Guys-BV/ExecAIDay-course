@@ -89,7 +89,7 @@ Claude drafts. You review.
 
 The point: the conversation persisted. Claude remembered the Excel analysis when building the PowerPoint slides. Remembered the slide narrative when drafting the Word memo. No re-explaining the context three times.
 
-### Template magic — the micro-win
+### Template magic
 
 Your company has a PowerPoint template with specific fonts, colors, masters. Default Claude PPT output uses Claude's bland defaults. Template magic fixes this:
 
@@ -102,7 +102,7 @@ masters exactly.
 
 Claude reads the template's master slides, fonts, color palette, and produces slides that look like YOUR company's slides — not Claude's defaults.
 
-The output is recognizably yours. That's the felt micro-win.
+The output is recognizably yours. That's the felt moment.
 
 ## Section 4 — Advanced
 
@@ -144,7 +144,7 @@ The Word add-in launched April 2026, completing the suite. Excel and PowerPoint 
 
 ---
 
-## Micro-win — template magic
+## Try this — template magic
 
 Your actual company PowerPoint template + Claude → on-brand slides matching your company's fonts, colors, and masters. The output looks like YOURS, not Claude's default.
 

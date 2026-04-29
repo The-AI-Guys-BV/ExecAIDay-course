@@ -111,7 +111,7 @@ Total monthly stack cost typically $80–180 per exec. One slide; not the worksh
 
 ---
 
-## Micro-win
+## Try this
 
 Type `/teach` (no arguments). Claude lists the 16 modules. You pick one. Claude walks it patiently, one section at a time. The hallucination demo follows immediately as a trust-calibration moment — your instructor demonstrates Claude making something up confidently, then you watch it self-correct when given evidence.
 

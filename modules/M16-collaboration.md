@@ -62,7 +62,7 @@ Goal: collaboratively produce a one-page memo summarizing the project state, wit
 
 ## Section 3 — Intermediate
 
-### Multi-connector magic — the micro-win
+### Multi-connector magic
 
 The core capability: Claude reads multiple sources in one query and synthesizes.
 
@@ -124,7 +124,7 @@ These get thorny fast. Quarterly: audit who has access to what.
 
 ---
 
-## Micro-win — multi-connector magic
+## Try this — multi-connector magic
 
 Claude reads Slack + Notion + Gmail in one shot during the collaboration scenario. Output combines all three sources into one coherent narrative. The realization: this isn't a feature; it's a different way of working.
 

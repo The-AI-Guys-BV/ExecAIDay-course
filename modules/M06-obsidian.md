@@ -38,7 +38,7 @@ You'll see:
 
 Same files, two interfaces. Edit a file in Obsidian; Cowork sees the edit on next read. Edit a file from Cowork (Claude writes into it); Obsidian re-renders live (file watching).
 
-You'll see this in the micro-win at the end.
+You'll see this in the exercise at the end.
 
 ### Obsidian basics
 
@@ -52,19 +52,34 @@ You'll see this in the micro-win at the end.
 
 ### Plugin starter set
 
-In Obsidian: Settings → Community plugins → Browse. Install and enable:
+Obsidian has two plugin types: **Core plugins** (built in) and **Community plugins** (third-party, opt-in).
 
-1. **Daily Notes** (core, usually pre-enabled). Creates `Daily Notes/YYYY-MM-DD.md` on demand or daily.
-2. **Calendar** — visual calendar to navigate daily / weekly / monthly notes.
-3. **Templater** — template-driven note creation (date math, headers, etc.).
-4. **Periodic Notes** — extends Daily Notes to weekly, monthly, quarterly, yearly.
-5. **Tasks** — checkbox-style task tracking inside notes (separate from your GTD; useful for tactical lists).
-6. **Commander** — adds command palette items for the above.
+**Step 1 — Enable Daily Notes (core).**
 
-After installing, configure Daily Notes:
-- Folder: `Daily Notes/`
-- Date format: `YYYY-MM-DD` (matches the convention in `Daily Notes/claude.md`).
-- Template: skip for now (you can add a Templater-driven template later).
+Open Obsidian Settings (gear icon, bottom-left). Go to **Core plugins**. Find **Daily notes** in the list, toggle it ON.
+
+**Step 2 — Turn on Community plugins.**
+
+In Settings, go to **Community plugins**. The first time you visit this screen, Obsidian shows "Restricted mode" with a button that says **Turn on community plugins**. Click it and confirm the warning dialog (community plugins run third-party code; the five we use below are widely-trusted standards).
+
+**Step 3 — Install the five community plugins.**
+
+Still in **Settings → Community plugins**, click **Browse**. A search dialog opens. For each plugin below, type the name into the search box, click the result, click **Install**, then click **Enable**. Close the dialog and repeat:
+
+1. **Calendar** — visual calendar to navigate daily / weekly / monthly notes.
+2. **Templater** — template-driven note creation (date math, headers, etc.).
+3. **Periodic Notes** — extends Daily Notes to weekly, monthly, quarterly, yearly.
+4. **Tasks** — checkbox-style task tracking inside notes (separate from your GTD; useful for tactical lists).
+5. **Commander** — adds buttons / command palette entries for the plugins above.
+
+**Step 4 — Configure Daily Notes.**
+
+Settings → **Daily notes**. Set:
+- **New file location:** `Daily Notes/`
+- **Date format:** `YYYY-MM-DD` (matches the convention in `Daily Notes/claude.md`).
+- **Template file location:** leave blank for now (you can add a Templater-driven template later).
+
+If anything in steps 1–4 doesn't match what you see on screen, your assistant will sort it.
 
 ### How Claude reads daily notes
 
@@ -101,7 +116,7 @@ You'll iterate on templates over weeks. Don't optimize on Day 1.
 
 ---
 
-## Micro-win
+## Try this
 
 In Cowork:
 

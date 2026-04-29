@@ -1,15 +1,17 @@
-# M07 — Chief of Staff `claude.md`
+# M07 — Chief of Staff Brief
 
 ## Why this module matters
 
-The vault root `claude.md` is the highest-priority context Cowork has about you. Once it exists, every conversation in your workspace inherits your voice, your preferences, your context. Skip this module and Claude is working from defaults; do it well and Claude works for YOU specifically. This is the single most personal module of the workshop — and the one with the highest ROI.
+Your chief-of-staff brief is the highest-leverage file in the workshop. Once it exists, every conversation in your Cowork Project inherits your voice, your preferences, your context. Skip this module and Claude works from defaults; do it well and Claude works for YOU specifically.
+
+The brief lives as a regular Obsidian note: `About Me.md` at the root of your vault. Cowork picks it up because the vault root `claude.md` (a one-line system file) points to it.
 
 ## What you'll do
 
-- Use the `new-vault-claudemd` interactive prompt to write your chief-of-staff brief (~30 lines, 4 sections).
-- Brief is written in Obsidian (the vault).
-- Watch Claude read your `about-me` and surface 3 non-obvious things — recognition shock.
-- Compare an email draft pre-`claude.md` (generic) vs post-`claude.md` (matches your voice).
+- Run the chief-of-staff interview. Claude writes the brief into `About Me.md` in your vault.
+- Configure `<vault>/claude.md` as a one-line pointer to `About Me.md`.
+- Watch Claude read `About Me.md` and surface 3 non-obvious things — recognition shock.
+- Compare an email draft pre-brief (generic) vs post-brief (matches your voice).
 
 ---
 
@@ -19,21 +21,25 @@ You have a chief of staff right now. You probably don't think of them that way. 
 
 Claude doesn't have any of that yet. This module gives Claude a starter version — captured in writing, in your vault, accessible to every conversation.
 
-The brief lives at `<vault>/claude.md`. Roughly 30 lines, 4 sections. Written through an interactive interview.
+**Where the brief lives.** As a normal Obsidian note: `<vault>/About Me.md`. You can open it in Obsidian, edit it like any other note, link to it from daily notes (`[[About Me]]`). It's content, not config.
 
-Once it exists: every email Claude drafts sounds more like you. Every analysis takes your priorities into account. Every artifact reflects your taste. The chief-of-staff brief is the highest-leverage file in the workshop.
+**How Cowork finds it.** A one-line pointer in `<vault>/claude.md`: "Chief-of-staff brief: read `About Me.md`." Cowork auto-reads `claude.md`, follows the pointer, picks up your brief. You don't touch `claude.md` again — your editing happens in `About Me.md`.
+
+Roughly 30 lines, 4 sections. Written through an interactive interview.
+
+Once it exists: every email Claude drafts sounds more like you. Every analysis takes your priorities into account. Every artifact reflects your taste.
 
 ## Section 2 — Beginner / Getting Started
 
 ### The interview
 
-Open Obsidian. Open the file `<vault>/claude.md` (currently a placeholder).
-
 In Cowork, paste this prompt:
 
 ```
 Walk me through writing my chief-of-staff brief. Use the new-vault-claudemd pattern.
-Save the result to my vault claude.md, replacing the placeholder.
+Save the result to <vault>/About Me.md (create it if it doesn't exist).
+Then make sure <vault>/claude.md contains the one-line pointer:
+"Chief-of-staff brief: read About Me.md."
 ```
 
 Claude conducts an interview. Roughly 4 sections, several questions per section:
@@ -63,23 +69,22 @@ Answer naturally. Don't over-engineer. The brief is meant to be ~30 lines — sh
 
 ### What gets written
 
-Claude synthesizes your answers into the brief at `<vault>/claude.md`. Watch Obsidian render it as you go. Edit any line if you don't like the synthesis.
+Claude synthesizes your answers into `<vault>/About Me.md` and writes the one-line pointer into `<vault>/claude.md`. Watch Obsidian render `About Me.md` live as Claude writes it. Edit any line you don't like.
 
 ## Section 3 — Intermediate
 
-### Populate `about-me/`
+### Add the longer-form context
 
-The vault has a folder `about-me/` with three files:
-- `about-me.md` — long-form personal context (more than fits in claude.md).
-- `writing-rules.md` — specific tone and word rules.
-- `memory.md` — patterns Cowork learns about you over time.
+`About Me.md` is the short brief. The vault also has a folder `about-me/` with two companion files for content that's too long for the brief:
+- `about-me/long-form.md` — extended personal context (role history, work patterns, things you care about deeply).
+- `about-me/writing-rules.md` — specific tone and word rules (dos and don'ts).
 
-Now that the chief-of-staff brief is written, populate these:
+Populate them:
 
 ```
-Based on what I told you for the chief-of-staff brief, expand the about-me/about-me.md
-with the longer-form context. Include role history, current stakeholders, work patterns,
-things-I-care-about-deeply.
+Based on what I told you for the chief-of-staff brief, expand
+about-me/long-form.md with the longer-form context. Include role history,
+current stakeholders, work patterns, things-I-care-about-deeply.
 ```
 
 Claude expands. You edit. Same for `writing-rules.md`:
@@ -99,10 +104,10 @@ Use what you know about me.
 ```
 
 Watch the output. It should:
-- Use your tone (warm, direct, etc., per claude.md).
+- Use your tone (warm, direct, etc., per `About Me.md`).
 - Avoid words you flagged.
 - Match your length preference.
-- Reference context from your `about-me/`.
+- Reference context from `about-me/long-form.md`.
 
 If it doesn't, the brief isn't doing its job. Edit and retest.
 
@@ -133,7 +138,7 @@ Most quarters you change 2-3 lines.
 
 Project `claude.md` (the one `/new-project` writes per project folder) can override the chief-of-staff brief for project-specific tone. Example:
 
-- Vault `claude.md` says "warm, direct, default to brevity."
+- `About Me.md` says "warm, direct, default to brevity."
 - Project `claude.md` for `q3-board-deck/` says "Format / tone for this project: more formal than my default; explicitly cite all sources because the board chair has flagged AI-content concerns."
 - For files in `q3-board-deck/`, Claude uses the more formal tone. Everywhere else, default warm-direct-brief.
 
@@ -141,36 +146,38 @@ This is the layered architecture in action. Don't pre-write project overrides; l
 
 ---
 
-## Micro-wins (both)
+## Try these
 
 **a. Recognition shock.** Type:
 ```
-Read my about-me. Surface 3 things you noticed about me that aren't obvious from what I just told you — pattern matches, implications, context I might not have spelled out.
+Read my About Me and the about-me/ folder. Surface 3 things you noticed about me that aren't obvious from what I just told you — pattern matches, implications, context I might not have spelled out.
 ```
 
 Claude responds with 3 specific, non-obvious observations. You feel seen. Most people get a "huh, yeah" reaction at least once. That's the moment the workshop pays off in a felt way.
 
-**b. Before/after email.** Draft an email pre-`claude.md` (generic). Save the output. Then draft the SAME email post-`claude.md`. Compare. The post version sounds like you. Feels like a different tool.
+**b. Before/after email.** Draft an email pre-brief (generic). Save the output. Then draft the SAME email post-brief. Compare. The post version sounds like you. Feels like a different tool.
 
 ## Verification checkpoint
 
 ```
-Summarize back to me what you know about me from the chief-of-staff brief and about-me.
+Summarize back to me what you know about me from About Me.md and the about-me/ folder.
 3-5 sentences max.
 ```
 
-Expected: a concise, accurate summary. If Claude can't summarize or includes wrong details, the brief or about-me has gaps.
+Expected: a concise, accurate summary. If Claude can't summarize or includes wrong details, `About Me.md` or `about-me/` has gaps.
 
 ## Common issues
 
 - **Claude defaults still showing through** — your constraints in `writing-rules.md` aren't strong enough; add more "don't" rules.
 - **Brief feels generic** — interview was too short; rerun with more specific answers.
 - **Claude mixes project-specific and general tone** — check project `claude.md` overrides; make sure they're explicit deviations, not full restatements.
+- **Cowork doesn't seem to be reading the brief** — check `<vault>/claude.md` contains the one-line pointer to `About Me.md`. If `claude.md` is empty or missing, Cowork won't follow through.
 - **about-me files lost on Cowork restart** — they shouldn't disappear; check vault path is mounted in your Cowork Project.
 
 ## References
 
-- `templates/vault-starter/claude.md` — the placeholder you replaced.
-- `templates/vault-starter/about-me/` — the about-me trio.
+- `templates/vault-starter/claude.md` — the one-line pointer template.
+- `templates/vault-starter/About Me.md` — starter brief structure.
+- `templates/vault-starter/about-me/` — long-form + writing-rules companions.
 - M02 — R-C-T-F-C framework (the brief is your standing R+C).
 - `references/rctfc-framework.md`.
