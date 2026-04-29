@@ -1,0 +1,5 @@
+# FUSE filesystem artifacts (Google Drive, network mounts)
+.fuse_hidden*
+
+# macOS
+.DS_Store

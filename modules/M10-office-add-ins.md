@@ -6,7 +6,7 @@
 
 ## What you'll do
 
-- Verify Word, Excel, PowerPoint add-ins (installed in IT onboarding).
+- Verify Word, Excel, PowerPoint add-ins.
 - Run the cross-app chain: Excel analysis → PowerPoint slides → Word memo, all sharing context.
 - Use template magic — your actual company PowerPoint template + Claude → on-brand slides matching your company style.
 
@@ -24,7 +24,7 @@ This is the workflow you've actually wanted for years.
 
 ### Verify add-ins
 
-Open Word. Look for Claude in the ribbon (top of the window). Should be visible after IT onboarding installed it from Microsoft AppSource.
+Open Word. Look for Claude in the ribbon (top of the window).
 
 Same for Excel and PowerPoint.
 
@@ -69,7 +69,7 @@ top 3 risks. Write your findings as comments in the relevant cells.
 
 Claude analyzes, drops comments. You review.
 
-**Step 2 — PowerPoint.** Open your company's deck template (the one your IT setup added).
+**Step 2 — PowerPoint.** Open your company's deck template.
 ```
 Build a 4-slide section for the board deck based on the Excel analysis we just did.
 Use my company template. Each trend or risk is one slide with the supporting data point

@@ -2,13 +2,13 @@
 
 ## Why this module matters
 
-You + Claude is exec superpower. You + your team + Claude is exec leverage. M16 is how you turn personal Cowork into shared Cowork — shared Notion pages, shared Cowork folders, multi-connector queries that span your team's surfaces.
+You + Claude is exec superpower. You + your team + Claude is exec leverage. M16 is how you turn personal Cowork into shared Cowork — shared Cowork folders, multi-connector queries that span your team's surfaces.
 
 ## What you'll do
 
-- Set up a shared Notion page + shared Cowork folder.
+- Set up a shared Cowork folder.
 - Pair up (2-3 per group) and collaborate live on a pre-seeded fake project.
-- Run multi-connector magic: Claude reads Slack + Notion + Gmail in one shot during the collaboration scenario.
+- Run multi-connector magic: Claude reads Slack + Gmail + your shared folder in one shot during the collaboration scenario.
 
 ---
 
@@ -16,26 +16,12 @@ You + Claude is exec superpower. You + your team + Claude is exec leverage. M16 
 
 Three collaboration surfaces you'll touch:
 
-1. **Shared Notion page** — your team can read + comment on a Notion page you share.
-2. **Shared Cowork folder** — a folder you and your team both mount in your respective Cowork Projects. Files in there are visible to all.
-3. **Shared scheduled tasks** — less common; usually each person has their own.
+1. **Shared Cowork folder** — a folder you and your team both mount in your respective Cowork Projects. Files in there are visible to all.
+2. **Shared scheduled tasks** — less common; usually each person has their own.
 
 Sales reality: workshop targets same-company cohorts when possible (so the collaboration exercise is realistic). Mixed cohorts run the pairs exercise on a pre-seeded fake project.
 
 ## Section 2 — Beginner / Getting Started
-
-### Shared Notion page
-
-In your Notion master, create or pick a page that you'll share. Click Share → invite a teammate → "Can comment" or "Can edit" (your call).
-
-Once shared, your teammate sees the page. Both of you can have Cowork pull from it via the Notion connector.
-
-Try:
-```
-What's the latest on the [shared project] in Notion? Read the shared page.
-```
-
-Both you and your teammate get the same answer. Same source of truth.
 
 ### Shared Cowork folder
 
@@ -53,7 +39,7 @@ Caveat: be careful with `claude.md` files in shared folders. The shared folder r
 ### Pair exercise
 
 Pair up (2-3 people). Pre-seeded scenario your assistant provides:
-- Shared Notion page with a fake project (e.g., "Q4 product launch planning").
+- Shared Cowork folder with a fake project (e.g., "Q4 product launch planning") — pre-seeded with placeholder files.
 - Shared Cowork folder with placeholder Source Materials.
 - A Slack channel you both have access to.
 - A few seed emails about the project.
@@ -69,7 +55,7 @@ The core capability: Claude reads multiple sources in one query and synthesizes.
 ```
 For [shared project], pull:
 - The latest Slack thread about it (channel: #q4-launch).
-- The active Notion project page.
+- The shared Cowork folder for the project.
 - Any emails in my inbox tagged with the project name (last 7 days).
 
 Synthesize into a one-page memo: state of play, what's blocking, what's the next decision needed.
@@ -85,7 +71,7 @@ Try one or two during the in-room exercise:
 
 **Scenario A — Joint memo.** Both pair members work on the same memo in the shared folder. One drafts a section in their Cowork. The other Reviews from theirs. Claude reads the latest version each time — no manual file-syncing.
 
-**Scenario B — Joint decision.** Use Claude to synthesize different stakeholders' positions (per Slack and Notion threads) and propose a path forward. Both pair members feed in their context; Claude produces one synthesis.
+**Scenario B — Joint decision.** Use Claude to synthesize different stakeholders' positions (per Slack threads and shared folder content) and propose a path forward. Both pair members feed in their context; Claude produces one synthesis.
 
 **Scenario C — Joint status update.** Generate a team standup brief from all the sources together. Pair refines.
 
@@ -98,7 +84,7 @@ The point isn't the specific scenario — it's that two people doing the same wo
 Shared work has a confidentiality dimension. If part of your team is working on sensitive content (M&A, legal, personnel), they probably need a separate Cowork Project that:
 - Mounts the shared folder for THIS sensitive workstream only.
 - Does NOT mount their personal vault (to keep personal context out).
-- Has tight connector scope (Notion only, no Gmail, no Slack).
+- Has tight connector scope (no Gmail, no Slack — only the shared folder for the workstream).
 
 The architecture supports this. The discipline is the team's.
 
@@ -110,23 +96,17 @@ If your team is interested in shared GTD: run them through the workshop too. Oth
 
 ### Cross-org collaboration limits
 
-External collaborators (different company, different Notion workspace, different Slack workspace): hard to bring into Cowork's shared model. Per the locked workshop decision, external collaboration is OUT — keep team Cowork inside the org.
-
-If you must collaborate cross-org, the shared Notion page works (Notion handles guest access). Shared Cowork folders don't work cross-org cleanly.
+External collaborators (different company, different Slack workspace): hard to bring into Cowork's shared model. Per the locked workshop decision, external collaboration is OUT — keep team Cowork inside the org.
 
 ### Permissions hygiene
 
-Shared Notion pages: per-page access control. Be deliberate about what's shared.
-
-Shared Cowork folders: filesystem-level access control. Whoever has the cloud folder mounted sees everything in it. Don't put confidential subprojects in a folder shared widely.
-
-These get thorny fast. Quarterly: audit who has access to what.
+Shared Cowork folders: filesystem-level access control. Whoever has the cloud folder mounted sees everything in it. Don't put confidential subprojects in a folder shared widely. Quarterly: audit who has access to what.
 
 ---
 
 ## Try this — multi-connector magic
 
-Claude reads Slack + Notion + Gmail in one shot during the collaboration scenario. Output combines all three sources into one coherent narrative. The realization: this isn't a feature; it's a different way of working.
+Claude reads Slack + Gmail + the shared Cowork folder in one shot during the collaboration scenario. Output combines all three sources into one coherent narrative. The realization: this isn't a feature; it's a different way of working.
 
 ## Verification checkpoint
 
@@ -134,12 +114,11 @@ Claude reads Slack + Notion + Gmail in one shot during the collaboration scenari
 For [the shared project], list every source you can pull from right now and what's in each.
 ```
 
-Expected: Claude lists Slack channel(s), Notion page(s), email thread(s), shared folder content. If anything's missing, the connector or share permission is off.
+Expected: Claude lists Slack channel(s), email thread(s), shared folder content. If anything's missing, the connector or share permission is off.
 
 ## Common issues
 
 - **Shared folder doesn't sync** — Dropbox / Drive / OneDrive sync issue. Check sync status; restart sync app.
-- **Notion page shared but not visible** — guest may need to accept the Notion invite (separate email).
 - **Slack channel scoped to specific channels only** — connector permission scope; widen if needed.
 - **Multi-connector query slow** — many sources to read; reduce scope or window.
 - **Two pair members get different answers** — different connector scopes or different Cowork Project configurations. Verify both are pulling from the same sources.

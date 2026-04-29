@@ -6,10 +6,10 @@ Meeting transcripts → Obsidian daily note → Claude processes → follow-up e
 
 ## What you'll do
 
-- Verify your meeting-note tool (Granola / Bluedot / Fellow — picked in questionnaire, installed in IT onboarding).
+- Verify your meeting-note tool (Granola / Bluedot / Fellow — picked in questionnaire).
 - Run a full pipeline: meeting captured → transcript in Obsidian daily note → Claude processes into a structured note in your vault.
 - Try gap analysis: Claude cross-references the transcript vs your existing vault notes, surfaces commitments you missed.
-- Push commitments into your GTD next-actions in Notion.
+- Push commitments into your GTD inbox at <vault>/gtd/inbox.md.
 - Generate follow-up emails routed to `drafts-inbox`.
 
 ---
@@ -66,7 +66,7 @@ Then for each commitment that's mine, /capture it into my GTD inbox.
 
 Claude reads the transcript, structures the output, writes the meeting note into your vault, and captures each of your commitments into your GTD inbox.
 
-Verify in your vault: the new meeting note is there with structured commitments, decisions, follow-ups. Verify in your Notion GTD inbox: the commitments showed up.
+Verify in your vault: the new meeting note is there with structured commitments, decisions, follow-ups. Verify in your GTD inbox: the commitments showed up at <vault>/gtd/inbox.md.
 
 ### Gap analysis
 
@@ -160,7 +160,7 @@ Expected: Claude reads the most recent transcript file and lists decisions. If i
 ## References
 
 - M06 — Obsidian (vault is where transcripts often land).
-- M13 — GTD (commitments → next-actions, follow-ups → waiting-for).
+- M13 — GTD in your vault (commitments → next-actions, follow-ups → waiting-for).
 - M16 — collaboration (shared meeting notes for team meetings).
 - `references/connector-quirks.md` — Teams bot ban context.
 - `skills/drafts-inbox/SKILL.md` — where follow-up emails route.

@@ -18,7 +18,7 @@ You built a simple live artifact in Day 1 closing — three panels: calendar, ur
 
 Today we expand it. Now that GTD is live (M13), we can add: top 5 next actions, stale waiting-fors, today's GTD-driven priorities. Now that Obsidian is your knowledge layer (M06), we can add: yesterday's reflection bubbling up to today.
 
-The result is one artifact you open in the morning, look at briefly, then know what matters for the day. No app-hopping. No "let me check Slack, then email, then Notion."
+The result is one artifact you open in the morning, look at briefly, then know what matters for the day. No app-hopping. No "let me check Slack, then email, then my GTD."
 
 ## Section 2 — Beginner / Getting Started
 
@@ -51,7 +51,7 @@ In Cowork, with the artifact open:
 ```
 Update this artifact. Add three new tiles:
 
-1. GTD next-actions: top 5 from Notion, sorted by priority and age. Show context badge per item.
+1. GTD next-actions: top 5 from <vault>/gtd/next-actions.md, sorted by priority and age. Show context badge per item.
 2. Stale waiting-fors: list items I've been waiting on >7 days, with person + days waited.
 3. Yesterday's Obsidian note: pull yesterday's daily note from my vault, surface the closing paragraphs (what I noted at /checkout) as 2-3 lines.
 

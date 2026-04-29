@@ -37,24 +37,22 @@
 <main class="content container">
 <h2>What you'll do</h2>
 <ul>
-<li>Verify connectors set up in IT onboarding: Gmail / M365, Calendar, Drive, Slack, plus your custom apps (Asana / Monday / Jira / Linear / SFDC / HubSpot / etc.).</li>
-<li>Notion is already connected from M01.</li>
+<li>Verify connectors: Gmail / M365, Calendar, Drive, Slack, plus your custom apps (Asana / Monday / Jira / Linear / SFDC / HubSpot / etc.).</li>
 <li>Run R-C-T-F-C from M02 on a real email — the callback exercise.</li>
 <li>Walk the 3-step arc: inbox read-back → live draft → calendar + email chain.</li>
 </ul>
 <h2>Section 1 — Introduction</h2>
-<p>A connector is an authenticated bridge between Claude and your services. Set up during IT onboarding, scoped to specific permissions. When Claude needs your inbox, it queries via the connector. When you ask "what's on my calendar today," same.</p>
+<p>A connector is an authenticated bridge between Claude and your services, scoped to specific permissions. When Claude needs your inbox, it queries via the connector. When you ask "what's on my calendar today," same.</p>
 <p>You don't authenticate per use. The connector is always-on once set up. Claude pulls fresh data per query — your inbox isn't continuously streaming to Anthropic, but Claude can fetch what it needs when relevant.</p>
 <p>This module: verify your connectors, run a real R-C-T-F-C prompt on a real email, and experience the 3-step jaw-drop arc.</p>
 <h2>Section 2 — Beginner / Getting Started</h2>
 <h3>Verify connectors</h3>
 <p>In Cowork → Customize → Connectors. You should see:</p>
 <ul>
-<li><strong>Gmail or Microsoft 365</strong> (whichever your IT setup matched). Status: Connected.</li>
+<li><strong>Gmail or Microsoft 365</strong> (whichever your company uses). Status: Connected.</li>
 <li><strong>Calendar</strong> (Google Calendar or M365 calendar). Connected.</li>
 <li><strong>Drive</strong> (Google Drive or OneDrive). Connected.</li>
 <li><strong>Slack</strong> (if your team uses it). Connected.</li>
-<li><strong>Notion</strong> — already connected from M01.</li>
 <li><strong>Custom apps</strong> (Asana / Monday / Jira / Linear / SFDC / HubSpot / ClickUp / etc.) — only the ones you flagged in the questionnaire.</li>
 </ul>
 <p>If any are missing or disconnected: your assistant will sort it now. Don't proceed without verification — the rest of the module relies on these.</p>
@@ -97,7 +95,7 @@ For the 3 emails that need a reply, draft replies. Match my voice (per chief-of-
 Save each as a draft to Outlook / Gmail (whichever connector is in use).
 </code></pre>
 <p>Claude drafts. The drafts appear in your Drafts folder — visible on your phone, on Outlook on the web, anywhere you check email.</p>
-<p>If you're on M365 and the native draft write isn't working, Zapier MCP (configured in IT onboarding) handles it. You won't see Zapier UI; the drafts just appear.</p>
+<p>If you're on M365 and the native draft write isn't working, Zapier MCP handles it. You won't see Zapier UI; the drafts just appear.</p>
 <p><strong>Step 3 — Calendar + email chain.</strong></p>
 <pre><code>
 Today's brief: meetings, urgent emails, drafts pending review, plus anything from Slack
@@ -108,9 +106,9 @@ that's directly tagged for my attention. Pull from real data.
 <h3>Connector quirks</h3>
 <p>Worth knowing without dwelling on:</p>
 <ul>
-<li><strong>Gmail OAuth</strong> routes through the Google Drive flow (legacy infrastructure). If the auth dance felt weird in IT onboarding, that's why.</li>
+<li><strong>Gmail OAuth</strong> routes through the Google Drive flow (legacy infrastructure). If the auth dance felt weird, that's why.</li>
 <li><strong>Gmail draft creation</strong> needs the <code>gmail.modify</code> scope. If drafts aren't being created, check the scope.</li>
-<li><strong>M365 Outlook</strong> native connector is read-only in the most conservative read of Anthropic's docs. Drafts are created via Zapier MCP for M365 execs (set up in IT onboarding).</li>
+<li><strong>M365 Outlook</strong> native connector is read-only in the most conservative read of Anthropic's docs. Drafts are created via Zapier MCP for M365 execs.</li>
 <li><strong>Microsoft Teams chat</strong> is read-only via M365 connector. Sending messages programmatically isn't supported.</li>
 <li><strong>Google Calendar</strong> has full write scope (create / modify / delete events natively).</li>
 </ul>
@@ -133,7 +131,7 @@ that's directly tagged for my attention. Pull from real data.
 <pre><code>
 List the connectors active in this Cowork Project. For each, what scope is granted?
 </code></pre>
-<p>Expected: Claude lists Gmail/M365, Calendar, Drive, Slack, Notion, plus your custom apps. Scopes vary; key check is that nothing says "not connected." If something is disconnected, fix before continuing.</p>
+<p>Expected: Claude lists Gmail/M365, Calendar, Drive, Slack, plus your custom apps. Scopes vary; key check is that nothing says "not connected." If something is disconnected, fix before continuing.</p>
 <h2>Common issues</h2>
 <ul>
 <li><strong>Inbox read-back returns nothing</strong> — connector scope might be wrong. Check Customize → Connectors.</li>

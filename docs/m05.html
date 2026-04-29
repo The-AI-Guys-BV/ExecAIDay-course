@@ -104,8 +104,8 @@
 <ol>
 <li>The skill creates <code>&lt;work-folder&gt;/course/</code> with all the bucket subfolders.</li>
 <li>Writes a tailored <code>claude.md</code> synthesizing your interview answers + the chief-of-staff brief + work-folder defaults.</li>
-<li>Creates a matching GTD project entry in your Notion (Outcome, Status, Stakeholders, Deadline, Next-Action placeholder).</li>
-<li>Cross-links the folder and the Notion project.</li>
+<li>Creates a matching GTD project entry at <code>&lt;vault&gt;/gtd/projects/&lt;slug&gt;.md</code> (Outcome, Status, Stakeholders, Deadline, Next-Action placeholder).</li>
+<li>Cross-links the project folder and the GTD project file.</li>
 <li>Confirms what was created.</li>
 </ol>
 <p>You now have your first project folder + a matching GTD entry. Welcome to the workshop's working file structure.</p>
@@ -128,7 +128,7 @@ Pull the welcome doc and the how-to-start doc from this plugin into course/Sourc
 <p>Within one Cowork Project mounting both folders, Claude can read both freely. So a daily note in the vault can reference a project's Working Files; a project's Deliverable can be summarized into a Daily Note for the day's reflection.</p>
 <p>This is where the architecture pays off. The two folders are different in shape but unified in scope (within a Cowork Project).</p>
 <h2>Try this</h2>
-<p>Run <code>/new-project course</code> (or whatever name you prefer). Skill interviews you, scaffolds the folder, synthesizes a tailored <code>claude.md</code>, creates the GTD project entry in Notion. First content pulled from this plugin into <code>course/Source Materials/</code>. You now have your first project folder, your first GTD project entry, and the muscle for <code>/new-project</code>.</p>
+<p>Run <code>/new-project course</code> (or whatever name you prefer). Skill interviews you, scaffolds the folder, synthesizes a tailored <code>claude.md</code>, creates the GTD project entry as a vault file. First content pulled from this plugin into <code>course/Source Materials/</code>. You now have your first project folder, your first GTD project entry, and the muscle for <code>/new-project</code>.</p>
 <h2>Verification checkpoint</h2>
 <p>After running <code>/new-project</code>, type:</p>
 <pre><code>
@@ -137,7 +137,6 @@ What's in my course/ project folder right now? Read the claude.md.
 <p>Expected: Claude reads the project's <code>claude.md</code> and reports the synthesized brief — outcome, stakeholders, timeline, format overrides, etc. — along with the bucket subfolders. If <code>claude.md</code> is empty or missing, the scaffold didn't complete; rerun <code>/new-project</code>.</p>
 <h2>Common issues</h2>
 <ul>
-<li><strong><code>/new-project</code> fails on Notion write</strong> — Notion might not be connected; skill will scaffold the folder anyway and prompt to retry the GTD entry.</li>
 <li><strong>Project folder name conflicts</strong> — skill prompts for a different slug.</li>
 <li><strong>Synthesized <code>claude.md</code> looks generic</strong> — the interview was too short; rerun with more detail in answers.</li>
 <li><strong>Bucket subfolders empty</strong> — that's correct; they ship empty per the architecture.</li>

@@ -89,7 +89,7 @@
 <p>Example prompt for a weekly status email:</p>
 <pre><code>
 You're drafting my weekly status email to my board chair. Pull from:
-- Notion GTD next-actions (top 5 active).
+- GTD next-actions from &lt;vault&gt;/gtd/next-actions.md (top 5 active).
 - Calendar for the past week (key meetings).
 - Drafts inbox (anything I sent recently to investors).
 
@@ -114,6 +114,16 @@ SKIP — return only "Skipped weekly status — too late to be useful."
 <li>Anything that needs to read project <code>claude.md</code>s.</li>
 </ul>
 <p>Routines are configured separately in Cowork → Settings → Routines.</p>
+<h3>Mobile capture via Dispatch</h3>
+<p>Dispatch (Anthropic, March 2026) lets you talk to your Claude mobile app, which routes the request to your desktop Cowork — which then runs the skill against your local files.</p>
+<p>Combined with vault GTD: phone → voice → Dispatch → desktop runs <code>/capture</code> → bullet appended to <code>&lt;vault&gt;/gtd/inbox.md</code>. Confirmation back to your phone in seconds. Same for <code>/whats-next</code>, <code>/waiting-for</code>, <code>/today</code>.</p>
+<p>Caveats:</p>
+<ul>
+<li>Desktop must be on (or wake-on-Dispatch enabled) for the request to land.</li>
+<li>Max plan required (Pro is rolling out).</li>
+<li>A few seconds of latency is normal.</li>
+</ul>
+<p>This closes the mobile-capture gap that previously justified Notion. Voice-driven, hands-free, GTD from your phone.</p>
 <h2>Section 4 — Advanced</h2>
 <h3>Guardrail prompt patterns</h3>
 <p>Every scheduled task should have a guardrail. The pattern:</p>

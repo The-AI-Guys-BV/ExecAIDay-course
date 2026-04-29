@@ -95,8 +95,8 @@ Answer naturally. The interview isn't capped — the skill asks until it has eno
 Then:
 1. The skill creates `<work-folder>/course/` with all the bucket subfolders.
 2. Writes a tailored `claude.md` synthesizing your interview answers + the chief-of-staff brief + work-folder defaults.
-3. Creates a matching GTD project entry in your Notion (Outcome, Status, Stakeholders, Deadline, Next-Action placeholder).
-4. Cross-links the folder and the Notion project.
+3. Creates a matching GTD project entry at `<vault>/gtd/projects/<slug>.md` (Outcome, Status, Stakeholders, Deadline, Next-Action placeholder).
+4. Cross-links the project folder and the GTD project file.
 5. Confirms what was created.
 
 You now have your first project folder + a matching GTD entry. Welcome to the workshop's working file structure.
@@ -139,7 +139,7 @@ This is where the architecture pays off. The two folders are different in shape 
 
 ## Try this
 
-Run `/new-project course` (or whatever name you prefer). Skill interviews you, scaffolds the folder, synthesizes a tailored `claude.md`, creates the GTD project entry in Notion. First content pulled from this plugin into `course/Source Materials/`. You now have your first project folder, your first GTD project entry, and the muscle for `/new-project`.
+Run `/new-project course` (or whatever name you prefer). Skill interviews you, scaffolds the folder, synthesizes a tailored `claude.md`, creates the GTD project entry as a vault file. First content pulled from this plugin into `course/Source Materials/`. You now have your first project folder, your first GTD project entry, and the muscle for `/new-project`.
 
 ## Verification checkpoint
 
@@ -153,7 +153,6 @@ Expected: Claude reads the project's `claude.md` and reports the synthesized bri
 
 ## Common issues
 
-- **`/new-project` fails on Notion write** — Notion might not be connected; skill will scaffold the folder anyway and prompt to retry the GTD entry.
 - **Project folder name conflicts** — skill prompts for a different slug.
 - **Synthesized `claude.md` looks generic** — the interview was too short; rerun with more detail in answers.
 - **Bucket subfolders empty** — that's correct; they ship empty per the architecture.
@@ -164,4 +163,4 @@ Expected: Claude reads the project's `claude.md` and reports the synthesized bri
 - `templates/project-folder-template/` — the project folder template.
 - `skills/new-project/SKILL.md` — the skill spec.
 - M07 — Chief of Staff `claude.md` (the vault root brief).
-- M13 — GTD in Notion (the Notion side of `/new-project`).
+- M13 — GTD in your vault (the GTD side of `/new-project`).

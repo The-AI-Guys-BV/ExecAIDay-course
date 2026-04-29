@@ -6,8 +6,7 @@ The jaw-drop arc. Inbox, drafts, calendar — your real data, in Cowork, working
 
 ## What you'll do
 
-- Verify connectors set up in IT onboarding: Gmail / M365, Calendar, Drive, Slack, plus your custom apps (Asana / Monday / Jira / Linear / SFDC / HubSpot / etc.).
-- Notion is already connected from M01.
+- Verify connectors: Gmail / M365, Calendar, Drive, Slack, plus your custom apps (Asana / Monday / Jira / Linear / SFDC / HubSpot / etc.).
 - Run R-C-T-F-C from M02 on a real email — the callback exercise.
 - Walk the 3-step arc: inbox read-back → live draft → calendar + email chain.
 
@@ -15,7 +14,7 @@ The jaw-drop arc. Inbox, drafts, calendar — your real data, in Cowork, working
 
 ## Section 1 — Introduction
 
-A connector is an authenticated bridge between Claude and your services. Set up during IT onboarding, scoped to specific permissions. When Claude needs your inbox, it queries via the connector. When you ask "what's on my calendar today," same.
+A connector is an authenticated bridge between Claude and your services, scoped to specific permissions. When Claude needs your inbox, it queries via the connector. When you ask "what's on my calendar today," same.
 
 You don't authenticate per use. The connector is always-on once set up. Claude pulls fresh data per query — your inbox isn't continuously streaming to Anthropic, but Claude can fetch what it needs when relevant.
 
@@ -27,11 +26,10 @@ This module: verify your connectors, run a real R-C-T-F-C prompt on a real email
 
 In Cowork → Customize → Connectors. You should see:
 
-- **Gmail or Microsoft 365** (whichever your IT setup matched). Status: Connected.
+- **Gmail or Microsoft 365** (whichever your company uses). Status: Connected.
 - **Calendar** (Google Calendar or M365 calendar). Connected.
 - **Drive** (Google Drive or OneDrive). Connected.
 - **Slack** (if your team uses it). Connected.
-- **Notion** — already connected from M01.
 - **Custom apps** (Asana / Monday / Jira / Linear / SFDC / HubSpot / ClickUp / etc.) — only the ones you flagged in the questionnaire.
 
 If any are missing or disconnected: your assistant will sort it now. Don't proceed without verification — the rest of the module relies on these.
@@ -89,7 +87,7 @@ Save each as a draft to Outlook / Gmail (whichever connector is in use).
 
 Claude drafts. The drafts appear in your Drafts folder — visible on your phone, on Outlook on the web, anywhere you check email.
 
-If you're on M365 and the native draft write isn't working, Zapier MCP (configured in IT onboarding) handles it. You won't see Zapier UI; the drafts just appear.
+If you're on M365 and the native draft write isn't working, Zapier MCP handles it. You won't see Zapier UI; the drafts just appear.
 
 **Step 3 — Calendar + email chain.**
 ```
@@ -105,9 +103,9 @@ Claude composes a 1-page narrative brief from calendar + email + Slack. This is 
 
 Worth knowing without dwelling on:
 
-- **Gmail OAuth** routes through the Google Drive flow (legacy infrastructure). If the auth dance felt weird in IT onboarding, that's why.
+- **Gmail OAuth** routes through the Google Drive flow (legacy infrastructure). If the auth dance felt weird, that's why.
 - **Gmail draft creation** needs the `gmail.modify` scope. If drafts aren't being created, check the scope.
-- **M365 Outlook** native connector is read-only in the most conservative read of Anthropic's docs. Drafts are created via Zapier MCP for M365 execs (set up in IT onboarding).
+- **M365 Outlook** native connector is read-only in the most conservative read of Anthropic's docs. Drafts are created via Zapier MCP for M365 execs.
 - **Microsoft Teams chat** is read-only via M365 connector. Sending messages programmatically isn't supported.
 - **Google Calendar** has full write scope (create / modify / delete events natively).
 
@@ -142,7 +140,7 @@ By the end, "Cowork as a system" has become real to you.
 List the connectors active in this Cowork Project. For each, what scope is granted?
 ```
 
-Expected: Claude lists Gmail/M365, Calendar, Drive, Slack, Notion, plus your custom apps. Scopes vary; key check is that nothing says "not connected." If something is disconnected, fix before continuing.
+Expected: Claude lists Gmail/M365, Calendar, Drive, Slack, plus your custom apps. Scopes vary; key check is that nothing says "not connected." If something is disconnected, fix before continuing.
 
 ## Common issues
 

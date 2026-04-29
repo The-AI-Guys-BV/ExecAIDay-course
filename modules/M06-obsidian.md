@@ -2,12 +2,12 @@
 
 ## Why this module matters
 
-Obsidian is your knowledge layer — free, local-first, and the same files Cowork reads. Daily notes, references, capture, all linked via `[[wikilinks]]`. Once Obsidian is set up, the vault you mounted in M01 has a proper interface — graph view, daily-note workflow, plugin starter set.
+Obsidian is your knowledge layer — free, local-first, and the same files Cowork reads. Daily notes, references, capture, all linked via `[[wikilinks]]`. Once Obsidian is set up, the vault you mounted in M01 has a proper interface — graph view, a daily-note workflow, and a small set of Obsidian plugins that turn the vault into a working surface (calendar view, templates, weekly/monthly notes, task lists, command palette helper).
 
 ## What you'll do
 
 - Open Obsidian on the vault you mounted in M01 — same files Cowork sees.
-- Install the plugin starter set: Daily Notes, Calendar, Templater, Periodic Notes, Tasks, Commander.
+- Turn on Obsidian's daily-notes workflow (one core toggle + five small plugins: a calendar view, templates, weekly/monthly notes, tasks, and a command palette helper).
 - Watch Claude write into today's daily note while Obsidian renders the change live.
 
 ---
@@ -18,7 +18,7 @@ You have a vault. It's a folder of Markdown files. Cowork reads them as plain te
 
 The three-layer model from M01:
 - **Cowork folders = work files** (project folders, bounded work).
-- **Notion GTD = task management** (what you're doing).
+- **Vault GTD = task management** (what you're doing — plain markdown files in `<vault>/gtd/`).
 - **Obsidian = knowledge** (what you know — research, daily reflection, references).
 
 This module sets up the third layer. Obsidian is one tool; you'll have it open on a second monitor or alongside Cowork.
@@ -27,7 +27,7 @@ This module sets up the third layer. Obsidian is one tool; you'll have it open o
 
 ### Open Obsidian on your vault
 
-Obsidian was installed in IT onboarding. Open it. First time: select the vault folder (the same folder you mounted in M01 as your knowledge folder).
+Open Obsidian. First time: select the vault folder (the same folder you mounted in M01 as your knowledge folder).
 
 You'll see:
 - The file browser on the left with the folder structure: `about-me/`, `Daily Notes/`, `References/`, `Inbox/`, plus a root `claude.md`.
@@ -50,7 +50,9 @@ You'll see this in the exercise at the end.
 
 ## Section 3 — Intermediate
 
-### Plugin starter set
+### Set up Obsidian's daily-notes workflow
+
+You'll enable one Obsidian core plugin and install five small community plugins. Together they turn the empty vault into a working daily-note surface — a calendar in the sidebar, templates for new notes, support for weekly/monthly notes, in-note task lists, and a command palette helper. This is the vanilla "starter set" most Obsidian users run.
 
 Obsidian has two plugin types: **Core plugins** (built in) and **Community plugins** (third-party, opt-in).
 

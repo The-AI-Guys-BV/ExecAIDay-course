@@ -30,7 +30,7 @@ Plus side capabilities: console log reading (debugging), real-site navigation (p
 
 In Chrome (or Brave), click the Claude extension icon. Side panel opens on the right. You'll see chat-like interface, like Cowork but operating on the active browser tab.
 
-If the extension isn't installed: your IT onboarding should have done this. Your assistant will install now.
+If the extension isn't installed: your assistant will install it now.
 
 ### One-fact navigation
 

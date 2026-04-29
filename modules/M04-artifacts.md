@@ -48,13 +48,13 @@ A regular artifact is a snapshot. A LIVE artifact pulls fresh data each time it 
 Build one. In Cowork:
 
 ```
-Build me a live artifact that shows the items currently in my Notion GTD Inbox.
-Read fresh from Notion each time the artifact opens.
+Build me a live artifact that shows the items currently in my GTD Inbox at <vault>/gtd/inbox.md.
+Read fresh from the file each time the artifact opens.
 ```
 
-Cowork builds the artifact, queries Notion (your only connected connector at this point — set up in M01), and renders the inbox items. Close the artifact panel. Close Cowork entirely. Reopen tomorrow. Reopen this artifact. It pulls fresh data — your CURRENT inbox, not yesterday's snapshot.
+Cowork builds the artifact, reads <vault>/gtd/inbox.md, and renders the inbox items. Close the artifact panel. Close Cowork entirely. Reopen tomorrow. Reopen this artifact. It pulls fresh data — your CURRENT inbox, not yesterday's snapshot.
 
-That's live. The full Daily Command Center artifact in M14 — pulling calendar, email, Slack, Notion all together — only works after the rest of your connectors come online in M08.
+That's live. The full Daily Command Center artifact in M14 — pulling calendar, email, Slack, and your vault GTD all together — only works after the rest of your connectors come online in M08.
 
 ### Sidebar access
 
@@ -97,9 +97,9 @@ The pattern: skill = trigger; artifact = persistent visible surface.
 
 ## Try this
 
-Build the Notion-Inbox live artifact above. With the artifact open, in another Cowork tab type `/capture remind me to test the live artifact`. Watch your new item appear in the artifact when it refreshes. That's "live" — not a screenshot, a surface that updates.
+Build the GTD-Inbox live artifact above. With the artifact open, in another Cowork tab type `/capture remind me to test the live artifact`. Watch your new item appear in the artifact when it refreshes. That's "live" — not a screenshot, a surface that updates.
 
-In M14 you'll build the full version that pulls calendar, email, Slack, and Notion together. For now, one live tile is enough to feel the difference.
+In M14 you'll build the full version that pulls calendar, email, Slack, and your vault GTD together. For now, one live tile is enough to feel the difference.
 
 ## Verification checkpoint
 
@@ -109,7 +109,7 @@ After building your first live artifact, type:
 Show me the artifact I just built. What data source does it query?
 ```
 
-Expected: Claude lists the artifact and identifies that it queries Notion. If Claude says "I don't see an artifact," the artifact didn't save — try building again.
+Expected: Claude lists the artifact and identifies that it reads <vault>/gtd/inbox.md. If Claude says "I don't see an artifact," the artifact didn't save — try building again.
 
 ## Common issues
 

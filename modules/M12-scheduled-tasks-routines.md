@@ -70,7 +70,7 @@ Example prompt for a weekly status email:
 
 ```
 You're drafting my weekly status email to my board chair. Pull from:
-- Notion GTD next-actions (top 5 active).
+- GTD next-actions from <vault>/gtd/next-actions.md (top 5 active).
 - Calendar for the past week (key meetings).
 - Drafts inbox (anything I sent recently to investors).
 
@@ -97,6 +97,21 @@ Don't use Routines for:
 - Anything that needs to read project `claude.md`s.
 
 Routines are configured separately in Cowork → Settings → Routines.
+
+
+
+### Mobile capture via Dispatch
+
+Dispatch (Anthropic, March 2026) lets you talk to your Claude mobile app, which routes the request to your desktop Cowork — which then runs the skill against your local files.
+
+Combined with vault GTD: phone → voice → Dispatch → desktop runs `/capture` → bullet appended to `<vault>/gtd/inbox.md`. Confirmation back to your phone in seconds. Same for `/whats-next`, `/waiting-for`, `/today`.
+
+Caveats:
+- Desktop must be on (or wake-on-Dispatch enabled) for the request to land.
+- Max plan required (Pro is rolling out).
+- A few seconds of latency is normal.
+
+This closes the mobile-capture gap that previously justified Notion. Voice-driven, hands-free, GTD from your phone.
 
 ## Section 4 — Advanced
 

@@ -6,7 +6,7 @@ You start the workshop with a working Cowork Project, a tutor (`/teach`) that wa
 
 ## What you'll do
 
-- Verify your install and Notion connection (set up in onboarding).
+- Verify your install.
 - Create your workshop Cowork Project and mount your two folders (vault + work folder).
 - Install `/teach` and use it for the first time.
 - Walk through 18 foundational concepts inside the workspace you just built.
@@ -28,31 +28,25 @@ The single most important thing in this module: by the end, you'll have a Cowork
 
 In your Claude Desktop, switch to the **Cowork** tab. You should see a sidebar on the left with sections including Customize, Plugins, your Cowork Projects.
 
-If you don't see the Cowork tab at all: your IT setup didn't complete. Tell your assistant.
+If you don't see the Cowork tab at all: tell your assistant.
 
-### Step 2 — Verify Notion connection
-
-In Customize → Connectors, find Notion. It should show as Connected, authenticated to the workshop's GTD workspace.
-
-If not connected: your assistant will sort it. The workshop architecture needs Notion live for the GTD skills.
-
-### Step 3 — Create the workshop Cowork Project
+### Step 2 — Create the workshop Cowork Project
 
 In the Cowork sidebar, click **+ New Project** (or your equivalent UI element — your assistant will point it out).
 
 Name it whatever feels natural. "Workshop" is fine. "Cowork Course." Whatever.
 
 Mount both folders:
-- Your **Obsidian vault** (knowledge folder) — the path your IT setup placed it at.
-- Your **work folder** (projects parent) — the path your IT setup placed it at.
+- Your **Obsidian vault** (knowledge folder).
+- Your **work folder** (projects parent).
 
 Both mounted in the same Cowork Project. This is load-bearing — the architecture relies on Cowork seeing both folders together.
 
-### Step 4 — Install `/teach`
+### Step 3 — Install `/teach`
 
 This is the first skill install. Your assistant will give you the install prompt. Paste it into Cowork. Claude writes the SKILL.md file. Confirm it worked by typing `/teach` (no arguments). You should see a list of modules.
 
-### Step 5 — First teach demo
+### Step 4 — First teach demo
 
 Type `/teach M02`. Claude reads the M02 module file and starts walking it. Don't actually do M02 now (you'll do it next anyway), but see how `/teach` opens, lists the section, and waits for you. Type "exit" to close out.
 
@@ -68,7 +62,7 @@ Don't try to memorize. Recognize. You'll re-encounter every concept in later mod
 4. **Chat vs Cowork modes** — single conversation vs persistent workspace.
 5. **Plans** — Free / Pro / Max / Team / Enterprise. You're on Max minimum (plugins).
 6. **Skills** — slash commands installed on your machine. Skill IS slash command (2026 model).
-7. **Connectors** — bridges to your services (Gmail, Notion, etc.).
+7. **Connectors** — bridges to your services (Gmail, Calendar, Slack, etc.).
 8. **MCP** — the wire format under connectors. You don't deal with it directly.
 9. **Artifacts** — generated outputs. Live artifacts auto-refresh on reopen.
 10. **Session memory** — what Claude remembers within a Cowork Project.
@@ -89,7 +83,7 @@ For full definitions, see the References section of this plugin (`references/17-
 
 When you type into Cowork, your prompt + relevant context goes to Anthropic's infrastructure. On Max plan, Anthropic doesn't train on your data. Connector data flows through when needed for a response — your inbox isn't continuously streaming. Local files in mounted folders go through when Claude reads them.
 
-Your company has its own AI policy. Your IT contact (set up in onboarding) is who to ask if unsure.
+Your company has its own AI policy. Your IT contact is who to ask if unsure.
 
 For details: `references/data-privacy.md`.
 
@@ -105,7 +99,7 @@ For details: `references/what-not-to-use-claude-for.md`.
 
 ### Cost overview
 
-Workshop assumes Max plan ($N/month per user). Plus connector subscription costs (varies). Plus Notion Business plan ($N/user/month) for the cohort delivery. Plus optional Wispr Flow / Granola / Bluedot etc. (~$10-20/month each).
+Workshop assumes Max plan ($N/month per user). Plus connector subscription costs (varies). Plus optional Wispr Flow / Granola / Bluedot etc. (~$10-20/month each).
 
 Total monthly stack cost typically $80–180 per exec. One slide; not the workshop's focus.
 
@@ -129,7 +123,6 @@ Expected: Claude lists both your vault and your work folder by name (the names y
 
 - **Cowork Project doesn't see one of the folders.** Re-mount it; confirm the path. Some MDM-managed laptops require explicit folder permission.
 - **`/teach` not auto-discovered after install.** Restart Cowork. If still not visible, check `~/.claude/skills/teach/SKILL.md` exists.
-- **Notion connector says "Authenticate"** even after onboarding. Click Authenticate; if browser flow stalls, copy the auth URL and complete in a different browser.
 
 ## References
 

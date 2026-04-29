@@ -37,7 +37,7 @@
 <main class="content container">
 <h2>What you'll do</h2>
 <ul>
-<li>Verify your install and Notion connection (set up in onboarding).</li>
+<li>Verify your install.</li>
 <li>Create your workshop Cowork Project and mount your two folders (vault + work folder).</li>
 <li>Install <code>/teach</code> and use it for the first time.</li>
 <li>Walk through 18 foundational concepts inside the workspace you just built.</li>
@@ -50,22 +50,19 @@
 <h2>Section 2 — Beginner / Getting Started</h2>
 <h3>Step 1 — Verify install</h3>
 <p>In your Claude Desktop, switch to the <strong>Cowork</strong> tab. You should see a sidebar on the left with sections including Customize, Plugins, your Cowork Projects.</p>
-<p>If you don't see the Cowork tab at all: your IT setup didn't complete. Tell your assistant.</p>
-<h3>Step 2 — Verify Notion connection</h3>
-<p>In Customize → Connectors, find Notion. It should show as Connected, authenticated to the workshop's GTD workspace.</p>
-<p>If not connected: your assistant will sort it. The workshop architecture needs Notion live for the GTD skills.</p>
-<h3>Step 3 — Create the workshop Cowork Project</h3>
+<p>If you don't see the Cowork tab at all: tell your assistant.</p>
+<h3>Step 2 — Create the workshop Cowork Project</h3>
 <p>In the Cowork sidebar, click <strong>+ New Project</strong> (or your equivalent UI element — your assistant will point it out).</p>
 <p>Name it whatever feels natural. "Workshop" is fine. "Cowork Course." Whatever.</p>
 <p>Mount both folders:</p>
 <ul>
-<li>Your <strong>Obsidian vault</strong> (knowledge folder) — the path your IT setup placed it at.</li>
-<li>Your <strong>work folder</strong> (projects parent) — the path your IT setup placed it at.</li>
+<li>Your <strong>Obsidian vault</strong> (knowledge folder).</li>
+<li>Your <strong>work folder</strong> (projects parent).</li>
 </ul>
 <p>Both mounted in the same Cowork Project. This is load-bearing — the architecture relies on Cowork seeing both folders together.</p>
-<h3>Step 4 — Install <code>/teach</code></h3>
+<h3>Step 3 — Install <code>/teach</code></h3>
 <p>This is the first skill install. Your assistant will give you the install prompt. Paste it into Cowork. Claude writes the SKILL.md file. Confirm it worked by typing <code>/teach</code> (no arguments). You should see a list of modules.</p>
-<h3>Step 5 — First teach demo</h3>
+<h3>Step 4 — First teach demo</h3>
 <p>Type <code>/teach M02</code>. Claude reads the M02 module file and starts walking it. Don't actually do M02 now (you'll do it next anyway), but see how <code>/teach</code> opens, lists the section, and waits for you. Type "exit" to close out.</p>
 <h2>Section 3 — Intermediate</h2>
 <p>The 18 basic concepts. We'll go through them inside the Cowork Project you just built — every concept becomes concrete because the workspace they describe is the one you're sitting in.</p>
@@ -77,7 +74,7 @@
 <li><strong>Chat vs Cowork modes</strong> — single conversation vs persistent workspace.</li>
 <li><strong>Plans</strong> — Free / Pro / Max / Team / Enterprise. You're on Max minimum (plugins).</li>
 <li><strong>Skills</strong> — slash commands installed on your machine. Skill IS slash command (2026 model).</li>
-<li><strong>Connectors</strong> — bridges to your services (Gmail, Notion, etc.).</li>
+<li><strong>Connectors</strong> — bridges to your services (Gmail, Calendar, Slack, etc.).</li>
 <li><strong>MCP</strong> — the wire format under connectors. You don't deal with it directly.</li>
 <li><strong>Artifacts</strong> — generated outputs. Live artifacts auto-refresh on reopen.</li>
 <li><strong>Session memory</strong> — what Claude remembers within a Cowork Project.</li>
@@ -94,7 +91,7 @@
 <h2>Section 4 — Advanced</h2>
 <h3>Data privacy + company policy</h3>
 <p>When you type into Cowork, your prompt + relevant context goes to Anthropic's infrastructure. On Max plan, Anthropic doesn't train on your data. Connector data flows through when needed for a response — your inbox isn't continuously streaming. Local files in mounted folders go through when Claude reads them.</p>
-<p>Your company has its own AI policy. Your IT contact (set up in onboarding) is who to ask if unsure.</p>
+<p>Your company has its own AI policy. Your IT contact is who to ask if unsure.</p>
 <p>For details: <code>references/data-privacy.md</code>.</p>
 <h3>What NOT to use Claude for</h3>
 <ul>
@@ -106,7 +103,7 @@
 </ul>
 <p>For details: <code>references/what-not-to-use-claude-for.md</code>.</p>
 <h3>Cost overview</h3>
-<p>Workshop assumes Max plan ($N/month per user). Plus connector subscription costs (varies). Plus Notion Business plan ($N/user/month) for the cohort delivery. Plus optional Wispr Flow / Granola / Bluedot etc. (~$10-20/month each).</p>
+<p>Workshop assumes Max plan ($N/month per user). Plus connector subscription costs (varies). Plus optional Wispr Flow / Granola / Bluedot etc. (~$10-20/month each).</p>
 <p>Total monthly stack cost typically $80–180 per exec. One slide; not the workshop's focus.</p>
 <h2>Try this</h2>
 <p>Type <code>/teach</code> (no arguments). Claude lists the 16 modules. You pick one. Claude walks it patiently, one section at a time. The hallucination demo follows immediately as a trust-calibration moment — your instructor demonstrates Claude making something up confidently, then you watch it self-correct when given evidence.</p>
@@ -120,7 +117,6 @@ What folders am I currently mounting in this Cowork Project?
 <ul>
 <li><strong>Cowork Project doesn't see one of the folders.</strong> Re-mount it; confirm the path. Some MDM-managed laptops require explicit folder permission.</li>
 <li><strong><code>/teach</code> not auto-discovered after install.</strong> Restart Cowork. If still not visible, check <code>~/.claude/skills/teach/SKILL.md</code> exists.</li>
-<li><strong>Notion connector says "Authenticate"</strong> even after onboarding. Click Authenticate; if browser flow stalls, copy the auth URL and complete in a different browser.</li>
 </ul>
   <nav class="module-nav">
     <div class="nav-link disabled"><div class="nav-link-label">Start</div><div class="nav-link-title">First module</div></div>

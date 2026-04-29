@@ -37,10 +37,10 @@
 <main class="content container">
 <h2>What you'll do</h2>
 <ul>
-<li>Verify your meeting-note tool (Granola / Bluedot / Fellow — picked in questionnaire, installed in IT onboarding).</li>
+<li>Verify your meeting-note tool (Granola / Bluedot / Fellow — picked in questionnaire).</li>
 <li>Run a full pipeline: meeting captured → transcript in Obsidian daily note → Claude processes into a structured note in your vault.</li>
 <li>Try gap analysis: Claude cross-references the transcript vs your existing vault notes, surfaces commitments you missed.</li>
-<li>Push commitments into your GTD next-actions in Notion.</li>
+<li>Push commitments into your GTD inbox at <vault>/gtd/inbox.md.</li>
 <li>Generate follow-up emails routed to <code>drafts-inbox</code>.</li>
 </ul>
 <h2>Section 1 — Introduction</h2>
@@ -82,7 +82,7 @@ Save the structured note to my vault under Meeting Notes/&lt;date&gt;-&lt;title&
 Then for each commitment that's mine, /capture it into my GTD inbox.
 </code></pre>
 <p>Claude reads the transcript, structures the output, writes the meeting note into your vault, and captures each of your commitments into your GTD inbox.</p>
-<p>Verify in your vault: the new meeting note is there with structured commitments, decisions, follow-ups. Verify in your Notion GTD inbox: the commitments showed up.</p>
+<p>Verify in your vault: the new meeting note is there with structured commitments, decisions, follow-ups. Verify in your GTD inbox: the commitments showed up at <vault>/gtd/inbox.md.</p>
 <h3>Gap analysis</h3>
 <p>This is where the pipeline pays off uniquely. Claude can cross-reference what was said in the meeting vs what's in your existing notes:</p>
 <pre><code>
