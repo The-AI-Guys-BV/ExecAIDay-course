@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M03 Cowork UI + Settings — ExecAIDay</title>
+<meta name="description" content="Cowork UI + Settings — module M03 of the ExecAIDay Claude Cowork training workshop.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="container topnav-inner">
+    <div class="brand"><a href="index.html"><span class="brand-mark">●</span> ExecAIDay</a></div>
+    <div class="nav-links">
+      <a href="index.html">All modules</a>
+    </div>
+  </div>
+</nav>
+
+<header class="module-hero">
+  <div class="container">
+    <div class="module-hero-icon" style="background: var(--foundation-soft); color: var(--foundation);">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+    </div>
+    <div class="eyebrow">
+      <span class="breadcrumb"><a href="index.html">All modules</a> &nbsp;/&nbsp; Foundation</span>
+    </div>
+    <h1>M03 — Cowork UI + Settings</h1>
+    <p class="lede">Cowork is on. Time to know where things are and what to set so it behaves like YOU want, not like the default. Five UI elements to recognize, five settings to configure deliberately, plus the data-sharing toggles you should set with intention rather than leaving on default.</p>
+  </div>
+</header>
+
+<main class="content container">
+<h2>What you'll do</h2>
+<ul>
+<li>Treasure-hunt the 5 named UI elements.</li>
+<li>Configure 5 exec-relevant settings.</li>
+<li>Set data-sharing / telemetry toggles deliberately.</li>
+</ul>
+<h2>Time</h2>
+<p>~30 minutes.</p>
+<h2>Section 1 — Introduction (~3 min)</h2>
+<p>You already turned Cowork on in M01 when you created your Cowork Project. This module isn't about activating Cowork; it's about KNOWING the workspace you're in so the rest of the workshop isn't a treasure hunt mid-demo.</p>
+<p>Five UI elements you'll recognize on sight by the end of this module. Five settings you'll set deliberately. That's the whole module.</p>
+<h2>Section 2 — Beginner / Getting Started (~10 min)</h2>
+<p>The 5 named UI elements (treasure hunt — find each in your Cowork window):</p>
+<ol>
+<li><strong>Project switcher.</strong> Top-left of the Cowork sidebar. Lists your Cowork Projects; click to switch.</li>
+<li><strong>Mounted folders panel.</strong> In the project sidebar — shows which local folders this Cowork Project is reading.</li>
+<li><strong>Connectors panel.</strong> Customize → Connectors. Lists connected services (Gmail, Notion, etc.).</li>
+<li><strong>Skills / slash commands panel.</strong> Customize → Skills. Lists installed skills (you'll see the 26 from this plugin once you install it).</li>
+<li><strong>Artifacts sidebar.</strong> Right side, opens when an artifact is generated. Holds version history.</li>
+</ol>
+<p>Find each one in your window. Tell your assistant when you've found all 5.</p>
+<h2>Section 3 — Intermediate (~10 min)</h2>
+<p>The 5 settings to set deliberately. Defaults are reasonable but not yours.</p>
+<h3>1. Default model</h3>
+<p>In Settings → Models. Three choices: Opus 4.7 / Sonnet 4.6 / Haiku 4.5.</p>
+<p><strong>Recommendation for execs:</strong> Sonnet 4.6 default. Switch to Opus 4.7 for complex reasoning (board-level analysis, strategic writing). Switch to Haiku 4.5 for fast triage / classification.</p>
+<h3>2. Voice input</h3>
+<p>In Settings → Voice. Pick the voice tool installed during onboarding (Wispr / Superwhisper / Voibe). Set it as default.</p>
+<p>If voice not enabled: skip this. You can still type prompts.</p>
+<h3>3. Theme</h3>
+<p>Settings → Appearance. Light / Dark / System. Personal preference. (Yes, this matters — you're going to spend hours in here. Make it comfortable.)</p>
+<h3>4. Connector visibility</h3>
+<p>Settings → Connectors → Per-Project. By default, all connectors are available in every Cowork Project. For sensitive Cowork Projects (M&A, legal), you may want to disable certain connectors per project. We'll touch this in M16.</p>
+<h3>5. Skill enable/disable</h3>
+<p>Customize → Skills. By default, all installed skills are enabled. You can disable skills you never use to reduce slash command clutter. (Worth noting; not action-required.)</p>
+<h2>Section 4 — Advanced (~10 min)</h2>
+<h3>Data-sharing / telemetry toggles</h3>
+<p>This is the underrated section. Settings → Privacy.</p>
+<p>Three toggles to consider:</p>
+<ul>
+<li><strong>Send anonymous usage data to Anthropic.</strong> Default ON. Helps Anthropic improve Claude. Off if you're privacy-strict.</li>
+<li><strong>Share conversations for training (Free plan only).</strong> Doesn't apply on Max. But check anyway.</li>
+<li><strong>Allow connectors to read shared workspace data.</strong> Default ON. Off if you're working with sensitive content and want connector data scope tightened.</li>
+</ul>
+<p>These toggles don't change Claude's quality dramatically — they're about your privacy posture. Decide once, deliberately.</p>
+<h3>Account-level vs project-level settings</h3>
+<p>Some settings (theme, default model, voice) are account-level. Some (connector visibility) are per-Cowork-Project.</p>
+<p>The mental model: account-level settings affect every Cowork Project; per-project settings let you have a "sensitive work" Cowork Project that disables most connectors and a "default work" one that has them all on.</p>
+<h3>What you don't need to touch</h3>
+<ul>
+<li>Notification settings unless they're annoying. Default is fine.</li>
+<li>Keyboard shortcuts unless you're a power user.</li>
+<li>Plugin update settings — your plugins update through their marketplaces.</li>
+</ul>
+<h2>Micro-win</h2>
+<p>The 5 settings configured to YOUR preference, not the defaults. You spent 5 deliberate decisions on how Cowork behaves. Small win, real ownership.</p>
+<h2>Verification checkpoint</h2>
+<pre><code>
+<p>What's my default model right now, and what voice tool is configured?</p>
+<pre><code>
+<p>Expected: Claude reports the model + voice tool you set. If it can't answer (says "I don't know"), the settings might not have saved — check Settings.</p>
+<h2>Common issues</h2>
+<ul>
+<li><strong>Setting doesn't persist after restart.</strong> Known issue if Cowork v2.1.115 or older. Update to v2.1.116+.</li>
+<li><strong>Voice input not working.</strong> Mac: System Settings → Privacy → Microphone → grant Cowork. Windows: Settings → Privacy → Microphone.</li>
+<li><strong>Theme doesn't apply.</strong> Restart Cowork; sometimes mid-session theme changes don't take.</li>
+</ul>
+<h2>References</h2>
+<ul>
+<li>None new — this module is mostly UI. The settings affect every other module.</li>
+</ul>
+  <nav class="module-nav">
+    <a class="nav-link prev" href="m02.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M02 — Prompt Engineering</div></a>
+    <a class="nav-link next" href="m04.html"><div class="nav-link-label">Next →</div><div class="nav-link-title">M04 — Artifacts</div></a>
+  </nav>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer-inner">
+    <div>ExecAIDay — premium Claude Cowork training for executives.</div>
+    <div>The AI Guys BV · <a href="https://github.com/The-AI-Guys-BV/ExecAIDay-course">github</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

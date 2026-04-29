@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M06 Obsidian — ExecAIDay</title>
+<meta name="description" content="Obsidian — module M06 of the ExecAIDay Claude Cowork training workshop.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="container topnav-inner">
+    <div class="brand"><a href="index.html"><span class="brand-mark">●</span> ExecAIDay</a></div>
+    <div class="nav-links">
+      <a href="index.html">All modules</a>
+    </div>
+  </div>
+</nav>
+
+<header class="module-hero">
+  <div class="container">
+    <div class="module-hero-icon" style="background: var(--personalize-soft); color: var(--personalize);">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><line x1="6.5" y1="6.5" x2="10.5" y2="10.5"/><line x1="17.5" y1="6.5" x2="13.5" y2="10.5"/><line x1="6.5" y1="17.5" x2="10.5" y2="13.5"/><line x1="17.5" y1="17.5" x2="13.5" y2="13.5"/></svg>
+    </div>
+    <div class="eyebrow">
+      <span class="breadcrumb"><a href="index.html">All modules</a> &nbsp;/&nbsp; Personalize</span>
+    </div>
+    <h1>M06 — Obsidian</h1>
+    <p class="lede">Obsidian is your knowledge layer — free, local-first, and the same files Cowork reads. Daily notes, references, capture, all linked via <code>[[wikilinks]]</code>. Once Obsidian is set up, the vault you mounted in M01 has a proper interface — graph view, daily-note workflow, plugin starter set.</p>
+  </div>
+</header>
+
+<main class="content container">
+<h2>What you'll do</h2>
+<ul>
+<li>Open Obsidian on the vault you mounted in M01 — same files Cowork sees.</li>
+<li>Install the plugin starter set: Daily Notes, Calendar, Templater, Periodic Notes, Tasks, Commander.</li>
+<li>Watch Claude write into today's daily note while Obsidian renders the change live.</li>
+</ul>
+<h2>Time</h2>
+<p>~45 minutes.</p>
+<h2>Section 1 — Introduction (~5 min)</h2>
+<p>You have a vault. It's a folder of Markdown files. Cowork reads them as plain text. Obsidian renders them as a knowledge graph with bidirectional links, daily notes, plugins for everything.</p>
+<p>The three-layer model from M01:</p>
+<ul>
+<li><strong>Cowork folders = work files</strong> (project folders, bounded work).</li>
+<li><strong>Notion GTD = task management</strong> (what you're doing).</li>
+<li><strong>Obsidian = knowledge</strong> (what you know — research, daily reflection, references).</li>
+</ul>
+<p>This module sets up the third layer. Obsidian is one tool; you'll have it open on a second monitor or alongside Cowork.</p>
+<h2>Section 2 — Beginner / Getting Started (~15 min)</h2>
+<h3>Open Obsidian on your vault</h3>
+<p>Obsidian was installed in IT onboarding. Open it. First time: select the vault folder (the same folder you mounted in M01 as your knowledge folder).</p>
+<p>You'll see:</p>
+<ul>
+<li>The file browser on the left with the folder structure: <code>about-me/</code>, <code>Daily Notes/</code>, <code>References/</code>, <code>Inbox/</code>, plus a root <code>claude.md</code>.</li>
+<li>The current open note in the main pane.</li>
+<li>The graph view (icon top-right, shape varies by Obsidian version) showing how notes link.</li>
+</ul>
+<h3>How vault + Cowork interact</h3>
+<p>Same files, two interfaces. Edit a file in Obsidian; Cowork sees the edit on next read. Edit a file from Cowork (Claude writes into it); Obsidian re-renders live (file watching).</p>
+<p>You'll see this in the micro-win at the end.</p>
+<h3>Obsidian basics</h3>
+<ul>
+<li><code>Cmd/Ctrl + O</code> — open quick-switcher to find any note.</li>
+<li><code>[[note name]]</code> while typing — creates a wikilink to another note. Click it to navigate.</li>
+<li>Tags <code>#tag</code> for cross-cutting categories.</li>
+<li>Daily notes — open today's daily note via the Daily Notes plugin (calendar icon, or <code>Cmd/Ctrl + Shift + D</code>).</li>
+<li>Graph view — visualize how your notes link. Becomes meaningful after weeks of use.</li>
+</ul>
+<h2>Section 3 — Intermediate (~15 min)</h2>
+<h3>Plugin starter set</h3>
+<p>In Obsidian: Settings → Community plugins → Browse. Install and enable:</p>
+<ol>
+<li><strong>Daily Notes</strong> (core, usually pre-enabled). Creates <code>Daily Notes/YYYY-MM-DD.md</code> on demand or daily.</li>
+<li><strong>Calendar</strong> — visual calendar to navigate daily / weekly / monthly notes.</li>
+<li><strong>Templater</strong> — template-driven note creation (date math, headers, etc.).</li>
+<li><strong>Periodic Notes</strong> — extends Daily Notes to weekly, monthly, quarterly, yearly.</li>
+<li><strong>Tasks</strong> — checkbox-style task tracking inside notes (separate from your GTD; useful for tactical lists).</li>
+<li><strong>Commander</strong> — adds command palette items for the above.</li>
+</ol>
+<p>After installing, configure Daily Notes:</p>
+<ul>
+<li>Folder: <code>Daily Notes/</code></li>
+<li>Date format: <code>YYYY-MM-DD</code> (matches the convention in <code>Daily Notes/claude.md</code>).</li>
+<li>Template: skip for now (you can add a Templater-driven template later).</li>
+</ul>
+<h3>How Claude reads daily notes</h3>
+<p>Claude reads your Daily Notes when relevant — for example, the <code>/weekly-review</code> skill reads the past 7 days' notes to surface accomplishments. Claude treats them as journal voice (per <code>Daily Notes/claude.md</code>).</p>
+<p>Don't worry about Claude misreading them. The <code>claude.md</code> in the Daily Notes folder tells Claude to expect first-person reflective content.</p>
+<h2>Section 4 — Advanced (~10 min)</h2>
+<h3>Plugins beyond the starter set</h3>
+<p>Worth exploring later (not in workshop):</p>
+<ul>
+<li><strong>Dataview</strong> — query your notes as a database.</li>
+<li><strong>Excalidraw</strong> — draw directly in notes.</li>
+<li><strong>Outliner</strong> — better bullet management.</li>
+<li><strong>Note Refactor</strong> — split long notes into linked smaller ones.</li>
+</ul>
+<p>Don't install everything at once. Add as you encounter need.</p>
+<h3>Obsidian Sync (optional, $4/month)</h3>
+<p>If you want your vault on your phone too, Obsidian Sync is the cleanest path. Otherwise, the vault stays on your laptop.</p>
+<p>NOT required for the workshop architecture. Sync is a personal-preference layer.</p>
+<h3>Templater patterns</h3>
+<p>Templater can create complex note structures from a template. Useful for:</p>
+<ul>
+<li>Daily note template with sections you always want (today's calendar pulled from Cowork later, intentions, gratitude, etc.).</li>
+<li>Project note template (separate from project folders — these are knowledge-layer notes about projects).</li>
+<li>Meeting note template (we'll see this in M15).</li>
+</ul>
+<p>You'll iterate on templates over weeks. Don't optimize on Day 1.</p>
+<h2>Micro-win</h2>
+<p>In Cowork:</p>
+<pre><code>
+<p>Write a paragraph reflecting on what you've learned in the workshop so far.</p>
+<p>Save it to today's daily note in my vault. Use journal voice — first person, reflective, brief.</p>
+<pre><code>
+<p>Claude reads <code>Daily Notes/claude.md</code> (which says journal voice), writes the paragraph, saves to <code><vault>/Daily Notes/<today>.md</code>.</p>
+<p>Watch Obsidian. The note updates live in front of you.</p>
+<h2>Verification checkpoint</h2>
+<p>In Cowork:</p>
+<pre><code>
+<p>What's in my Daily Notes folder for the past 7 days?</p>
+<pre><code>
+<p>Expected: Claude lists files (probably just today's, plus any pre-existing). If Claude can't find <code>Daily Notes/</code>, the vault didn't mount correctly — check M01.</p>
+<h2>Common issues</h2>
+<ul>
+<li><strong>Obsidian doesn't see the files Claude wrote</strong> — Obsidian uses file watching; sometimes needs a manual refresh (right-click the file browser → Refresh).</li>
+<li><strong>Daily note has wrong date</strong> — check Daily Notes plugin settings; default format must match <code>YYYY-MM-DD</code>.</li>
+<li><strong>Plugins fail to install</strong> — usually a network issue; retry. Or use Obsidian's BRAT plugin to install from GitHub directly.</li>
+<li><strong>Vault feels empty</strong> — that's correct on Day 1. Content accumulates over weeks.</li>
+</ul>
+<h2>References</h2>
+<ul>
+<li><code>templates/vault-starter/</code> — what was scaffolded into your vault.</li>
+<li>M07 — writing the chief-of-staff brief in Obsidian.</li>
+<li>M15 — meeting notes that land in Daily Notes.</li>
+</ul>
+  <nav class="module-nav">
+    <a class="nav-link prev" href="m05.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M05 — Projects, Folders, claude.md</div></a>
+    <a class="nav-link next" href="m07.html"><div class="nav-link-label">Next →</div><div class="nav-link-title">M07 — Chief of Staff claude.md</div></a>
+  </nav>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer-inner">
+    <div>ExecAIDay — premium Claude Cowork training for executives.</div>
+    <div>The AI Guys BV · <a href="https://github.com/The-AI-Guys-BV/ExecAIDay-course">github</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

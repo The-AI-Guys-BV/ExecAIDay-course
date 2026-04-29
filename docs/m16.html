@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M16 Collaboration & Shared Work — ExecAIDay</title>
+<meta name="description" content="Collaboration & Shared Work — module M16 of the ExecAIDay Claude Cowork training workshop.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="container topnav-inner">
+    <div class="brand"><a href="index.html"><span class="brand-mark">●</span> ExecAIDay</a></div>
+    <div class="nav-links">
+      <a href="index.html">All modules</a>
+    </div>
+  </div>
+</nav>
+
+<header class="module-hero">
+  <div class="container">
+    <div class="module-hero-icon" style="background: var(--system-soft); color: var(--system);">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+    </div>
+    <div class="eyebrow">
+      <span class="breadcrumb"><a href="index.html">All modules</a> &nbsp;/&nbsp; System</span>
+    </div>
+    <h1>M16 — Collaboration & Shared Work</h1>
+    <p class="lede">You + Claude is exec superpower. You + your team + Claude is exec leverage. M16 is how you turn personal Cowork into shared Cowork — shared Notion pages, shared Cowork folders, multi-connector queries that span your team's surfaces.</p>
+  </div>
+</header>
+
+<main class="content container">
+<h2>What you'll do</h2>
+<ul>
+<li>Set up a shared Notion page + shared Cowork folder.</li>
+<li>Pair up (2-3 per group) and collaborate live on a pre-seeded fake project.</li>
+<li>Run multi-connector magic: Claude reads Slack + Notion + Gmail in one shot during the collaboration scenario.</li>
+</ul>
+<h2>Time</h2>
+<p>~75 minutes.</p>
+<h2>Section 1 — Introduction (~5 min)</h2>
+<p>Three collaboration surfaces you'll touch:</p>
+<ol>
+<li><strong>Shared Notion page</strong> — your team can read + comment on a Notion page you share.</li>
+<li><strong>Shared Cowork folder</strong> — a folder you and your team both mount in your respective Cowork Projects. Files in there are visible to all.</li>
+<li><strong>Shared scheduled tasks</strong> — less common; usually each person has their own.</li>
+</ol>
+<p>Sales reality: workshop targets same-company cohorts when possible (so the collaboration exercise is realistic). Mixed cohorts run the pairs exercise on a pre-seeded fake project.</p>
+<h2>Section 2 — Beginner / Getting Started (~20 min)</h2>
+<h3>Shared Notion page</h3>
+<p>In your Notion master, create or pick a page that you'll share. Click Share → invite a teammate → "Can comment" or "Can edit" (your call).</p>
+<p>Once shared, your teammate sees the page. Both of you can have Cowork pull from it via the Notion connector.</p>
+<p>Try:</p>
+<pre><code>
+<p>What's the latest on the [shared project] in Notion? Read the shared page.</p>
+<pre><code>
+<p>Both you and your teammate get the same answer. Same source of truth.</p>
+<h3>Shared Cowork folder</h3>
+<p>This is more involved. Your IT team set up a shared cloud folder (Dropbox / Google Drive / OneDrive — whichever your org uses). The folder syncs to all team members' machines.</p>
+<p>Each team member mounts the same shared folder in their Cowork Project (alongside their personal vault and work folder).</p>
+<p>Now anyone on the team can:</p>
+<ul>
+<li>Read what others have written.</li>
+<li>Write into shared deliverables.</li>
+<li>Track joint progress through claude.md / memory.md updates.</li>
+</ul>
+<p>Caveat: be careful with <code>claude.md</code> files in shared folders. The shared folder root <code>claude.md</code> describes the SHARED context, not your personal preferences. Don't drop your chief-of-staff brief into a shared folder.</p>
+<h3>Pair exercise</h3>
+<p>Pair up (2-3 people). Pre-seeded scenario your assistant provides:</p>
+<ul>
+<li>Shared Notion page with a fake project (e.g., "Q4 product launch planning").</li>
+<li>Shared Cowork folder with placeholder Source Materials.</li>
+<li>A Slack channel you both have access to.</li>
+<li>A few seed emails about the project.</li>
+</ul>
+<p>Goal: collaboratively produce a one-page memo summarizing the project state, with Claude reading from all sources.</p>
+<h2>Section 3 — Intermediate (~30 min)</h2>
+<h3>Multi-connector magic — the micro-win</h3>
+<p>The core capability: Claude reads multiple sources in one query and synthesizes.</p>
+<pre><code>
+<p>For [shared project], pull:</p>
+<ul>
+<li>The latest Slack thread about it (channel: #q4-launch).</li>
+<li>The active Notion project page.</li>
+<li>Any emails in my inbox tagged with the project name (last 7 days).</li>
+</ul>
+<p>Synthesize into a one-page memo: state of play, what's blocking, what's the next decision needed.</p>
+<pre><code>
+<p>Claude reads all three, synthesizes. Output is one page — couldn't have produced manually faster.</p>
+<p>This is "multi-connector magic." You've been using individual connectors all workshop; M16 is where they compose.</p>
+<h3>Collaboration scenarios (live)</h3>
+<p>Try one or two during the in-room exercise:</p>
+<p><strong>Scenario A — Joint memo.</strong> Both pair members work on the same memo in the shared folder. One drafts a section in their Cowork. The other Reviews from theirs. Claude reads the latest version each time — no manual file-syncing.</p>
+<p><strong>Scenario B — Joint decision.</strong> Use Claude to synthesize different stakeholders' positions (per Slack and Notion threads) and propose a path forward. Both pair members feed in their context; Claude produces one synthesis.</p>
+<p><strong>Scenario C — Joint status update.</strong> Generate a 5-minute team standup brief from all the sources together. Pair refines.</p>
+<p>The point isn't the specific scenario — it's that two people doing the same workflow in their respective Cowork instances produce the same answers from the same sources. The team gets consistency.</p>
+<h2>Section 4 — Advanced (~20 min)</h2>
+<h3>Multi-Cowork-Project patterns for sensitive work</h3>
+<p>Shared work has a confidentiality dimension. If part of your team is working on sensitive content (M&A, legal, personnel), they probably need a separate Cowork Project that:</p>
+<ul>
+<li>Mounts the shared folder for THIS sensitive workstream only.</li>
+<li>Does NOT mount their personal vault (to keep personal context out).</li>
+<li>Has tight connector scope (Notion only, no Gmail, no Slack).</li>
+</ul>
+<p>The architecture supports this. The discipline is the team's.</p>
+<h3>Team GTD considerations</h3>
+<p>Per the workshop's locked decision: team GTD only works if every team member does their personal GTD. One laggard contaminates the system.</p>
+<p>If your team is interested in shared GTD: run them through the workshop too. Otherwise, your team uses your personal GTD as their visibility into your work, but not the other way around.</p>
+<h3>Cross-org collaboration limits</h3>
+<p>External collaborators (different company, different Notion workspace, different Slack workspace): hard to bring into Cowork's shared model. Per the locked workshop decision, external collaboration is OUT — keep team Cowork inside the org.</p>
+<p>If you must collaborate cross-org, the shared Notion page works (Notion handles guest access). Shared Cowork folders don't work cross-org cleanly.</p>
+<h3>Permissions hygiene</h3>
+<p>Shared Notion pages: per-page access control. Be deliberate about what's shared.</p>
+<p>Shared Cowork folders: filesystem-level access control. Whoever has the cloud folder mounted sees everything in it. Don't put confidential subprojects in a folder shared widely.</p>
+<p>These get thorny fast. Quarterly: audit who has access to what.</p>
+<h2>Micro-win — multi-connector magic</h2>
+<p>Claude reads Slack + Notion + Gmail in one shot during the collaboration scenario. Output combines all three sources into one coherent narrative. The realization: this isn't a feature; it's a different way of working.</p>
+<h2>Verification checkpoint</h2>
+<pre><code>
+<p>For [the shared project], list every source you can pull from right now and what's in each.</p>
+<pre><code>
+<p>Expected: Claude lists Slack channel(s), Notion page(s), email thread(s), shared folder content. If anything's missing, the connector or share permission is off.</p>
+<h2>Common issues</h2>
+<ul>
+<li><strong>Shared folder doesn't sync</strong> — Dropbox / Drive / OneDrive sync issue. Check sync status; restart sync app.</li>
+<li><strong>Notion page shared but not visible</strong> — guest may need to accept the Notion invite (separate email).</li>
+<li><strong>Slack channel scoped to specific channels only</strong> — connector permission scope; widen if needed.</li>
+<li><strong>Multi-connector query slow</strong> — many sources to read; reduce scope or window.</li>
+<li><strong>Two pair members get different answers</strong> — different connector scopes or different Cowork Project configurations. Verify both are pulling from the same sources.</li>
+</ul>
+<h2>References</h2>
+<ul>
+<li>M08 — connectors (foundation).</li>
+<li>M13 — GTD considerations for team.</li>
+<li>M14 — Daily Command Center (could include shared sources for team-aware morning briefs).</li>
+</ul>
+  <nav class="module-nav">
+    <a class="nav-link prev" href="m15.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M15 — Meeting Notes</div></a>
+    <a class="nav-link next" href="index.html"><div class="nav-link-label">Course complete</div><div class="nav-link-title">Back to overview</div></a>
+  </nav>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer-inner">
+    <div>ExecAIDay — premium Claude Cowork training for executives.</div>
+    <div>The AI Guys BV · <a href="https://github.com/The-AI-Guys-BV/ExecAIDay-course">github</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

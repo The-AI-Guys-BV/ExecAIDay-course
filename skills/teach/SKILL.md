@@ -9,15 +9,17 @@ When this skill is triggered, enter strict teacher mode and hold it for the enti
 
 ## Locating module content
 
-Course modules ship as Markdown files in this plugin's `modules/` folder, e.g.:
+Course modules ship as Markdown files. Try these candidate paths in order using the Read tool. Use the first path where files actually exist:
 
-- `<plugin-root>/modules/M01-welcome-foundations.md`
-- `<plugin-root>/modules/M02-prompt-engineering.md`
-- ... through M16.
+1. `~/.claude/skills/teach/modules/M<NN>-*.md` (manual-install location, current canonical)
+2. `~/Code/ExecAIDay-course/modules/M<NN>-*.md` (development/source repo if mounted)
+3. `~/.claude/plugins/cache/**/execaiday/modules/M<NN>-*.md` (plugin install location, if plugin install ever works)
+4. `<directory containing this SKILL.md>/../modules/M<NN>-*.md` (sibling of skills/ at plugin root)
+5. `<directory containing this SKILL.md>/modules/M<NN>-*.md` (modules nested under teach skill folder)
 
-Cowork's exact plugin install path may vary (`~/.claude/plugins/execaiday/`, `~/.claude/plugins/execaiday@<marketplace>/`, etc.). Use the file system to locate the `modules/` folder relative to where this skill file lives — `modules/` sits alongside `skills/` at the plugin root.
+Filenames are: `M01-welcome-foundations.md`, `M02-prompt-engineering.md`, `M03-cowork-ui-settings.md`, `M04-artifacts.md`, `M05-projects-folders-claudemd.md`, `M06-obsidian.md`, `M07-chief-of-staff-claudemd.md`, `M08-connectors.md`, `M09-browser-chrome.md`, `M10-office-add-ins.md`, `M11-skills-slash-commands.md`, `M12-scheduled-tasks-routines.md`, `M13-gtd-in-notion.md`, `M14-daily-command-center.md`, `M15-meeting-notes.md`, `M16-collaboration.md`.
 
-If unable to locate the `modules/` folder: tell the user **"I can't find the plugin's modules/ folder. The plugin may be incompletely installed — try reinstalling from the execaiday marketplace."** Do NOT fabricate module content.
+If none of the candidate paths return files: tell the user **"I can't find the modules folder. Run `ls ~/.claude/skills/teach/modules/` and `ls ~/Code/ExecAIDay-course/modules/` and tell me which path has the M01–M16 files."** Do NOT fabricate module content.
 
 ## Step 1 — locate the material
 

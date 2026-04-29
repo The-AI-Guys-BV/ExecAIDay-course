@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M01 Welcome + Foundations — ExecAIDay</title>
+<meta name="description" content="Welcome + Foundations — module M01 of the ExecAIDay Claude Cowork training workshop.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="container topnav-inner">
+    <div class="brand"><a href="index.html"><span class="brand-mark">●</span> ExecAIDay</a></div>
+    <div class="nav-links">
+      <a href="index.html">All modules</a>
+    </div>
+  </div>
+</nav>
+
+<header class="module-hero">
+  <div class="container">
+    <div class="module-hero-icon" style="background: var(--foundation-soft); color: var(--foundation);">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+    </div>
+    <div class="eyebrow">
+      <span class="breadcrumb"><a href="index.html">All modules</a> &nbsp;/&nbsp; Foundation</span>
+    </div>
+    <h1>M01 — Welcome + Foundations</h1>
+    <p class="lede">You start the workshop with a working Cowork Project, a tutor (<code>/teach</code>) that walks any module on demand, and the vocabulary to follow everything that comes next. Without this hour, the rest of the workshop would be cargo-cult button-pressing. With it, every later module slots into a structure you understand.</p>
+  </div>
+</header>
+
+<main class="content container">
+<h2>What you'll do</h2>
+<ul>
+<li>Verify your install and Notion connection (set up in onboarding).</li>
+<li>Create your workshop Cowork Project and mount your two folders (vault + work folder).</li>
+<li>Install <code>/teach</code> and use it for the first time.</li>
+<li>Walk through 18 foundational concepts inside the workspace you just built.</li>
+<li>See the hallucination demo and learn to calibrate trust.</li>
+</ul>
+<h2>Time</h2>
+<p>~75 minutes (instructor sets the pace).</p>
+<h2>Section 1 — Introduction (~5 min)</h2>
+<p>You showed up. The plugin is installed (you'll verify in a minute). Your IT team set up your connectors during onboarding. Cowork is ready.</p>
+<p>This module's job is to make sure all that work has actually given you a usable workspace, and to give you the words for the next 14 modules. Most of what we cover here is vocabulary — concepts you'll hear used the whole workshop. We're not building anything yet; we're orienting.</p>
+<p>The single most important thing in this module: by the end, you'll have a Cowork Project (a workspace) with both your folders mounted, and <code>/teach</code> will walk you through any future module on command. That's your safety net. If you ever miss something or want to revisit, <code>/teach M07</code> or <code>/teach Skills</code> is permanent office hours.</p>
+<h2>Section 2 — Beginner / Getting Started (~20 min)</h2>
+<h3>Step 1 — Verify install</h3>
+<p>In your Claude Desktop, switch to the <strong>Cowork</strong> tab. You should see a sidebar on the left with sections including Customize, Plugins, your Cowork Projects.</p>
+<p>If you don't see the Cowork tab at all: your IT setup didn't complete. Tell your assistant.</p>
+<h3>Step 2 — Verify Notion connection</h3>
+<p>In Customize → Connectors, find Notion. It should show as Connected, authenticated to the workshop's GTD workspace.</p>
+<p>If not connected: your assistant will sort it. The workshop architecture needs Notion live for the GTD skills.</p>
+<h3>Step 3 — Create the workshop Cowork Project</h3>
+<p>In the Cowork sidebar, click <strong>+ New Project</strong> (or your equivalent UI element — your assistant will point it out).</p>
+<p>Name it whatever feels natural. "Workshop" is fine. "Cowork Course." Whatever.</p>
+<p>Mount both folders:</p>
+<ul>
+<li>Your <strong>Obsidian vault</strong> (knowledge folder) — the path your IT setup placed it at.</li>
+<li>Your <strong>work folder</strong> (projects parent) — the path your IT setup placed it at.</li>
+</ul>
+<p>Both mounted in the same Cowork Project. This is load-bearing — the architecture relies on Cowork seeing both folders together.</p>
+<h3>Step 4 — Install <code>/teach</code></h3>
+<p>This is the first skill install. Your assistant will give you the install prompt. Paste it into Cowork. Claude writes the SKILL.md file. Confirm it worked by typing <code>/teach</code> (no arguments). You should see a list of modules.</p>
+<h3>Step 5 — First teach demo</h3>
+<p>Type <code>/teach M02</code>. Claude reads the M02 module file and starts walking it. Don't actually do M02 now (you'll do it next anyway), but see how <code>/teach</code> opens, lists the section, and waits for you. Type "exit" to close out.</p>
+<h2>Section 3 — Intermediate (~30 min)</h2>
+<p>The 18 basic concepts. We'll go through them inside the Cowork Project you just built — every concept becomes concrete because the workspace they describe is the one you're sitting in.</p>
+<p>Don't try to memorize. Recognize. You'll re-encounter every concept in later modules with use cases.</p>
+<ol>
+<li><strong>Context</strong> — what Claude considers when generating a response. Has limits.</li>
+<li><strong>Tokens</strong> — Claude's unit of measurement. ~4 chars per token.</li>
+<li><strong>Models</strong> — Opus 4.7 (slow, deep), Sonnet 4.6 (balanced, default), Haiku 4.5 (fast).</li>
+<li><strong>Chat vs Cowork modes</strong> — single conversation vs persistent workspace.</li>
+<li><strong>Plans</strong> — Free / Pro / Max / Team / Enterprise. You're on Max minimum (plugins).</li>
+<li><strong>Skills</strong> — slash commands installed on your machine. Skill IS slash command (2026 model).</li>
+<li><strong>Connectors</strong> — bridges to your services (Gmail, Notion, etc.).</li>
+<li><strong>MCP</strong> — the wire format under connectors. You don't deal with it directly.</li>
+<li><strong>Artifacts</strong> — generated outputs. Live artifacts auto-refresh on reopen.</li>
+<li><strong>Session memory</strong> — what Claude remembers within a Cowork Project.</li>
+<li><strong>Hallucination</strong> — making up plausible-sounding facts. Verify, don't blindly trust.</li>
+<li><strong>Knowledge cutoff</strong> — Claude's training data ends at a date. After that, it doesn't know.</li>
+<li><strong>"More context can hurt"</strong> — stuffing huge amounts of context degrades quality. Curate.</li>
+<li><strong>Overconfidence</strong> — Claude defaults to confident phrasing even when uncertain. Push back.</li>
+<li><strong>Cowork Project</strong> — the app's workspace concept. The thing you just made.</li>
+<li><strong>Project folder</strong> — the file-system shape inside your work folder. Different from Cowork Project.</li>
+<li><strong><code>claude.md</code></strong> — the file Claude reads first in any folder. Per-folder context. Closer-to-the-file wins.</li>
+<li><strong>Context rot</strong> — quality degrades as a session's context grows. Open a new chat per task. The single most important habit you'll build this workshop.</li>
+</ol>
+<p>For full definitions, see the References section of this plugin (<code>references/17-basic-concepts.md</code> and <code>references/context-and-context-rot.md</code>). <code>/teach</code> will walk either reference.</p>
+<h2>Section 4 — Advanced (~15 min)</h2>
+<h3>Data privacy + company policy</h3>
+<p>When you type into Cowork, your prompt + relevant context goes to Anthropic's infrastructure. On Max plan, Anthropic doesn't train on your data. Connector data flows through when needed for a response — your inbox isn't continuously streaming. Local files in mounted folders go through when Claude reads them.</p>
+<p>Your company has its own AI policy. Your IT contact (set up in onboarding) is who to ask if unsure.</p>
+<p>For details: <code>references/data-privacy.md</code>.</p>
+<h3>What NOT to use Claude for</h3>
+<ul>
+<li><strong>High-stakes decisions without verification</strong> — hires, fires, deals, board recommendations.</li>
+<li><strong>Math at scale</strong> — use Excel for numbers that go in a board pack.</li>
+<li><strong>Regulated content without policy</strong> — healthcare, legal opinions, investment advice.</li>
+<li><strong>In front of clients without disclosure</strong> — check your industry rules.</li>
+<li><strong>"What should I do" life decisions</strong> — Claude can think through options; the decision is yours.</li>
+</ul>
+<p>For details: <code>references/what-not-to-use-claude-for.md</code>.</p>
+<h3>Cost overview</h3>
+<p>Workshop assumes Max plan ($N/month per user). Plus connector subscription costs (varies). Plus Notion Business plan ($N/user/month) for the cohort delivery. Plus optional Wispr Flow / Granola / Bluedot etc. (~$10-20/month each).</p>
+<p>Total monthly stack cost typically $80–180 per exec. One slide; not the workshop's focus.</p>
+<h2>Micro-win</h2>
+<p>Type <code>/teach</code> (no arguments). Claude lists the 16 modules. You pick one. Claude walks it patiently, one section at a time. The hallucination demo follows immediately as a trust-calibration moment — your instructor demonstrates Claude making something up confidently, then you watch it self-correct when given evidence.</p>
+<h2>Verification checkpoint</h2>
+<p>After the in-room work, a one-minute check: type the prompt below into your Cowork Project.</p>
+<pre><code>
+<p>What folders am I currently mounting in this Cowork Project?</p>
+<pre><code>
+<p>Expected: Claude lists both your vault and your work folder by name (the names you chose). If either is missing, the mount didn't take — flag your assistant.</p>
+<h2>Common issues</h2>
+<ul>
+<li><strong>Cowork Project doesn't see one of the folders.</strong> Re-mount it; confirm the path. Some MDM-managed laptops require explicit folder permission.</li>
+<li><strong><code>/teach</code> not auto-discovered after install.</strong> Restart Cowork. If still not visible, check <code>~/.claude/skills/teach/SKILL.md</code> exists.</li>
+<li><strong>Notion connector says "Authenticate"</strong> even after onboarding. Click Authenticate; if browser flow stalls, copy the auth URL and complete in a different browser.</li>
+</ul>
+<h2>References</h2>
+<ul>
+<li><code>references/17-basic-concepts.md</code> — full definitions of the 18 concepts.</li>
+<li><code>references/context-and-context-rot.md</code> — deep dive on concepts #1, #13, #18.</li>
+<li><code>references/data-privacy.md</code> — data handling policy.</li>
+<li><code>references/what-not-to-use-claude-for.md</code> — boundaries.</li>
+<li><code>references/connector-quirks.md</code> — connector-specific issues.</li>
+<li><code>templates/vault-starter/</code> — the vault you just mounted.</li>
+<li><code>templates/work-folder-starter/</code> — the work folder you just mounted.</li>
+</ul>
+  <nav class="module-nav">
+    <div class="nav-link disabled"><div class="nav-link-label">Start</div><div class="nav-link-title">First module</div></div>
+    <a class="nav-link next" href="m02.html"><div class="nav-link-label">Next →</div><div class="nav-link-title">M02 — Prompt Engineering</div></a>
+  </nav>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer-inner">
+    <div>ExecAIDay — premium Claude Cowork training for executives.</div>
+    <div>The AI Guys BV · <a href="https://github.com/The-AI-Guys-BV/ExecAIDay-course">github</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

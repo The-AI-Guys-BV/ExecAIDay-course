@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M05 Projects, Folders, claude.md — ExecAIDay</title>
+<meta name="description" content="Projects, Folders, claude.md — module M05 of the ExecAIDay Claude Cowork training workshop.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="container topnav-inner">
+    <div class="brand"><a href="index.html"><span class="brand-mark">●</span> ExecAIDay</a></div>
+    <div class="nav-links">
+      <a href="index.html">All modules</a>
+    </div>
+  </div>
+</nav>
+
+<header class="module-hero">
+  <div class="container">
+    <div class="module-hero-icon" style="background: var(--personalize-soft); color: var(--personalize);">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+    </div>
+    <div class="eyebrow">
+      <span class="breadcrumb"><a href="index.html">All modules</a> &nbsp;/&nbsp; Personalize</span>
+    </div>
+    <h1>M05 — Projects, Folders, claude.md</h1>
+    <p class="lede">This is the structural module. Two folder shapes, two senses of "project," and one file (<code>claude.md</code>) that ties everything to context. Get this right and the rest of the workshop slots in. Get it wrong and you'll be confused about why Claude knows some things and not others.</p>
+  </div>
+</header>
+
+<main class="content container">
+<h2>What you'll do</h2>
+<ul>
+<li>Learn the two folder shapes: project folders (bounded work, three buckets) vs stream folders (recurring, flat).</li>
+<li>Disambiguate the two senses of "project": Cowork Project (the app's workspace) vs project folder (the file-system shape).</li>
+<li>Run <code>/new-project</code> for the first time — scaffold the workshop's first project folder (<code>course/</code>) and watch the synthesis interview produce a tailored <code>claude.md</code>.</li>
+<li>Pull workshop content from Notion into <code>course/Source Materials/</code> — your first content move.</li>
+</ul>
+<h2>Time</h2>
+<p>~75 minutes.</p>
+<h2>Section 1 — Introduction (~5 min)</h2>
+<p>Cowork has built-in concepts; we have folder conventions; the two interlock. This is how:</p>
+<ul>
+<li><strong>Cowork Project</strong> = the app's workspace. You made one in M01. It mounts folders.</li>
+<li><strong>Folders we mount</strong> = your vault (knowledge) and your work folder (projects).</li>
+<li><strong>Inside the work folder, your "project folders"</strong> = bounded bodies of work, each with a specific shape.</li>
+<li><strong>Inside the vault, your "stream folders"</strong> = recurring content (Daily Notes, References, Inbox).</li>
+<li><strong>Every folder has a <code>claude.md</code> and a <code>memory.md</code></strong> = per-folder context.</li>
+</ul>
+<p>That's the whole architecture. M05 makes it concrete.</p>
+<h2>Section 2 — Beginner / Getting Started (~20 min)</h2>
+<h3>The two folder shapes</h3>
+<p><strong>Project folders</strong> (bounded work with deliverables):</p>
+<pre><code>
+<p><work-folder>/<project-name>/</p>
+<p>├── claude.md         # project-specific context</p>
+<p>├── memory.md         # patterns Cowork learns about this project</p>
+<p>├── Source Materials/ # incoming inputs</p>
+<p>├── Working Files/    # in-progress</p>
+<p>└── Deliverables/     # finished outputs</p>
+<pre><code>
+<p>Has an outcome. Ships and ends. Examples: <code>q3-board-deck/</code>, <code>refactor-onboarding/</code>, <code>course/</code>.</p>
+<p><strong>Stream folders</strong> (recurring content, flat):</p>
+<pre><code>
+<p><vault>/<stream-name>/</p>
+<p>├── claude.md         # stream-specific context</p>
+<p>├── memory.md</p>
+<p>└── (flat content — dated files, captured items, linked notes)</p>
+<pre><code>
+<p>Unbounded. No end state. Recurring. Examples: <code>Daily Notes/</code>, <code>References/</code>, <code>Inbox/</code>. The <code>about-me/</code> folder is the special stream (every vault has it).</p>
+<h3>The two senses of "project"</h3>
+<p><strong>Cowork Project</strong> = the app workspace concept (the thing you made in M01). UI-level. Mounts folders. Has its own memory.</p>
+<p><strong>Project folder</strong> = the file-system shape inside your work folder. Folder with the bucket structure.</p>
+<p>These collide on the word "project." Both must be used together: a Cowork Project mounts your work folder, which contains your project folders.</p>
+<h3>Why every folder has <code>claude.md</code> + <code>memory.md</code></h3>
+<p>So Cowork has per-folder context. The vault root <code>claude.md</code> is your chief-of-staff brief (M07 writes that). The work-folder root <code>claude.md</code> is your work-context defaults. Each project folder's <code>claude.md</code> adds project-specific overrides.</p>
+<p>Closer-to-the-file wins. So when Claude is working in <code><work-folder>/q3-deck/Working Files/draft.md</code>, the priority is:</p>
+<ol>
+<li><code>q3-deck/claude.md</code> (most specific — project context).</li>
+<li><code><work-folder>/claude.md</code> (work-context defaults).</li>
+<li><code><vault>/claude.md</code> (chief-of-staff brief).</li>
+</ol>
+<p>The project <code>claude.md</code> doesn't restate the chief-of-staff brief — it only mentions deviations.</p>
+<h2>Section 3 — Intermediate (~30 min)</h2>
+<h3>Run <code>/new-project</code> for the first time</h3>
+<p>In Cowork:</p>
+<pre><code>
+<p>/new-project course</p>
+<pre><code>
+<p>The skill conducts an interview. It will ask you things like:</p>
+<ul>
+<li>What's the project outcome?</li>
+<li>Who are the stakeholders?</li>
+<li>What's the timeline?</li>
+<li>Any tone or format overrides for this project?</li>
+<li>What source materials feed this?</li>
+</ul>
+<p>Answer naturally. The interview isn't capped — the skill asks until it has enough to write a brief that fits THIS project specifically. A few questions in, it'll pause: "I have enough. Want me to proceed?" Say yes.</p>
+<p>Then:</p>
+<ol>
+<li>The skill creates <code><work-folder>/course/</code> with all the bucket subfolders.</li>
+<li>Writes a tailored <code>claude.md</code> synthesizing your interview answers + the chief-of-staff brief + work-folder defaults.</li>
+<li>Creates a matching GTD project entry in your Notion (Outcome, Status, Stakeholders, Deadline, Next-Action placeholder).</li>
+<li>Cross-links the folder and the Notion project.</li>
+<li>Confirms what was created.</li>
+</ol>
+<p>You now have your first project folder + a matching GTD entry. Welcome to the workshop's working file structure.</p>
+<h3>Pull workshop content into Source Materials</h3>
+<p>Your first content move:</p>
+<pre><code>
+<p>Pull the welcome doc and the how-to-start doc from this plugin into course/Source Materials/.</p>
+<pre><code>
+<p>Claude reads <code>docs/welcome.md</code> and <code>docs/how-to-start.md</code> from the installed plugin and copies them into <code><work-folder>/course/Source Materials/</code>. Now your workshop project has its initial inputs.</p>
+<p>This is the pattern: Source Materials gets the raw inputs (from anywhere — plugin, web, email, conversation transcripts). Working Files is where you iterate. Deliverables is what you ship.</p>
+<h2>Section 4 — Advanced (~15 min)</h2>
+<h3>Multi-Cowork-Project patterns</h3>
+<p>Post-workshop, you'll create more Cowork Projects — one per major body of work. Each new Cowork Project mounts your vault + a relevant subset of your work folder.</p>
+<p>The default: one Cowork Project named "Workshop" (the one you have now), mounting everything.</p>
+<p>For sensitive work (M&A, exec personnel): a separate Cowork Project that does NOT mount the vault — so the chief-of-staff brief and personal context don't cross-pollinate. Vault-less Cowork Projects are the security pattern.</p>
+<h3>Vault-less Cowork Projects</h3>
+<p>Create a new Cowork Project. Mount only the work folder (or a specific project subfolder). Don't mount the vault. The chief-of-staff brief won't apply. Claude treats the work strictly within the project's context.</p>
+<p>Use case: a board-prep project that touches confidential financial data; you don't want personal notes crosslinked.</p>
+<h3>Cross-folder workflows</h3>
+<p>Within one Cowork Project mounting both folders, Claude can read both freely. So a daily note in the vault can reference a project's Working Files; a project's Deliverable can be summarized into a Daily Note for the day's reflection.</p>
+<p>This is where the architecture pays off. The two folders are different in shape but unified in scope (within a Cowork Project).</p>
+<h2>Micro-win</h2>
+<p>Run <code>/new-project course</code> (or whatever name you prefer). Skill interviews you, scaffolds the folder, synthesizes a tailored <code>claude.md</code>, creates the GTD project entry in Notion. First content pulled from this plugin into <code>course/Source Materials/</code>. You now have your first project folder, your first GTD project entry, and the muscle for <code>/new-project</code>.</p>
+<h2>Verification checkpoint</h2>
+<p>After running <code>/new-project</code>, type:</p>
+<pre><code>
+<p>What's in my course/ project folder right now? Read the claude.md.</p>
+<pre><code>
+<p>Expected: Claude reads the project's <code>claude.md</code> and reports the synthesized brief — outcome, stakeholders, timeline, format overrides, etc. — along with the bucket subfolders. If <code>claude.md</code> is empty or missing, the scaffold didn't complete; rerun <code>/new-project</code>.</p>
+<h2>Common issues</h2>
+<ul>
+<li><strong><code>/new-project</code> fails on Notion write</strong> — Notion might not be connected; skill will scaffold the folder anyway and prompt to retry the GTD entry.</li>
+<li><strong>Project folder name conflicts</strong> — skill prompts for a different slug.</li>
+<li><strong>Synthesized <code>claude.md</code> looks generic</strong> — the interview was too short; rerun with more detail in answers.</li>
+<li><strong>Bucket subfolders empty</strong> — that's correct; they ship empty per the architecture.</li>
+</ul>
+<h2>References</h2>
+<ul>
+<li><code>templates/work-folder-starter/</code> — the work folder starter content.</li>
+<li><code>templates/project-folder-template/</code> — the project folder template.</li>
+<li><code>skills/new-project/SKILL.md</code> — the skill spec.</li>
+<li>M07 — Chief of Staff <code>claude.md</code> (the vault root brief).</li>
+<li>M13 — GTD in Notion (the Notion side of <code>/new-project</code>).</li>
+</ul>
+  <nav class="module-nav">
+    <a class="nav-link prev" href="m04.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M04 — Artifacts</div></a>
+    <a class="nav-link next" href="m06.html"><div class="nav-link-label">Next →</div><div class="nav-link-title">M06 — Obsidian</div></a>
+  </nav>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer-inner">
+    <div>ExecAIDay — premium Claude Cowork training for executives.</div>
+    <div>The AI Guys BV · <a href="https://github.com/The-AI-Guys-BV/ExecAIDay-course">github</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

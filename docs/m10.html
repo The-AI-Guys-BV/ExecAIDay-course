@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M10 Office Add-ins — ExecAIDay</title>
+<meta name="description" content="Office Add-ins — module M10 of the ExecAIDay Claude Cowork training workshop.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="container topnav-inner">
+    <div class="brand"><a href="index.html"><span class="brand-mark">●</span> ExecAIDay</a></div>
+    <div class="nav-links">
+      <a href="index.html">All modules</a>
+    </div>
+  </div>
+</nav>
+
+<header class="module-hero">
+  <div class="container">
+    <div class="module-hero-icon" style="background: var(--connect-soft); color: var(--connect);">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+    </div>
+    <div class="eyebrow">
+      <span class="breadcrumb"><a href="index.html">All modules</a> &nbsp;/&nbsp; Connect</span>
+    </div>
+    <h1>M10 — Office Add-ins</h1>
+    <p class="lede">2026 killer feature: cross-app shared context. Analyze in Excel → build deck in PowerPoint → draft memo in Word — all remembering the analysis. The Excel → PPT → Word chain is what makes Office add-ins more than three independent assistants.</p>
+  </div>
+</header>
+
+<main class="content container">
+<h2>What you'll do</h2>
+<ul>
+<li>Verify Word, Excel, PowerPoint add-ins (installed in IT onboarding).</li>
+<li>Run the cross-app chain: Excel analysis → PowerPoint slides → Word memo, all sharing context.</li>
+<li>Use template magic — your actual company PowerPoint template + Claude → on-brand slides matching your company style.</li>
+</ul>
+<h2>Time</h2>
+<p>~60 minutes.</p>
+<h2>Section 1 — Introduction (~5 min)</h2>
+<p>You've used Word, Excel, PowerPoint for years. The Claude add-ins live INSIDE those apps. Open Word, click Claude in the ribbon, sidebar opens, you can ask Claude to help with the document.</p>
+<p>What's new in 2026: cross-app shared context. Start an analysis in Excel. Ask PowerPoint Claude to "build slides from the Excel analysis." It does. Ask Word Claude to "draft a memo summarizing the Excel + PPT work." It does. The conversation persists across apps.</p>
+<p>This is the workflow you've actually wanted for years.</p>
+<h2>Section 2 — Beginner / Getting Started (~15 min)</h2>
+<h3>Verify add-ins</h3>
+<p>Open Word. Look for Claude in the ribbon (top of the window). Should be visible after IT onboarding installed it from Microsoft AppSource.</p>
+<p>Same for Excel and PowerPoint.</p>
+<p>If any are missing: your assistant fixes now. AppSource → search "Claude" → install.</p>
+<h3>Single-app moves</h3>
+<p>In Word, with the Claude sidebar open:</p>
+<pre><code>
+<p>Rewrite this paragraph to be 30% shorter without losing factual content. Preserve formatting.</p>
+<pre><code>
+<p>Claude rewrites in place.</p>
+<p>In Excel:</p>
+<pre><code>
+<p>For column F, write a formula that calculates [whatever]. Apply to rows 2-50.</p>
+<pre><code>
+<p>Claude writes the formula and applies it.</p>
+<p>In PowerPoint:</p>
+<pre><code>
+<p>Make this slide cleaner. Reduce text by 50%. Keep all the data points.</p>
+<pre><code>
+<p>Claude rewrites the slide content.</p>
+<p>These are the per-app moves. Useful, but not the headline.</p>
+<h2>Section 3 — Intermediate (~25 min)</h2>
+<h3>The cross-app chain</h3>
+<p>Pick a real piece of work. Example: a board prep deck.</p>
+<p><strong>Step 1 — Excel.</strong> Open the financial model.</p>
+<pre><code>
+<p>Analyze the Q3 vs Q2 trajectory in this sheet. Identify the top 3 positive trends and</p>
+<p>top 3 risks. Write your findings as comments in the relevant cells.</p>
+<pre><code>
+<p>Claude analyzes, drops comments. You review.</p>
+<p><strong>Step 2 — PowerPoint.</strong> Open your company's deck template (the one your IT setup added).</p>
+<pre><code>
+<p>Build a 4-slide section for the board deck based on the Excel analysis we just did.</p>
+<p>Use my company template. Each trend or risk is one slide with the supporting data point</p>
+<p>prominent and a one-line takeaway.</p>
+<pre><code>
+<p>Claude generates 4 slides. They're on-brand because they use the template.</p>
+<p><strong>Step 3 — Word.</strong> Open the memo doc.</p>
+<pre><code>
+<p>Draft a 1-page memo summarizing the Excel analysis and the slide narrative. Audience: my</p>
+<p>board chair, who'll read this before the meeting. Tone: factual, not optimistic, not</p>
+<p>defensive.</p>
+<pre><code>
+<p>Claude drafts. You review.</p>
+<p>The point: the conversation persisted. Claude remembered the Excel analysis when building the PowerPoint slides. Remembered the slide narrative when drafting the Word memo. No re-explaining the context three times.</p>
+<h3>Template magic — the micro-win</h3>
+<p>Your company has a PowerPoint template with specific fonts, colors, masters. Default Claude PPT output uses Claude's bland defaults. Template magic fixes this:</p>
+<p>In PowerPoint with your company template open:</p>
+<pre><code>
+<p>Build me 5 slides about [topic] using this template. Match the fonts, colors, and slide</p>
+<p>masters exactly.</p>
+<pre><code>
+<p>Claude reads the template's master slides, fonts, color palette, and produces slides that look like YOUR company's slides — not Claude's defaults.</p>
+<p>The output is recognizably yours. That's the felt micro-win.</p>
+<h2>Section 4 — Advanced (~15 min)</h2>
+<h3>PowerPoint template reading</h3>
+<p>PowerPoint templates have:</p>
+<ul>
+<li>Slide masters (layout templates).</li>
+<li>Theme fonts.</li>
+<li>Theme colors.</li>
+<li>Reusable elements (logos, footers).</li>
+</ul>
+<p>Claude reads all of these. When you ask for slides "using this template," Claude maps content to the appropriate slide master, picks colors from the theme, uses theme fonts.</p>
+<p>You don't need to specify "use Calibri 11pt with the company blue." Just "use this template" — Claude infers.</p>
+<h3>Excel formulas + financial models</h3>
+<p>Beyond per-cell formulas, Claude can:</p>
+<ul>
+<li>Audit a financial model (find broken references, inconsistent assumptions).</li>
+<li>Build a sensitivity analysis (run scenarios on input variables).</li>
+<li>Explain a model in plain language.</li>
+</ul>
+<p>For high-stakes models that go to a board pack: ALWAYS verify the math externally. Claude is improved at math but is not a calculator. (See <code>references/what-not-to-use-claude-for.md</code>.)</p>
+<h3>Word with tracked changes</h3>
+<p>For documents going through revision cycles:</p>
+<pre><code>
+<p>Suggest edits to this document as tracked changes. Don't apply them — just propose.</p>
+<pre><code>
+<p>Claude reviews, surfaces edits, you accept or reject one by one. Useful for legal docs, contracts, anything where the edit history matters.</p>
+<h3>Available on which plans</h3>
+<p>Pro / Max / Team / Enterprise. Free plan does not include Office add-ins.</p>
+<p>The Word add-in launched April 2026, completing the suite. Excel and PowerPoint shipped earlier.</p>
+<h2>Micro-win — template magic</h2>
+<p>Your actual company PowerPoint template + Claude → on-brand slides matching your company's fonts, colors, and masters. The output looks like YOURS, not Claude's default.</p>
+<p>5 slides on a topic relevant to you, in your company's actual visual identity, in 2 minutes. That's the felt moment.</p>
+<h2>Verification checkpoint</h2>
+<p>After the cross-app chain:</p>
+<pre><code>
+<p>[In Word, with the memo open]: What's in the Excel analysis we did earlier in this session?</p>
+<pre><code>
+<p>Expected: Claude in Word references the Excel analysis from earlier. If it can't, the cross-app shared context isn't working — restart Office, retry.</p>
+<h2>Common issues</h2>
+<ul>
+<li><strong>Add-in doesn't appear in ribbon</strong> — install from AppSource; verify license tier (Pro/Max/Team/Enterprise).</li>
+<li><strong>Template magic produces wrong colors</strong> — template's theme colors may not be set; check Theme Designer in PowerPoint.</li>
+<li><strong>Cross-app context lost</strong> — ensure same Claude account is signed in across all three apps. Different accounts = different context.</li>
+<li><strong>Word tracked changes don't appear</strong> — Word's Track Changes feature must be enabled (Review → Track Changes).</li>
+</ul>
+<h2>References</h2>
+<ul>
+<li>M11 — skills (the Office workflow can become a custom skill).</li>
+<li><code>references/what-not-to-use-claude-for.md</code> — math at scale caveat.</li>
+</ul>
+  <nav class="module-nav">
+    <a class="nav-link prev" href="m09.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M09 — Browser + Chrome</div></a>
+    <a class="nav-link next" href="m11.html"><div class="nav-link-label">Next →</div><div class="nav-link-title">M11 — Skills + Slash Commands</div></a>
+  </nav>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer-inner">
+    <div>ExecAIDay — premium Claude Cowork training for executives.</div>
+    <div>The AI Guys BV · <a href="https://github.com/The-AI-Guys-BV/ExecAIDay-course">github</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

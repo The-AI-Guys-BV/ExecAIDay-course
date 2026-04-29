@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M02 Prompt Engineering — ExecAIDay</title>
+<meta name="description" content="Prompt Engineering — module M02 of the ExecAIDay Claude Cowork training workshop.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="container topnav-inner">
+    <div class="brand"><a href="index.html"><span class="brand-mark">●</span> ExecAIDay</a></div>
+    <div class="nav-links">
+      <a href="index.html">All modules</a>
+    </div>
+  </div>
+</nav>
+
+<header class="module-hero">
+  <div class="container">
+    <div class="module-hero-icon" style="background: var(--foundation-soft); color: var(--foundation);">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+    </div>
+    <div class="eyebrow">
+      <span class="breadcrumb"><a href="index.html">All modules</a> &nbsp;/&nbsp; Foundation</span>
+    </div>
+    <h1>M02 — Prompt Engineering</h1>
+    <p class="lede">The single biggest variable in whether Claude is useful or wasteful is the prompt you wrote. R-C-T-F-C — Role, Context, Task, Format, Constraints — is the framework that makes you consistently good at this. Skip any of the five elements and you get mediocre output. Hit all five and Claude responds at a different quality tier.</p>
+  </div>
+</header>
+
+<main class="content container">
+<h2>What you'll do</h2>
+<ul>
+<li>Learn R-C-T-F-C with worked examples.</li>
+<li>Walk through the 10 anti-patterns to recognize and avoid.</li>
+<li>Try metaprompting via <code>/help-me-prompt</code> (you'll install this skill in M11; here you'll see the concept).</li>
+<li>Quick voice mention (Wispr / Superwhisper / Voibe — installed in onboarding).</li>
+</ul>
+<h2>Time</h2>
+<p>~60 minutes.</p>
+<h2>Section 1 — Introduction (~5 min)</h2>
+<p>Most people prompt Claude by saying what they want. That's not enough.</p>
+<p>Better: tell Claude <strong>who it's being</strong>, <strong>what context it needs</strong>, <strong>the specific task</strong>, <strong>the output format</strong>, and <strong>what NOT to do</strong>. Five elements, in any order. Each one shifts the output.</p>
+<p>Skip the role, you get generic. Skip the context, Claude guesses. Skip the format, you get walls of prose. Skip the constraints, Claude hedges and pads.</p>
+<p>This module gives you the framework explicitly so the moves are conscious. After a week of using it, it'll be habit.</p>
+<h2>Section 2 — Beginner / Getting Started (~20 min)</h2>
+<p>R-C-T-F-C, with one example:</p>
+<p><strong>Bad prompt:</strong></p>
+<pre><code>
+<p>Help me write a follow-up email to a candidate I want to hire.</p>
+<pre><code>
+<p><strong>R-C-T-F-C version:</strong></p>
+<pre><code>
+<p>R: You're an experienced executive recruiter who places C-level talent.</p>
+<p>C: I'm a Series B SaaS CEO. We've interviewed Sarah Chen (VP Product) over three rounds.</p>
+<p>She's strong, currently at a competitor, risk-averse about leaving. I want to make her an</p>
+<p>offer. Comp will be competitive but not the highest she could get.</p>
+<p>T: Write a follow-up email making the verbal offer and requesting a call this week to</p>
+<p>walk through specifics.</p>
+<p>F: 4 short paragraphs. No subject line. Closing requests a 30-minute call. Tone: warm,</p>
+<p>confident, not pushy.</p>
+<p>C: Don't mention specific compensation numbers. Don't sound like a form letter. No</p>
+<p>"looking forward to hearing from you" or similar generic email closers. Stay under 180 words.</p>
+<pre><code>
+<p>The output from the second prompt is dramatically better. Try both yourself in Cowork.</p>
+<p>The five elements:</p>
+<ul>
+<li><strong>R — Role.</strong> Who Claude is being. Specific.</li>
+<li><strong>C — Context.</strong> What Claude needs to know that isn't obvious.</li>
+<li><strong>T — Task.</strong> One specific verb-driven ask.</li>
+<li><strong>F — Format.</strong> Output shape: bullets, JSON, 2-paragraph email, code block.</li>
+<li><strong>C — Constraints.</strong> What NOT to do. The 2026 edge.</li>
+</ul>
+<p>Full reference: <code>references/rctfc-framework.md</code>.</p>
+<h2>Section 3 — Intermediate (~20 min)</h2>
+<p>The 10 anti-patterns. Recognize them in your own prompting and you'll catch yourself before sending a sloppy prompt:</p>
+<ol>
+<li><strong>"Help me with X"</strong> — vague. Use a specific verb.</li>
+<li><strong>The kitchen-sink prompt</strong> — five tasks at once. Split.</li>
+<li><strong>"You are a helpful assistant"</strong> — adds nothing. Be specific.</li>
+<li><strong>Implicit context assumptions</strong> — Claude guesses, usually wrong.</li>
+<li><strong>"Give me a few options"</strong> — returns three generic equal options. Specify ranking criterion.</li>
+<li><strong>No format specified</strong> — Claude defaults to walls of prose.</li>
+<li><strong>"Make it better"</strong> — what's "better"? Specify direction.</li>
+<li><strong>The polite preamble</strong> — "I was wondering if you could possibly..." wastes tokens.</li>
+<li><strong>The follow-up "but"</strong> — each "but" is a new task. Split.</li>
+<li><strong>No constraints</strong> — Claude hedges and pads. Tell it what NOT to do.</li>
+</ol>
+<p>Full reference with examples: <code>references/10-anti-patterns.md</code>.</p>
+<h2>Section 4 — Advanced (~15 min)</h2>
+<h3>Metaprompting via <code>/help-me-prompt</code></h3>
+<p>When you find yourself about to send a sloppy prompt, type:</p>
+<pre><code>
+<p>/help-me-prompt help me write a follow-up email to a candidate I want to hire</p>
+<pre><code>
+<p>The skill (which you'll install in M11) takes your draft and rewrites it in R-C-T-F-C structure. It catches the anti-patterns automatically.</p>
+<p>This is the meta-move: instead of remembering all 5 elements + 10 anti-patterns, use a skill that enforces them. You'll install <code>/help-me-prompt</code> for real in M11; for now, see the concept.</p>
+<h3>Voice + prompting</h3>
+<p>Voice tools (Wispr / Superwhisper / Voibe) are installed during onboarding. They transcribe what you say into your active text field. So you can speak prompts instead of typing them.</p>
+<p>The trick: even when speaking, structure the prompt as R-C-T-F-C. Voice → text → R-C-T-F-C → Claude. Don't degrade your prompt quality just because you're talking.</p>
+<p>Two-minute practice: speak a prompt out loud, transcribe via your voice tool, send to Claude. Does it work?</p>
+<h3>Prompt chains</h3>
+<p>When a task is too complex for one prompt, chain prompts:</p>
+<ol>
+<li>First prompt: extract / classify / parse the input.</li>
+<li>Second prompt: act on the output of the first.</li>
+<li>Third prompt: format / verify / refine.</li>
+</ol>
+<p>Each link is its own R-C-T-F-C. The chain is the workflow. You'll see this pattern in M11 when we look at skills (which are pre-written prompt chains).</p>
+<h2>Micro-win</h2>
+<p>Take a prompt you wrote yesterday — a real one, from your inbox or a recent Claude session. Run it through <code>/help-me-prompt</code> (in your head, since the skill installs in M11). Identify which of the 5 elements were missing. Rewrite. Send the new version. See the difference.</p>
+<h2>Verification checkpoint</h2>
+<p>In Cowork, type:</p>
+<pre><code>
+<p>Rewrite the email below to be 30% shorter without losing factual content. Tone stays the same. No subject line.</p>
+<p>[paste any 100-word email here]</p>
+<pre><code>
+<p>Expected: a tighter version, same content, no AI-flavored padding ("I hope this finds you well"). If Claude added an apology or a "let me know if you need anything else," the constraints weren't strong enough — try again with a "no closer line" constraint added.</p>
+<h2>Common issues</h2>
+<ul>
+<li><strong>Output is still generic</strong> — your role isn't specific enough. "Recruiter" → "executive recruiter who places C-level talent in fintech."</li>
+<li><strong>Output is too long</strong> — add a length constraint ("Stay under 200 words").</li>
+<li><strong>Output has AI tells</strong> — add explicit constraints against them ("No 'I hope this helps,' no 'let me know if'").</li>
+<li><strong>Output ignored a constraint</strong> — Claude sometimes drifts. Repeat the constraint in a new prompt: "Same task, but enforce <constraint>."</li>
+</ul>
+<h2>References</h2>
+<ul>
+<li><code>references/rctfc-framework.md</code> — full framework with worked examples.</li>
+<li><code>references/10-anti-patterns.md</code> — anti-patterns with before/after.</li>
+<li><code>skills/help-me-prompt/SKILL.md</code> — the metaprompting skill (installed in M11).</li>
+</ul>
+  <nav class="module-nav">
+    <a class="nav-link prev" href="m01.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M01 — Welcome + Foundations</div></a>
+    <a class="nav-link next" href="m03.html"><div class="nav-link-label">Next →</div><div class="nav-link-title">M03 — Cowork UI + Settings</div></a>
+  </nav>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer-inner">
+    <div>ExecAIDay — premium Claude Cowork training for executives.</div>
+    <div>The AI Guys BV · <a href="https://github.com/The-AI-Guys-BV/ExecAIDay-course">github</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
