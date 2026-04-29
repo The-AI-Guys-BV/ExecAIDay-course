@@ -18,7 +18,7 @@ You built a simple live artifact in Day 1 closing — three panels: calendar, ur
 
 Today we expand it. Now that GTD is live (M13), we can add: top 5 next actions, stale waiting-fors, today's GTD-driven priorities. Now that Obsidian is your knowledge layer (M06), we can add: yesterday's reflection bubbling up to today.
 
-The result is one artifact you open in the morning, look at for 2 minutes, then know what matters for the day. No app-hopping. No "let me check Slack, then email, then Notion."
+The result is one artifact you open in the morning, look at briefly, then know what matters for the day. No app-hopping. No "let me check Slack, then email, then Notion."
 
 ## Section 2 — Beginner / Getting Started
 
@@ -82,7 +82,7 @@ Iterate until the tiles feel right.
 
 ### Test the live refresh
 
-Close the artifact. Close Cowork entirely. Wait 10 minutes. Reopen Cowork, reopen the artifact.
+Close the artifact. Close Cowork entirely. Reopen Cowork, reopen the artifact.
 
 Each tile re-queries. Calendar shows updated events. GTD shows updated next-actions. Slack shows fresh mentions. Yesterday's-note shows yesterday (relative to current open).
 
@@ -101,8 +101,8 @@ Each is a new tile in the artifact. The tile spec is just "pull from <source>, f
 
 ### Live artifact refresh tuning
 
-Some sources are expensive (a CRM query that takes 10s) and some are fast (calendar). For artifacts you open frequently:
-- Cache slow sources for 5–10 minutes (specify in the tile prompt).
+Some sources are expensive (a slow CRM query) and some are fast (calendar). For artifacts you open frequently:
+- Cache slow sources briefly (specify in the tile prompt).
 - Don't cache fast sources — let them refresh fully.
 
 For artifacts you open once a day, no caching needed.

@@ -2,7 +2,7 @@
 
 ## Why this module matters
 
-Meeting transcripts → Obsidian daily note → Claude processes → follow-up emails drafted, commitments tracked, gaps surfaced. The pipeline turns 30 hours of meetings per week into a tracked, actioned, never-forgotten stream.
+Meeting transcripts → Obsidian daily note → Claude processes → follow-up emails drafted, commitments tracked, gaps surfaced. The pipeline turns hours of meetings per week into a tracked, actioned, never-forgotten stream.
 
 ## What you'll do
 
@@ -27,7 +27,7 @@ This module: the pipeline from meeting → notes → action.
 
 ### Verify your meeting-note tool
 
-Whichever you picked (Granola / Bluedot / Fellow), confirm it's running. Quick test: start a fake meeting (just open Zoom / Google Meet / Teams to yourself, talk for 10 seconds, stop). Verify the tool captured + transcribed.
+Whichever you picked (Granola / Bluedot / Fellow), confirm it's running. Quick test: start a fake meeting (just open Zoom / Google Meet / Teams to yourself, talk briefly, stop). Verify the tool captured + transcribed.
 
 If it didn't, your assistant fixes now.
 

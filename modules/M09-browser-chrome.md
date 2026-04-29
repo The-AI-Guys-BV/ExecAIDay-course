@@ -76,7 +76,7 @@ Then test:
 Replay the workflow.
 ```
 
-Claude does the 3 steps without you. The first time you watch this happen, it feels like magic. By minute 5 it feels normal.
+Claude does the 3 steps without you. The first time you watch this happen, it feels like magic. After a few replays it feels normal.
 
 ### Multi-tab task
 

@@ -55,8 +55,8 @@
 <p>Once shared, your teammate sees the page. Both of you can have Cowork pull from it via the Notion connector.</p>
 <p>Try:</p>
 <pre><code>
-<p>What's the latest on the [shared project] in Notion? Read the shared page.</p>
-<pre><code>
+What's the latest on the [shared project] in Notion? Read the shared page.
+</code></pre>
 <p>Both you and your teammate get the same answer. Same source of truth.</p>
 <h3>Shared Cowork folder</h3>
 <p>This is more involved. Your IT team set up a shared cloud folder (Dropbox / Google Drive / OneDrive — whichever your org uses). The folder syncs to all team members' machines.</p>
@@ -81,21 +81,20 @@
 <h3>Multi-connector magic — the micro-win</h3>
 <p>The core capability: Claude reads multiple sources in one query and synthesizes.</p>
 <pre><code>
-<p>For [shared project], pull:</p>
-<ul>
-<li>The latest Slack thread about it (channel: #q4-launch).</li>
-<li>The active Notion project page.</li>
-<li>Any emails in my inbox tagged with the project name (last 7 days).</li>
-</ul>
-<p>Synthesize into a one-page memo: state of play, what's blocking, what's the next decision needed.</p>
-<pre><code>
+For [shared project], pull:
+- The latest Slack thread about it (channel: #q4-launch).
+- The active Notion project page.
+- Any emails in my inbox tagged with the project name (last 7 days).
+
+Synthesize into a one-page memo: state of play, what's blocking, what's the next decision needed.
+</code></pre>
 <p>Claude reads all three, synthesizes. Output is one page — couldn't have produced manually faster.</p>
 <p>This is "multi-connector magic." You've been using individual connectors all workshop; M16 is where they compose.</p>
 <h3>Collaboration scenarios (live)</h3>
 <p>Try one or two during the in-room exercise:</p>
 <p><strong>Scenario A — Joint memo.</strong> Both pair members work on the same memo in the shared folder. One drafts a section in their Cowork. The other Reviews from theirs. Claude reads the latest version each time — no manual file-syncing.</p>
 <p><strong>Scenario B — Joint decision.</strong> Use Claude to synthesize different stakeholders' positions (per Slack and Notion threads) and propose a path forward. Both pair members feed in their context; Claude produces one synthesis.</p>
-<p><strong>Scenario C — Joint status update.</strong> Generate a  team standup brief from all the sources together. Pair refines.</p>
+<p><strong>Scenario C — Joint status update.</strong> Generate a team standup brief from all the sources together. Pair refines.</p>
 <p>The point isn't the specific scenario — it's that two people doing the same workflow in their respective Cowork instances produce the same answers from the same sources. The team gets consistency.</p>
 <h2>Section 4 — Advanced</h2>
 <h3>Multi-Cowork-Project patterns for sensitive work</h3>
@@ -120,8 +119,8 @@
 <p>Claude reads Slack + Notion + Gmail in one shot during the collaboration scenario. Output combines all three sources into one coherent narrative. The realization: this isn't a feature; it's a different way of working.</p>
 <h2>Verification checkpoint</h2>
 <pre><code>
-<p>For [the shared project], list every source you can pull from right now and what's in each.</p>
-<pre><code>
+For [the shared project], list every source you can pull from right now and what's in each.
+</code></pre>
 <p>Expected: Claude lists Slack channel(s), Notion page(s), email thread(s), shared folder content. If anything's missing, the connector or share permission is off.</p>
 <h2>Common issues</h2>
 <ul>
@@ -130,12 +129,6 @@
 <li><strong>Slack channel scoped to specific channels only</strong> — connector permission scope; widen if needed.</li>
 <li><strong>Multi-connector query slow</strong> — many sources to read; reduce scope or window.</li>
 <li><strong>Two pair members get different answers</strong> — different connector scopes or different Cowork Project configurations. Verify both are pulling from the same sources.</li>
-</ul>
-<h2>References</h2>
-<ul>
-<li>M08 — connectors (foundation).</li>
-<li>M13 — GTD considerations for team.</li>
-<li>M14 — Daily Command Center (could include shared sources for team-aware morning briefs).</li>
 </ul>
   <nav class="module-nav">
     <a class="nav-link prev" href="m15.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M15 — Meeting Notes</div></a>

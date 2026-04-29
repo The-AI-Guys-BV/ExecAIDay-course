@@ -53,18 +53,18 @@
 <h3>Single-app moves</h3>
 <p>In Word, with the Claude sidebar open:</p>
 <pre><code>
-<p>Rewrite this paragraph to be 30% shorter without losing factual content. Preserve formatting.</p>
-<pre><code>
+Rewrite this paragraph to be 30% shorter without losing factual content. Preserve formatting.
+</code></pre>
 <p>Claude rewrites in place.</p>
 <p>In Excel:</p>
 <pre><code>
-<p>For column F, write a formula that calculates [whatever]. Apply to rows 2-50.</p>
-<pre><code>
+For column F, write a formula that calculates [whatever]. Apply to rows 2-50.
+</code></pre>
 <p>Claude writes the formula and applies it.</p>
 <p>In PowerPoint:</p>
 <pre><code>
-<p>Make this slide cleaner. Reduce text by 50%. Keep all the data points.</p>
-<pre><code>
+Make this slide cleaner. Reduce text by 50%. Keep all the data points.
+</code></pre>
 <p>Claude rewrites the slide content.</p>
 <p>These are the per-app moves. Useful, but not the headline.</p>
 <h2>Section 3 — Intermediate</h2>
@@ -72,32 +72,32 @@
 <p>Pick a real piece of work. Example: a board prep deck.</p>
 <p><strong>Step 1 — Excel.</strong> Open the financial model.</p>
 <pre><code>
-<p>Analyze the Q3 vs Q2 trajectory in this sheet. Identify the top 3 positive trends and</p>
-<p>top 3 risks. Write your findings as comments in the relevant cells.</p>
-<pre><code>
+Analyze the Q3 vs Q2 trajectory in this sheet. Identify the top 3 positive trends and
+top 3 risks. Write your findings as comments in the relevant cells.
+</code></pre>
 <p>Claude analyzes, drops comments. You review.</p>
 <p><strong>Step 2 — PowerPoint.</strong> Open your company's deck template (the one your IT setup added).</p>
 <pre><code>
-<p>Build a 4-slide section for the board deck based on the Excel analysis we just did.</p>
-<p>Use my company template. Each trend or risk is one slide with the supporting data point</p>
-<p>prominent and a one-line takeaway.</p>
-<pre><code>
+Build a 4-slide section for the board deck based on the Excel analysis we just did.
+Use my company template. Each trend or risk is one slide with the supporting data point
+prominent and a one-line takeaway.
+</code></pre>
 <p>Claude generates 4 slides. They're on-brand because they use the template.</p>
 <p><strong>Step 3 — Word.</strong> Open the memo doc.</p>
 <pre><code>
-<p>Draft a 1-page memo summarizing the Excel analysis and the slide narrative. Audience: my</p>
-<p>board chair, who'll read this before the meeting. Tone: factual, not optimistic, not</p>
-<p>defensive.</p>
-<pre><code>
+Draft a 1-page memo summarizing the Excel analysis and the slide narrative. Audience: my
+board chair, who'll read this before the meeting. Tone: factual, not optimistic, not
+defensive.
+</code></pre>
 <p>Claude drafts. You review.</p>
 <p>The point: the conversation persisted. Claude remembered the Excel analysis when building the PowerPoint slides. Remembered the slide narrative when drafting the Word memo. No re-explaining the context three times.</p>
 <h3>Template magic — the micro-win</h3>
 <p>Your company has a PowerPoint template with specific fonts, colors, masters. Default Claude PPT output uses Claude's bland defaults. Template magic fixes this:</p>
 <p>In PowerPoint with your company template open:</p>
 <pre><code>
-<p>Build me 5 slides about [topic] using this template. Match the fonts, colors, and slide</p>
-<p>masters exactly.</p>
-<pre><code>
+Build me 5 slides about [topic] using this template. Match the fonts, colors, and slide
+masters exactly.
+</code></pre>
 <p>Claude reads the template's master slides, fonts, color palette, and produces slides that look like YOUR company's slides — not Claude's defaults.</p>
 <p>The output is recognizably yours. That's the felt micro-win.</p>
 <h2>Section 4 — Advanced</h2>
@@ -122,8 +122,8 @@
 <h3>Word with tracked changes</h3>
 <p>For documents going through revision cycles:</p>
 <pre><code>
-<p>Suggest edits to this document as tracked changes. Don't apply them — just propose.</p>
-<pre><code>
+Suggest edits to this document as tracked changes. Don't apply them — just propose.
+</code></pre>
 <p>Claude reviews, surfaces edits, you accept or reject one by one. Useful for legal docs, contracts, anything where the edit history matters.</p>
 <h3>Available on which plans</h3>
 <p>Pro / Max / Team / Enterprise. Free plan does not include Office add-ins.</p>
@@ -134,8 +134,8 @@
 <h2>Verification checkpoint</h2>
 <p>After the cross-app chain:</p>
 <pre><code>
-<p>[In Word, with the memo open]: What's in the Excel analysis we did earlier in this session?</p>
-<pre><code>
+[In Word, with the memo open]: What's in the Excel analysis we did earlier in this session?
+</code></pre>
 <p>Expected: Claude in Word references the Excel analysis from earlier. If it can't, the cross-app shared context isn't working — restart Office, retry.</p>
 <h2>Common issues</h2>
 <ul>
@@ -143,11 +143,6 @@
 <li><strong>Template magic produces wrong colors</strong> — template's theme colors may not be set; check Theme Designer in PowerPoint.</li>
 <li><strong>Cross-app context lost</strong> — ensure same Claude account is signed in across all three apps. Different accounts = different context.</li>
 <li><strong>Word tracked changes don't appear</strong> — Word's Track Changes feature must be enabled (Review → Track Changes).</li>
-</ul>
-<h2>References</h2>
-<ul>
-<li>M11 — skills (the Office workflow can become a custom skill).</li>
-<li><code>references/what-not-to-use-claude-for.md</code> — math at scale caveat.</li>
 </ul>
   <nav class="module-nav">
     <a class="nav-link prev" href="m09.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M09 — Browser + Chrome</div></a>

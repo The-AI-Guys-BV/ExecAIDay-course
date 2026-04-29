@@ -40,6 +40,7 @@ def md_to_html(md_text: str) -> str:
     html = []
     in_list = False
     in_blockquote = False
+    in_code = False
     list_type = None
 
     def close_list():
@@ -55,9 +56,27 @@ def md_to_html(md_text: str) -> str:
             html.append("</blockquote>")
             in_blockquote = False
 
-    skip_until_section = False
+    def esc(s: str) -> str:
+        return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
     for line in lines:
+        # Inside a fenced code block: closing fence ends it; everything else is verbatim.
+        if in_code:
+            if line.strip().startswith("```"):
+                html.append("</code></pre>")
+                in_code = False
+                continue
+            html.append(esc(line))
+            continue
+
         stripped = line.strip()
+        # Open a fenced code block.
+        if stripped.startswith("```"):
+            close_list()
+            close_quote()
+            html.append("<pre><code>")
+            in_code = True
+            continue
         # Skip the first H1 (we have it in the hero)
         if stripped.startswith("# "):
             continue
@@ -112,18 +131,14 @@ def md_to_html(md_text: str) -> str:
         if stripped == "":
             close_list()
             continue
-        # Code block (fenced)
-        if stripped.startswith("```"):
-            close_list()
-            close_quote()
-            html.append('<pre><code>' if not stripped.endswith("```") or stripped == "```" else '<code>')
-            continue
         # Plain paragraph
         close_list()
         html.append(f"<p>{inline(stripped)}</p>")
 
     close_list()
     close_quote()
+    if in_code:
+        html.append("</code></pre>")
     return "\n".join(html)
 
 
@@ -211,6 +226,8 @@ def body_from_md(md: str) -> str:
     md = re.sub(r"^# .+?\n", "", md, count=1)
     # Strip Why this matters (already in lede)
     md = re.sub(r"## Why this module matters[\s\S]*?(?=\n## )", "", md, count=1)
+    # Strip the References section — it points to internal plugin paths, not useful on the web.
+    md = re.sub(r"\n## References[\s\S]*$", "\n", md)
     return md_to_html(md)
 
 

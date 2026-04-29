@@ -113,24 +113,14 @@
 <h2>Verification checkpoint</h2>
 <p>After the in-room work, a one-minute check: type the prompt below into your Cowork Project.</p>
 <pre><code>
-<p>What folders am I currently mounting in this Cowork Project?</p>
-<pre><code>
+What folders am I currently mounting in this Cowork Project?
+</code></pre>
 <p>Expected: Claude lists both your vault and your work folder by name (the names you chose). If either is missing, the mount didn't take — flag your assistant.</p>
 <h2>Common issues</h2>
 <ul>
 <li><strong>Cowork Project doesn't see one of the folders.</strong> Re-mount it; confirm the path. Some MDM-managed laptops require explicit folder permission.</li>
 <li><strong><code>/teach</code> not auto-discovered after install.</strong> Restart Cowork. If still not visible, check <code>~/.claude/skills/teach/SKILL.md</code> exists.</li>
 <li><strong>Notion connector says "Authenticate"</strong> even after onboarding. Click Authenticate; if browser flow stalls, copy the auth URL and complete in a different browser.</li>
-</ul>
-<h2>References</h2>
-<ul>
-<li><code>references/17-basic-concepts.md</code> — full definitions of the 18 concepts.</li>
-<li><code>references/context-and-context-rot.md</code> — deep dive on concepts #1, #13, #18.</li>
-<li><code>references/data-privacy.md</code> — data handling policy.</li>
-<li><code>references/what-not-to-use-claude-for.md</code> — boundaries.</li>
-<li><code>references/connector-quirks.md</code> — connector-specific issues.</li>
-<li><code>templates/vault-starter/</code> — the vault you just mounted.</li>
-<li><code>templates/work-folder-starter/</code> — the work folder you just mounted.</li>
 </ul>
   <nav class="module-nav">
     <div class="nav-link disabled"><div class="nav-link-label">Start</div><div class="nav-link-title">First module</div></div>

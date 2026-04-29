@@ -75,20 +75,20 @@
 <h3><code>/capture</code> — your first GTD move</h3>
 <p>In Cowork:</p>
 <pre><code>
-<p>/capture remind me to follow up with the legal team on the trademark filing</p>
-<pre><code>
+/capture remind me to follow up with the legal team on the trademark filing
+</code></pre>
 <p>Boom. Item appears in your Notion GTD Inbox. You never opened Notion. That's the felt micro-win.</p>
 <p>Try a few more captures over the day. Build the habit.</p>
 <h3><code>/whats-next</code></h3>
 <pre><code>
-<p>/whats-next</p>
-<pre><code>
+/whats-next
+</code></pre>
 <p>Lists your next actions, grouped by context (calls / errands / desk / etc.). Read-only — you decide what to do.</p>
 <p>Try filtered:</p>
 <pre><code>
-<p>/whats-next quick</p>
-<pre><code>
-<p>Shows only items estimated <15 min. Useful when you have a small chunk of time.</p>
+/whats-next quick
+</code></pre>
+<p>Shows only quick items. Useful when you have a small chunk of time.</p>
 <h2>Section 3 — Intermediate</h2>
 <h3><code>/process-inbox</code></h3>
 <p>The clarifying step. Walks each Inbox item with you and asks the GTD questions:</p>
@@ -96,28 +96,28 @@
 <li>Is it actionable? (yes / no)</li>
 <li>If yes: what's the next concrete action?</li>
 <li>Single step or part of a project?</li>
-<li><2 minutes to do? (yes → do now)</li>
+<li>Quick to do? (yes → do now)</li>
 <li>Who does it? (me / delegate)</li>
 </ol>
 <p>Run it:</p>
 <pre><code>
-<p>/process-inbox</p>
-<pre><code>
+/process-inbox
+</code></pre>
 <p>Walk through 3-5 items. The skill enforces the GTD discipline — you don't just dump items into "later," you actively decide.</p>
 <h3><code>/waiting-for</code></h3>
 <pre><code>
-<p>/waiting-for</p>
-<pre><code>
+/waiting-for
+</code></pre>
 <p>Lists what you're waiting on, grouped by person.</p>
 <pre><code>
-<p>/waiting-for stale</p>
-<pre><code>
+/waiting-for stale
+</code></pre>
 <p>Surfaces items waited >7 days. For each, offers: follow up (drafts via <code>/drafts-inbox</code>), push deadline, cancel, wait longer.</p>
 <h3><code>/delegate</code></h3>
 <p>When a next action is for someone else:</p>
 <pre><code>
-<p>/delegate Send me the Q3 numbers to John</p>
-<pre><code>
+/delegate Send me the Q3 numbers to John
+</code></pre>
 <p>Skill drafts the delegation email, creates the Waiting-For entry in Notion, marks the original Next-Action as delegated. You confirm before the email sends.</p>
 <h3>Combining scheduled task + GTD</h3>
 <p>Set up a Monday morning weekly review:</p>
@@ -128,8 +128,8 @@
 <li>Prompt:</li>
 </ul>
 <pre><code>
-<p>Tell me to run /weekly-review now. Surface as a Slack DM to me with the link to today's review.</p>
-<pre><code>
+Tell me to run /weekly-review now. Surface as a Slack DM to me with the link to today's review.
+</code></pre>
 <p>Now every Monday you get the nudge. Skill does the heavy lifting.</p>
 <h2>Section 4 — Advanced</h2>
 <h3>Higher horizons skills</h3>
@@ -144,15 +144,15 @@
 <h3><code>/tickler</code> — defer to a future date</h3>
 <p>When you don't want to act now but want to be reminded:</p>
 <pre><code>
-<p>/tickler review the Q4 hiring plan in 3 weeks</p>
-<pre><code>
+/tickler review the Q4 hiring plan in 3 weeks
+</code></pre>
 <p>Lands in the Tickler database. Surfaces 3 weeks from now via <code>/tickler review</code>.</p>
 <h3><code>/checkout</code> — end of day</h3>
 <pre><code>
-<p>/checkout</p>
-<pre><code>
+/checkout
+</code></pre>
 <p>Walks: what got done today, what's still open, what's tomorrow's #1. Logs to today's Daily Note + creates next-actions in Notion.</p>
-<p>end-of-day discipline. The point is the daily review, not the time savings.</p>
+<p>End-of-day discipline. The point is the daily review, not the time savings.</p>
 <h3>Team GTD considerations</h3>
 <p>Workshop's locked decision: team GTD only works if EVERY team member does their personal GTD. One laggard contaminates the system. Don't push team GTD on people who haven't done personal first.</p>
 <p>External collaborators are out — keep team GTD inside the org. Notion sharing permissions get thorny fast.</p>
@@ -162,8 +162,8 @@
 <p>The pattern repeats: capture from Cowork, process from Cowork, query from Cowork, review from Cowork. Notion is the database; Cowork is your interface.</p>
 <h2>Verification checkpoint</h2>
 <pre><code>
-<p>What's in my Notion Inbox right now?</p>
-<pre><code>
+What's in my Notion Inbox right now?
+</code></pre>
 <p>Expected: Claude lists Inbox items including the one you just captured. If the count is 0 or doesn't include your capture, the connector or DB schema may be off.</p>
 <h2>Common issues</h2>
 <ul>
@@ -171,13 +171,6 @@
 <li><strong><code>/process-inbox</code> items stay in Inbox after processing</strong> — skill should move items; if it doesn't, check Notion connector has write permission.</li>
 <li><strong><code>/waiting-for</code> shows zero items</strong> — either no waiting-fors yet (correct) or DB filter mismatch.</li>
 <li><strong>Higher-horizon skills (/areas, /goals, /vision) fail</strong> — those DBs may not be in your Notion master yet. Suggest setting up before running them.</li>
-</ul>
-<h2>References</h2>
-<ul>
-<li><code>skills/capture/SKILL.md</code>, <code>skills/process-inbox/SKILL.md</code>, <code>skills/whats-next/SKILL.md</code>, etc. — all 19 GTD skills.</li>
-<li>M14 — Daily Command Center (which surfaces GTD next-actions in the artifact).</li>
-<li>M12 — scheduled tasks (pair with GTD for weekly review automation).</li>
-<li>David Allen, <em>Getting Things Done</em> (revised 2015) — the source.</li>
 </ul>
   <nav class="module-nav">
     <a class="nav-link prev" href="m12.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M12 — Scheduled Tasks + Routines</div></a>

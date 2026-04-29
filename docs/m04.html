@@ -59,18 +59,18 @@
 </ul>
 <p>Try one now. In Cowork:</p>
 <pre><code>
-<p>Make me an HTML page showing the days of the week in a 2x4 grid, each in a different</p>
-<p>color, with the current day highlighted.</p>
-<pre><code>
+Make me an HTML page showing the days of the week in a 2x4 grid, each in a different
+color, with the current day highlighted.
+</code></pre>
 <p>Cowork generates the artifact, opens the artifact sidebar on the right, renders the HTML inline.</p>
 <h2>Section 3 — Intermediate</h2>
 <h3>Live artifacts — the headline</h3>
 <p>A regular artifact is a snapshot. A LIVE artifact pulls fresh data each time it opens. Same artifact ID, fresh content.</p>
 <p>Build one. In Cowork:</p>
 <pre><code>
-<p>Build me a live artifact that shows my next 3 calendar events for today.</p>
-<p>Read fresh from the calendar connector each time the artifact opens.</p>
-<pre><code>
+Build me a live artifact that shows my next 3 calendar events for today.
+Read fresh from the calendar connector each time the artifact opens.
+</code></pre>
 <p>Cowork builds the artifact, queries your calendar, renders the events. Now: close the artifact panel. Close Cowork entirely. Reopen tomorrow morning. Reopen this artifact (find it in the artifacts list). It pulls fresh data — your NEW next-3 events for the new day.</p>
 <p>That's live. Behind the scenes, the artifact has Claude code that queries the calendar at render time.</p>
 <h3>Sidebar access</h3>
@@ -107,8 +107,8 @@
 <h2>Verification checkpoint</h2>
 <p>After building your first live artifact, type:</p>
 <pre><code>
-<p>Show me the artifact I just built. What data source does it query?</p>
-<pre><code>
+Show me the artifact I just built. What data source does it query?
+</code></pre>
 <p>Expected: Claude lists the artifact and identifies the connector(s) it queries (e.g., "Calendar via the Calendar connector"). If Claude says "I don't see an artifact," the artifact didn't save — try building again.</p>
 <h2>Common issues</h2>
 <ul>
@@ -116,11 +116,6 @@
 <li><strong>Live artifact doesn't refresh</strong> — it might be a static artifact, not live. Ask Claude to "make this artifact live" and rebuild.</li>
 <li><strong>Artifact disappears on Cowork restart</strong> — check the artifacts list in the sidebar; sometimes the active artifact pointer resets but the artifact is still there.</li>
 <li><strong>Sharing isn't available</strong> — current limitation, not a bug.</li>
-</ul>
-<h2>References</h2>
-<ul>
-<li>M14 — Daily Command Center, where you'll build the workshop's flagship live artifact.</li>
-<li><code>references/connector-quirks.md</code> — bug #28161 and other connector / artifact quirks.</li>
 </ul>
   <nav class="module-nav">
     <a class="nav-link prev" href="m03.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M03 — Cowork UI + Settings</div></a>

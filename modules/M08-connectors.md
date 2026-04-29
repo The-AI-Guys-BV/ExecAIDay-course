@@ -49,7 +49,7 @@ Claude queries Gmail / M365, returns 5 emails with brief summaries. This is the 
 
 ### R-C-T-F-C callback on a real email
 
-Find an email in your inbox that needs a reply. The kind of email you'd normally spend 5–10 minutes on. Then:
+Find an email in your inbox that needs a reply. The kind of email you'd normally spend a while on. Then:
 
 ```
 R: You're an executive recruiter coaching me on candidate communications. (Or whatever role fits the email.)
@@ -79,7 +79,7 @@ What's in my inbox right now? Group by sender, last 24h, with one-line summary p
 Skip newsletters and automated notifications.
 ```
 
-Claude returns a triaged view. Already useful — that's 10-20 minutes of mental sorting compressed.
+Claude returns a triaged view. Already useful — that's a lot of mental sorting compressed.
 
 **Step 2 — Live drafts.**
 ```

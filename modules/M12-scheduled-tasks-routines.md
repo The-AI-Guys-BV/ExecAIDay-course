@@ -17,7 +17,7 @@ Claude works while you sleep. The morning brief that lands on your phone before 
 A scheduled task is a Claude prompt that runs on a schedule. You set it once; it fires at the cadence you specify.
 
 Two flavors:
-- **Desktop scheduled tasks** — run on your laptop, when Cowork is open.  granularity. Can read local files (your work folder, your vault).
+- **Desktop scheduled tasks** — run on your laptop, when Cowork is open. Fine-grained scheduling. Can read local files (your work folder, your vault).
 - **Routines** — run on Anthropic's cloud infrastructure regardless of laptop state. 1-hour minimum interval. Cannot access local files.
 
 Which to use depends on the task. Most workshop tasks are Desktop (need local file access). Always-on monitoring or daily summaries that don't need local files → Routines.
@@ -35,7 +35,7 @@ The Day 1 closing set up this scheduled task. Open the artifact now — you'll s
 
 Walk through the task itself: Settings → Scheduled tasks. The morning-brief task is there with its prompt, schedule, and last-run status.
 
-Look at the prompt. It's a multi-step instruction: read calendar, read email triage, read Slack mentions, format as artifact + Slack post + .md file. Notice the guardrail line at the top: "If running >2 hours late, summarize what was missed instead of executing the original brief."
+Look at the prompt. It's a multi-step instruction: read calendar, read email triage, read Slack mentions, format as artifact + Slack post + .md file. Notice the guardrail line at the top: "If running > late, summarize what was missed instead of executing the original brief."
 
 ### How scheduled task mechanics work
 
@@ -132,7 +132,7 @@ The skill does the work; the task automates the trigger.
 
 ### Things to avoid
 
-- Don't schedule tasks faster than 5-min intervals during work hours unless you really need that frequency.
+- Don't schedule tasks at very tight intervals during work hours unless you really need that frequency.
 - Don't post to Slack from a scheduled task without a "skip if stale" check — your team doesn't want Friday's brief on Tuesday.
 - Don't use absolute language ("today's events") without resolving "today" — use ISO dates in the prompt.
 - Don't set up 20 scheduled tasks at once. Pick 2-3 high-leverage ones; iterate.

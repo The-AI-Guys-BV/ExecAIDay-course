@@ -61,43 +61,48 @@
 <h3>Quick inbox read-back</h3>
 <p>Type:</p>
 <pre><code>
-<p>What's in my inbox right now? Top 5, with one-line summaries.</p>
-<pre><code>
+What's in my inbox right now? Top 5, with one-line summaries.
+</code></pre>
 <p>Claude queries Gmail / M365, returns 5 emails with brief summaries. This is the first jaw-drop. Real data, real surface, no setup beyond what's already done.</p>
 <h2>Section 3 — Intermediate</h2>
 <h3>R-C-T-F-C callback on a real email</h3>
-<p>Find an email in your inbox that needs a reply. The kind of email you'd normally spend 5–10 minutes on. Then:</p>
+<p>Find an email in your inbox that needs a reply. The kind of email you'd normally spend a while on. Then:</p>
 <pre><code>
-<p>R: You're an executive recruiter coaching me on candidate communications. (Or whatever role fits the email.)</p>
-<p>C: I'm a [your role]. The email pasted below is from [sender, role]. Background: [what you know</p>
-<p>about the relationship and the topic].</p>
-<p>T: Draft a reply.</p>
-<p>F: 3 short paragraphs. No subject line. [Tone instruction.]</p>
-<p>C: Don't include AI-flavored closers. Don't make commitments I haven't already made. Stay</p>
-<p>under 200 words.</p>
-<p>[paste the email]</p>
-<pre><code>
+R: You're an executive recruiter coaching me on candidate communications. (Or whatever role fits the email.)
+
+C: I'm a [your role]. The email pasted below is from [sender, role]. Background: [what you know
+about the relationship and the topic].
+
+T: Draft a reply.
+
+F: 3 short paragraphs. No subject line. [Tone instruction.]
+
+C: Don't include AI-flavored closers. Don't make commitments I haven't already made. Stay
+under 200 words.
+
+[paste the email]
+</code></pre>
 <p>Send. Compare to what you would have written. Faster + better, when R-C-T-F-C is real-life applied.</p>
 <p>This is the M02 callback — the framework on real data.</p>
 <h3>The 3-step micro-win arc</h3>
 <p><strong>Step 1 — Inbox read-back (the jaw-drop).</strong></p>
 <pre><code>
-<p>What's in my inbox right now? Group by sender, last 24h, with one-line summary per email.</p>
-<p>Skip newsletters and automated notifications.</p>
-<pre><code>
-<p>Claude returns a triaged view. Already useful — that's 10-20 minutes of mental sorting compressed.</p>
+What's in my inbox right now? Group by sender, last 24h, with one-line summary per email.
+Skip newsletters and automated notifications.
+</code></pre>
+<p>Claude returns a triaged view. Already useful — that's a lot of mental sorting compressed.</p>
 <p><strong>Step 2 — Live drafts.</strong></p>
 <pre><code>
-<p>For the 3 emails that need a reply, draft replies. Match my voice (per chief-of-staff brief).</p>
-<p>Save each as a draft to Outlook / Gmail (whichever connector is in use).</p>
-<pre><code>
+For the 3 emails that need a reply, draft replies. Match my voice (per chief-of-staff brief).
+Save each as a draft to Outlook / Gmail (whichever connector is in use).
+</code></pre>
 <p>Claude drafts. The drafts appear in your Drafts folder — visible on your phone, on Outlook on the web, anywhere you check email.</p>
 <p>If you're on M365 and the native draft write isn't working, Zapier MCP (configured in IT onboarding) handles it. You won't see Zapier UI; the drafts just appear.</p>
 <p><strong>Step 3 — Calendar + email chain.</strong></p>
 <pre><code>
-<p>Today's brief: meetings, urgent emails, drafts pending review, plus anything from Slack</p>
-<p>that's directly tagged for my attention. Pull from real data.</p>
-<pre><code>
+Today's brief: meetings, urgent emails, drafts pending review, plus anything from Slack
+that's directly tagged for my attention. Pull from real data.
+</code></pre>
 <p>Claude composes a 1-page narrative brief from calendar + email + Slack. This is what M14 builds into a daily live artifact dashboard. For now, see the data flow working.</p>
 <h2>Section 4 — Advanced</h2>
 <h3>Connector quirks</h3>
@@ -126,8 +131,8 @@
 <p>By the end, "Cowork as a system" has become real to you.</p>
 <h2>Verification checkpoint</h2>
 <pre><code>
-<p>List the connectors active in this Cowork Project. For each, what scope is granted?</p>
-<pre><code>
+List the connectors active in this Cowork Project. For each, what scope is granted?
+</code></pre>
 <p>Expected: Claude lists Gmail/M365, Calendar, Drive, Slack, Notion, plus your custom apps. Scopes vary; key check is that nothing says "not connected." If something is disconnected, fix before continuing.</p>
 <h2>Common issues</h2>
 <ul>
@@ -135,14 +140,6 @@
 <li><strong>Drafts not appearing in Outlook (M365)</strong> — Zapier MCP not set up. Your assistant will fix.</li>
 <li><strong>Slack returns DMs only when expected to return channels</strong> — connector scope is account-only by default; expand if needed.</li>
 <li><strong>Custom CRM connector slow</strong> — many CRMs have rate limits. Be patient or query smaller windows.</li>
-</ul>
-<h2>References</h2>
-<ul>
-<li><code>references/connector-quirks.md</code> — connector-specific issues and workarounds.</li>
-<li>M02 — R-C-T-F-C framework (the callback uses this).</li>
-<li>M14 — Daily Command Center (the artifact version of step 3).</li>
-<li><code>skills/email-triage/SKILL.md</code> — the inbox read-back skill formalized.</li>
-<li><code>skills/drafts-inbox/SKILL.md</code> — the drafts skill formalized.</li>
 </ul>
   <nav class="module-nav">
     <a class="nav-link prev" href="m07.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M07 — Chief of Staff claude.md</div></a>

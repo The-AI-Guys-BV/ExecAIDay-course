@@ -46,26 +46,30 @@
 <p>Most people prompt Claude by saying what they want. That's not enough.</p>
 <p>Better: tell Claude <strong>who it's being</strong>, <strong>what context it needs</strong>, <strong>the specific task</strong>, <strong>the output format</strong>, and <strong>what NOT to do</strong>. Five elements, in any order. Each one shifts the output.</p>
 <p>Skip the role, you get generic. Skip the context, Claude guesses. Skip the format, you get walls of prose. Skip the constraints, Claude hedges and pads.</p>
-<p>This module gives you the framework explicitly so the moves are conscious. After a week of using it, it'll be habit.</p>
+<p>This module gives you the framework explicitly so the moves are conscious. With practice, it becomes habit.</p>
 <h2>Section 2 — Beginner / Getting Started</h2>
 <p>R-C-T-F-C, with one example:</p>
 <p><strong>Bad prompt:</strong></p>
 <pre><code>
-<p>Help me write a follow-up email to a candidate I want to hire.</p>
-<pre><code>
+Help me write a follow-up email to a candidate I want to hire.
+</code></pre>
 <p><strong>R-C-T-F-C version:</strong></p>
 <pre><code>
-<p>R: You're an experienced executive recruiter who places C-level talent.</p>
-<p>C: I'm a Series B SaaS CEO. We've interviewed Sarah Chen (VP Product) over three rounds.</p>
-<p>She's strong, currently at a competitor, risk-averse about leaving. I want to make her an</p>
-<p>offer. Comp will be competitive but not the highest she could get.</p>
-<p>T: Write a follow-up email making the verbal offer and requesting a call this week to</p>
-<p>walk through specifics.</p>
-<p>F: 4 short paragraphs. No subject line. Closing requests a  call. Tone: warm,</p>
-<p>confident, not pushy.</p>
-<p>C: Don't mention specific compensation numbers. Don't sound like a form letter. No</p>
-<p>"looking forward to hearing from you" or similar generic email closers. Stay under 180 words.</p>
-<pre><code>
+R: You're an experienced executive recruiter who places C-level talent.
+
+C: I'm a Series B SaaS CEO. We've interviewed Sarah Chen (VP Product) over three rounds.
+She's strong, currently at a competitor, risk-averse about leaving. I want to make her an
+offer. Comp will be competitive but not the highest she could get.
+
+T: Write a follow-up email making the verbal offer and requesting a call this week to
+walk through specifics.
+
+F: 4 short paragraphs. No subject line. Closing requests a call. Tone: warm,
+confident, not pushy.
+
+C: Don't mention specific compensation numbers. Don't sound like a form letter. No
+"looking forward to hearing from you" or similar generic email closers. Stay under 180 words.
+</code></pre>
 <p>The output from the second prompt is dramatically better. Try both yourself in Cowork.</p>
 <p>The five elements:</p>
 <ul>
@@ -95,14 +99,14 @@
 <h3>Metaprompting via <code>/help-me-prompt</code></h3>
 <p>When you find yourself about to send a sloppy prompt, type:</p>
 <pre><code>
-<p>/help-me-prompt help me write a follow-up email to a candidate I want to hire</p>
-<pre><code>
+/help-me-prompt help me write a follow-up email to a candidate I want to hire
+</code></pre>
 <p>The skill (which you'll install in M11) takes your draft and rewrites it in R-C-T-F-C structure. It catches the anti-patterns automatically.</p>
 <p>This is the meta-move: instead of remembering all 5 elements + 10 anti-patterns, use a skill that enforces them. You'll install <code>/help-me-prompt</code> for real in M11; for now, see the concept.</p>
 <h3>Voice + prompting</h3>
 <p>Voice tools (Wispr / Superwhisper / Voibe) are installed during onboarding. They transcribe what you say into your active text field. So you can speak prompts instead of typing them.</p>
 <p>The trick: even when speaking, structure the prompt as R-C-T-F-C. Voice → text → R-C-T-F-C → Claude. Don't degrade your prompt quality just because you're talking.</p>
-<p>Two-minute practice: speak a prompt out loud, transcribe via your voice tool, send to Claude. Does it work?</p>
+<p>Quick practice: speak a prompt out loud, transcribe via your voice tool, send to Claude. Does it work?</p>
 <h3>Prompt chains</h3>
 <p>When a task is too complex for one prompt, chain prompts:</p>
 <ol>
@@ -116,9 +120,10 @@
 <h2>Verification checkpoint</h2>
 <p>In Cowork, type:</p>
 <pre><code>
-<p>Rewrite the email below to be 30% shorter without losing factual content. Tone stays the same. No subject line.</p>
-<p>[paste any 100-word email here]</p>
-<pre><code>
+Rewrite the email below to be 30% shorter without losing factual content. Tone stays the same. No subject line.
+
+[paste any 100-word email here]
+</code></pre>
 <p>Expected: a tighter version, same content, no AI-flavored padding ("I hope this finds you well"). If Claude added an apology or a "let me know if you need anything else," the constraints weren't strong enough — try again with a "no closer line" constraint added.</p>
 <h2>Common issues</h2>
 <ul>
@@ -126,12 +131,6 @@
 <li><strong>Output is too long</strong> — add a length constraint ("Stay under 200 words").</li>
 <li><strong>Output has AI tells</strong> — add explicit constraints against them ("No 'I hope this helps,' no 'let me know if'").</li>
 <li><strong>Output ignored a constraint</strong> — Claude sometimes drifts. Repeat the constraint in a new prompt: "Same task, but enforce <constraint>."</li>
-</ul>
-<h2>References</h2>
-<ul>
-<li><code>references/rctfc-framework.md</code> — full framework with worked examples.</li>
-<li><code>references/10-anti-patterns.md</code> — anti-patterns with before/after.</li>
-<li><code>skills/help-me-prompt/SKILL.md</code> — the metaprompting skill (installed in M11).</li>
 </ul>
   <nav class="module-nav">
     <a class="nav-link prev" href="m01.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M01 — Welcome + Foundations</div></a>

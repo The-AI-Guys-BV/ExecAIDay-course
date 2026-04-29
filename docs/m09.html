@@ -58,8 +58,8 @@
 <h3>One-fact navigation</h3>
 <p>Pick a portal you actually use — your CRM, a dashboard, a vendor portal. Open it in a tab. In the side panel:</p>
 <pre><code>
-<p>Pull the [specific fact] from this page. Just the value, no commentary.</p>
-<pre><code>
+Pull the [specific fact] from this page. Just the value, no commentary.
+</code></pre>
 <p>Examples:</p>
 <ul>
 <li>"Pull total active accounts from the dashboard."</li>
@@ -77,26 +77,27 @@
 </ul>
 <p>In the Claude in Chrome side panel:</p>
 <pre><code>
-<p>I'm going to do a 3-step task. Watch what I do, then I'll ask you to replay it later.</p>
-<pre><code>
+I'm going to do a 3-step task. Watch what I do, then I'll ask you to replay it later.
+</code></pre>
 <p>Then perform the 3 steps. Claude records each click and form input.</p>
 <p>When done:</p>
 <pre><code>
-<p>Save this workflow as "<name>".</p>
-<pre><code>
+Save this workflow as "&lt;name&gt;".
+</code></pre>
 <p>Then test:</p>
 <pre><code>
-<p>Replay the workflow.</p>
-<pre><code>
-<p>Claude does the 3 steps without you. The first time you watch this happen, it feels like magic. By minute 5 it feels normal.</p>
+Replay the workflow.
+</code></pre>
+<p>Claude does the 3 steps without you. The first time you watch this happen, it feels like magic. After a few replays it feels normal.</p>
 <h3>Multi-tab task</h3>
 <p>Pick a task that benefits from cross-site comparison. Example:</p>
 <pre><code>
-<p>Open these 6 competitor websites in new tabs. From each, pull pricing info, primary</p>
-<p>target customer, and one differentiator they emphasize on the homepage. Compile into</p>
-<p>a comparison table.</p>
-<p>URLs: [paste 6 URLs]</p>
-<pre><code>
+Open these 6 competitor websites in new tabs. From each, pull pricing info, primary
+target customer, and one differentiator they emphasize on the homepage. Compile into
+a comparison table.
+
+URLs: [paste 6 URLs]
+</code></pre>
 <p>Claude opens each, reads, compiles. The output is a table you couldn't have built faster manually.</p>
 <h3>Scheduled Chrome tasks</h3>
 <p>Once a workflow is recorded, you can schedule it to run automatically. Open Claude in Chrome → Workflows → click your saved workflow → Schedule.</p>
@@ -111,9 +112,9 @@
 <h3>Console log reading</h3>
 <p>Claude in Chrome can read browser console logs. Useful when something is broken on a page you control:</p>
 <pre><code>
-<p>Read the console logs on this page. What errors are there? What might be causing the</p>
-<p>form submission to fail?</p>
-<pre><code>
+Read the console logs on this page. What errors are there? What might be causing the
+form submission to fail?
+</code></pre>
 <p>Claude reads, identifies errors, suggests fixes. Engineering-flavored move; useful even for non-engineers when a page misbehaves.</p>
 <h3>Multi-tab coordination at scale</h3>
 <p>The 6-site competitive intel demo is the simple version. Bigger:</p>
@@ -140,8 +141,8 @@
 <p>The default is to do all 3 — they go together. Picking one stages a deeper exploration of that capability.</p>
 <h2>Verification checkpoint</h2>
 <pre><code>
-<p>What workflows have I saved in Claude in Chrome?</p>
-<pre><code>
+What workflows have I saved in Claude in Chrome?
+</code></pre>
 <p>Expected: Claude lists the workflow(s) you saved during the module. If empty, the save didn't take — re-record.</p>
 <h2>Common issues</h2>
 <ul>
@@ -149,11 +150,6 @@
 <li><strong>Recorded workflow fails on replay</strong> — page state changed (logged out, layout updated). Re-record.</li>
 <li><strong>Multi-tab job hangs</strong> — site is slow or rate-limiting. Reduce parallelism, retry.</li>
 <li><strong>Workflow needs auth</strong> — the extension follows your existing browser session. If you weren't logged in, log in and re-record.</li>
-</ul>
-<h2>References</h2>
-<ul>
-<li>M11 — building custom skills with <code>/skill-creator</code> that can incorporate Chrome.</li>
-<li>M12 — scheduled tasks (the scheduling layer for Chrome workflows).</li>
 </ul>
   <nav class="module-nav">
     <a class="nav-link prev" href="m08.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M08 — Connectors</div></a>

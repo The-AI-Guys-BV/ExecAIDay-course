@@ -74,7 +74,7 @@ Try filtered:
 /whats-next quick
 ```
 
-Shows only items estimated <15 min. Useful when you have a small chunk of time.
+Shows only quick items. Useful when you have a small chunk of time.
 
 ## Section 3 — Intermediate
 
@@ -85,7 +85,7 @@ The clarifying step. Walks each Inbox item with you and asks the GTD questions:
 1. Is it actionable? (yes / no)
 2. If yes: what's the next concrete action?
 3. Single step or part of a project?
-4. <2 minutes to do? (yes → do now)
+4. Quick to do? (yes → do now)
 5. Who does it? (me / delegate)
 
 Run it:
@@ -162,7 +162,7 @@ Lands in the Tickler database. Surfaces 3 weeks from now via `/tickler review`.
 
 Walks: what got done today, what's still open, what's tomorrow's #1. Logs to today's Daily Note + creates next-actions in Notion.
 
- end-of-day discipline. The point is the daily review, not the time savings.
+End-of-day discipline. The point is the daily review, not the time savings.
 
 ### Team GTD considerations
 

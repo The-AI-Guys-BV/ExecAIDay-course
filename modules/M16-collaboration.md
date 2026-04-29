@@ -87,7 +87,7 @@ Try one or two during the in-room exercise:
 
 **Scenario B — Joint decision.** Use Claude to synthesize different stakeholders' positions (per Slack and Notion threads) and propose a path forward. Both pair members feed in their context; Claude produces one synthesis.
 
-**Scenario C — Joint status update.** Generate a  team standup brief from all the sources together. Pair refines.
+**Scenario C — Joint status update.** Generate a team standup brief from all the sources together. Pair refines.
 
 The point isn't the specific scenario — it's that two people doing the same workflow in their respective Cowork instances produce the same answers from the same sources. The team gets consistency.
 

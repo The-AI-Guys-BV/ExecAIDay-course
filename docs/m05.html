@@ -56,21 +56,21 @@
 <h3>The two folder shapes</h3>
 <p><strong>Project folders</strong> (bounded work with deliverables):</p>
 <pre><code>
-<p><work-folder>/<project-name>/</p>
-<p>├── claude.md         # project-specific context</p>
-<p>├── memory.md         # patterns Cowork learns about this project</p>
-<p>├── Source Materials/ # incoming inputs</p>
-<p>├── Working Files/    # in-progress</p>
-<p>└── Deliverables/     # finished outputs</p>
-<pre><code>
+&lt;work-folder&gt;/&lt;project-name&gt;/
+├── claude.md         # project-specific context
+├── memory.md         # patterns Cowork learns about this project
+├── Source Materials/ # incoming inputs
+├── Working Files/    # in-progress
+└── Deliverables/     # finished outputs
+</code></pre>
 <p>Has an outcome. Ships and ends. Examples: <code>q3-board-deck/</code>, <code>refactor-onboarding/</code>, <code>course/</code>.</p>
 <p><strong>Stream folders</strong> (recurring content, flat):</p>
 <pre><code>
-<p><vault>/<stream-name>/</p>
-<p>├── claude.md         # stream-specific context</p>
-<p>├── memory.md</p>
-<p>└── (flat content — dated files, captured items, linked notes)</p>
-<pre><code>
+&lt;vault&gt;/&lt;stream-name&gt;/
+├── claude.md         # stream-specific context
+├── memory.md
+└── (flat content — dated files, captured items, linked notes)
+</code></pre>
 <p>Unbounded. No end state. Recurring. Examples: <code>Daily Notes/</code>, <code>References/</code>, <code>Inbox/</code>. The <code>about-me/</code> folder is the special stream (every vault has it).</p>
 <h3>The two senses of "project"</h3>
 <p><strong>Cowork Project</strong> = the app workspace concept (the thing you made in M01). UI-level. Mounts folders. Has its own memory.</p>
@@ -89,8 +89,8 @@
 <h3>Run <code>/new-project</code> for the first time</h3>
 <p>In Cowork:</p>
 <pre><code>
-<p>/new-project course</p>
-<pre><code>
+/new-project course
+</code></pre>
 <p>The skill conducts an interview. It will ask you things like:</p>
 <ul>
 <li>What's the project outcome?</li>
@@ -112,8 +112,8 @@
 <h3>Pull workshop content into Source Materials</h3>
 <p>Your first content move:</p>
 <pre><code>
-<p>Pull the welcome doc and the how-to-start doc from this plugin into course/Source Materials/.</p>
-<pre><code>
+Pull the welcome doc and the how-to-start doc from this plugin into course/Source Materials/.
+</code></pre>
 <p>Claude reads <code>docs/welcome.md</code> and <code>docs/how-to-start.md</code> from the installed plugin and copies them into <code><work-folder>/course/Source Materials/</code>. Now your workshop project has its initial inputs.</p>
 <p>This is the pattern: Source Materials gets the raw inputs (from anywhere — plugin, web, email, conversation transcripts). Working Files is where you iterate. Deliverables is what you ship.</p>
 <h2>Section 4 — Advanced</h2>
@@ -132,8 +132,8 @@
 <h2>Verification checkpoint</h2>
 <p>After running <code>/new-project</code>, type:</p>
 <pre><code>
-<p>What's in my course/ project folder right now? Read the claude.md.</p>
-<pre><code>
+What's in my course/ project folder right now? Read the claude.md.
+</code></pre>
 <p>Expected: Claude reads the project's <code>claude.md</code> and reports the synthesized brief — outcome, stakeholders, timeline, format overrides, etc. — along with the bucket subfolders. If <code>claude.md</code> is empty or missing, the scaffold didn't complete; rerun <code>/new-project</code>.</p>
 <h2>Common issues</h2>
 <ul>
@@ -141,14 +141,6 @@
 <li><strong>Project folder name conflicts</strong> — skill prompts for a different slug.</li>
 <li><strong>Synthesized <code>claude.md</code> looks generic</strong> — the interview was too short; rerun with more detail in answers.</li>
 <li><strong>Bucket subfolders empty</strong> — that's correct; they ship empty per the architecture.</li>
-</ul>
-<h2>References</h2>
-<ul>
-<li><code>templates/work-folder-starter/</code> — the work folder starter content.</li>
-<li><code>templates/project-folder-template/</code> — the project folder template.</li>
-<li><code>skills/new-project/SKILL.md</code> — the skill spec.</li>
-<li>M07 — Chief of Staff <code>claude.md</code> (the vault root brief).</li>
-<li>M13 — GTD in Notion (the Notion side of <code>/new-project</code>).</li>
 </ul>
   <nav class="module-nav">
     <a class="nav-link prev" href="m04.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M04 — Artifacts</div></a>

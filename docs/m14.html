@@ -44,7 +44,7 @@
 <h2>Section 1 — Introduction</h2>
 <p>You built a simple live artifact in Day 1 closing — three panels: calendar, urgent email, Slack mentions. That artifact has been firing every morning since.</p>
 <p>Today we expand it. Now that GTD is live (M13), we can add: top 5 next actions, stale waiting-fors, today's GTD-driven priorities. Now that Obsidian is your knowledge layer (M06), we can add: yesterday's reflection bubbling up to today.</p>
-<p>The result is one artifact you open in the morning, look at for 2 minutes, then know what matters for the day. No app-hopping. No "let me check Slack, then email, then Notion."</p>
+<p>The result is one artifact you open in the morning, look at briefly, then know what matters for the day. No app-hopping. No "let me check Slack, then email, then Notion."</p>
 <h2>Section 2 — Beginner / Getting Started</h2>
 <h3>Reopen the Day 1 artifact</h3>
 <p>Open Cowork. Find the artifact in the artifacts sidebar (right side). It should be named "Morning Brief" or similar. Click to open.</p>
@@ -65,30 +65,31 @@
 <h3>Add the new tiles</h3>
 <p>In Cowork, with the artifact open:</p>
 <pre><code>
-<p>Update this artifact. Add three new tiles:</p>
-<ol>
-<li>GTD next-actions: top 5 from Notion, sorted by priority and age. Show context badge per item.</li>
-<li>Stale waiting-fors: list items I've been waiting on >7 days, with person + days waited.</li>
-<li>Yesterday's Obsidian note: pull yesterday's daily note from my vault, surface the closing paragraphs (what I noted at /checkout) as 2-3 lines.</li>
-</ol>
-<p>Layout: 2 columns. Calendar + narrative on left. GTD + email + Slack + waiting-fors + yesterday's-note on right.</p>
-<p>Refresh on every artifact open — pull fresh data each time.</p>
-<pre><code>
+Update this artifact. Add three new tiles:
+
+1. GTD next-actions: top 5 from Notion, sorted by priority and age. Show context badge per item.
+2. Stale waiting-fors: list items I've been waiting on &gt;7 days, with person + days waited.
+3. Yesterday's Obsidian note: pull yesterday's daily note from my vault, surface the closing paragraphs (what I noted at /checkout) as 2-3 lines.
+
+Layout: 2 columns. Calendar + narrative on left. GTD + email + Slack + waiting-fors + yesterday's-note on right.
+
+Refresh on every artifact open — pull fresh data each time.
+</code></pre>
 <p>Claude rewrites the artifact. Watch the layout reflow.</p>
 <h3>Tune the tiles</h3>
 <p>Some tiles will need iteration. Common tweaks:</p>
 <pre><code>
-<p>The GTD tile is showing too many items. Limit to top 5 only, not top 10.</p>
+The GTD tile is showing too many items. Limit to top 5 only, not top 10.
+</code></pre>
 <pre><code>
+The yesterday's-note tile shows the whole note. Show only the "tomorrow's #1" line and any "loose ends" the user captured.
+</code></pre>
 <pre><code>
-<p>The yesterday's-note tile shows the whole note. Show only the "tomorrow's #1" line and any "loose ends" the user captured.</p>
-<pre><code>
-<pre><code>
-<p>The email tile is showing newsletters. Filter newsletters out.</p>
-<pre><code>
+The email tile is showing newsletters. Filter newsletters out.
+</code></pre>
 <p>Iterate until the tiles feel right.</p>
 <h3>Test the live refresh</h3>
-<p>Close the artifact. Close Cowork entirely. Wait 10 minutes. Reopen Cowork, reopen the artifact.</p>
+<p>Close the artifact. Close Cowork entirely. Reopen Cowork, reopen the artifact.</p>
 <p>Each tile re-queries. Calendar shows updated events. GTD shows updated next-actions. Slack shows fresh mentions. Yesterday's-note shows yesterday (relative to current open).</p>
 <h2>Section 4 — Advanced</h2>
 <h3>Custom tiles per workflow</h3>
@@ -101,9 +102,9 @@
 </ul>
 <p>Each is a new tile in the artifact. The tile spec is just "pull from <source>, format as <X>."</p>
 <h3>Live artifact refresh tuning</h3>
-<p>Some sources are expensive (a CRM query that takes 10s) and some are fast (calendar). For artifacts you open frequently:</p>
+<p>Some sources are expensive (a slow CRM query) and some are fast (calendar). For artifacts you open frequently:</p>
 <ul>
-<li>Cache slow sources for 5–10 minutes (specify in the tile prompt).</li>
+<li>Cache slow sources briefly (specify in the tile prompt).</li>
 <li>Don't cache fast sources — let them refresh fully.</li>
 </ul>
 <p>For artifacts you open once a day, no caching needed.</p>
@@ -115,8 +116,8 @@
 <p>The realization: this is the workshop's flagship artifact. You'll open it every morning for years.</p>
 <h2>Verification checkpoint</h2>
 <pre><code>
-<p>Show me my Daily Command Center artifact. Walk through what each tile is pulling.</p>
-<pre><code>
+Show me my Daily Command Center artifact. Walk through what each tile is pulling.
+</code></pre>
 <p>Expected: Claude opens the artifact, identifies the 7 (or more) tiles, and says where each pulls from. If a tile is broken or missing, fix now.</p>
 <h2>Common issues</h2>
 <ul>
@@ -124,13 +125,6 @@
 <li><strong>Layout broken on reflow</strong> — too many tiles for the column structure; reduce or move some to a second artifact.</li>
 <li><strong>Bug #28161</strong> (sidebar conflation) shows two artifacts mixed — close + reopen sidebar.</li>
 <li><strong>One source returns nothing</strong> — connector scope, query parameters, or the source DB schema. Debug per tile.</li>
-</ul>
-<h2>References</h2>
-<ul>
-<li>M04 — artifacts (foundational module).</li>
-<li>M12 — scheduled tasks (the morning brief task fires the artifact's data refresh too).</li>
-<li><code>references/connector-quirks.md</code> — bug #28161.</li>
-<li>M13 — GTD (the data source for the GTD tiles).</li>
 </ul>
   <nav class="module-nav">
     <a class="nav-link prev" href="m13.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M13 — GTD in Notion</div></a>

@@ -21,7 +21,7 @@ Better: tell Claude **who it's being**, **what context it needs**, **the specifi
 
 Skip the role, you get generic. Skip the context, Claude guesses. Skip the format, you get walls of prose. Skip the constraints, Claude hedges and pads.
 
-This module gives you the framework explicitly so the moves are conscious. After a week of using it, it'll be habit.
+This module gives you the framework explicitly so the moves are conscious. With practice, it becomes habit.
 
 ## Section 2 — Beginner / Getting Started
 
@@ -43,7 +43,7 @@ offer. Comp will be competitive but not the highest she could get.
 T: Write a follow-up email making the verbal offer and requesting a call this week to
 walk through specifics.
 
-F: 4 short paragraphs. No subject line. Closing requests a  call. Tone: warm,
+F: 4 short paragraphs. No subject line. Closing requests a call. Tone: warm,
 confident, not pushy.
 
 C: Don't mention specific compensation numbers. Don't sound like a form letter. No
@@ -98,7 +98,7 @@ Voice tools (Wispr / Superwhisper / Voibe) are installed during onboarding. They
 
 The trick: even when speaking, structure the prompt as R-C-T-F-C. Voice → text → R-C-T-F-C → Claude. Don't degrade your prompt quality just because you're talking.
 
-Two-minute practice: speak a prompt out loud, transcribe via your voice tool, send to Claude. Does it work?
+Quick practice: speak a prompt out loud, transcribe via your voice tool, send to Claude. Does it work?
 
 ### Prompt chains
 

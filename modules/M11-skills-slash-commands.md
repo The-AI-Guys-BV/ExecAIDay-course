@@ -98,7 +98,7 @@ These ship with Cowork itself, not from any plugin. Available in any Cowork Proj
 - **`/batch`** — apply a prompt to many similar items.
 - **`/loop`** — repeat a prompt at an interval within the session.
 - **`/debug`** — debugging assistance.
-- **`/skills`** — list all available skills in this session.
+- **the Skills list (Customize → Skills)** — list all available skills in this session.
 
 Plus document built-ins:
 - **`/pdf`** — generate or process PDFs.
@@ -108,7 +108,7 @@ Plus document built-ins:
 - **`/canvas-design`** — drawing / illustration.
 - **`/algorithmic-art`** — generative visuals.
 
-You don't need to memorize all of these. Type `/skills` to see what's available right now.
+You don't need to memorize all of these. Type the Skills list (Customize → Skills) to see what's available right now.
 
 ## Section 4 — Advanced
 
@@ -153,19 +153,19 @@ You can disable plugin skills too — though disabling a workshop skill defeats 
 
 ## Micro-win
 
-All 7 core skills work in real demos. The in-workshop install of `/help-me-prompt` succeeded. You can list every available skill via `/skills`. You ran `/skill-creator` and built a new skill from scratch.
+All 7 core skills work in real demos. The in-workshop install of `/help-me-prompt` succeeded. You can see every available skill in Customize → Skills.
 
 "You're an executive with 7 custom Claude skills, plus the ability to build more on demand." Public commitment moment.
 
 ## Verification checkpoint
 
 ```
-/skills
+Open Customize → Skills
 ```
 
 Expected: lists all installed skills. Should include the 7 core, the 19 GTD (covered in M13 but already installed via this plugin), the Cowork built-ins, plus any custom skills you built via `/skill-creator`.
 
-If `/skills` returns nothing or partial, the plugin may be incompletely installed.
+If the Skills list (Customize → Skills) returns nothing or partial, the plugin may be incompletely installed.
 
 ## Common issues
 
