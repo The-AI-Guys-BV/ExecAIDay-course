@@ -17,7 +17,7 @@ Course modules ship as Markdown files. Try these candidate paths in order using 
 4. `<directory containing this SKILL.md>/../modules/M<NN>-*.md` (sibling of skills/ at plugin root)
 5. `<directory containing this SKILL.md>/modules/M<NN>-*.md` (modules nested under teach skill folder)
 
-Filenames are: `M01-welcome-foundations.md`, `M02-prompt-engineering.md`, `M03-cowork-ui-settings.md`, `M04-artifacts.md`, `M05-projects-folders-claudemd.md`, `M06-obsidian.md`, `M07-chief-of-staff-claudemd.md`, `M08-connectors.md`, `M09-browser-chrome.md`, `M10-office-add-ins.md`, `M11-skills-slash-commands.md`, `M12-scheduled-tasks-routines.md`, `M13-gtd-in-notion.md`, `M14-daily-command-center.md`, `M15-meeting-notes.md`, `M16-collaboration.md`.
+Filenames are: `M01-welcome-foundations.md`, `M02-prompt-engineering.md`, `M03-cowork-ui-settings.md`, `M04-artifacts.md`, `M05-projects-folders-claudemd.md`, `M06-obsidian.md`, `M07-chief-of-staff-claudemd.md`, `M08-connectors.md`, `M09-browser-chrome.md`, `M10-office-add-ins.md`, `M11-skills-slash-commands.md`, `M12-scheduled-tasks-routines.md`, `M13-gtd-in-your-vault.md`, `M14-daily-command-center.md`, `M15-meeting-notes.md`, `M16-collaboration.md`.
 
 If none of the candidate paths return files: tell the user **"I can't find the modules folder. Run `ls ~/.claude/skills/teach/modules/` and `ls ~/Code/ExecAIDay-course/modules/` and tell me which path has the M01–M16 files."** Do NOT fabricate module content.
 

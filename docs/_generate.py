@@ -20,7 +20,7 @@ MODULES = [
     ("M10", "Office Add-ins", "connect", "M10-office-add-ins.md", '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>'),
     ("M11", "Skills + Slash Commands", "automate", "M11-skills-slash-commands.md", '<polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/>'),
     ("M12", "Scheduled Tasks + Routines", "automate", "M12-scheduled-tasks-routines.md", '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>'),
-    ("M13", "GTD in Notion", "system", "M13-gtd-in-notion.md", '<path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>'),
+    ("M13", "GTD in your vault", "system", "M13-gtd-in-your-vault.md", '<path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>'),
     ("M14", "Daily Command Center", "system", "M14-daily-command-center.md", '<rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/>'),
     ("M15", "Meeting Notes", "system", "M15-meeting-notes.md", '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>'),
     ("M16", "Collaboration & Shared Work", "system", "M16-collaboration.md", '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>'),
