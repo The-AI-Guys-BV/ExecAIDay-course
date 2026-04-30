@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cowork Essentials — Fast-paced track — ExecAIDay</title>
+<meta name="description" content="Cowork Essentials — the fast-paced track. Doc Tony handles all setup; you walk in and walk out with a working AI workspace.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="container topnav-inner">
+    <div class="brand"><a href="index.html"><span class="brand-mark">●</span> ExecAIDay</a></div>
+    <div class="nav-links">
+      <a href="index.html">Full course</a>
+    </div>
+  </div>
+</nav>
+
+<header class="module-hero">
+  <div class="container">
+    <div class="module-hero-icon" style="background: var(--automate-soft); color: var(--automate);">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+    </div>
+    <div class="eyebrow eyebrow-row">
+      <span class="breadcrumb"><a href="index.html">All modules</a> &nbsp;/&nbsp; Cowork Essentials</span>
+    </div>
+    <h1>Cowork Essentials</h1>
+    <p class="lede">The fast-paced track. Doc Tony handles all setup in advance — Cowork, Obsidian, Chrome + the Claude extension, the ExecAIDay plugin (with <code>/teach</code> and the rest of the skills), every connector, the Office add-ins, your starter folders. You walk in to a working system and walk out using it. 12 moves, each one direct: what to do, what prompt to try, what comes next. Whenever you want a deeper dive on any module, type <code>/teach &lt;module&gt;</code> in Cowork and the plugin walks you through it patiently. Or jump straight to the <a href="index.html">full course</a>.</p>
+  </div>
+</header>
+
+<main class="content container">
+
+<h2>1. Confirm everything is alive (M01)</h2>
+<p>Open Claude Desktop, switch to the <strong>Cowork</strong> tab. Find your workshop Cowork Project — your vault and work folder are mounted. Type <code>/teach</code> in the chat. You should see a list of 16 modules. That's your safety net: <code>/teach &lt;module&gt;</code> walks any topic patiently, on demand.</p>
+<p><strong>Deep dive:</strong> type <code>/teach M01</code> in Cowork, or open the <a href="m01.html">full M01 page</a>.</p>
+
+<h2>2. Sharpen any prompt with R-C-T-F-C (M02)</h2>
+<p>The best prompts have five elements: <strong>Role</strong>, <strong>Context</strong>, <strong>Task</strong>, <strong>Format</strong>, <strong>Constraints</strong>. Skip any one and the output is generic.</p>
+<p>If you don't want to remember all five, type:</p>
+<pre><code>/help-me-prompt help me write a follow-up email to a candidate I want to hire</code></pre>
+<p>Claude takes your draft and rewrites it in R-C-T-F-C structure. Ship the rewrite. <strong>Deep dive:</strong> type <code>/teach M02</code> in Cowork, or open the <a href="m02.html">full M02 page</a>.</p>
+
+<h2>3. Build a live artifact (M04)</h2>
+<p>An artifact is a generated output that renders inline. Live artifacts pull fresh data each time you open them. In Cowork:</p>
+<pre><code>Build me an interactive page showing the days of the week in a 2x4 grid,
+each in a different color, with today highlighted.</code></pre>
+<p>Renders right there. Close it, reopen — it refreshes. The Daily Command Center (step 11) is the same idea, scaled up. <strong>Deep dive:</strong> type <code>/teach M04</code> in Cowork, or open the <a href="m04.html">full M04 page</a>.</p>
+
+<h2>4. Operate websites with Claude in Chrome (M05)</h2>
+<p>Open Chrome (or Brave). Click the Claude extension icon — sidebar opens on the right. Open any portal you actually use (CRM, dashboard, vendor portal). In the sidebar:</p>
+<pre><code>Pull the next renewal date from the customer profile open in this tab.</code></pre>
+<p>Or record a 3-step workflow once and replay it on demand later. Or open 6 competitor sites in tabs and ask Claude to compile a comparison. <strong>Deep dive:</strong> type <code>/teach M05</code> in Cowork, or open the <a href="m05.html">full M05 page</a>.</p>
+
+<h2>5. Build your own slash command (M06)</h2>
+<p>You've already used <code>/teach</code> and <code>/help-me-prompt</code> — those are skills (slash commands). To build your own:</p>
+<pre><code>/skill-creator</code></pre>
+<p>Claude interviews you about a task you do often (a weekly status report, a specific kind of email follow-up, a pre-1:1 brief), drafts the skill, writes it to your machine. Then it's a slash command you can invoke forever. The autonomy moment. <strong>Deep dive:</strong> type <code>/teach M06</code> in Cowork, or open the <a href="m06.html">full M06 page</a>.</p>
+
+<h2>6. Write your chief-of-staff brief (M07)</h2>
+<p>The highest-leverage file in the workshop. Once it exists, every conversation inherits your voice, priorities, stakeholders, and tone. In Cowork:</p>
+<pre><code>Walk me through writing my chief-of-staff brief. Use the new-vault-claudemd
+pattern. Save the result to &lt;vault&gt;/About Me.md (create it if it doesn't
+exist). Then make sure &lt;vault&gt;/claude.md contains the one-line pointer:
+"Chief-of-staff brief: read About Me.md."</code></pre>
+<p>Claude interviews you for a few minutes — role, voice, stakeholders, what you avoid. Output is a 30-line brief that personalizes everything Claude does for you afterward. <strong>Deep dive:</strong> type <code>/teach M07</code> in Cowork, or open the <a href="m07.html">full M07 page</a>.</p>
+
+<h2>7. Use Claude to update your Obsidian vault (M08)</h2>
+<p>Your vault is mounted in your Cowork Project. That means Claude reads every note and writes back to any of them. Try:</p>
+<pre><code>Write a 5-line journal entry about how the workshop is going so far,
+in journal voice. Save to today's daily note in my vault.</code></pre>
+<p>Open Obsidian — the note is there, rendered. Same workflow scales: summarize references, tighten existing notes, expand outlines. <strong>Deep dive:</strong> type <code>/teach M08</code> in Cowork, or open the <a href="m08.html">full M08 page</a>.</p>
+
+<h2>8. Folders, projects, and the two files Claude reads automatically (M09)</h2>
+<p>Two files appear in every folder of your workspace and shape how Claude behaves there:</p>
+<ul>
+<li><code>claude.md</code> — per-folder context. Claude reads this first when working in or under that folder. The <strong>closer to the file Claude is editing, the higher priority</strong> the <code>claude.md</code> wins. Vault-root <code>claude.md</code> applies everywhere; a project-folder <code>claude.md</code> overrides for files inside that project.</li>
+<li><code>memory.md</code> — patterns Cowork learns about that folder over time. Claude appends to it as you work; you can edit by hand.</li>
+</ul>
+<p>To scaffold a new project — bounded body of work with Source Materials / Working Files / Deliverables buckets and a tailored <code>claude.md</code> — type:</p>
+<pre><code>/new-project board-deck-q3</code></pre>
+<p>Claude interviews you (outcome, stakeholders, deadline, tone), creates the project folder under your work folder, writes a synthesized <code>claude.md</code> that inherits your chief-of-staff brief plus this project's specifics, and creates a matching project file. From now on every conversation that touches files in that folder gets the project context for free. <strong>Deep dive:</strong> type <code>/teach M09</code> in Cowork, or open the <a href="m09.html">full M09 page</a>.</p>
+
+<h2>9. Verify your connectors (M10)</h2>
+<p>Doc Tony already authenticated Gmail / M365, Calendar, Drive, Slack, and your custom apps. Confirm in Customize → Connectors — all show Connected. Try one:</p>
+<pre><code>/email-triage today</code></pre>
+<p>Claude classifies your inbox into urgent / reply / read / archive / delete. Or:</p>
+<pre><code>/drafts-inbox new</code></pre>
+<p>Claude scans recent emails needing replies, drafts them all to a review surface. <strong>Deep dive:</strong> type <code>/teach M10</code> in Cowork, or open the <a href="m10.html">full M10 page</a>.</p>
+
+<h2>10. Make a branded PowerPoint (M11)</h2>
+<p>Doc Tony installed the Word, Excel, PowerPoint Claude add-ins. Open any recent on-brand PowerPoint deck of yours plus a blank one. In the blank deck's Claude sidebar:</p>
+<pre><code>Open &lt;path-to-the-reference-deck&gt;.pptx. Extract the visual style — fonts,
+color palette, logo placement, slide layouts. Then build me a 5-slide deck
+on [topic] using exactly that style. Don't copy the content — only the look.</code></pre>
+<p>Output looks like YOUR company's deck, not Claude's defaults. Cross-app context: do an Excel analysis first, then have PowerPoint Claude pull it in. <strong>Deep dive:</strong> type <code>/teach M11</code> in Cowork, or open the <a href="m11.html">full M11 page</a>.</p>
+
+<h2>11. Schedule Claude to work while you sleep (M12)</h2>
+<p>In Cowork: Settings → Scheduled tasks → New. Pick a cadence (e.g., Mondays at 8:30am), give it a prompt, send the output to a Slack DM, an email draft, or a file in your vault. Example:</p>
+<pre><code>Tell me what's important this week. Pull from my calendar (next 7 days),
+my recent emails (last 48h), and my Slack mentions. Format as a 5-line
+brief. Send as a Slack DM to me.</code></pre>
+<p>Mobile capture works the other way: phone → Dispatch → desktop Cowork → runs whatever skill. <strong>Deep dive:</strong> type <code>/teach M12</code> in Cowork, or open the <a href="m12.html">full M12 page</a>.</p>
+
+<h2>12. Build your Daily Command Center (M14)</h2>
+<p>The flagship artifact. One live page that pulls calendar, urgent email, drafts waiting, Slack mentions, and yesterday's reflection — all in one view that refreshes every time you open it. In Cowork:</p>
+<pre><code>Build me a live artifact called "Daily Command Center" with these tiles:
+1. Today's calendar (Calendar connector).
+2. Top 3 urgent emails (Gmail / M365).
+3. Drafts waiting for me to send.
+4. Slack mentions overnight.
+5. Yesterday's daily note closing paragraph.
+
+Layout 2 columns. Refresh on every open.</code></pre>
+<p>Open this every morning. Done. <strong>Deep dive:</strong> type <code>/teach M14</code> in Cowork, or open the <a href="m14.html">full M14 page</a>.</p>
+
+<h2>What this fast track skips</h2>
+<p>Four full-course modules aren't in the 12 above. They're not about getting up to speed — they're depth topics for when you're ready. Each one is one <code>/teach</code> command away.</p>
+
+<ul>
+<li><strong>M03 — Cowork UI + Settings.</strong> Treasure-hunt the 5 named UI elements. Configure 4 settings deliberately. Set data-sharing toggles with intention. Type <code>/teach M03</code> or open the <a href="m03.html">full M03 page</a>.</li>
+<li><strong>M13 — GTD.</strong> David Allen's GTD methodology, run from Cowork. Capture, process, query, review. Pick your store: Obsidian vault (default) or Notion. 19 GTD skills. Type <code>/teach M13</code> or open the <a href="m13.html">full M13 page</a>.</li>
+<li><strong>M15 — Meeting Notes.</strong> Bot-less capture (Granola / Bluedot / Fellow). Transcript pipeline → structured note in your vault → commitments captured into your inbox → follow-up emails drafted. Gap analysis vs your existing notes. Type <code>/teach M15</code> or open the <a href="m15.html">full M15 page</a>.</li>
+<li><strong>M16 — Collaboration & Shared Work.</strong> Shared Cowork folders. Multi-connector queries that span team surfaces. The team-leverage move. Type <code>/teach M16</code> or open the <a href="m16.html">full M16 page</a>.</li>
+</ul>
+
+<div class="slides-cta">
+  <a href="index.html" class="slides-cta-link">
+    <span class="slides-cta-label">Full course</span>
+    <span class="slides-cta-title">All 16 modules</span>
+    <span class="slides-cta-meta">Browse the complete curriculum and pick any module to dive into</span>
+  </a>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer-inner">
+    <div>ExecAIDay — premium Claude Cowork training for executives.</div>
+    <div>The AI Guys BV · <a href="https://github.com/The-AI-Guys-BV/ExecAIDay-course">github</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
