@@ -62,6 +62,13 @@ a:hover { color: var(--accent); }
 
 .container { max-width: var(--max-w); margin: 0 auto; padding: 0 clamp(24px, 5vw, 64px); }
 
+/* Module pages — narrower column so prose isn't pinned to the left of a wide container.
+   Cover page keeps the wider 1080px container for the module-card grid. */
+.module-hero .container,
+main.content.container {
+  max-width: 820px;
+}
+
 /* Top nav */
 .topnav {
   border-bottom: 1px solid var(--line);

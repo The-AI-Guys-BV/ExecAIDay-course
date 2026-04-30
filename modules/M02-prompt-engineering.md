@@ -9,7 +9,7 @@ The single biggest variable in whether Claude is useful or wasteful is the promp
 - Learn R-C-T-F-C with worked examples.
 - Walk through the 10 anti-patterns to recognize and avoid.
 - Try metaprompting via `/help-me-prompt` (you'll install this skill in M05; here you'll see the concept).
-- Quick voice mention (Wispr / Superwhisper / Voibe / FloWstay).
+- Quick voice mention (Wispr / Superwhisper / Voibe / FloWstay — FloWstay is Mac-only).
 
 ---
 
@@ -94,7 +94,14 @@ This is the meta-move: instead of remembering all 5 elements + 10 anti-patterns,
 
 ### Voice + prompting
 
-Voice tools (Wispr / Superwhisper / Voibe / FloWstay — [flowstay.app](https://flowstay.app)) transcribe what you say into your active text field. So you can speak prompts instead of typing them.
+Voice tools transcribe what you say into your active text field. So you can speak prompts instead of typing them. Options:
+
+- **Wispr Flow** ([wisprflow.ai](https://wisprflow.ai)) — Mac and Windows.
+- **Superwhisper** — Mac.
+- **Voibe** — Mac.
+- **FloWstay** ([flowstay.app](https://flowstay.app)) — Mac only (Apple Silicon).
+
+Pick one that runs on your platform.
 
 The trick: even when speaking, structure the prompt as R-C-T-F-C. Voice → text → R-C-T-F-C → Claude. Don't degrade your prompt quality just because you're talking.
 
