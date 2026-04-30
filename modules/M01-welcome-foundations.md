@@ -20,7 +20,10 @@ Tools and accounts you need installed before the workshop starts. Each item belo
 
 - **Claude Desktop with Cowork.** This is the workspace you'll spend the workshop in. Download from [claude.com/download](https://claude.com/download) for Mac or Windows. Sign in with your Anthropic Max account.
 - **Obsidian.** Free, local-first knowledge tool. Reads the same vault files Cowork sees. Download from [obsidian.md/download](https://obsidian.md/download).
-- **The ExecAIDay course plugin.** Provides `/teach` and the 19 GTD skills you'll use throughout the workshop. Marketplace URL: [github.com/The-AI-Guys-BV/ExecAIDay-course](https://github.com/The-AI-Guys-BV/ExecAIDay-course). To install inside Cowork: open the **Customize** sidebar → **Personal plugins** → click **+**, paste the marketplace URL above, then install the `execaiday` plugin from the list that appears.
+- **The ExecAIDay course plugin.** Provides `/teach` and the 19 GTD skills you'll use throughout the workshop. Marketplace URL: [github.com/The-AI-Guys-BV/ExecAIDay-course](https://github.com/The-AI-Guys-BV/ExecAIDay-course). To install inside Cowork:
+    1. Open the **Customize** sidebar.
+    2. **Add the marketplace first.** Click **+** to add a new personal marketplace, paste the URL above, confirm. Cowork syncs.
+    3. **Then install the plugin.** Go to **Personal plugins** (not the Anthropic plugins section). The `execaiday` plugin is now in the list — click **Install**.
 - **Your connectors.** Gmail or M365, Calendar, Drive, Slack, plus your custom apps (Asana / Jira / Linear / SFDC / etc., depending on what you use). Authenticated and scoped to your account inside Cowork's **Customize → Connectors** panel.
 - **A starter vault and a starter work folder.** Already placed on your filesystem at the path your assistant gave you. You'll mount both in your Cowork Project below.
 
