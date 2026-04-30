@@ -69,8 +69,6 @@ Click an old version to view it. Click "Restore" to bring it back as the current
 
 Known bug: sometimes the sidebar shows two artifacts' content interleaved. Workaround: close the sidebar entirely, reopen the specific artifact you want. Anthropic is tracking; expect a fix in a future Cowork release.
 
-If your assistant sees this, they'll flag and reset.
-
 ## Advanced
 
 ### Sharing limit (current as of April 2026)

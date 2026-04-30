@@ -21,9 +21,9 @@ You have a chief of staff right now. You probably don't think of them that way. 
 
 Claude doesn't have any of that yet. This module gives Claude a starter version — captured in writing, in your vault, accessible to every conversation.
 
-**Where the brief lives.** As a normal Obsidian note: `<vault>/About Me.md`. You can open it in Obsidian, edit it like any other note, link to it from daily notes (`[[About Me]]`). It's content, not config.
+**Where the brief lives.** As a normal Obsidian note: `<vault>/About Me.md`. You can open it in Obsidian, edit it like any other note, link to it from daily notes. It's content, not config.
 
-**How Cowork finds it.** A one-line pointer in `<vault>/claude.md`: "Chief-of-staff brief: read `About Me.md`." Cowork auto-reads `claude.md`, follows the pointer, picks up your brief. You don't touch `claude.md` again — your editing happens in `About Me.md`.
+**How Cowork finds it.** A one-line pointer in `<vault>/claude.md` tells Cowork where to find it. Cowork auto-reads this file, follows the pointer, and picks up your brief. You don't touch this system file again — your editing happens in `About Me.md`.
 
 Roughly 30 lines, 4 sections. Written through an interactive interview.
 

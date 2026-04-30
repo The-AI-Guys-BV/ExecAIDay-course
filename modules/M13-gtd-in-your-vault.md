@@ -46,7 +46,7 @@ Open Obsidian. Navigate to `<vault>/gtd/`. You'll see:
 
 References live in `<vault>/References/` as you already use them.
 
-The 19 GTD skills read and write these files. You normally don't open them by hand — but they ARE plain-text files, so you can if you want.
+The 19 GTD skills read and write these files. You normally don't open them by hand, but they're plain-text files viewable in Obsidian or any text editor.
 
 ### Tag conventions
 

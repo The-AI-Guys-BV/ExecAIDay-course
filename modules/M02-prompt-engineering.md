@@ -59,7 +59,6 @@ The five elements:
 - **F — Format.** Output shape: bullets, a table, a 2-paragraph email, a one-page memo.
 - **C — Constraints.** What NOT to do. The 2026 edge.
 
-Full reference: `references/rctfc-framework.md`.
 
 ## Intermediate
 
@@ -76,7 +75,6 @@ The 10 anti-patterns. Recognize them in your own prompting and you'll catch your
 9. **The follow-up "but"** — each "but" is a new task. Split.
 10. **No constraints** — Claude hedges and pads. Tell it what NOT to do.
 
-Full reference with examples: `references/10-anti-patterns.md`.
 
 ## Advanced
 

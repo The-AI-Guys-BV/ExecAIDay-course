@@ -86,7 +86,7 @@ Don't try to memorize. Recognize. You'll re-encounter every concept in later mod
 17. **`claude.md`** — the file Claude reads first in any folder. Per-folder context. Closer-to-the-file wins.
 18. **Context rot** — quality degrades as a session's context grows. Open a new chat per task. The single most important habit you'll build this workshop.
 
-For full definitions, see the References section of this plugin (`references/17-basic-concepts.md` and `references/context-and-context-rot.md`). `/teach` will walk either reference.
+For full definitions, see the References section at the end of this module. `/teach` will walk either reference.
 
 ## Advanced
 
@@ -98,7 +98,6 @@ For full definitions, see the References section of this plugin (`references/17-
 - **In front of clients without disclosure** — check your industry rules.
 - **"What should I do" life decisions** — Claude can think through options; the decision is yours.
 
-For details: `references/what-not-to-use-claude-for.md`.
 
 ---
 

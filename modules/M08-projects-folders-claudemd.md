@@ -63,7 +63,7 @@ These collide on the word "project." Both must be used together: a Cowork Projec
 
 ### Why every folder has `claude.md` + `memory.md`
 
-So Cowork has per-folder context. The vault root `claude.md` is a one-line pointer to your chief-of-staff brief — `About Me.md` in your vault (M06 writes both). The work-folder root `claude.md` is your work-context defaults. Each project folder's `claude.md` adds project-specific overrides.
+So Cowork has per-folder context. The vault root `claude.md` is a one-line pointer to your chief-of-staff brief in your vault (M06 sets this up). The work-folder root `claude.md` is your work-context defaults. Each project folder's `claude.md` adds project-specific overrides.
 
 Closer-to-the-file wins. So when Claude works on a file at `[work-folder]/q3-deck/Working Files/draft.md`, it reads in this order, with later files overriding earlier ones:
 

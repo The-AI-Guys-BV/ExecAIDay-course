@@ -125,7 +125,7 @@ Beyond per-cell formulas, Claude can:
 - Build a sensitivity analysis (run scenarios on input variables).
 - Explain a model in plain language.
 
-For high-stakes models that go to a board pack: ALWAYS verify the math externally. Claude is improved at math but is not a calculator. (See `references/what-not-to-use-claude-for.md`.)
+For high-stakes models that go to a board pack: ALWAYS verify the math externally. Claude is improved at math but is not a calculator.
 
 ### Word with tracked changes
 

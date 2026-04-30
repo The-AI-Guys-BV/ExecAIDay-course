@@ -109,8 +109,6 @@ Worth knowing without dwelling on:
 - **Microsoft Teams chat** is read-only via M365 connector. Sending messages programmatically isn't supported.
 - **Google Calendar** has full write scope (create / modify / delete events natively).
 
-Full list: `references/connector-quirks.md`.
-
 ### Disabling a connector for a session
 
 Sometimes you're working on something where you don't want connector data to mix in. Settings → Connectors → toggle off for the current Cowork Project.

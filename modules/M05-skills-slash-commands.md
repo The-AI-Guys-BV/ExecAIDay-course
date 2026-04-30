@@ -58,7 +58,7 @@ Claude pulls the next event on your calendar, attendee context, prior notes, rec
 /email-triage today
 ```
 
-Each skill has a SKILL.md you can read. They're in the plugin at `skills/<name>/SKILL.md`.
+Each skill has comprehensive documentation available for you to read.
 
 ## Intermediate
 

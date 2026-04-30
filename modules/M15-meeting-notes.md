@@ -155,7 +155,7 @@ Expected: Claude reads the most recent transcript file and lists decisions. If i
 - **Tool isn't capturing** — system audio permission missing on Mac (System Settings → Privacy → Screen Recording / Microphone). On Windows, similar permission flow.
 - **Transcript location mismatch** — your tool dumps to a different location than your vault expects. Configure either side to match.
 - **Claude reads the wrong transcript** — be specific in your prompt about which meeting / which date.
-- **Sensitive meeting accidentally captured** — delete the transcript and any vault note Claude wrote from it. The architecture is your discipline; it doesn't auto-protect.
+- **Sensitive meeting accidentally captured** — delete the transcript and any vault note Claude wrote from it. The architecture depends on your discipline; it doesn't auto-protect.
 
 ## References
 

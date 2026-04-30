@@ -46,8 +46,6 @@ Look at the prompt. It's a multi-step instruction: read calendar, read email tri
 
 So: a 9am task whose laptop slept all day may run at 11pm on wake. The guardrail prompt pattern is what prevents this from being a problem.
 
-Full reference: `references/scheduled-task-patterns.md`.
-
 ## Intermediate
 
 ### Add a second scheduled task
@@ -132,7 +130,6 @@ Choose based on task type:
 - Catch-up-ready (process-inbox, review-stale): RUN with lateness note.
 ```
 
-Full patterns + examples: `references/scheduled-task-patterns.md`.
 
 ### Combining scheduled tasks with skills
 
