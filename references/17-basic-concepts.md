@@ -26,7 +26,7 @@ Cowork lets you switch per Project or per chat.
 
 ## 5. Plans
 
-Free / Pro / Max / Team / Enterprise. Plans differ in: token limits, model access, plugin access, scheduled task limits, guest counts (for Notion-like sharing). Workshop assumes Max minimum for plugin support.
+Free / Pro / Max / Team / Enterprise. Plans differ in: token limits, model access, plugin access, scheduled task limits, guest counts (for shared workspaces). Workshop assumes Max minimum for plugin support.
 
 ## 6. Skills
 
@@ -34,7 +34,7 @@ Slash commands installed on your machine that extend Claude's behavior. In 2026 
 
 ## 7. Connectors
 
-Authenticated bridges between Claude and your services — Gmail, M365, Calendar, Drive, Slack, Notion, custom CRMs. Read or read+write depending on the connector. Set up in onboarding.
+Authenticated bridges between Claude and your services — Gmail, M365, Calendar, Drive, Slack, custom CRMs. Read or read+write depending on the connector.
 
 ## 8. MCP
 

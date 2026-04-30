@@ -26,11 +26,6 @@ Connectors mostly just work. These are the edges your assistant should already k
 - DMs are scoped to your account. Public channel content is broader.
 - Available on Pro/Max plans (Free plan has limited Slack scope).
 
-## Notion (native)
-
-- Full read + write at the page and database level you authorize.
-- Connector scope is per-page or per-workspace. Be deliberate about what you authorize — workshop master is invite-only and the `/teach`-driven module reads work locally; only the GTD database needs Notion connector access for the GTD skills.
-
 ## Drive (Google)
 
 - Read + write at the file level you authorize. Reads PDFs, Docs, Sheets, Slides natively.

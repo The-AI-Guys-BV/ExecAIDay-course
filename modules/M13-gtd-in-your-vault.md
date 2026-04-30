@@ -188,7 +188,7 @@ End-of-day discipline. The point is the daily review, not the time savings.
 
 ### Why files instead of a database
 
-Trade-off, plainly. A database (Notion, Airtable) gives you structured fields, joins, and a polished mobile app. Files give you: zero subscriptions, plain-text portability, version control, native Obsidian integration (backlinks, search, graph), and one home for tasks + knowledge. Plus Dispatch closes the mobile-capture gap.
+Trade-off, plainly. A database tool gives you structured fields, joins, and a polished mobile app. Files give you: zero subscriptions, plain-text portability, version control, native Obsidian integration (backlinks, search, graph), and one home for tasks + knowledge. Plus Dispatch closes the mobile-capture gap.
 
 For an executive working primarily from one laptop with cloud-synced vault, files win.
 

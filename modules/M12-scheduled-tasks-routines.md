@@ -111,7 +111,7 @@ Caveats:
 - Max plan required (Pro is rolling out).
 - A few seconds of latency is normal.
 
-This closes the mobile-capture gap that previously justified Notion. Voice-driven, hands-free, GTD from your phone.
+This closes the mobile-capture gap. Voice-driven, hands-free, GTD from your phone.
 
 ## Advanced
 

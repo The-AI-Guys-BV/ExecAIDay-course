@@ -32,7 +32,7 @@ Capture something. Anything. Type:
 /capture remind me to look at the Q3 numbers before the board meeting
 ```
 
-It lands in your Notion GTD Inbox without you opening Notion. That's the proof that the system is working.
+It lands in your GTD inbox at `<vault>/gtd/inbox.md`. That's the proof that the system is working.
 
 ## What to do this week
 
@@ -44,7 +44,7 @@ It lands in your Notion GTD Inbox without you opening Notion. That's the proof t
 ## What NOT to do this week
 
 - Don't try to use every skill. Pick three: `/capture`, `/process-inbox`, and one more that solves a real pain you have. Master those before adding more.
-- Don't manually edit your Notion GTD. Always go through Cowork. The skills enforce the GTD methodology; manual edits break the pattern.
+- Don't manually edit your GTD vault files when you can avoid it. Always go through Cowork. The skills enforce the GTD methodology; manual edits break the pattern.
 - Don't expect everything to feel natural in week one. The skills are deposits in a habit account. Two weeks in, the muscle is there.
 
 ## When you get stuck

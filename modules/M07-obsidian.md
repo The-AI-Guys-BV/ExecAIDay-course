@@ -14,7 +14,9 @@ Obsidian is your knowledge layer — free, local-first, and the same files Cowor
 
 ## Introduction
 
-You have a vault. It's a folder of plain-text notes. Cowork reads them. Obsidian renders them as a knowledge graph with bidirectional links, daily notes, plugins for everything.
+You have a vault. It's a folder of plain-text notes. Cowork reads and writes them. Obsidian renders them as a knowledge graph with bidirectional links, search, and a navigable file tree.
+
+**Role split, important.** Cowork is the active layer — it creates files, edits files, runs skills, builds artifacts. Obsidian is the viewer — it shows you what's in the vault, in a UI that's pleasant to read in. **You don't install Obsidian plugins.** Anything you'd want a plugin for (a dashboard, a calendar overview, a daily-note workflow), you build as a live artifact in Cowork instead. The vault stays plain markdown that any tool can read.
 
 The three-layer model from M01:
 - **Cowork folders = work files** (project folders, bounded work).
@@ -68,7 +70,7 @@ You'll see live editing again in the exercise at the end.
 - `Cmd/Ctrl + O` — open quick-switcher to find any note.
 - `[[note name]]` while typing — creates a wikilink to another note. Click it to navigate.
 - Tags `#tag` for cross-cutting categories.
-- Daily notes — open today's daily note via the Daily Notes plugin (calendar icon, or `Cmd/Ctrl + Shift + D`).
+- Daily notes — your `<vault>/Daily Notes/` folder holds dated notes (e.g., `2026-04-29.md`). Navigate by date in the file browser, or use `Cmd/Ctrl + O` and search the date.
 - Graph view — visualize how your notes link. Becomes meaningful after weeks of use.
 
 ## Advanced

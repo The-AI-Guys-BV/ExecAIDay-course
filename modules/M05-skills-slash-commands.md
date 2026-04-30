@@ -2,12 +2,12 @@
 
 ## Why this module matters
 
-You walk out as an executive with 7 custom Claude skills + a meta-skill (`/skill-creator`) that lets you build new ones forever. Up to here, you've been using Cowork's defaults. M05 is the autonomy moment — you're equipped to extend Cowork on your own.
+You've already used skills — `/teach` in M01, `/capture` in M04. This module names what they are, walks the 7 you'll use most, and shows you how to build your own with `/skill-creator`. After M05 you're not just a Cowork user — you can extend the system.
 
 ## What you'll do
 
-- Walk through the 7 core skills (5 pre-installed via this plugin + the in-workshop install of `/help-me-prompt`).
-- Install `/help-me-prompt` in-workshop — paste the install prompt, watch Claude write the skill, see it in action.
+- Walk through 7 core skills (all pre-installed via the ExecAIDay plugin from M01).
+- Manually re-install `/help-me-prompt` once — pedagogical, so you've seen the install pattern in case you ever write a skill from outside the plugin.
 - Tour Cowork's built-in slash commands.
 - Try `/skill-creator` to build a NEW skill from scratch.
 

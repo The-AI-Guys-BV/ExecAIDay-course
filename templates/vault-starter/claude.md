@@ -1,9 +1,11 @@
-# Chief of staff brief
+# Vault root claude.md
 
-This is your chief-of-staff brief. Right now it's a placeholder — Module 07 of the workshop walks you through writing the real one via interview.
+Placeholder. M06 of the workshop replaces this file with a one-line pointer to your chief-of-staff brief.
 
-When populated, Cowork reads this brief at the start of every conversation that happens in or under this folder. It's the highest-priority context Cowork has about you.
+After M06 this file will say:
 
-Until M06: Cowork works without it; expect generic tone until you personalize.
+  Chief-of-staff brief: read About Me.md.
 
-Personal details live in [[about-me/about-me]]. Tone defaults live in [[about-me/writing-rules]].
+Cowork reads this `claude.md` at the start of every conversation that happens in or under this folder. It points Cowork to `[[About Me]]` (your chief-of-staff brief) for context about you.
+
+Until M06: Cowork works without your brief; expect generic tone until you personalize. Personal long-form details live in `about-me/long-form.md`. Tone rules live in `about-me/writing-rules.md`.

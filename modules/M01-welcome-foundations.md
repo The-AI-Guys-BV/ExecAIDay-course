@@ -6,9 +6,9 @@ You start the workshop with a working Cowork Project, a tutor (`/teach`) that wa
 
 ## What you'll do
 
-- Verify your install.
+- Verify your install (Cowork, Obsidian, the ExecAIDay plugin, your connectors).
 - Create your workshop Cowork Project and mount your two folders (vault + work folder).
-- Install `/teach` and use it for the first time.
+- Confirm `/teach` is available — the plugin install put it in place — and try it for the first time.
 - Walk through 18 foundational concepts inside the workspace you just built.
 - See the hallucination demo and learn to calibrate trust.
 
@@ -48,9 +48,11 @@ Mount both folders:
 
 Both mounted in the same Cowork Project. This is load-bearing — the architecture relies on Cowork seeing both folders together.
 
-### Step 3 — Install `/teach`
+### Step 3 — Confirm `/teach` is available
 
-This is the first skill install. Your assistant will give you the install prompt. Paste it into Cowork. Claude writes the skill file. Confirm it worked by typing `/teach` (no arguments). You should see a list of modules.
+The plugin install in Section 1 placed `/teach` plus 25 other skills onto your machine. Confirm by typing `/teach` (no arguments) in Cowork. You should see the list of 16 modules.
+
+If you don't see it: the plugin install didn't complete. Tell your assistant — they fix it now.
 
 ### Step 4 — First teach demo
 
@@ -122,7 +124,7 @@ Expected: Claude lists both your vault and your work folder by name (the names y
 ## Common issues
 
 - **Cowork Project doesn't see one of the folders.** Re-mount it; confirm the path. Some MDM-managed laptops require explicit folder permission.
-- **`/teach` not auto-discovered after install.** Restart Cowork. If still not visible, check `~/.claude/skills/teach/SKILL.md` exists.
+- **`/teach` doesn't appear when you type it.** The plugin didn't install or didn't load. Restart Cowork. If still missing, your assistant will reinstall the plugin from the marketplace.
 
 ## References
 

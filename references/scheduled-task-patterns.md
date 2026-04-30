@@ -70,7 +70,7 @@ Run /weekly-review and post the result to <Slack channel>. If today is not Monda
 If the task can run without local files (no `claude.md` or `memory.md` access needed) and 1-hour granularity is fine, Routines are the better choice — they always run regardless of laptop state. Use for:
 
 - Always-on morning brief that needs to land even if your laptop is off all night.
-- Daily reports that pull from cloud connectors only (Slack, Notion, Calendar).
+- Daily reports that pull from cloud connectors only (Slack, Calendar, Drive).
 - Periodic monitoring (every hour) of an inbox or a Slack channel.
 
 Don't use Routines for: anything that needs to read your work folder, project `claude.md`s, or local Obsidian vault content — those require Desktop tasks.

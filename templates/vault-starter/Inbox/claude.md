@@ -4,4 +4,4 @@ GTD capture surface. Quick thoughts, links, things-to-look-at-later. Flat struct
 
 Default behavior:
 - Don't categorize on the way in.
-- `/process-inbox` runs the GTD clarifying step and moves items to Notion, [[References]], or trash.
+- `/process-inbox` runs the GTD clarifying step and moves items into the right vault GTD file (next-actions, waiting-for, someday, etc.), [[References]], or trash.

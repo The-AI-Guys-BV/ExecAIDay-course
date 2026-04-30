@@ -27,11 +27,11 @@ In Claude Cowork:
 - `/skills` — lists all 26 skills plus Cowork built-ins.
 - `/teach` (no args) — lists all 16 modules.
 - `/teach M01` — walks the first module.
-- `/capture <something>` — appends to your Notion GTD Inbox (requires Notion connector + GTD template duplicated into your workspace).
+- `/capture <something>` — appends a bullet to `<vault>/gtd/inbox.md` in your Obsidian vault.
 
-## Companion: GTD Notion Template
+## Companion: GTD vault layout
 
-The GTD skills (`/capture`, `/process-inbox`, `/whats-next`, etc.) read and write to a Notion GTD template. Each participant duplicates the template into their own Notion workspace once. Workshop ships the duplicate link separately (see workshop master).
+The GTD skills read and write plain files in your Obsidian vault at `<vault>/gtd/`. The `templates/vault-starter/gtd/` folder in this plugin scaffolds the layout (inbox, next-actions, projects/, etc.). See `references/gtd-vault-layout.md` for the full file structure and tag conventions.
 
 ## Repository structure
 

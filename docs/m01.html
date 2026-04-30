@@ -38,9 +38,9 @@
 <main class="content container">
 <h2>What you'll do</h2>
 <ul>
-<li>Verify your install.</li>
+<li>Verify your install (Cowork, Obsidian, the ExecAIDay plugin, your connectors).</li>
 <li>Create your workshop Cowork Project and mount your two folders (vault + work folder).</li>
-<li>Install <code>/teach</code> and use it for the first time.</li>
+<li>Confirm <code>/teach</code> is available — the plugin install put it in place — and try it for the first time.</li>
 <li>Walk through 18 foundational concepts inside the workspace you just built.</li>
 <li>See the hallucination demo and learn to calibrate trust.</li>
 </ul>
@@ -68,8 +68,9 @@
 <li>Your <strong>work folder</strong> (projects parent).</li>
 </ul>
 <p>Both mounted in the same Cowork Project. This is load-bearing — the architecture relies on Cowork seeing both folders together.</p>
-<h3>Step 3 — Install <code>/teach</code></h3>
-<p>This is the first skill install. Your assistant will give you the install prompt. Paste it into Cowork. Claude writes the skill file. Confirm it worked by typing <code>/teach</code> (no arguments). You should see a list of modules.</p>
+<h3>Step 3 — Confirm <code>/teach</code> is available</h3>
+<p>The plugin install in Section 1 placed <code>/teach</code> plus 25 other skills onto your machine. Confirm by typing <code>/teach</code> (no arguments) in Cowork. You should see the list of 16 modules.</p>
+<p>If you don't see it: the plugin install didn't complete. Tell your assistant — they fix it now.</p>
 <h3>Step 4 — First teach demo</h3>
 <p>Type <code>/teach M02</code>. Claude reads the M02 module file and starts walking it. Don't actually do M02 now (you'll do it next anyway), but see how <code>/teach</code> opens, lists the section, and waits for you. Type "exit" to close out.</p>
 <h2>Intermediate</h2>
@@ -121,7 +122,7 @@ What folders am I currently mounting in this Cowork Project?
 <h2>Common issues</h2>
 <ul>
 <li><strong>Cowork Project doesn't see one of the folders.</strong> Re-mount it; confirm the path. Some MDM-managed laptops require explicit folder permission.</li>
-<li><strong><code>/teach</code> not auto-discovered after install.</strong> Restart Cowork. If still not visible, check <code>~/.claude/skills/teach/SKILL.md</code> exists.</li>
+<li><strong><code>/teach</code> doesn't appear when you type it.</strong> The plugin didn't install or didn't load. Restart Cowork. If still missing, your assistant will reinstall the plugin from the marketplace.</li>
 </ul>
 
   <div class="slides-cta">

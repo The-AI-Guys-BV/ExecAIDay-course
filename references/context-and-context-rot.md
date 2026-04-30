@@ -9,7 +9,7 @@ Context is everything Claude considers when generating its next response. Inside
 - The system prompt (Cowork's own + your active skills' frontmatter).
 - Your `claude.md` files at the relevant levels (root vault, work folder, project folder — closer-to-the-file wins).
 - Mounted folder contents Claude has read this session.
-- Connector data Claude has fetched (inbox snapshots, calendar pulls, Notion queries).
+- Connector data Claude has fetched (inbox snapshots, calendar pulls, Slack pulls).
 - Every prior message in the current chat — yours and Claude's.
 - Files Claude has produced (artifacts, drafts, generated content).
 
@@ -37,7 +37,7 @@ You don't see this directly. Cowork hides the bookkeeping. But you'll feel its e
 
 Don't:
 - Use one chat all day.
-- Pile a strategy discussion, an email draft, a calendar query, a Notion update, and a research synthesis into the same conversation.
+- Pile a strategy discussion, an email draft, a calendar query, a vault update, and a research synthesis into the same conversation.
 - Try to "warm up" Claude with backstory and then ask the real question 20 messages later.
 
 Do:
@@ -50,7 +50,7 @@ Do:
 
 The naive intuition: "I'll give Claude everything, then it'll have all the context it needs."
 
-The reality: stuffing huge amounts of context — entire Drive folders, all your emails, every Notion page — DEGRADES output quality. The model has to wade through irrelevant material to find what matters. Context rot kicks in faster.
+The reality: stuffing huge amounts of context — entire Drive folders, all your emails, every vault note — DEGRADES output quality. The model has to wade through irrelevant material to find what matters. Context rot kicks in faster.
 
 The fix: **curate**. Use connectors to fetch what's needed for the current task, not everything. Use focused `claude.md` instead of dumping all context into prompts. Trust that Cowork's hierarchical loading will surface the right context when it matters.
 
