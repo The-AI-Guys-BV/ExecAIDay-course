@@ -32,14 +32,6 @@
     </div>
   </section>
 
-  <section class="slide slide-bigidea">
-    <div class="slide-inner">
-      <div class="slide-eyebrow">The big idea</div>
-      <p class="slide-bigidea-p">You have a chief of staff right now. You probably don't think of them that way. They're whoever knows your priorities, your quirks, your stakeholders, the things you do and don't say in writing. They've earned that knowledge over years.</p>
-<p class="slide-bigidea-p">Claude doesn't have any of that yet. This module gives Claude a starter version — captured in writing, in your vault, accessible to every conversation.</p>
-    </div>
-  </section>
-
   <section class="slide slide-what">
     <div class="slide-inner">
       <div class="slide-eyebrow">What you'll do</div>
@@ -54,13 +46,173 @@
     </div>
   </section>
 
-  <section class="slide slide-action">
+  <section class="slide slide-bigidea">
     <div class="slide-inner">
-      <div class="slide-eyebrow">The move</div>
-      <p class="slide-action-setup">In Cowork, paste this prompt:</p><pre class="slide-prompt"><code>Walk me through writing my chief-of-staff brief. Use the new-vault-claudemd pattern.
+      <div class="slide-eyebrow">The big idea</div>
+      <p class="slide-bigidea-p">You have a chief of staff right now. You probably don't think of them that way. They're whoever knows your priorities, your quirks, your stakeholders, the things you do and don't say in writing. They've earned that knowledge over years.</p>
+<p class="slide-bigidea-p">Claude doesn't have any of that yet. This module gives Claude a starter version — captured in writing, in your vault, accessible to every conversation.</p>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Beginner</div>
+      <h3 class="slide-section-subtitle">The interview</h3>
+      <div class="slide-section-body">
+        <p>In Cowork, paste this prompt:</p>
+<pre><code>
+Walk me through writing my chief-of-staff brief. Use the new-vault-claudemd pattern.
 Save the result to &lt;vault&gt;/About Me.md (create it if it doesn't exist).
 Then make sure &lt;vault&gt;/claude.md contains the one-line pointer:
-"Chief-of-staff brief: read About Me.md."</code></pre>
+"Chief-of-staff brief: read About Me.md."
+</code></pre>
+<p>Claude conducts an interview. Roughly 4 sections, several questions per section:</p>
+<p><strong>Section 1 — Who I am.</strong></p>
+<ul>
+<li>Role + company stage.</li>
+<li>What you spend most of your time on.</li>
+<li>Your most important stakeholders (board, investors, key customers, direct reports).</li>
+</ul>
+<p><strong>Section 2 — How I communicate.</strong></p>
+<ul>
+<li>Tone defaults (warm / neutral / direct / blunt).</li>
+<li>Length preferences (brief / measured / detailed).</li>
+<li>Words/phrases you avoid (some execs hate "leverage," "synergy," "circle back," etc.).</li>
+<li>Signature style.</li>
+</ul>
+<p><strong>Section 3 — What I value, what I avoid.</strong></p>
+<ul>
+<li>Working style preferences.</li>
+<li>Things that frustrate you (over-meetings, over-emailing, generic AI tells).</li>
+<li>What you DON'T want Claude doing on your behalf.</li>
+</ul>
+<p><strong>Section 4 — Context.</strong></p>
+<ul>
+<li>Industry / domain quirks.</li>
+<li>Confidentiality posture.</li>
+<li>Specific connectors or tools you rely on.</li>
+</ul>
+<p>Answer naturally. Don't over-engineer. The brief is meant to be ~30 lines — short and high-signal.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Beginner</div>
+      <h3 class="slide-section-subtitle">What gets written</h3>
+      <div class="slide-section-body">
+        <p>Claude synthesizes your answers into <code>&lt;vault&gt;/About Me.md</code> and writes the one-line pointer into <code>&lt;vault&gt;/claude.md</code>. Watch Obsidian render <code>About Me.md</code> live as Claude writes it. Edit any line you don't like.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Intermediate</div>
+      <h3 class="slide-section-subtitle">Add the longer-form context</h3>
+      <div class="slide-section-body">
+        <p><code>About Me.md</code> is the short brief. The vault also has a folder <code>about-me/</code> with two companion files for content that's too long for the brief:</p>
+<ul>
+<li><code>about-me/long-form.md</code> — extended personal context (role history, work patterns, things you care about deeply).</li>
+<li><code>about-me/writing-rules.md</code> — specific tone and word rules (dos and don'ts).</li>
+</ul>
+<p>Populate them:</p>
+<pre><code>
+Based on what I told you for the chief-of-staff brief, expand
+about-me/long-form.md with the longer-form context. Include role history,
+current stakeholders, work patterns, things-I-care-about-deeply.
+</code></pre>
+<p>Claude expands. You edit. Same for <code>writing-rules.md</code>:</p>
+<pre><code>
+Pull out specific writing rules from our interview into about-me/writing-rules.md.
+Format as a list of dos and don'ts.
+</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Intermediate</div>
+      <h3 class="slide-section-subtitle">Test the inheritance</h3>
+      <div class="slide-section-body">
+        <p>In a new Cowork chat:</p>
+<pre><code>
+Draft a 3-paragraph email to my board chair updating them on the Q3 trajectory.
+Use what you know about me.
+</code></pre>
+<p>Watch the output. It should:</p>
+<ul>
+<li>Use your tone (warm, direct, etc., per <code>About Me.md</code>).</li>
+<li>Avoid words you flagged.</li>
+<li>Match your length preference.</li>
+<li>Reference context from <code>about-me/long-form.md</code>.</li>
+</ul>
+<p>If it doesn't, the brief isn't doing its job. Edit and retest.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Advanced</div>
+      <h3 class="slide-section-subtitle">Maintaining the brief over time</h3>
+      <div class="slide-section-body">
+        <p>The chief-of-staff brief drifts. Things change. Your priorities shift. Stakeholders come and go. Quarterly:</p>
+<pre><code>
+Read my chief-of-staff brief. What feels stale? What's missing?
+</code></pre>
+<p>Claude surfaces likely-outdated lines. You decide what to update.</p>
+<p>Don't rewrite from scratch every quarter. The brief is durable.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Advanced</div>
+      <h3 class="slide-section-subtitle">When to update vs leave alone</h3>
+      <div class="slide-section-body">
+        <ul>
+<li>New role or major scope change → rewrite the role section.</li>
+<li>Tone preferences shifted (you hate a word now you didn't hate before) → update writing rules.</li>
+<li>New stakeholders → add them.</li>
+<li>Style of communication changes (you started running async-default standups) → update.</li>
+</ul>
+<p>Most quarters you change 2-3 lines.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Advanced</div>
+      <h3 class="slide-section-subtitle">Project-specific overrides</h3>
+      <div class="slide-section-body">
+        <p>Project <code>claude.md</code> (the one <code>/new-project</code> writes per project folder) can override the chief-of-staff brief for project-specific tone. Example:</p>
+<ul>
+<li><code>About Me.md</code> says "warm, direct, default to brevity."</li>
+<li>Project <code>claude.md</code> for <code>q3-board-deck/</code> says "Format / tone for this project: more formal than my default; explicitly cite all sources because the board chair has flagged AI-content concerns."</li>
+<li>For files in <code>q3-board-deck/</code>, Claude uses the more formal tone. Everywhere else, default warm-direct-brief.</li>
+</ul>
+<p>This is the layered architecture in action. Don't pre-write project overrides; let <code>/new-project</code> interview each one.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-try">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Try this</div>
+      
+      <div class="slide-try-body">
+        <p><strong>a. Recognition shock.</strong> Type:</p>
+<pre><code>
+Read my About Me and the about-me/ folder. Surface 3 things you noticed about me that aren't obvious from what I just told you — pattern matches, implications, context I might not have spelled out.
+</code></pre>
+<p>Claude responds with 3 specific, non-obvious observations. You feel seen. Most people get a "huh, yeah" reaction at least once. That's the moment the workshop pays off in a felt way.</p>
+<p><strong>b. Before/after email.</strong> Draft an email pre-brief (generic). Save the output. Then draft the SAME email post-brief. Compare. The post version sounds like you. Feels like a different tool.</p>
+      </div>
     </div>
   </section>
 
@@ -92,22 +244,14 @@ Summarize back to me what you know about me from About Me.md and the about-me/ f
     </div>
   </section>
 
-  <section class="slide slide-try">
+  <section class="slide slide-next-only">
     <div class="slide-inner">
-      <div class="slide-eyebrow">Try this</div>
-      <div class="slide-try-body">
-        <p><strong>a. Recognition shock.</strong> Type:</p>
-<pre><code>
-Read my About Me and the about-me/ folder. Surface 3 things you noticed about me that aren't obvious from what I just told you — pattern matches, implications, context I might not have spelled out.
-</code></pre>
-<p>Claude responds with 3 specific, non-obvious observations. You feel seen. Most people get a "huh, yeah" reaction at least once. That's the moment the workshop pays off in a felt way.</p>
-<p><strong>b. Before/after email.</strong> Draft an email pre-brief (generic). Save the output. Then draft the SAME email post-brief. Compare. The post version sounds like you. Feels like a different tool.</p>
-      </div>
+      <div class="slide-eyebrow">What's next</div>
       
         <div class="slide-next">
           <div class="slide-next-label">What's next</div>
           <div class="slide-next-title">M05 — Companion knowledge files</div>
-          <div class="slide-next-meta">Type <code>/teach M05</code> in Cowork to dive in next.</div>
+          <div class="slide-next-meta">Type <code>/teach M05</code> in Cowork to dive in next, or open the <a href="../m05.html">full M05 page</a>.</div>
         </div>
     </div>
   </section>

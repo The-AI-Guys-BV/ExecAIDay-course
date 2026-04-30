@@ -374,6 +374,41 @@ def esc_for_pre(s: str) -> str:
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
+def all_sections(md: str):
+    """Walk every ## section in the module file in order. Returns list of (heading, body)."""
+    pattern = re.compile(r"^## (.+?)\n(.*?)(?=^## |\Z)", re.MULTILINE | re.DOTALL)
+    out = []
+    for match in pattern.finditer(md):
+        heading = match.group(1).strip()
+        body = match.group(2).strip()
+        # Strip a trailing '---' divider if present (these sit between sections).
+        body = re.sub(r"\n---\s*$", "", body).strip()
+        out.append((heading, body))
+    return out
+
+
+def split_subsections(body: str):
+    """Split a section body by '### ' headers. Returns list of (subtitle, sub_body).
+    If there are fewer than 2 subsections, returns [(None, full_body)] so we keep it
+    on a single slide. The intro paragraph(s) before the first ### become a (None, intro)
+    entry when subsections do exist."""
+    parts = re.split(r"\n### ", "\n" + body)
+    # parts[0] is everything before the first ### (may be empty, with a leading newline).
+    if len(parts) < 3:
+        # 0 or 1 subsection — keep the whole section on one slide.
+        return [(None, body)]
+    result = []
+    intro = parts[0].lstrip("\n").strip()
+    if intro:
+        result.append((None, intro))
+    for part in parts[1:]:
+        lines = part.split("\n", 1)
+        subtitle = lines[0].strip()
+        sub_body = lines[1].strip() if len(lines) > 1 else ""
+        result.append((subtitle, sub_body))
+    return result
+
+
 SLIDES_TEMPLATE = """<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -430,15 +465,29 @@ SLIDES_TEMPLATE = """<!DOCTYPE html>
 
 
 def build_slides_html(num, title, phase, phase_label, icon, md, next_mod):
-    """Build the inner HTML for all slides in a single module deck.
-    Returns the concatenated <section class="slide ...">...</section> markup.
-    Each section is included only when its source content exists in the module."""
-    sections = []
+    """Build the inner HTML for all slides in a module deck.
 
-    # 1. Title slide — phase, number, title, optional outcome line.
+    Slide order — every ## section in the module file produces at least one slide,
+    in file order. Sections with 2+ ### subsections produce one slide per subsection.
+
+    1. Title (phase, number, title, outcome line)
+    2. Why this matters
+    3. What you'll do (bullets)
+    4. Big idea (Introduction)
+    5. Beginner / Getting Started — full section
+    6. Intermediate (1+ slides depending on subsections)
+    7. Advanced (1+ slides depending on subsections)
+    8. Try this (exercise)
+    9. Verification checkpoint
+    10. Common issues
+    11. What's next (always last)
+    """
+    out = []
+
+    # Title slide.
     outcome = outcome_from_md(md)
     outcome_html = f'<p class="title-outcome">{outcome}</p>' if outcome else ""
-    sections.append(f"""
+    out.append(f"""
   <section class="slide slide-title">
     <div class="slide-inner">
       <div class="title-icon" style="background: var(--{phase}-soft); color: var(--{phase});">
@@ -451,117 +500,137 @@ def build_slides_html(num, title, phase, phase_label, icon, md, next_mod):
     </div>
   </section>""")
 
-    # 2. Why this matters — always present.
-    lede = lede_from_md(md)
-    if lede:
-        sections.append(f"""
+    # Walk every ## section in the source file order.
+    for heading, body in all_sections(md):
+        if heading == "References":
+            # Internal plugin paths — not useful on a slide.
+            continue
+
+        if heading == "Why this module matters":
+            lede = inline(body.split("\n\n")[0].strip()) if body else ""
+            if lede:
+                out.append(f"""
   <section class="slide slide-why">
     <div class="slide-inner">
       <div class="slide-eyebrow">Why this matters</div>
       <p class="slide-lede">{lede}</p>
     </div>
   </section>""")
+            continue
 
-    # 3. The big idea — first 1-2 prose paragraphs of the Introduction.
-    big_idea = big_idea_from_md(md)
-    if big_idea:
-        sections.append(f"""
+        if heading == "What you'll do":
+            what_html = what_youll_do_from_md(md)
+            if what_html:
+                out.append(f"""
+  <section class="slide slide-what">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">What you'll do</div>
+      <div class="slide-list">
+        {what_html}
+      </div>
+    </div>
+  </section>""")
+            continue
+
+        if heading == "Introduction":
+            big_idea = big_idea_from_md(md)
+            if big_idea:
+                out.append(f"""
   <section class="slide slide-bigidea">
     <div class="slide-inner">
       <div class="slide-eyebrow">The big idea</div>
       {big_idea}
     </div>
   </section>""")
+            continue
 
-    # 4. What you'll do — bullets.
-    what = what_youll_do_from_md(md)
-    if what:
-        sections.append(f"""
-  <section class="slide slide-what">
-    <div class="slide-inner">
-      <div class="slide-eyebrow">What you'll do</div>
-      <div class="slide-list">
-        {what}
-      </div>
-    </div>
-  </section>""")
-
-    # 5. The action — actual prompt or numbered UI steps from Beginner section.
-    action = action_from_md(md)
-    if action:
-        sections.append(f"""
-  <section class="slide slide-action">
-    <div class="slide-inner">
-      <div class="slide-eyebrow">The move</div>
-      {action}
-    </div>
-  </section>""")
-
-    # 6. Verify — verification checkpoint.
-    verify = verify_from_md(md)
-    if verify:
-        sections.append(f"""
+        if heading == "Verification checkpoint" or heading.startswith("Verification"):
+            verify_html = md_to_html(body)
+            out.append(f"""
   <section class="slide slide-verify">
     <div class="slide-inner">
       <div class="slide-eyebrow">How you know it worked</div>
       <div class="slide-verify-body">
-        {verify}
+        {verify_html}
       </div>
     </div>
   </section>""")
+            continue
 
-    # 7. Common issues — bullet list.
-    issues = common_issues_from_md(md)
-    if issues:
-        sections.append(f"""
+        if heading == "Common issues":
+            issues_html = md_to_html(body)
+            out.append(f"""
   <section class="slide slide-issues">
     <div class="slide-inner">
       <div class="slide-eyebrow">If something breaks</div>
       <div class="slide-issues-body">
-        {issues}
+        {issues_html}
+      </div>
+    </div>
+  </section>""")
+            continue
+
+        if heading.startswith("Try th"):
+            try_html = md_to_html(body)
+            # Strip the eyebrow's "Try this — branded deck" suffix into a subtitle.
+            sub = heading.split(" — ", 1)[1] if " — " in heading else None
+            sub_html = f'<h3 class="slide-section-subtitle">{inline(sub)}</h3>' if sub else ""
+            out.append(f"""
+  <section class="slide slide-try">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Try this</div>
+      {sub_html}
+      <div class="slide-try-body">
+        {try_html}
+      </div>
+    </div>
+  </section>""")
+            continue
+
+        # Generic section — Beginner, Intermediate, Advanced, plus any one-offs.
+        # Eyebrow strips ' / Getting Started' for a cleaner label.
+        eyebrow = heading.replace(" / Getting Started", "")
+        for subtitle, sub_body in split_subsections(body):
+            sub_html = (
+                f'<h3 class="slide-section-subtitle">{inline(subtitle)}</h3>'
+                if subtitle else ""
+            )
+            body_html = md_to_html(sub_body)
+            out.append(f"""
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">{eyebrow}</div>
+      {sub_html}
+      <div class="slide-section-body">
+        {body_html}
       </div>
     </div>
   </section>""")
 
-    # 8. Try this + what's next — exercise, plus pointer to next module.
-    try_this = try_this_from_md(md)
+    # Closing What's-next slide — always last.
     if next_mod:
-        next_html = f"""
+        next_inner = f"""
         <div class="slide-next">
           <div class="slide-next-label">What's next</div>
           <div class="slide-next-title">{next_mod[0]} — {next_mod[1]}</div>
-          <div class="slide-next-meta">Type <code>/teach {next_mod[0]}</code> in Cowork to dive in next.</div>
+          <div class="slide-next-meta">Type <code>/teach {next_mod[0]}</code> in Cowork to dive in next, or open the <a href="../m{int(next_mod[0][1:]):02d}.html">full {next_mod[0]} page</a>.</div>
         </div>"""
     else:
-        next_html = """
+        next_inner = """
         <div class="slide-next">
           <div class="slide-next-label">Course complete</div>
           <div class="slide-next-title">You finished the deck.</div>
           <div class="slide-next-meta">Open the <a href="../index.html">course overview</a> to revisit any module — or use <code>/teach &lt;module&gt;</code> in Cowork.</div>
         </div>"""
-
-    if try_this:
-        sections.append(f"""
-  <section class="slide slide-try">
-    <div class="slide-inner">
-      <div class="slide-eyebrow">Try this</div>
-      <div class="slide-try-body">
-        {try_this}
-      </div>
-      {next_html}
-    </div>
-  </section>""")
-    else:
-        # Modules without a Try this still get a closing 'next' slide.
-        sections.append(f"""
+    out.append(f"""
   <section class="slide slide-next-only">
     <div class="slide-inner">
       <div class="slide-eyebrow">What's next</div>
-      {next_html}
+      {next_inner}
     </div>
   </section>""")
 
-    return "\n".join(sections)
+    return "\n".join(out)
 
 
 def main():

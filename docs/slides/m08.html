@@ -32,14 +32,6 @@
     </div>
   </section>
 
-  <section class="slide slide-bigidea">
-    <div class="slide-inner">
-      <div class="slide-eyebrow">The big idea</div>
-      <p class="slide-bigidea-p">An artifact is a generated output Claude renders inline alongside its text response. For executives, the kinds that matter are documents you can edit, dashboards you can re-open, and diagrams that explain a flow.</p>
-<p class="slide-bigidea-p">The 2026 headline: <strong>live artifacts</strong> auto-refresh on reopen. So the dashboard isn't a snapshot — it's a re-runnable view that pulls fresh data each time you open it. Daily morning brief, weekly status, project tracker — these become living surfaces, not stale screenshots.</p>
-    </div>
-  </section>
-
   <section class="slide slide-what">
     <div class="slide-inner">
       <div class="slide-eyebrow">What you'll do</div>
@@ -53,11 +45,127 @@
     </div>
   </section>
 
-  <section class="slide slide-action">
+  <section class="slide slide-bigidea">
     <div class="slide-inner">
-      <div class="slide-eyebrow">The move</div>
-      <p class="slide-action-setup">Try one now. In Cowork:</p><pre class="slide-prompt"><code>Make me an interactive page showing the days of the week in a 2x4 grid, each in a
-different color, with today highlighted.</code></pre>
+      <div class="slide-eyebrow">The big idea</div>
+      <p class="slide-bigidea-p">An artifact is a generated output Claude renders inline alongside its text response. For executives, the kinds that matter are documents you can edit, dashboards you can re-open, and diagrams that explain a flow.</p>
+<p class="slide-bigidea-p">The 2026 headline: <strong>live artifacts</strong> auto-refresh on reopen. So the dashboard isn't a snapshot — it's a re-runnable view that pulls fresh data each time you open it. Daily morning brief, weekly status, project tracker — these become living surfaces, not stale screenshots.</p>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Beginner</div>
+      
+      <div class="slide-section-body">
+        <p>The artifact kinds you'll actually ask for:</p>
+<ul>
+<li><strong>Documents</strong> — long-form writing (briefs, memos, reports).</li>
+<li><strong>Interactive pages</strong> — a self-contained dashboard or mini-tool you can click around in.</li>
+<li><strong>Diagrams</strong> — flowcharts, org charts, process diagrams (Mermaid does these in plain English: "draw me a flow from A to B to C").</li>
+</ul>
+<p>You don't write any code. You describe what you want; Claude builds it.</p>
+<p>Try one now. In Cowork:</p>
+<pre><code>
+Make me an interactive page showing the days of the week in a 2x4 grid, each in a
+different color, with today highlighted.
+</code></pre>
+<p>Cowork generates the artifact, opens the artifact sidebar on the right, renders it inline.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Intermediate</div>
+      <h3 class="slide-section-subtitle">Live artifacts — the headline</h3>
+      <div class="slide-section-body">
+        <p>A regular artifact is a snapshot. A LIVE artifact pulls fresh data each time it opens. Same artifact ID, fresh content.</p>
+<p>Build one. In Cowork:</p>
+<pre><code>
+Build me a live artifact that shows the items currently in my GTD Inbox at &lt;vault&gt;/gtd/inbox.md.
+Read fresh from the file each time the artifact opens.
+</code></pre>
+<p>Cowork builds the artifact, reads <vault>/gtd/inbox.md, and renders the inbox items. Close the artifact panel. Close Cowork entirely. Reopen tomorrow. Reopen this artifact. It pulls fresh data — your CURRENT inbox, not yesterday's snapshot.</p>
+<p>That's live. The full Daily Command Center artifact in M15 — pulling calendar, email, Slack, and your vault GTD all together — only works after the rest of your connectors come online in M10.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Intermediate</div>
+      <h3 class="slide-section-subtitle">Sidebar access</h3>
+      <div class="slide-section-body">
+        <p>Right side of Cowork. Opens when an artifact is generated. Shows:</p>
+<ul>
+<li>The current artifact in the main pane.</li>
+<li>A list of recent artifacts in this Cowork Project (left of main pane).</li>
+<li>Version history for the current artifact (top right).</li>
+</ul>
+<p>Click an old version to view it. Click "Restore" to bring it back as the current version.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Intermediate</div>
+      <h3 class="slide-section-subtitle">Bug #28161 — sidebar conflation</h3>
+      <div class="slide-section-body">
+        <p>Known bug: sometimes the sidebar shows two artifacts' content interleaved. Workaround: close the sidebar entirely, reopen the specific artifact you want. Anthropic is tracking; expect a fix in a future Cowork release.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Advanced</div>
+      <h3 class="slide-section-subtitle">Sharing limit (current as of April 2026)</h3>
+      <div class="slide-section-body">
+        <p>You can't share live artifacts with other users yet — they're own-use only. So your live artifacts are private to you. (Static artifacts can be exported and shared as files, but the live-refresh capability is account-bound.)</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Advanced</div>
+      <h3 class="slide-section-subtitle">Version history + restore</h3>
+      <div class="slide-section-body">
+        <p>Every edit to an artifact creates a new version. The artifact sidebar shows the version list with timestamps. You can:</p>
+<ul>
+<li>Click any version to view it (read-only).</li>
+<li>Click "Restore this version" to bring it back as current.</li>
+</ul>
+<p>Useful when a Claude edit makes the artifact worse and you want to roll back.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Advanced</div>
+      <h3 class="slide-section-subtitle">Building artifacts as part of workflows</h3>
+      <div class="slide-section-body">
+        <p>Artifacts compose with skills. A skill can produce an artifact as its output. Examples:</p>
+<ul>
+<li><code>/today</code> could output a brief artifact instead of text.</li>
+<li>A skill you build later (M07) could maintain a project tracker artifact.</li>
+</ul>
+<p>The pattern: skill = trigger; artifact = persistent visible surface.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-try">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Try this</div>
+      
+      <div class="slide-try-body">
+        <p>Build the GTD-Inbox live artifact above. With the artifact open, in another Cowork tab type <code>/capture remind me to test the live artifact</code>. Watch your new item appear in the artifact when it refreshes. That's "live" — not a screenshot, a surface that updates.</p>
+<p>In M15 you'll build the full version that pulls calendar, email, Slack, and your vault GTD together. For now, one live tile is enough to feel the difference.</p>
+      </div>
     </div>
   </section>
 
@@ -88,18 +196,14 @@ Show me the artifact I just built. What data source does it query?
     </div>
   </section>
 
-  <section class="slide slide-try">
+  <section class="slide slide-next-only">
     <div class="slide-inner">
-      <div class="slide-eyebrow">Try this</div>
-      <div class="slide-try-body">
-        <p>Build the GTD-Inbox live artifact above. With the artifact open, in another Cowork tab type <code>/capture remind me to test the live artifact</code>. Watch your new item appear in the artifact when it refreshes. That's "live" — not a screenshot, a surface that updates.</p>
-<p>In M15 you'll build the full version that pulls calendar, email, Slack, and your vault GTD together. For now, one live tile is enough to feel the difference.</p>
-      </div>
+      <div class="slide-eyebrow">What's next</div>
       
         <div class="slide-next">
           <div class="slide-next-label">What's next</div>
           <div class="slide-next-title">M09 — Browser + Chrome</div>
-          <div class="slide-next-meta">Type <code>/teach M09</code> in Cowork to dive in next.</div>
+          <div class="slide-next-meta">Type <code>/teach M09</code> in Cowork to dive in next, or open the <a href="../m09.html">full M09 page</a>.</div>
         </div>
     </div>
   </section>

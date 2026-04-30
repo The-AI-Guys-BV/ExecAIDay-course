@@ -32,14 +32,6 @@
     </div>
   </section>
 
-  <section class="slide slide-bigidea">
-    <div class="slide-inner">
-      <div class="slide-eyebrow">The big idea</div>
-      <p class="slide-bigidea-p">Three collaboration surfaces you'll touch:</p>
-<p class="slide-bigidea-p">Sales reality: workshop targets same-company cohorts when possible (so the collaboration exercise is realistic). Mixed cohorts run the pairs exercise on a pre-seeded fake project.</p>
-    </div>
-  </section>
-
   <section class="slide slide-what">
     <div class="slide-inner">
       <div class="slide-eyebrow">What you'll do</div>
@@ -49,6 +41,140 @@
 <li>Pair up (2-3 per group) and collaborate live on a pre-seeded fake project.</li>
 <li>Run multi-connector magic: Claude reads Slack + Gmail + your shared folder in one shot during the collaboration scenario.</li>
 </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-bigidea">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">The big idea</div>
+      <p class="slide-bigidea-p">Three collaboration surfaces you'll touch:</p>
+<p class="slide-bigidea-p">Sales reality: workshop targets same-company cohorts when possible (so the collaboration exercise is realistic). Mixed cohorts run the pairs exercise on a pre-seeded fake project.</p>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Beginner</div>
+      <h3 class="slide-section-subtitle">Shared Cowork folder</h3>
+      <div class="slide-section-body">
+        <p>This is more involved. Your IT team set up a shared cloud folder (Dropbox / Google Drive / OneDrive — whichever your org uses). The folder syncs to all team members' machines.</p>
+<p>Each team member mounts the same shared folder in their Cowork Project (alongside their personal vault and work folder).</p>
+<p>Now anyone on the team can:</p>
+<ul>
+<li>Read what others have written.</li>
+<li>Write into shared deliverables.</li>
+<li>Track joint progress through claude.md / memory.md updates.</li>
+</ul>
+<p>Caveat: be careful with <code>claude.md</code> files in shared folders. The shared folder root <code>claude.md</code> describes the SHARED context, not your personal preferences. Don't drop your chief-of-staff brief into a shared folder.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Beginner</div>
+      <h3 class="slide-section-subtitle">Pair exercise</h3>
+      <div class="slide-section-body">
+        <p>Pair up (2-3 people). Pre-seeded scenario your assistant provides:</p>
+<ul>
+<li>Shared Cowork folder with a fake project (e.g., "Q4 product launch planning") — pre-seeded with placeholder files.</li>
+<li>Shared Cowork folder with placeholder Source Materials.</li>
+<li>A Slack channel you both have access to.</li>
+<li>A few seed emails about the project.</li>
+</ul>
+<p>Goal: collaboratively produce a one-page memo summarizing the project state, with Claude reading from all sources.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Intermediate</div>
+      <h3 class="slide-section-subtitle">Multi-connector magic</h3>
+      <div class="slide-section-body">
+        <p>The core capability: Claude reads multiple sources in one query and synthesizes.</p>
+<pre><code>
+For [shared project], pull:
+- The latest Slack thread about it (channel: #q4-launch).
+- The shared Cowork folder for the project.
+- Any emails in my inbox tagged with the project name (last 7 days).
+
+Synthesize into a one-page memo: state of play, what's blocking, what's the next decision needed.
+</code></pre>
+<p>Claude reads all three, synthesizes. Output is one page — couldn't have produced manually faster.</p>
+<p>This is "multi-connector magic." You've been using individual connectors all workshop; M17 is where they compose.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Intermediate</div>
+      <h3 class="slide-section-subtitle">Collaboration scenarios (live)</h3>
+      <div class="slide-section-body">
+        <p>Try one or two during the in-room exercise:</p>
+<p><strong>Scenario A — Joint memo.</strong> Both pair members work on the same memo in the shared folder. One drafts a section in their Cowork. The other Reviews from theirs. Claude reads the latest version each time — no manual file-syncing.</p>
+<p><strong>Scenario B — Joint decision.</strong> Use Claude to synthesize different stakeholders' positions (per Slack threads and shared folder content) and propose a path forward. Both pair members feed in their context; Claude produces one synthesis.</p>
+<p><strong>Scenario C — Joint status update.</strong> Generate a team standup brief from all the sources together. Pair refines.</p>
+<p>The point isn't the specific scenario — it's that two people doing the same workflow in their respective Cowork instances produce the same answers from the same sources. The team gets consistency.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Advanced</div>
+      <h3 class="slide-section-subtitle">Multi-Cowork-Project patterns for sensitive work</h3>
+      <div class="slide-section-body">
+        <p>Shared work has a confidentiality dimension. If part of your team is working on sensitive content (M&A, legal, personnel), they probably need a separate Cowork Project that:</p>
+<ul>
+<li>Mounts the shared folder for THIS sensitive workstream only.</li>
+<li>Does NOT mount their personal vault (to keep personal context out).</li>
+<li>Has tight connector scope (no Gmail, no Slack — only the shared folder for the workstream).</li>
+</ul>
+<p>The architecture supports this. The discipline is the team's.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Advanced</div>
+      <h3 class="slide-section-subtitle">Team GTD considerations</h3>
+      <div class="slide-section-body">
+        <p>Per the workshop's locked decision: team GTD only works if every team member does their personal GTD. One laggard contaminates the system.</p>
+<p>If your team is interested in shared GTD: run them through the workshop too. Otherwise, your team uses your personal GTD as their visibility into your work, but not the other way around.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Advanced</div>
+      <h3 class="slide-section-subtitle">Cross-org collaboration limits</h3>
+      <div class="slide-section-body">
+        <p>External collaborators (different company, different Slack workspace): hard to bring into Cowork's shared model. Per the locked workshop decision, external collaboration is OUT — keep team Cowork inside the org.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Advanced</div>
+      <h3 class="slide-section-subtitle">Permissions hygiene</h3>
+      <div class="slide-section-body">
+        <p>Shared Cowork folders: filesystem-level access control. Whoever has the cloud folder mounted sees everything in it. Don't put confidential subprojects in a folder shared widely. Quarterly: audit who has access to what.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-try">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Try this</div>
+      <h3 class="slide-section-subtitle">multi-connector magic</h3>
+      <div class="slide-try-body">
+        <p>Claude reads Slack + Gmail + the shared Cowork folder in one shot during the collaboration scenario. Output combines all three sources into one coherent narrative. The realization: this isn't a feature; it's a different way of working.</p>
       </div>
     </div>
   </section>
@@ -79,12 +205,9 @@ For [the shared project], list every source you can pull from right now and what
     </div>
   </section>
 
-  <section class="slide slide-try">
+  <section class="slide slide-next-only">
     <div class="slide-inner">
-      <div class="slide-eyebrow">Try this</div>
-      <div class="slide-try-body">
-        <p>Claude reads Slack + Gmail + the shared Cowork folder in one shot during the collaboration scenario. Output combines all three sources into one coherent narrative. The realization: this isn't a feature; it's a different way of working.</p>
-      </div>
+      <div class="slide-eyebrow">What's next</div>
       
         <div class="slide-next">
           <div class="slide-next-label">Course complete</div>

@@ -32,6 +32,19 @@
     </div>
   </section>
 
+  <section class="slide slide-what">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">What you'll do</div>
+      <div class="slide-list">
+        <ul>
+<li>Review the morning-brief scheduled task set up Day 1 closing (now firing tomorrow morning).</li>
+<li>Add a second scheduled task or Routine relevant to your workflow.</li>
+<li>Learn the difference: Desktop tasks (local, 1-min granularity, awake+open required) vs Routines (cloud, 1-hour min, always-on).</li>
+</ul>
+      </div>
+    </div>
+  </section>
+
   <section class="slide slide-bigidea">
     <div class="slide-inner">
       <div class="slide-eyebrow">The big idea</div>
@@ -42,15 +55,176 @@
     </div>
   </section>
 
-  <section class="slide slide-what">
+  <section class="slide slide-section">
     <div class="slide-inner">
-      <div class="slide-eyebrow">What you'll do</div>
-      <div class="slide-list">
-        <ul>
-<li>Review the morning-brief scheduled task set up Day 1 closing (now firing tomorrow morning).</li>
-<li>Add a second scheduled task or Routine relevant to your workflow.</li>
-<li>Learn the difference: Desktop tasks (local, 1-min granularity, awake+open required) vs Routines (cloud, 1-hour min, always-on).</li>
+      <div class="slide-eyebrow">Beginner</div>
+      <h3 class="slide-section-subtitle">Review the morning brief</h3>
+      <div class="slide-section-body">
+        <p>If your workshop is on Day 2, you should have received a morning brief this morning via:</p>
+<ul>
+<li>A Slack post on your phone.</li>
+<li>An <code>.md</code> file in your Cowork folder.</li>
+<li>A live artifact dashboard inside Cowork.</li>
 </ul>
+<p>The Day 1 closing set up this scheduled task. Open the artifact now — you'll see today's calendar, urgent emails, draft replies pending, Slack mentions overnight.</p>
+<p>Walk through the task itself: Settings → Scheduled tasks. The morning-brief task is there with its prompt, schedule, and last-run status.</p>
+<p>Look at the prompt. It's a multi-step instruction: read calendar, read email triage, read Slack mentions, format as artifact + Slack post + saved file. Notice the guardrail line at the top: "If running > late, summarize what was missed instead of executing the original brief."</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Beginner</div>
+      <h3 class="slide-section-subtitle">How scheduled task mechanics work</h3>
+      <div class="slide-section-body">
+        <ul>
+<li>Desktop task at 7am with laptop closed: SKIPPED.</li>
+<li>Laptop wakes at 11am: Desktop checks last 7 days for missed runs.</li>
+<li>One catch-up runs for the most recently missed time. Older misses discarded.</li>
+<li>Notification when catch-up starts.</li>
+</ul>
+<p>So: a 9am task whose laptop slept all day may run at 11pm on wake. The guardrail prompt pattern is what prevents this from being a problem.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Intermediate</div>
+      <h3 class="slide-section-subtitle">Add a second scheduled task</h3>
+      <div class="slide-section-body">
+        <p>Pick a real recurring task. Examples:</p>
+<ul>
+<li>End-of-day reflection prompt that posts to your Daily Note.</li>
+<li>Weekly status email draft, generated Friday morning, lands in your drafts inbox.</li>
+<li>Monthly report compiled from connector data on the 1st of each month.</li>
+<li>Project status pings (one project at a time, weekly cadence).</li>
+</ul>
+<p>In Cowork → Settings → Scheduled tasks → New task.</p>
+<p>Fill in:</p>
+<ul>
+<li><strong>Name</strong> — descriptive.</li>
+<li><strong>Schedule</strong> — cadence (e.g., "Every Monday at 8am").</li>
+<li><strong>Prompt</strong> — the task instruction. Include guardrails.</li>
+<li><strong>Output destination</strong> — file in vault, Slack post, email draft, artifact.</li>
+</ul>
+<p>Example prompt for a weekly status email:</p>
+<pre><code>
+You're drafting my weekly status email to my board chair. Pull from:
+- GTD next-actions from &lt;vault&gt;/gtd/next-actions.md (top 5 active).
+- Calendar for the past week (key meetings).
+- Drafts inbox (anything I sent recently to investors).
+
+Write a 200-word update in my voice (per chief-of-staff brief). Save as a draft to
+Outlook Drafts.
+
+Guardrail: if it's not Friday morning anymore (running late catch-up Monday or later),
+SKIP — return only "Skipped weekly status — too late to be useful."
+</code></pre>
+<p>Save. The task is set.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Intermediate</div>
+      <h3 class="slide-section-subtitle">Routines — cloud-based always-on</h3>
+      <div class="slide-section-body">
+        <p>Routines run regardless of laptop state. 1-hour minimum interval.</p>
+<p>Use Routines for:</p>
+<ul>
+<li>A morning brief that MUST land even when laptop is off all night.</li>
+<li>Hourly Slack channel monitoring (specific channel scoped).</li>
+<li>Daily report from cloud connectors only.</li>
+</ul>
+<p>Don't use Routines for:</p>
+<ul>
+<li>Anything that needs local file access (your work folder, vault).</li>
+<li>Anything that needs to read project <code>claude.md</code>s.</li>
+</ul>
+<p>Routines are configured separately in Cowork → Settings → Routines.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Intermediate</div>
+      <h3 class="slide-section-subtitle">Mobile capture via Dispatch</h3>
+      <div class="slide-section-body">
+        <p>Dispatch (Anthropic, March 2026) lets you talk to your Claude mobile app, which routes the request to your desktop Cowork — which then runs the skill against your local files.</p>
+<p>Combined with vault GTD: phone → voice → Dispatch → desktop runs <code>/capture</code> → bullet appended to <code>&lt;vault&gt;/gtd/inbox.md</code>. Confirmation back to your phone in seconds. Same for <code>/whats-next</code>, <code>/waiting-for</code>, <code>/today</code>.</p>
+<p>Caveats:</p>
+<ul>
+<li>Desktop must be on (or wake-on-Dispatch enabled) for the request to land.</li>
+<li>Max plan required (Pro is rolling out).</li>
+<li>A few seconds of latency is normal.</li>
+</ul>
+<p>This closes the mobile-capture gap. Voice-driven, hands-free, GTD from your phone.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Advanced</div>
+      <h3 class="slide-section-subtitle">Guardrail prompt patterns</h3>
+      <div class="slide-section-body">
+        <p>Every scheduled task should have a guardrail. The pattern:</p>
+<pre><code>
+This task is scheduled to run at &lt;time&gt;. If you're running this catch-up later than
+&lt;time + N hours&gt;, do one of:
+- Skip the task entirely (return: "Skipped — too late to be useful").
+- Summarize what was missed instead of executing the original task.
+- Run the original task with a note flagging the lateness.
+
+Choose based on task type:
+- Time-sensitive (morning brief, daily plan): SKIP if late.
+- Summary-able (weekly report, project status): SUMMARIZE if late.
+- Catch-up-ready (process-inbox, review-stale): RUN with lateness note.
+</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Advanced</div>
+      <h3 class="slide-section-subtitle">Combining scheduled tasks with skills</h3>
+      <div class="slide-section-body">
+        <p>A scheduled task can invoke a skill. Example:</p>
+<pre><code>
+Run /weekly-review and post the result to &lt;Slack channel&gt;. If today is not Monday or
+Tuesday, skip — the weekly review only makes sense early in the week.
+</code></pre>
+<p>The skill does the work; the task automates the trigger.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Advanced</div>
+      <h3 class="slide-section-subtitle">Things to avoid</h3>
+      <div class="slide-section-body">
+        <ul>
+<li>Don't schedule tasks at very tight intervals during work hours unless you really need that frequency.</li>
+<li>Don't post to Slack from a scheduled task without a "skip if stale" check — your team doesn't want Friday's brief on Tuesday.</li>
+<li>Don't use absolute language ("today's events") without resolving "today" — use ISO dates in the prompt.</li>
+<li>Don't set up 20 scheduled tasks at once. Pick 2-3 high-leverage ones; iterate.</li>
+</ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-try">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Try this</div>
+      
+      <div class="slide-try-body">
+        <p>You added a second scheduled task or Routine relevant to your workflow. Confirmed it's set up correctly. Anticipation: it'll fire on its schedule and the next morning (or week) you'll have a new automated artifact in your stack.</p>
       </div>
     </div>
   </section>
@@ -81,17 +255,14 @@ List my active scheduled tasks. For each, what's the schedule and what's the out
     </div>
   </section>
 
-  <section class="slide slide-try">
+  <section class="slide slide-next-only">
     <div class="slide-inner">
-      <div class="slide-eyebrow">Try this</div>
-      <div class="slide-try-body">
-        <p>You added a second scheduled task or Routine relevant to your workflow. Confirmed it's set up correctly. Anticipation: it'll fire on its schedule and the next morning (or week) you'll have a new automated artifact in your stack.</p>
-      </div>
+      <div class="slide-eyebrow">What's next</div>
       
         <div class="slide-next">
           <div class="slide-next-label">What's next</div>
           <div class="slide-next-title">M14 — GTD</div>
-          <div class="slide-next-meta">Type <code>/teach M14</code> in Cowork to dive in next.</div>
+          <div class="slide-next-meta">Type <code>/teach M14</code> in Cowork to dive in next, or open the <a href="../m14.html">full M14 page</a>.</div>
         </div>
     </div>
   </section>

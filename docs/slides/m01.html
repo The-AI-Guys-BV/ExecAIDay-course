@@ -32,14 +32,6 @@
     </div>
   </section>
 
-  <section class="slide slide-bigidea">
-    <div class="slide-inner">
-      <div class="slide-eyebrow">The big idea</div>
-      <p class="slide-bigidea-p"><strong>The software below should already be pre-installed on your machine before the workshop starts.</strong> This list is here for reference, not as a live install task. The links are useful if you want to verify, reinstall, or find the official sources later. If any item is missing when you sit down, tell your assistant — they install it now and you keep moving.</p>
-<p class="slide-bigidea-p">This module's job is to confirm all that has given you a usable workspace, and to give you the words for the next 15 modules. Most of what we cover here is vocabulary — concepts you'll hear used the whole workshop. We're not building anything yet; we're orienting.</p>
-    </div>
-  </section>
-
   <section class="slide slide-what">
     <div class="slide-inner">
       <div class="slide-eyebrow">What you'll do</div>
@@ -51,6 +43,122 @@
 <li>Walk through 18 foundational concepts inside the workspace you just built.</li>
 <li>See the hallucination demo and learn to calibrate trust.</li>
 </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-bigidea">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">The big idea</div>
+      <p class="slide-bigidea-p"><strong>The software below should already be pre-installed on your machine before the workshop starts.</strong> This list is here for reference, not as a live install task. The links are useful if you want to verify, reinstall, or find the official sources later. If any item is missing when you sit down, tell your assistant — they install it now and you keep moving.</p>
+<p class="slide-bigidea-p">This module's job is to confirm all that has given you a usable workspace, and to give you the words for the next 15 modules. Most of what we cover here is vocabulary — concepts you'll hear used the whole workshop. We're not building anything yet; we're orienting.</p>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Beginner</div>
+      <h3 class="slide-section-subtitle">Step 1 — Verify install</h3>
+      <div class="slide-section-body">
+        <p>In your Claude Desktop, switch to the <strong>Cowork</strong> tab. You should see a sidebar on the left with sections including Customize, Plugins, your Cowork Projects.</p>
+<p>If you don't see the Cowork tab at all: tell your assistant.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Beginner</div>
+      <h3 class="slide-section-subtitle">Step 2 — Create the workshop Cowork Project</h3>
+      <div class="slide-section-body">
+        <p>In the Cowork sidebar, click <strong>+ New Project</strong> (or your equivalent UI element — your assistant will point it out).</p>
+<p>Name it whatever feels natural. "Workshop" is fine. "Cowork Course." Whatever.</p>
+<p>Mount both folders:</p>
+<ul>
+<li>Your <strong>Obsidian vault</strong> (knowledge folder).</li>
+<li>Your <strong>work folder</strong> (projects parent).</li>
+</ul>
+<p>Both mounted in the same Cowork Project. This is load-bearing — the architecture relies on Cowork seeing both folders together.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Beginner</div>
+      <h3 class="slide-section-subtitle">Step 3 — Confirm <code>/teach</code> is available</h3>
+      <div class="slide-section-body">
+        <p>The plugin install in Section 1 placed <code>/teach</code> plus 25 other skills onto your machine. Confirm by typing <code>/teach</code> (no arguments) in Cowork. You should see the list of 16 modules.</p>
+<p>If you don't see it: the plugin install didn't complete. Tell your assistant — they fix it now.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Beginner</div>
+      <h3 class="slide-section-subtitle">Step 4 — First teach demo</h3>
+      <div class="slide-section-body">
+        <p>Type <code>/teach M06</code>. Claude reads the M06 module file and starts walking it. Don't actually do M06 now (you'll do it next anyway), but see how <code>/teach</code> opens, lists the section, and waits for you. Type "exit" to close out.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Intermediate</div>
+      
+      <div class="slide-section-body">
+        <p>The 18 basic concepts. We'll go through them inside the Cowork Project you just built — every concept becomes concrete because the workspace they describe is the one you're sitting in.</p>
+<p>Don't try to memorize. Recognize. You'll re-encounter every concept in later modules with use cases.</p>
+<ol>
+<li><strong>Context</strong> — what Claude considers when generating a response. Has limits.</li>
+<li><strong>Tokens</strong> — Claude's unit of measurement. ~4 chars per token.</li>
+<li><strong>Models</strong> — Opus 4.7 (slow, deep), Sonnet 4.6 (balanced, default), Haiku 4.5 (fast).</li>
+<li><strong>Chat vs Cowork modes</strong> — single conversation vs persistent workspace.</li>
+<li><strong>Plans</strong> — Free / Pro / Max / Team / Enterprise. You're on Max minimum (plugins).</li>
+<li><strong>Skills</strong> — slash commands installed on your machine.</li>
+<li><strong>Connectors</strong> — bridges to your services (Gmail, Calendar, Slack, etc.).</li>
+<li><strong>MCP</strong> — the wire format under connectors. You don't deal with it directly.</li>
+<li><strong>Artifacts</strong> — generated outputs. Live artifacts auto-refresh on reopen.</li>
+<li><strong>Session memory</strong> — what Claude remembers within a Cowork Project.</li>
+<li><strong>Hallucination</strong> — making up plausible-sounding facts. Verify, don't blindly trust.</li>
+<li><strong>Knowledge cutoff</strong> — Claude's training data ends at a date. After that, it doesn't know.</li>
+<li><strong>"More context can hurt"</strong> — stuffing huge amounts of context degrades quality. Curate.</li>
+<li><strong>Overconfidence</strong> — Claude defaults to confident phrasing even when uncertain. Push back.</li>
+<li><strong>Cowork Project</strong> — the app's workspace concept. The thing you just made.</li>
+<li><strong>Project folder</strong> — the file-system shape inside your work folder. Different from Cowork Project.</li>
+<li><strong><code>claude.md</code></strong> — the file Claude reads first in any folder. Per-folder context. Closer-to-the-file wins.</li>
+<li><strong>Context rot</strong> — quality degrades as a session's context grows. Open a new chat per task. The single most important habit you'll build this workshop.</li>
+</ol>
+<p>For full definitions, see the References section at the end of this module. <code>/teach</code> will walk either reference.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Advanced</div>
+      
+      <div class="slide-section-body">
+        <h3>What NOT to use Claude for</h3>
+<ul>
+<li><strong>High-stakes decisions without verification</strong> — hires, fires, deals, board recommendations.</li>
+<li><strong>Math at scale</strong> — use Excel for numbers that go in a board pack.</li>
+<li><strong>Regulated content without policy</strong> — healthcare, legal opinions, investment advice.</li>
+<li><strong>In front of clients without disclosure</strong> — check your industry rules.</li>
+<li><strong>"What should I do" life decisions</strong> — Claude can think through options; the decision is yours.</li>
+</ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-try">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Try this</div>
+      
+      <div class="slide-try-body">
+        <p>Type <code>/teach</code> (no arguments). Claude lists the 16 modules. You pick one. Claude walks it patiently, one section at a time. The hallucination demo follows immediately as a trust-calibration moment — your instructor demonstrates Claude making something up confidently, then you watch it self-correct when given evidence.</p>
       </div>
     </div>
   </section>
@@ -80,17 +188,14 @@ What folders am I currently mounting in this Cowork Project?
     </div>
   </section>
 
-  <section class="slide slide-try">
+  <section class="slide slide-next-only">
     <div class="slide-inner">
-      <div class="slide-eyebrow">Try this</div>
-      <div class="slide-try-body">
-        <p>Type <code>/teach</code> (no arguments). Claude lists the 16 modules. You pick one. Claude walks it patiently, one section at a time. The hallucination demo follows immediately as a trust-calibration moment — your instructor demonstrates Claude making something up confidently, then you watch it self-correct when given evidence.</p>
-      </div>
+      <div class="slide-eyebrow">What's next</div>
       
         <div class="slide-next">
           <div class="slide-next-label">What's next</div>
           <div class="slide-next-title">M02 — Open Obsidian, see your vault</div>
-          <div class="slide-next-meta">Type <code>/teach M02</code> in Cowork to dive in next.</div>
+          <div class="slide-next-meta">Type <code>/teach M02</code> in Cowork to dive in next, or open the <a href="../m02.html">full M02 page</a>.</div>
         </div>
     </div>
   </section>

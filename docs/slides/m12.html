@@ -32,14 +32,6 @@
     </div>
   </section>
 
-  <section class="slide slide-bigidea">
-    <div class="slide-inner">
-      <div class="slide-eyebrow">The big idea</div>
-      <p class="slide-bigidea-p">Cowork has built-in concepts; we have folder conventions; the two interlock. This is how:</p>
-<p class="slide-bigidea-p">That's the whole architecture. M12 makes it concrete.</p>
-    </div>
-  </section>
-
   <section class="slide slide-what">
     <div class="slide-inner">
       <div class="slide-eyebrow">What you'll do</div>
@@ -54,15 +46,157 @@
     </div>
   </section>
 
-  <section class="slide slide-action">
+  <section class="slide slide-bigidea">
     <div class="slide-inner">
-      <div class="slide-eyebrow">The move</div>
-      <p class="slide-action-setup"><strong>Project folders</strong> (bounded work with deliverables):</p><pre class="slide-prompt"><code>&lt;work-folder&gt;/&lt;project-name&gt;/
+      <div class="slide-eyebrow">The big idea</div>
+      <p class="slide-bigidea-p">Cowork has built-in concepts; we have folder conventions; the two interlock. This is how:</p>
+<p class="slide-bigidea-p">That's the whole architecture. M12 makes it concrete.</p>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Beginner</div>
+      <h3 class="slide-section-subtitle">The two folder shapes</h3>
+      <div class="slide-section-body">
+        <p><strong>Project folders</strong> (bounded work with deliverables):</p>
+<pre><code>
+&lt;work-folder&gt;/&lt;project-name&gt;/
 ├── claude.md         # project-specific context
 ├── memory.md         # patterns Cowork learns about this project
 ├── Source Materials/ # incoming inputs
 ├── Working Files/    # in-progress
-└── Deliverables/     # finished outputs</code></pre>
+└── Deliverables/     # finished outputs
+</code></pre>
+<p>Has an outcome. Ships and ends. Examples: <code>q3-board-deck/</code>, <code>refactor-onboarding/</code>, <code>course/</code>.</p>
+<p><strong>Stream folders</strong> (recurring content, flat):</p>
+<pre><code>
+&lt;vault&gt;/&lt;stream-name&gt;/
+├── claude.md         # stream-specific context
+├── memory.md
+└── (flat content — dated files, captured items, linked notes)
+</code></pre>
+<p>Unbounded. No end state. Recurring. Examples: <code>Daily Notes/</code>, <code>References/</code>, <code>Inbox/</code>. The <code>about-me/</code> folder is the special stream (every vault has it).</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Beginner</div>
+      <h3 class="slide-section-subtitle">The two senses of "project"</h3>
+      <div class="slide-section-body">
+        <p><strong>Cowork Project</strong> = the app workspace concept (the thing you made in M01). UI-level. Mounts folders. Has its own memory.</p>
+<p><strong>Project folder</strong> = the file-system shape inside your work folder. Folder with the bucket structure.</p>
+<p>These collide on the word "project." Both must be used together: a Cowork Project mounts your work folder, which contains your project folders.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Beginner</div>
+      <h3 class="slide-section-subtitle">Why every folder has <code>claude.md</code> + <code>memory.md</code></h3>
+      <div class="slide-section-body">
+        <p>So Cowork has per-folder context. The vault root <code>claude.md</code> is a one-line pointer to your chief-of-staff brief in your vault (M04 sets this up). The work-folder root <code>claude.md</code> is your work-context defaults. Each project folder's <code>claude.md</code> adds project-specific overrides.</p>
+<p>Closer-to-the-file wins. So when Claude works on a file at <code>[work-folder]/q3-deck/Working Files/draft.md</code>, it reads in this order, with later files overriding earlier ones:</p>
+<ol>
+<li><code>[vault]/claude.md</code> → which points to <code>[vault]/About Me.md</code> (chief-of-staff brief).</li>
+<li><code>[work-folder]/claude.md</code> (work-context defaults).</li>
+<li><code>[work-folder]/q3-deck/claude.md</code> (project context — most specific).</li>
+</ol>
+<p>The project <code>claude.md</code> doesn't restate the chief-of-staff brief — it only mentions deviations.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Intermediate</div>
+      <h3 class="slide-section-subtitle">Run <code>/new-project</code> for the first time</h3>
+      <div class="slide-section-body">
+        <p>In Cowork:</p>
+<pre><code>
+/new-project course
+</code></pre>
+<p>The skill conducts an interview. It will ask you things like:</p>
+<ul>
+<li>What's the project outcome?</li>
+<li>Who are the stakeholders?</li>
+<li>What's the timeline?</li>
+<li>Any tone or format overrides for this project?</li>
+<li>What source materials feed this?</li>
+</ul>
+<p>Answer naturally. The interview isn't capped — the skill asks until it has enough to write a brief that fits THIS project specifically. A few questions in, it'll pause: "I have enough. Want me to proceed?" Say yes.</p>
+<p>Then:</p>
+<ol>
+<li>The skill creates <code>&lt;work-folder&gt;/course/</code> with all the bucket subfolders.</li>
+<li>Writes a tailored <code>claude.md</code> synthesizing your interview answers + the chief-of-staff brief + work-folder defaults.</li>
+<li>Creates a matching GTD project entry at <code>&lt;vault&gt;/gtd/projects/&lt;slug&gt;.md</code> (Outcome, Status, Stakeholders, Deadline, Next-Action placeholder).</li>
+<li>Cross-links the project folder and the GTD project file.</li>
+<li>Confirms what was created.</li>
+</ol>
+<p>You now have your first project folder + a matching GTD entry. Welcome to the workshop's working file structure.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Intermediate</div>
+      <h3 class="slide-section-subtitle">Pull workshop content into Source Materials</h3>
+      <div class="slide-section-body">
+        <p>Your first content move:</p>
+<pre><code>
+Pull the welcome doc and the how-to-start doc from this plugin into course/Source Materials/.
+</code></pre>
+<p>Claude reads <code>docs/welcome.md</code> and <code>docs/how-to-start.md</code> from the installed plugin and copies them into <code>&lt;work-folder&gt;/course/Source Materials/</code>. Now your workshop project has its initial inputs.</p>
+<p>This is the pattern: Source Materials gets the raw inputs (from anywhere — plugin, web, email, conversation transcripts). Working Files is where you iterate. Deliverables is what you ship.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Advanced</div>
+      <h3 class="slide-section-subtitle">Multi-Cowork-Project patterns</h3>
+      <div class="slide-section-body">
+        <p>Post-workshop, you'll create more Cowork Projects — one per major body of work. Each new Cowork Project mounts your vault + a relevant subset of your work folder.</p>
+<p>The default: one Cowork Project named "Workshop" (the one you have now), mounting everything.</p>
+<p>For sensitive work (M&A, exec personnel): a separate Cowork Project that does NOT mount the vault — so the chief-of-staff brief and personal context don't cross-pollinate. Vault-less Cowork Projects are the security pattern.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Advanced</div>
+      <h3 class="slide-section-subtitle">Vault-less Cowork Projects</h3>
+      <div class="slide-section-body">
+        <p>Create a new Cowork Project. Mount only the work folder (or a specific project subfolder). Don't mount the vault. The chief-of-staff brief won't apply. Claude treats the work strictly within the project's context.</p>
+<p>Use case: a board-prep project that touches confidential financial data; you don't want personal notes crosslinked.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Advanced</div>
+      <h3 class="slide-section-subtitle">Cross-folder workflows</h3>
+      <div class="slide-section-body">
+        <p>Within one Cowork Project mounting both folders, Claude can read both freely. So a daily note in the vault can reference a project's Working Files; a project's Deliverable can be summarized into a Daily Note for the day's reflection.</p>
+<p>This is where the architecture pays off. The two folders are different in shape but unified in scope (within a Cowork Project).</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-try">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Try this</div>
+      
+      <div class="slide-try-body">
+        <p>Run <code>/new-project course</code> (or whatever name you prefer). Skill interviews you, scaffolds the folder, synthesizes a tailored <code>claude.md</code>, creates the GTD project entry as a vault file. First content pulled from this plugin into <code>course/Source Materials/</code>. You now have your first project folder, your first GTD project entry, and the muscle for <code>/new-project</code>.</p>
+      </div>
     </div>
   </section>
 
@@ -92,17 +226,14 @@ What's in my course/ project folder right now? Read the claude.md.
     </div>
   </section>
 
-  <section class="slide slide-try">
+  <section class="slide slide-next-only">
     <div class="slide-inner">
-      <div class="slide-eyebrow">Try this</div>
-      <div class="slide-try-body">
-        <p>Run <code>/new-project course</code> (or whatever name you prefer). Skill interviews you, scaffolds the folder, synthesizes a tailored <code>claude.md</code>, creates the GTD project entry as a vault file. First content pulled from this plugin into <code>course/Source Materials/</code>. You now have your first project folder, your first GTD project entry, and the muscle for <code>/new-project</code>.</p>
-      </div>
+      <div class="slide-eyebrow">What's next</div>
       
         <div class="slide-next">
           <div class="slide-next-label">What's next</div>
           <div class="slide-next-title">M13 — Scheduled Tasks + Routines</div>
-          <div class="slide-next-meta">Type <code>/teach M13</code> in Cowork to dive in next.</div>
+          <div class="slide-next-meta">Type <code>/teach M13</code> in Cowork to dive in next, or open the <a href="../m13.html">full M13 page</a>.</div>
         </div>
     </div>
   </section>

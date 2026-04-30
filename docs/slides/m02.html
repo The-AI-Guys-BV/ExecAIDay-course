@@ -32,14 +32,6 @@
     </div>
   </section>
 
-  <section class="slide slide-bigidea">
-    <div class="slide-inner">
-      <div class="slide-eyebrow">The big idea</div>
-      <p class="slide-bigidea-p">You have a vault. It's a folder of plain-text notes. Cowork reads and writes them. Obsidian renders them as a knowledge graph with bidirectional links, search, and a navigable file tree.</p>
-<p class="slide-bigidea-p"><strong>Role split, important.</strong> Cowork is the active layer — it creates files, edits files, runs skills, builds artifacts. Obsidian is the viewer — it shows you what's in the vault, in a UI that's pleasant to read in. <strong>You don't install Obsidian plugins.</strong> Anything you'd want a plugin for (a dashboard, a calendar overview, a daily-note workflow), you build as a live artifact in Cowork instead. The vault stays plain markdown that any tool can read.</p>
-    </div>
-  </section>
-
   <section class="slide slide-what">
     <div class="slide-inner">
       <div class="slide-eyebrow">What you'll do</div>
@@ -53,11 +45,151 @@
     </div>
   </section>
 
-  <section class="slide slide-action">
+  <section class="slide slide-bigidea">
     <div class="slide-inner">
-      <div class="slide-eyebrow">The move</div>
-      <p class="slide-action-setup">Try a few of these in Cowork now:</p><pre class="slide-prompt"><code>Write a 5-line journal entry about how the workshop is going so far,
-in journal voice. Save to today's daily note in my vault.</code></pre>
+      <div class="slide-eyebrow">The big idea</div>
+      <p class="slide-bigidea-p">You have a vault. It's a folder of plain-text notes. Cowork reads and writes them. Obsidian renders them as a knowledge graph with bidirectional links, search, and a navigable file tree.</p>
+<p class="slide-bigidea-p"><strong>Role split, important.</strong> Cowork is the active layer — it creates files, edits files, runs skills, builds artifacts. Obsidian is the viewer — it shows you what's in the vault, in a UI that's pleasant to read in. <strong>You don't install Obsidian plugins.</strong> Anything you'd want a plugin for (a dashboard, a calendar overview, a daily-note workflow), you build as a live artifact in Cowork instead. The vault stays plain markdown that any tool can read.</p>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Beginner</div>
+      <h3 class="slide-section-subtitle">Open Obsidian on your vault</h3>
+      <div class="slide-section-body">
+        <p>Open Obsidian. First time: select the vault folder (the same folder you mounted in M01 as your knowledge folder).</p>
+<p>You'll see:</p>
+<ul>
+<li>The file browser on the left with the folder structure: <code>about-me/</code>, <code>Daily Notes/</code>, <code>References/</code>, <code>Inbox/</code>, plus a root <code>claude.md</code>.</li>
+<li>The current open note in the main pane.</li>
+<li>The graph view (icon top-right, shape varies by Obsidian version) showing how notes link.</li>
+</ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Beginner</div>
+      <h3 class="slide-section-subtitle">Your vault IS a Cowork project</h3>
+      <div class="slide-section-body">
+        <p>The Cowork Project you made in M01 already mounts your vault. That means <strong>Claude can read every note in your vault and write back to any of them.</strong> Your vault isn't a passive archive — it's a workspace Claude operates on directly.</p>
+<p>Same files, two interfaces. Edit a file in Obsidian; Cowork sees the edit on next read. Ask Claude in Cowork to write something; Obsidian re-renders the change live (file watching).</p>
+<p>Try a few of these in Cowork now:</p>
+<pre><code>
+Write a 5-line journal entry about how the workshop is going so far,
+in journal voice. Save to today's daily note in my vault.
+</code></pre>
+<pre><code>
+Read all my notes in &lt;vault&gt;/References/ and tell me what topics
+I have the most material on.
+</code></pre>
+<pre><code>
+Open &lt;vault&gt;/About Me.md and tighten the section on stakeholders —
+remove repetition, keep my voice.
+</code></pre>
+<p>Each of those writes into your vault. Watch Obsidian re-render.</p>
+<p><strong>Optional second Cowork Project — "Vault only".</strong> Some people prefer a dedicated Cowork Project that mounts ONLY the vault (no work folder), used for vault-focused work — knowledge curation, journaling, references. Create it in Cowork → New Project → mount the vault only. Use it when you want Claude focused on knowledge, not project work.</p>
+<p>You'll see live editing again in the exercise at the end.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Beginner</div>
+      <h3 class="slide-section-subtitle">Obsidian basics</h3>
+      <div class="slide-section-body">
+        <ul>
+<li><code>Cmd/Ctrl + O</code> — open quick-switcher to find any note.</li>
+<li><code>[[note name]]</code> while typing — creates a wikilink to another note. Click it to navigate.</li>
+<li>Tags <code>#tag</code> for cross-cutting categories.</li>
+<li>Daily notes — your <code>&lt;vault&gt;/Daily Notes/</code> folder holds dated notes (e.g., <code>2026-04-29.md</code>). Navigate by date in the file browser, or use <code>Cmd/Ctrl + O</code> and search the date.</li>
+<li>Graph view — visualize how your notes link. Becomes meaningful after weeks of use.</li>
+</ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Advanced</div>
+      <h3 class="slide-section-subtitle">Create a new Cowork Project with your vault (or part of it)</h3>
+      <div class="slide-section-body">
+        <p>The Workshop Cowork Project from M01 mounts your <strong>whole</strong> vault plus your work folder. That's the general-purpose project. Sometimes you want a Cowork Project scoped to your vault only, or to a slice of it.</p>
+<p><strong>How to create one:</strong></p>
+<ol>
+<li>In Cowork, top-left of the sidebar, click <strong>+ New Project</strong>.</li>
+<li>Name it. Examples: "Vault" (whole vault), "Sales strategy" (one Areas subfolder), "Board notes" (References subfolder), "Journaling" (Daily Notes only).</li>
+<li>Click <strong>Mount folder</strong> (or the equivalent in the New Project dialog).</li>
+<li>Pick the folder:</li>
+</ol>
+<ul>
+<li><strong>Whole vault</strong> — select the vault root folder (the one Obsidian opens onto).</li>
+<li><strong>Part of the vault</strong> — drill into the vault and select a subfolder, e.g., <code>&lt;vault&gt;/Areas/Sales-strategy/</code> or <code>&lt;vault&gt;/References/Customers/</code>.</li>
+</ul>
+<ol>
+<li>Optionally mount additional folders (a project folder from your work folder, the shared team folder, etc.).</li>
+<li>Save.</li>
+</ol>
+<p>You now have a second Cowork Project. Switch between projects with the project switcher (top-left of the sidebar).</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Advanced</div>
+      <h3 class="slide-section-subtitle">How vault + Cowork Project work together</h3>
+      <div class="slide-section-body">
+        <p>A Cowork Project is a <strong>scope</strong>: it tells Claude which folders to consider. Inside that scope, Claude:</p>
+<ul>
+<li><strong>Reads every file</strong> in the mounted folder(s).</li>
+<li><strong>Writes to any file</strong> when you ask. (<code>/capture</code>, an artifact that saves to a file, "edit this note" prompts — all land in the mounted folders.)</li>
+<li><strong>Reads <code>claude.md</code> at every level.</strong> Closer-to-the-file wins. So if you mount <code>&lt;vault&gt;/Areas/Sales-strategy/</code>, Claude reads <code>&lt;vault&gt;/claude.md</code> (your About Me pointer), then <code>&lt;vault&gt;/Areas/claude.md</code> (if it exists), then <code>&lt;vault&gt;/Areas/Sales-strategy/claude.md</code>. You can drop a <code>claude.md</code> into a subfolder to give Claude project-specific guidance scoped to that area.</li>
+<li><strong>Has its own session memory.</strong> Each Cowork Project keeps a separate <code>memory.md</code> of patterns Claude has learned. The Workshop project doesn't share memory with your Vault project.</li>
+</ul>
+<p><strong>Picking a scope:</strong></p>
+<ul>
+<li><strong>Whole vault mounted</strong> — for general knowledge work, journaling, cross-vault queries ("summarize everything I have on Sales").</li>
+<li><strong>Subfolder mounted</strong> — for focused work where you don't want Claude pulling unrelated vault content into context. Example: a "Board notes" Cowork Project mounting only <code>&lt;vault&gt;/Areas/Board/</code> so Claude doesn't pull from your Sales notes.</li>
+<li><strong>Vault + work folder</strong> — the M01 Workshop pattern. Most flexible. Claude can pull a meeting note from the vault into a project deliverable in the work folder.</li>
+<li><strong>Vault + shared team folder</strong> — for collaborative work where you want personal vault context plus shared materials. (Covered in M17.)</li>
+</ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Advanced</div>
+      <h3 class="slide-section-subtitle">What stays in the vault, what goes in the work folder</h3>
+      <div class="slide-section-body">
+        <p>Quick test for where to write:</p>
+<ul>
+<li><strong>Permanent knowledge</strong> (a new fact, a person's bio, a meeting note) → vault.</li>
+<li><strong>Bounded deliverable</strong> (a memo for the Q3 board, a script for an investor call) → project folder in the work folder.</li>
+<li><strong>Today's reflection / capture / loose note</strong> → vault Daily Notes or vault Inbox.</li>
+</ul>
+<p>Claude reads both folders in the Workshop project. The line between vault and work folder is YOUR discipline, not Cowork's. Mount accordingly.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-try">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Try this</div>
+      
+      <div class="slide-try-body">
+        <p>In Cowork:</p>
+<pre><code>
+Write a paragraph reflecting on what you've learned in the workshop so far.
+Save it to today's daily note in my vault. Use journal voice — first person, reflective, brief.
+</code></pre>
+<p>Claude reads <code>Daily Notes/claude.md</code> (which says journal voice), writes the paragraph, saves to <code>&lt;vault&gt;/Daily Notes/&lt;today&gt;.md</code>.</p>
+<p>Watch Obsidian. The note updates live in front of you.</p>
+      </div>
     </div>
   </section>
 
@@ -86,23 +218,14 @@ What's in my Daily Notes folder for the past 7 days?
     </div>
   </section>
 
-  <section class="slide slide-try">
+  <section class="slide slide-next-only">
     <div class="slide-inner">
-      <div class="slide-eyebrow">Try this</div>
-      <div class="slide-try-body">
-        <p>In Cowork:</p>
-<pre><code>
-Write a paragraph reflecting on what you've learned in the workshop so far.
-Save it to today's daily note in my vault. Use journal voice — first person, reflective, brief.
-</code></pre>
-<p>Claude reads <code>Daily Notes/claude.md</code> (which says journal voice), writes the paragraph, saves to <code>&lt;vault&gt;/Daily Notes/&lt;today&gt;.md</code>.</p>
-<p>Watch Obsidian. The note updates live in front of you.</p>
-      </div>
+      <div class="slide-eyebrow">What's next</div>
       
         <div class="slide-next">
           <div class="slide-next-label">What's next</div>
           <div class="slide-next-title">M03 — First Cowork Project: the Vault</div>
-          <div class="slide-next-meta">Type <code>/teach M03</code> in Cowork to dive in next.</div>
+          <div class="slide-next-meta">Type <code>/teach M03</code> in Cowork to dive in next, or open the <a href="../m03.html">full M03 page</a>.</div>
         </div>
     </div>
   </section>

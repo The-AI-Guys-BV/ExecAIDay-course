@@ -32,14 +32,6 @@
     </div>
   </section>
 
-  <section class="slide slide-bigidea">
-    <div class="slide-inner">
-      <div class="slide-eyebrow">The big idea</div>
-      <p class="slide-bigidea-p">You've used Word, Excel, PowerPoint for years. The Claude add-ins live INSIDE those apps. Open Word, click Claude in the ribbon, sidebar opens, you can ask Claude to help with the document.</p>
-<p class="slide-bigidea-p">What's new in 2026: cross-app shared context. Start an analysis in Excel. Ask PowerPoint Claude to "build slides from the Excel analysis." It does. Ask Word Claude to "draft a memo summarizing the Excel + PPT work." It does. The conversation persists across apps.</p>
-    </div>
-  </section>
-
   <section class="slide slide-what">
     <div class="slide-inner">
       <div class="slide-eyebrow">What you'll do</div>
@@ -53,10 +45,188 @@
     </div>
   </section>
 
-  <section class="slide slide-action">
+  <section class="slide slide-bigidea">
     <div class="slide-inner">
-      <div class="slide-eyebrow">The move</div>
-      <p class="slide-action-setup">In Word, with the Claude sidebar open:</p><pre class="slide-prompt"><code>Rewrite this paragraph to be 30% shorter without losing factual content. Preserve formatting.</code></pre>
+      <div class="slide-eyebrow">The big idea</div>
+      <p class="slide-bigidea-p">You've used Word, Excel, PowerPoint for years. The Claude add-ins live INSIDE those apps. Open Word, click Claude in the ribbon, sidebar opens, you can ask Claude to help with the document.</p>
+<p class="slide-bigidea-p">What's new in 2026: cross-app shared context. Start an analysis in Excel. Ask PowerPoint Claude to "build slides from the Excel analysis." It does. Ask Word Claude to "draft a memo summarizing the Excel + PPT work." It does. The conversation persists across apps.</p>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Beginner</div>
+      <h3 class="slide-section-subtitle">Verify add-ins</h3>
+      <div class="slide-section-body">
+        <p>The Claude add-ins for Word, Excel, and PowerPoint were installed in M01. Open each app — the Claude icon should be in the ribbon. Click it; the Claude sidebar opens.</p>
+<p>If any of the three apps is missing the icon, the install didn't complete for that one. Re-run the M01 install step for that specific app: Insert → Get Add-ins → search "Claude by Anthropic" → Add → sign in.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Beginner</div>
+      <h3 class="slide-section-subtitle">Single-app moves</h3>
+      <div class="slide-section-body">
+        <p>In Word, with the Claude sidebar open:</p>
+<pre><code>
+Rewrite this paragraph to be 30% shorter without losing factual content. Preserve formatting.
+</code></pre>
+<p>Claude rewrites in place.</p>
+<p>In Excel:</p>
+<pre><code>
+For column F, write a formula that calculates [whatever]. Apply to rows 2-50.
+</code></pre>
+<p>Claude writes the formula and applies it.</p>
+<p>In PowerPoint:</p>
+<pre><code>
+Make this slide cleaner. Reduce text by 50%. Keep all the data points.
+</code></pre>
+<p>Claude rewrites the slide content.</p>
+<p>These are the per-app moves. Useful, but not the headline.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Intermediate</div>
+      <h3 class="slide-section-subtitle">The cross-app chain</h3>
+      <div class="slide-section-body">
+        <p>Pick a real piece of work. Example: a board prep deck.</p>
+<p><strong>Step 1 — Excel.</strong> Open the financial model.</p>
+<pre><code>
+Analyze the Q3 vs Q2 trajectory in this sheet. Identify the top 3 positive trends and
+top 3 risks. Write your findings as comments in the relevant cells.
+</code></pre>
+<p>Claude analyzes, drops comments. You review.</p>
+<p><strong>Step 2 — PowerPoint.</strong> Open your company's deck template.</p>
+<pre><code>
+Build a 4-slide section for the board deck based on the Excel analysis we just did.
+Use my company template. Each trend or risk is one slide with the supporting data point
+prominent and a one-line takeaway.
+</code></pre>
+<p>Claude generates 4 slides. They're on-brand because they use the template.</p>
+<p><strong>Step 3 — Word.</strong> Open the memo doc.</p>
+<pre><code>
+Draft a 1-page memo summarizing the Excel analysis and the slide narrative. Audience: my
+board chair, who'll read this before the meeting. Tone: factual, not optimistic, not
+defensive.
+</code></pre>
+<p>Claude drafts. You review.</p>
+<p>The point: the conversation persisted. Claude remembered the Excel analysis when building the PowerPoint slides. Remembered the slide narrative when drafting the Word memo. No re-explaining the context three times.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Intermediate</div>
+      <h3 class="slide-section-subtitle">Build a PowerPoint that looks like your company's</h3>
+      <div class="slide-section-body">
+        <p>Default Claude PPT output is generic. To make it look like YOUR company's deck, point Claude at a previous deck and have it extract the style.</p>
+<p><strong>Use a recent branded deck as the style reference (recommended).</strong></p>
+<p>Every exec has a recent deck on their machine — a board update, an investor pitch, a strategy review. It already has your company colors, fonts, logo placement, and slide layouts baked in. Use it.</p>
+<ol>
+<li>Pick any recent on-brand deck. Doesn't have to be on-topic — only the styling matters.</li>
+<li>Open both that deck and your new (blank or topic-stub) deck in PowerPoint.</li>
+<li>With the Claude sidebar open in your new deck:</li>
+</ol>
+<pre><code>
+Open &lt;path-to-the-reference-deck&gt;.pptx. Extract the visual style:
+fonts, color palette, logo placement, header/footer treatment, slide layouts.
+Then build me a 5-slide deck on [topic] using exactly that style.
+Don't copy the content from the reference deck — only the look.
+</code></pre>
+<p>Claude reads the reference deck's slide masters, theme fonts, theme colors, logo position, and recreates them in the new deck. Output is recognizably yours — that's the felt moment.</p>
+<p><strong>No suitable deck handy? Fall back to brand specs.</strong></p>
+<p>If you genuinely have nothing to extract from, give Claude the brand directly:</p>
+<ol>
+<li>Get your brand colors as hex codes. Open your company brand guide or ask your assistant. Typical: a primary, a secondary, an accent. Example: <code>#0A2540</code>, <code>#00A86B</code>, <code>#F4F4F4</code>.</li>
+<li>Save your company logo somewhere Claude can read — PNG with transparent background, e.g., <code>&lt;vault&gt;/References/brand/logo.png</code>.</li>
+<li>In PowerPoint:</li>
+</ol>
+<pre><code>
+Build me a 5-slide deck on [topic]. Use my brand:
+- Primary color: #0A2540
+- Secondary: #00A86B
+- Accent: #F4F4F4
+- Logo: top-right of every slide. Source: &lt;vault&gt;/References/brand/logo.png.
+- Fonts: Inter for headings and body (system default if Inter isn't installed).
+- Tone: one bold takeaway per slide, one supporting data point, no clutter.
+</code></pre>
+<p><strong>Make this reusable.</strong> Save the prompt (either path) as a custom skill (M07). Then <code>/branded-deck &lt;topic&gt;</code> always uses the right reference deck or brand specs without retyping.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Advanced</div>
+      <h3 class="slide-section-subtitle">PowerPoint template reading</h3>
+      <div class="slide-section-body">
+        <p>PowerPoint templates have:</p>
+<ul>
+<li>Slide masters (layout templates).</li>
+<li>Theme fonts.</li>
+<li>Theme colors.</li>
+<li>Reusable elements (logos, footers).</li>
+</ul>
+<p>Claude reads all of these. When you ask for slides "using this template," Claude maps content to the appropriate slide master, picks colors from the theme, uses theme fonts.</p>
+<p>You don't need to specify "use Calibri 11pt with the company blue." Just "use this template" — Claude infers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Advanced</div>
+      <h3 class="slide-section-subtitle">Excel formulas + financial models</h3>
+      <div class="slide-section-body">
+        <p>Beyond per-cell formulas, Claude can:</p>
+<ul>
+<li>Audit a financial model (find broken references, inconsistent assumptions).</li>
+<li>Build a sensitivity analysis (run scenarios on input variables).</li>
+<li>Explain a model in plain language.</li>
+</ul>
+<p>For high-stakes models that go to a board pack: ALWAYS verify the math externally. Claude is improved at math but is not a calculator.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Advanced</div>
+      <h3 class="slide-section-subtitle">Word with tracked changes</h3>
+      <div class="slide-section-body">
+        <p>For documents going through revision cycles:</p>
+<pre><code>
+Suggest edits to this document as tracked changes. Don't apply them — just propose.
+</code></pre>
+<p>Claude reviews, surfaces edits, you accept or reject one by one. Useful for legal docs, contracts, anything where the edit history matters.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Advanced</div>
+      <h3 class="slide-section-subtitle">Available on which plans</h3>
+      <div class="slide-section-body">
+        <p>Pro / Max / Team / Enterprise. Free plan does not include Office add-ins.</p>
+<p>The Word add-in launched April 2026, completing the suite. Excel and PowerPoint shipped earlier.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-try">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Try this</div>
+      <h3 class="slide-section-subtitle">branded deck</h3>
+      <div class="slide-try-body">
+        <p>Pick a recent branded PowerPoint you have on hand (any topic, any age). Have Claude extract the visual style from it and build a 5-slide deck on a real topic of yours. The output looks like YOURS, not Claude's defaults: company colors, your logo placed correctly, on-brand fonts. That's the felt moment.</p>
+      </div>
     </div>
   </section>
 
@@ -87,17 +257,14 @@
     </div>
   </section>
 
-  <section class="slide slide-try">
+  <section class="slide slide-next-only">
     <div class="slide-inner">
-      <div class="slide-eyebrow">Try this</div>
-      <div class="slide-try-body">
-        <p>Pick a recent branded PowerPoint you have on hand (any topic, any age). Have Claude extract the visual style from it and build a 5-slide deck on a real topic of yours. The output looks like YOURS, not Claude's defaults: company colors, your logo placed correctly, on-brand fonts. That's the felt moment.</p>
-      </div>
+      <div class="slide-eyebrow">What's next</div>
       
         <div class="slide-next">
           <div class="slide-next-label">What's next</div>
           <div class="slide-next-title">M12 — Work folder + /new-project</div>
-          <div class="slide-next-meta">Type <code>/teach M12</code> in Cowork to dive in next.</div>
+          <div class="slide-next-meta">Type <code>/teach M12</code> in Cowork to dive in next, or open the <a href="../m12.html">full M12 page</a>.</div>
         </div>
     </div>
   </section>

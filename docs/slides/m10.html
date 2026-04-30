@@ -32,14 +32,6 @@
     </div>
   </section>
 
-  <section class="slide slide-bigidea">
-    <div class="slide-inner">
-      <div class="slide-eyebrow">The big idea</div>
-      <p class="slide-bigidea-p">A connector is an authenticated bridge between Claude and your services, scoped to specific permissions. When Claude needs your inbox, it queries via the connector. When you ask "what's on my calendar today," same.</p>
-<p class="slide-bigidea-p">You don't authenticate per use. The connector is always-on once set up. Claude pulls fresh data per query — your inbox isn't continuously streaming to Anthropic, but Claude can fetch what it needs when relevant.</p>
-    </div>
-  </section>
-
   <section class="slide slide-what">
     <div class="slide-inner">
       <div class="slide-eyebrow">What you'll do</div>
@@ -53,10 +45,153 @@
     </div>
   </section>
 
-  <section class="slide slide-action">
+  <section class="slide slide-bigidea">
     <div class="slide-inner">
-      <div class="slide-eyebrow">The move</div>
-      <p class="slide-action-setup">Type:</p><pre class="slide-prompt"><code>What's in my inbox right now? Top 5, with one-line summaries.</code></pre>
+      <div class="slide-eyebrow">The big idea</div>
+      <p class="slide-bigidea-p">A connector is an authenticated bridge between Claude and your services, scoped to specific permissions. When Claude needs your inbox, it queries via the connector. When you ask "what's on my calendar today," same.</p>
+<p class="slide-bigidea-p">You don't authenticate per use. The connector is always-on once set up. Claude pulls fresh data per query — your inbox isn't continuously streaming to Anthropic, but Claude can fetch what it needs when relevant.</p>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Beginner</div>
+      <h3 class="slide-section-subtitle">Verify connectors</h3>
+      <div class="slide-section-body">
+        <p>In Cowork → Customize → Connectors. You should see:</p>
+<ul>
+<li><strong>Gmail or Microsoft 365</strong> (whichever your company uses). Status: Connected.</li>
+<li><strong>Calendar</strong> (Google Calendar or M365 calendar). Connected.</li>
+<li><strong>Drive</strong> (Google Drive or OneDrive). Connected.</li>
+<li><strong>Slack</strong> (if your team uses it). Connected.</li>
+<li><strong>Custom apps</strong> (Asana / Monday / Jira / Linear / SFDC / HubSpot / ClickUp / etc.) — only the ones you flagged in the questionnaire.</li>
+</ul>
+<p>If any are missing or disconnected: your assistant will sort it now. Don't proceed without verification — the rest of the module relies on these.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Beginner</div>
+      <h3 class="slide-section-subtitle">Quick inbox read-back</h3>
+      <div class="slide-section-body">
+        <p>Type:</p>
+<pre><code>
+What's in my inbox right now? Top 5, with one-line summaries.
+</code></pre>
+<p>Claude queries Gmail / M365, returns 5 emails with brief summaries. This is the first jaw-drop. Real data, real surface, no setup beyond what's already done.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Intermediate</div>
+      <h3 class="slide-section-subtitle">R-C-T-F-C callback on a real email</h3>
+      <div class="slide-section-body">
+        <p>Find an email in your inbox that needs a reply. The kind of email you'd normally spend a while on. Then:</p>
+<pre><code>
+R: You're an executive recruiter coaching me on candidate communications. (Or whatever role fits the email.)
+
+C: I'm a [your role]. The email pasted below is from [sender, role]. Background: [what you know
+about the relationship and the topic].
+
+T: Draft a reply.
+
+F: 3 short paragraphs. No subject line. [Tone instruction.]
+
+C: Don't include AI-flavored closers. Don't make commitments I haven't already made. Stay
+under 200 words.
+
+[paste the email]
+</code></pre>
+<p>Send. Compare to what you would have written. Faster + better, when R-C-T-F-C is real-life applied.</p>
+<p>This is the M06 callback — the framework on real data.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Intermediate</div>
+      <h3 class="slide-section-subtitle">The 3-step arc</h3>
+      <div class="slide-section-body">
+        <p><strong>Step 1 — Inbox read-back (the jaw-drop).</strong></p>
+<pre><code>
+What's in my inbox right now? Group by sender, last 24h, with one-line summary per email.
+Skip newsletters and automated notifications.
+</code></pre>
+<p>Claude returns a triaged view. Already useful — that's a lot of mental sorting compressed.</p>
+<p><strong>Step 2 — Live drafts.</strong></p>
+<pre><code>
+For the 3 emails that need a reply, draft replies. Match my voice (per chief-of-staff brief).
+Save each as a draft to Outlook / Gmail (whichever connector is in use).
+</code></pre>
+<p>Claude drafts. The drafts appear in your Drafts folder — visible on your phone, on Outlook on the web, anywhere you check email.</p>
+<p>If you're on M365 and the native draft write isn't working, Zapier MCP handles it. You won't see Zapier UI; the drafts just appear.</p>
+<p><strong>Step 3 — Calendar + email chain.</strong></p>
+<pre><code>
+Today's brief: meetings, urgent emails, drafts pending review, plus anything from Slack
+that's directly tagged for my attention. Pull from real data.
+</code></pre>
+<p>Claude composes a 1-page narrative brief from calendar + email + Slack. This is what M15 builds into a daily live artifact dashboard. For now, see the data flow working.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Advanced</div>
+      <h3 class="slide-section-subtitle">Connector quirks</h3>
+      <div class="slide-section-body">
+        <p>Worth knowing without dwelling on:</p>
+<ul>
+<li><strong>Gmail OAuth</strong> routes through the Google Drive flow (legacy infrastructure). If the auth dance felt weird, that's why.</li>
+<li><strong>Gmail draft creation</strong> needs the <code>gmail.modify</code> scope. If drafts aren't being created, check the scope.</li>
+<li><strong>M365 Outlook</strong> native connector is read-only in the most conservative read of Anthropic's docs. Drafts are created via Zapier MCP for M365 execs.</li>
+<li><strong>Microsoft Teams chat</strong> is read-only via M365 connector. Sending messages programmatically isn't supported.</li>
+<li><strong>Google Calendar</strong> has full write scope (create / modify / delete events natively).</li>
+</ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Advanced</div>
+      <h3 class="slide-section-subtitle">Disabling a connector for a session</h3>
+      <div class="slide-section-body">
+        <p>Sometimes you're working on something where you don't want connector data to mix in. Settings → Connectors → toggle off for the current Cowork Project.</p>
+<p>You'll re-enable when done. Useful for sensitive work (M&A, board prep, exec personnel).</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Advanced</div>
+      <h3 class="slide-section-subtitle">Microsoft Teams bot ban (May–June 2026)</h3>
+      <div class="slide-section-body">
+        <p>Teams is rolling out third-party bot detection. By default, organizer approval is required for any third-party bot to join a meeting. This affects bot-based recording tools (Fireflies, Otter default, Fellow's bot mode). It does NOT affect bot-less tools (Granola / Bluedot / Fellow's bot-less mode), which capture system audio locally without joining the meeting.</p>
+<p>Workshop's locked meeting-note stack (M16) is bot-less. Unaffected.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-try">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Try this</div>
+      <h3 class="slide-section-subtitle">3-step arc</h3>
+      <div class="slide-try-body">
+        <p>Walk through all three steps in order:</p>
+<ol>
+<li>Inbox read-back. Jaw-drop #1.</li>
+<li>Live drafts that appear in your actual email Drafts folder. Jaw-drop #2.</li>
+<li>Calendar + email chain narrative. Jaw-drop #3.</li>
+</ol>
+<p>By the end, "Cowork as a system" has become real to you.</p>
+      </div>
     </div>
   </section>
 
@@ -86,23 +221,14 @@ List the connectors active in this Cowork Project. For each, what scope is grant
     </div>
   </section>
 
-  <section class="slide slide-try">
+  <section class="slide slide-next-only">
     <div class="slide-inner">
-      <div class="slide-eyebrow">Try this</div>
-      <div class="slide-try-body">
-        <p>Walk through all three steps in order:</p>
-<ol>
-<li>Inbox read-back. Jaw-drop #1.</li>
-<li>Live drafts that appear in your actual email Drafts folder. Jaw-drop #2.</li>
-<li>Calendar + email chain narrative. Jaw-drop #3.</li>
-</ol>
-<p>By the end, "Cowork as a system" has become real to you.</p>
-      </div>
+      <div class="slide-eyebrow">What's next</div>
       
         <div class="slide-next">
           <div class="slide-next-label">What's next</div>
           <div class="slide-next-title">M11 — Office Add-ins</div>
-          <div class="slide-next-meta">Type <code>/teach M11</code> in Cowork to dive in next.</div>
+          <div class="slide-next-meta">Type <code>/teach M11</code> in Cowork to dive in next, or open the <a href="../m11.html">full M11 page</a>.</div>
         </div>
     </div>
   </section>

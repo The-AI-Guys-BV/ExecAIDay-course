@@ -32,14 +32,6 @@
     </div>
   </section>
 
-  <section class="slide slide-bigidea">
-    <div class="slide-inner">
-      <div class="slide-eyebrow">The big idea</div>
-      <p class="slide-bigidea-p">Most people prompt Claude by saying what they want. That's not enough.</p>
-<p class="slide-bigidea-p">Better: tell Claude <strong>who it's being</strong>, <strong>what context it needs</strong>, <strong>the specific task</strong>, <strong>the output format</strong>, and <strong>what NOT to do</strong>. Five elements, in any order. Each one shifts the output.</p>
-    </div>
-  </section>
-
   <section class="slide slide-what">
     <div class="slide-inner">
       <div class="slide-eyebrow">What you'll do</div>
@@ -54,10 +46,27 @@
     </div>
   </section>
 
-  <section class="slide slide-action">
+  <section class="slide slide-bigidea">
     <div class="slide-inner">
-      <div class="slide-eyebrow">The move</div>
-      <p class="slide-action-setup"><strong>R-C-T-F-C version:</strong></p><pre class="slide-prompt"><code>R: You're an experienced executive recruiter who places C-level talent.
+      <div class="slide-eyebrow">The big idea</div>
+      <p class="slide-bigidea-p">Most people prompt Claude by saying what they want. That's not enough.</p>
+<p class="slide-bigidea-p">Better: tell Claude <strong>who it's being</strong>, <strong>what context it needs</strong>, <strong>the specific task</strong>, <strong>the output format</strong>, and <strong>what NOT to do</strong>. Five elements, in any order. Each one shifts the output.</p>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Beginner</div>
+      
+      <div class="slide-section-body">
+        <p>R-C-T-F-C, with one example:</p>
+<p><strong>Bad prompt:</strong></p>
+<pre><code>
+Help me write a follow-up email to a candidate I want to hire.
+</code></pre>
+<p><strong>R-C-T-F-C version:</strong></p>
+<pre><code>
+R: You're an experienced executive recruiter who places C-level talent.
 
 C: I'm a Series B SaaS CEO. We've interviewed Sarah Chen (VP Product) over three rounds.
 She's strong, currently at a competitor, risk-averse about leaving. I want to make her an
@@ -70,7 +79,100 @@ F: 4 short paragraphs. No subject line. Closing requests a call. Tone: warm,
 confident, not pushy.
 
 C: Don't mention specific compensation numbers. Don't sound like a form letter. No
-"looking forward to hearing from you" or similar generic email closers. Stay under 180 words.</code></pre>
+"looking forward to hearing from you" or similar generic email closers. Stay under 180 words.
+</code></pre>
+<p>The output from the second prompt is dramatically better. Try both yourself in Cowork.</p>
+<p>The five elements:</p>
+<ul>
+<li><strong>R — Role.</strong> Who Claude is being. Specific.</li>
+<li><strong>C — Context.</strong> What Claude needs to know that isn't obvious.</li>
+<li><strong>T — Task.</strong> One specific verb-driven ask.</li>
+<li><strong>F — Format.</strong> Output shape: bullets, a table, a 2-paragraph email, a one-page memo.</li>
+<li><strong>C — Constraints.</strong> What NOT to do. The 2026 edge.</li>
+</ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Intermediate</div>
+      
+      <div class="slide-section-body">
+        <p>The 10 anti-patterns. Recognize them in your own prompting and you'll catch yourself before sending a sloppy prompt:</p>
+<ol>
+<li><strong>"Help me with X"</strong> — vague. Use a specific verb.</li>
+<li><strong>The kitchen-sink prompt</strong> — five tasks at once. Split.</li>
+<li><strong>"You are a helpful assistant"</strong> — adds nothing. Be specific.</li>
+<li><strong>Implicit context assumptions</strong> — Claude guesses, usually wrong.</li>
+<li><strong>"Give me a few options"</strong> — returns three generic equal options. Specify ranking criterion.</li>
+<li><strong>No format specified</strong> — Claude defaults to walls of prose.</li>
+<li><strong>"Make it better"</strong> — what's "better"? Specify direction.</li>
+<li><strong>The polite preamble</strong> — "I was wondering if you could possibly..." wastes tokens.</li>
+<li><strong>The follow-up "but"</strong> — each "but" is a new task. Split.</li>
+<li><strong>No constraints</strong> — Claude hedges and pads. Tell it what NOT to do.</li>
+</ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Advanced</div>
+      <h3 class="slide-section-subtitle">Metaprompting via <code>/help-me-prompt</code></h3>
+      <div class="slide-section-body">
+        <p>When you find yourself about to send a sloppy prompt, type:</p>
+<pre><code>
+/help-me-prompt help me write a follow-up email to a candidate I want to hire
+</code></pre>
+<p>The skill takes your draft and rewrites it in R-C-T-F-C structure. It catches the anti-patterns automatically. Already available — the ExecAIDay plugin installed in M01 includes it.</p>
+<p>This is the meta-move: instead of remembering all 5 elements + 10 anti-patterns, use a skill that enforces them.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Advanced</div>
+      <h3 class="slide-section-subtitle">Voice + prompting</h3>
+      <div class="slide-section-body">
+        <p>Voice tools transcribe what you say into your active text field. So you can speak prompts instead of typing them. Options:</p>
+<ul>
+<li><strong>Wispr Flow</strong> (<a href="https://wisprflow.ai">wisprflow.ai</a>) — Mac and Windows.</li>
+<li><strong>Superwhisper</strong> — Mac.</li>
+<li><strong>Voibe</strong> — Mac.</li>
+<li><strong>FloWstay</strong> (<a href="https://flowstay.app">flowstay.app</a>) — Mac only (Apple Silicon).</li>
+</ul>
+<p>Pick one that runs on your platform.</p>
+<p>The trick: even when speaking, structure the prompt as R-C-T-F-C. Voice → text → R-C-T-F-C → Claude. Don't degrade your prompt quality just because you're talking.</p>
+<p>Quick practice: speak a prompt out loud, transcribe via your voice tool, send to Claude. Does it work?</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Advanced</div>
+      <h3 class="slide-section-subtitle">Prompt chains</h3>
+      <div class="slide-section-body">
+        <p>When a task is too complex for one prompt, chain prompts:</p>
+<ol>
+<li>First prompt: extract / classify / parse the input.</li>
+<li>Second prompt: act on the output of the first.</li>
+<li>Third prompt: format / verify / refine.</li>
+</ol>
+<p>Each link is its own R-C-T-F-C. The chain is the workflow. You'll see this pattern in M07 when we look at skills (which are pre-written prompt chains).</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-try">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Try this</div>
+      
+      <div class="slide-try-body">
+        <p>Take a prompt you wrote yesterday — a real one, from your inbox or a recent Claude session. Run it through <code>/help-me-prompt</code>. Identify which of the 5 elements were missing. Rewrite. Send the new version. See the difference.</p>
+      </div>
     </div>
   </section>
 
@@ -103,17 +205,14 @@ Rewrite the email below to be 30% shorter without losing factual content. Tone s
     </div>
   </section>
 
-  <section class="slide slide-try">
+  <section class="slide slide-next-only">
     <div class="slide-inner">
-      <div class="slide-eyebrow">Try this</div>
-      <div class="slide-try-body">
-        <p>Take a prompt you wrote yesterday — a real one, from your inbox or a recent Claude session. Run it through <code>/help-me-prompt</code>. Identify which of the 5 elements were missing. Rewrite. Send the new version. See the difference.</p>
-      </div>
+      <div class="slide-eyebrow">What's next</div>
       
         <div class="slide-next">
           <div class="slide-next-label">What's next</div>
           <div class="slide-next-title">M07 — Skills + Slash Commands</div>
-          <div class="slide-next-meta">Type <code>/teach M07</code> in Cowork to dive in next.</div>
+          <div class="slide-next-meta">Type <code>/teach M07</code> in Cowork to dive in next, or open the <a href="../m07.html">full M07 page</a>.</div>
         </div>
     </div>
   </section>
