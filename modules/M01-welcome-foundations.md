@@ -44,7 +44,7 @@ You start the workshop with a verified install, a tutor (`/teach` — type that 
     6. **Repeat for Excel and PowerPoint** — open each app, same Insert → Get Add-ins → search "Claude by Anthropic" → Add → sign in. The Claude icon should appear in the ribbon of all three apps.
 - **A starter vault and a starter work folder, in a cloud-synced location.** Both folders sit inside a cloud sync app — Dropbox, OneDrive, Google Drive, or iCloud Drive (whichever your org uses). This is required, not optional: cloud sync is how the vault stays backed up, accessible from your phone for Dispatch (M13), and durable across machines. Your assistant has placed them at the right path. M03 mounts the vault in your first Cowork Project; M12 mounts the work folder in a second one.
 
-This module's job is to confirm all that has given you a usable workspace, and to give you the words for the next 16 modules. Most of what we cover here is vocabulary — concepts you'll hear used the whole workshop. We're not building anything yet; we're orienting.
+This module's job is to confirm all that has given you a usable workspace, and to give you the words for the rest of the workshop. Most of what we cover here is vocabulary — concepts you'll hear used the whole workshop. We're not building anything yet; we're orienting.
 
 The single most important thing in this module: by the end, your install is verified and `/teach` works — your safety net for the rest of the workshop. M02 then opens Obsidian on your vault. M03 creates your first Cowork Project mounted to that vault. From there, every module slots in.
 
@@ -144,7 +144,7 @@ Expected: Claude lists the 17 modules of this course. If you get "Unknown comman
 
 ## References
 
-- `references/17-basic-concepts.md` — full definitions of the 18 concepts.
+- `references/18-basic-concepts.md` — full definitions of the 18 concepts.
 - `references/context-and-context-rot.md` — deep dive on concepts #1, #13, #18.
 - `references/data-privacy.md` — data handling policy.
 - `references/what-not-to-use-claude-for.md` — boundaries.

@@ -4,11 +4,11 @@ You've installed the workshop plugin. Everything you need for the two days — a
 
 ## What this plugin gives you
 
-- **`/teach <module>`** — a patient tutor that walks any of the 16 modules with you, one section at a time. No skipping, no summarizing, no pretending. Use it during the workshop and any time after.
+- **`/teach <module>`** — a patient tutor that walks any of the 17 modules with you, one section at a time. No skipping, no summarizing, no pretending. Use it during the workshop and any time after.
 - **26 skills** — slash commands ready to use immediately. `/capture` puts a thought into your GTD inbox without opening any other app. `/new-project` scaffolds a new project folder, synthesizes a tailored brief, and creates the matching GTD entry. `/drafts-inbox` turns email triage into one consolidated review surface.
-- **16 module walkthroughs** — the actual course content, walkable on demand via `/teach`.
+- **17 module walkthroughs** — the actual course content, walkable on demand via `/teach`.
 - **Templates** — starter content for your vault, your work folder, and every new project folder.
-- **References** — frameworks (R-C-T-F-C), 17 basic concepts, data privacy notes, what NOT to use Claude for, connector quirks, scheduled task patterns.
+- **References** — frameworks (R-C-T-F-C), 18 basic concepts, data privacy notes, what NOT to use Claude for, connector quirks, scheduled task patterns.
 
 ## How to use this in practice
 
@@ -20,7 +20,7 @@ You've installed the workshop plugin. Everything you need for the two days — a
 
 - Claude Desktop with Cowork (Max plan or higher recommended).
 - The two folders you set up in onboarding: your **Obsidian vault** (knowledge folder) and your **work folder** (projects).
-- One **Cowork Project** in the app, mounting both folders simultaneously.
+- Two **Cowork Projects** in the app — **Vault** (mounts the vault only, created in M03) and **Workshop** (mounts the work folder + the vault, created in M12).
 - A few connectors (Gmail / M365, Calendar, Drive, Slack, plus your custom apps).
 
 ## Where things live

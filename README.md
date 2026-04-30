@@ -5,7 +5,7 @@ Premium in-person Claude Cowork training workshop for C-level executives, distri
 ## What's in this plugin
 
 - **26 skills** — `/teach`, `/help-me-prompt`, `/new-project`, plus 4 more core skills and 19 GTD skills.
-- **16 modules** — full course content readable by `/teach <module>`.
+- **17 modules** — full course content readable by `/teach <module>`.
 - **Templates** — vault, work-folder, and project-folder starter content.
 - **References** — R-C-T-F-C framework, 18 basic concepts (incl. context rot), data privacy, connector quirks, scheduled-task patterns, GTD schema.
 - **Docs** — welcome page, how-to-start guide.
@@ -25,7 +25,7 @@ In Claude Cowork:
 ## Smoke test (after install)
 
 - `/skills` — lists all 26 skills plus Cowork built-ins.
-- `/teach` (no args) — lists all 16 modules.
+- `/teach` (no args) — lists all 17 modules.
 - `/teach M01` — walks the first module.
 - `/capture <something>` — appends a bullet to `<vault>/gtd/inbox.md` in your Obsidian vault.
 
@@ -41,7 +41,7 @@ ExecAIDay-course/
 │   ├── plugin.json          # plugin manifest
 │   └── marketplace.json     # marketplace listing this plugin
 ├── skills/                  # 26 skill folders, each with SKILL.md
-├── modules/                 # 16 module Markdown files (M01–M16)
+├── modules/                 # 17 module Markdown files (M01–M17)
 ├── templates/               # vault + work-folder + project starter content
 ├── references/              # frameworks, concepts, policies, GTD schema
 ├── docs/                    # welcome.md, how-to-start.md
@@ -50,7 +50,7 @@ ExecAIDay-course/
 
 ## Status
 
-**v0.1.0 — full content authored.** All 26 skills, 16 modules, 7+ references, vault and work-folder starter content, welcome/how-to-start docs in place. Skill SKILL.md bodies and module sections will iterate as the workshop runs first cohorts.
+**v0.1.0 — full content authored.** All 26 skills, 17 modules, 9 references, vault and work-folder starter content, welcome/how-to-start docs in place. Skill bodies and module sections will iterate as the workshop runs first cohorts.
 
 ## License
 
