@@ -2,7 +2,7 @@
 
 ## Why this module matters
 
-You start the workshop with a working Cowork Project, a tutor (`/teach`) that walks any module on demand, and the vocabulary to follow everything that comes next. Without this hour, the rest of the workshop would be cargo-cult button-pressing. With it, every later module slots into a structure you understand.
+You start the workshop with a working Cowork Project, a tutor (`/teach` — type that into Cowork and it walks any module of this course with you, on demand), and the vocabulary to follow everything that comes next. Without this hour, the rest of the workshop is button-pressing without understanding why each step matters. With it, every later module slots into a structure you understand.
 
 ## What you'll do
 
