@@ -90,14 +90,6 @@ For full definitions, see the References section of this plugin (`references/17-
 
 ## Advanced
 
-### Data privacy + company policy
-
-When you type into Cowork, your prompt + relevant context goes to Anthropic's infrastructure. On Max plan, Anthropic doesn't train on your data. Connector data flows through when needed for a response — your inbox isn't continuously streaming. Local files in mounted folders go through when Claude reads them.
-
-Your company has its own AI policy. Your IT contact is who to ask if unsure.
-
-For details: `references/data-privacy.md`.
-
 ### What NOT to use Claude for
 
 - **High-stakes decisions without verification** — hires, fires, deals, board recommendations.
