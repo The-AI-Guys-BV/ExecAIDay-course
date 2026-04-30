@@ -20,7 +20,17 @@ You start the workshop with a working Cowork Project, a tutor (`/teach` — type
 
 - **Claude Desktop with Cowork.** This is the workspace you'll spend the workshop in. Download from [claude.com/download](https://claude.com/download) for Mac or Windows. Sign in with your Anthropic Max account.
 - **Obsidian.** Free, local-first knowledge tool. Reads the same vault files Cowork sees. Download from [obsidian.md/download](https://obsidian.md/download).
-- **Claude in Chrome (browser extension).** Lets Claude operate on websites, portals, and dashboards directly from your browser. Install from the Chrome / Brave Web Store: [chromewebstore.google.com](https://chromewebstore.google.com/) — search "Claude". Sign in with the same Anthropic account.
+- **Google Chrome (or a Chromium-based browser).** The Claude browser extension only runs in Chrome, Brave, or Microsoft Edge. If you don't already have one installed:
+    1. Download Chrome from [google.com/chrome](https://www.google.com/chrome/) for Mac or Windows.
+    2. Run the installer.
+    3. Open Chrome and sign in with your work Google account (so bookmarks, passwords, and your work-tab session sync).
+    Brave ([brave.com/download](https://brave.com/download/)) and Edge ([microsoft.com/edge](https://www.microsoft.com/edge)) both work too — the Claude extension installs the same way on any Chromium browser.
+- **Claude in Chrome (browser extension).** Lets Claude operate on websites, portals, and dashboards directly from your browser. To install:
+    1. Open the Chrome Web Store: [chromewebstore.google.com](https://chromewebstore.google.com/).
+    2. Search for **Claude**. The official extension is published by Anthropic.
+    3. Click **Add to Chrome** (or "Add to Brave / Edge" — same flow).
+    4. Pin the extension to your toolbar (puzzle-piece icon → pin Claude).
+    5. Click the Claude icon, sign in with the same Anthropic account you use for Cowork.
 - **The ExecAIDay course plugin.** Provides `/teach` and the 19 GTD skills you'll use throughout the workshop. Marketplace URL: [github.com/The-AI-Guys-BV/ExecAIDay-course](https://github.com/The-AI-Guys-BV/ExecAIDay-course). To install inside Cowork:
     1. Open the **Customize** sidebar.
     2. **Add the marketplace first.** Click **+** to add a new personal marketplace, paste the URL above, confirm. Cowork syncs.
