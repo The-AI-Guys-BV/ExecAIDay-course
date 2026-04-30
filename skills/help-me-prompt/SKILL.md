@@ -70,4 +70,4 @@ Sharpened: added the recruiter role, made the candidate context explicit, specif
 
 ## Reference
 
-See the `references/rctfc-framework.md` page in this plugin for the full framework.
+See `references/rctfc-framework.md` in this plugin for the full framework.

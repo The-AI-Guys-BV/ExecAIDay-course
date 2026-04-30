@@ -1,17 +1,20 @@
-# M13 — GTD in your vault
+# M13 — GTD
 
 ## Why this module matters
 
-David Allen's GTD, but stored as files in your Obsidian vault. The 19 GTD skills make it work from Cowork — capture, process, query, review. Your vault is the database; Cowork is the interface; Obsidian is the read-side. This is the module where your task management gets unified — no more sticky notes, no more inbox-as-todo-list, no more "let me write that down somewhere."
+David Allen's GTD, run from Cowork. Capture, process, query, review. This is the module where your task management gets unified — no more sticky notes, no more inbox-as-todo-list, no more "let me write that down somewhere."
+
+You pick where the GTD data lives: in your **Obsidian vault** (default — files at `<vault>/gtd/`) or in **Notion** (databases). Both work. You run **one**, not both.
 
 > Methodology credit: **David Allen's Getting Things Done** (2001, revised 2015). The five-step GTD method (capture, clarify, organize, reflect, engage) is what these skills operationalize. We didn't invent the method — we built the interface.
 
 ## What you'll do
 
-- Tour the GTD vault layout (`<vault>/gtd/inbox.md`, `next-actions.md`, `projects/`, `waiting-for.md`, `someday.md`, `tickler.md`, plus higher horizons).
-- Run `/capture` — watch the item appear as a bullet in `inbox.md` without you opening Obsidian.
-- Try `/whats-next`, `/waiting-for`, `/process-inbox`.
-- Combine a scheduled task + GTD: weekly review every Monday morning.
+- Pick your GTD store: Obsidian (default) or Notion.
+- Set up the chosen store.
+- Run `/capture` — watch the item land in the right place without you switching apps.
+- Run `/whats-next`, `/waiting-for`, `/process-inbox`.
+- Combine GTD with a scheduled task: a weekly review every Monday morning.
 
 ---
 
@@ -26,11 +29,33 @@ The five steps:
 4. **Reflect** — review weekly. What's stale? What needs my attention?
 5. **Engage** — choose what to do based on context, energy, time available.
 
-This module gives you the Cowork-driven version of all five — backed by files in your vault.
+This module gives you the Cowork-driven version of all five.
+
+## Pick your GTD store: Obsidian or Notion
+
+You pick **one**. Running both is overhead, not value — two places to forget about, two places to drift, two places to keep in sync. Pick the one whose UI you'll actually open and stick with it.
+
+**Option A — Obsidian vault.** Your GTD lives as plain files at `<vault>/gtd/` — `inbox.md`, `next-actions.md`, `projects/`, etc. Free, local, private. The 19 GTD skills work out of the box. Mobile capture via Dispatch (M12). Default for the workshop.
+
+**Option B — Notion.** Your GTD lives as Notion databases. Familiar UI for many execs, polished mobile app. Costs a Notion subscription. Skills route to your Notion via a `claude.md` hint pattern that tells Cowork exactly which databases to use (so it doesn't search your whole Notion every time).
+
+Quick guide to the choice:
+
+| Question | Pick Obsidian | Pick Notion |
+|---|---|---|
+| Already heavy Notion user? | — | yes |
+| Want zero subscriptions? | yes | — |
+| Want fully local + offline? | yes | — |
+| Want polished mobile UI? | (Dispatch is fine) | yes |
+| Want it Just To Work with the workshop's skills? | yes | — |
+
+**Pick one now.** Tell your assistant. Walk only the matching section below.
 
 ## Beginner / Getting Started
 
-### Tour the GTD vault layout
+### Option A — Obsidian vault GTD
+
+#### Tour the GTD vault layout
 
 Open Obsidian. Navigate to `<vault>/gtd/`. You'll see:
 
@@ -44,13 +69,11 @@ Open Obsidian. Navigate to `<vault>/gtd/`. You'll see:
 - `goals.md` — 1–2 yr outcomes.
 - `vision.md` — 3–5 yr direction.
 
-References live in `<vault>/References/` as you already use them.
+References live in `<vault>/References/` as you already use them. The 19 GTD skills read and write these files.
 
-The 19 GTD skills read and write these files. You normally don't open them by hand, but they're plain-text files viewable in Obsidian or any text editor.
+#### Tag conventions (vault GTD)
 
-### Tag conventions
-
-Inline tags only. No YAML frontmatter. Examples on a next-action bullet:
+Inline tags only. No YAML frontmatter. Example bullet:
 
 ```
 - [ ] Follow up with legal team on trademark filing #context/calls #energy/low #time/quick @project:trademark-filing created:2026-04-29
@@ -67,7 +90,7 @@ Tag list:
 
 The skills filter and sort by these tags. You don't have to memorize them — `/process-inbox` adds them when you clarify items.
 
-### `/capture` — your first GTD move
+#### Try `/capture`
 
 In Cowork:
 
@@ -75,30 +98,87 @@ In Cowork:
 /capture remind me to follow up with the legal team on the trademark filing
 ```
 
-Boom. A new bullet appears in `<vault>/gtd/inbox.md`. You never opened Obsidian. That's the felt moment.
+A new bullet appears in `<vault>/gtd/inbox.md`. You never opened Obsidian. That's the felt moment.
 
-Try a few more captures over the day. Build the habit.
+### Option B — Notion GTD
 
-### `/whats-next`
+#### Step 1 — Connect Notion to Cowork
+
+1. In Cowork, open the **Customize** sidebar.
+2. Go to **Connectors**, click the **+** icon, pick **Notion** from the list.
+3. A browser window opens for OAuth. Sign in to your Notion account, click **Allow access**.
+4. Cowork now has the Notion connector active. Verify in Customize → Connectors — Notion shows as Connected.
+
+#### Step 2 — Set up the GTD databases in Notion
+
+Either duplicate the workshop's GTD template (your assistant has the link) or build your own. Standard databases:
+
+- **Inbox** — capture surface. One field: Item.
+- **Next Actions** — Item, Context (select), Energy (select), Time (select), Project (relation to Projects), Status, Created.
+- **Projects** — Outcome, Status, Stakeholders, Deadline, Next-Action (relation to Next Actions).
+- **Waiting For** — Item, Person, Created, Due.
+- **Someday/Maybe** — Item, Created.
+- **Tickler** — Item, Surface date.
+- **Areas / Goals / Vision** (optional, higher horizons).
+
+#### Step 3 — Share each database with Claude
+
+Notion's permission model is **per-page** — sharing your top-level workspace doesn't give Cowork access to nested databases. For each database above:
+
+1. Open the database in Notion.
+2. Click the **···** menu (top-right) → **Connections**.
+3. Add the **Claude** connection (or whatever the integration is named in your Notion).
+4. Repeat for every database.
+
+Without this step, Cowork can authenticate but can't read or write any pages.
+
+#### Step 4 — Tell Cowork the structure (the `claude.md` hint pattern)
+
+This is the key efficiency move. Without it, every GTD operation makes Cowork search your entire Notion. With it, Cowork targets the right database directly.
+
+Open `<vault>/claude.md` (the vault root file M06 set up). Add a Notion-GTD pointer block:
 
 ```
-/whats-next
+GTD lives in Notion. Use the Notion connector for all GTD operations.
+
+Database links:
+- Inbox: https://www.notion.so/<your-workspace>/<inbox-page-id>
+- Next Actions: https://www.notion.so/<your-workspace>/<next-actions-page-id>
+- Projects: https://www.notion.so/<your-workspace>/<projects-page-id>
+- Waiting For: https://www.notion.so/<your-workspace>/<waiting-for-page-id>
+- Someday: https://www.notion.so/<your-workspace>/<someday-page-id>
+- Tickler: https://www.notion.so/<your-workspace>/<tickler-page-id>
+
+Routing rules:
+- /capture: append a row to Inbox. Item field = the captured text. Don't search; go straight to the Inbox database.
+- /whats-next: query Next Actions where Status = Active, sorted by priority and Created. Don't search; go straight to Next Actions.
+- /process-inbox: walk Inbox rows, ask the GTD clarifying questions per item, then move the row to the right destination database.
+- /waiting-for: query Waiting For grouped by Person.
+- /delegate: append a row to Waiting For. Mark the original Next Action as Cancelled.
+- /tickler: append a row to Tickler with the Surface date set.
+
+Don't search Notion globally for any of these. Use the page IDs above.
 ```
 
-Lists your next actions, grouped by context (calls / errands / desk / etc.). Read-only — you decide what to do.
+Replace each `https://www.notion.so/...` with the actual URL of your Notion database (right-click the database tab → Copy link).
 
-Try filtered:
+Why this matters: Cowork reads `claude.md` at the start of every conversation. With the routing rules in place, when you say `/capture`, Cowork knows to write a row to the Inbox database directly — no scanning, no asking which database, no latency.
+
+#### Try `/capture`
+
+In Cowork:
+
 ```
-/whats-next quick
+/capture remind me to follow up with the legal team on the trademark filing
 ```
 
-Shows only `#time/quick` items. Useful when you have a small chunk of time.
+A new row appears in your Notion Inbox database. You never opened Notion. That's the felt moment.
 
 ## Intermediate
 
 ### `/process-inbox`
 
-The clarifying step. Walks each Inbox item with you and asks the GTD questions:
+Walks each Inbox item with you and asks the GTD questions:
 
 1. Is it actionable? (yes / no)
 2. If yes: what's the next concrete action?
@@ -106,44 +186,38 @@ The clarifying step. Walks each Inbox item with you and asks the GTD questions:
 4. Quick to do? (yes → do now)
 5. Who does it? (me / delegate)
 
-Run it:
+Run `/process-inbox`. The skill adds the right tags / fields and moves the item from Inbox to its destination — `next-actions.md` (vault) or Next Actions database (Notion), and so on.
+
+### `/whats-next` and `/waiting-for`
+
 ```
-/process-inbox
+/whats-next
 ```
 
-Walk through 3–5 items. The skill adds the right tags, moves the bullet from `inbox.md` to the right destination file (`next-actions.md`, `waiting-for.md`, `someday.md`, `projects/<slug>.md`, etc.). You don't dump items into "later" — you actively decide.
-
-### `/waiting-for`
+Lists your next actions, grouped by context (calls / errands / desk / etc.). Read-only — you decide what to do. `/whats-next quick` shows only short items.
 
 ```
 /waiting-for
 ```
 
-Reads `<vault>/gtd/waiting-for.md`, lists items grouped by person.
-
-```
-/waiting-for stale
-```
-
-Surfaces items waited >7 days (computed from `created:` tag). For each, offers: follow up (drafts via `/drafts-inbox`), push deadline, cancel, wait longer.
+Lists items grouped by person. `/waiting-for stale` surfaces items waited >7 days; for each, offers follow-up (drafts via `/drafts-inbox`), push deadline, cancel, or wait longer.
 
 ### `/delegate`
 
-When a next action is for someone else:
 ```
 /delegate Send me the Q3 numbers to John
 ```
 
-Skill drafts the delegation email, appends a bullet to `<vault>/gtd/waiting-for.md` with `@person:john created:<today>`, and moves the original next-action bullet (if it was already in `next-actions.md`) — adding `#status/cancelled`. You confirm before the email sends.
+Drafts the delegation email, appends a Waiting For entry tagged with the person, and marks the original Next Action as cancelled. You confirm before the email sends.
 
 ### Combining scheduled task + GTD
 
-Set up a Monday morning weekly review:
+A Monday morning weekly review:
 
 In Cowork → Settings → Scheduled tasks → New:
-- Name: Weekly review reminder.
-- Schedule: Mondays at 8:30am.
-- Prompt:
+- **Name:** Weekly review reminder.
+- **Schedule:** Mondays at 8:30am.
+- **Prompt:**
 ```
 Tell me to run /weekly-review now. Surface as a Slack DM to me with the link to today's review.
 ```
@@ -152,29 +226,30 @@ Now every Monday you get the nudge. The skill does the heavy lifting.
 
 ### Mobile capture via Dispatch
 
-You can capture from your phone. The Claude mobile app + Dispatch (March 2026) routes voice/text requests to your desktop Cowork, which runs `/capture`, which appends the bullet to `<vault>/gtd/inbox.md`. Same for `/whats-next`, `/waiting-for`, `/today`. See M12 for setup.
+Capture from your phone. The Claude mobile app + Dispatch routes voice/text requests to your desktop Cowork, which runs `/capture`. Same for `/whats-next`, `/waiting-for`, `/today`. See M12.
+
+Works for both Obsidian and Notion GTD — Cowork uses your `claude.md` to know which to target.
 
 ## Advanced
 
-### Higher horizons skills
+### Higher horizons
 
-GTD has horizons above next actions. Most workflows live at next-actions and projects (the ground level). The higher horizons matter quarterly+.
+GTD has horizons above next actions. Most workflows live at next-actions and projects. The higher horizons matter quarterly+.
 
-- `/areas` — ongoing responsibility domains (`<vault>/gtd/areas.md`).
-- `/goals` — 1–2 yr outcomes (`<vault>/gtd/goals.md`).
-- `/vision` — 3–5 yr direction (`<vault>/gtd/vision.md`).
+- `/areas` — ongoing responsibility domains.
+- `/goals` — 1–2 yr outcomes.
+- `/vision` — 3–5 yr direction.
 - `/horizons-review` — full walkthrough.
 
 Don't try to set all three on Day 1. Let them accumulate as you reflect.
 
 ### `/tickler` — defer to a future date
 
-When you don't want to act now but want to be reminded:
 ```
 /tickler review the Q4 hiring plan in 3 weeks
 ```
 
-Appends a bullet to `<vault>/gtd/tickler.md` with `surface:2026-05-20` (3 weeks from today). Surfaces 3 weeks from now via `/tickler review`.
+Adds a tickler item with a future surface date. `/tickler review` shows what's surfacing today.
 
 ### `/checkout` — end of day
 
@@ -182,15 +257,11 @@ Appends a bullet to `<vault>/gtd/tickler.md` with `surface:2026-05-20` (3 weeks 
 /checkout
 ```
 
-Walks: what got done today, what's still open, what's tomorrow's #1. Appends a closing block to today's daily note in `<vault>/Daily Notes/<today>.md`. Creates next-actions in `next-actions.md` if you mention any.
+Walks: what got done today, what's still open, what's tomorrow's #1. Logs to today's Daily Note. End-of-day discipline. The point is the daily review, not the time savings.
 
-End-of-day discipline. The point is the daily review, not the time savings.
+### Why one store, not two
 
-### Why files instead of a database
-
-Trade-off, plainly. A database tool gives you structured fields, joins, and a polished mobile app. Files give you: zero subscriptions, plain-text portability, version control, native Obsidian integration (backlinks, search, graph), and one home for tasks + knowledge. Plus Dispatch closes the mobile-capture gap.
-
-For an executive working primarily from one laptop with cloud-synced vault, files win.
+Two GTD stores = two places to forget about, two places to update, two places to drift. The whole point of GTD is a single trusted system. If you're already heavy on Notion, pick Notion. If you want zero subscriptions and full local control, pick Obsidian. Don't try to mirror — that's its own maintenance burden.
 
 ### Team GTD considerations
 
@@ -204,28 +275,29 @@ If your team is interested, run them through this workshop too. Otherwise, your 
 
 ## Try this
 
-`/capture remind me to follow up with the legal team on the trademark filing` in Cowork. Open `<vault>/gtd/inbox.md` in Obsidian. The bullet is there with `created:<today>`. You never opened the file by hand. Infrastructure-as-interface proof.
+`/capture remind me to follow up with the legal team on the trademark filing` in Cowork. Open your store (vault Inbox or Notion Inbox) — the item is there with `created:<today>`. You never opened the store yourself. Infrastructure-as-interface proof.
 
-The pattern repeats: capture from Cowork, process from Cowork, query from Cowork, review from Cowork. The vault is the database; Cowork is your interface.
+The pattern repeats: capture from Cowork, process from Cowork, query from Cowork, review from Cowork.
 
 ## Verification checkpoint
 
 ```
-What's in my GTD inbox right now? Read <vault>/gtd/inbox.md.
+What's in my GTD inbox right now?
 ```
 
-Expected: Claude lists Inbox items including the one you just captured. If the count is 0 or doesn't include your capture, your assistant should check the vault path and `<vault>/gtd/inbox.md` exists.
+Expected: Claude lists Inbox items including the one you just captured. If it's empty or wrong, the routing in your `claude.md` may be off — your assistant checks.
 
 ## Common issues
 
-- **`/capture` writes to wrong place** — `<vault>/gtd/inbox.md` doesn't exist or vault path is off. Your assistant fixes.
-- **`/process-inbox` items stay in inbox after processing** — skill should remove the bullet from `inbox.md` and write it to the destination file. If it doesn't, check Cowork has write permission to the vault.
-- **`/waiting-for` shows zero items** — either no waiting-fors yet (correct) or `waiting-for.md` is empty.
-- **Higher-horizon skills (/areas, /goals, /vision) fail** — those files may not exist yet. Run `/areas`, `/goals`, or `/vision` once with no args; the skill creates the file with a stub.
+- **`/capture` writes to wrong place** — vault path or Notion `claude.md` routing is off. Your assistant fixes.
+- **Notion: Cowork can authenticate but can't read pages** — you didn't share each database with the Claude connection. Open each Notion database → ··· → Connections → add Claude. Repeat for every database.
+- **Notion: every GTD command takes long** — `claude.md` doesn't have the database URLs. Add them per the Step 4 pattern above.
+- **Vault: `/process-inbox` items stay in inbox after processing** — Cowork doesn't have write permission to the vault. Re-mount or check filesystem permissions.
+- **Higher-horizon files don't exist** — run `/areas`, `/goals`, or `/vision` once with no args; the skill creates the file or database row with a stub.
 
 ## References
 
-- `references/gtd-vault-layout.md` — full file structure and tag conventions.
-- M14 — Daily Command Center (which surfaces GTD next-actions in the artifact).
+- `references/gtd-vault-layout.md` — vault GTD file structure and tag conventions.
+- M14 — Daily Command Center (surfaces GTD next-actions in the artifact, works with either store).
 - M12 — scheduled tasks (pair with GTD for weekly review automation; also covers Dispatch for mobile capture).
 - David Allen, *Getting Things Done* (revised 2015) — the source.

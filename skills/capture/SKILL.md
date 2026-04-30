@@ -43,6 +43,6 @@ End. Do NOT:
 ## Failure modes
 
 1. **Vault write fails** → tell user; offer to save draft locally and retry later.
-2. **`<vault>/gtd/inbox.md` not found** → tell user the GTD master may be incomplete; ask to verify the GTD template is set up.
+2. **`<vault>/gtd/inbox.md` not found** → tell the user the vault GTD scaffold is missing this file; ask them to verify `<vault>/gtd/` exists and has the expected files.
 3. **User input is empty** → ask: "What needs capturing?"
 4. **Input is suspiciously long** (>500 chars) → still capture, but suggest: "Captured. This is longer than usual — consider running /process-inbox soon to clarify."

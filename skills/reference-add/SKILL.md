@@ -19,7 +19,7 @@ The user's `claude.md` (work-folder root or chief-of-staff) may specify a defaul
 - Short factual references (a fact, a quote, a link) → vault `References/` folder.
 - Long-form notes (a research summary, a synthesis) → vault `References/<slug>.md` as a Markdown file.
 
-Store as markdown file in `<vault>/References/<topic>/`.
+Store as a file in `<vault>/References/<topic>/.`
 
 ## Step 1 — capture
 

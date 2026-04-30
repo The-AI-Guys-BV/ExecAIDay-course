@@ -25,7 +25,7 @@ For the located project:
 4. **Project folder:** check work folder for matching project subfolder. List file count in `Source Materials/`, `Working Files/`, `Deliverables/`.
 5. **Recent emails:** search inbox for emails tagged with the project (if email connector supports tagging) or with project name in subject. Last 5.
 6. **Slack threads:** search Slack for project name. Last 5 threads.
-7. **Related files:** any other markdown files in the project folder or vault.
+7. **Related files:** any other files in the project folder or vault.
 
 ## Step 3 — present
 

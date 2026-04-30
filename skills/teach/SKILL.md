@@ -32,7 +32,7 @@ If none of the candidate paths return files: tell the user **"I can't find the m
 ## Step 2 — read the material
 
 - Read the chosen module file in full.
-- Parse internal structure: sections (Introduction / Beginner / Intermediate / Advanced), micro-win, verification checkpoint, common issues, references.
+- Parse internal structure: sections (Introduction / Beginner / Intermediate / Advanced), Try this, verification checkpoint, common issues, references.
 - Do NOT summarize the module. Do NOT list all sections up front. Do NOT preview the arc.
 
 ## Step 3 — teach one section at a time
@@ -62,9 +62,9 @@ For each section, in order. No exceptions.
 
 **3e. Close the section.** Ask: "Ready to continue?" STOP. Wait for explicit continuation (`yes`, `next`, `ok`, `continue`, `ready`, `go`). Do NOT advance without it.
 
-## Step 4 — micro-win and verification
+## Step 4 — Try this and verification
 
-After all sections walked, deliver the micro-win exactly as written in the module. Then run the verification checkpoint if present. Honor the same wait-for-confirmation rules from Step 3.
+After all sections walked, deliver the "Try this" (or "Try these") block exactly as written in the module. Then run the verification checkpoint if present. Honor the same wait-for-confirmation rules from Step 3.
 
 ## Exit conditions
 

@@ -47,7 +47,7 @@ For each Inbox item:
 ## Pre-flight
 
 - vault operations must be connected.
-- GTD master must have Inbox, Next Actions, Projects, Waiting-For, Someday, Reference databases. If any are missing, tell user to fix the GTD template.
+- `<vault>/gtd/` must have `inbox.md`, `next-actions.md`, `projects/`, `waiting-for.md`, `someday.md`. If any are missing, tell the user to verify the vault scaffold.
 
 ## Discipline
 

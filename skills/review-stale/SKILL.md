@@ -23,7 +23,7 @@ Vault mounted with GTD files in `<vault>/gtd/`.
 Stale thresholds (default, user can override):`claude.md`; defaults below):
 - **Next actions:** not updated in >14 days.
 - **Waiting-fors:** waiting >7 days.
-- **Projects:** no next-action updated in >14 days, OR project page itself not edited in >30 days.
+- **Projects:** no next-action updated in >14 days, OR the project file itself not edited in >30 days.
 
 ## Step 2 — present grouped
 

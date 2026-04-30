@@ -86,7 +86,7 @@ Produce a project `claude.md` with this structure (omit sections not relevant):
 
 ## Side effects beyond the folder
 
-1. **Vault project file** created at `<vault>/gtd/projects/<slug>.md` Fields per the workshop's GTD template:
+1. **Vault project file** created at `<vault>/gtd/projects/<slug>.md` with the workshop's standard project structure:
    - Outcome (sentence)
    - Status: Active
    - Stakeholders

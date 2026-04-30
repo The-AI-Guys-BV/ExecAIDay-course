@@ -48,4 +48,4 @@ For `/projects <keyword>`, filter inline; if zero matches, list active projects 
 
 1. **Projects folder not set up** → tell user.
 2. **No projects** → suggest `/new-project` to start one.
-3. **Project DB schema mismatched** (missing Outcome / Next-Action / Stakeholders fields) → list what's there, flag schema issue.
+3. **Project file missing standard sections** (Outcome / Next-Action / Stakeholders) → list what's present, flag the missing structure.

@@ -15,7 +15,7 @@ When invoked, work with the user's Vision document — the highest GTD altitude.
 
 ## /vision (show)
 
-Read the Vision page or document. Present it cleanly.
+Read `<vault>/gtd/vision.md`. Present it cleanly.
 
 ```
 # Vision (3–5 year)

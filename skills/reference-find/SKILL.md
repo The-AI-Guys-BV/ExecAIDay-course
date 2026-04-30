@@ -35,7 +35,7 @@ Sort by relevance (title match > body match) then recency.
 
 After listing, offer:
 - "Open #<N>" — Read the vault file for more context.
-- "Pull #<N> into context" — Read the file/page in full so user can ask follow-ups.
+- "Pull #<N> into context" — Read the file in full so the user can ask follow-ups.
 
 ## Don't
 
