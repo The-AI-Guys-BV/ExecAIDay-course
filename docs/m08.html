@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>M08 Obsidian — ExecAIDay</title>
-<meta name="description" content="Obsidian — module M08 of the ExecAIDay Claude Cowork training workshop.">
+<title>M08 Artifacts — ExecAIDay</title>
+<meta name="description" content="Artifacts — module M08 of the ExecAIDay Claude Cowork training workshop.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -23,131 +23,95 @@
 
 <header class="module-hero">
   <div class="container">
-    <div class="module-hero-icon" style="background: var(--personalize-soft); color: var(--personalize);">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><line x1="6.5" y1="6.5" x2="10.5" y2="10.5"/><line x1="17.5" y1="6.5" x2="13.5" y2="10.5"/><line x1="6.5" y1="17.5" x2="10.5" y2="13.5"/><line x1="17.5" y1="17.5" x2="13.5" y2="13.5"/></svg>
+    <div class="module-hero-icon" style="background: var(--sharpen-soft); color: var(--sharpen);">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
     </div>
     <div class="eyebrow eyebrow-row">
-      <span class="breadcrumb"><a href="index.html">All modules</a> &nbsp;/&nbsp; Personalize</span>
+      <span class="breadcrumb"><a href="index.html">All modules</a> &nbsp;/&nbsp; Sharpen</span>
       <a class="hero-slides-link" href="slides/m08.html">▶ View slide deck</a>
     </div>
-    <h1>M08 — Obsidian</h1>
-    <p class="lede">Obsidian is your knowledge layer — free, local-first, and the same files Cowork reads. Daily notes, references, capture, all linked via <code>[[wikilinks]]</code>. Once Obsidian is open on the vault you mounted in M01, Claude can read and write every note in there from Cowork.</p>
+    <h1>M08 — Artifacts</h1>
+    <p class="lede">Live artifacts (April 2026 headline) are how Claude becomes a persistent surface in your work, not a one-shot answer. A dashboard you build today reopens tomorrow with fresh data. That's the difference between asking Claude a question and having Claude maintain a view.</p>
   </div>
 </header>
 
 <main class="content container">
 <h2>What you'll do</h2>
 <ul>
-<li>Open Obsidian on the vault you mounted in M01 — same files Cowork sees.</li>
-<li>Use Claude (from your existing Workshop Cowork Project, where the vault is mounted) to write directly into your vault — journal entries, edits, summaries.</li>
-<li>Optionally: create a second Cowork Project that mounts <strong>only</strong> the vault, or a part of the vault, for focused knowledge work.</li>
+<li>See the artifact kinds you'll actually use: documents, dashboards, diagrams.</li>
+<li>Build a simple live artifact, close Cowork, reopen — watch it pull fresh data.</li>
+<li>Find the sidebar, restore a previous version.</li>
 </ul>
 <h2>Introduction</h2>
-<p>You have a vault. It's a folder of plain-text notes. Cowork reads and writes them. Obsidian renders them as a knowledge graph with bidirectional links, search, and a navigable file tree.</p>
-<p><strong>Role split, important.</strong> Cowork is the active layer — it creates files, edits files, runs skills, builds artifacts. Obsidian is the viewer — it shows you what's in the vault, in a UI that's pleasant to read in. <strong>You don't install Obsidian plugins.</strong> Anything you'd want a plugin for (a dashboard, a calendar overview, a daily-note workflow), you build as a live artifact in Cowork instead. The vault stays plain markdown that any tool can read.</p>
-<p>The three-layer model from M01:</p>
-<ul>
-<li><strong>Cowork folders = work files</strong> (project folders, bounded work).</li>
-<li><strong>Vault GTD = task management</strong> (what you're doing — files in <code>&lt;vault&gt;/gtd/</code>).</li>
-<li><strong>Obsidian = knowledge</strong> (what you know — research, daily reflection, references).</li>
-</ul>
-<p>This module sets up the third layer. Obsidian is one tool; you'll have it open on a second monitor or alongside Cowork.</p>
+<p>An artifact is a generated output Claude renders inline alongside its text response. For executives, the kinds that matter are documents you can edit, dashboards you can re-open, and diagrams that explain a flow.</p>
+<p>The 2026 headline: <strong>live artifacts</strong> auto-refresh on reopen. So the dashboard isn't a snapshot — it's a re-runnable view that pulls fresh data each time you open it. Daily morning brief, weekly status, project tracker — these become living surfaces, not stale screenshots.</p>
+<p>This module: see the kinds, build one live artifact, see version history. The big payoff comes in M15 when we build the Daily Command Center artifact.</p>
 <h2>Beginner / Getting Started</h2>
-<h3>Open Obsidian on your vault</h3>
-<p>Open Obsidian. First time: select the vault folder (the same folder you mounted in M01 as your knowledge folder).</p>
-<p>You'll see:</p>
+<p>The artifact kinds you'll actually ask for:</p>
 <ul>
-<li>The file browser on the left with the folder structure: <code>about-me/</code>, <code>Daily Notes/</code>, <code>References/</code>, <code>Inbox/</code>, plus a root <code>claude.md</code>.</li>
-<li>The current open note in the main pane.</li>
-<li>The graph view (icon top-right, shape varies by Obsidian version) showing how notes link.</li>
+<li><strong>Documents</strong> — long-form writing (briefs, memos, reports).</li>
+<li><strong>Interactive pages</strong> — a self-contained dashboard or mini-tool you can click around in.</li>
+<li><strong>Diagrams</strong> — flowcharts, org charts, process diagrams (Mermaid does these in plain English: "draw me a flow from A to B to C").</li>
 </ul>
-<h3>Your vault IS a Cowork project</h3>
-<p>The Cowork Project you made in M01 already mounts your vault. That means <strong>Claude can read every note in your vault and write back to any of them.</strong> Your vault isn't a passive archive — it's a workspace Claude operates on directly.</p>
-<p>Same files, two interfaces. Edit a file in Obsidian; Cowork sees the edit on next read. Ask Claude in Cowork to write something; Obsidian re-renders the change live (file watching).</p>
-<p>Try a few of these in Cowork now:</p>
+<p>You don't write any code. You describe what you want; Claude builds it.</p>
+<p>Try one now. In Cowork:</p>
 <pre><code>
-Write a 5-line journal entry about how the workshop is going so far,
-in journal voice. Save to today's daily note in my vault.
+Make me an interactive page showing the days of the week in a 2x4 grid, each in a
+different color, with today highlighted.
 </code></pre>
+<p>Cowork generates the artifact, opens the artifact sidebar on the right, renders it inline.</p>
+<h2>Intermediate</h2>
+<h3>Live artifacts — the headline</h3>
+<p>A regular artifact is a snapshot. A LIVE artifact pulls fresh data each time it opens. Same artifact ID, fresh content.</p>
+<p>Build one. In Cowork:</p>
 <pre><code>
-Read all my notes in &lt;vault&gt;/References/ and tell me what topics
-I have the most material on.
+Build me a live artifact that shows the items currently in my GTD Inbox at &lt;vault&gt;/gtd/inbox.md.
+Read fresh from the file each time the artifact opens.
 </code></pre>
-<pre><code>
-Open &lt;vault&gt;/About Me.md and tighten the section on stakeholders —
-remove repetition, keep my voice.
-</code></pre>
-<p>Each of those writes into your vault. Watch Obsidian re-render.</p>
-<p><strong>Optional second Cowork Project — "Vault only".</strong> Some people prefer a dedicated Cowork Project that mounts ONLY the vault (no work folder), used for vault-focused work — knowledge curation, journaling, references. Create it in Cowork → New Project → mount the vault only. Use it when you want Claude focused on knowledge, not project work.</p>
-<p>You'll see live editing again in the exercise at the end.</p>
-<h3>Obsidian basics</h3>
+<p>Cowork builds the artifact, reads <vault>/gtd/inbox.md, and renders the inbox items. Close the artifact panel. Close Cowork entirely. Reopen tomorrow. Reopen this artifact. It pulls fresh data — your CURRENT inbox, not yesterday's snapshot.</p>
+<p>That's live. The full Daily Command Center artifact in M15 — pulling calendar, email, Slack, and your vault GTD all together — only works after the rest of your connectors come online in M10.</p>
+<h3>Sidebar access</h3>
+<p>Right side of Cowork. Opens when an artifact is generated. Shows:</p>
 <ul>
-<li><code>Cmd/Ctrl + O</code> — open quick-switcher to find any note.</li>
-<li><code>[[note name]]</code> while typing — creates a wikilink to another note. Click it to navigate.</li>
-<li>Tags <code>#tag</code> for cross-cutting categories.</li>
-<li>Daily notes — your <code>&lt;vault&gt;/Daily Notes/</code> folder holds dated notes (e.g., <code>2026-04-29.md</code>). Navigate by date in the file browser, or use <code>Cmd/Ctrl + O</code> and search the date.</li>
-<li>Graph view — visualize how your notes link. Becomes meaningful after weeks of use.</li>
+<li>The current artifact in the main pane.</li>
+<li>A list of recent artifacts in this Cowork Project (left of main pane).</li>
+<li>Version history for the current artifact (top right).</li>
 </ul>
+<p>Click an old version to view it. Click "Restore" to bring it back as the current version.</p>
+<h3>Bug #28161 — sidebar conflation</h3>
+<p>Known bug: sometimes the sidebar shows two artifacts' content interleaved. Workaround: close the sidebar entirely, reopen the specific artifact you want. Anthropic is tracking; expect a fix in a future Cowork release.</p>
 <h2>Advanced</h2>
-<h3>Create a new Cowork Project with your vault (or part of it)</h3>
-<p>The Workshop Cowork Project from M01 mounts your <strong>whole</strong> vault plus your work folder. That's the general-purpose project. Sometimes you want a Cowork Project scoped to your vault only, or to a slice of it.</p>
-<p><strong>How to create one:</strong></p>
-<ol>
-<li>In Cowork, top-left of the sidebar, click <strong>+ New Project</strong>.</li>
-<li>Name it. Examples: "Vault" (whole vault), "Sales strategy" (one Areas subfolder), "Board notes" (References subfolder), "Journaling" (Daily Notes only).</li>
-<li>Click <strong>Mount folder</strong> (or the equivalent in the New Project dialog).</li>
-<li>Pick the folder:</li>
-</ol>
+<h3>Sharing limit (current as of April 2026)</h3>
+<p>You can't share live artifacts with other users yet — they're own-use only. So your live artifacts are private to you. (Static artifacts can be exported and shared as files, but the live-refresh capability is account-bound.)</p>
+<h3>Version history + restore</h3>
+<p>Every edit to an artifact creates a new version. The artifact sidebar shows the version list with timestamps. You can:</p>
 <ul>
-<li><strong>Whole vault</strong> — select the vault root folder (the one Obsidian opens onto).</li>
-<li><strong>Part of the vault</strong> — drill into the vault and select a subfolder, e.g., <code>&lt;vault&gt;/Areas/Sales-strategy/</code> or <code>&lt;vault&gt;/References/Customers/</code>.</li>
+<li>Click any version to view it (read-only).</li>
+<li>Click "Restore this version" to bring it back as current.</li>
 </ul>
-<ol>
-<li>Optionally mount additional folders (a project folder from your work folder, the shared team folder, etc.).</li>
-<li>Save.</li>
-</ol>
-<p>You now have a second Cowork Project. Switch between projects with the project switcher (top-left of the sidebar).</p>
-<h3>How vault + Cowork Project work together</h3>
-<p>A Cowork Project is a <strong>scope</strong>: it tells Claude which folders to consider. Inside that scope, Claude:</p>
+<p>Useful when a Claude edit makes the artifact worse and you want to roll back.</p>
+<h3>Building artifacts as part of workflows</h3>
+<p>Artifacts compose with skills. A skill can produce an artifact as its output. Examples:</p>
 <ul>
-<li><strong>Reads every file</strong> in the mounted folder(s).</li>
-<li><strong>Writes to any file</strong> when you ask. (<code>/capture</code>, an artifact that saves to a file, "edit this note" prompts — all land in the mounted folders.)</li>
-<li><strong>Reads <code>claude.md</code> at every level.</strong> Closer-to-the-file wins. So if you mount <code>&lt;vault&gt;/Areas/Sales-strategy/</code>, Claude reads <code>&lt;vault&gt;/claude.md</code> (your About Me pointer), then <code>&lt;vault&gt;/Areas/claude.md</code> (if it exists), then <code>&lt;vault&gt;/Areas/Sales-strategy/claude.md</code>. You can drop a <code>claude.md</code> into a subfolder to give Claude project-specific guidance scoped to that area.</li>
-<li><strong>Has its own session memory.</strong> Each Cowork Project keeps a separate <code>memory.md</code> of patterns Claude has learned. The Workshop project doesn't share memory with your Vault project.</li>
+<li><code>/today</code> could output a brief artifact instead of text.</li>
+<li>A skill you build later (M07) could maintain a project tracker artifact.</li>
 </ul>
-<p><strong>Picking a scope:</strong></p>
-<ul>
-<li><strong>Whole vault mounted</strong> — for general knowledge work, journaling, cross-vault queries ("summarize everything I have on Sales").</li>
-<li><strong>Subfolder mounted</strong> — for focused work where you don't want Claude pulling unrelated vault content into context. Example: a "Board notes" Cowork Project mounting only <code>&lt;vault&gt;/Areas/Board/</code> so Claude doesn't pull from your Sales notes.</li>
-<li><strong>Vault + work folder</strong> — the M01 Workshop pattern. Most flexible. Claude can pull a meeting note from the vault into a project deliverable in the work folder.</li>
-<li><strong>Vault + shared team folder</strong> — for collaborative work where you want personal vault context plus shared materials. (Covered in M16.)</li>
-</ul>
-<h3>What stays in the vault, what goes in the work folder</h3>
-<p>Quick test for where to write:</p>
-<ul>
-<li><strong>Permanent knowledge</strong> (a new fact, a person's bio, a meeting note) → vault.</li>
-<li><strong>Bounded deliverable</strong> (a memo for the Q3 board, a script for an investor call) → project folder in the work folder.</li>
-<li><strong>Today's reflection / capture / loose note</strong> → vault Daily Notes or vault Inbox.</li>
-</ul>
-<p>Claude reads both folders in the Workshop project. The line between vault and work folder is YOUR discipline, not Cowork's. Mount accordingly.</p>
+<p>The pattern: skill = trigger; artifact = persistent visible surface.</p>
 <h2>Try this</h2>
-<p>In Cowork:</p>
-<pre><code>
-Write a paragraph reflecting on what you've learned in the workshop so far.
-Save it to today's daily note in my vault. Use journal voice — first person, reflective, brief.
-</code></pre>
-<p>Claude reads <code>Daily Notes/claude.md</code> (which says journal voice), writes the paragraph, saves to <code>&lt;vault&gt;/Daily Notes/&lt;today&gt;.md</code>.</p>
-<p>Watch Obsidian. The note updates live in front of you.</p>
+<p>Build the GTD-Inbox live artifact above. With the artifact open, in another Cowork tab type <code>/capture remind me to test the live artifact</code>. Watch your new item appear in the artifact when it refreshes. That's "live" — not a screenshot, a surface that updates.</p>
+<p>In M15 you'll build the full version that pulls calendar, email, Slack, and your vault GTD together. For now, one live tile is enough to feel the difference.</p>
 <h2>Verification checkpoint</h2>
-<p>In Cowork:</p>
+<p>After building your first live artifact, type:</p>
 <pre><code>
-What's in my Daily Notes folder for the past 7 days?
+Show me the artifact I just built. What data source does it query?
 </code></pre>
-<p>Expected: Claude lists files (probably just today's, plus any pre-existing). If Claude can't find <code>Daily Notes/</code>, the vault didn't mount correctly — check M01.</p>
+<p>Expected: Claude lists the artifact and identifies that it reads <vault>/gtd/inbox.md. If Claude says "I don't see an artifact," the artifact didn't save — try building again.</p>
 <h2>Common issues</h2>
 <ul>
-<li><strong>Obsidian doesn't see the files Claude wrote</strong> — Obsidian uses file watching; sometimes needs a manual refresh (right-click the file browser → Refresh).</li>
-<li><strong>Vault feels empty</strong> — that's correct on Day 1. Content accumulates over weeks.</li>
+<li><strong>Bug #28161</strong> (sidebar conflation) — close + reopen sidebar.</li>
+<li><strong>Live artifact doesn't refresh</strong> — it might be a static artifact, not live. Ask Claude to "make this artifact live" and rebuild.</li>
+<li><strong>Artifact disappears on Cowork restart</strong> — check the artifacts list in the sidebar; sometimes the active artifact pointer resets but the artifact is still there.</li>
+<li><strong>Sharing isn't available</strong> — current limitation, not a bug.</li>
 </ul>
 
   <div class="slides-cta">
@@ -160,7 +124,7 @@ What's in my Daily Notes folder for the past 7 days?
 
   <nav class="module-nav">
     <a class="nav-link prev" href="m07.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M07 — Skills + Slash Commands</div></a>
-    <a class="nav-link next" href="m09.html"><div class="nav-link-label">Next →</div><div class="nav-link-title">M09 — Projects, Folders, claude.md</div></a>
+    <a class="nav-link next" href="m09.html"><div class="nav-link-label">Next →</div><div class="nav-link-title">M09 — Browser + Chrome</div></a>
   </nav>
 </main>
 

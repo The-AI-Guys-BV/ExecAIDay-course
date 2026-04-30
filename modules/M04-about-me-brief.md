@@ -1,4 +1,4 @@
-# M06 — Chief of Staff Brief
+# M04 — Write your About Me brief
 
 ## Why this module matters
 
@@ -179,5 +179,5 @@ Expected: a concise, accurate summary. If Claude can't summarize or includes wro
 - `templates/vault-starter/claude.md` — the one-line pointer template.
 - `templates/vault-starter/About Me.md` — starter brief structure.
 - `templates/vault-starter/about-me/` — long-form + writing-rules companions.
-- M02 — R-C-T-F-C framework (the brief is your standing R+C).
+- M06 — R-C-T-F-C framework (the brief is your standing R+C).
 - `references/rctfc-framework.md`.

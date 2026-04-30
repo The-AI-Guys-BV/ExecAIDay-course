@@ -1,4 +1,4 @@
-# M05 — Browser + Chrome
+# M09 — Browser + Chrome
 
 ## Why this module matters
 
@@ -163,4 +163,4 @@ Expected: Claude lists the workflow(s) you saved during the module. If empty, th
 ## References
 
 - M07 — building custom skills with `/skill-creator` that can incorporate Chrome.
-- M12 — scheduled tasks (the scheduling layer for Chrome workflows).
+- M13 — scheduled tasks (the scheduling layer for Chrome workflows).

@@ -1,4 +1,4 @@
-# M04 — Artifacts
+# M08 — Artifacts
 
 ## Why this module matters
 
@@ -18,7 +18,7 @@ An artifact is a generated output Claude renders inline alongside its text respo
 
 The 2026 headline: **live artifacts** auto-refresh on reopen. So the dashboard isn't a snapshot — it's a re-runnable view that pulls fresh data each time you open it. Daily morning brief, weekly status, project tracker — these become living surfaces, not stale screenshots.
 
-This module: see the kinds, build one live artifact, see version history. The big payoff comes in M14 when we build the Daily Command Center artifact.
+This module: see the kinds, build one live artifact, see version history. The big payoff comes in M15 when we build the Daily Command Center artifact.
 
 ## Beginner / Getting Started
 
@@ -54,7 +54,7 @@ Read fresh from the file each time the artifact opens.
 
 Cowork builds the artifact, reads <vault>/gtd/inbox.md, and renders the inbox items. Close the artifact panel. Close Cowork entirely. Reopen tomorrow. Reopen this artifact. It pulls fresh data — your CURRENT inbox, not yesterday's snapshot.
 
-That's live. The full Daily Command Center artifact in M14 — pulling calendar, email, Slack, and your vault GTD all together — only works after the rest of your connectors come online in M10.
+That's live. The full Daily Command Center artifact in M15 — pulling calendar, email, Slack, and your vault GTD all together — only works after the rest of your connectors come online in M10.
 
 ### Sidebar access
 
@@ -97,7 +97,7 @@ The pattern: skill = trigger; artifact = persistent visible surface.
 
 Build the GTD-Inbox live artifact above. With the artifact open, in another Cowork tab type `/capture remind me to test the live artifact`. Watch your new item appear in the artifact when it refreshes. That's "live" — not a screenshot, a surface that updates.
 
-In M14 you'll build the full version that pulls calendar, email, Slack, and your vault GTD together. For now, one live tile is enough to feel the difference.
+In M15 you'll build the full version that pulls calendar, email, Slack, and your vault GTD together. For now, one live tile is enough to feel the difference.
 
 ## Verification checkpoint
 
@@ -118,5 +118,5 @@ Expected: Claude lists the artifact and identifies that it reads <vault>/gtd/inb
 
 ## References
 
-- M14 — Daily Command Center, where you'll build the workshop's flagship live artifact.
+- M15 — Daily Command Center, where you'll build the workshop's flagship live artifact.
 - `references/connector-quirks.md` — bug #28161 and other connector / artifact quirks.

@@ -17,16 +17,16 @@ Course modules ship as Markdown files. Try these candidate paths in order using 
 4. `<directory containing this SKILL.md>/../modules/M<NN>-*.md` (sibling of skills/ at plugin root)
 5. `<directory containing this SKILL.md>/modules/M<NN>-*.md` (modules nested under teach skill folder)
 
-Filenames are: `M01-welcome-foundations.md`, `M02-prompt-engineering.md`, `M03-cowork-ui-settings.md`, `M04-artifacts.md`, `M05-browser-chrome.md`, `M06-chief-of-staff-claudemd.md`, `M07-skills-slash-commands.md`, `M08-obsidian.md`, `M09-projects-folders-claudemd.md`, `M10-connectors.md`, `M11-office-add-ins.md`, `M12-scheduled-tasks-routines.md`, `M13-gtd-in-your-vault.md`, `M14-daily-command-center.md`, `M15-meeting-notes.md`, `M16-collaboration.md`.
+Filenames are: `M01-welcome-foundations.md`, `M02-obsidian.md`, `M03-first-cowork-project.md`, `M04-about-me-brief.md`, `M05-companion-knowledge-files.md`, `M06-prompt-engineering.md`, `M07-skills-slash-commands.md`, `M08-artifacts.md`, `M09-browser-chrome.md`, `M10-connectors.md`, `M11-office-add-ins.md`, `M12-projects-folders-claudemd.md`, `M13-scheduled-tasks-routines.md`, `M14-gtd-in-your-vault.md`, `M15-daily-command-center.md`, `M16-meeting-notes.md`, `M17-collaboration.md`.
 
-If none of the candidate paths return files: tell the user **"I can't find the modules folder. Run `ls ~/.claude/skills/teach/modules/` and `ls ~/Code/ExecAIDay-course/modules/` and tell me which path has the M01–M16 files."** Do NOT fabricate module content.
+If none of the candidate paths return files: tell the user **"I can't find the modules folder. Run `ls ~/.claude/skills/teach/modules/` and `ls ~/Code/ExecAIDay-course/modules/` and tell me which path has the M01–M17 files."** Do NOT fabricate module content.
 
 ## Step 1 — locate the material
 
 - **User provided a topic:** scan `modules/*.md` filenames AND the title line at the top of each file (`# M<N> — <Title>`). Match by module number (`m1`, `M01`, `module 1`), by title fragment (`prompt engineering`, `drafts inbox`), and by common aliases.
 - **Multiple matches:** list up to 5 candidates with one-line descriptions, numbered. Ask which. Wait.
-- **Zero matches:** say "I couldn't find a module matching `<topic>`." List all 16 module titles. Ask the user to pick or re-type. Do NOT invent content.
-- **No topic provided (`/teach` alone):** list all 16 modules as numbered one-liners. Ask which. Wait.
+- **Zero matches:** say "I couldn't find a module matching `<topic>`." List all 17 module titles. Ask the user to pick or re-type. Do NOT invent content.
+- **No topic provided (`/teach` alone):** list all 17 modules as numbered one-liners. Ask which. Wait.
 - **`/teach resume`:** ask what module and what section the user was on. Trust their answer. Do NOT pretend to remember a session you can't actually access.
 
 ## Step 2 — read the material

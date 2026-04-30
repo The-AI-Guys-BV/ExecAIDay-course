@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>M05 Browser + Chrome — ExecAIDay</title>
-<meta name="description" content="Browser + Chrome — module M05 of the ExecAIDay Claude Cowork training workshop.">
+<title>M05 Companion knowledge files — ExecAIDay</title>
+<meta name="description" content="Companion knowledge files — module M05 of the ExecAIDay Claude Cowork training workshop.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -23,134 +23,34 @@
 
 <header class="module-hero">
   <div class="container">
-    <div class="module-hero-icon" style="background: var(--foundation-soft); color: var(--foundation);">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/><line x1="10.88" y1="21.94" x2="15.46" y2="14"/></svg>
+    <div class="module-hero-icon" style="background: var(--personalize-soft); color: var(--personalize);">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
     </div>
     <div class="eyebrow eyebrow-row">
-      <span class="breadcrumb"><a href="index.html">All modules</a> &nbsp;/&nbsp; Foundation</span>
+      <span class="breadcrumb"><a href="index.html">All modules</a> &nbsp;/&nbsp; Personalize</span>
       <a class="hero-slides-link" href="slides/m05.html">▶ View slide deck</a>
     </div>
-    <h1>M05 — Browser + Chrome</h1>
-    <p class="lede">Claude in Chrome means Claude can navigate, record, replay, and coordinate across tabs. Connectors give Claude your data; Chrome gives Claude your screen. The deepest live exercise of the workshop.</p>
+    <h1>M05 — Companion knowledge files</h1>
+    <p class="lede">[Pass 2 to fill]</p>
   </div>
 </header>
 
 <main class="content container">
 <h2>What you'll do</h2>
 <ul>
-<li>Open the Claude in Chrome side panel.</li>
-<li>Record a 3-step workflow on a real site (CRM / dashboard / portal).</li>
-<li>Replay the workflow on demand.</li>
-<li>Run a multi-tab task (competitive intel across 6 sites → one comparison).</li>
+<li>[TBD]</li>
 </ul>
 <h2>Introduction</h2>
-<p>A connector handles your major systems — your inbox, your calendar, your file storage. A browser handles everything else: portals without a built-in connector, dashboards behind logins, websites that aren't on the connector list. Claude in Chrome is for those.</p>
-<p>Three killer capabilities:</p>
-<ul>
-<li><strong>Record-and-replay:</strong> Claude watches you do a task once, then repeats it on command.</li>
-<li><strong>Multi-tab:</strong> Claude opens N tabs, pulls data from each, synthesizes.</li>
-<li><strong>Scheduled Chrome tasks:</strong> the same record-and-replay, but on a schedule.</li>
-</ul>
-<p>Plus side capabilities: console log reading (debugging), real-site navigation (pull a fact from a portal you can't get to via connector).</p>
+<p>[Pass 2 to fill]</p>
 <h2>Beginner / Getting Started</h2>
-<h3>Open the side panel</h3>
-<p>In Chrome (or Brave), click the Claude extension icon. Side panel opens on the right. You'll see chat-like interface, like Cowork but operating on the active browser tab.</p>
-<p>If the extension isn't installed: your assistant will install it now.</p>
-<h3>One-fact navigation</h3>
-<p>Pick a portal you actually use — your CRM, a dashboard, a vendor portal. Open it in a tab. In the side panel:</p>
-<pre><code>
-Pull the [specific fact] from this page. Just the value, no commentary.
-</code></pre>
-<p>Examples:</p>
-<ul>
-<li>"Pull total active accounts from the dashboard."</li>
-<li>"Pull the next renewal date from the customer profile open in this tab."</li>
-<li>"Pull the Q3 revenue from the report on this page."</li>
-</ul>
-<p>Claude reads the page and returns the value. First proof Chrome works.</p>
-<h2>Intermediate</h2>
-<h3>Record-and-replay</h3>
-<p>Pick a 3-step task you do often. Examples:</p>
-<ul>
-<li>Log into your CRM, navigate to a specific report, screenshot.</li>
-<li>Open a vendor portal, check a status, summarize.</li>
-<li>Open a knowledge-base page, copy a section, paste into another tool.</li>
-</ul>
-<p>In the Claude in Chrome side panel:</p>
-<pre><code>
-I'm going to do a 3-step task. Watch what I do, then I'll ask you to replay it later.
-</code></pre>
-<p>Then perform the 3 steps. Claude records each click and form input.</p>
-<p>When done:</p>
-<pre><code>
-Save this workflow as "&lt;name&gt;".
-</code></pre>
-<p>Then test:</p>
-<pre><code>
-Replay the workflow.
-</code></pre>
-<p>Claude does the 3 steps without you. The first time you watch this happen, it feels like magic. After a few replays it feels normal.</p>
-<h3>Multi-tab task</h3>
-<p>Pick a task that benefits from cross-site comparison. Example:</p>
-<pre><code>
-Open these 6 competitor websites in new tabs. From each, pull pricing info, primary
-target customer, and one differentiator they emphasize on the homepage. Compile into
-a comparison table.
-
-URLs: [paste 6 URLs]
-</code></pre>
-<p>Claude opens each, reads, compiles. The output is a table you couldn't have built faster manually.</p>
-<h3>Scheduled Chrome tasks</h3>
-<p>Once a workflow is recorded, you can schedule it to run automatically. Open Claude in Chrome → Workflows → click your saved workflow → Schedule.</p>
-<p>Examples worth scheduling:</p>
-<ul>
-<li>Daily 8am: pull yesterday's CRM dashboard snapshot.</li>
-<li>Weekly Monday: pull updated customer health scores.</li>
-<li>Before each board meeting: pull current ARR from the dashboard.</li>
-</ul>
-<p>Output goes to Cowork (you specify destination — file, Slack post, email, etc.).</p>
-<h2>Advanced</h2>
-<h3>Console log reading</h3>
-<p>Claude in Chrome can read browser console logs. Useful when something is broken on a page you control:</p>
-<pre><code>
-Read the console logs on this page. What errors are there? What might be causing the
-form submission to fail?
-</code></pre>
-<p>Claude reads, identifies errors, suggests fixes. Engineering-flavored move; useful even for non-engineers when a page misbehaves.</p>
-<h3>Multi-tab coordination at scale</h3>
-<p>The 6-site competitive intel demo is the simple version. Bigger:</p>
-<ul>
-<li>Pull data from 30 customer portals to verify renewal dates.</li>
-<li>Cross-reference 10 vendor sites against your contracts.</li>
-<li>Compile a daily snapshot of 15 industry-relevant news sites.</li>
-</ul>
-<p>The pattern: list the URLs, specify what to pull from each, specify the output format. Claude does the work serially or in parallel depending on the task.</p>
-<p>Watch out: rate limits. Some sites flag unusual traffic. Don't run a 50-tab job hourly.</p>
-<h3>Combining Chrome with skills</h3>
-<p>A skill can call into Chrome. Custom skill example:</p>
-<ul>
-<li><code>/customer-snapshot &lt;name&gt;</code> opens the customer's record in your CRM, pulls health scores, opens their public website, summarizes recent news, returns a one-page brief.</li>
-</ul>
-<p>You'll build skills in M07 with <code>/skill-creator</code>. Chrome integration is a natural extension.</p>
+<p>[Pass 2 to fill]</p>
 <h2>Try this</h2>
-<p>Tijn picks default. Three options, all staged:</p>
-<ol>
-<li>Real-site navigation: Claude pulls a specific fact from your actual CRM / dashboard.</li>
-<li>Record-a-workflow: you perform 3 steps, Claude records, you replay.</li>
-<li>Multi-tab intel: 6 competitor sites → comparison table.</li>
-</ol>
-<p>The default is to do all 3 — they go together. Picking one stages a deeper exploration of that capability.</p>
+<p>[Pass 2 to fill]</p>
 <h2>Verification checkpoint</h2>
-<pre><code>
-What workflows have I saved in Claude in Chrome?
-</code></pre>
-<p>Expected: Claude lists the workflow(s) you saved during the module. If empty, the save didn't take — re-record.</p>
+<p>[Pass 2 to fill]</p>
 <h2>Common issues</h2>
 <ul>
-<li><strong>Side panel doesn't open</strong> — extension not installed or blocked by browser policy. Reinstall.</li>
-<li><strong>Recorded workflow fails on replay</strong> — page state changed (logged out, layout updated). Re-record.</li>
-<li><strong>Multi-tab job hangs</strong> — site is slow or rate-limiting. Reduce parallelism, retry.</li>
-<li><strong>Workflow needs auth</strong> — the extension follows your existing browser session. If you weren't logged in, log in and re-record.</li>
+<li>[TBD]</li>
 </ul>
 
   <div class="slides-cta">
@@ -162,8 +62,8 @@ What workflows have I saved in Claude in Chrome?
   </div>
 
   <nav class="module-nav">
-    <a class="nav-link prev" href="m04.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M04 — Artifacts</div></a>
-    <a class="nav-link next" href="m06.html"><div class="nav-link-label">Next →</div><div class="nav-link-title">M06 — Chief of Staff Brief</div></a>
+    <a class="nav-link prev" href="m04.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M04 — Write your About Me brief</div></a>
+    <a class="nav-link next" href="m06.html"><div class="nav-link-label">Next →</div><div class="nav-link-title">M06 — Prompt Engineering</div></a>
   </nav>
 </main>
 

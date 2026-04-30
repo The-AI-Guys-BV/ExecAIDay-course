@@ -37,107 +37,159 @@
 <main class="content container">
 
 <h2>1. Welcome + full install (M01)</h2>
-<p>The live install walkthrough. The instructor narrates each step on screen; you click along on your own machine. By the end you have everything the rest of the modules need. Anything that fails — flag the instructor, don't move on.</p>
+<p>The first hour. The instructor walks you through every install step live; you click along on your own machine. By the end you have a working AI workspace. None of these tools assume you've used them before — read each section's "what this is" line if a word looks unfamiliar. Anything that fails: flag the instructor, don't move on.</p>
+
+<h3>Vocabulary you'll meet in this hour</h3>
+<p>The five words below show up over and over. Read once now; we'll use them throughout.</p>
+<ul>
+<li><strong>Vault.</strong> Obsidian's word for "a folder of notes." Everything inside the vault folder is part of one vault. The vault is just a regular folder on your computer — nothing magical. You'll create yours inside a cloud-sync app (Dropbox / OneDrive / Google Drive / iCloud Drive) so the contents are backed up automatically and accessible from your phone.</li>
+<li><strong>Cowork Project.</strong> Cowork's word for "an AI workspace." A Cowork Project remembers your conversations, mounts (includes) folders, and holds its own settings. You can have several Cowork Projects — one for the workshop, others later for sensitive work. Today you're creating exactly one, called "Workshop."</li>
+<li><strong>Mount.</strong> Telling a Cowork Project "include this folder in your context." Mounting doesn't copy or move the folder — Claude just gets read/write access to it from inside that Project. Folders can be mounted in multiple Cowork Projects.</li>
+<li><strong>Connector.</strong> An authenticated bridge from Cowork to one of your services (Gmail, Calendar, Slack, etc.). Once you've signed in once via the service's normal login page, Cowork can read your inbox, query your calendar, and so on — on your behalf, with the same permissions you have.</li>
+<li><strong>Plugin / skill / slash command.</strong> A "skill" is a pre-built workflow Cowork can run. You trigger it by typing <code>/&lt;name&gt;</code> in chat — e.g., <code>/teach</code>, <code>/capture</code>. Skills come bundled in "plugins" you install once. The workshop's plugin (ExecAIDay) gives you <code>/teach</code> plus 25 other skills. Plugins live at a "marketplace" — for our plugin, that's a GitHub URL.</li>
+</ul>
+
+<p>OK, here's the install sequence. Eight steps.</p>
 
 <h3>1.1 Install Claude Desktop with Cowork</h3>
+<p><strong>What this is.</strong> Claude Desktop is the app where you'll do all your AI work. Inside Claude Desktop is a tab called <strong>Cowork</strong> — that's the workspace mode. (The other mode, <strong>Chat</strong>, is for one-off questions; Cowork is for everything else.)</p>
 <ol>
-<li>Download Claude Desktop from <a href="https://claude.com/download">claude.com/download</a>.</li>
-<li>Run the installer.</li>
-<li>Open Claude Desktop and sign in with your Anthropic Max account.</li>
-<li>Switch to the <strong>Cowork</strong> tab in the left sidebar.</li>
+<li>Open <a href="https://claude.com/download">claude.com/download</a> in your current browser.</li>
+<li>Click the download for your OS (Mac or Windows). The installer file lands in your Downloads folder.</li>
+<li>Double-click the installer. Drag the Claude app to Applications (Mac) or follow the Windows installer.</li>
+<li>Open Claude Desktop. Sign in with your Anthropic account (use your work email; if you don't have an account yet, click "Sign up" and follow the flow — your subscription will be a Max plan).</li>
+<li>Look at the left sidebar. You'll see two tabs: <strong>Chat</strong> and <strong>Cowork</strong>. Click <strong>Cowork</strong>.</li>
 </ol>
-<p><em>Verify: the Cowork sidebar is visible with sections for Customize, Plugins, and Cowork Projects.</em></p>
+<p><em>Verify: the Cowork tab is open, with sections in the sidebar for <strong>Customize</strong>, <strong>Plugins</strong>, and <strong>Cowork Projects</strong>. If you only see Chat, your version is too old — update from claude.com/download.</em></p>
 
-<h3>1.2 Install Obsidian</h3>
+<h3>1.2 Install Obsidian and create your vault</h3>
+<p><strong>What this is.</strong> Obsidian is a free note-taking app that stores notes as plain files in a folder on your computer. That folder is your "vault." Cowork can read and write the same files; Obsidian gives you a nice UI for browsing and editing them. The two apps don't talk to each other — they just share the same files.</p>
+
+<p><strong>Where the vault lives.</strong> Inside your cloud-sync folder. So if you use Dropbox, your vault path will be something like <code>~/Dropbox/Workshop-Vault</code>. Same idea for OneDrive, Google Drive, iCloud Drive. <strong>Required:</strong> the vault must be inside one of these — that's how it stays backed up and reachable from your phone later.</p>
+
 <ol>
-<li>Download Obsidian from <a href="https://obsidian.md/download">obsidian.md/download</a>.</li>
-<li>Run the installer.</li>
-<li>Open Obsidian and point it at your vault folder (in your cloud-sync app — Dropbox / OneDrive / Drive / iCloud Drive).</li>
+<li>Open <a href="https://obsidian.md/download">obsidian.md/download</a>. Download the installer for your OS.</li>
+<li>Run the installer. Open Obsidian.</li>
+<li>On the welcome screen, click <strong>Create new vault</strong> (NOT "Open existing vault" — you don't have one yet).</li>
+<li>In the dialog: name it "Workshop" (or whatever you like). For "Location," click <strong>Browse</strong> and navigate INTO your cloud-sync folder (Dropbox, OneDrive, etc.) before clicking Create. Example final path: <code>~/Dropbox/Workshop</code>.</li>
+<li>Click <strong>Create</strong>. Obsidian opens onto an empty vault. You'll see a sidebar with a file browser (currently empty).</li>
 </ol>
-<p><em>Verify: your vault loads in Obsidian. You see folders like <code>Daily Notes/</code>, <code>References/</code>, <code>about-me/</code>.</em></p>
+<p><em>Verify: in Obsidian, the title bar shows your vault name. The file browser is open and empty (or shows the workshop's starter content if your assistant pre-seeded the folder).</em></p>
 
-<h3>1.3 Install Chrome + the Claude browser extension</h3>
+<h3>1.3 Install a Chromium browser, then the Claude extension</h3>
+<p><strong>What this is.</strong> The Claude in Chrome extension adds a Claude sidebar to your browser. Claude can then read any web page you have open and operate websites for you (pull data from a CRM, fill forms, click through workflows). The extension only works in Chrome, Brave, or Edge — Chromium-based browsers. If you're on Safari, you need to install one of these.</p>
+
 <ol>
-<li>Download Chrome from <a href="https://www.google.com/chrome/">google.com/chrome</a> if you don't already have it (Brave or Edge work too).</li>
+<li>If you don't already have Chrome, Brave, or Edge: download <a href="https://www.google.com/chrome/">Chrome</a> (or <a href="https://brave.com/download/">Brave</a> or <a href="https://www.microsoft.com/edge">Edge</a>). Run the installer.</li>
+<li>Open the browser. Sign in with your work Google or Microsoft account so bookmarks and passwords sync.</li>
 <li>Open the Chrome Web Store: <a href="https://chromewebstore.google.com/">chromewebstore.google.com</a>.</li>
-<li>Search <strong>Claude</strong> (official, by Anthropic). Click <strong>Add to Chrome</strong>.</li>
-<li>Pin the extension via the toolbar puzzle-piece icon → pin Claude.</li>
-<li>Click the Claude icon and sign in with the same Anthropic account.</li>
+<li>In the search box, type <strong>Claude</strong>. Look for the official extension by Anthropic (it'll have an Anthropic logo and verified-publisher mark).</li>
+<li>Click <strong>Add to Chrome</strong>. Confirm the permissions prompt. The extension installs in seconds.</li>
+<li>Pin the extension to your toolbar so you can find it: click the puzzle-piece icon (right of your address bar) → click the pin icon next to "Claude" → close the puzzle menu.</li>
+<li>Click the Claude icon (now in your toolbar). A side panel opens. Sign in with the same Anthropic account you used for Claude Desktop.</li>
 </ol>
-<p><em>Verify: clicking the Claude icon in Chrome opens the side panel.</em></p>
+<p><em>Verify: the Claude icon is visible in your browser's toolbar. Clicking it opens a side panel where you can chat with Claude about whatever page you're on.</em></p>
 
 <h3>1.4 Install the ExecAIDay course plugin (in Cowork)</h3>
+<p><strong>What this is.</strong> A plugin is a bundle of skills (slash commands) Cowork can run. The ExecAIDay plugin gives you <code>/teach</code> (a patient tutor for any module of this course) plus 25 other skills. It's hosted on GitHub. Cowork installs it from there in two phases: first you tell Cowork "look at this GitHub URL for plugins" (that's the marketplace), then you install the actual plugin from that marketplace.</p>
+
 <ol>
-<li>Open the <strong>Customize</strong> sidebar.</li>
-<li><strong>Add the marketplace first.</strong> Click <strong>+</strong> to add a personal marketplace. Paste: <code>github.com/The-AI-Guys-BV/ExecAIDay-course</code>. Confirm. Cowork syncs.</li>
-<li><strong>Then install the plugin.</strong> Go to <strong>Personal plugins</strong> (not the Anthropic plugins section). Click <strong>Install</strong> on <code>execaiday</code>.</li>
+<li>In Cowork, click <strong>Customize</strong> in the left sidebar (gear icon, near the bottom).</li>
+<li><strong>Add the marketplace first.</strong> In the Customize panel, find the <strong>Personal marketplaces</strong> section and click the <strong>+</strong> icon. A dialog opens.</li>
+<li>Paste: <code>github.com/The-AI-Guys-BV/ExecAIDay-course</code></li>
+<li>Click <strong>Add</strong> (or <strong>Confirm</strong>). Cowork syncs with GitHub — takes a few seconds; you'll see "Syncing..." then a green checkmark.</li>
+<li><strong>Then install the plugin.</strong> Go to <strong>Personal plugins</strong> (in the same Customize panel — it's a separate section from the Anthropic plugins section; make sure you're in the right one). The <code>execaiday</code> plugin is now in the list because of the marketplace you just added.</li>
+<li>Click <strong>Install</strong> on the <code>execaiday</code> plugin.</li>
 </ol>
-<p><em>Verify: type <code>/teach</code> in Cowork — expect a list of 16 modules. If not, the plugin install didn't complete.</em></p>
+<p><em>Verify: in any Cowork chat, type <code>/teach</code> and press Enter. You should see a list of 16 modules ("M01 — Welcome + Foundations," etc.). If you get "Unknown command," the install didn't complete — flag the instructor.</em></p>
 
 <h3>1.5 Authenticate your connectors</h3>
-<ol>
-<li>In Cowork, go to <strong>Customize → Connectors</strong>.</li>
-<li>Click <strong>+</strong> and add each one your work depends on: Gmail or Microsoft 365, Calendar, Drive, Slack, plus your custom apps (Asana, Jira, Linear, SFDC, HubSpot — whatever you use).</li>
-<li>OAuth approve each one in your browser.</li>
-</ol>
-<p><em>Verify: all expected connectors show <strong>Connected</strong> in the Customize → Connectors panel.</em></p>
+<p><strong>What this is.</strong> A connector is an authenticated bridge from Cowork to a service like Gmail, your calendar, or Slack. You sign in once via the service's normal login page; Cowork remembers and can then read your inbox, calendar, etc. on your behalf — with the same permissions your account has. No data leaves Anthropic's infrastructure; the connector just lets Claude query the service when it needs to.</p>
 
-<h3>1.6 Install the Claude for Word, Excel, PowerPoint add-ins</h3>
-<p>This adds a Claude sidebar inside each Office app. Conversation context is shared across all three — Excel analysis flows into a PowerPoint deck flows into a Word memo without copy/paste. Requires a paid Claude plan (Pro / Max / Team / Enterprise).</p>
 <ol>
-<li><strong>Open Word.</strong> Go to the <strong>Insert</strong> tab → <strong>Get Add-ins</strong> (or <strong>Office Add-ins</strong>, depending on your version).</li>
-<li>AppSource opens in a dialog. Search <strong>Claude by Anthropic</strong>. The official add-in is published by Anthropic.</li>
-<li>Click <strong>Add</strong>. Approve the prompts. The Claude sidebar appears in Word.</li>
-<li>Sign in with the same Anthropic account you use for Cowork.</li>
-<li><strong>Repeat for Excel and PowerPoint.</strong> Open each app, same flow: Insert → Get Add-ins → search "Claude by Anthropic" → Add → sign in.</li>
+<li>In Cowork, open <strong>Customize → Connectors</strong>.</li>
+<li>Click the <strong>+</strong> icon to add a new connector. A list opens of available services: Gmail, Microsoft 365 (which covers Outlook + OneDrive), Google Calendar, Microsoft Calendar, Google Drive, Slack, plus a long list of custom apps (Asana, Jira, Linear, Salesforce, HubSpot, Notion, Atlassian, etc.).</li>
+<li>Click each service you actually use. For each one: a browser window opens; sign in with your work account; click <strong>Allow</strong> to grant Cowork permission. Browser closes; the connector shows up as <strong>Connected</strong> in the Customize panel.</li>
+<li>Repeat for every service: email (Gmail or M365), calendar, file storage (Drive / OneDrive), Slack, plus any custom apps you use heavily.</li>
 </ol>
-<p><em>Verify: open Word, Excel, and PowerPoint — the Claude icon is in the ribbon of all three. Click it; the Claude sidebar opens.</em></p>
+<p><em>Verify: in <strong>Customize → Connectors</strong>, every expected service has a green <strong>Connected</strong> tag. To test one, type in a Cowork chat: "What's on my calendar today?" — Claude should read from your calendar and answer.</em></p>
 
-<h3>1.7 Confirm vault + work folder are in a cloud-synced location</h3>
-<p>Your vault and work folder must live inside a cloud-sync app (Dropbox / OneDrive / Google Drive / iCloud Drive). This is required, not optional — it's how the vault stays backed up, accessible from your phone for Dispatch (step 11), and durable across machines.</p>
-<p><em>Verify: navigate to the folder paths in Finder / Explorer — both should sit inside your cloud sync folder.</em></p>
+<h3>1.6 Install the Claude for Word, Excel, and PowerPoint add-ins</h3>
+<p><strong>What this is.</strong> An "add-in" is a sidebar that appears INSIDE Microsoft Word, Excel, and PowerPoint. Once installed, you'll see a Claude icon in each app's ribbon (the toolbar at the top). Click it and Claude appears as a sidebar that can read and edit the document you're working on. The killer feature: the conversation context is shared across all three apps. So you can do an analysis in Excel, then switch to PowerPoint and ask Claude to "build slides from that analysis" — it remembers. Requires a paid Claude plan (Pro / Max / Team / Enterprise).</p>
+
+<ol>
+<li><strong>Open Microsoft Word</strong> (a blank document is fine).</li>
+<li>In the top ribbon, click the <strong>Insert</strong> tab.</li>
+<li>Look for <strong>Get Add-ins</strong> or <strong>Office Add-ins</strong> (the wording depends on your version). Click it. A dialog opens that's actually the Microsoft AppSource marketplace.</li>
+<li>In the search box, type <strong>Claude by Anthropic</strong>. Look for the official add-in published by Anthropic.</li>
+<li>Click <strong>Add</strong>. Approve the prompts that appear. The add-in installs in a few seconds.</li>
+<li>A Claude sidebar should now appear on the right of Word. If it doesn't open automatically, look for the Claude icon in the Word ribbon and click it.</li>
+<li>Sign in with the same Anthropic account you've been using for Cowork.</li>
+<li><strong>Repeat the same flow in Excel.</strong> Open Excel → Insert → Get Add-ins → search "Claude by Anthropic" → Add → sign in.</li>
+<li><strong>Repeat the same flow in PowerPoint.</strong> Same steps.</li>
+</ol>
+<p><em>Verify: open Word, Excel, and PowerPoint. In each app's ribbon, the Claude icon is visible. Clicking it opens the Claude sidebar. All three apps share one conversation when you keep them open simultaneously.</em></p>
+
+<h3>1.7 Confirm vault + work folder live in a cloud-sync app</h3>
+<p><strong>What this is.</strong> Two folders on your computer matter for the workshop: your Obsidian <strong>vault</strong> (created in step 1.2) and a <strong>work folder</strong> where projects live (your assistant has placed a starter version of this for you, or you can create one now — call it "Work" or something similar). Both must sit inside a cloud-sync app (Dropbox, OneDrive, Google Drive, or iCloud Drive). Why required:</p>
+<ul>
+<li><strong>Backup.</strong> If your laptop dies, your vault is in the cloud.</li>
+<li><strong>Mobile.</strong> Your phone can reach the same files (via the cloud-sync app's mobile app, or via Dispatch — covered in step 11).</li>
+<li><strong>Multi-machine.</strong> If you switch laptops, the vault follows.</li>
+</ul>
+<ol>
+<li>Open Finder (Mac) or File Explorer (Windows).</li>
+<li>Navigate to your cloud-sync folder (e.g., the Dropbox folder).</li>
+<li>Confirm both your vault folder and your work folder are inside it.</li>
+<li>If either folder is somewhere else (Documents, Desktop, etc.), move it into the cloud-sync folder. Then re-open Obsidian and re-point it at the new vault location (<strong>File → Open Vault</strong> in Obsidian).</li>
+</ol>
+<p><em>Verify: both folders show the cloud-sync app's status icon next to their names (a green check, a sync arrow, etc., depending on the app). That confirms they're being synced.</em></p>
 
 <h3>1.8 Create your Cowork Project and mount both folders</h3>
-<ol>
-<li>In the Cowork sidebar, click <strong>+ New Project</strong>. Name it "Workshop" (or anything).</li>
-<li>Mount your <strong>Obsidian vault</strong> (knowledge folder).</li>
-<li>Mount your <strong>work folder</strong> (projects parent).</li>
-<li>Both inside the same Cowork Project — load-bearing.</li>
-</ol>
-<p><em>Verify: in the new Cowork Project, type "What folders am I currently mounting?" — Claude should list the vault and the work folder by name.</em></p>
+<p><strong>What this is.</strong> A Cowork Project is the AI workspace you'll spend the workshop in. Mounting a folder = telling that workspace "include this folder in your context." We're creating one Cowork Project (called "Workshop") and mounting both your vault and your work folder in it. From now on, whenever you chat with Claude inside this Cowork Project, Claude can read and write files in both folders.</p>
 
-<p>You now have a working AI workspace. Move to step 2.</p>
+<ol>
+<li>In the Cowork left sidebar, click <strong>+ New Project</strong> (button is usually at the top of the Cowork Projects list).</li>
+<li>Name it: <strong>Workshop</strong>. Click Create.</li>
+<li>The new Project opens. Look at the right sidebar (or wherever Cowork shows mounted folders for the current Project). Find the <strong>Mounted folders</strong> section.</li>
+<li>Click <strong>+ Add folder</strong>. Browse to your Obsidian vault folder. Select it. Confirm.</li>
+<li>Click <strong>+ Add folder</strong> again. Browse to your work folder. Select it. Confirm.</li>
+<li>Both folders should now appear in the Mounted folders list.</li>
+</ol>
+<p><em>Verify: in this new "Workshop" Cowork Project, type in chat: "What folders am I currently mounting in this Cowork Project?" Claude should reply with the names of your vault and your work folder. If it says it can't see any folders, the mount didn't take — flag the instructor.</em></p>
+
+<p>Done. You have a working AI workspace. From step 2 onward, you'll spend your time IN this Cowork Project.</p>
 
 <p><strong>Deep dive:</strong> type <code>/teach M01</code> in Cowork, or open the <a href="m01.html">full M01 page</a>.</p>
 
-<h2>2. Sharpen any prompt with R-C-T-F-C (M02)</h2>
+<h2>2. Sharpen any prompt with R-C-T-F-C (M06)</h2>
 <p>The best prompts have five elements: <strong>Role</strong>, <strong>Context</strong>, <strong>Task</strong>, <strong>Format</strong>, <strong>Constraints</strong>. Skip any one and the output is generic. If you don't want to remember all five:</p>
 <pre><code>/help-me-prompt help me write a follow-up email to a candidate I want to hire</code></pre>
 <p>Claude rewrites it in R-C-T-F-C structure. Ship the rewrite.</p>
-<p><strong>Deep dive:</strong> type <code>/teach M02</code> in Cowork, or open the <a href="m02.html">full M02 page</a>.</p>
+<p><strong>Deep dive:</strong> type <code>/teach M06</code> in Cowork, or open the <a href="m02.html">full M06 page</a>.</p>
 
-<h2>3. Build a live artifact (M04)</h2>
+<h2>3. Build a live artifact (M08)</h2>
 <p>An artifact is a generated output that renders inline. Live artifacts pull fresh data each time you open them.</p>
 <pre><code>Build me an interactive page showing the days of the week in a 2x4 grid,
 each in a different color, with today highlighted.</code></pre>
 <p>Renders right there. Close it, reopen — it refreshes. The Daily Command Center (step 12) is the same idea, scaled up.</p>
 <p><em>Verify: Close and reopen the artifact — expect it to show fresh data.</em></p>
-<p><strong>Deep dive:</strong> type <code>/teach M04</code> in Cowork, or open the <a href="m04.html">full M04 page</a>.</p>
+<p><strong>Deep dive:</strong> type <code>/teach M08</code> in Cowork, or open the <a href="m04.html">full M08 page</a>.</p>
 
-<h2>4. Operate websites with Claude in Chrome (M05)</h2>
+<h2>4. Operate websites with Claude in Chrome (M09)</h2>
 <p>Open Chrome (or Brave). Click the Claude extension icon — sidebar opens on the right. Open any portal you actually use (CRM, dashboard, vendor portal). In the sidebar:</p>
 <pre><code>Pull the next renewal date from the customer profile open in this tab.</code></pre>
 <p>Or record a 3-step workflow once and replay it on demand. Or open 6 competitor sites in tabs and ask Claude to compile a comparison.</p>
 <p><em>Verify: Ask Claude to extract a specific field from the current page — expect accurate data pulled from the live page.</em></p>
-<p><strong>Deep dive:</strong> type <code>/teach M05</code> in Cowork, or open the <a href="m05.html">full M05 page</a>.</p>
+<p><strong>Deep dive:</strong> type <code>/teach M09</code> in Cowork, or open the <a href="m05.html">full M09 page</a>.</p>
 
-<h2>5. Write your chief-of-staff brief (M06)</h2>
+<h2>5. Write your chief-of-staff brief (M04)</h2>
 <p>The highest-leverage file in the workshop. Once it exists, every conversation inherits your voice, priorities, stakeholders, and tone. In Cowork:</p>
 <pre><code>Walk me through writing my chief-of-staff brief. Save the result to
 my vault as About Me.md, and add a pointer in claude.md.</code></pre>
 <p>Claude interviews you for a few minutes — role, voice, stakeholders, what you avoid. Output is a 30-line brief that personalizes everything Claude does for you afterward.</p>
 <p><em>Verify: Open About Me.md in your vault — expect a complete CoS brief in your voice.</em></p>
-<p><strong>Deep dive:</strong> type <code>/teach M06</code> in Cowork, or open the <a href="m06.html">full M06 page</a>.</p>
+<p><strong>Deep dive:</strong> type <code>/teach M04</code> in Cowork, or open the <a href="m06.html">full M04 page</a>.</p>
 
 <h2>6. Walk out with 7 custom skills (M07)</h2>
 <p>You've already used <code>/teach</code> and <code>/help-me-prompt</code> — those are skills (slash commands). The workshop installs 7 core skills. To build your own:</p>
@@ -146,15 +198,15 @@ my vault as About Me.md, and add a pointer in claude.md.</code></pre>
 <p><em>Verify: Type <code>/<your-new-skill></code> in a Cowork chat — expect the skill to run.</em></p>
 <p><strong>Deep dive:</strong> type <code>/teach M07</code> in Cowork, or open the <a href="m07.html">full M07 page</a>.</p>
 
-<h2>7. Use Claude to read and write your vault (M08)</h2>
+<h2>7. Use Claude to read and write your vault (M02)</h2>
 <p>Your vault is mounted in your Cowork Project. That means Claude reads every note and writes back. Use Claude to capture, synthesize, and organize. Try:</p>
 <pre><code>Write a 5-line journal entry about how the workshop is going so far,
 in journal voice. Save to today's daily note in my vault.</code></pre>
 <p>Open Obsidian — the note is there. Same workflow scales: ask Claude to read a PDF and save key points under References/<topic>, or summarize your meeting notes from a transcript.</p>
 <p><em>Verify: Open your vault in Obsidian — expect the new note, visible and rendered.</em></p>
-<p><strong>Deep dive:</strong> type <code>/teach M08</code> in Cowork, or open the <a href="m08.html">full M08 page</a>.</p>
+<p><strong>Deep dive:</strong> type <code>/teach M02</code> in Cowork, or open the <a href="m08.html">full M02 page</a>.</p>
 
-<h2>8. Folders, projects, and the two files Claude reads automatically (M09)</h2>
+<h2>8. Folders, projects, and the two files Claude reads automatically (M12)</h2>
 <p>Two files shape how Claude behaves in any folder:</p>
 <ul>
 <li><code>claude.md</code> — per-folder context. Claude reads this first. The closer to the file Claude is editing, the higher priority it wins.</li>
@@ -164,7 +216,7 @@ in journal voice. Save to today's daily note in my vault.</code></pre>
 <pre><code>/new-project board-deck-q3</code></pre>
 <p>Claude interviews you (outcome, stakeholders, deadline, tone), creates the project folder, writes a <code>claude.md</code> that inherits your CoS brief plus project specifics. Every conversation in that folder gets project context for free.</p>
 <p><em>Verify: Check your work folder — expect the new project subfolder with source/working/deliverables structure.</em></p>
-<p><strong>Deep dive:</strong> type <code>/teach M09</code> in Cowork, or open the <a href="m09.html">full M09 page</a>.</p>
+<p><strong>Deep dive:</strong> type <code>/teach M12</code> in Cowork, or open the <a href="m09.html">full M12 page</a>.</p>
 
 <h2>9. Verify your connectors (M10)</h2>
 <p>Your connectors (Gmail, M365, Calendar, Drive, Slack, custom apps) are already authenticated. Confirm in Customize → Connectors — all show Connected. Try one:</p>
@@ -244,15 +296,15 @@ one supporting data point, no clutter.</code></pre>
 
 <p><strong>Deep dive:</strong> type <code>/teach M11</code> in Cowork, or open the <a href="m11.html">full M11 page</a>.</p>
 
-<h2>11. Schedule Claude to work while you sleep (M12)</h2>
+<h2>11. Schedule Claude to work while you sleep (M13)</h2>
 <p>In Cowork: Settings → Scheduled tasks → New. Pick a cadence (e.g., Mondays at 8:30am), give it a prompt, send the output to a Slack DM, an email draft, or a vault file. Example:</p>
 <pre><code>Tell me what's important this week. Pull from my calendar (next 7 days),
 my recent emails (last 48h), and my Slack mentions. Format as a 5-line
 brief. Send as a Slack DM to me.</code></pre>
 <p><em>Verify: Check your Slack DM — expect the brief to arrive at the scheduled time.</em></p>
-<p><strong>Deep dive:</strong> type <code>/teach M12</code> in Cowork, or open the <a href="m12.html">full M12 page</a>.</p>
+<p><strong>Deep dive:</strong> type <code>/teach M13</code> in Cowork, or open the <a href="m12.html">full M13 page</a>.</p>
 
-<h2>12. Build your Daily Command Center (M14)</h2>
+<h2>12. Build your Daily Command Center (M15)</h2>
 <p>The flagship artifact. One live page that pulls calendar, urgent email, drafts waiting, Slack mentions, and yesterday's reflection — all in one view that refreshes every time you open it. In Cowork:</p>
 <pre><code>Build me a live artifact called "Daily Command Center" with these tiles:
 1. Today's calendar (Calendar connector).
@@ -264,16 +316,16 @@ brief. Send as a Slack DM to me.</code></pre>
 Layout 2 columns. Refresh on every open.</code></pre>
 <p>Open this every morning. Done.</p>
 <p><em>Verify: Reopen the artifact multiple times — expect fresh data each time.</em></p>
-<p><strong>Deep dive:</strong> type <code>/teach M14</code> in Cowork, or open the <a href="m14.html">full M14 page</a>.</p>
+<p><strong>Deep dive:</strong> type <code>/teach M15</code> in Cowork, or open the <a href="m14.html">full M15 page</a>.</p>
 
 <h2>What this fast track skips</h2>
 <p>Four full-course modules aren't in the 12 above. They're depth topics for when you're ready. Each one is one <code>/teach</code> command away.</p>
 
 <ul>
 <li><strong>M03 — Cowork UI + Settings.</strong> Treasure-hunt the 5 named UI elements. Configure 4 settings deliberately. Set data-sharing toggles with intention. Type <code>/teach M03</code> or open the <a href="m03.html">full M03 page</a>.</li>
-<li><strong>M13 — GTD.</strong> David Allen's GTD methodology, run from Cowork. Capture, process, query, review. Pick your store: Obsidian vault (default) or Notion. 19 GTD skills. Type <code>/teach M13</code> or open the <a href="m13.html">full M13 page</a>.</li>
-<li><strong>M15 — Meeting Notes.</strong> Bot-less capture (Granola / Bluedot / Fellow). Transcript pipeline → structured note in your vault → commitments captured into your inbox → follow-up emails drafted. Gap analysis vs your existing notes. Type <code>/teach M15</code> or open the <a href="m15.html">full M15 page</a>.</li>
-<li><strong>M16 — Collaboration & Shared Work.</strong> Shared Cowork folders. Multi-connector queries that span team surfaces. The team-leverage move. Type <code>/teach M16</code> or open the <a href="m16.html">full M16 page</a>.</li>
+<li><strong>M14 — GTD.</strong> David Allen's GTD methodology, run from Cowork. Capture, process, query, review. Pick your store: Obsidian vault (default) or Notion. 19 GTD skills. Type <code>/teach M14</code> or open the <a href="m13.html">full M14 page</a>.</li>
+<li><strong>M16 — Meeting Notes.</strong> Bot-less capture (Granola / Bluedot / Fellow). Transcript pipeline → structured note in your vault → commitments captured into your inbox → follow-up emails drafted. Gap analysis vs your existing notes. Type <code>/teach M16</code> or open the <a href="m15.html">full M16 page</a>.</li>
+<li><strong>M17 — Collaboration & Shared Work.</strong> Shared Cowork folders. Multi-connector queries that span team surfaces. The team-leverage move. Type <code>/teach M17</code> or open the <a href="m16.html">full M17 page</a>.</li>
 </ul>
 
 <div class="slides-cta">

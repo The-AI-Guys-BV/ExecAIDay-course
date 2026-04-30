@@ -2,7 +2,7 @@
 
 ## Why this module matters
 
-You've already used skills — `/teach` in M01, `/capture` in M04. This module names what they are, walks the 7 you'll use most, and shows you how to build your own with `/skill-creator`. After M07 you're not just a Cowork user — you can extend the system.
+You've already used skills — `/teach` in M01, `/capture` in M08. This module names what they are, walks the 7 you'll use most, and shows you how to build your own with `/skill-creator`. After M07 you're not just a Cowork user — you can extend the system.
 
 ## What you'll do
 
@@ -28,7 +28,7 @@ The 7 core skills you'll use throughout the workshop and after:
 6. `/drafts-inbox` — email drafts triage.
 7. `/email-triage` — inbox classification.
 
-Plus 19 GTD skills (covered in M13) and Cowork built-ins (covered later in this module).
+Plus 19 GTD skills (covered in M14) and Cowork built-ins (covered later in this module).
 
 ## Beginner / Getting Started
 
@@ -38,7 +38,7 @@ Plus 19 GTD skills (covered in M13) and Cowork built-ins (covered later in this 
 
 **`/help-me-prompt <draft>`** — sharpens any prompt. You'll install this in Section 3.
 
-**`/new-project <name>`** — already used in M09.
+**`/new-project <name>`** — already used in M12.
 
 **`/meeting-prep <meeting title or "next">`** — generates a pre-meeting brief. Try:
 ```
@@ -163,7 +163,7 @@ All 7 core skills work in real demos. The in-workshop install of `/help-me-promp
 Open Customize → Skills
 ```
 
-Expected: lists all installed skills. Should include the 7 core, the 19 GTD (covered in M13 but already installed via this plugin), the Cowork built-ins, plus any custom skills you built via `/skill-creator`.
+Expected: lists all installed skills. Should include the 7 core, the 19 GTD (covered in M14 but already installed via this plugin), the Cowork built-ins, plus any custom skills you built via `/skill-creator`.
 
 If the Skills list (Customize → Skills) returns nothing or partial, the plugin may be incompletely installed.
 
@@ -177,4 +177,4 @@ If the Skills list (Customize → Skills) returns nothing or partial, the plugin
 
 - `skills/` — every skill in this plugin.
 - `references/rctfc-framework.md` — what `/help-me-prompt` enforces.
-- M13 — GTD skills (the 19 already installed via this plugin).
+- M14 — GTD skills (the 19 already installed via this plugin).

@@ -43,11 +43,11 @@ You start the workshop with a working Cowork Project, a tutor (`/teach` — type
     4. Click **Add**. Approve the prompts. The Claude sidebar appears.
     5. Sign in with the same Anthropic account you use for Cowork.
     6. **Repeat for Excel and PowerPoint** — open each app, same Insert → Get Add-ins → search "Claude by Anthropic" → Add → sign in. The Claude icon should appear in the ribbon of all three apps.
-- **A starter vault and a starter work folder, in a cloud-synced location.** Both folders sit inside a cloud sync app — Dropbox, OneDrive, Google Drive, or iCloud Drive (whichever your org uses). This is required, not optional: cloud sync is how the vault stays backed up, accessible from your phone for Dispatch (M12), and durable across machines. Your assistant has placed them at the right path. You'll mount both in your Cowork Project below.
+- **A starter vault and a starter work folder, in a cloud-synced location.** Both folders sit inside a cloud sync app — Dropbox, OneDrive, Google Drive, or iCloud Drive (whichever your org uses). This is required, not optional: cloud sync is how the vault stays backed up, accessible from your phone for Dispatch (M13), and durable across machines. Your assistant has placed them at the right path. You'll mount both in your Cowork Project below.
 
 This module's job is to confirm all that has given you a usable workspace, and to give you the words for the next 15 modules. Most of what we cover here is vocabulary — concepts you'll hear used the whole workshop. We're not building anything yet; we're orienting.
 
-The single most important thing in this module: by the end, you'll have a Cowork Project (a workspace) with both your folders mounted, and `/teach` will walk you through any future module on command. That's your safety net. If you ever miss something or want to revisit, `/teach M06` or `/teach Skills` is permanent office hours.
+The single most important thing in this module: by the end, you'll have a Cowork Project (a workspace) with both your folders mounted, and `/teach` will walk you through any future module on command. That's your safety net. If you ever miss something or want to revisit, `/teach M04` or `/teach Skills` is permanent office hours.
 
 ## Beginner / Getting Started
 
@@ -77,7 +77,7 @@ If you don't see it: the plugin install didn't complete. Tell your assistant —
 
 ### Step 4 — First teach demo
 
-Type `/teach M02`. Claude reads the M02 module file and starts walking it. Don't actually do M02 now (you'll do it next anyway), but see how `/teach` opens, lists the section, and waits for you. Type "exit" to close out.
+Type `/teach M06`. Claude reads the M06 module file and starts walking it. Don't actually do M06 now (you'll do it next anyway), but see how `/teach` opens, lists the section, and waits for you. Type "exit" to close out.
 
 ## Intermediate
 

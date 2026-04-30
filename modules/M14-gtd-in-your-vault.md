@@ -1,4 +1,4 @@
-# M13 — GTD
+# M14 — GTD
 
 ## Why this module matters
 
@@ -35,7 +35,7 @@ This module gives you the Cowork-driven version of all five.
 
 You pick **one**. Running both is overhead, not value — two places to forget about, two places to drift, two places to keep in sync. Pick the one whose UI you'll actually open and stick with it.
 
-**Option A — Obsidian vault.** Your GTD lives as plain files at `<vault>/gtd/` — `inbox.md`, `next-actions.md`, `projects/`, etc. Free, local, private. The 19 GTD skills work out of the box. Mobile capture via Dispatch (M12). Default for the workshop.
+**Option A — Obsidian vault.** Your GTD lives as plain files at `<vault>/gtd/` — `inbox.md`, `next-actions.md`, `projects/`, etc. Free, local, private. The 19 GTD skills work out of the box. Mobile capture via Dispatch (M13). Default for the workshop.
 
 **Option B — Notion.** Your GTD lives as Notion databases. Familiar UI for many execs, polished mobile app. Costs a Notion subscription. Skills route to your Notion via a `claude.md` hint pattern that tells Cowork exactly which databases to use (so it doesn't search your whole Notion every time).
 
@@ -136,7 +136,7 @@ Without this step, Cowork can authenticate but can't read or write any pages.
 
 This is the key efficiency move. Without it, every GTD operation makes Cowork search your entire Notion. With it, Cowork targets the right database directly.
 
-Open `<vault>/claude.md` (the vault root file M06 set up). Add a Notion-GTD pointer block:
+Open `<vault>/claude.md` (the vault root file M04 set up). Add a Notion-GTD pointer block:
 
 ```
 GTD lives in Notion. Use the Notion connector for all GTD operations.
@@ -226,7 +226,7 @@ Now every Monday you get the nudge. The skill does the heavy lifting.
 
 ### Mobile capture via Dispatch
 
-Capture from your phone. The Claude mobile app + Dispatch routes voice/text requests to your desktop Cowork, which runs `/capture`. Same for `/whats-next`, `/waiting-for`, `/today`. See M12.
+Capture from your phone. The Claude mobile app + Dispatch routes voice/text requests to your desktop Cowork, which runs `/capture`. Same for `/whats-next`, `/waiting-for`, `/today`. See M13.
 
 Works for both Obsidian and Notion GTD — Cowork uses your `claude.md` to know which to target.
 
@@ -298,6 +298,6 @@ Expected: Claude lists Inbox items including the one you just captured. If it's 
 ## References
 
 - `references/gtd-vault-layout.md` — vault GTD file structure and tag conventions.
-- M14 — Daily Command Center (surfaces GTD next-actions in the artifact, works with either store).
-- M12 — scheduled tasks (pair with GTD for weekly review automation; also covers Dispatch for mobile capture).
+- M15 — Daily Command Center (surfaces GTD next-actions in the artifact, works with either store).
+- M13 — scheduled tasks (pair with GTD for weekly review automation; also covers Dispatch for mobile capture).
 - David Allen, *Getting Things Done* (revised 2015) — the source.

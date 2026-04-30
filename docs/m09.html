@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>M09 Projects, Folders, claude.md — ExecAIDay</title>
-<meta name="description" content="Projects, Folders, claude.md — module M09 of the ExecAIDay Claude Cowork training workshop.">
+<title>M09 Browser + Chrome — ExecAIDay</title>
+<meta name="description" content="Browser + Chrome — module M09 of the ExecAIDay Claude Cowork training workshop.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -23,124 +23,134 @@
 
 <header class="module-hero">
   <div class="container">
-    <div class="module-hero-icon" style="background: var(--personalize-soft); color: var(--personalize);">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+    <div class="module-hero-icon" style="background: var(--sharpen-soft); color: var(--sharpen);">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/><line x1="10.88" y1="21.94" x2="15.46" y2="14"/></svg>
     </div>
     <div class="eyebrow eyebrow-row">
-      <span class="breadcrumb"><a href="index.html">All modules</a> &nbsp;/&nbsp; Personalize</span>
+      <span class="breadcrumb"><a href="index.html">All modules</a> &nbsp;/&nbsp; Sharpen</span>
       <a class="hero-slides-link" href="slides/m09.html">▶ View slide deck</a>
     </div>
-    <h1>M09 — Projects, Folders, claude.md</h1>
-    <p class="lede">This is the structural module. Two folder shapes, two senses of "project," and one file (<code>claude.md</code>) that ties everything to context. Get this right and the rest of the workshop slots in. Get it wrong and you'll be confused about why Claude knows some things and not others.</p>
+    <h1>M09 — Browser + Chrome</h1>
+    <p class="lede">Claude in Chrome means Claude can navigate, record, replay, and coordinate across tabs. Connectors give Claude your data; Chrome gives Claude your screen. The deepest live exercise of the workshop.</p>
   </div>
 </header>
 
 <main class="content container">
 <h2>What you'll do</h2>
 <ul>
-<li>Learn the two folder shapes: project folders (bounded work, three buckets) vs stream folders (recurring, flat).</li>
-<li>Disambiguate the two senses of "project": Cowork Project (the app's workspace) vs project folder (the file-system shape).</li>
-<li>Run <code>/new-project</code> for the first time — scaffold the workshop's first project folder (<code>course/</code>) and watch the synthesis interview produce a tailored <code>claude.md</code>.</li>
-<li>Pull workshop content from the plugin into <code>course/Source Materials/</code> — your first content move.</li>
+<li>Open the Claude in Chrome side panel.</li>
+<li>Record a 3-step workflow on a real site (CRM / dashboard / portal).</li>
+<li>Replay the workflow on demand.</li>
+<li>Run a multi-tab task (competitive intel across 6 sites → one comparison).</li>
 </ul>
 <h2>Introduction</h2>
-<p>Cowork has built-in concepts; we have folder conventions; the two interlock. This is how:</p>
+<p>A connector handles your major systems — your inbox, your calendar, your file storage. A browser handles everything else: portals without a built-in connector, dashboards behind logins, websites that aren't on the connector list. Claude in Chrome is for those.</p>
+<p>Three killer capabilities:</p>
 <ul>
-<li><strong>Cowork Project</strong> = the app's workspace. You made one in M01. It mounts folders.</li>
-<li><strong>Folders we mount</strong> = your vault (knowledge) and your work folder (projects).</li>
-<li><strong>Inside the work folder, your "project folders"</strong> = bounded bodies of work, each with a specific shape.</li>
-<li><strong>Inside the vault, your "stream folders"</strong> = recurring content (Daily Notes, References, Inbox).</li>
-<li><strong>Every folder has a <code>claude.md</code> and a <code>memory.md</code></strong> = per-folder context.</li>
+<li><strong>Record-and-replay:</strong> Claude watches you do a task once, then repeats it on command.</li>
+<li><strong>Multi-tab:</strong> Claude opens N tabs, pulls data from each, synthesizes.</li>
+<li><strong>Scheduled Chrome tasks:</strong> the same record-and-replay, but on a schedule.</li>
 </ul>
-<p>That's the whole architecture. M09 makes it concrete.</p>
+<p>Plus side capabilities: console log reading (debugging), real-site navigation (pull a fact from a portal you can't get to via connector).</p>
 <h2>Beginner / Getting Started</h2>
-<h3>The two folder shapes</h3>
-<p><strong>Project folders</strong> (bounded work with deliverables):</p>
+<h3>Open the side panel</h3>
+<p>In Chrome (or Brave), click the Claude extension icon. Side panel opens on the right. You'll see chat-like interface, like Cowork but operating on the active browser tab.</p>
+<p>If the extension isn't installed: your assistant will install it now.</p>
+<h3>One-fact navigation</h3>
+<p>Pick a portal you actually use — your CRM, a dashboard, a vendor portal. Open it in a tab. In the side panel:</p>
 <pre><code>
-&lt;work-folder&gt;/&lt;project-name&gt;/
-├── claude.md         # project-specific context
-├── memory.md         # patterns Cowork learns about this project
-├── Source Materials/ # incoming inputs
-├── Working Files/    # in-progress
-└── Deliverables/     # finished outputs
+Pull the [specific fact] from this page. Just the value, no commentary.
 </code></pre>
-<p>Has an outcome. Ships and ends. Examples: <code>q3-board-deck/</code>, <code>refactor-onboarding/</code>, <code>course/</code>.</p>
-<p><strong>Stream folders</strong> (recurring content, flat):</p>
-<pre><code>
-&lt;vault&gt;/&lt;stream-name&gt;/
-├── claude.md         # stream-specific context
-├── memory.md
-└── (flat content — dated files, captured items, linked notes)
-</code></pre>
-<p>Unbounded. No end state. Recurring. Examples: <code>Daily Notes/</code>, <code>References/</code>, <code>Inbox/</code>. The <code>about-me/</code> folder is the special stream (every vault has it).</p>
-<h3>The two senses of "project"</h3>
-<p><strong>Cowork Project</strong> = the app workspace concept (the thing you made in M01). UI-level. Mounts folders. Has its own memory.</p>
-<p><strong>Project folder</strong> = the file-system shape inside your work folder. Folder with the bucket structure.</p>
-<p>These collide on the word "project." Both must be used together: a Cowork Project mounts your work folder, which contains your project folders.</p>
-<h3>Why every folder has <code>claude.md</code> + <code>memory.md</code></h3>
-<p>So Cowork has per-folder context. The vault root <code>claude.md</code> is a one-line pointer to your chief-of-staff brief in your vault (M06 sets this up). The work-folder root <code>claude.md</code> is your work-context defaults. Each project folder's <code>claude.md</code> adds project-specific overrides.</p>
-<p>Closer-to-the-file wins. So when Claude works on a file at <code>[work-folder]/q3-deck/Working Files/draft.md</code>, it reads in this order, with later files overriding earlier ones:</p>
-<ol>
-<li><code>[vault]/claude.md</code> → which points to <code>[vault]/About Me.md</code> (chief-of-staff brief).</li>
-<li><code>[work-folder]/claude.md</code> (work-context defaults).</li>
-<li><code>[work-folder]/q3-deck/claude.md</code> (project context — most specific).</li>
-</ol>
-<p>The project <code>claude.md</code> doesn't restate the chief-of-staff brief — it only mentions deviations.</p>
-<h2>Intermediate</h2>
-<h3>Run <code>/new-project</code> for the first time</h3>
-<p>In Cowork:</p>
-<pre><code>
-/new-project course
-</code></pre>
-<p>The skill conducts an interview. It will ask you things like:</p>
+<p>Examples:</p>
 <ul>
-<li>What's the project outcome?</li>
-<li>Who are the stakeholders?</li>
-<li>What's the timeline?</li>
-<li>Any tone or format overrides for this project?</li>
-<li>What source materials feed this?</li>
+<li>"Pull total active accounts from the dashboard."</li>
+<li>"Pull the next renewal date from the customer profile open in this tab."</li>
+<li>"Pull the Q3 revenue from the report on this page."</li>
 </ul>
-<p>Answer naturally. The interview isn't capped — the skill asks until it has enough to write a brief that fits THIS project specifically. A few questions in, it'll pause: "I have enough. Want me to proceed?" Say yes.</p>
-<p>Then:</p>
-<ol>
-<li>The skill creates <code>&lt;work-folder&gt;/course/</code> with all the bucket subfolders.</li>
-<li>Writes a tailored <code>claude.md</code> synthesizing your interview answers + the chief-of-staff brief + work-folder defaults.</li>
-<li>Creates a matching GTD project entry at <code>&lt;vault&gt;/gtd/projects/&lt;slug&gt;.md</code> (Outcome, Status, Stakeholders, Deadline, Next-Action placeholder).</li>
-<li>Cross-links the project folder and the GTD project file.</li>
-<li>Confirms what was created.</li>
-</ol>
-<p>You now have your first project folder + a matching GTD entry. Welcome to the workshop's working file structure.</p>
-<h3>Pull workshop content into Source Materials</h3>
-<p>Your first content move:</p>
+<p>Claude reads the page and returns the value. First proof Chrome works.</p>
+<h2>Intermediate</h2>
+<h3>Record-and-replay</h3>
+<p>Pick a 3-step task you do often. Examples:</p>
+<ul>
+<li>Log into your CRM, navigate to a specific report, screenshot.</li>
+<li>Open a vendor portal, check a status, summarize.</li>
+<li>Open a knowledge-base page, copy a section, paste into another tool.</li>
+</ul>
+<p>In the Claude in Chrome side panel:</p>
 <pre><code>
-Pull the welcome doc and the how-to-start doc from this plugin into course/Source Materials/.
+I'm going to do a 3-step task. Watch what I do, then I'll ask you to replay it later.
 </code></pre>
-<p>Claude reads <code>docs/welcome.md</code> and <code>docs/how-to-start.md</code> from the installed plugin and copies them into <code>&lt;work-folder&gt;/course/Source Materials/</code>. Now your workshop project has its initial inputs.</p>
-<p>This is the pattern: Source Materials gets the raw inputs (from anywhere — plugin, web, email, conversation transcripts). Working Files is where you iterate. Deliverables is what you ship.</p>
+<p>Then perform the 3 steps. Claude records each click and form input.</p>
+<p>When done:</p>
+<pre><code>
+Save this workflow as "&lt;name&gt;".
+</code></pre>
+<p>Then test:</p>
+<pre><code>
+Replay the workflow.
+</code></pre>
+<p>Claude does the 3 steps without you. The first time you watch this happen, it feels like magic. After a few replays it feels normal.</p>
+<h3>Multi-tab task</h3>
+<p>Pick a task that benefits from cross-site comparison. Example:</p>
+<pre><code>
+Open these 6 competitor websites in new tabs. From each, pull pricing info, primary
+target customer, and one differentiator they emphasize on the homepage. Compile into
+a comparison table.
+
+URLs: [paste 6 URLs]
+</code></pre>
+<p>Claude opens each, reads, compiles. The output is a table you couldn't have built faster manually.</p>
+<h3>Scheduled Chrome tasks</h3>
+<p>Once a workflow is recorded, you can schedule it to run automatically. Open Claude in Chrome → Workflows → click your saved workflow → Schedule.</p>
+<p>Examples worth scheduling:</p>
+<ul>
+<li>Daily 8am: pull yesterday's CRM dashboard snapshot.</li>
+<li>Weekly Monday: pull updated customer health scores.</li>
+<li>Before each board meeting: pull current ARR from the dashboard.</li>
+</ul>
+<p>Output goes to Cowork (you specify destination — file, Slack post, email, etc.).</p>
 <h2>Advanced</h2>
-<h3>Multi-Cowork-Project patterns</h3>
-<p>Post-workshop, you'll create more Cowork Projects — one per major body of work. Each new Cowork Project mounts your vault + a relevant subset of your work folder.</p>
-<p>The default: one Cowork Project named "Workshop" (the one you have now), mounting everything.</p>
-<p>For sensitive work (M&A, exec personnel): a separate Cowork Project that does NOT mount the vault — so the chief-of-staff brief and personal context don't cross-pollinate. Vault-less Cowork Projects are the security pattern.</p>
-<h3>Vault-less Cowork Projects</h3>
-<p>Create a new Cowork Project. Mount only the work folder (or a specific project subfolder). Don't mount the vault. The chief-of-staff brief won't apply. Claude treats the work strictly within the project's context.</p>
-<p>Use case: a board-prep project that touches confidential financial data; you don't want personal notes crosslinked.</p>
-<h3>Cross-folder workflows</h3>
-<p>Within one Cowork Project mounting both folders, Claude can read both freely. So a daily note in the vault can reference a project's Working Files; a project's Deliverable can be summarized into a Daily Note for the day's reflection.</p>
-<p>This is where the architecture pays off. The two folders are different in shape but unified in scope (within a Cowork Project).</p>
-<h2>Try this</h2>
-<p>Run <code>/new-project course</code> (or whatever name you prefer). Skill interviews you, scaffolds the folder, synthesizes a tailored <code>claude.md</code>, creates the GTD project entry as a vault file. First content pulled from this plugin into <code>course/Source Materials/</code>. You now have your first project folder, your first GTD project entry, and the muscle for <code>/new-project</code>.</p>
-<h2>Verification checkpoint</h2>
-<p>After running <code>/new-project</code>, type:</p>
+<h3>Console log reading</h3>
+<p>Claude in Chrome can read browser console logs. Useful when something is broken on a page you control:</p>
 <pre><code>
-What's in my course/ project folder right now? Read the claude.md.
+Read the console logs on this page. What errors are there? What might be causing the
+form submission to fail?
 </code></pre>
-<p>Expected: Claude reads the project's <code>claude.md</code> and reports the synthesized brief — outcome, stakeholders, timeline, format overrides, etc. — along with the bucket subfolders. If <code>claude.md</code> is empty or missing, the scaffold didn't complete; rerun <code>/new-project</code>.</p>
+<p>Claude reads, identifies errors, suggests fixes. Engineering-flavored move; useful even for non-engineers when a page misbehaves.</p>
+<h3>Multi-tab coordination at scale</h3>
+<p>The 6-site competitive intel demo is the simple version. Bigger:</p>
+<ul>
+<li>Pull data from 30 customer portals to verify renewal dates.</li>
+<li>Cross-reference 10 vendor sites against your contracts.</li>
+<li>Compile a daily snapshot of 15 industry-relevant news sites.</li>
+</ul>
+<p>The pattern: list the URLs, specify what to pull from each, specify the output format. Claude does the work serially or in parallel depending on the task.</p>
+<p>Watch out: rate limits. Some sites flag unusual traffic. Don't run a 50-tab job hourly.</p>
+<h3>Combining Chrome with skills</h3>
+<p>A skill can call into Chrome. Custom skill example:</p>
+<ul>
+<li><code>/customer-snapshot &lt;name&gt;</code> opens the customer's record in your CRM, pulls health scores, opens their public website, summarizes recent news, returns a one-page brief.</li>
+</ul>
+<p>You'll build skills in M07 with <code>/skill-creator</code>. Chrome integration is a natural extension.</p>
+<h2>Try this</h2>
+<p>Tijn picks default. Three options, all staged:</p>
+<ol>
+<li>Real-site navigation: Claude pulls a specific fact from your actual CRM / dashboard.</li>
+<li>Record-a-workflow: you perform 3 steps, Claude records, you replay.</li>
+<li>Multi-tab intel: 6 competitor sites → comparison table.</li>
+</ol>
+<p>The default is to do all 3 — they go together. Picking one stages a deeper exploration of that capability.</p>
+<h2>Verification checkpoint</h2>
+<pre><code>
+What workflows have I saved in Claude in Chrome?
+</code></pre>
+<p>Expected: Claude lists the workflow(s) you saved during the module. If empty, the save didn't take — re-record.</p>
 <h2>Common issues</h2>
 <ul>
-<li><strong>Project folder name conflicts</strong> — skill prompts for a different slug.</li>
-<li><strong>Synthesized <code>claude.md</code> looks generic</strong> — the interview was too short; rerun with more detail in answers.</li>
-<li><strong>Bucket subfolders empty</strong> — that's correct; they ship empty per the architecture.</li>
+<li><strong>Side panel doesn't open</strong> — extension not installed or blocked by browser policy. Reinstall.</li>
+<li><strong>Recorded workflow fails on replay</strong> — page state changed (logged out, layout updated). Re-record.</li>
+<li><strong>Multi-tab job hangs</strong> — site is slow or rate-limiting. Reduce parallelism, retry.</li>
+<li><strong>Workflow needs auth</strong> — the extension follows your existing browser session. If you weren't logged in, log in and re-record.</li>
 </ul>
 
   <div class="slides-cta">
@@ -152,7 +162,7 @@ What's in my course/ project folder right now? Read the claude.md.
   </div>
 
   <nav class="module-nav">
-    <a class="nav-link prev" href="m08.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M08 — Obsidian</div></a>
+    <a class="nav-link prev" href="m08.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M08 — Artifacts</div></a>
     <a class="nav-link next" href="m10.html"><div class="nav-link-label">Next →</div><div class="nav-link-title">M10 — Connectors</div></a>
   </nav>
 </main>

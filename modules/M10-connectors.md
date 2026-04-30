@@ -7,7 +7,7 @@ The jaw-drop arc. Inbox, drafts, calendar — your real data, in Cowork, working
 ## What you'll do
 
 - Verify connectors: Gmail / M365, Calendar, Drive, Slack, plus your custom apps (Asana / Monday / Jira / Linear / SFDC / HubSpot / etc.).
-- Run R-C-T-F-C from M02 on a real email — the callback exercise.
+- Run R-C-T-F-C from M06 on a real email — the callback exercise.
 - Walk the 3-step arc: inbox read-back → live draft → calendar + email chain.
 
 ---
@@ -67,7 +67,7 @@ under 200 words.
 
 Send. Compare to what you would have written. Faster + better, when R-C-T-F-C is real-life applied.
 
-This is the M02 callback — the framework on real data.
+This is the M06 callback — the framework on real data.
 
 ### The 3-step arc
 
@@ -95,7 +95,7 @@ Today's brief: meetings, urgent emails, drafts pending review, plus anything fro
 that's directly tagged for my attention. Pull from real data.
 ```
 
-Claude composes a 1-page narrative brief from calendar + email + Slack. This is what M14 builds into a daily live artifact dashboard. For now, see the data flow working.
+Claude composes a 1-page narrative brief from calendar + email + Slack. This is what M15 builds into a daily live artifact dashboard. For now, see the data flow working.
 
 ## Advanced
 
@@ -119,7 +119,7 @@ You'll re-enable when done. Useful for sensitive work (M&A, board prep, exec per
 
 Teams is rolling out third-party bot detection. By default, organizer approval is required for any third-party bot to join a meeting. This affects bot-based recording tools (Fireflies, Otter default, Fellow's bot mode). It does NOT affect bot-less tools (Granola / Bluedot / Fellow's bot-less mode), which capture system audio locally without joining the meeting.
 
-Workshop's locked meeting-note stack (M15) is bot-less. Unaffected.
+Workshop's locked meeting-note stack (M16) is bot-less. Unaffected.
 
 ---
 
@@ -150,7 +150,7 @@ Expected: Claude lists Gmail/M365, Calendar, Drive, Slack, plus your custom apps
 ## References
 
 - `references/connector-quirks.md` — connector-specific issues and workarounds.
-- M02 — R-C-T-F-C framework (the callback uses this).
-- M14 — Daily Command Center (the artifact version of step 3).
+- M06 — R-C-T-F-C framework (the callback uses this).
+- M15 — Daily Command Center (the artifact version of step 3).
 - `skills/email-triage/SKILL.md` — the inbox read-back skill formalized.
 - `skills/drafts-inbox/SKILL.md` — the drafts skill formalized.

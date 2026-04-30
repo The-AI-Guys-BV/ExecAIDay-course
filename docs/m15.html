@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>M15 Meeting Notes — ExecAIDay</title>
-<meta name="description" content="Meeting Notes — module M15 of the ExecAIDay Claude Cowork training workshop.">
+<title>M15 Daily Command Center — ExecAIDay</title>
+<meta name="description" content="Daily Command Center — module M15 of the ExecAIDay Claude Cowork training workshop.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -24,131 +24,108 @@
 <header class="module-hero">
   <div class="container">
     <div class="module-hero-icon" style="background: var(--system-soft); color: var(--system);">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
     </div>
     <div class="eyebrow eyebrow-row">
       <span class="breadcrumb"><a href="index.html">All modules</a> &nbsp;/&nbsp; System</span>
       <a class="hero-slides-link" href="slides/m15.html">▶ View slide deck</a>
     </div>
-    <h1>M15 — Meeting Notes</h1>
-    <p class="lede">Meeting transcripts → Obsidian daily note → Claude processes → follow-up emails drafted, commitments tracked, gaps surfaced. The pipeline turns hours of meetings per week into a tracked, actioned, never-forgotten stream.</p>
+    <h1>M15 — Daily Command Center</h1>
+    <p class="lede">The morning-brief artifact you built Day 1 grows up. By end of M15 it's a full single-pane-of-glass dashboard pulling GTD + Obsidian + calendar + Slack + email. This is the artifact you'll open every morning for years.</p>
   </div>
 </header>
 
 <main class="content container">
 <h2>What you'll do</h2>
 <ul>
-<li>Verify your meeting-note tool (Granola / Bluedot / Fellow — picked in questionnaire).</li>
-<li>Run a full pipeline: meeting captured → transcript in Obsidian daily note → Claude processes into a structured note in your vault.</li>
-<li>Try gap analysis: Claude cross-references the transcript vs your existing vault notes, surfaces commitments you missed.</li>
-<li>Push commitments into your GTD inbox at <vault>/gtd/inbox.md.</li>
-<li>Generate follow-up emails routed to <code>drafts-inbox</code>.</li>
+<li>Expand the Day 1 morning-brief artifact with new sources now that GTD (M14) is live.</li>
+<li>Add tiles: today's calendar, GTD next-actions top 5, Slack mentions overnight, email urgent + drafts waiting, morning brief narrative, stale waiting-fors.</li>
+<li>Add Obsidian daily note integration (yesterday's reflections feed today's view).</li>
 </ul>
 <h2>Introduction</h2>
-<p>Most execs already have a meeting-note tool. Granola, Bluedot, and Fellow's bot-less mode are the ones the workshop locks on (Fireflies retired — bot-based, poor fit for sensitive exec meetings).</p>
-<p>Bot-less means the tool captures system audio locally during the meeting, transcribes locally or via cloud, lands the transcript on your machine. No bot joins the meeting. No "this meeting is being recorded" dialogue prompts. No invitee list updated.</p>
-<p>This matters in 2026 because Microsoft Teams is rolling out third-party bot detection (May–June 2026). Bot-based tools (Fireflies default, Otter default) get flagged. Bot-less tools (Granola, Bluedot, Fellow's bot-less mode) keep working unchanged.</p>
-<p>This module: the pipeline from meeting → notes → action.</p>
+<p>You built a simple live artifact in Day 1 closing — three panels: calendar, urgent email, Slack mentions. That artifact has been firing every morning since.</p>
+<p>Today we expand it. Now that GTD is live (M14), we can add: top 5 next actions, stale waiting-fors, today's GTD-driven priorities. Now that Obsidian is your knowledge layer (M02), we can add: yesterday's reflection bubbling up to today.</p>
+<p>The result is one artifact you open in the morning, look at briefly, then know what matters for the day. No app-hopping. No "let me check Slack, then email, then my GTD."</p>
 <h2>Beginner / Getting Started</h2>
-<h3>Verify your meeting-note tool</h3>
-<p>Whichever you picked (Granola / Bluedot / Fellow), confirm it's running. Quick test: start a fake meeting (just open Zoom / Google Meet / Teams to yourself, talk briefly, stop). Verify the tool captured + transcribed.</p>
-<p>If it didn't, your assistant fixes now.</p>
-<h3>The pipeline</h3>
-<p>When a real meeting happens:</p>
-<ol>
-<li><strong>Meeting starts.</strong> Tool auto-captures (or you tap to start).</li>
-<li><strong>Tool transcribes.</strong> Some tools transcribe in real-time; some after the meeting.</li>
-<li><strong>Transcript lands.</strong> Where? Configurable — most tools have:</li>
-</ol>
+<h3>Reopen the Day 1 artifact</h3>
+<p>Open Cowork. Find the artifact in the artifacts sidebar (right side). It should be named "Morning Brief" or similar. Click to open.</p>
+<p>It's pulling fresh data. Watch.</p>
+<h3>Plan the expansion</h3>
+<p>We're adding tiles. Each tile is one source. The full set:</p>
 <ul>
-<li>A native dashboard (their app).</li>
-<li>Sync to a cloud folder (Drive, Dropbox, etc.).</li>
-<li>Local file output.</li>
+<li>Today's <strong>calendar</strong> (already there from Day 1).</li>
+<li>Top 5 <strong>GTD next-actions</strong> (new — needs M14).</li>
+<li><strong>Slack mentions</strong> overnight (already there).</li>
+<li><strong>Email</strong> urgent + drafts waiting (already there).</li>
+<li><strong>Morning brief narrative</strong> (already there).</li>
+<li><strong>Stale waiting-fors</strong> (new — needs M14).</li>
+<li><strong>Yesterday's Obsidian daily note</strong> highlights (new — needs M02).</li>
 </ul>
-<ol>
-<li><strong>You point Cowork at the transcript.</strong></li>
-<li><strong>Claude processes</strong> into a structured note in your vault, and pushes commitments into your GTD next-actions.</li>
-</ol>
-<p>Workshop default: tool dumps transcripts to a folder in your vault, e.g., <code>&lt;vault&gt;/Meeting Transcripts/</code>. Or directly into your Daily Note for the meeting's day.</p>
+<p>That's 7 tiles. Layout: 2-column grid; calendar + narrative on the left, GTD + email + Slack + waiting-fors on the right.</p>
 <h2>Intermediate</h2>
-<h3>Run a full pipeline on a real meeting</h3>
-<p>Pick a recent real meeting (in your tool's history). Or use today's most recent.</p>
-<p>In Cowork:</p>
+<h3>Add the new tiles</h3>
+<p>In Cowork, with the artifact open:</p>
 <pre><code>
-Read the transcript at &lt;path-to-transcript&gt;. Process it:
-- List commitments (who promised what, by when).
-- List decisions made.
-- List open questions / things requiring follow-up.
-Save the structured note to my vault under Meeting Notes/&lt;date&gt;-&lt;title&gt;.md.
-Then for each commitment that's mine, /capture it into my GTD inbox.
+Update this artifact. Add three new tiles:
+
+1. GTD next-actions: top 5 from &lt;vault&gt;/gtd/next-actions.md, sorted by priority and age. Show context badge per item.
+2. Stale waiting-fors: list items I've been waiting on &gt;7 days, with person + days waited.
+3. Yesterday's Obsidian note: pull yesterday's daily note from my vault, surface the closing paragraphs (what I noted at /checkout) as 2-3 lines.
+
+Layout: 2 columns. Calendar + narrative on left. GTD + email + Slack + waiting-fors + yesterday's-note on right.
+
+Refresh on every artifact open — pull fresh data each time.
 </code></pre>
-<p>Claude reads the transcript, structures the output, writes the meeting note into your vault, and captures each of your commitments into your GTD inbox.</p>
-<p>Verify in your vault: the new meeting note is there with structured commitments, decisions, follow-ups. Verify in your GTD inbox: the commitments showed up at <vault>/gtd/inbox.md.</p>
-<h3>Gap analysis</h3>
-<p>This is where the pipeline pays off uniquely. Claude can cross-reference what was said in the meeting vs what's in your existing notes:</p>
+<p>Claude rewrites the artifact. Watch the layout reflow.</p>
+<h3>Tune the tiles</h3>
+<p>Some tiles will need iteration. Common tweaks:</p>
 <pre><code>
-Cross-reference today's meeting transcript with the project's claude.md and Working
-Files in &lt;work-folder&gt;/&lt;project&gt;/. What was committed in the meeting that isn't
-yet in the project? What was decided that contradicts the project's current state?
+The GTD tile is showing too many items. Limit to top 5 only, not top 10.
 </code></pre>
-<p>Claude surfaces gaps. Example outputs:</p>
-<ul>
-<li>"You committed to deliver X by Friday; the project's claude.md says next Wednesday. Mismatch."</li>
-<li>"John raised a risk about [thing] in the meeting; not in the project's Working Files."</li>
-<li>"Decision was made to deprecate Y; project still lists Y as active."</li>
-</ul>
-<p>You decide what to update.</p>
-<h3>Follow-up email generation</h3>
-<p>Most meetings need a follow-up email. The skill chain:</p>
 <pre><code>
-Based on today's meeting transcript, draft a follow-up email to [attendee]. Include:
-- 1-2 sentence summary.
-- The commitments made.
-- Specific next steps with owners.
-Save to drafts-inbox for me to review.
+The yesterday's-note tile shows the whole note. Show only the "tomorrow's #1" line and any "loose ends" the user captured.
 </code></pre>
-<p>Claude drafts. Lands in your drafts inbox. You review, edit, send.</p>
+<pre><code>
+The email tile is showing newsletters. Filter newsletters out.
+</code></pre>
+<p>Iterate until the tiles feel right.</p>
+<h3>Test the live refresh</h3>
+<p>Close the artifact. Close Cowork entirely. Reopen Cowork, reopen the artifact.</p>
+<p>Each tile re-queries. Calendar shows updated events. GTD shows updated next-actions. Slack shows fresh mentions. Yesterday's-note shows yesterday (relative to current open).</p>
 <h2>Advanced</h2>
-<h3>Recurring meeting context-stitching</h3>
-<p>For recurring meetings (weekly 1:1s, monthly business reviews), Claude can read the LAST N meetings' transcripts and surface continuity:</p>
-<pre><code>
-Read the last 4 weekly 1:1 transcripts with [direct report]. What's been recurring
-across them? What did I commit to at one meeting that should have shown up in the
-next but didn't?
-</code></pre>
-<p>This is meta-analysis across meetings. Useful for catching slow-burn issues — items that get re-raised meeting after meeting because nothing's happening on them.</p>
-<h3>Sensitive meeting handling</h3>
-<p>Some meetings should NOT be processed via Cowork:</p>
+<h3>Custom tiles per workflow</h3>
+<p>Beyond the standard 7, you can add tiles specific to your role:</p>
 <ul>
-<li>Personnel reviews, performance issues.</li>
-<li>M&A discussions.</li>
-<li>Board executive sessions.</li>
-<li>Anything privileged.</li>
+<li><strong>Sales exec:</strong> pipeline updates from CRM.</li>
+<li><strong>Engineering exec:</strong> open PR count + critical bug count.</li>
+<li><strong>CFO:</strong> key metric snapshots from a financial dashboard.</li>
+<li><strong>CMO:</strong> campaign performance from analytics.</li>
 </ul>
-<p>For these:</p>
+<p>Each is a new tile in the artifact. The tile spec is just "pull from <source>, format as <X>."</p>
+<h3>Live artifact refresh tuning</h3>
+<p>Some sources are expensive (a slow CRM query) and some are fast (calendar). For artifacts you open frequently:</p>
 <ul>
-<li>Don't auto-pipe transcripts to Cowork-readable folders.</li>
-<li>Configure your meeting-note tool to skip recording these meetings entirely.</li>
-<li>If transcript exists, store it outside your vault and don't reference it in Cowork.</li>
+<li>Cache slow sources briefly (specify in the tile prompt).</li>
+<li>Don't cache fast sources — let them refresh fully.</li>
 </ul>
-<p>The architecture supports privacy boundaries; it's on you to enforce them.</p>
-<h3>Compliance recording considerations</h3>
-<p>Some industries (financial services, healthcare, certain client work) require recording disclosure or prohibit recording entirely. Your meeting-note tool is a recording tool. Check with your compliance team before workshop runs.</p>
-<p>The Teams bot ban (May–June 2026) is a separate issue — about which TOOLS can join, not whether recording is permitted.</p>
-<h2>Try these</h2>
-<p><strong>Gap analysis.</strong> Claude cross-references meeting transcript vs your project's claude.md, surfaces missed commitments. The realization: Claude caught something you would have missed.</p>
-<p><strong>Follow-up email generation.</strong> Routes to drafts-inbox, ready for your review. End-to-end pipeline working.</p>
+<p>For artifacts you open once a day, no caching needed.</p>
+<h3>Sharing limit</h3>
+<p>You can't share live artifacts with other users yet (April 2026). Static artifacts you can export. The Daily Command Center is private to you.</p>
+<p>This will change in coming releases. When it does, "team morning brief" becomes a possibility.</p>
+<h2>Try this</h2>
+<p>The artifact built Day 1 has now grown into your actual every-morning view. Open it tomorrow morning — it's richer than today, fully personalized, all sources flowing into one pane.</p>
+<p>The realization: this is the workshop's flagship artifact. You'll open it every morning for years.</p>
 <h2>Verification checkpoint</h2>
 <pre><code>
-What was decided in the most recent meeting I have a transcript for? Pull from the transcript.
+Show me my Daily Command Center artifact. Walk through what each tile is pulling.
 </code></pre>
-<p>Expected: Claude reads the most recent transcript file and lists decisions. If it can't find any transcripts, the tool's output location isn't where Claude expects — check vault path or your tool's settings.</p>
+<p>Expected: Claude opens the artifact, identifies the 7 (or more) tiles, and says where each pulls from. If a tile is broken or missing, fix now.</p>
 <h2>Common issues</h2>
 <ul>
-<li><strong>Tool isn't capturing</strong> — system audio permission missing on Mac (System Settings → Privacy → Screen Recording / Microphone). On Windows, similar permission flow.</li>
-<li><strong>Transcript location mismatch</strong> — your tool dumps to a different location than your vault expects. Configure either side to match.</li>
-<li><strong>Claude reads the wrong transcript</strong> — be specific in your prompt about which meeting / which date.</li>
-<li><strong>Sensitive meeting accidentally captured</strong> — delete the transcript and any vault note Claude wrote from it. The architecture depends on your discipline; it doesn't auto-protect.</li>
+<li><strong>Tile shows stale data on reopen</strong> — live refresh isn't happening; ensure the tile prompt says "pull fresh on each open."</li>
+<li><strong>Layout broken on reflow</strong> — too many tiles for the column structure; reduce or move some to a second artifact.</li>
+<li><strong>Bug #28161</strong> (sidebar conflation) shows two artifacts mixed — close + reopen sidebar.</li>
+<li><strong>One source returns nothing</strong> — the connector might not be granted access to that source, or the query is off. Have your assistant fix per tile.</li>
 </ul>
 
   <div class="slides-cta">
@@ -160,8 +137,8 @@ What was decided in the most recent meeting I have a transcript for? Pull from t
   </div>
 
   <nav class="module-nav">
-    <a class="nav-link prev" href="m14.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M14 — Daily Command Center</div></a>
-    <a class="nav-link next" href="m16.html"><div class="nav-link-label">Next →</div><div class="nav-link-title">M16 — Collaboration & Shared Work</div></a>
+    <a class="nav-link prev" href="m14.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M14 — GTD</div></a>
+    <a class="nav-link next" href="m16.html"><div class="nav-link-label">Next →</div><div class="nav-link-title">M16 — Meeting Notes</div></a>
   </nav>
 </main>
 

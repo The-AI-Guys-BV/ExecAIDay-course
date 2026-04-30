@@ -1,8 +1,8 @@
-# M16 — Collaboration & Shared Work
+# M17 — Collaboration & Shared Work
 
 ## Why this module matters
 
-You + Claude is exec superpower. You + your team + Claude is exec leverage. M16 is how you turn personal Cowork into shared Cowork — shared Cowork folders, multi-connector queries that span your team's surfaces.
+You + Claude is exec superpower. You + your team + Claude is exec leverage. M17 is how you turn personal Cowork into shared Cowork — shared Cowork folders, multi-connector queries that span your team's surfaces.
 
 ## What you'll do
 
@@ -63,7 +63,7 @@ Synthesize into a one-page memo: state of play, what's blocking, what's the next
 
 Claude reads all three, synthesizes. Output is one page — couldn't have produced manually faster.
 
-This is "multi-connector magic." You've been using individual connectors all workshop; M16 is where they compose.
+This is "multi-connector magic." You've been using individual connectors all workshop; M17 is where they compose.
 
 ### Collaboration scenarios (live)
 
@@ -126,5 +126,5 @@ Expected: Claude lists Slack channel(s), email thread(s), shared folder content.
 ## References
 
 - M10 — connectors (foundation).
-- M13 — GTD considerations for team.
-- M14 — Daily Command Center (could include shared sources for team-aware morning briefs).
+- M14 — GTD considerations for team.
+- M15 — Daily Command Center (could include shared sources for team-aware morning briefs).

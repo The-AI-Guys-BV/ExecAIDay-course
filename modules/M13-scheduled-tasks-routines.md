@@ -1,4 +1,4 @@
-# M12 — Scheduled Tasks + Routines
+# M13 — Scheduled Tasks + Routines
 
 ## Why this module matters
 
@@ -173,5 +173,5 @@ Expected: Claude lists at least 2 tasks (the Day 1 morning brief + the one you j
 ## References
 
 - `references/scheduled-task-patterns.md` — guardrail patterns + examples.
-- M14 — Daily Command Center (the artifact destination for the morning brief).
+- M15 — Daily Command Center (the artifact destination for the morning brief).
 - `skills/weekly-review/SKILL.md` — the skill that pairs naturally with a Monday morning task.

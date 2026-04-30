@@ -1,12 +1,12 @@
-# M14 — Daily Command Center
+# M15 — Daily Command Center
 
 ## Why this module matters
 
-The morning-brief artifact you built Day 1 grows up. By end of M14 it's a full single-pane-of-glass dashboard pulling GTD + Obsidian + calendar + Slack + email. This is the artifact you'll open every morning for years.
+The morning-brief artifact you built Day 1 grows up. By end of M15 it's a full single-pane-of-glass dashboard pulling GTD + Obsidian + calendar + Slack + email. This is the artifact you'll open every morning for years.
 
 ## What you'll do
 
-- Expand the Day 1 morning-brief artifact with new sources now that GTD (M13) is live.
+- Expand the Day 1 morning-brief artifact with new sources now that GTD (M14) is live.
 - Add tiles: today's calendar, GTD next-actions top 5, Slack mentions overnight, email urgent + drafts waiting, morning brief narrative, stale waiting-fors.
 - Add Obsidian daily note integration (yesterday's reflections feed today's view).
 
@@ -16,7 +16,7 @@ The morning-brief artifact you built Day 1 grows up. By end of M14 it's a full s
 
 You built a simple live artifact in Day 1 closing — three panels: calendar, urgent email, Slack mentions. That artifact has been firing every morning since.
 
-Today we expand it. Now that GTD is live (M13), we can add: top 5 next actions, stale waiting-fors, today's GTD-driven priorities. Now that Obsidian is your knowledge layer (M08), we can add: yesterday's reflection bubbling up to today.
+Today we expand it. Now that GTD is live (M14), we can add: top 5 next actions, stale waiting-fors, today's GTD-driven priorities. Now that Obsidian is your knowledge layer (M02), we can add: yesterday's reflection bubbling up to today.
 
 The result is one artifact you open in the morning, look at briefly, then know what matters for the day. No app-hopping. No "let me check Slack, then email, then my GTD."
 
@@ -33,12 +33,12 @@ It's pulling fresh data. Watch.
 We're adding tiles. Each tile is one source. The full set:
 
 - Today's **calendar** (already there from Day 1).
-- Top 5 **GTD next-actions** (new — needs M13).
+- Top 5 **GTD next-actions** (new — needs M14).
 - **Slack mentions** overnight (already there).
 - **Email** urgent + drafts waiting (already there).
 - **Morning brief narrative** (already there).
-- **Stale waiting-fors** (new — needs M13).
-- **Yesterday's Obsidian daily note** highlights (new — needs M08).
+- **Stale waiting-fors** (new — needs M14).
+- **Yesterday's Obsidian daily note** highlights (new — needs M02).
 
 That's 7 tiles. Layout: 2-column grid; calendar + narrative on the left, GTD + email + Slack + waiting-fors on the right.
 
@@ -138,7 +138,7 @@ Expected: Claude opens the artifact, identifies the 7 (or more) tiles, and says 
 
 ## References
 
-- M04 — artifacts (foundational module).
-- M12 — scheduled tasks (the morning brief task fires the artifact's data refresh too).
+- M08 — artifacts (foundational module).
+- M13 — scheduled tasks (the morning brief task fires the artifact's data refresh too).
 - `references/connector-quirks.md` — bug #28161.
-- M13 — GTD (the data source for the GTD tiles).
+- M14 — GTD (the data source for the GTD tiles).

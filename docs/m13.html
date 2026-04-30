@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>M13 GTD — ExecAIDay</title>
-<meta name="description" content="GTD — module M13 of the ExecAIDay Claude Cowork training workshop.">
+<title>M13 Scheduled Tasks + Routines — ExecAIDay</title>
+<meta name="description" content="Scheduled Tasks + Routines — module M13 of the ExecAIDay Claude Cowork training workshop.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -24,229 +24,148 @@
 <header class="module-hero">
   <div class="container">
     <div class="module-hero-icon" style="background: var(--system-soft); color: var(--system);">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
     </div>
     <div class="eyebrow eyebrow-row">
       <span class="breadcrumb"><a href="index.html">All modules</a> &nbsp;/&nbsp; System</span>
       <a class="hero-slides-link" href="slides/m13.html">▶ View slide deck</a>
     </div>
-    <h1>M13 — GTD</h1>
-    <p class="lede">David Allen's GTD, run from Cowork. Capture, process, query, review. This is the module where your task management gets unified — no more sticky notes, no more inbox-as-todo-list, no more "let me write that down somewhere."</p>
+    <h1>M13 — Scheduled Tasks + Routines</h1>
+    <p class="lede">Claude works while you sleep. The morning brief that lands on your phone before you open your laptop — that's the proof. Scheduled tasks and Routines are how Cowork becomes a team member with their own working hours.</p>
   </div>
 </header>
 
 <main class="content container">
 <h2>What you'll do</h2>
 <ul>
-<li>Pick your GTD store: Obsidian (default) or Notion.</li>
-<li>Set up the chosen store.</li>
-<li>Run <code>/capture</code> — watch the item land in the right place without you switching apps.</li>
-<li>Run <code>/whats-next</code>, <code>/waiting-for</code>, <code>/process-inbox</code>.</li>
-<li>Combine GTD with a scheduled task: a weekly review every Monday morning.</li>
+<li>Review the morning-brief scheduled task set up Day 1 closing (now firing tomorrow morning).</li>
+<li>Add a second scheduled task or Routine relevant to your workflow.</li>
+<li>Learn the difference: Desktop tasks (local, 1-min granularity, awake+open required) vs Routines (cloud, 1-hour min, always-on).</li>
 </ul>
 <h2>Introduction</h2>
-<p>GTD's core insight: your brain is for having ideas, not holding them. Externalize everything into a trusted system. Then your brain is free to think.</p>
-<p>The five steps:</p>
-<ol>
-<li><strong>Capture</strong> — get everything out of your head into one inbox.</li>
-<li><strong>Clarify</strong> — for each thing, decide: is it actionable? What's the next action? Single step or project?</li>
-<li><strong>Organize</strong> — file each thing in the right list (next actions, projects, waiting for, someday, reference).</li>
-<li><strong>Reflect</strong> — review weekly. What's stale? What needs my attention?</li>
-<li><strong>Engage</strong> — choose what to do based on context, energy, time available.</li>
-</ol>
-<p>This module gives you the Cowork-driven version of all five.</p>
-<h2>Pick your GTD store: Obsidian or Notion</h2>
-<p>You pick <strong>one</strong>. Running both is overhead, not value — two places to forget about, two places to drift, two places to keep in sync. Pick the one whose UI you'll actually open and stick with it.</p>
-<p><strong>Option A — Obsidian vault.</strong> Your GTD lives as plain files at <code>&lt;vault&gt;/gtd/</code> — <code>inbox.md</code>, <code>next-actions.md</code>, <code>projects/</code>, etc. Free, local, private. The 19 GTD skills work out of the box. Mobile capture via Dispatch (M12). Default for the workshop.</p>
-<p><strong>Option B — Notion.</strong> Your GTD lives as Notion databases. Familiar UI for many execs, polished mobile app. Costs a Notion subscription. Skills route to your Notion via a <code>claude.md</code> hint pattern that tells Cowork exactly which databases to use (so it doesn't search your whole Notion every time).</p>
-<p>Quick guide to the choice:</p>
-<p>| Question | Pick Obsidian | Pick Notion |</p>
-<p>|---|---|---|</p>
-<p>| Already heavy Notion user? | — | yes |</p>
-<p>| Want zero subscriptions? | yes | — |</p>
-<p>| Want fully local + offline? | yes | — |</p>
-<p>| Want polished mobile UI? | (Dispatch is fine) | yes |</p>
-<p>| Want it Just To Work with the workshop's skills? | yes | — |</p>
-<p><strong>Pick one now.</strong> Tell your assistant. Walk only the matching section below.</p>
+<p>A scheduled task is a Claude prompt that runs on a schedule. You set it once; it fires at the cadence you specify.</p>
+<p>Two flavors:</p>
+<ul>
+<li><strong>Desktop scheduled tasks</strong> — run on your laptop, when Cowork is open. Fine-grained scheduling. Can read local files (your work folder, your vault).</li>
+<li><strong>Routines</strong> — run on Anthropic's cloud infrastructure regardless of laptop state. 1-hour minimum interval. Cannot access local files.</li>
+</ul>
+<p>Which to use depends on the task. Most workshop tasks are Desktop (need local file access). Always-on monitoring or daily summaries that don't need local files → Routines.</p>
 <h2>Beginner / Getting Started</h2>
-<h3>Option A — Obsidian vault GTD</h3>
-<p>#### Tour the GTD vault layout</p>
-<p>Open Obsidian. Navigate to <code>&lt;vault&gt;/gtd/</code>. You'll see:</p>
+<h3>Review the morning brief</h3>
+<p>If your workshop is on Day 2, you should have received a morning brief this morning via:</p>
 <ul>
-<li><code>inbox.md</code> — capture surface. Everything new goes here first as a bullet.</li>
-<li><code>next-actions.md</code> — single-step items. Bullets with <code>#context/...</code>, <code>#energy/...</code>, <code>#time/...</code> tags.</li>
-<li><code>projects/</code> — folder, one file per project. Outcome at top, stakeholders, deadline, current next-action linked.</li>
-<li><code>waiting-for.md</code> — delegated items, bullets with <code>@person:...</code>.</li>
-<li><code>someday.md</code> — might do later, not committed.</li>
-<li><code>tickler.md</code> — defer-to-future items, bullets with <code>surface:YYYY-MM-DD</code>.</li>
-<li><code>areas.md</code> — ongoing responsibility domains.</li>
-<li><code>goals.md</code> — 1–2 yr outcomes.</li>
-<li><code>vision.md</code> — 3–5 yr direction.</li>
+<li>A Slack post on your phone.</li>
+<li>An <code>.md</code> file in your Cowork folder.</li>
+<li>A live artifact dashboard inside Cowork.</li>
 </ul>
-<p>References live in <code>&lt;vault&gt;/References/</code> as you already use them. The 19 GTD skills read and write these files.</p>
-<p>#### Tag conventions (vault GTD)</p>
-<p>Inline tags only. No YAML frontmatter. Example bullet:</p>
-<pre><code>
-- [ ] Follow up with legal team on trademark filing #context/calls #energy/low #time/quick @project:trademark-filing created:2026-04-29
-</code></pre>
-<p>Tag list:</p>
+<p>The Day 1 closing set up this scheduled task. Open the artifact now — you'll see today's calendar, urgent emails, draft replies pending, Slack mentions overnight.</p>
+<p>Walk through the task itself: Settings → Scheduled tasks. The morning-brief task is there with its prompt, schedule, and last-run status.</p>
+<p>Look at the prompt. It's a multi-step instruction: read calendar, read email triage, read Slack mentions, format as artifact + Slack post + saved file. Notice the guardrail line at the top: "If running > late, summarize what was missed instead of executing the original brief."</p>
+<h3>How scheduled task mechanics work</h3>
 <ul>
-<li>Context: <code>#context/calls</code>, <code>#context/desk</code>, <code>#context/errands</code>, <code>#context/anywhere</code>.</li>
-<li>Energy: <code>#energy/high</code>, <code>#energy/medium</code>, <code>#energy/low</code>.</li>
-<li>Time: <code>#time/quick</code>, <code>#time/medium</code>, <code>#time/long</code>.</li>
-<li>People: <code>@person:john</code>.</li>
-<li>Projects: <code>@project:q3-board-deck</code>.</li>
-<li>Dates: <code>created:</code>, <code>due:</code>, <code>surface:</code> followed by <code>YYYY-MM-DD</code>.</li>
-<li>Status: <code>#status/active</code> (default), <code>#status/done</code>, <code>#status/cancelled</code>.</li>
+<li>Desktop task at 7am with laptop closed: SKIPPED.</li>
+<li>Laptop wakes at 11am: Desktop checks last 7 days for missed runs.</li>
+<li>One catch-up runs for the most recently missed time. Older misses discarded.</li>
+<li>Notification when catch-up starts.</li>
 </ul>
-<p>The skills filter and sort by these tags. You don't have to memorize them — <code>/process-inbox</code> adds them when you clarify items.</p>
-<p>#### Try <code>/capture</code></p>
-<p>In Cowork:</p>
-<pre><code>
-/capture remind me to follow up with the legal team on the trademark filing
-</code></pre>
-<p>A new bullet appears in <code>&lt;vault&gt;/gtd/inbox.md</code>. You never opened Obsidian. That's the felt moment.</p>
-<h3>Option B — Notion GTD</h3>
-<p>#### Step 1 — Connect Notion to Cowork</p>
-<ol>
-<li>In Cowork, open the <strong>Customize</strong> sidebar.</li>
-<li>Go to <strong>Connectors</strong>, click the <strong>+</strong> icon, pick <strong>Notion</strong> from the list.</li>
-<li>A browser window opens for OAuth. Sign in to your Notion account, click <strong>Allow access</strong>.</li>
-<li>Cowork now has the Notion connector active. Verify in Customize → Connectors — Notion shows as Connected.</li>
-</ol>
-<p>#### Step 2 — Set up the GTD databases in Notion</p>
-<p>Either duplicate the workshop's GTD template (your assistant has the link) or build your own. Standard databases:</p>
-<ul>
-<li><strong>Inbox</strong> — capture surface. One field: Item.</li>
-<li><strong>Next Actions</strong> — Item, Context (select), Energy (select), Time (select), Project (relation to Projects), Status, Created.</li>
-<li><strong>Projects</strong> — Outcome, Status, Stakeholders, Deadline, Next-Action (relation to Next Actions).</li>
-<li><strong>Waiting For</strong> — Item, Person, Created, Due.</li>
-<li><strong>Someday/Maybe</strong> — Item, Created.</li>
-<li><strong>Tickler</strong> — Item, Surface date.</li>
-<li><strong>Areas / Goals / Vision</strong> (optional, higher horizons).</li>
-</ul>
-<p>#### Step 3 — Share each database with Claude</p>
-<p>Notion's permission model is <strong>per-page</strong> — sharing your top-level workspace doesn't give Cowork access to nested databases. For each database above:</p>
-<ol>
-<li>Open the database in Notion.</li>
-<li>Click the <strong>···</strong> menu (top-right) → <strong>Connections</strong>.</li>
-<li>Add the <strong>Claude</strong> connection (or whatever the integration is named in your Notion).</li>
-<li>Repeat for every database.</li>
-</ol>
-<p>Without this step, Cowork can authenticate but can't read or write any pages.</p>
-<p>#### Step 4 — Tell Cowork the structure (the <code>claude.md</code> hint pattern)</p>
-<p>This is the key efficiency move. Without it, every GTD operation makes Cowork search your entire Notion. With it, Cowork targets the right database directly.</p>
-<p>Open <code>&lt;vault&gt;/claude.md</code> (the vault root file M06 set up). Add a Notion-GTD pointer block:</p>
-<pre><code>
-GTD lives in Notion. Use the Notion connector for all GTD operations.
-
-Database links:
-- Inbox: https://www.notion.so/&lt;your-workspace&gt;/&lt;inbox-page-id&gt;
-- Next Actions: https://www.notion.so/&lt;your-workspace&gt;/&lt;next-actions-page-id&gt;
-- Projects: https://www.notion.so/&lt;your-workspace&gt;/&lt;projects-page-id&gt;
-- Waiting For: https://www.notion.so/&lt;your-workspace&gt;/&lt;waiting-for-page-id&gt;
-- Someday: https://www.notion.so/&lt;your-workspace&gt;/&lt;someday-page-id&gt;
-- Tickler: https://www.notion.so/&lt;your-workspace&gt;/&lt;tickler-page-id&gt;
-
-Routing rules:
-- /capture: append a row to Inbox. Item field = the captured text. Don't search; go straight to the Inbox database.
-- /whats-next: query Next Actions where Status = Active, sorted by priority and Created. Don't search; go straight to Next Actions.
-- /process-inbox: walk Inbox rows, ask the GTD clarifying questions per item, then move the row to the right destination database.
-- /waiting-for: query Waiting For grouped by Person.
-- /delegate: append a row to Waiting For. Mark the original Next Action as Cancelled.
-- /tickler: append a row to Tickler with the Surface date set.
-
-Don't search Notion globally for any of these. Use the page IDs above.
-</code></pre>
-<p>Replace each <code>https://www.notion.so/...</code> with the actual URL of your Notion database (right-click the database tab → Copy link).</p>
-<p>Why this matters: Cowork reads <code>claude.md</code> at the start of every conversation. With the routing rules in place, when you say <code>/capture</code>, Cowork knows to write a row to the Inbox database directly — no scanning, no asking which database, no latency.</p>
-<p>#### Try <code>/capture</code></p>
-<p>In Cowork:</p>
-<pre><code>
-/capture remind me to follow up with the legal team on the trademark filing
-</code></pre>
-<p>A new row appears in your Notion Inbox database. You never opened Notion. That's the felt moment.</p>
+<p>So: a 9am task whose laptop slept all day may run at 11pm on wake. The guardrail prompt pattern is what prevents this from being a problem.</p>
 <h2>Intermediate</h2>
-<h3><code>/process-inbox</code></h3>
-<p>Walks each Inbox item with you and asks the GTD questions:</p>
-<ol>
-<li>Is it actionable? (yes / no)</li>
-<li>If yes: what's the next concrete action?</li>
-<li>Single step or part of a project?</li>
-<li>Quick to do? (yes → do now)</li>
-<li>Who does it? (me / delegate)</li>
-</ol>
-<p>Run <code>/process-inbox</code>. The skill adds the right tags / fields and moves the item from Inbox to its destination — <code>next-actions.md</code> (vault) or Next Actions database (Notion), and so on.</p>
-<h3><code>/whats-next</code> and <code>/waiting-for</code></h3>
-<pre><code>
-/whats-next
-</code></pre>
-<p>Lists your next actions, grouped by context (calls / errands / desk / etc.). Read-only — you decide what to do. <code>/whats-next quick</code> shows only short items.</p>
-<pre><code>
-/waiting-for
-</code></pre>
-<p>Lists items grouped by person. <code>/waiting-for stale</code> surfaces items waited >7 days; for each, offers follow-up (drafts via <code>/drafts-inbox</code>), push deadline, cancel, or wait longer.</p>
-<h3><code>/delegate</code></h3>
-<pre><code>
-/delegate Send me the Q3 numbers to John
-</code></pre>
-<p>Drafts the delegation email, appends a Waiting For entry tagged with the person, and marks the original Next Action as cancelled. You confirm before the email sends.</p>
-<h3>Combining scheduled task + GTD</h3>
-<p>A Monday morning weekly review:</p>
-<p>In Cowork → Settings → Scheduled tasks → New:</p>
+<h3>Add a second scheduled task</h3>
+<p>Pick a real recurring task. Examples:</p>
 <ul>
-<li><strong>Name:</strong> Weekly review reminder.</li>
-<li><strong>Schedule:</strong> Mondays at 8:30am.</li>
-<li><strong>Prompt:</strong></li>
+<li>End-of-day reflection prompt that posts to your Daily Note.</li>
+<li>Weekly status email draft, generated Friday morning, lands in your drafts inbox.</li>
+<li>Monthly report compiled from connector data on the 1st of each month.</li>
+<li>Project status pings (one project at a time, weekly cadence).</li>
 </ul>
+<p>In Cowork → Settings → Scheduled tasks → New task.</p>
+<p>Fill in:</p>
+<ul>
+<li><strong>Name</strong> — descriptive.</li>
+<li><strong>Schedule</strong> — cadence (e.g., "Every Monday at 8am").</li>
+<li><strong>Prompt</strong> — the task instruction. Include guardrails.</li>
+<li><strong>Output destination</strong> — file in vault, Slack post, email draft, artifact.</li>
+</ul>
+<p>Example prompt for a weekly status email:</p>
 <pre><code>
-Tell me to run /weekly-review now. Surface as a Slack DM to me with the link to today's review.
+You're drafting my weekly status email to my board chair. Pull from:
+- GTD next-actions from &lt;vault&gt;/gtd/next-actions.md (top 5 active).
+- Calendar for the past week (key meetings).
+- Drafts inbox (anything I sent recently to investors).
+
+Write a 200-word update in my voice (per chief-of-staff brief). Save as a draft to
+Outlook Drafts.
+
+Guardrail: if it's not Friday morning anymore (running late catch-up Monday or later),
+SKIP — return only "Skipped weekly status — too late to be useful."
 </code></pre>
-<p>Now every Monday you get the nudge. The skill does the heavy lifting.</p>
+<p>Save. The task is set.</p>
+<h3>Routines — cloud-based always-on</h3>
+<p>Routines run regardless of laptop state. 1-hour minimum interval.</p>
+<p>Use Routines for:</p>
+<ul>
+<li>A morning brief that MUST land even when laptop is off all night.</li>
+<li>Hourly Slack channel monitoring (specific channel scoped).</li>
+<li>Daily report from cloud connectors only.</li>
+</ul>
+<p>Don't use Routines for:</p>
+<ul>
+<li>Anything that needs local file access (your work folder, vault).</li>
+<li>Anything that needs to read project <code>claude.md</code>s.</li>
+</ul>
+<p>Routines are configured separately in Cowork → Settings → Routines.</p>
 <h3>Mobile capture via Dispatch</h3>
-<p>Capture from your phone. The Claude mobile app + Dispatch routes voice/text requests to your desktop Cowork, which runs <code>/capture</code>. Same for <code>/whats-next</code>, <code>/waiting-for</code>, <code>/today</code>. See M12.</p>
-<p>Works for both Obsidian and Notion GTD — Cowork uses your <code>claude.md</code> to know which to target.</p>
-<h2>Advanced</h2>
-<h3>Higher horizons</h3>
-<p>GTD has horizons above next actions. Most workflows live at next-actions and projects. The higher horizons matter quarterly+.</p>
+<p>Dispatch (Anthropic, March 2026) lets you talk to your Claude mobile app, which routes the request to your desktop Cowork — which then runs the skill against your local files.</p>
+<p>Combined with vault GTD: phone → voice → Dispatch → desktop runs <code>/capture</code> → bullet appended to <code>&lt;vault&gt;/gtd/inbox.md</code>. Confirmation back to your phone in seconds. Same for <code>/whats-next</code>, <code>/waiting-for</code>, <code>/today</code>.</p>
+<p>Caveats:</p>
 <ul>
-<li><code>/areas</code> — ongoing responsibility domains.</li>
-<li><code>/goals</code> — 1–2 yr outcomes.</li>
-<li><code>/vision</code> — 3–5 yr direction.</li>
-<li><code>/horizons-review</code> — full walkthrough.</li>
+<li>Desktop must be on (or wake-on-Dispatch enabled) for the request to land.</li>
+<li>Max plan required (Pro is rolling out).</li>
+<li>A few seconds of latency is normal.</li>
 </ul>
-<p>Don't try to set all three on Day 1. Let them accumulate as you reflect.</p>
-<h3><code>/tickler</code> — defer to a future date</h3>
+<p>This closes the mobile-capture gap. Voice-driven, hands-free, GTD from your phone.</p>
+<h2>Advanced</h2>
+<h3>Guardrail prompt patterns</h3>
+<p>Every scheduled task should have a guardrail. The pattern:</p>
 <pre><code>
-/tickler review the Q4 hiring plan in 3 weeks
+This task is scheduled to run at &lt;time&gt;. If you're running this catch-up later than
+&lt;time + N hours&gt;, do one of:
+- Skip the task entirely (return: "Skipped — too late to be useful").
+- Summarize what was missed instead of executing the original task.
+- Run the original task with a note flagging the lateness.
+
+Choose based on task type:
+- Time-sensitive (morning brief, daily plan): SKIP if late.
+- Summary-able (weekly report, project status): SUMMARIZE if late.
+- Catch-up-ready (process-inbox, review-stale): RUN with lateness note.
 </code></pre>
-<p>Adds a tickler item with a future surface date. <code>/tickler review</code> shows what's surfacing today.</p>
-<h3><code>/checkout</code> — end of day</h3>
+<h3>Combining scheduled tasks with skills</h3>
+<p>A scheduled task can invoke a skill. Example:</p>
 <pre><code>
-/checkout
+Run /weekly-review and post the result to &lt;Slack channel&gt;. If today is not Monday or
+Tuesday, skip — the weekly review only makes sense early in the week.
 </code></pre>
-<p>Walks: what got done today, what's still open, what's tomorrow's #1. Logs to today's Daily Note. End-of-day discipline. The point is the daily review, not the time savings.</p>
-<h3>Why one store, not two</h3>
-<p>Two GTD stores = two places to forget about, two places to update, two places to drift. The whole point of GTD is a single trusted system. If you're already heavy on Notion, pick Notion. If you want zero subscriptions and full local control, pick Obsidian. Don't try to mirror — that's its own maintenance burden.</p>
-<h3>Team GTD considerations</h3>
-<p>Workshop's locked decision: team GTD only works if EVERY team member does their personal GTD. One laggard contaminates the system. Don't push team GTD on people who haven't done personal first.</p>
-<p>External collaborators are out — keep team GTD inside the org.</p>
-<p>If your team is interested, run them through this workshop too. Otherwise, your personal GTD works fine standalone.</p>
+<p>The skill does the work; the task automates the trigger.</p>
+<h3>Things to avoid</h3>
+<ul>
+<li>Don't schedule tasks at very tight intervals during work hours unless you really need that frequency.</li>
+<li>Don't post to Slack from a scheduled task without a "skip if stale" check — your team doesn't want Friday's brief on Tuesday.</li>
+<li>Don't use absolute language ("today's events") without resolving "today" — use ISO dates in the prompt.</li>
+<li>Don't set up 20 scheduled tasks at once. Pick 2-3 high-leverage ones; iterate.</li>
+</ul>
 <h2>Try this</h2>
-<p><code>/capture remind me to follow up with the legal team on the trademark filing</code> in Cowork. Open your store (vault Inbox or Notion Inbox) — the item is there with <code>created:&lt;today&gt;</code>. You never opened the store yourself. Infrastructure-as-interface proof.</p>
-<p>The pattern repeats: capture from Cowork, process from Cowork, query from Cowork, review from Cowork.</p>
+<p>You added a second scheduled task or Routine relevant to your workflow. Confirmed it's set up correctly. Anticipation: it'll fire on its schedule and the next morning (or week) you'll have a new automated artifact in your stack.</p>
 <h2>Verification checkpoint</h2>
 <pre><code>
-What's in my GTD inbox right now?
+List my active scheduled tasks. For each, what's the schedule and what's the output destination?
 </code></pre>
-<p>Expected: Claude lists Inbox items including the one you just captured. If it's empty or wrong, the routing in your <code>claude.md</code> may be off — your assistant checks.</p>
+<p>Expected: Claude lists at least 2 tasks (the Day 1 morning brief + the one you just added). If anything is off, edit in Settings.</p>
 <h2>Common issues</h2>
 <ul>
-<li><strong><code>/capture</code> writes to wrong place</strong> — vault path or Notion <code>claude.md</code> routing is off. Your assistant fixes.</li>
-<li><strong>Notion: Cowork can authenticate but can't read pages</strong> — you didn't share each database with the Claude connection. Open each Notion database → ··· → Connections → add Claude. Repeat for every database.</li>
-<li><strong>Notion: every GTD command takes long</strong> — <code>claude.md</code> doesn't have the database URLs. Add them per the Step 4 pattern above.</li>
-<li><strong>Vault: <code>/process-inbox</code> items stay in inbox after processing</strong> — Cowork doesn't have write permission to the vault. Re-mount or check filesystem permissions.</li>
-<li><strong>Higher-horizon files don't exist</strong> — run <code>/areas</code>, <code>/goals</code>, or <code>/vision</code> once with no args; the skill creates the file or database row with a stub.</li>
+<li><strong>Task didn't fire</strong> — laptop was closed at the scheduled time, or Cowork wasn't open. Check the next-run time; expect catch-up on next wake.</li>
+<li><strong>Catch-up fired but produced stale output</strong> — guardrail wasn't strong enough. Edit the prompt to skip if stale.</li>
+<li><strong>Routine timing is off</strong> — Routines run on Anthropic's clock, not your local time. Specify timezone in the prompt.</li>
+<li><strong>Output went to wrong destination</strong> — task config issue; check the destination field.</li>
 </ul>
 
   <div class="slides-cta">
@@ -258,8 +177,8 @@ What's in my GTD inbox right now?
   </div>
 
   <nav class="module-nav">
-    <a class="nav-link prev" href="m12.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M12 — Scheduled Tasks + Routines</div></a>
-    <a class="nav-link next" href="m14.html"><div class="nav-link-label">Next →</div><div class="nav-link-title">M14 — Daily Command Center</div></a>
+    <a class="nav-link prev" href="m12.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M12 — Work folder + /new-project</div></a>
+    <a class="nav-link next" href="m14.html"><div class="nav-link-label">Next →</div><div class="nav-link-title">M14 — GTD</div></a>
   </nav>
 </main>
 

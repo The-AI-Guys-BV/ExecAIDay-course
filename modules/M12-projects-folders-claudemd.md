@@ -1,4 +1,4 @@
-# M09 — Projects, Folders, and `claude.md`
+# M12 — Work folder, projects, claude.md
 
 ## Why this module matters
 
@@ -23,7 +23,7 @@ Cowork has built-in concepts; we have folder conventions; the two interlock. Thi
 - **Inside the vault, your "stream folders"** = recurring content (Daily Notes, References, Inbox).
 - **Every folder has a `claude.md` and a `memory.md`** = per-folder context.
 
-That's the whole architecture. M09 makes it concrete.
+That's the whole architecture. M12 makes it concrete.
 
 ## Beginner / Getting Started
 
@@ -63,7 +63,7 @@ These collide on the word "project." Both must be used together: a Cowork Projec
 
 ### Why every folder has `claude.md` + `memory.md`
 
-So Cowork has per-folder context. The vault root `claude.md` is a one-line pointer to your chief-of-staff brief in your vault (M06 sets this up). The work-folder root `claude.md` is your work-context defaults. Each project folder's `claude.md` adds project-specific overrides.
+So Cowork has per-folder context. The vault root `claude.md` is a one-line pointer to your chief-of-staff brief in your vault (M04 sets this up). The work-folder root `claude.md` is your work-context defaults. Each project folder's `claude.md` adds project-specific overrides.
 
 Closer-to-the-file wins. So when Claude works on a file at `[work-folder]/q3-deck/Working Files/draft.md`, it reads in this order, with later files overriding earlier ones:
 
@@ -162,5 +162,5 @@ Expected: Claude reads the project's `claude.md` and reports the synthesized bri
 - `templates/work-folder-starter/` — the work folder starter content.
 - `templates/project-folder-template/` — the project folder template.
 - `skills/new-project/SKILL.md` — the skill spec.
-- M06 — Chief of Staff `claude.md` (the vault root brief).
-- M13 — GTD in your vault (the GTD side of `/new-project`).
+- M04 — Chief of Staff `claude.md` (the vault root brief).
+- M14 — GTD in your vault (the GTD side of `/new-project`).

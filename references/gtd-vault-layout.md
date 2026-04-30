@@ -106,6 +106,6 @@ All 19 GTD skills operate on these files. See `skills/<name>/SKILL.md` for each 
 
 ## See also
 
-- M13 — GTD in your vault (the module that teaches this).
-- M14 — Daily Command Center (the live artifact that reads these files).
-- M12 — Scheduled tasks (and Dispatch for mobile capture).
+- M14 — GTD in your vault (the module that teaches this).
+- M15 — Daily Command Center (the live artifact that reads these files).
+- M13 — Scheduled tasks (and Dispatch for mobile capture).

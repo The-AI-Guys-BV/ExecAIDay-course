@@ -1,4 +1,4 @@
-# M02 — Prompt Engineering + Metaprompting
+# M06 — Prompt Engineering + Metaprompting
 
 ## Why this module matters
 

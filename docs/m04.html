@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>M04 Artifacts — ExecAIDay</title>
-<meta name="description" content="Artifacts — module M04 of the ExecAIDay Claude Cowork training workshop.">
+<title>M04 Write your About Me brief — ExecAIDay</title>
+<meta name="description" content="Write your About Me brief — module M04 of the ExecAIDay Claude Cowork training workshop.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -23,95 +23,147 @@
 
 <header class="module-hero">
   <div class="container">
-    <div class="module-hero-icon" style="background: var(--foundation-soft); color: var(--foundation);">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+    <div class="module-hero-icon" style="background: var(--personalize-soft); color: var(--personalize);">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
     </div>
     <div class="eyebrow eyebrow-row">
-      <span class="breadcrumb"><a href="index.html">All modules</a> &nbsp;/&nbsp; Foundation</span>
+      <span class="breadcrumb"><a href="index.html">All modules</a> &nbsp;/&nbsp; Personalize</span>
       <a class="hero-slides-link" href="slides/m04.html">▶ View slide deck</a>
     </div>
-    <h1>M04 — Artifacts</h1>
-    <p class="lede">Live artifacts (April 2026 headline) are how Claude becomes a persistent surface in your work, not a one-shot answer. A dashboard you build today reopens tomorrow with fresh data. That's the difference between asking Claude a question and having Claude maintain a view.</p>
+    <h1>M04 — Write your About Me brief</h1>
+    <p class="lede">Your chief-of-staff brief is the highest-leverage file in the workshop. Once it exists, every conversation in your Cowork Project inherits your voice, your preferences, your context. Skip this module and Claude works from defaults; do it well and Claude works for YOU specifically.</p>
   </div>
 </header>
 
 <main class="content container">
 <h2>What you'll do</h2>
 <ul>
-<li>See the artifact kinds you'll actually use: documents, dashboards, diagrams.</li>
-<li>Build a simple live artifact, close Cowork, reopen — watch it pull fresh data.</li>
-<li>Find the sidebar, restore a previous version.</li>
+<li>Run the chief-of-staff interview. Claude writes the brief into <code>About Me.md</code> in your vault.</li>
+<li>Configure <code>&lt;vault&gt;/claude.md</code> as a one-line pointer to <code>About Me.md</code>.</li>
+<li>Watch Claude read <code>About Me.md</code> and surface 3 non-obvious things — recognition shock.</li>
+<li>Compare an email draft pre-brief (generic) vs post-brief (matches your voice).</li>
 </ul>
 <h2>Introduction</h2>
-<p>An artifact is a generated output Claude renders inline alongside its text response. For executives, the kinds that matter are documents you can edit, dashboards you can re-open, and diagrams that explain a flow.</p>
-<p>The 2026 headline: <strong>live artifacts</strong> auto-refresh on reopen. So the dashboard isn't a snapshot — it's a re-runnable view that pulls fresh data each time you open it. Daily morning brief, weekly status, project tracker — these become living surfaces, not stale screenshots.</p>
-<p>This module: see the kinds, build one live artifact, see version history. The big payoff comes in M14 when we build the Daily Command Center artifact.</p>
+<p>You have a chief of staff right now. You probably don't think of them that way. They're whoever knows your priorities, your quirks, your stakeholders, the things you do and don't say in writing. They've earned that knowledge over years.</p>
+<p>Claude doesn't have any of that yet. This module gives Claude a starter version — captured in writing, in your vault, accessible to every conversation.</p>
+<p><strong>Where the brief lives.</strong> As a normal Obsidian note: <code>&lt;vault&gt;/About Me.md</code>. You can open it in Obsidian, edit it like any other note, link to it from daily notes. It's content, not config.</p>
+<p><strong>How Cowork finds it.</strong> A one-line pointer in <code>&lt;vault&gt;/claude.md</code> tells Cowork where to find it. Cowork auto-reads this file, follows the pointer, and picks up your brief. You don't touch this system file again — your editing happens in <code>About Me.md</code>.</p>
+<p>Roughly 30 lines, 4 sections. Written through an interactive interview.</p>
+<p>Once it exists: every email Claude drafts sounds more like you. Every analysis takes your priorities into account. Every artifact reflects your taste.</p>
 <h2>Beginner / Getting Started</h2>
-<p>The artifact kinds you'll actually ask for:</p>
-<ul>
-<li><strong>Documents</strong> — long-form writing (briefs, memos, reports).</li>
-<li><strong>Interactive pages</strong> — a self-contained dashboard or mini-tool you can click around in.</li>
-<li><strong>Diagrams</strong> — flowcharts, org charts, process diagrams (Mermaid does these in plain English: "draw me a flow from A to B to C").</li>
-</ul>
-<p>You don't write any code. You describe what you want; Claude builds it.</p>
-<p>Try one now. In Cowork:</p>
+<h3>The interview</h3>
+<p>In Cowork, paste this prompt:</p>
 <pre><code>
-Make me an interactive page showing the days of the week in a 2x4 grid, each in a
-different color, with today highlighted.
+Walk me through writing my chief-of-staff brief. Use the new-vault-claudemd pattern.
+Save the result to &lt;vault&gt;/About Me.md (create it if it doesn't exist).
+Then make sure &lt;vault&gt;/claude.md contains the one-line pointer:
+"Chief-of-staff brief: read About Me.md."
 </code></pre>
-<p>Cowork generates the artifact, opens the artifact sidebar on the right, renders it inline.</p>
+<p>Claude conducts an interview. Roughly 4 sections, several questions per section:</p>
+<p><strong>Section 1 — Who I am.</strong></p>
+<ul>
+<li>Role + company stage.</li>
+<li>What you spend most of your time on.</li>
+<li>Your most important stakeholders (board, investors, key customers, direct reports).</li>
+</ul>
+<p><strong>Section 2 — How I communicate.</strong></p>
+<ul>
+<li>Tone defaults (warm / neutral / direct / blunt).</li>
+<li>Length preferences (brief / measured / detailed).</li>
+<li>Words/phrases you avoid (some execs hate "leverage," "synergy," "circle back," etc.).</li>
+<li>Signature style.</li>
+</ul>
+<p><strong>Section 3 — What I value, what I avoid.</strong></p>
+<ul>
+<li>Working style preferences.</li>
+<li>Things that frustrate you (over-meetings, over-emailing, generic AI tells).</li>
+<li>What you DON'T want Claude doing on your behalf.</li>
+</ul>
+<p><strong>Section 4 — Context.</strong></p>
+<ul>
+<li>Industry / domain quirks.</li>
+<li>Confidentiality posture.</li>
+<li>Specific connectors or tools you rely on.</li>
+</ul>
+<p>Answer naturally. Don't over-engineer. The brief is meant to be ~30 lines — short and high-signal.</p>
+<h3>What gets written</h3>
+<p>Claude synthesizes your answers into <code>&lt;vault&gt;/About Me.md</code> and writes the one-line pointer into <code>&lt;vault&gt;/claude.md</code>. Watch Obsidian render <code>About Me.md</code> live as Claude writes it. Edit any line you don't like.</p>
 <h2>Intermediate</h2>
-<h3>Live artifacts — the headline</h3>
-<p>A regular artifact is a snapshot. A LIVE artifact pulls fresh data each time it opens. Same artifact ID, fresh content.</p>
-<p>Build one. In Cowork:</p>
-<pre><code>
-Build me a live artifact that shows the items currently in my GTD Inbox at &lt;vault&gt;/gtd/inbox.md.
-Read fresh from the file each time the artifact opens.
-</code></pre>
-<p>Cowork builds the artifact, reads <vault>/gtd/inbox.md, and renders the inbox items. Close the artifact panel. Close Cowork entirely. Reopen tomorrow. Reopen this artifact. It pulls fresh data — your CURRENT inbox, not yesterday's snapshot.</p>
-<p>That's live. The full Daily Command Center artifact in M14 — pulling calendar, email, Slack, and your vault GTD all together — only works after the rest of your connectors come online in M10.</p>
-<h3>Sidebar access</h3>
-<p>Right side of Cowork. Opens when an artifact is generated. Shows:</p>
+<h3>Add the longer-form context</h3>
+<p><code>About Me.md</code> is the short brief. The vault also has a folder <code>about-me/</code> with two companion files for content that's too long for the brief:</p>
 <ul>
-<li>The current artifact in the main pane.</li>
-<li>A list of recent artifacts in this Cowork Project (left of main pane).</li>
-<li>Version history for the current artifact (top right).</li>
+<li><code>about-me/long-form.md</code> — extended personal context (role history, work patterns, things you care about deeply).</li>
+<li><code>about-me/writing-rules.md</code> — specific tone and word rules (dos and don'ts).</li>
 </ul>
-<p>Click an old version to view it. Click "Restore" to bring it back as the current version.</p>
-<h3>Bug #28161 — sidebar conflation</h3>
-<p>Known bug: sometimes the sidebar shows two artifacts' content interleaved. Workaround: close the sidebar entirely, reopen the specific artifact you want. Anthropic is tracking; expect a fix in a future Cowork release.</p>
+<p>Populate them:</p>
+<pre><code>
+Based on what I told you for the chief-of-staff brief, expand
+about-me/long-form.md with the longer-form context. Include role history,
+current stakeholders, work patterns, things-I-care-about-deeply.
+</code></pre>
+<p>Claude expands. You edit. Same for <code>writing-rules.md</code>:</p>
+<pre><code>
+Pull out specific writing rules from our interview into about-me/writing-rules.md.
+Format as a list of dos and don'ts.
+</code></pre>
+<h3>Test the inheritance</h3>
+<p>In a new Cowork chat:</p>
+<pre><code>
+Draft a 3-paragraph email to my board chair updating them on the Q3 trajectory.
+Use what you know about me.
+</code></pre>
+<p>Watch the output. It should:</p>
+<ul>
+<li>Use your tone (warm, direct, etc., per <code>About Me.md</code>).</li>
+<li>Avoid words you flagged.</li>
+<li>Match your length preference.</li>
+<li>Reference context from <code>about-me/long-form.md</code>.</li>
+</ul>
+<p>If it doesn't, the brief isn't doing its job. Edit and retest.</p>
 <h2>Advanced</h2>
-<h3>Sharing limit (current as of April 2026)</h3>
-<p>You can't share live artifacts with other users yet — they're own-use only. So your live artifacts are private to you. (Static artifacts can be exported and shared as files, but the live-refresh capability is account-bound.)</p>
-<h3>Version history + restore</h3>
-<p>Every edit to an artifact creates a new version. The artifact sidebar shows the version list with timestamps. You can:</p>
-<ul>
-<li>Click any version to view it (read-only).</li>
-<li>Click "Restore this version" to bring it back as current.</li>
-</ul>
-<p>Useful when a Claude edit makes the artifact worse and you want to roll back.</p>
-<h3>Building artifacts as part of workflows</h3>
-<p>Artifacts compose with skills. A skill can produce an artifact as its output. Examples:</p>
-<ul>
-<li><code>/today</code> could output a brief artifact instead of text.</li>
-<li>A skill you build later (M07) could maintain a project tracker artifact.</li>
-</ul>
-<p>The pattern: skill = trigger; artifact = persistent visible surface.</p>
-<h2>Try this</h2>
-<p>Build the GTD-Inbox live artifact above. With the artifact open, in another Cowork tab type <code>/capture remind me to test the live artifact</code>. Watch your new item appear in the artifact when it refreshes. That's "live" — not a screenshot, a surface that updates.</p>
-<p>In M14 you'll build the full version that pulls calendar, email, Slack, and your vault GTD together. For now, one live tile is enough to feel the difference.</p>
-<h2>Verification checkpoint</h2>
-<p>After building your first live artifact, type:</p>
+<h3>Maintaining the brief over time</h3>
+<p>The chief-of-staff brief drifts. Things change. Your priorities shift. Stakeholders come and go. Quarterly:</p>
 <pre><code>
-Show me the artifact I just built. What data source does it query?
+Read my chief-of-staff brief. What feels stale? What's missing?
 </code></pre>
-<p>Expected: Claude lists the artifact and identifies that it reads <vault>/gtd/inbox.md. If Claude says "I don't see an artifact," the artifact didn't save — try building again.</p>
+<p>Claude surfaces likely-outdated lines. You decide what to update.</p>
+<p>Don't rewrite from scratch every quarter. The brief is durable.</p>
+<h3>When to update vs leave alone</h3>
+<ul>
+<li>New role or major scope change → rewrite the role section.</li>
+<li>Tone preferences shifted (you hate a word now you didn't hate before) → update writing rules.</li>
+<li>New stakeholders → add them.</li>
+<li>Style of communication changes (you started running async-default standups) → update.</li>
+</ul>
+<p>Most quarters you change 2-3 lines.</p>
+<h3>Project-specific overrides</h3>
+<p>Project <code>claude.md</code> (the one <code>/new-project</code> writes per project folder) can override the chief-of-staff brief for project-specific tone. Example:</p>
+<ul>
+<li><code>About Me.md</code> says "warm, direct, default to brevity."</li>
+<li>Project <code>claude.md</code> for <code>q3-board-deck/</code> says "Format / tone for this project: more formal than my default; explicitly cite all sources because the board chair has flagged AI-content concerns."</li>
+<li>For files in <code>q3-board-deck/</code>, Claude uses the more formal tone. Everywhere else, default warm-direct-brief.</li>
+</ul>
+<p>This is the layered architecture in action. Don't pre-write project overrides; let <code>/new-project</code> interview each one.</p>
+<h2>Try these</h2>
+<p><strong>a. Recognition shock.</strong> Type:</p>
+<pre><code>
+Read my About Me and the about-me/ folder. Surface 3 things you noticed about me that aren't obvious from what I just told you — pattern matches, implications, context I might not have spelled out.
+</code></pre>
+<p>Claude responds with 3 specific, non-obvious observations. You feel seen. Most people get a "huh, yeah" reaction at least once. That's the moment the workshop pays off in a felt way.</p>
+<p><strong>b. Before/after email.</strong> Draft an email pre-brief (generic). Save the output. Then draft the SAME email post-brief. Compare. The post version sounds like you. Feels like a different tool.</p>
+<h2>Verification checkpoint</h2>
+<pre><code>
+Summarize back to me what you know about me from About Me.md and the about-me/ folder.
+3-5 sentences max.
+</code></pre>
+<p>Expected: a concise, accurate summary. If Claude can't summarize or includes wrong details, <code>About Me.md</code> or <code>about-me/</code> has gaps.</p>
 <h2>Common issues</h2>
 <ul>
-<li><strong>Bug #28161</strong> (sidebar conflation) — close + reopen sidebar.</li>
-<li><strong>Live artifact doesn't refresh</strong> — it might be a static artifact, not live. Ask Claude to "make this artifact live" and rebuild.</li>
-<li><strong>Artifact disappears on Cowork restart</strong> — check the artifacts list in the sidebar; sometimes the active artifact pointer resets but the artifact is still there.</li>
-<li><strong>Sharing isn't available</strong> — current limitation, not a bug.</li>
+<li><strong>Claude defaults still showing through</strong> — your constraints in <code>writing-rules.md</code> aren't strong enough; add more "don't" rules.</li>
+<li><strong>Brief feels generic</strong> — interview was too short; rerun with more specific answers.</li>
+<li><strong>Claude mixes project-specific and general tone</strong> — check project <code>claude.md</code> overrides; make sure they're explicit deviations, not full restatements.</li>
+<li><strong>Cowork doesn't seem to be reading the brief</strong> — check <code>&lt;vault&gt;/claude.md</code> contains the one-line pointer to <code>About Me.md</code>. If <code>claude.md</code> is empty or missing, Cowork won't follow through.</li>
+<li><strong>about-me files lost on Cowork restart</strong> — they shouldn't disappear; check vault path is mounted in your Cowork Project.</li>
 </ul>
 
   <div class="slides-cta">
@@ -123,8 +175,8 @@ Show me the artifact I just built. What data source does it query?
   </div>
 
   <nav class="module-nav">
-    <a class="nav-link prev" href="m03.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M03 — Cowork UI + Settings</div></a>
-    <a class="nav-link next" href="m05.html"><div class="nav-link-label">Next →</div><div class="nav-link-title">M05 — Browser + Chrome</div></a>
+    <a class="nav-link prev" href="m03.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M03 — First Cowork Project: the Vault</div></a>
+    <a class="nav-link next" href="m05.html"><div class="nav-link-label">Next →</div><div class="nav-link-title">M05 — Companion knowledge files</div></a>
   </nav>
 </main>
 

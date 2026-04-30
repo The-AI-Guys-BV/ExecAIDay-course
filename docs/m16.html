@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>M16 Collaboration & Shared Work — ExecAIDay</title>
-<meta name="description" content="Collaboration & Shared Work — module M16 of the ExecAIDay Claude Cowork training workshop.">
+<title>M16 Meeting Notes — ExecAIDay</title>
+<meta name="description" content="Meeting Notes — module M16 of the ExecAIDay Claude Cowork training workshop.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -24,99 +24,131 @@
 <header class="module-hero">
   <div class="container">
     <div class="module-hero-icon" style="background: var(--system-soft); color: var(--system);">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
     </div>
     <div class="eyebrow eyebrow-row">
       <span class="breadcrumb"><a href="index.html">All modules</a> &nbsp;/&nbsp; System</span>
       <a class="hero-slides-link" href="slides/m16.html">▶ View slide deck</a>
     </div>
-    <h1>M16 — Collaboration & Shared Work</h1>
-    <p class="lede">You + Claude is exec superpower. You + your team + Claude is exec leverage. M16 is how you turn personal Cowork into shared Cowork — shared Cowork folders, multi-connector queries that span your team's surfaces.</p>
+    <h1>M16 — Meeting Notes</h1>
+    <p class="lede">Meeting transcripts → Obsidian daily note → Claude processes → follow-up emails drafted, commitments tracked, gaps surfaced. The pipeline turns hours of meetings per week into a tracked, actioned, never-forgotten stream.</p>
   </div>
 </header>
 
 <main class="content container">
 <h2>What you'll do</h2>
 <ul>
-<li>Set up a shared Cowork folder.</li>
-<li>Pair up (2-3 per group) and collaborate live on a pre-seeded fake project.</li>
-<li>Run multi-connector magic: Claude reads Slack + Gmail + your shared folder in one shot during the collaboration scenario.</li>
+<li>Verify your meeting-note tool (Granola / Bluedot / Fellow — picked in questionnaire).</li>
+<li>Run a full pipeline: meeting captured → transcript in Obsidian daily note → Claude processes into a structured note in your vault.</li>
+<li>Try gap analysis: Claude cross-references the transcript vs your existing vault notes, surfaces commitments you missed.</li>
+<li>Push commitments into your GTD inbox at <vault>/gtd/inbox.md.</li>
+<li>Generate follow-up emails routed to <code>drafts-inbox</code>.</li>
 </ul>
 <h2>Introduction</h2>
-<p>Three collaboration surfaces you'll touch:</p>
-<ol>
-<li><strong>Shared Cowork folder</strong> — a folder you and your team both mount in your respective Cowork Projects. Files in there are visible to all.</li>
-<li><strong>Shared scheduled tasks</strong> — less common; usually each person has their own.</li>
-</ol>
-<p>Sales reality: workshop targets same-company cohorts when possible (so the collaboration exercise is realistic). Mixed cohorts run the pairs exercise on a pre-seeded fake project.</p>
+<p>Most execs already have a meeting-note tool. Granola, Bluedot, and Fellow's bot-less mode are the ones the workshop locks on (Fireflies retired — bot-based, poor fit for sensitive exec meetings).</p>
+<p>Bot-less means the tool captures system audio locally during the meeting, transcribes locally or via cloud, lands the transcript on your machine. No bot joins the meeting. No "this meeting is being recorded" dialogue prompts. No invitee list updated.</p>
+<p>This matters in 2026 because Microsoft Teams is rolling out third-party bot detection (May–June 2026). Bot-based tools (Fireflies default, Otter default) get flagged. Bot-less tools (Granola, Bluedot, Fellow's bot-less mode) keep working unchanged.</p>
+<p>This module: the pipeline from meeting → notes → action.</p>
 <h2>Beginner / Getting Started</h2>
-<h3>Shared Cowork folder</h3>
-<p>This is more involved. Your IT team set up a shared cloud folder (Dropbox / Google Drive / OneDrive — whichever your org uses). The folder syncs to all team members' machines.</p>
-<p>Each team member mounts the same shared folder in their Cowork Project (alongside their personal vault and work folder).</p>
-<p>Now anyone on the team can:</p>
+<h3>Verify your meeting-note tool</h3>
+<p>Whichever you picked (Granola / Bluedot / Fellow), confirm it's running. Quick test: start a fake meeting (just open Zoom / Google Meet / Teams to yourself, talk briefly, stop). Verify the tool captured + transcribed.</p>
+<p>If it didn't, your assistant fixes now.</p>
+<h3>The pipeline</h3>
+<p>When a real meeting happens:</p>
+<ol>
+<li><strong>Meeting starts.</strong> Tool auto-captures (or you tap to start).</li>
+<li><strong>Tool transcribes.</strong> Some tools transcribe in real-time; some after the meeting.</li>
+<li><strong>Transcript lands.</strong> Where? Configurable — most tools have:</li>
+</ol>
 <ul>
-<li>Read what others have written.</li>
-<li>Write into shared deliverables.</li>
-<li>Track joint progress through claude.md / memory.md updates.</li>
+<li>A native dashboard (their app).</li>
+<li>Sync to a cloud folder (Drive, Dropbox, etc.).</li>
+<li>Local file output.</li>
 </ul>
-<p>Caveat: be careful with <code>claude.md</code> files in shared folders. The shared folder root <code>claude.md</code> describes the SHARED context, not your personal preferences. Don't drop your chief-of-staff brief into a shared folder.</p>
-<h3>Pair exercise</h3>
-<p>Pair up (2-3 people). Pre-seeded scenario your assistant provides:</p>
-<ul>
-<li>Shared Cowork folder with a fake project (e.g., "Q4 product launch planning") — pre-seeded with placeholder files.</li>
-<li>Shared Cowork folder with placeholder Source Materials.</li>
-<li>A Slack channel you both have access to.</li>
-<li>A few seed emails about the project.</li>
-</ul>
-<p>Goal: collaboratively produce a one-page memo summarizing the project state, with Claude reading from all sources.</p>
+<ol>
+<li><strong>You point Cowork at the transcript.</strong></li>
+<li><strong>Claude processes</strong> into a structured note in your vault, and pushes commitments into your GTD next-actions.</li>
+</ol>
+<p>Workshop default: tool dumps transcripts to a folder in your vault, e.g., <code>&lt;vault&gt;/Meeting Transcripts/</code>. Or directly into your Daily Note for the meeting's day.</p>
 <h2>Intermediate</h2>
-<h3>Multi-connector magic</h3>
-<p>The core capability: Claude reads multiple sources in one query and synthesizes.</p>
+<h3>Run a full pipeline on a real meeting</h3>
+<p>Pick a recent real meeting (in your tool's history). Or use today's most recent.</p>
+<p>In Cowork:</p>
 <pre><code>
-For [shared project], pull:
-- The latest Slack thread about it (channel: #q4-launch).
-- The shared Cowork folder for the project.
-- Any emails in my inbox tagged with the project name (last 7 days).
-
-Synthesize into a one-page memo: state of play, what's blocking, what's the next decision needed.
+Read the transcript at &lt;path-to-transcript&gt;. Process it:
+- List commitments (who promised what, by when).
+- List decisions made.
+- List open questions / things requiring follow-up.
+Save the structured note to my vault under Meeting Notes/&lt;date&gt;-&lt;title&gt;.md.
+Then for each commitment that's mine, /capture it into my GTD inbox.
 </code></pre>
-<p>Claude reads all three, synthesizes. Output is one page — couldn't have produced manually faster.</p>
-<p>This is "multi-connector magic." You've been using individual connectors all workshop; M16 is where they compose.</p>
-<h3>Collaboration scenarios (live)</h3>
-<p>Try one or two during the in-room exercise:</p>
-<p><strong>Scenario A — Joint memo.</strong> Both pair members work on the same memo in the shared folder. One drafts a section in their Cowork. The other Reviews from theirs. Claude reads the latest version each time — no manual file-syncing.</p>
-<p><strong>Scenario B — Joint decision.</strong> Use Claude to synthesize different stakeholders' positions (per Slack threads and shared folder content) and propose a path forward. Both pair members feed in their context; Claude produces one synthesis.</p>
-<p><strong>Scenario C — Joint status update.</strong> Generate a team standup brief from all the sources together. Pair refines.</p>
-<p>The point isn't the specific scenario — it's that two people doing the same workflow in their respective Cowork instances produce the same answers from the same sources. The team gets consistency.</p>
-<h2>Advanced</h2>
-<h3>Multi-Cowork-Project patterns for sensitive work</h3>
-<p>Shared work has a confidentiality dimension. If part of your team is working on sensitive content (M&A, legal, personnel), they probably need a separate Cowork Project that:</p>
+<p>Claude reads the transcript, structures the output, writes the meeting note into your vault, and captures each of your commitments into your GTD inbox.</p>
+<p>Verify in your vault: the new meeting note is there with structured commitments, decisions, follow-ups. Verify in your GTD inbox: the commitments showed up at <vault>/gtd/inbox.md.</p>
+<h3>Gap analysis</h3>
+<p>This is where the pipeline pays off uniquely. Claude can cross-reference what was said in the meeting vs what's in your existing notes:</p>
+<pre><code>
+Cross-reference today's meeting transcript with the project's claude.md and Working
+Files in &lt;work-folder&gt;/&lt;project&gt;/. What was committed in the meeting that isn't
+yet in the project? What was decided that contradicts the project's current state?
+</code></pre>
+<p>Claude surfaces gaps. Example outputs:</p>
 <ul>
-<li>Mounts the shared folder for THIS sensitive workstream only.</li>
-<li>Does NOT mount their personal vault (to keep personal context out).</li>
-<li>Has tight connector scope (no Gmail, no Slack — only the shared folder for the workstream).</li>
+<li>"You committed to deliver X by Friday; the project's claude.md says next Wednesday. Mismatch."</li>
+<li>"John raised a risk about [thing] in the meeting; not in the project's Working Files."</li>
+<li>"Decision was made to deprecate Y; project still lists Y as active."</li>
 </ul>
-<p>The architecture supports this. The discipline is the team's.</p>
-<h3>Team GTD considerations</h3>
-<p>Per the workshop's locked decision: team GTD only works if every team member does their personal GTD. One laggard contaminates the system.</p>
-<p>If your team is interested in shared GTD: run them through the workshop too. Otherwise, your team uses your personal GTD as their visibility into your work, but not the other way around.</p>
-<h3>Cross-org collaboration limits</h3>
-<p>External collaborators (different company, different Slack workspace): hard to bring into Cowork's shared model. Per the locked workshop decision, external collaboration is OUT — keep team Cowork inside the org.</p>
-<h3>Permissions hygiene</h3>
-<p>Shared Cowork folders: filesystem-level access control. Whoever has the cloud folder mounted sees everything in it. Don't put confidential subprojects in a folder shared widely. Quarterly: audit who has access to what.</p>
-<h2>Try this — multi-connector magic</h2>
-<p>Claude reads Slack + Gmail + the shared Cowork folder in one shot during the collaboration scenario. Output combines all three sources into one coherent narrative. The realization: this isn't a feature; it's a different way of working.</p>
+<p>You decide what to update.</p>
+<h3>Follow-up email generation</h3>
+<p>Most meetings need a follow-up email. The skill chain:</p>
+<pre><code>
+Based on today's meeting transcript, draft a follow-up email to [attendee]. Include:
+- 1-2 sentence summary.
+- The commitments made.
+- Specific next steps with owners.
+Save to drafts-inbox for me to review.
+</code></pre>
+<p>Claude drafts. Lands in your drafts inbox. You review, edit, send.</p>
+<h2>Advanced</h2>
+<h3>Recurring meeting context-stitching</h3>
+<p>For recurring meetings (weekly 1:1s, monthly business reviews), Claude can read the LAST N meetings' transcripts and surface continuity:</p>
+<pre><code>
+Read the last 4 weekly 1:1 transcripts with [direct report]. What's been recurring
+across them? What did I commit to at one meeting that should have shown up in the
+next but didn't?
+</code></pre>
+<p>This is meta-analysis across meetings. Useful for catching slow-burn issues — items that get re-raised meeting after meeting because nothing's happening on them.</p>
+<h3>Sensitive meeting handling</h3>
+<p>Some meetings should NOT be processed via Cowork:</p>
+<ul>
+<li>Personnel reviews, performance issues.</li>
+<li>M&A discussions.</li>
+<li>Board executive sessions.</li>
+<li>Anything privileged.</li>
+</ul>
+<p>For these:</p>
+<ul>
+<li>Don't auto-pipe transcripts to Cowork-readable folders.</li>
+<li>Configure your meeting-note tool to skip recording these meetings entirely.</li>
+<li>If transcript exists, store it outside your vault and don't reference it in Cowork.</li>
+</ul>
+<p>The architecture supports privacy boundaries; it's on you to enforce them.</p>
+<h3>Compliance recording considerations</h3>
+<p>Some industries (financial services, healthcare, certain client work) require recording disclosure or prohibit recording entirely. Your meeting-note tool is a recording tool. Check with your compliance team before workshop runs.</p>
+<p>The Teams bot ban (May–June 2026) is a separate issue — about which TOOLS can join, not whether recording is permitted.</p>
+<h2>Try these</h2>
+<p><strong>Gap analysis.</strong> Claude cross-references meeting transcript vs your project's claude.md, surfaces missed commitments. The realization: Claude caught something you would have missed.</p>
+<p><strong>Follow-up email generation.</strong> Routes to drafts-inbox, ready for your review. End-to-end pipeline working.</p>
 <h2>Verification checkpoint</h2>
 <pre><code>
-For [the shared project], list every source you can pull from right now and what's in each.
+What was decided in the most recent meeting I have a transcript for? Pull from the transcript.
 </code></pre>
-<p>Expected: Claude lists Slack channel(s), email thread(s), shared folder content. If anything's missing, the connector or share permission is off.</p>
+<p>Expected: Claude reads the most recent transcript file and lists decisions. If it can't find any transcripts, the tool's output location isn't where Claude expects — check vault path or your tool's settings.</p>
 <h2>Common issues</h2>
 <ul>
-<li><strong>Shared folder doesn't sync</strong> — Dropbox / Drive / OneDrive sync issue. Check sync status; restart sync app.</li>
-<li><strong>Slack channel scoped to specific channels only</strong> — connector permission scope; widen if needed.</li>
-<li><strong>Multi-connector query slow</strong> — many sources to read; reduce scope or window.</li>
-<li><strong>Two pair members get different answers</strong> — different connector scopes or different Cowork Project configurations. Verify both are pulling from the same sources.</li>
+<li><strong>Tool isn't capturing</strong> — system audio permission missing on Mac (System Settings → Privacy → Screen Recording / Microphone). On Windows, similar permission flow.</li>
+<li><strong>Transcript location mismatch</strong> — your tool dumps to a different location than your vault expects. Configure either side to match.</li>
+<li><strong>Claude reads the wrong transcript</strong> — be specific in your prompt about which meeting / which date.</li>
+<li><strong>Sensitive meeting accidentally captured</strong> — delete the transcript and any vault note Claude wrote from it. The architecture depends on your discipline; it doesn't auto-protect.</li>
 </ul>
 
   <div class="slides-cta">
@@ -128,8 +160,8 @@ For [the shared project], list every source you can pull from right now and what
   </div>
 
   <nav class="module-nav">
-    <a class="nav-link prev" href="m15.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M15 — Meeting Notes</div></a>
-    <a class="nav-link next" href="index.html"><div class="nav-link-label">Course complete</div><div class="nav-link-title">Back to overview</div></a>
+    <a class="nav-link prev" href="m15.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M15 — Daily Command Center</div></a>
+    <a class="nav-link next" href="m17.html"><div class="nav-link-label">Next →</div><div class="nav-link-title">M17 — Collaboration & Shared Work</div></a>
   </nav>
 </main>
 

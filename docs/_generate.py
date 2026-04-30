@@ -8,29 +8,30 @@ MOD_DIR = ROOT / "modules"
 OUT = ROOT / "docs"
 
 MODULES = [
-    ("M01", "Welcome + Foundations", "foundation", "M01-welcome-foundations.md", '<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/>'),
-    ("M02", "Prompt Engineering", "foundation", "M02-prompt-engineering.md", '<path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>'),
-    ("M03", "Cowork UI + Settings", "foundation", "M03-cowork-ui-settings.md", '<rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/>'),
-    ("M04", "Artifacts", "foundation", "M04-artifacts.md", '<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>'),
-    ("M05", "Browser + Chrome", "foundation", "M05-browser-chrome.md", '<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/><line x1="10.88" y1="21.94" x2="15.46" y2="14"/>'),
-    ("M06", "Chief of Staff Brief", "personalize", "M06-chief-of-staff-claudemd.md", '<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>'),
-    ("M07", "Skills + Slash Commands", "personalize", "M07-skills-slash-commands.md", '<polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/>'),
-    ("M08", "Obsidian", "personalize", "M08-obsidian.md", '<circle cx="12" cy="12" r="2"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><line x1="6.5" y1="6.5" x2="10.5" y2="10.5"/><line x1="17.5" y1="6.5" x2="13.5" y2="10.5"/><line x1="6.5" y1="17.5" x2="10.5" y2="13.5"/><line x1="17.5" y1="17.5" x2="13.5" y2="13.5"/>'),
-    ("M09", "Projects, Folders, claude.md", "personalize", "M09-projects-folders-claudemd.md", '<path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>'),
+    ("M01", "Welcome + Install", "foundation", "M01-welcome-foundations.md", '<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/>'),
+    ("M02", "Open Obsidian, see your vault", "foundation", "M02-obsidian.md", '<circle cx="12" cy="12" r="2"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><line x1="6.5" y1="6.5" x2="10.5" y2="10.5"/><line x1="17.5" y1="6.5" x2="13.5" y2="10.5"/><line x1="6.5" y1="17.5" x2="10.5" y2="13.5"/><line x1="17.5" y1="17.5" x2="13.5" y2="13.5"/>'),
+    ("M03", "First Cowork Project: the Vault", "foundation", "M03-first-cowork-project.md", '<rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/>'),
+    ("M04", "Write your About Me brief", "personalize", "M04-about-me-brief.md", '<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>'),
+    ("M05", "Companion knowledge files", "personalize", "M05-companion-knowledge-files.md", '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>'),
+    ("M06", "Prompt Engineering", "sharpen", "M06-prompt-engineering.md", '<path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>'),
+    ("M07", "Skills + Slash Commands", "sharpen", "M07-skills-slash-commands.md", '<polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/>'),
+    ("M08", "Artifacts", "sharpen", "M08-artifacts.md", '<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>'),
+    ("M09", "Browser + Chrome", "sharpen", "M09-browser-chrome.md", '<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/><line x1="10.88" y1="21.94" x2="15.46" y2="14"/>'),
     ("M10", "Connectors", "connect", "M10-connectors.md", '<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>'),
     ("M11", "Office Add-ins", "connect", "M11-office-add-ins.md", '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>'),
-    ("M12", "Scheduled Tasks + Routines", "automate", "M12-scheduled-tasks-routines.md", '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>'),
-    ("M13", "GTD", "system", "M13-gtd-in-your-vault.md", '<path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>'),
-    ("M14", "Daily Command Center", "system", "M14-daily-command-center.md", '<rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/>'),
-    ("M15", "Meeting Notes", "system", "M15-meeting-notes.md", '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>'),
-    ("M16", "Collaboration & Shared Work", "system", "M16-collaboration.md", '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>'),
+    ("M12", "Work folder + /new-project", "connect", "M12-projects-folders-claudemd.md", '<path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>'),
+    ("M13", "Scheduled Tasks + Routines", "system", "M13-scheduled-tasks-routines.md", '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>'),
+    ("M14", "GTD", "system", "M14-gtd-in-your-vault.md", '<path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>'),
+    ("M15", "Daily Command Center", "system", "M15-daily-command-center.md", '<rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/>'),
+    ("M16", "Meeting Notes", "system", "M16-meeting-notes.md", '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>'),
+    ("M17", "Collaboration & Shared Work", "system", "M17-collaboration.md", '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>'),
 ]
 
 PHASE_LABELS = {
     "foundation": "Foundation",
     "personalize": "Personalize",
+    "sharpen": "Sharpen",
     "connect": "Connect",
-    "automate": "Automate",
     "system": "System",
 }
 

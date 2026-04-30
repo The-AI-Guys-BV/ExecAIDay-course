@@ -1,4 +1,4 @@
-# M15 — Meeting Notes
+# M16 — Meeting Notes
 
 ## Why this module matters
 
@@ -159,8 +159,8 @@ Expected: Claude reads the most recent transcript file and lists decisions. If i
 
 ## References
 
-- M08 — Obsidian (vault is where transcripts often land).
-- M13 — GTD in your vault (commitments → next-actions, follow-ups → waiting-for).
-- M16 — collaboration (shared meeting notes for team meetings).
+- M02 — Obsidian (vault is where transcripts often land).
+- M14 — GTD in your vault (commitments → next-actions, follow-ups → waiting-for).
+- M17 — collaboration (shared meeting notes for team meetings).
 - `references/connector-quirks.md` — Teams bot ban context.
 - `skills/drafts-inbox/SKILL.md` — where follow-up emails route.

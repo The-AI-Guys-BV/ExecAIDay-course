@@ -1,4 +1,4 @@
-# M08 — Obsidian
+# M02 — Open Obsidian, see your vault
 
 ## Why this module matters
 
@@ -106,7 +106,7 @@ A Cowork Project is a **scope**: it tells Claude which folders to consider. Insi
 - **Whole vault mounted** — for general knowledge work, journaling, cross-vault queries ("summarize everything I have on Sales").
 - **Subfolder mounted** — for focused work where you don't want Claude pulling unrelated vault content into context. Example: a "Board notes" Cowork Project mounting only `<vault>/Areas/Board/` so Claude doesn't pull from your Sales notes.
 - **Vault + work folder** — the M01 Workshop pattern. Most flexible. Claude can pull a meeting note from the vault into a project deliverable in the work folder.
-- **Vault + shared team folder** — for collaborative work where you want personal vault context plus shared materials. (Covered in M16.)
+- **Vault + shared team folder** — for collaborative work where you want personal vault context plus shared materials. (Covered in M17.)
 
 ### What stays in the vault, what goes in the work folder
 
@@ -150,5 +150,5 @@ Expected: Claude lists files (probably just today's, plus any pre-existing). If 
 ## References
 
 - `templates/vault-starter/` — what was scaffolded into your vault.
-- M06 — writing the chief-of-staff brief in Obsidian.
-- M15 — meeting notes that land in Daily Notes.
+- M04 — writing the chief-of-staff brief in Obsidian.
+- M16 — meeting notes that land in Daily Notes.
