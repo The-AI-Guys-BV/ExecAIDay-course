@@ -31,26 +31,197 @@
       <a class="hero-slides-link" href="slides/m05.html">▶ View slide deck</a>
     </div>
     <h1>M05 — Companion knowledge files</h1>
-    <p class="lede">[Pass 2 to fill]</p>
+    <p class="lede">The chief-of-staff brief from M04 (<code>About Me.md</code>, ~30 lines) is the highest-leverage file in the workshop. The companion files in this module are the second-highest. They give Claude the depth that doesn't fit in 30 lines — extended personal context, explicit dos and don'ts, durable reference material. Together they form the knowledge stack Claude works from on every prompt.</p>
   </div>
 </header>
 
 <main class="content container">
 <h2>What you'll do</h2>
 <ul>
-<li>[TBD]</li>
+<li>Expand long-form personal context into <code>about-me/long-form.md</code>.</li>
+<li>Capture explicit writing rules into <code>about-me/writing-rules.md</code>.</li>
+<li>Set up a <code>References/</code> folder structure for durable knowledge Claude can pull from.</li>
+<li>Confirm Claude reads the entire stack and surfaces something non-obvious you didn't explicitly tell it.</li>
+<li>Compare a draft with companions in scope vs without.</li>
 </ul>
 <h2>Introduction</h2>
-<p>[Pass 2 to fill]</p>
+<p><code>About Me.md</code> is short on purpose — meant to be skimmed first read, used to anchor every conversation. The deeper context lives in companion files in your vault.</p>
+<p>There are two flavors of companion:</p>
+<ul>
+<li><strong><code>about-me/</code> companions are about YOU.</strong> They shape <em>how</em> Claude writes — your voice, your preferences, your patterns. Long-form personal context, explicit writing rules, exceptions, things you care about deeply.</li>
+<li><strong><code>References/</code> companions are about THE WORLD.</strong> They're durable facts Claude pulls <em>from</em> — a brand spec, a key stakeholder's bio, a vendor's pricing, a product's positioning. Reference material, not voice.</li>
+</ul>
+<p>Both live in the vault. Both are read automatically when your "Vault" Cowork Project is open — you don't have to "tell" Claude where to look. You just create the files; Claude picks them up.</p>
+<p>You'll write through Claude in your Vault Cowork Project (the one you created in M03). Each file Claude writes appears in Obsidian instantly — you can edit by hand any time.</p>
 <h2>Beginner / Getting Started</h2>
-<p>[Pass 2 to fill]</p>
-<h2>Try this</h2>
-<p>[Pass 2 to fill]</p>
+<h3>The about-me/ folder</h3>
+<p>Every vault has an <code>about-me/</code> folder. It already exists from the starter content. Inside it:</p>
+<ul>
+<li><code>long-form.md</code> — extended personal context (role history, work patterns, things you care about deeply, things you refuse to do).</li>
+<li><code>writing-rules.md</code> — specific tone and word rules (Always / Never lists).</li>
+<li><code>claude.md</code> (optional) — small file that explains to Claude how to use the about-me/ folder.</li>
+</ul>
+<h3>Step 1 — Expand the long-form context</h3>
+<p>In your "Vault" Cowork Project, paste:</p>
+<pre><code>
+Based on my About Me.md and our chief-of-staff interview from M04, expand
+about-me/long-form.md with deeper context. Include:
+- Role history (current and previous roles, in summary).
+- Current key stakeholders by name where appropriate (board members, key
+  customers, direct reports).
+- Work patterns (how I structure my week, my deep-work blocks, my meeting
+  preferences).
+- Things I care about deeply (the topics, principles, or stakeholders that
+  shape my decisions).
+- Things I refuse to do (specific patterns of work or interaction I avoid).
+
+Aim for one to two pages — depth, not exhaustiveness. Save to
+&lt;vault&gt;/about-me/long-form.md.
+</code></pre>
+<p>Claude expands. Open the file in Obsidian. Read it. Edit anything that doesn't sound like you, or where Claude guessed wrong.</p>
+<h3>Step 2 — Capture your writing rules</h3>
+<pre><code>
+Pull out specific writing rules from our chief-of-staff interview into
+&lt;vault&gt;/about-me/writing-rules.md. Format as two sections:
+
+## Always
+(rules I follow consistently in writing — e.g., "always use active voice")
+
+## Never
+(rules about what to avoid — e.g., "never start an email with 'I hope this
+finds you well'")
+
+Each rule one line. Concrete, testable, in my voice.
+</code></pre>
+<p>Claude writes a list. Examples of strong rules:</p>
+<ul>
+<li><strong>Never</strong> start an email with "I hope this finds you well."</li>
+<li><strong>Never</strong> use "leverage" as a verb.</li>
+<li><strong>Never</strong> list more than three options without ranking them.</li>
+<li><strong>Always</strong> lead with the recommendation, not the analysis.</li>
+<li><strong>Always</strong> keep the email under 200 words unless explicitly going long.</li>
+</ul>
+<p>These rules apply globally. Claude reads them on every prompt that produces written output — emails, memos, slide bullets, summaries.</p>
+<h3>Step 3 — Set up the References/ structure</h3>
+<pre><code>
+Help me set up a References/ folder structure inside my vault. I want
+subfolders for:
+- brand (colors, fonts, logos, brand voice docs)
+- people (key stakeholders' bios, relationships, history)
+- tools (services and platforms I rely on)
+- products (what we sell — positioning, features, FAQs)
+
+For each subfolder, write a short claude.md explaining what goes in there
+and how Claude should treat it. Save the structure under &lt;vault&gt;/References/.
+</code></pre>
+<p>Claude creates the subfolders and writes a <code>claude.md</code> in each. Now you have a place to drop reference material — and Claude knows what each subfolder is for.</p>
+<p>You won't fully populate <code>References/</code> today. You'll add to it throughout the workshop and over the months that follow. Today you're laying the structure.</p>
+<h2>Intermediate</h2>
+<h3>Test the inheritance</h3>
+<p>In a fresh Cowork chat in your Vault project, paste:</p>
+<pre><code>
+Draft a 3-paragraph email to my board chair updating them on Q3 trajectory.
+Use what you know about me. After the draft, list the files in my vault
+that you used to write it.
+</code></pre>
+<p>Watch Claude:</p>
+<ul>
+<li>Match your tone (from <code>About Me.md</code> + <code>writing-rules.md</code>).</li>
+<li>Reference deeper context (from <code>long-form.md</code>).</li>
+<li>Tell you which files it consulted.</li>
+</ul>
+<p>If a file you'd expect Claude to use is missing from the list, it's not getting picked up — confirm vault mount in your "Vault" Cowork Project, then reopen the chat.</p>
+<h3>When to write to about-me/ vs References/</h3>
+<p>A quick test for where new context belongs:</p>
+<ul>
+<li><strong>About YOU</strong> (your voice, your preferences, your role, your stakeholders) → <code>about-me/</code>.</li>
+<li><strong>About something OUTSIDE you</strong> (a customer, a product, a brand, a vendor) → <code>References/</code>.</li>
+</ul>
+<p>Both shape what Claude does. They differ in role: <code>about-me/</code> shapes <em>how</em> Claude writes; <code>References/</code> is content Claude <em>pulls from</em> when relevant.</p>
+<h3>Adding to References/ over time</h3>
+<p>The pattern is: drop files in, work continues. Examples you'll add this workshop:</p>
+<ul>
+<li>M11 brand spec — extracted from a reference deck — saved to <code>References/brand/branding.md</code>.</li>
+<li>M16 stakeholder bios — saved as you take meetings with new people — saved to <code>References/people/</code>.</li>
+</ul>
+<p>After the workshop, the pattern keeps going:</p>
+<ul>
+<li>A new product launches → drop the spec into <code>References/products/</code>.</li>
+<li>A vendor's contract terms changed → drop the new contract into <code>References/tools/&lt;vendor&gt;/</code>.</li>
+</ul>
+<p>Each file is something Claude can pull from when the topic comes up.</p>
+<h3>The companion claude.md hint pattern</h3>
+<p>Inside any subfolder, a small <code>claude.md</code> file changes how Claude treats that folder. Examples:</p>
+<ul>
+<li><code>&lt;vault&gt;/References/brand/claude.md</code> says: "This is the source of truth for brand assets. When generating documents, slides, or anything outward-facing, pull colors, fonts, and logo from here."</li>
+<li><code>&lt;vault&gt;/about-me/claude.md</code> says: "These files describe me — my voice, my context, my rules. Use them on every prompt that produces written output. The brief at <code>&lt;vault&gt;/About Me.md</code> is the index."</li>
+</ul>
+<p>These hints are short — one or two sentences. They don't restate the chief-of-staff brief; they explain the folder's role.</p>
+<h2>Advanced</h2>
+<h3>Maintenance over time</h3>
+<ul>
+<li><code>about-me/</code> is durable. You'll update once a quarter at most. Small fragments drift — a new direct report, a tone you've outgrown, a stakeholder gone.</li>
+<li><code>References/</code> grows actively. You'll add a few files a week if you're using Claude as your collaborator. That's healthy.</li>
+<li><strong>Don't pre-populate.</strong> Only write what you have a real use for. Empty placeholder files clutter without adding value.</li>
+</ul>
+<h3>Quarterly drift check</h3>
+<p>On the last week of the quarter, paste:</p>
+<pre><code>
+Read everything in about-me/. What feels stale or wrong now compared to
+how I've been working this quarter? Be specific — name lines or claims.
+</code></pre>
+<p>Claude surfaces likely-outdated items. You decide what to update.</p>
+<h3>When to split a long file vs keep it monolithic</h3>
+<p>If <code>long-form.md</code> grows past 3 pages, split into smaller files:</p>
+<ul>
+<li><code>about-me/role-history.md</code></li>
+<li><code>about-me/work-patterns.md</code></li>
+<li><code>about-me/stakeholders.md</code></li>
+</ul>
+<p>Update <code>about-me/claude.md</code> to point at the new structure. Claude still reads everything in the folder — splitting is for your own readability, not for Claude.</p>
+<h3>What NOT to put in about-me/ or References/</h3>
+<ul>
+<li><strong>Project deliverables</strong> → those go in the work folder (M12).</li>
+<li><strong>Confidential customer data</strong> the org rules say must stay in a managed system (e.g., Salesforce, your DMS) → don't sync that into the vault. Reference it by ID instead.</li>
+<li><strong>One-off captures</strong> → use vault <code>Inbox/</code> (M14 GTD) for these. Don't pollute <code>References/</code>.</li>
+<li><strong>Live operational data</strong> (today's pipeline, this week's metrics) → those are query-time data, not durable references. Use connectors (M10) or live artifacts (M08).</li>
+</ul>
+<h2>Try these</h2>
+<p><strong>a. Recognition shock, deeper.</strong> In your Vault Cowork Project:</p>
+<pre><code>
+Read everything in about-me/ and References/. Surface 3 things you noticed
+about me that I haven't explicitly told you — pattern matches across files,
+implications, context I wouldn't think to spell out.
+</code></pre>
+<p>Claude responds with three specific, non-obvious observations. M04 had a recognition-shock moment from <code>About Me.md</code> alone. This one runs across the full stack and goes deeper.</p>
+<p><strong>b. Voice test, side by side.</strong></p>
+<pre><code>
+Draft a 3-paragraph email to my board chair, updating them on Q3 trajectory.
+
+First, draft it ignoring my About Me, the about-me/ folder, and References/
+(default voice — generic AI).
+
+Then, draft it using all of those files (my voice).
+
+Show both versions. Then in 2-3 sentences, tell me what specifically the
+second version is doing differently.
+</code></pre>
+<p>The two versions should feel like they were written by two different people. Read both. The second should sound recognizably like you. That's what the companion files buy you.</p>
 <h2>Verification checkpoint</h2>
-<p>[Pass 2 to fill]</p>
+<p>In your Vault project, paste:</p>
+<pre><code>
+Summarize my entire vault knowledge stack — About Me.md, the about-me/
+folder, and References/ subfolders — in 5-7 sentences. List the files
+you read. If any file is empty or missing real content, flag it.
+</code></pre>
+<p>Expected: a concise summary covering who you are, your voice, and what reference material exists. The list of files read should include <code>About Me.md</code>, <code>about-me/long-form.md</code>, <code>about-me/writing-rules.md</code>, and the <code>References/*/claude.md</code> files. If <code>long-form.md</code> or <code>writing-rules.md</code> are missing from the list, those files didn't write correctly — re-run Step 1 or Step 2.</p>
 <h2>Common issues</h2>
 <ul>
-<li>[TBD]</li>
+<li><strong><code>long-form.md</code> is too long, Claude takes forever to respond.</strong> Trim to 1–2 pages. Long-form doesn't mean exhaustive.</li>
+<li><strong>Writing rules contradict each other.</strong> Claude defaults to one randomly. Open <code>writing-rules.md</code> in Obsidian and resolve the contradiction by hand.</li>
+<li><strong>Claude isn't reading <code>References/</code> subfolders.</strong> The vault mount is correct, but specific reference content needs to be referenced explicitly in the prompt — e.g., "Use the brand spec at <code>References/brand/branding.md</code>." Just having the folder mounted isn't always enough; Claude needs a hint that the reference is relevant.</li>
+<li><strong><code>about-me/</code> files updated but Claude seems unaware.</strong> Open a new Cowork chat in the same project. Old session context can be stale.</li>
+<li><strong>You wrote rules into <code>writing-rules.md</code> and Claude still violates them.</strong> The rules need to be concrete and testable. "Be brief" is not a rule. "Stay under 200 words on emails" is. Rewrite the rule to be specific.</li>
 </ul>
 
   <div class="slides-cta">

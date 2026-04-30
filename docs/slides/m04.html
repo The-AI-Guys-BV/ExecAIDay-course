@@ -59,7 +59,7 @@
       <div class="slide-eyebrow">Beginner</div>
       <h3 class="slide-section-subtitle">The interview</h3>
       <div class="slide-section-body">
-        <p>In Cowork, paste this prompt:</p>
+        <p>In your "Vault" Cowork Project (created in M03), paste this prompt:</p>
 <pre><code>
 Walk me through writing my chief-of-staff brief. Use the new-vault-claudemd pattern.
 Save the result to &lt;vault&gt;/About Me.md (create it if it doesn't exist).
@@ -110,24 +110,16 @@ Then make sure &lt;vault&gt;/claude.md contains the one-line pointer:
   <section class="slide slide-section">
     <div class="slide-inner">
       <div class="slide-eyebrow">Intermediate</div>
-      <h3 class="slide-section-subtitle">Add the longer-form context</h3>
+      <h3 class="slide-section-subtitle">Editing the brief by hand</h3>
       <div class="slide-section-body">
-        <p><code>About Me.md</code> is the short brief. The vault also has a folder <code>about-me/</code> with two companion files for content that's too long for the brief:</p>
+        <p>Once Claude writes <code>About Me.md</code>, you can edit it directly in Obsidian. Add a sentence. Remove a stakeholder who left. Change a tone preference. Save.</p>
+<p>Cowork picks up the change on the next read. No special action needed.</p>
+<p>Edit by hand when:</p>
 <ul>
-<li><code>about-me/long-form.md</code> — extended personal context (role history, work patterns, things you care about deeply).</li>
-<li><code>about-me/writing-rules.md</code> — specific tone and word rules (dos and don'ts).</li>
+<li>The content is sensitive and you don't want to dictate it to Claude.</li>
+<li>You want a specific phrase exactly as you'd write it.</li>
+<li>You're refining over time — small tweaks, not a full rewrite.</li>
 </ul>
-<p>Populate them:</p>
-<pre><code>
-Based on what I told you for the chief-of-staff brief, expand
-about-me/long-form.md with the longer-form context. Include role history,
-current stakeholders, work patterns, things-I-care-about-deeply.
-</code></pre>
-<p>Claude expands. You edit. Same for <code>writing-rules.md</code>:</p>
-<pre><code>
-Pull out specific writing rules from our interview into about-me/writing-rules.md.
-Format as a list of dos and don'ts.
-</code></pre>
       </div>
     </div>
   </section>
@@ -137,19 +129,34 @@ Format as a list of dos and don'ts.
       <div class="slide-eyebrow">Intermediate</div>
       <h3 class="slide-section-subtitle">Test the inheritance</h3>
       <div class="slide-section-body">
-        <p>In a new Cowork chat:</p>
+        <p>In a fresh Cowork chat in your Vault project, paste:</p>
 <pre><code>
-Draft a 3-paragraph email to my board chair updating them on the Q3 trajectory.
-Use what you know about me.
+Draft a 3-paragraph email to my board chair updating them on Q3 trajectory.
+Use what you know about me from About Me.md.
 </code></pre>
 <p>Watch the output. It should:</p>
 <ul>
 <li>Use your tone (warm, direct, etc., per <code>About Me.md</code>).</li>
 <li>Avoid words you flagged.</li>
 <li>Match your length preference.</li>
-<li>Reference context from <code>about-me/long-form.md</code>.</li>
 </ul>
-<p>If it doesn't, the brief isn't doing its job. Edit and retest.</p>
+<p>If it doesn't, the brief isn't doing its job. Open <code>About Me.md</code> in Obsidian, tighten the relevant section, retest.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Intermediate</div>
+      <h3 class="slide-section-subtitle">What's NOT in About Me.md</h3>
+      <div class="slide-section-body">
+        <p><code>About Me.md</code> is the short brief — about 30 lines. High-signal, scannable, anchoring. The deeper context lives in companion files that M05 sets up:</p>
+<ul>
+<li><strong>Extended personal context</strong> (role history, deeper preferences) → <code>about-me/long-form.md</code> (M05).</li>
+<li><strong>Specific writing rules</strong> (concrete dos and don'ts) → <code>about-me/writing-rules.md</code> (M05).</li>
+<li><strong>Reference material</strong> (brand specs, person bios, tool docs) → <code>References/</code> (M05).</li>
+</ul>
+<p>Most of the depth lives in those companion files. <code>About Me.md</code> is the index — short, scannable, anchoring. Don't try to fit everything into it.</p>
       </div>
     </div>
   </section>
@@ -208,10 +215,12 @@ Read my chief-of-staff brief. What feels stale? What's missing?
       <div class="slide-try-body">
         <p><strong>a. Recognition shock.</strong> Type:</p>
 <pre><code>
-Read my About Me and the about-me/ folder. Surface 3 things you noticed about me that aren't obvious from what I just told you — pattern matches, implications, context I might not have spelled out.
+Read my About Me brief. Surface 3 things you noticed about me that aren't
+obvious from what I just told you — pattern matches, implications, context
+I might not have spelled out explicitly.
 </code></pre>
-<p>Claude responds with 3 specific, non-obvious observations. You feel seen. Most people get a "huh, yeah" reaction at least once. That's the moment the workshop pays off in a felt way.</p>
-<p><strong>b. Before/after email.</strong> Draft an email pre-brief (generic). Save the output. Then draft the SAME email post-brief. Compare. The post version sounds like you. Feels like a different tool.</p>
+<p>Claude responds with 3 specific, non-obvious observations drawn from <code>About Me.md</code>. You feel seen. Most people get a "huh, yeah" reaction at least once. That's the moment the workshop pays off in a felt way. (M05's companion files trigger a deeper version of this — once <code>about-me/long-form.md</code> and <code>References/</code> are populated, recognition runs across the full stack.)</p>
+<p><strong>b. Before/after email.</strong> Draft an email pre-brief (generic) by starting a chat without <code>About Me.md</code> in scope. Save the output. Then draft the SAME email post-brief in your Vault project. Compare. The post version sounds like you. Feels like a different tool.</p>
       </div>
     </div>
   </section>
@@ -221,10 +230,10 @@ Read my About Me and the about-me/ folder. Surface 3 things you noticed about me
       <div class="slide-eyebrow">How you know it worked</div>
       <div class="slide-verify-body">
         <pre><code>
-Summarize back to me what you know about me from About Me.md and the about-me/ folder.
-3-5 sentences max.
+Summarize back to me what you know about me from About Me.md.
+3-5 sentences max. Quote the file in places where my own phrasing matters.
 </code></pre>
-<p>Expected: a concise, accurate summary. If Claude can't summarize or includes wrong details, <code>About Me.md</code> or <code>about-me/</code> has gaps.</p>
+<p>Expected: a concise, accurate summary that includes the phrases you used in the interview. If Claude can't summarize or includes wrong details, <code>About Me.md</code> has gaps — open it in Obsidian and tighten.</p>
       </div>
     </div>
   </section>
@@ -234,11 +243,11 @@ Summarize back to me what you know about me from About Me.md and the about-me/ f
       <div class="slide-eyebrow">If something breaks</div>
       <div class="slide-issues-body">
         <ul>
-<li><strong>Claude defaults still showing through</strong> — your constraints in <code>writing-rules.md</code> aren't strong enough; add more "don't" rules.</li>
-<li><strong>Brief feels generic</strong> — interview was too short; rerun with more specific answers.</li>
-<li><strong>Claude mixes project-specific and general tone</strong> — check project <code>claude.md</code> overrides; make sure they're explicit deviations, not full restatements.</li>
-<li><strong>Cowork doesn't seem to be reading the brief</strong> — check <code>&lt;vault&gt;/claude.md</code> contains the one-line pointer to <code>About Me.md</code>. If <code>claude.md</code> is empty or missing, Cowork won't follow through.</li>
-<li><strong>about-me files lost on Cowork restart</strong> — they shouldn't disappear; check vault path is mounted in your Cowork Project.</li>
+<li><strong>Brief feels generic.</strong> Interview was too short or your answers were too high-level. Rerun with more specific answers — names, examples, concrete preferences.</li>
+<li><strong>Claude defaults still showing through.</strong> <code>About Me.md</code> alone isn't enough constraint for some patterns. M05's <code>writing-rules.md</code> is the explicit "Never" list that fixes this.</li>
+<li><strong>Cowork doesn't seem to be reading the brief.</strong> Check <code>&lt;vault&gt;/claude.md</code> contains the one-line pointer to <code>About Me.md</code>. If <code>claude.md</code> is empty or missing, Cowork won't follow through.</li>
+<li><strong><code>About Me.md</code> was written to the wrong location.</strong> It should be at the vault root (<code>&lt;vault&gt;/About Me.md</code>), not in a subfolder. If Claude wrote it elsewhere, move it by hand or re-prompt with the explicit path.</li>
+<li><strong>Claude mixes project-specific and general tone.</strong> Project <code>claude.md</code> overrides (M12) should be explicit deviations, not full restatements. The chief-of-staff brief is your default; project files override only when needed.</li>
 </ul>
       </div>
     </div>

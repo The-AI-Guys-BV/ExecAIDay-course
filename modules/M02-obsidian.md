@@ -2,153 +2,170 @@
 
 ## Why this module matters
 
-Obsidian is your knowledge layer — free, local-first, and the same files Cowork reads. Daily notes, references, capture, all linked via `[[wikilinks]]`. Once Obsidian is open on the vault you mounted in M01, Claude can read and write every note in there from Cowork.
+You have a vault — a folder of plain markdown files. Obsidian is the viewer. This module is your first real look at the knowledge layer you'll spend the rest of the workshop populating. No Cowork yet, no Claude prompts — just open Obsidian, walk the folder structure, get oriented. M03 connects Claude to it.
 
 ## What you'll do
 
-- Open Obsidian on the vault you mounted in M01 — same files Cowork sees.
-- Use Claude (from your existing Workshop Cowork Project, where the vault is mounted) to write directly into your vault — journal entries, edits, summaries.
-- Optionally: create a second Cowork Project that mounts **only** the vault, or a part of the vault, for focused knowledge work.
+- Open Obsidian on the vault folder (placed there by your assistant before the workshop).
+- Walk the folder structure — about-me/, Daily Notes/, References/, Inbox/, plus a root claude.md.
+- Read three files to get oriented.
+- Understand what Obsidian is good for and what it isn't.
 
 ---
 
 ## Introduction
 
-You have a vault. It's a folder of plain-text notes. Cowork reads and writes them. Obsidian renders them as a knowledge graph with bidirectional links, search, and a navigable file tree.
+Your vault is a folder. Inside the folder are `.md` files (markdown — plain text with light formatting). Obsidian renders those files with link previews, a graph view, and a navigable file tree. That's it.
 
-**Role split, important.** Cowork is the active layer — it creates files, edits files, runs skills, builds artifacts. Obsidian is the viewer — it shows you what's in the vault, in a UI that's pleasant to read in. **You don't install Obsidian plugins.** Anything you'd want a plugin for (a dashboard, a calendar overview, a daily-note workflow), you build as a live artifact in Cowork instead. The vault stays plain markdown that any tool can read.
+You don't install Obsidian plugins. Anything you'd want a plugin for — a dashboard, a calendar overview, a daily-note workflow — you'll build as a live artifact in Cowork (M08) or as a Claude-driven workflow once Claude is connected to the vault (M03 onward). The vault stays plain markdown that any tool can read. That's the point: durable, portable, future-proof.
 
-The three-layer model from M01:
-- **Cowork folders = work files** (project folders, bounded work).
-- **Vault GTD = task management** (what you're doing — files in `<vault>/gtd/`).
-- **Obsidian = knowledge** (what you know — research, daily reflection, references).
+The role split, important:
 
-This module sets up the third layer. Obsidian is one tool; you'll have it open on a second monitor or alongside Cowork.
+- **Obsidian** is the **viewer**. Browse, read, edit by hand.
+- **Cowork** (starting M03) is the **active layer**. Read, write, query, generate.
+- **Same files**. Both apps see the same vault folder. Edit on either side; the other re-renders.
+
+You'll keep Obsidian open on a second monitor or alongside Cowork for the rest of the workshop. Most days you'll let Claude do the writing in Cowork; you watch the vault re-render in Obsidian and edit by hand when you want a tactile fix.
 
 ## Beginner / Getting Started
 
 ### Open Obsidian on your vault
 
-Open Obsidian. First time: select the vault folder (the same folder you mounted in M01 as your knowledge folder).
+Open Obsidian. First time:
 
-You'll see:
-- The file browser on the left with the folder structure: `about-me/`, `Daily Notes/`, `References/`, `Inbox/`, plus a root `claude.md`.
-- The current open note in the main pane.
-- The graph view (icon top-right, shape varies by Obsidian version) showing how notes link.
+1. Click **Open folder as vault** (or **Open** then **Browse for vault**, depending on Obsidian version).
+2. Browse to your vault folder. Your assistant placed it inside your cloud-sync app (Dropbox / OneDrive / Google Drive / iCloud Drive). The path is something like `~/Dropbox/Workshop` or `~/OneDrive - <Company>/Workshop`.
+3. Select the vault folder. Click Open.
 
-### Your vault IS a Cowork project
+You'll see Obsidian open onto your vault with:
 
-The Cowork Project you made in M01 already mounts your vault. That means **Claude can read every note in your vault and write back to any of them.** Your vault isn't a passive archive — it's a workspace Claude operates on directly.
+- **The file browser** on the left, showing the vault's folder structure.
+- **The center pane**, currently empty or showing a starter note.
+- **The graph view icon** (top-right or in the right sidebar) — click later to see how notes link.
 
-Same files, two interfaces. Edit a file in Obsidian; Cowork sees the edit on next read. Ask Claude in Cowork to write something; Obsidian re-renders the change live (file watching).
+### Walk the folder structure
 
-Try a few of these in Cowork now:
+In the file browser on the left, click each folder once and look at what's inside:
 
-```
-Write a 5-line journal entry about how the workshop is going so far,
-in journal voice. Save to today's daily note in my vault.
-```
+- **about-me/** — your personal knowledge base. Empty placeholders today. M04 populates `About Me.md` at the vault root. M05 fills in the rest of `about-me/`.
+- **Daily Notes/** — dated notes (e.g., `2026-04-30.md`). Where reflection and capture lands. Probably empty today.
+- **References/** — durable reference material. Brand assets, person bios, tool docs. Likely empty or with placeholder subfolders.
+- **Inbox/** — quick captures that haven't been processed. The GTD inbox lives here (covered in M14).
+- **claude.md** at the vault root — a one-line system file Cowork reads. M04 sets it up properly.
 
-```
-Read all my notes in <vault>/References/ and tell me what topics
-I have the most material on.
-```
+Most folders are empty on Day 1. They fill up over the workshop.
 
-```
-Open <vault>/About Me.md and tighten the section on stakeholders —
-remove repetition, keep my voice.
-```
+### Read three files
 
-Each of those writes into your vault. Watch Obsidian re-render.
+In the file browser:
 
-**Optional second Cowork Project — "Vault only".** Some people prefer a dedicated Cowork Project that mounts ONLY the vault (no work folder), used for vault-focused work — knowledge curation, journaling, references. Create it in Cowork → New Project → mount the vault only. Use it when you want Claude focused on knowledge, not project work.
+1. Open the vault root README (if there's one) or `About Me.md` (if it exists as a placeholder).
+2. Open one note in `References/` if anything's there.
+3. Try to open today's daily note in `Daily Notes/` — probably doesn't exist yet, that's fine. Note the empty folder.
 
-You'll see live editing again in the exercise at the end.
+The point: see that these are plain markdown files. Obsidian is just a renderer.
 
 ### Obsidian basics
 
-- `Cmd/Ctrl + O` — open quick-switcher to find any note.
-- `[[note name]]` while typing — creates a wikilink to another note. Click it to navigate.
-- Tags `#tag` for cross-cutting categories.
-- Daily notes — your `<vault>/Daily Notes/` folder holds dated notes (e.g., `2026-04-29.md`). Navigate by date in the file browser, or use `Cmd/Ctrl + O` and search the date.
-- Graph view — visualize how your notes link. Becomes meaningful after weeks of use.
+The four shortcuts that matter on Day 1:
+
+- `Cmd / Ctrl + O` — open quick-switcher to find any note by name.
+- `[[note name]]` while typing in any note — creates a wikilink to another note. Click it to navigate.
+- `#tag` — for cross-cutting categories. Use sparingly; folders are the primary organizer.
+- **Graph view** — visualize how your notes link. Becomes meaningful after weeks of use, not on Day 1.
+
+### What Obsidian is good for
+
+- Browsing the vault visually.
+- Reading what Claude wrote.
+- Hand-editing notes when you want a tactile fix.
+- Quick search across the vault.
+
+### What Obsidian isn't for
+
+- **Generating content** → use Claude in Cowork (M03 onward).
+- **Querying across files** → ask Claude ("find every note that mentions X").
+- **Daily routines** → build live artifacts (M08, M15).
+- **Task management** → use the GTD system (M14).
+
+When you find yourself wanting an Obsidian plugin to do something, the answer is almost always "build it in Cowork instead." Skip the plugin marketplace.
+
+## Intermediate
+
+### The cloud-sync requirement
+
+Your vault sits inside Dropbox / OneDrive / Google Drive / iCloud Drive. That's required, not optional:
+
+- **Backup** — if your laptop dies, your vault is in the cloud.
+- **Mobile** — your phone reaches the same files (M13 covers Dispatch for mobile capture into the vault).
+- **Multi-machine** — switch laptops, the vault follows.
+
+Verify: open Finder (Mac) or File Explorer (Windows), navigate to your vault. The folder should show your cloud-sync app's status icon (green check, sync arrow, etc.). If it doesn't, the vault is in the wrong location — flag your assistant.
+
+### Wikilinks and the graph view
+
+Wikilinks are Obsidian's killer feature. Type `[[` in any note and Obsidian autocompletes from existing notes. Click the link to navigate to that note. The graph view shows everything connected.
+
+This becomes powerful when Claude builds the links for you. After M03 + M04, you'll be able to ask Claude things like: "link everyone in my About Me to their bio in `References/people/`." Claude inserts wikilinks across multiple files. The graph view lights up.
+
+For now, the graph is mostly empty. That's correct — knowledge structures take weeks of work to emerge.
 
 ## Advanced
 
-### Create a new Cowork Project with your vault (or part of it)
+### Why a vault, not Notion / Roam / Apple Notes
 
-The Workshop Cowork Project from M01 mounts your **whole** vault plus your work folder. That's the general-purpose project. Sometimes you want a Cowork Project scoped to your vault only, or to a slice of it.
+- **Plain text, durable.** Open in any editor. Lives forever. Survives Obsidian going out of business.
+- **Local first.** Your data on your disk. Cloud sync is your choice (Dropbox, OneDrive, etc.), not Obsidian's.
+- **Cowork-friendly.** Claude reads markdown natively. No API gymnastics, no export step.
+- **Linkable.** Wikilinks beat tags for actual knowledge structure.
+- **Portable.** Move the folder to another tool any time. Nothing's locked in.
 
-**How to create one:**
+### When you'd open the vault in something other than Obsidian
 
-1. In Cowork, top-left of the sidebar, click **+ New Project**.
-2. Name it. Examples: "Vault" (whole vault), "Sales strategy" (one Areas subfolder), "Board notes" (References subfolder), "Journaling" (Daily Notes only).
-3. Click **Mount folder** (or the equivalent in the New Project dialog).
-4. Pick the folder:
-   - **Whole vault** — select the vault root folder (the one Obsidian opens onto).
-   - **Part of the vault** — drill into the vault and select a subfolder, e.g., `<vault>/Areas/Sales-strategy/` or `<vault>/References/Customers/`.
-5. Optionally mount additional folders (a project folder from your work folder, the shared team folder, etc.).
-6. Save.
+- A different markdown editor (iA Writer, Typora) — fine, same files.
+- VS Code — useful for editing `claude.md` or `about-me/` files with code-style controls.
+- The terminal — `cd` into the vault, `ls`, `cat`, `grep`. The vault is just a folder.
 
-You now have a second Cowork Project. Switch between projects with the project switcher (top-left of the sidebar).
-
-### How vault + Cowork Project work together
-
-A Cowork Project is a **scope**: it tells Claude which folders to consider. Inside that scope, Claude:
-
-- **Reads every file** in the mounted folder(s).
-- **Writes to any file** when you ask. (`/capture`, an artifact that saves to a file, "edit this note" prompts — all land in the mounted folders.)
-- **Reads `claude.md` at every level.** Closer-to-the-file wins. So if you mount `<vault>/Areas/Sales-strategy/`, Claude reads `<vault>/claude.md` (your About Me pointer), then `<vault>/Areas/claude.md` (if it exists), then `<vault>/Areas/Sales-strategy/claude.md`. You can drop a `claude.md` into a subfolder to give Claude project-specific guidance scoped to that area.
-- **Has its own session memory.** Each Cowork Project keeps a separate `memory.md` of patterns Claude has learned. The Workshop project doesn't share memory with your Vault project.
-
-**Picking a scope:**
-
-- **Whole vault mounted** — for general knowledge work, journaling, cross-vault queries ("summarize everything I have on Sales").
-- **Subfolder mounted** — for focused work where you don't want Claude pulling unrelated vault content into context. Example: a "Board notes" Cowork Project mounting only `<vault>/Areas/Board/` so Claude doesn't pull from your Sales notes.
-- **Vault + work folder** — the M01 Workshop pattern. Most flexible. Claude can pull a meeting note from the vault into a project deliverable in the work folder.
-- **Vault + shared team folder** — for collaborative work where you want personal vault context plus shared materials. (Covered in M17.)
-
-### What stays in the vault, what goes in the work folder
-
-Quick test for where to write:
-- **Permanent knowledge** (a new fact, a person's bio, a meeting note) → vault.
-- **Bounded deliverable** (a memo for the Q3 board, a script for an investor call) → project folder in the work folder.
-- **Today's reflection / capture / loose note** → vault Daily Notes or vault Inbox.
-
-Claude reads both folders in the Workshop project. The line between vault and work folder is YOUR discipline, not Cowork's. Mount accordingly.
+You'll keep Obsidian as the primary viewer because the graph + linking is what matters most. But the vault doesn't depend on Obsidian — that's the durability play.
 
 ---
 
 ## Try this
 
-In Cowork:
+Open Obsidian. Browse to `Daily Notes/`. Create today's daily note:
 
-```
-Write a paragraph reflecting on what you've learned in the workshop so far.
-Save it to today's daily note in my vault. Use journal voice — first person, reflective, brief.
-```
+- Right-click `Daily Notes/` → **New note** (or use the "Today's daily note" button if your version has one).
+- Name it today's date in `YYYY-MM-DD` format (e.g., `2026-04-30.md`).
+- Write three lines:
+  1. What you walked into the workshop hoping to get out of it.
+  2. One thing you're skeptical about.
+  3. One thing you're curious about.
 
-Claude reads `Daily Notes/claude.md` (which says journal voice), writes the paragraph, saves to `<vault>/Daily Notes/<today>.md`.
-
-Watch Obsidian. The note updates live in front of you.
+Don't make it polished. This is your private notebook. M03 connects Claude to this same file — you'll see Claude read it, summarize it, and add to it.
 
 ## Verification checkpoint
 
-In Cowork:
+In Obsidian's file browser, expand every folder in the vault. You should see:
 
-```
-What's in my Daily Notes folder for the past 7 days?
-```
+- `about-me/` — possibly with placeholder files.
+- `Daily Notes/` — with today's note if you created one.
+- `References/` — empty or with placeholder subfolders.
+- `Inbox/` — empty.
+- `claude.md` at the vault root.
 
-Expected: Claude lists files (probably just today's, plus any pre-existing). If Claude can't find `Daily Notes/`, the vault didn't mount correctly — check M01.
+If any folder is missing, your assistant misplaced the starter content — flag them. They fix it now.
 
 ## Common issues
 
-- **Obsidian doesn't see the files Claude wrote** — Obsidian uses file watching; sometimes needs a manual refresh (right-click the file browser → Refresh).
-- **Vault feels empty** — that's correct on Day 1. Content accumulates over weeks.
+- **Obsidian opens onto a different vault.** File → Open Vault → pick your workshop vault folder. Obsidian remembers vaults; if you previously opened a different one, you might be looking at it.
+- **No `claude.md` visible.** Some Obsidian themes hide files starting with "claude" because of dot-file patterns. Check via the file system (Finder / Explorer) — `claude.md` should be there. M04 will rewrite it anyway, so don't worry about its content right now.
+- **The vault feels empty.** That's correct on Day 1. Content accumulates over the workshop and the months that follow.
+- **Vault path doesn't show a cloud-sync status icon.** The vault is outside the cloud-sync folder. Move it inside — flag your assistant.
 
 ## References
 
 - `templates/vault-starter/` — what was scaffolded into your vault.
-- M04 — writing the chief-of-staff brief in Obsidian.
-- M16 — meeting notes that land in Daily Notes.
+- M03 — connect Claude to the vault by creating your first Cowork Project.
+- M04 — write the chief-of-staff brief into `About Me.md`.
+- M05 — companion knowledge files (`about-me/long-form.md`, `about-me/writing-rules.md`, `References/`).
+- M14 — the GTD system lives in the vault.

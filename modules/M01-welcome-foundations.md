@@ -2,14 +2,13 @@
 
 ## Why this module matters
 
-You start the workshop with a working Cowork Project, a tutor (`/teach` — type that into Cowork and it walks any module of this course with you, on demand), and the vocabulary to follow everything that comes next. Without this hour, the rest of the workshop is button-pressing without understanding why each step matters. With it, every later module slots into a structure you understand.
+You start the workshop with a verified install, a tutor (`/teach` — type that into Cowork and it walks any module of this course with you, on demand), and the vocabulary to follow everything that comes next. Without this hour, the rest of the workshop is button-pressing without understanding why each step matters. With it, every later module slots into a structure you understand.
 
 ## What you'll do
 
-- Verify your install (Cowork, Obsidian, the ExecAIDay plugin, your connectors).
-- Create your workshop Cowork Project and mount your two folders (vault + work folder).
-- Confirm `/teach` is available — the plugin install put it in place — and try it for the first time.
-- Walk through 18 foundational concepts inside the workspace you just built.
+- Verify your install — Cowork, Obsidian, the ExecAIDay plugin, your connectors, and the Office add-ins are all in place.
+- Confirm `/teach` is available and try it for the first time.
+- Walk through 18 foundational concepts so the vocabulary in later modules lands.
 - See the hallucination demo and learn to calibrate trust.
 
 ---
@@ -43,45 +42,49 @@ You start the workshop with a working Cowork Project, a tutor (`/teach` — type
     4. Click **Add**. Approve the prompts. The Claude sidebar appears.
     5. Sign in with the same Anthropic account you use for Cowork.
     6. **Repeat for Excel and PowerPoint** — open each app, same Insert → Get Add-ins → search "Claude by Anthropic" → Add → sign in. The Claude icon should appear in the ribbon of all three apps.
-- **A starter vault and a starter work folder, in a cloud-synced location.** Both folders sit inside a cloud sync app — Dropbox, OneDrive, Google Drive, or iCloud Drive (whichever your org uses). This is required, not optional: cloud sync is how the vault stays backed up, accessible from your phone for Dispatch (M13), and durable across machines. Your assistant has placed them at the right path. You'll mount both in your Cowork Project below.
+- **A starter vault and a starter work folder, in a cloud-synced location.** Both folders sit inside a cloud sync app — Dropbox, OneDrive, Google Drive, or iCloud Drive (whichever your org uses). This is required, not optional: cloud sync is how the vault stays backed up, accessible from your phone for Dispatch (M13), and durable across machines. Your assistant has placed them at the right path. M03 mounts the vault in your first Cowork Project; M12 mounts the work folder in a second one.
 
-This module's job is to confirm all that has given you a usable workspace, and to give you the words for the next 15 modules. Most of what we cover here is vocabulary — concepts you'll hear used the whole workshop. We're not building anything yet; we're orienting.
+This module's job is to confirm all that has given you a usable workspace, and to give you the words for the next 16 modules. Most of what we cover here is vocabulary — concepts you'll hear used the whole workshop. We're not building anything yet; we're orienting.
 
-The single most important thing in this module: by the end, you'll have a Cowork Project (a workspace) with both your folders mounted, and `/teach` will walk you through any future module on command. That's your safety net. If you ever miss something or want to revisit, `/teach M04` or `/teach Skills` is permanent office hours.
+The single most important thing in this module: by the end, your install is verified and `/teach` works — your safety net for the rest of the workshop. M02 then opens Obsidian on your vault. M03 creates your first Cowork Project mounted to that vault. From there, every module slots in.
 
 ## Beginner / Getting Started
 
-### Step 1 — Verify install
+### Step 1 — Verify Cowork
 
-In your Claude Desktop, switch to the **Cowork** tab. You should see a sidebar on the left with sections including Customize, Plugins, your Cowork Projects.
+In Claude Desktop, switch to the **Cowork** tab. You should see a sidebar on the left with sections including **Customize**, **Personal plugins**, and **Cowork Projects** (likely empty for now).
 
-If you don't see the Cowork tab at all: tell your assistant.
+If you don't see the Cowork tab at all: tell your assistant — they update or reinstall Claude Desktop now.
 
-### Step 2 — Create the workshop Cowork Project
+### Step 2 — Verify the rest of the install
 
-In the Cowork sidebar, click **+ New Project** (or your equivalent UI element — your assistant will point it out).
+Quick checks, in this order:
 
-Name it whatever feels natural. "Workshop" is fine. "Cowork Course." Whatever.
+- **Obsidian** — open Obsidian. It should already be opened on your vault folder, or be ready to open via "Open existing vault." Don't navigate around yet — that's M02.
+- **Chrome / Brave / Edge** — open your Chromium browser. Look for the **Claude** icon in your toolbar (top-right area). If pinned, clicking it opens the Claude side panel.
+- **The ExecAIDay plugin** — back in Cowork, open **Customize → Personal plugins**. The `execaiday` plugin should be listed and marked **Installed**.
+- **Connectors** — in **Customize → Connectors**, every service you use (Gmail or M365, Calendar, Drive, Slack, plus custom apps) should show **Connected** with a green check.
+- **Office add-ins** — open Word, Excel, and PowerPoint. In each app's ribbon, the Claude icon should be visible. Clicking it opens the Claude sidebar inside the app.
 
-Mount both folders:
-- Your **Obsidian vault** (knowledge folder).
-- Your **work folder** (projects parent).
-
-Both mounted in the same Cowork Project. This is load-bearing — the architecture relies on Cowork seeing both folders together.
+Anything missing or red: flag your assistant. They install or repair it now and you keep moving. We don't proceed until every check is green.
 
 ### Step 3 — Confirm `/teach` is available
 
-The plugin install in Section 1 placed `/teach` plus 25 other skills onto your machine. Confirm by typing `/teach` (no arguments) in Cowork. You should see the list of 16 modules.
+The plugin install put `/teach` plus 25 other skills onto your machine. Confirm by typing `/teach` (no arguments) in any Cowork chat.
 
-If you don't see it: the plugin install didn't complete. Tell your assistant — they fix it now.
+You should see a list of 17 modules ("M01 — Welcome + Foundations," "M02 — Open Obsidian, see your vault," etc.).
+
+If you get "Unknown command": the plugin install didn't complete. Tell your assistant — they reinstall it now from the marketplace.
 
 ### Step 4 — First teach demo
 
-Type `/teach M06`. Claude reads the M06 module file and starts walking it. Don't actually do M06 now (you'll do it next anyway), but see how `/teach` opens, lists the section, and waits for you. Type "exit" to close out.
+Type `/teach M06`. Claude reads the M06 module file and starts walking it. Don't actually do M06 now (you'll do it later in the workshop), but see how `/teach` opens the module, announces a section, and waits for you. Type `exit` to close out.
+
+That's your safety net. From now on, anytime you want to revisit any module — during the workshop or months after — `/teach <module>` is permanent office hours.
 
 ## Intermediate
 
-The 18 basic concepts. We'll go through them inside the Cowork Project you just built — every concept becomes concrete because the workspace they describe is the one you're sitting in.
+The 18 basic concepts. We walk them in the room, with Cowork open. Every concept becomes concrete in later modules — for now, the goal is recognition, not mastery.
 
 Don't try to memorize. Recognize. You'll re-encounter every concept in later modules with use cases.
 
@@ -121,22 +124,23 @@ For full definitions, see the References section at the end of this module. `/te
 
 ## Try this
 
-Type `/teach` (no arguments). Claude lists the 16 modules. You pick one. Claude walks it patiently, one section at a time. The hallucination demo follows immediately as a trust-calibration moment — your instructor demonstrates Claude making something up confidently, then you watch it self-correct when given evidence.
+Type `/teach` (no arguments). Claude lists the 17 modules. You pick one. Claude walks it patiently, one section at a time. The hallucination demo follows immediately as a trust-calibration moment — your instructor demonstrates Claude making something up confidently, then you watch it self-correct when given evidence.
 
 ## Verification checkpoint
 
-After the in-room work, a one-minute check: type the prompt below into your Cowork Project.
+A one-minute check at the end of the module:
 
 ```
-What folders am I currently mounting in this Cowork Project?
+/teach
 ```
 
-Expected: Claude lists both your vault and your work folder by name (the names you chose). If either is missing, the mount didn't take — flag your assistant.
+Expected: Claude lists the 17 modules of this course. If you get "Unknown command" or only a partial list, the plugin install didn't complete — flag your assistant.
 
 ## Common issues
 
-- **Cowork Project doesn't see one of the folders.** Re-mount it; confirm the path. Some MDM-managed laptops require explicit folder permission.
 - **`/teach` doesn't appear when you type it.** The plugin didn't install or didn't load. Restart Cowork. If still missing, your assistant will reinstall the plugin from the marketplace.
+- **A connector shows "Connected" but Claude can't query it.** Re-authenticate from Customize → Connectors. The token may have expired between pre-install and the workshop.
+- **Office add-in is installed but the Claude icon doesn't appear in the ribbon.** Close and reopen the Office app. If still missing, the add-in needs to be re-pinned — Insert → My Add-ins → pin Claude.
 
 ## References
 

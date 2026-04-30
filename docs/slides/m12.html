@@ -21,14 +21,14 @@
       <div class="title-eyebrow">Connect</div>
       <h1 class="title-num">M12</h1>
       <h2 class="title-name">Work folder + /new-project</h2>
-      <p class="title-outcome">Learn the two folder shapes: project folders (bounded work, three buckets) vs stream folders (recurring, flat).</p>
+      <p class="title-outcome">Create your second Cowork Project, named "Workshop." Mount your work folder and your vault.</p>
     </div>
   </section>
 
   <section class="slide slide-why">
     <div class="slide-inner">
       <div class="slide-eyebrow">Why this matters</div>
-      <p class="slide-lede">This is the structural module. Two folder shapes, two senses of "project," and one file (<code>claude.md</code>) that ties everything to context. Get this right and the rest of the workshop slots in. Get it wrong and you'll be confused about why Claude knows some things and not others.</p>
+      <p class="slide-lede">This is the structural module. You'll create your second Cowork Project ("Workshop"), learn two folder shapes, two senses of "project," and one file (<code>claude.md</code>) that ties everything to context. Get this right and the rest of the workshop slots in. Get it wrong and you'll be confused about why Claude knows some things and not others.</p>
     </div>
   </section>
 
@@ -37,8 +37,9 @@
       <div class="slide-eyebrow">What you'll do</div>
       <div class="slide-list">
         <ul>
-<li>Learn the two folder shapes: project folders (bounded work, three buckets) vs stream folders (recurring, flat).</li>
+<li>Create your second Cowork Project, named "Workshop." Mount your work folder and your vault.</li>
 <li>Disambiguate the two senses of "project": Cowork Project (the app's workspace) vs project folder (the file-system shape).</li>
+<li>Learn the two folder shapes: project folders (bounded work, three buckets) vs stream folders (recurring, flat).</li>
 <li>Run <code>/new-project</code> for the first time — scaffold the workshop's first project folder (<code>course/</code>) and watch the synthesis interview produce a tailored <code>claude.md</code>.</li>
 <li>Pull workshop content from the plugin into <code>course/Source Materials/</code> — your first content move.</li>
 </ul>
@@ -49,15 +50,51 @@
   <section class="slide slide-bigidea">
     <div class="slide-inner">
       <div class="slide-eyebrow">The big idea</div>
-      <p class="slide-bigidea-p">Cowork has built-in concepts; we have folder conventions; the two interlock. This is how:</p>
-<p class="slide-bigidea-p">That's the whole architecture. M12 makes it concrete.</p>
+      <p class="slide-bigidea-p">Until now you've worked entirely in your "Vault" Cowork Project (created in M03). That project mounts only the vault — knowledge, About Me, References. This module introduces a second Cowork Project for project work.</p>
+<p class="slide-bigidea-p">The architecture has two layers:</p>
     </div>
   </section>
 
   <section class="slide slide-section">
     <div class="slide-inner">
       <div class="slide-eyebrow">Beginner</div>
-      <h3 class="slide-section-subtitle">The two folder shapes</h3>
+      <h3 class="slide-section-subtitle">Step 1 — Create your second Cowork Project</h3>
+      <div class="slide-section-body">
+        <p>In Cowork, click <strong>+ New Project</strong> (the same button you used in M03 to create the Vault project).</p>
+<ul>
+<li>Name it: <strong>Workshop</strong>.</li>
+<li>Click <strong>Create</strong>.</li>
+</ul>
+<p>The new project opens. You're in a different scope from your Vault project — empty chat history, no folders mounted yet.</p>
+<p>You can switch back to Vault any time via the project switcher at the top of the Cowork sidebar. From now on you'll move between two projects: <strong>Vault</strong> for personal knowledge work, <strong>Workshop</strong> for project deliverables.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Beginner</div>
+      <h3 class="slide-section-subtitle">Step 2 — Mount the work folder + the vault</h3>
+      <div class="slide-section-body">
+        <p>In the new Workshop project, find <strong>Mounted folders</strong>:</p>
+<ol>
+<li>Click <strong>+ Add folder</strong>. Browse to your work folder (placed there by your assistant before the workshop, inside your cloud-sync app). Confirm.</li>
+<li>Click <strong>+ Add folder</strong> again. Browse to your vault. Confirm.</li>
+</ol>
+<p>The Workshop project now mounts both folders. Why both:</p>
+<ul>
+<li><strong>Work folder</strong> — bounded project work happens here (Source Materials / Working Files / Deliverables).</li>
+<li><strong>Vault</strong> — your About Me brief, <code>about-me/</code> companions, and <code>References/</code> come along for the ride. Cross-folder workflows depend on this — a project Deliverable that pulls a stakeholder bio from <code>References/people/</code> only works if the vault is mounted in the same Cowork Project.</li>
+</ul>
+<p>The Vault project still mounts only the vault. The Workshop project mounts both. Different scopes, different uses, intentional separation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Beginner</div>
+      <h3 class="slide-section-subtitle">Step 3 — The two folder shapes</h3>
       <div class="slide-section-body">
         <p><strong>Project folders</strong> (bounded work with deliverables):</p>
 <pre><code>
@@ -84,11 +121,11 @@
   <section class="slide slide-section">
     <div class="slide-inner">
       <div class="slide-eyebrow">Beginner</div>
-      <h3 class="slide-section-subtitle">The two senses of "project"</h3>
+      <h3 class="slide-section-subtitle">Step 4 — The two senses of "project"</h3>
       <div class="slide-section-body">
-        <p><strong>Cowork Project</strong> = the app workspace concept (the thing you made in M01). UI-level. Mounts folders. Has its own memory.</p>
-<p><strong>Project folder</strong> = the file-system shape inside your work folder. Folder with the bucket structure.</p>
-<p>These collide on the word "project." Both must be used together: a Cowork Project mounts your work folder, which contains your project folders.</p>
+        <p><strong>Cowork Project</strong> = the app workspace concept (the things you made in M03 and just now in Step 1). UI-level. Mounts folders. Has its own memory and conversation history. You have two: Vault and Workshop.</p>
+<p><strong>Project folder</strong> = the file-system shape inside your work folder. A folder with the bucket structure (Source Materials / Working Files / Deliverables) for one bounded body of work. You'll create your first one next, in Intermediate.</p>
+<p>These collide on the word "project." Both must be used together: a Cowork Project ("Workshop") mounts your work folder, which contains your project folders.</p>
       </div>
     </div>
   </section>
@@ -96,9 +133,9 @@
   <section class="slide slide-section">
     <div class="slide-inner">
       <div class="slide-eyebrow">Beginner</div>
-      <h3 class="slide-section-subtitle">Why every folder has <code>claude.md</code> + <code>memory.md</code></h3>
+      <h3 class="slide-section-subtitle">Step 5 — Why every folder has <code>claude.md</code> + <code>memory.md</code></h3>
       <div class="slide-section-body">
-        <p>So Cowork has per-folder context. The vault root <code>claude.md</code> is a one-line pointer to your chief-of-staff brief in your vault (M04 sets this up). The work-folder root <code>claude.md</code> is your work-context defaults. Each project folder's <code>claude.md</code> adds project-specific overrides.</p>
+        <p>So Cowork has per-folder context. The vault root <code>claude.md</code> is a one-line pointer to your chief-of-staff brief (M04 set this up). The work-folder root <code>claude.md</code> is your work-context defaults. Each project folder's <code>claude.md</code> adds project-specific overrides.</p>
 <p>Closer-to-the-file wins. So when Claude works on a file at <code>[work-folder]/q3-deck/Working Files/draft.md</code>, it reads in this order, with later files overriding earlier ones:</p>
 <ol>
 <li><code>[vault]/claude.md</code> → which points to <code>[vault]/About Me.md</code> (chief-of-staff brief).</li>
@@ -115,7 +152,7 @@
       <div class="slide-eyebrow">Intermediate</div>
       <h3 class="slide-section-subtitle">Run <code>/new-project</code> for the first time</h3>
       <div class="slide-section-body">
-        <p>In Cowork:</p>
+        <p>Make sure you're in your <strong>Workshop</strong> Cowork Project (project switcher, top-left). Then in chat:</p>
 <pre><code>
 /new-project course
 </code></pre>
@@ -161,9 +198,13 @@ Pull the welcome doc and the how-to-start doc from this plugin into course/Sourc
       <div class="slide-eyebrow">Advanced</div>
       <h3 class="slide-section-subtitle">Multi-Cowork-Project patterns</h3>
       <div class="slide-section-body">
-        <p>Post-workshop, you'll create more Cowork Projects — one per major body of work. Each new Cowork Project mounts your vault + a relevant subset of your work folder.</p>
-<p>The default: one Cowork Project named "Workshop" (the one you have now), mounting everything.</p>
-<p>For sensitive work (M&A, exec personnel): a separate Cowork Project that does NOT mount the vault — so the chief-of-staff brief and personal context don't cross-pollinate. Vault-less Cowork Projects are the security pattern.</p>
+        <p>You now have two Cowork Projects: <strong>Vault</strong> (vault only, M03) and <strong>Workshop</strong> (work folder + vault, this module). Post-workshop, you'll likely add a few more — one per major body of work, each scoped to a relevant subset of your folders.</p>
+<p>The three patterns you'll use:</p>
+<ul>
+<li><strong>Vault</strong> — vault only. Personal knowledge, journaling, chief-of-staff brief, References lookups. Created in M03.</li>
+<li><strong>Workshop</strong> — work folder + vault. General project work; the one you'll spend most of your week in. Created in this module.</li>
+<li><strong>Sensitive (vault-less)</strong> — work folder or a specific project subfolder, <strong>without</strong> the vault mounted. For M&A, exec personnel, board confidential, or anything you want explicitly walled off from your About Me / personal context. The chief-of-staff brief doesn't apply here — Claude treats the work strictly within the project's scope.</li>
+</ul>
       </div>
     </div>
   </section>
@@ -171,7 +212,7 @@ Pull the welcome doc and the how-to-start doc from this plugin into course/Sourc
   <section class="slide slide-section">
     <div class="slide-inner">
       <div class="slide-eyebrow">Advanced</div>
-      <h3 class="slide-section-subtitle">Vault-less Cowork Projects</h3>
+      <h3 class="slide-section-subtitle">Creating the sensitive (vault-less) project</h3>
       <div class="slide-section-body">
         <p>Create a new Cowork Project. Mount only the work folder (or a specific project subfolder). Don't mount the vault. The chief-of-staff brief won't apply. Claude treats the work strictly within the project's context.</p>
 <p>Use case: a board-prep project that touches confidential financial data; you don't want personal notes crosslinked.</p>
@@ -182,10 +223,26 @@ Pull the welcome doc and the how-to-start doc from this plugin into course/Sourc
   <section class="slide slide-section">
     <div class="slide-inner">
       <div class="slide-eyebrow">Advanced</div>
-      <h3 class="slide-section-subtitle">Cross-folder workflows</h3>
+      <h3 class="slide-section-subtitle">Cross-folder workflows in the Workshop project</h3>
       <div class="slide-section-body">
-        <p>Within one Cowork Project mounting both folders, Claude can read both freely. So a daily note in the vault can reference a project's Working Files; a project's Deliverable can be summarized into a Daily Note for the day's reflection.</p>
-<p>This is where the architecture pays off. The two folders are different in shape but unified in scope (within a Cowork Project).</p>
+        <p>Within the Workshop project, both folders are mounted, so Claude can read both freely. So a daily note in the vault can reference a project's Working Files; a project's Deliverable can be summarized into a Daily Note for the day's reflection.</p>
+<p>This is where the architecture pays off. The two folders are different in shape but unified in scope (within the Workshop Cowork Project).</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Advanced</div>
+      <h3 class="slide-section-subtitle">When to use Vault vs Workshop</h3>
+      <div class="slide-section-body">
+        <p>Quick test for which Cowork Project to open:</p>
+<ul>
+<li>Writing a journal entry, reading a reference, updating About Me, querying knowledge → <strong>Vault</strong>.</li>
+<li>Running <code>/new-project</code>, building a deck or memo, working in Source Materials → <strong>Workshop</strong>.</li>
+<li>Pulling a vault reference into a deliverable (e.g., brand spec into a deck) → <strong>Workshop</strong> (because both folders are mounted).</li>
+<li>Sensitive work that shouldn't see your About Me → a third, vault-less Cowork Project.</li>
+</ul>
       </div>
     </div>
   </section>
@@ -195,7 +252,7 @@ Pull the welcome doc and the how-to-start doc from this plugin into course/Sourc
       <div class="slide-eyebrow">Try this</div>
       
       <div class="slide-try-body">
-        <p>Run <code>/new-project course</code> (or whatever name you prefer). Skill interviews you, scaffolds the folder, synthesizes a tailored <code>claude.md</code>, creates the GTD project entry as a vault file. First content pulled from this plugin into <code>course/Source Materials/</code>. You now have your first project folder, your first GTD project entry, and the muscle for <code>/new-project</code>.</p>
+        <p>In your <strong>Workshop</strong> Cowork Project, run <code>/new-project course</code> (or whatever name you prefer). The skill interviews you, scaffolds the folder, synthesizes a tailored <code>claude.md</code>, and creates the GTD project entry as a vault file. Then pull the first content from this plugin into <code>course/Source Materials/</code>. You now have your second Cowork Project, your first project folder, your first GTD project entry, and the muscle for <code>/new-project</code>.</p>
       </div>
     </div>
   </section>
@@ -204,7 +261,7 @@ Pull the welcome doc and the how-to-start doc from this plugin into course/Sourc
     <div class="slide-inner">
       <div class="slide-eyebrow">How you know it worked</div>
       <div class="slide-verify-body">
-        <p>After running <code>/new-project</code>, type:</p>
+        <p>After running <code>/new-project</code>, in your Workshop project, type:</p>
 <pre><code>
 What's in my course/ project folder right now? Read the claude.md.
 </code></pre>
@@ -218,9 +275,12 @@ What's in my course/ project folder right now? Read the claude.md.
       <div class="slide-eyebrow">If something breaks</div>
       <div class="slide-issues-body">
         <ul>
-<li><strong>Project folder name conflicts</strong> — skill prompts for a different slug.</li>
-<li><strong>Synthesized <code>claude.md</code> looks generic</strong> — the interview was too short; rerun with more detail in answers.</li>
-<li><strong>Bucket subfolders empty</strong> — that's correct; they ship empty per the architecture.</li>
+<li><strong>Workshop project doesn't see the vault.</strong> Both mounts must be in place for <code>/new-project</code> to write the matching GTD entry. Confirm in Mounted folders that both the work folder and the vault are listed and connected.</li>
+<li><strong><code>/new-project</code> ran but the GTD entry isn't in <code>&lt;vault&gt;/gtd/projects/</code>.</strong> The vault mount didn't take in the Workshop project. Re-mount the vault, then re-run <code>/new-project</code> (it'll detect the existing folder and write the missing GTD entry).</li>
+<li><strong>Project folder name conflicts.</strong> Skill prompts for a different slug. Pick one and retry.</li>
+<li><strong>Synthesized <code>claude.md</code> looks generic.</strong> The interview was too short; rerun with more detail in answers — specific stakeholders, concrete deadlines, explicit tone overrides.</li>
+<li><strong>Bucket subfolders empty.</strong> That's correct; they ship empty per the architecture. You'll fill Source Materials and Working Files as the project moves.</li>
+<li><strong>You're in the wrong Cowork Project.</strong> Look at the project switcher (top-left). If you're in Vault, switch to Workshop. <code>/new-project</code> won't scaffold correctly without the work folder mounted.</li>
 </ul>
       </div>
     </div>
