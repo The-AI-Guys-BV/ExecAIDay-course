@@ -27,7 +27,7 @@ If you're using Claude to draft a client communication, check whether your indus
 
 ## Generating "creative" content where authenticity matters
 
-A LinkedIn post about your personal experience hitting a $100M ARR milestone, written by Claude, is plagiarism of yourself. Use Claude to edit, sharpen, reorganize — not to manufacture the original voice. The chief-of-staff `claude.md` (M06) helps with this: Claude trained on YOUR voice writes more like you. Still, the source ideas should be yours.
+A LinkedIn post about your personal experience hitting a $100M ARR milestone, written by Claude, is plagiarism of yourself. Use Claude to edit, sharpen, reorganize — not to manufacture the original voice. The chief-of-staff `claude.md` (M07) helps with this: Claude trained on YOUR voice writes more like you. Still, the source ideas should be yours.
 
 ## Anything you wouldn't put in writing
 

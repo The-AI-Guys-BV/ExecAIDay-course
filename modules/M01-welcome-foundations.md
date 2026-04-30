@@ -16,20 +16,21 @@ You start the workshop with a working Cowork Project, a tutor (`/teach` — type
 
 ## Introduction
 
-Tools and accounts you need installed before the workshop starts. Each item below has the exact link to the installer or signup page. If anything is missing, tell your assistant — they install it now and you keep moving.
+**The software below should already be pre-installed on your machine before the workshop starts.** This list is here for reference, not as a live install task. The links are useful if you want to verify, reinstall, or find the official sources later. If any item is missing when you sit down, tell your assistant — they install it now and you keep moving.
 
 - **Claude Desktop with Cowork.** This is the workspace you'll spend the workshop in. Download from [claude.com/download](https://claude.com/download) for Mac or Windows. Sign in with your Anthropic Max account.
 - **Obsidian.** Free, local-first knowledge tool. Reads the same vault files Cowork sees. Download from [obsidian.md/download](https://obsidian.md/download).
+- **Claude in Chrome (browser extension).** Lets Claude operate on websites, portals, and dashboards directly from your browser. Install from the Chrome / Brave Web Store: [chromewebstore.google.com](https://chromewebstore.google.com/) — search "Claude". Sign in with the same Anthropic account.
 - **The ExecAIDay course plugin.** Provides `/teach` and the 19 GTD skills you'll use throughout the workshop. Marketplace URL: [github.com/The-AI-Guys-BV/ExecAIDay-course](https://github.com/The-AI-Guys-BV/ExecAIDay-course). To install inside Cowork:
     1. Open the **Customize** sidebar.
     2. **Add the marketplace first.** Click **+** to add a new personal marketplace, paste the URL above, confirm. Cowork syncs.
     3. **Then install the plugin.** Go to **Personal plugins** (not the Anthropic plugins section). The `execaiday` plugin is now in the list — click **Install**.
 - **Your connectors.** Gmail or M365, Calendar, Drive, Slack, plus your custom apps (Asana / Jira / Linear / SFDC / etc., depending on what you use). Authenticated and scoped to your account inside Cowork's **Customize → Connectors** panel.
-- **A starter vault and a starter work folder.** Already placed on your filesystem at the path your assistant gave you. You'll mount both in your Cowork Project below.
+- **A starter vault and a starter work folder, in a cloud-synced location.** Both folders sit inside a cloud sync app — Dropbox, OneDrive, Google Drive, or iCloud Drive (whichever your org uses). This is required, not optional: cloud sync is how the vault stays backed up, accessible from your phone for Dispatch (M12), and durable across machines. Your assistant has placed them at the right path. You'll mount both in your Cowork Project below.
 
 This module's job is to confirm all that has given you a usable workspace, and to give you the words for the next 15 modules. Most of what we cover here is vocabulary — concepts you'll hear used the whole workshop. We're not building anything yet; we're orienting.
 
-The single most important thing in this module: by the end, you'll have a Cowork Project (a workspace) with both your folders mounted, and `/teach` will walk you through any future module on command. That's your safety net. If you ever miss something or want to revisit, `/teach M06` or `/teach Skills` is permanent office hours.
+The single most important thing in this module: by the end, you'll have a Cowork Project (a workspace) with both your folders mounted, and `/teach` will walk you through any future module on command. That's your safety net. If you ever miss something or want to revisit, `/teach M07` or `/teach Skills` is permanent office hours.
 
 ## Beginner / Getting Started
 

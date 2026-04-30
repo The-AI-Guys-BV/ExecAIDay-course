@@ -1,8 +1,8 @@
-# M09 — Connectors
+# M10 — Connectors
 
 ## Why this module matters
 
-The jaw-drop arc. Inbox, drafts, calendar — your real data, in Cowork, working immediately. Up to here, the workshop was setup and orientation. M09 is where the system becomes useful in your actual workflow.
+The jaw-drop arc. Inbox, drafts, calendar — your real data, in Cowork, working immediately. Up to here, the workshop was setup and orientation. M10 is where the system becomes useful in your actual workflow.
 
 ## What you'll do
 

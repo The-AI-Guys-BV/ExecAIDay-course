@@ -40,7 +40,7 @@
 <ul>
 <li>Verify Word, Excel, PowerPoint add-ins.</li>
 <li>Run the cross-app chain: Excel analysis → PowerPoint slides → Word memo, all sharing context.</li>
-<li>Use template magic — your actual company PowerPoint template + Claude → on-brand slides matching your company style.</li>
+<li>Have Claude build you a PowerPoint that looks like your company's — by extracting the style from any recent branded deck (or, if you have nothing handy, from your brand colors + logo).</li>
 </ul>
 <h2>Introduction</h2>
 <p>You've used Word, Excel, PowerPoint for years. The Claude add-ins live INSIDE those apps. Open Word, click Claude in the ribbon, sidebar opens, you can ask Claude to help with the document.</p>
@@ -92,15 +92,39 @@ defensive.
 </code></pre>
 <p>Claude drafts. You review.</p>
 <p>The point: the conversation persisted. Claude remembered the Excel analysis when building the PowerPoint slides. Remembered the slide narrative when drafting the Word memo. No re-explaining the context three times.</p>
-<h3>Template magic</h3>
-<p>Your company has a PowerPoint template with specific fonts, colors, masters. Default Claude PPT output uses Claude's bland defaults. Template magic fixes this:</p>
-<p>In PowerPoint with your company template open:</p>
+<h3>Build a PowerPoint that looks like your company's</h3>
+<p>Default Claude PPT output is generic. To make it look like YOUR company's deck, point Claude at a previous deck and have it extract the style.</p>
+<p><strong>Use a recent branded deck as the style reference (recommended).</strong></p>
+<p>Every exec has a recent deck on their machine — a board update, an investor pitch, a strategy review. It already has your company colors, fonts, logo placement, and slide layouts baked in. Use it.</p>
+<ol>
+<li>Pick any recent on-brand deck. Doesn't have to be on-topic — only the styling matters.</li>
+<li>Open both that deck and your new (blank or topic-stub) deck in PowerPoint.</li>
+<li>With the Claude sidebar open in your new deck:</li>
+</ol>
 <pre><code>
-Build me 5 slides about [topic] using this template. Match the fonts, colors, and slide
-masters exactly.
+Open &lt;path-to-the-reference-deck&gt;.pptx. Extract the visual style:
+fonts, color palette, logo placement, header/footer treatment, slide layouts.
+Then build me a 5-slide deck on [topic] using exactly that style.
+Don't copy the content from the reference deck — only the look.
 </code></pre>
-<p>Claude reads the template's master slides, fonts, color palette, and produces slides that look like YOUR company's slides — not Claude's defaults.</p>
-<p>The output is recognizably yours. That's the felt moment.</p>
+<p>Claude reads the reference deck's slide masters, theme fonts, theme colors, logo position, and recreates them in the new deck. Output is recognizably yours — that's the felt moment.</p>
+<p><strong>No suitable deck handy? Fall back to brand specs.</strong></p>
+<p>If you genuinely have nothing to extract from, give Claude the brand directly:</p>
+<ol>
+<li>Get your brand colors as hex codes. Open your company brand guide or ask your assistant. Typical: a primary, a secondary, an accent. Example: <code>#0A2540</code>, <code>#00A86B</code>, <code>#F4F4F4</code>.</li>
+<li>Save your company logo somewhere Claude can read — PNG with transparent background, e.g., <code>&lt;vault&gt;/References/brand/logo.png</code>.</li>
+<li>In PowerPoint:</li>
+</ol>
+<pre><code>
+Build me a 5-slide deck on [topic]. Use my brand:
+- Primary color: #0A2540
+- Secondary: #00A86B
+- Accent: #F4F4F4
+- Logo: top-right of every slide. Source: &lt;vault&gt;/References/brand/logo.png.
+- Fonts: Inter for headings and body (system default if Inter isn't installed).
+- Tone: one bold takeaway per slide, one supporting data point, no clutter.
+</code></pre>
+<p><strong>Make this reusable.</strong> Save the prompt (either path) as a custom skill (M06). Then <code>/branded-deck &lt;topic&gt;</code> always uses the right reference deck or brand specs without retyping.</p>
 <h2>Advanced</h2>
 <h3>PowerPoint template reading</h3>
 <p>PowerPoint templates have:</p>
@@ -129,9 +153,8 @@ Suggest edits to this document as tracked changes. Don't apply them — just pro
 <h3>Available on which plans</h3>
 <p>Pro / Max / Team / Enterprise. Free plan does not include Office add-ins.</p>
 <p>The Word add-in launched April 2026, completing the suite. Excel and PowerPoint shipped earlier.</p>
-<h2>Try this — template magic</h2>
-<p>Your actual company PowerPoint template + Claude → on-brand slides matching your company's fonts, colors, and masters. The output looks like YOURS, not Claude's default.</p>
-<p>5 slides on a topic relevant to you, in your company's actual visual identity, . That's the felt moment.</p>
+<h2>Try this — branded deck</h2>
+<p>Pick a recent branded PowerPoint you have on hand (any topic, any age). Have Claude extract the visual style from it and build a 5-slide deck on a real topic of yours. The output looks like YOURS, not Claude's defaults: company colors, your logo placed correctly, on-brand fonts. That's the felt moment.</p>
 <h2>Verification checkpoint</h2>
 <p>After the cross-app chain:</p>
 <pre><code>
@@ -155,7 +178,7 @@ Suggest edits to this document as tracked changes. Don't apply them — just pro
   </div>
 
   <nav class="module-nav">
-    <a class="nav-link prev" href="m10.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M10 — Browser + Chrome</div></a>
+    <a class="nav-link prev" href="m10.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M10 — Connectors</div></a>
     <a class="nav-link next" href="m12.html"><div class="nav-link-label">Next →</div><div class="nav-link-title">M12 — Scheduled Tasks + Routines</div></a>
   </nav>
 </main>

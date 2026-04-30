@@ -159,7 +159,7 @@ Expected: Claude reads the most recent transcript file and lists decisions. If i
 
 ## References
 
-- M07 — Obsidian (vault is where transcripts often land).
+- M08 — Obsidian (vault is where transcripts often land).
 - M13 — GTD in your vault (commitments → next-actions, follow-ups → waiting-for).
 - M16 — collaboration (shared meeting notes for team meetings).
 - `references/connector-quirks.md` — Teams bot ban context.

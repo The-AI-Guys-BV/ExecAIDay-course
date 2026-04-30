@@ -8,7 +8,7 @@
 
 - Verify Word, Excel, PowerPoint add-ins.
 - Run the cross-app chain: Excel analysis → PowerPoint slides → Word memo, all sharing context.
-- Use template magic — your actual company PowerPoint template + Claude → on-brand slides matching your company style.
+- Have Claude build you a PowerPoint that looks like your company's — by extracting the style from any recent branded deck (or, if you have nothing handy, from your brand colors + logo).
 
 ---
 
@@ -89,20 +89,46 @@ Claude drafts. You review.
 
 The point: the conversation persisted. Claude remembered the Excel analysis when building the PowerPoint slides. Remembered the slide narrative when drafting the Word memo. No re-explaining the context three times.
 
-### Template magic
+### Build a PowerPoint that looks like your company's
 
-Your company has a PowerPoint template with specific fonts, colors, masters. Default Claude PPT output uses Claude's bland defaults. Template magic fixes this:
+Default Claude PPT output is generic. To make it look like YOUR company's deck, point Claude at a previous deck and have it extract the style.
 
-In PowerPoint with your company template open:
+**Use a recent branded deck as the style reference (recommended).**
+
+Every exec has a recent deck on their machine — a board update, an investor pitch, a strategy review. It already has your company colors, fonts, logo placement, and slide layouts baked in. Use it.
+
+1. Pick any recent on-brand deck. Doesn't have to be on-topic — only the styling matters.
+2. Open both that deck and your new (blank or topic-stub) deck in PowerPoint.
+3. With the Claude sidebar open in your new deck:
 
 ```
-Build me 5 slides about [topic] using this template. Match the fonts, colors, and slide
-masters exactly.
+Open <path-to-the-reference-deck>.pptx. Extract the visual style:
+fonts, color palette, logo placement, header/footer treatment, slide layouts.
+Then build me a 5-slide deck on [topic] using exactly that style.
+Don't copy the content from the reference deck — only the look.
 ```
 
-Claude reads the template's master slides, fonts, color palette, and produces slides that look like YOUR company's slides — not Claude's defaults.
+Claude reads the reference deck's slide masters, theme fonts, theme colors, logo position, and recreates them in the new deck. Output is recognizably yours — that's the felt moment.
 
-The output is recognizably yours. That's the felt moment.
+**No suitable deck handy? Fall back to brand specs.**
+
+If you genuinely have nothing to extract from, give Claude the brand directly:
+
+1. Get your brand colors as hex codes. Open your company brand guide or ask your assistant. Typical: a primary, a secondary, an accent. Example: `#0A2540`, `#00A86B`, `#F4F4F4`.
+2. Save your company logo somewhere Claude can read — PNG with transparent background, e.g., `<vault>/References/brand/logo.png`.
+3. In PowerPoint:
+
+```
+Build me a 5-slide deck on [topic]. Use my brand:
+- Primary color: #0A2540
+- Secondary: #00A86B
+- Accent: #F4F4F4
+- Logo: top-right of every slide. Source: <vault>/References/brand/logo.png.
+- Fonts: Inter for headings and body (system default if Inter isn't installed).
+- Tone: one bold takeaway per slide, one supporting data point, no clutter.
+```
+
+**Make this reusable.** Save the prompt (either path) as a custom skill (M06). Then `/branded-deck <topic>` always uses the right reference deck or brand specs without retyping.
 
 ## Advanced
 
@@ -144,11 +170,9 @@ The Word add-in launched April 2026, completing the suite. Excel and PowerPoint 
 
 ---
 
-## Try this — template magic
+## Try this — branded deck
 
-Your actual company PowerPoint template + Claude → on-brand slides matching your company's fonts, colors, and masters. The output looks like YOURS, not Claude's default.
-
-5 slides on a topic relevant to you, in your company's actual visual identity, . That's the felt moment.
+Pick a recent branded PowerPoint you have on hand (any topic, any age). Have Claude extract the visual style from it and build a 5-slide deck on a real topic of yours. The output looks like YOURS, not Claude's defaults: company colors, your logo placed correctly, on-brand fonts. That's the felt moment.
 
 ## Verification checkpoint
 
@@ -168,5 +192,5 @@ Expected: Claude in Word references the Excel analysis from earlier. If it can't
 
 ## References
 
-- M05 — skills (the Office workflow can become a custom skill).
+- M06 — skills (the Office workflow can become a custom skill).
 - `references/what-not-to-use-claude-for.md` — math at scale caveat.

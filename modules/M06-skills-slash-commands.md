@@ -1,8 +1,8 @@
-# M05 — Skills + Slash Commands
+# M06 — Skills + Slash Commands
 
 ## Why this module matters
 
-You've already used skills — `/teach` in M01, `/capture` in M04. This module names what they are, walks the 7 you'll use most, and shows you how to build your own with `/skill-creator`. After M05 you're not just a Cowork user — you can extend the system.
+You've already used skills — `/teach` in M01, `/capture` in M04. This module names what they are, walks the 7 you'll use most, and shows you how to build your own with `/skill-creator`. After M06 you're not just a Cowork user — you can extend the system.
 
 ## What you'll do
 
@@ -38,7 +38,7 @@ Plus 19 GTD skills (covered in M13) and Cowork built-ins (covered later in this 
 
 **`/help-me-prompt <draft>`** — sharpens any prompt. You'll install this in Section 3.
 
-**`/new-project <name>`** — already used in M08.
+**`/new-project <name>`** — already used in M09.
 
 **`/meeting-prep <meeting title or "next">`** — generates a pre-meeting brief. Try:
 ```

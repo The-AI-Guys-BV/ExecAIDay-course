@@ -54,7 +54,7 @@ Read fresh from the file each time the artifact opens.
 
 Cowork builds the artifact, reads <vault>/gtd/inbox.md, and renders the inbox items. Close the artifact panel. Close Cowork entirely. Reopen tomorrow. Reopen this artifact. It pulls fresh data — your CURRENT inbox, not yesterday's snapshot.
 
-That's live. The full Daily Command Center artifact in M14 — pulling calendar, email, Slack, and your vault GTD all together — only works after the rest of your connectors come online in M09.
+That's live. The full Daily Command Center artifact in M14 — pulling calendar, email, Slack, and your vault GTD all together — only works after the rest of your connectors come online in M10.
 
 ### Sidebar access
 
@@ -87,7 +87,7 @@ Useful when a Claude edit makes the artifact worse and you want to roll back.
 
 Artifacts compose with skills. A skill can produce an artifact as its output. Examples:
 - `/today` could output a brief artifact instead of text.
-- A skill you build later (M05) could maintain a project tracker artifact.
+- A skill you build later (M06) could maintain a project tracker artifact.
 
 The pattern: skill = trigger; artifact = persistent visible surface.
 

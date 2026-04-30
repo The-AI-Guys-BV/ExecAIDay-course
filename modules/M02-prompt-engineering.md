@@ -113,7 +113,7 @@ When a task is too complex for one prompt, chain prompts:
 2. Second prompt: act on the output of the first.
 3. Third prompt: format / verify / refine.
 
-Each link is its own R-C-T-F-C. The chain is the workflow. You'll see this pattern in M05 when we look at skills (which are pre-written prompt chains).
+Each link is its own R-C-T-F-C. The chain is the workflow. You'll see this pattern in M06 when we look at skills (which are pre-written prompt chains).
 
 ---
 

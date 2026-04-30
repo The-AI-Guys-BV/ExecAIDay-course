@@ -1,4 +1,4 @@
-# M07 — Obsidian
+# M08 — Obsidian
 
 ## Why this module matters
 
@@ -150,5 +150,5 @@ Expected: Claude lists files (probably just today's, plus any pre-existing). If 
 ## References
 
 - `templates/vault-starter/` — what was scaffolded into your vault.
-- M06 — writing the chief-of-staff brief in Obsidian.
+- M07 — writing the chief-of-staff brief in Obsidian.
 - M15 — meeting notes that land in Daily Notes.

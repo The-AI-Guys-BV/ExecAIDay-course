@@ -125,6 +125,6 @@ Expected: Claude lists Slack channel(s), email thread(s), shared folder content.
 
 ## References
 
-- M09 — connectors (foundation).
+- M10 — connectors (foundation).
 - M13 — GTD considerations for team.
 - M14 — Daily Command Center (could include shared sources for team-aware morning briefs).
