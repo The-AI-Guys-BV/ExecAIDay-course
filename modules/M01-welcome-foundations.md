@@ -36,6 +36,13 @@ You start the workshop with a working Cowork Project, a tutor (`/teach` — type
     2. **Add the marketplace first.** Click **+** to add a new personal marketplace, paste the URL above, confirm. Cowork syncs.
     3. **Then install the plugin.** Go to **Personal plugins** (not the Anthropic plugins section). The `execaiday` plugin is now in the list — click **Install**.
 - **Your connectors.** Gmail or M365, Calendar, Drive, Slack, plus your custom apps (Asana / Jira / Linear / SFDC / etc., depending on what you use). Authenticated and scoped to your account inside Cowork's **Customize → Connectors** panel.
+- **Claude for Word, Excel, PowerPoint (Office add-ins).** Adds a Claude sidebar inside each Office app. Conversation context is shared across all three — Excel analysis flows into a PowerPoint deck flows into a Word memo without copy/paste. Requires a paid Claude plan (Pro / Max / Team / Enterprise). To install:
+    1. Open Word.
+    2. Go to **Insert** tab → **Get Add-ins** (or **Office Add-ins** depending on version).
+    3. AppSource opens. Search for **Claude by Anthropic**. The official add-in is published by Anthropic.
+    4. Click **Add**. Approve the prompts. The Claude sidebar appears.
+    5. Sign in with the same Anthropic account you use for Cowork.
+    6. **Repeat for Excel and PowerPoint** — open each app, same Insert → Get Add-ins → search "Claude by Anthropic" → Add → sign in. The Claude icon should appear in the ribbon of all three apps.
 - **A starter vault and a starter work folder, in a cloud-synced location.** Both folders sit inside a cloud sync app — Dropbox, OneDrive, Google Drive, or iCloud Drive (whichever your org uses). This is required, not optional: cloud sync is how the vault stays backed up, accessible from your phone for Dispatch (M12), and durable across machines. Your assistant has placed them at the right path. You'll mount both in your Cowork Project below.
 
 This module's job is to confirm all that has given you a usable workspace, and to give you the words for the next 15 modules. Most of what we cover here is vocabulary — concepts you'll hear used the whole workshop. We're not building anything yet; we're orienting.

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cowork Essentials — Fast-paced track — ExecAIDay</title>
-<meta name="description" content="Cowork Essentials — the fast-paced track. Dr. van der Zant handles all setup; you walk in and walk out with a working AI workspace.">
+<meta name="description" content="Cowork Essentials — the fast-paced track. Walk in to a fully set-up AI workspace, walk out using it.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -30,15 +30,84 @@
       <span class="breadcrumb"><a href="index.html">All modules</a> &nbsp;/&nbsp; Cowork Essentials</span>
     </div>
     <h1>Cowork Essentials</h1>
-    <p class="lede">The fast-paced track. Dr. van der Zant walks you through M01 (full install) live, then guides you through the rest. By the end you have a personalized AI workspace, connectors to your real data, a chief-of-staff brief, 7 custom skills, and the Daily Command Center. 12 essential moves, each one direct: what to do, what prompt to try, what comes next. Whenever you want a deeper dive on any module, type <code>/teach &lt;module&gt;</code> in Cowork and the tutor walks you through it patiently. Or jump straight to the <a href="index.html">full course</a>.</p>
+    <p class="lede">The fast-paced track. The instructor walks you through M01 (full install) live, then guides you through the rest. By the end you have a personalized AI workspace, connectors to your real data, a chief-of-staff brief, 7 custom skills, and the Daily Command Center. 12 essential moves, each one direct: what to do, what prompt to try, what comes next. Whenever you want a deeper dive on any module, type <code>/teach &lt;module&gt;</code> in Cowork and the tutor walks you through it patiently. Or jump straight to the <a href="index.html">full course</a>.</p>
   </div>
 </header>
 
 <main class="content container">
 
-<h2>1. Welcome + Foundations (M01)</h2>
-<p>Open Claude Desktop, switch to the <strong>Cowork</strong> tab. Find your workshop Cowork Project. Your vault and work folder are mounted. Type <code>/teach</code>. You should see a list of 16 modules — your safety net.</p>
-<p><em>Verify: Type <code>/teach M01</code> — expect a patient walkthrough of the M01 concepts.</em></p>
+<h2>1. Welcome + full install (M01)</h2>
+<p>The live install walkthrough. The instructor narrates each step on screen; you click along on your own machine. By the end you have everything the rest of the modules need. Anything that fails — flag the instructor, don't move on.</p>
+
+<h3>1.1 Install Claude Desktop with Cowork</h3>
+<ol>
+<li>Download Claude Desktop from <a href="https://claude.com/download">claude.com/download</a>.</li>
+<li>Run the installer.</li>
+<li>Open Claude Desktop and sign in with your Anthropic Max account.</li>
+<li>Switch to the <strong>Cowork</strong> tab in the left sidebar.</li>
+</ol>
+<p><em>Verify: the Cowork sidebar is visible with sections for Customize, Plugins, and Cowork Projects.</em></p>
+
+<h3>1.2 Install Obsidian</h3>
+<ol>
+<li>Download Obsidian from <a href="https://obsidian.md/download">obsidian.md/download</a>.</li>
+<li>Run the installer.</li>
+<li>Open Obsidian and point it at your vault folder (in your cloud-sync app — Dropbox / OneDrive / Drive / iCloud Drive).</li>
+</ol>
+<p><em>Verify: your vault loads in Obsidian. You see folders like <code>Daily Notes/</code>, <code>References/</code>, <code>about-me/</code>.</em></p>
+
+<h3>1.3 Install Chrome + the Claude browser extension</h3>
+<ol>
+<li>Download Chrome from <a href="https://www.google.com/chrome/">google.com/chrome</a> if you don't already have it (Brave or Edge work too).</li>
+<li>Open the Chrome Web Store: <a href="https://chromewebstore.google.com/">chromewebstore.google.com</a>.</li>
+<li>Search <strong>Claude</strong> (official, by Anthropic). Click <strong>Add to Chrome</strong>.</li>
+<li>Pin the extension via the toolbar puzzle-piece icon → pin Claude.</li>
+<li>Click the Claude icon and sign in with the same Anthropic account.</li>
+</ol>
+<p><em>Verify: clicking the Claude icon in Chrome opens the side panel.</em></p>
+
+<h3>1.4 Install the ExecAIDay course plugin (in Cowork)</h3>
+<ol>
+<li>Open the <strong>Customize</strong> sidebar.</li>
+<li><strong>Add the marketplace first.</strong> Click <strong>+</strong> to add a personal marketplace. Paste: <code>github.com/The-AI-Guys-BV/ExecAIDay-course</code>. Confirm. Cowork syncs.</li>
+<li><strong>Then install the plugin.</strong> Go to <strong>Personal plugins</strong> (not the Anthropic plugins section). Click <strong>Install</strong> on <code>execaiday</code>.</li>
+</ol>
+<p><em>Verify: type <code>/teach</code> in Cowork — expect a list of 16 modules. If not, the plugin install didn't complete.</em></p>
+
+<h3>1.5 Authenticate your connectors</h3>
+<ol>
+<li>In Cowork, go to <strong>Customize → Connectors</strong>.</li>
+<li>Click <strong>+</strong> and add each one your work depends on: Gmail or Microsoft 365, Calendar, Drive, Slack, plus your custom apps (Asana, Jira, Linear, SFDC, HubSpot — whatever you use).</li>
+<li>OAuth approve each one in your browser.</li>
+</ol>
+<p><em>Verify: all expected connectors show <strong>Connected</strong> in the Customize → Connectors panel.</em></p>
+
+<h3>1.6 Install the Claude for Word, Excel, PowerPoint add-ins</h3>
+<p>This adds a Claude sidebar inside each Office app. Conversation context is shared across all three — Excel analysis flows into a PowerPoint deck flows into a Word memo without copy/paste. Requires a paid Claude plan (Pro / Max / Team / Enterprise).</p>
+<ol>
+<li><strong>Open Word.</strong> Go to the <strong>Insert</strong> tab → <strong>Get Add-ins</strong> (or <strong>Office Add-ins</strong>, depending on your version).</li>
+<li>AppSource opens in a dialog. Search <strong>Claude by Anthropic</strong>. The official add-in is published by Anthropic.</li>
+<li>Click <strong>Add</strong>. Approve the prompts. The Claude sidebar appears in Word.</li>
+<li>Sign in with the same Anthropic account you use for Cowork.</li>
+<li><strong>Repeat for Excel and PowerPoint.</strong> Open each app, same flow: Insert → Get Add-ins → search "Claude by Anthropic" → Add → sign in.</li>
+</ol>
+<p><em>Verify: open Word, Excel, and PowerPoint — the Claude icon is in the ribbon of all three. Click it; the Claude sidebar opens.</em></p>
+
+<h3>1.7 Confirm vault + work folder are in a cloud-synced location</h3>
+<p>Your vault and work folder must live inside a cloud-sync app (Dropbox / OneDrive / Google Drive / iCloud Drive). This is required, not optional — it's how the vault stays backed up, accessible from your phone for Dispatch (step 11), and durable across machines.</p>
+<p><em>Verify: navigate to the folder paths in Finder / Explorer — both should sit inside your cloud sync folder.</em></p>
+
+<h3>1.8 Create your Cowork Project and mount both folders</h3>
+<ol>
+<li>In the Cowork sidebar, click <strong>+ New Project</strong>. Name it "Workshop" (or anything).</li>
+<li>Mount your <strong>Obsidian vault</strong> (knowledge folder).</li>
+<li>Mount your <strong>work folder</strong> (projects parent).</li>
+<li>Both inside the same Cowork Project — load-bearing.</li>
+</ol>
+<p><em>Verify: in the new Cowork Project, type "What folders am I currently mounting?" — Claude should list the vault and the work folder by name.</em></p>
+
+<p>You now have a working AI workspace. Move to step 2.</p>
+
 <p><strong>Deep dive:</strong> type <code>/teach M01</code> in Cowork, or open the <a href="m01.html">full M01 page</a>.</p>
 
 <h2>2. Sharpen any prompt with R-C-T-F-C (M02)</h2>
@@ -98,7 +167,7 @@ in journal voice. Save to today's daily note in my vault.</code></pre>
 <p><strong>Deep dive:</strong> type <code>/teach M09</code> in Cowork, or open the <a href="m09.html">full M09 page</a>.</p>
 
 <h2>9. Verify your connectors (M10)</h2>
-<p>Dr. van der Zant already authenticated Gmail, M365, Calendar, Drive, Slack, and custom apps. Confirm in Customize → Connectors — all show Connected. Try one:</p>
+<p>Your connectors (Gmail, M365, Calendar, Drive, Slack, custom apps) are already authenticated. Confirm in Customize → Connectors — all show Connected. Try one:</p>
 <pre><code>/email-triage today</code></pre>
 <p>Claude classifies your inbox into urgent / reply / read / archive / delete. Or:</p>
 <pre><code>/drafts-inbox new</code></pre>
@@ -112,12 +181,67 @@ in journal voice. Save to today's daily note in my vault.</code></pre>
 <p>Claude pulls the calendar event, reads your calendar context, scans recent emails and Slack for relevant chatter, reads your CoS brief, and surfaces: agenda highlights, who's attending, what you own, what's changed since last time. Thirty seconds to go from cold to prepared.</p>
 
 <h2>10. Make a branded PowerPoint (M11)</h2>
-<p>Dr. van der Zant installed the Word, Excel, PowerPoint Claude add-ins. Open any recent on-brand PowerPoint deck of yours plus a blank one. In the blank deck's Claude sidebar:</p>
-<pre><code>Open <your-reference-deck>.pptx. Extract the visual style — fonts,
-color palette, logo placement, slide layouts. Then build me a 5-slide deck
-on [your topic] using exactly that style. Don't copy content — only the look.</code></pre>
-<p>Output looks like YOUR company's deck. Cross-app context: do an Excel analysis first, then have PowerPoint Claude pull it in.</p>
-<p><em>Verify: Check the output deck — expect branded styling matching your reference deck.</em></p>
+<p>The Word, Excel, PowerPoint Claude add-ins are installed and signed in. The branded-deck pattern is two stages: extract the branding once and save it, then reuse it for every new deck.</p>
+
+<h3>Stage 1 — Extract branding from a reference deck (one-time)</h3>
+
+<ol>
+<li><strong>Start a new Cowork chat (or a new Cowork Project called something like "Branding extraction")</strong> so the conversation context stays clean and isolated from other work.</li>
+<li><strong>Mount the relevant vault folder.</strong> In the Cowork Project, mount <code>&lt;vault&gt;/References/</code> (or just <code>&lt;vault&gt;/References/brand/</code> if you want a tighter scope). This is where the saved branding will live.</li>
+<li><strong>Add your reference PowerPoint to the project.</strong> Pick a recent on-brand deck (board update, investor pitch, strategy review — any topic, only the styling matters) and either:
+   <ul>
+   <li>Drop the file into the mounted folder (e.g., copy it to <code>&lt;vault&gt;/References/brand/source-deck.pptx</code>), or</li>
+   <li>Mount the folder where the deck already lives.</li>
+   </ul>
+</li>
+<li><strong>Ask Claude to extract and save the branding</strong> — paste this in the Cowork chat:
+<pre><code>Read &lt;vault&gt;/References/brand/source-deck.pptx (or whatever the file
+is called). Extract the visual style:
+- Brand colors (with hex codes)
+- Fonts for headings and body
+- Logo placement (which corner, what size)
+- Slide layouts (title slide, content slide, section divider)
+- Header / footer treatment
+
+Save the spec as &lt;vault&gt;/References/brand/branding.md.
+Save the logo image as &lt;vault&gt;/References/brand/logo.png.
+Confirm both files when written.</code></pre>
+</li>
+</ol>
+
+<p><em>Verify: open <code>&lt;vault&gt;/References/brand/branding.md</code> in Obsidian — expect a clean spec listing colors, fonts, layouts; <code>logo.png</code> sits next to it.</em></p>
+
+<p>You now have a reusable brand spec. Do this once.</p>
+
+<h3>Stage 2 — Build a new deck using saved branding</h3>
+
+<ol>
+<li><strong>Start a new Cowork Project for the deck</strong> — e.g., <code>/new-project q3-board-deck</code>. Project folder gets created in your work folder.</li>
+<li><strong>Mount the branding folder in the new project</strong> — add <code>&lt;vault&gt;/References/brand/</code> to the project's mounted folders. Now Claude in this project sees both the project's working files AND the branding spec.</li>
+<li><strong>Open a blank PowerPoint</strong> in the project's Deliverables folder.</li>
+<li><strong>In the PowerPoint Claude sidebar, ask:</strong>
+<pre><code>Build me a 5-slide deck on [your real topic — e.g., "Q3 board update on
+revenue trajectory"]. Use the branding spec at
+&lt;vault&gt;/References/brand/branding.md and the logo at
+&lt;vault&gt;/References/brand/logo.png. One bold takeaway per slide,
+one supporting data point, no clutter.</code></pre>
+</li>
+</ol>
+
+<p><em>Verify: the deck Claude generates uses your brand colors, fonts, and logo placement — recognizably yours, not Claude's defaults.</em></p>
+
+<h3>Bonus — Cross-app chain in the same project</h3>
+
+<p>Inside the same Cowork Project, the Excel, PowerPoint, and Word add-ins share context. So you can:</p>
+
+<ol>
+<li>Open your Q3 financial model in Excel inside the project. Ask Excel-Claude to analyze and surface top trends and risks (writes comments into the relevant cells).</li>
+<li>Switch to the PowerPoint deck in the same project. Ask PowerPoint-Claude to "build a slide section based on the Excel analysis we just did." It remembers — no re-explaining.</li>
+<li>Switch to a Word memo. Ask it to "draft a 1-page memo summarizing the Excel + PPT work for the board chair." It pulls the same context.</li>
+</ol>
+
+<p>The conversation persists across the three apps because they're all attached to the same Cowork Project.</p>
+
 <p><strong>Deep dive:</strong> type <code>/teach M11</code> in Cowork, or open the <a href="m11.html">full M11 page</a>.</p>
 
 <h2>11. Schedule Claude to work while you sleep (M12)</h2>

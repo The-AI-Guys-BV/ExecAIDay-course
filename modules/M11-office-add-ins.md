@@ -24,11 +24,9 @@ This is the workflow you've actually wanted for years.
 
 ### Verify add-ins
 
-Open Word. Look for Claude in the ribbon (top of the window).
+The Claude add-ins for Word, Excel, and PowerPoint were installed in M01. Open each app — the Claude icon should be in the ribbon. Click it; the Claude sidebar opens.
 
-Same for Excel and PowerPoint.
-
-If any are missing: your assistant fixes now. AppSource → search "Claude" → install.
+If any of the three apps is missing the icon, the install didn't complete for that one. Re-run the M01 install step for that specific app: Insert → Get Add-ins → search "Claude by Anthropic" → Add → sign in.
 
 ### Single-app moves
 
