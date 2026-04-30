@@ -21,13 +21,25 @@
       <div class="title-eyebrow">Sharpen</div>
       <h1 class="title-num">M09</h1>
       <h2 class="title-name">Browser + Chrome</h2>
+      <p class="title-outcome">Open the Claude in Chrome side panel.</p>
     </div>
   </section>
 
   <section class="slide slide-why">
     <div class="slide-inner">
-      <div class="slide-eyebrow">Why this module matters</div>
+      <div class="slide-eyebrow">Why this matters</div>
       <p class="slide-lede">Claude in Chrome means Claude can navigate, record, replay, and coordinate across tabs. Connectors give Claude your data; Chrome gives Claude your screen. The deepest live exercise of the workshop.</p>
+    </div>
+  </section>
+
+  <section class="slide slide-bigidea">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">The big idea</div>
+      <p class="slide-bigidea-p">A connector handles your major systems — your inbox, your calendar, your file storage. A browser handles everything else: portals without a built-in connector, dashboards behind logins, websites that aren't on the connector list. Claude in Chrome is for those.</p>
+<p class="slide-bigidea-p">Three killer capabilities:
+- <strong>Record-and-replay:</strong> Claude watches you do a task once, then repeats it on command.
+- <strong>Multi-tab:</strong> Claude opens N tabs, pulls data from each, synthesizes.
+- <strong>Scheduled Chrome tasks:</strong> the same record-and-replay, but on a schedule.</p>
     </div>
   </section>
 
@@ -45,24 +57,64 @@
     </div>
   </section>
 
-  <section class="slide slide-try">
+  <section class="slide slide-action">
     <div class="slide-inner">
-      <div class="slide-eyebrow">Try this</div>
-      <div class="slide-try-body">
-        <p>Tijn picks default. Three options, all staged:
-1. Real-site navigation: Claude pulls a specific fact from your actual CRM / dashboard.
-2. Record-a-workflow: you perform 3 steps, Claude records, you replay.
-3. Multi-tab intel: 6 competitor sites → comparison table.</p>
-<p>The default is to do all 3 — they go together. Picking one stages a deeper exploration of that capability.</p>
+      <div class="slide-eyebrow">The move</div>
+      <p class="slide-action-setup">Pick a portal you actually use — your CRM, a dashboard, a vendor portal. Open it in a tab. In the side panel:</p><pre class="slide-prompt"><code>Pull the [specific fact] from this page. Just the value, no commentary.</code></pre>
+    </div>
+  </section>
+
+  <section class="slide slide-verify">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">How you know it worked</div>
+      <div class="slide-verify-body">
+        <pre><code>
+What workflows have I saved in Claude in Chrome?
+</code></pre>
+<p>Expected: Claude lists the workflow(s) you saved during the module. If empty, the save didn't take — re-record.</p>
       </div>
     </div>
   </section>
 
+  <section class="slide slide-issues">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">If something breaks</div>
+      <div class="slide-issues-body">
+        <ul>
+<li><strong>Side panel doesn't open</strong> — extension not installed or blocked by browser policy. Reinstall.</li>
+<li><strong>Recorded workflow fails on replay</strong> — page state changed (logged out, layout updated). Re-record.</li>
+<li><strong>Multi-tab job hangs</strong> — site is slow or rate-limiting. Reduce parallelism, retry.</li>
+<li><strong>Workflow needs auth</strong> — the extension follows your existing browser session. If you weren't logged in, log in and re-record.</li>
+</ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-try">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Try this</div>
+      <div class="slide-try-body">
+        <p>Tijn picks default. Three options, all staged:</p>
+<ol>
+<li>Real-site navigation: Claude pulls a specific fact from your actual CRM / dashboard.</li>
+<li>Record-a-workflow: you perform 3 steps, Claude records, you replay.</li>
+<li>Multi-tab intel: 6 competitor sites → comparison table.</li>
+</ol>
+<p>The default is to do all 3 — they go together. Picking one stages a deeper exploration of that capability.</p>
+      </div>
+      
+        <div class="slide-next">
+          <div class="slide-next-label">What's next</div>
+          <div class="slide-next-title">M10 — Connectors</div>
+          <div class="slide-next-meta">Type <code>/teach M10</code> in Cowork to dive in next.</div>
+        </div>
+    </div>
+  </section>
 </div>
 
 <div class="deck-chrome">
   <a href="../m09.html" class="deck-back">← Back to M09</a>
-  <div class="deck-counter"><span data-current>1</span> / <span data-total>4</span></div>
+  <div class="deck-counter"><span data-current>1</span> / <span data-total>1</span></div>
   <div class="deck-nav">
     <button data-prev aria-label="Previous slide">←</button>
     <button data-next aria-label="Next slide">→</button>

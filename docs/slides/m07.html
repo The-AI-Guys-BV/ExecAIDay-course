@@ -21,13 +21,22 @@
       <div class="title-eyebrow">Sharpen</div>
       <h1 class="title-num">M07</h1>
       <h2 class="title-name">Skills + Slash Commands</h2>
+      <p class="title-outcome">Walk through 7 core skills (all pre-installed via the ExecAIDay plugin from M01).</p>
     </div>
   </section>
 
   <section class="slide slide-why">
     <div class="slide-inner">
-      <div class="slide-eyebrow">Why this module matters</div>
+      <div class="slide-eyebrow">Why this matters</div>
       <p class="slide-lede">You've already used skills — <code>/teach</code> in M01, <code>/capture</code> in M08. This module names what they are, walks the 7 you'll use most, and shows you how to build your own with <code>/skill-creator</code>. After M07 you're not just a Cowork user — you can extend the system.</p>
+    </div>
+  </section>
+
+  <section class="slide slide-bigidea">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">The big idea</div>
+      <p class="slide-bigidea-p">A skill in 2026 Cowork is a slash command. Same thing, two names. <code>/teach</code> and "the teach skill" refer to the same file: <code>~/.claude/skills/teach/SKILL.md</code> (or in our case, the version inside this plugin's <code>skills/teach/</code>).</p>
+<p class="slide-bigidea-p">Cowork auto-discovers skills from the filesystem. When you install a plugin, all the skills inside it become available. When you write a SKILL.md in <code>~/.claude/skills/&lt;name&gt;/SKILL.md</code>, that becomes a slash command too.</p>
     </div>
   </section>
 
@@ -45,6 +54,39 @@
     </div>
   </section>
 
+  <section class="slide slide-action">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">The move</div>
+      <p class="slide-action-setup"><strong><code>/email-triage</code></strong> — classifies inbox into urgent / reply / read / archive / delete. Try:</p><pre class="slide-prompt"><code>/email-triage today</code></pre>
+    </div>
+  </section>
+
+  <section class="slide slide-verify">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">How you know it worked</div>
+      <div class="slide-verify-body">
+        <pre><code>
+Open Customize → Skills
+</code></pre>
+<p>Expected: lists all installed skills. Should include the 7 core, the 19 GTD (covered in M14 but already installed via this plugin), the Cowork built-ins, plus any custom skills you built via <code>/skill-creator</code>.</p>
+<p>If the Skills list (Customize → Skills) returns nothing or partial, the plugin may be incompletely installed.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-issues">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">If something breaks</div>
+      <div class="slide-issues-body">
+        <ul>
+<li><strong>Install fumble: skill SKILL.md has wrong YAML frontmatter</strong> — file written but not auto-discovered. Restart Cowork; if still failing, check the frontmatter syntax matches <code>name:</code> and <code>description:</code> at minimum.</li>
+<li><strong>Skill works in plugin but not after manual install</strong> — path mismatch (e.g., <code>~/.claude/skills/foo.md</code> instead of <code>~/.claude/skills/foo/SKILL.md</code>). Skills must be in their own subfolder.</li>
+<li><strong><code>/skill-creator</code> doesn't run</strong> — it's a Cowork built-in; if missing, Cowork version may be older. Update.</li>
+</ul>
+      </div>
+    </div>
+  </section>
+
   <section class="slide slide-try">
     <div class="slide-inner">
       <div class="slide-eyebrow">Try this</div>
@@ -52,14 +94,19 @@
         <p>All 7 core skills work in real demos. The in-workshop install of <code>/help-me-prompt</code> succeeded. You can see every available skill in Customize → Skills.</p>
 <p>"You're an executive with 7 custom Claude skills, plus the ability to build more on demand." Public commitment moment.</p>
       </div>
+      
+        <div class="slide-next">
+          <div class="slide-next-label">What's next</div>
+          <div class="slide-next-title">M08 — Artifacts</div>
+          <div class="slide-next-meta">Type <code>/teach M08</code> in Cowork to dive in next.</div>
+        </div>
     </div>
   </section>
-
 </div>
 
 <div class="deck-chrome">
   <a href="../m07.html" class="deck-back">← Back to M07</a>
-  <div class="deck-counter"><span data-current>1</span> / <span data-total>4</span></div>
+  <div class="deck-counter"><span data-current>1</span> / <span data-total>1</span></div>
   <div class="deck-nav">
     <button data-prev aria-label="Previous slide">←</button>
     <button data-next aria-label="Next slide">→</button>

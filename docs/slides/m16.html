@@ -21,13 +21,22 @@
       <div class="title-eyebrow">System</div>
       <h1 class="title-num">M16</h1>
       <h2 class="title-name">Meeting Notes</h2>
+      <p class="title-outcome">Verify your meeting-note tool (Granola / Bluedot / Fellow — picked in questionnaire).</p>
     </div>
   </section>
 
   <section class="slide slide-why">
     <div class="slide-inner">
-      <div class="slide-eyebrow">Why this module matters</div>
+      <div class="slide-eyebrow">Why this matters</div>
       <p class="slide-lede">Meeting transcripts → Obsidian daily note → Claude processes → follow-up emails drafted, commitments tracked, gaps surfaced. The pipeline turns hours of meetings per week into a tracked, actioned, never-forgotten stream.</p>
+    </div>
+  </section>
+
+  <section class="slide slide-bigidea">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">The big idea</div>
+      <p class="slide-bigidea-p">Most execs already have a meeting-note tool. Granola, Bluedot, and Fellow's bot-less mode are the ones the workshop locks on (Fireflies retired — bot-based, poor fit for sensitive exec meetings).</p>
+<p class="slide-bigidea-p">Bot-less means the tool captures system audio locally during the meeting, transcribes locally or via cloud, lands the transcript on your machine. No bot joins the meeting. No "this meeting is being recorded" dialogue prompts. No invitee list updated.</p>
     </div>
   </section>
 
@@ -46,6 +55,43 @@
     </div>
   </section>
 
+  <section class="slide slide-action">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">The move</div>
+      <ol class="slide-action-steps"><li><strong>Meeting starts.</strong> Tool auto-captures (or you tap to start).</li>
+<li><strong>Tool transcribes.</strong> Some tools transcribe in real-time; some after the meeting.</li>
+<li><strong>Transcript lands.</strong> Where? Configurable — most tools have:</li>
+<li><strong>You point Cowork at the transcript.</strong></li>
+<li><strong>Claude processes</strong> into a structured note in your vault, and pushes commitments into your GTD next-actions.</li></ol>
+    </div>
+  </section>
+
+  <section class="slide slide-verify">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">How you know it worked</div>
+      <div class="slide-verify-body">
+        <pre><code>
+What was decided in the most recent meeting I have a transcript for? Pull from the transcript.
+</code></pre>
+<p>Expected: Claude reads the most recent transcript file and lists decisions. If it can't find any transcripts, the tool's output location isn't where Claude expects — check vault path or your tool's settings.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-issues">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">If something breaks</div>
+      <div class="slide-issues-body">
+        <ul>
+<li><strong>Tool isn't capturing</strong> — system audio permission missing on Mac (System Settings → Privacy → Screen Recording / Microphone). On Windows, similar permission flow.</li>
+<li><strong>Transcript location mismatch</strong> — your tool dumps to a different location than your vault expects. Configure either side to match.</li>
+<li><strong>Claude reads the wrong transcript</strong> — be specific in your prompt about which meeting / which date.</li>
+<li><strong>Sensitive meeting accidentally captured</strong> — delete the transcript and any vault note Claude wrote from it. The architecture depends on your discipline; it doesn't auto-protect.</li>
+</ul>
+      </div>
+    </div>
+  </section>
+
   <section class="slide slide-try">
     <div class="slide-inner">
       <div class="slide-eyebrow">Try this</div>
@@ -53,14 +99,19 @@
         <p><strong>Gap analysis.</strong> Claude cross-references meeting transcript vs your project's claude.md, surfaces missed commitments. The realization: Claude caught something you would have missed.</p>
 <p><strong>Follow-up email generation.</strong> Routes to drafts-inbox, ready for your review. End-to-end pipeline working.</p>
       </div>
+      
+        <div class="slide-next">
+          <div class="slide-next-label">What's next</div>
+          <div class="slide-next-title">M17 — Collaboration & Shared Work</div>
+          <div class="slide-next-meta">Type <code>/teach M17</code> in Cowork to dive in next.</div>
+        </div>
     </div>
   </section>
-
 </div>
 
 <div class="deck-chrome">
   <a href="../m16.html" class="deck-back">← Back to M16</a>
-  <div class="deck-counter"><span data-current>1</span> / <span data-total>4</span></div>
+  <div class="deck-counter"><span data-current>1</span> / <span data-total>1</span></div>
   <div class="deck-nav">
     <button data-prev aria-label="Previous slide">←</button>
     <button data-next aria-label="Next slide">→</button>

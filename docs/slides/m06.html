@@ -21,13 +21,22 @@
       <div class="title-eyebrow">Sharpen</div>
       <h1 class="title-num">M06</h1>
       <h2 class="title-name">Prompt Engineering</h2>
+      <p class="title-outcome">Learn R-C-T-F-C with worked examples.</p>
     </div>
   </section>
 
   <section class="slide slide-why">
     <div class="slide-inner">
-      <div class="slide-eyebrow">Why this module matters</div>
+      <div class="slide-eyebrow">Why this matters</div>
       <p class="slide-lede">The single biggest variable in whether Claude is useful or wasteful is the prompt you wrote. R-C-T-F-C — Role, Context, Task, Format, Constraints — is the framework that makes you consistently good at this. Skip any of the five elements and you get mediocre output. Hit all five and Claude responds at a different quality tier.</p>
+    </div>
+  </section>
+
+  <section class="slide slide-bigidea">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">The big idea</div>
+      <p class="slide-bigidea-p">Most people prompt Claude by saying what they want. That's not enough.</p>
+<p class="slide-bigidea-p">Better: tell Claude <strong>who it's being</strong>, <strong>what context it needs</strong>, <strong>the specific task</strong>, <strong>the output format</strong>, and <strong>what NOT to do</strong>. Five elements, in any order. Each one shifts the output.</p>
     </div>
   </section>
 
@@ -45,20 +54,74 @@
     </div>
   </section>
 
+  <section class="slide slide-action">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">The move</div>
+      <p class="slide-action-setup"><strong>R-C-T-F-C version:</strong></p><pre class="slide-prompt"><code>R: You're an experienced executive recruiter who places C-level talent.
+
+C: I'm a Series B SaaS CEO. We've interviewed Sarah Chen (VP Product) over three rounds.
+She's strong, currently at a competitor, risk-averse about leaving. I want to make her an
+offer. Comp will be competitive but not the highest she could get.
+
+T: Write a follow-up email making the verbal offer and requesting a call this week to
+walk through specifics.
+
+F: 4 short paragraphs. No subject line. Closing requests a call. Tone: warm,
+confident, not pushy.
+
+C: Don't mention specific compensation numbers. Don't sound like a form letter. No
+"looking forward to hearing from you" or similar generic email closers. Stay under 180 words.</code></pre>
+    </div>
+  </section>
+
+  <section class="slide slide-verify">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">How you know it worked</div>
+      <div class="slide-verify-body">
+        <p>In Cowork, type:</p>
+<pre><code>
+Rewrite the email below to be 30% shorter without losing factual content. Tone stays the same. No subject line.
+
+[paste any 100-word email here]
+</code></pre>
+<p>Expected: a tighter version, same content, no AI-flavored padding ("I hope this finds you well"). If Claude added an apology or a "let me know if you need anything else," the constraints weren't strong enough — try again with a "no closer line" constraint added.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-issues">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">If something breaks</div>
+      <div class="slide-issues-body">
+        <ul>
+<li><strong>Output is still generic</strong> — your role isn't specific enough. "Recruiter" → "executive recruiter who places C-level talent in fintech."</li>
+<li><strong>Output is too long</strong> — add a length constraint ("Stay under 200 words").</li>
+<li><strong>Output has AI tells</strong> — add explicit constraints against them ("No 'I hope this helps,' no 'let me know if'").</li>
+<li><strong>Output ignored a constraint</strong> — Claude sometimes drifts. Repeat the constraint in a new prompt: "Same task, but enforce <constraint>."</li>
+</ul>
+      </div>
+    </div>
+  </section>
+
   <section class="slide slide-try">
     <div class="slide-inner">
       <div class="slide-eyebrow">Try this</div>
       <div class="slide-try-body">
         <p>Take a prompt you wrote yesterday — a real one, from your inbox or a recent Claude session. Run it through <code>/help-me-prompt</code>. Identify which of the 5 elements were missing. Rewrite. Send the new version. See the difference.</p>
       </div>
+      
+        <div class="slide-next">
+          <div class="slide-next-label">What's next</div>
+          <div class="slide-next-title">M07 — Skills + Slash Commands</div>
+          <div class="slide-next-meta">Type <code>/teach M07</code> in Cowork to dive in next.</div>
+        </div>
     </div>
   </section>
-
 </div>
 
 <div class="deck-chrome">
   <a href="../m06.html" class="deck-back">← Back to M06</a>
-  <div class="deck-counter"><span data-current>1</span> / <span data-total>4</span></div>
+  <div class="deck-counter"><span data-current>1</span> / <span data-total>1</span></div>
   <div class="deck-nav">
     <button data-prev aria-label="Previous slide">←</button>
     <button data-next aria-label="Next slide">→</button>

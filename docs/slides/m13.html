@@ -21,13 +21,24 @@
       <div class="title-eyebrow">System</div>
       <h1 class="title-num">M13</h1>
       <h2 class="title-name">Scheduled Tasks + Routines</h2>
+      <p class="title-outcome">Review the morning-brief scheduled task set up Day 1 closing (now firing tomorrow morning).</p>
     </div>
   </section>
 
   <section class="slide slide-why">
     <div class="slide-inner">
-      <div class="slide-eyebrow">Why this module matters</div>
+      <div class="slide-eyebrow">Why this matters</div>
       <p class="slide-lede">Claude works while you sleep. The morning brief that lands on your phone before you open your laptop — that's the proof. Scheduled tasks and Routines are how Cowork becomes a team member with their own working hours.</p>
+    </div>
+  </section>
+
+  <section class="slide slide-bigidea">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">The big idea</div>
+      <p class="slide-bigidea-p">A scheduled task is a Claude prompt that runs on a schedule. You set it once; it fires at the cadence you specify.</p>
+<p class="slide-bigidea-p">Two flavors:
+- <strong>Desktop scheduled tasks</strong> — run on your laptop, when Cowork is open. Fine-grained scheduling. Can read local files (your work folder, your vault).
+- <strong>Routines</strong> — run on Anthropic's cloud infrastructure regardless of laptop state. 1-hour minimum interval. Cannot access local files.</p>
     </div>
   </section>
 
@@ -44,20 +55,51 @@
     </div>
   </section>
 
+  <section class="slide slide-verify">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">How you know it worked</div>
+      <div class="slide-verify-body">
+        <pre><code>
+List my active scheduled tasks. For each, what's the schedule and what's the output destination?
+</code></pre>
+<p>Expected: Claude lists at least 2 tasks (the Day 1 morning brief + the one you just added). If anything is off, edit in Settings.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-issues">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">If something breaks</div>
+      <div class="slide-issues-body">
+        <ul>
+<li><strong>Task didn't fire</strong> — laptop was closed at the scheduled time, or Cowork wasn't open. Check the next-run time; expect catch-up on next wake.</li>
+<li><strong>Catch-up fired but produced stale output</strong> — guardrail wasn't strong enough. Edit the prompt to skip if stale.</li>
+<li><strong>Routine timing is off</strong> — Routines run on Anthropic's clock, not your local time. Specify timezone in the prompt.</li>
+<li><strong>Output went to wrong destination</strong> — task config issue; check the destination field.</li>
+</ul>
+      </div>
+    </div>
+  </section>
+
   <section class="slide slide-try">
     <div class="slide-inner">
       <div class="slide-eyebrow">Try this</div>
       <div class="slide-try-body">
         <p>You added a second scheduled task or Routine relevant to your workflow. Confirmed it's set up correctly. Anticipation: it'll fire on its schedule and the next morning (or week) you'll have a new automated artifact in your stack.</p>
       </div>
+      
+        <div class="slide-next">
+          <div class="slide-next-label">What's next</div>
+          <div class="slide-next-title">M14 — GTD</div>
+          <div class="slide-next-meta">Type <code>/teach M14</code> in Cowork to dive in next.</div>
+        </div>
     </div>
   </section>
-
 </div>
 
 <div class="deck-chrome">
   <a href="../m13.html" class="deck-back">← Back to M13</a>
-  <div class="deck-counter"><span data-current>1</span> / <span data-total>4</span></div>
+  <div class="deck-counter"><span data-current>1</span> / <span data-total>1</span></div>
   <div class="deck-nav">
     <button data-prev aria-label="Previous slide">←</button>
     <button data-next aria-label="Next slide">→</button>

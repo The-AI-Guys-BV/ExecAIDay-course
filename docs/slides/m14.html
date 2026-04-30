@@ -21,13 +21,27 @@
       <div class="title-eyebrow">System</div>
       <h1 class="title-num">M14</h1>
       <h2 class="title-name">GTD</h2>
+      <p class="title-outcome">Pick your GTD store: Obsidian (default) or Notion.</p>
     </div>
   </section>
 
   <section class="slide slide-why">
     <div class="slide-inner">
-      <div class="slide-eyebrow">Why this module matters</div>
+      <div class="slide-eyebrow">Why this matters</div>
       <p class="slide-lede">David Allen's GTD, run from Cowork. Capture, process, query, review. This is the module where your task management gets unified — no more sticky notes, no more inbox-as-todo-list, no more "let me write that down somewhere."</p>
+    </div>
+  </section>
+
+  <section class="slide slide-bigidea">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">The big idea</div>
+      <p class="slide-bigidea-p">GTD's core insight: your brain is for having ideas, not holding them. Externalize everything into a trusted system. Then your brain is free to think.</p>
+<p class="slide-bigidea-p">The five steps:
+1. <strong>Capture</strong> — get everything out of your head into one inbox.
+2. <strong>Clarify</strong> — for each thing, decide: is it actionable? What's the next action? Single step or project?
+3. <strong>Organize</strong> — file each thing in the right list (next actions, projects, waiting for, someday, reference).
+4. <strong>Reflect</strong> — review weekly. What's stale? What needs my attention?
+5. <strong>Engage</strong> — choose what to do based on context, energy, time available.</p>
     </div>
   </section>
 
@@ -46,6 +60,58 @@
     </div>
   </section>
 
+  <section class="slide slide-action">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">The move</div>
+      <p class="slide-action-setup">Open <code>&lt;vault&gt;/claude.md</code> (the vault root file M04 set up). Add a Notion-GTD pointer block:</p><pre class="slide-prompt"><code>GTD lives in Notion. Use the Notion connector for all GTD operations.
+
+Database links:
+- Inbox: https://www.notion.so/&lt;your-workspace&gt;/&lt;inbox-page-id&gt;
+- Next Actions: https://www.notion.so/&lt;your-workspace&gt;/&lt;next-actions-page-id&gt;
+- Projects: https://www.notion.so/&lt;your-workspace&gt;/&lt;projects-page-id&gt;
+- Waiting For: https://www.notion.so/&lt;your-workspace&gt;/&lt;waiting-for-page-id&gt;
+- Someday: https://www.notion.so/&lt;your-workspace&gt;/&lt;someday-page-id&gt;
+- Tickler: https://www.notion.so/&lt;your-workspace&gt;/&lt;tickler-page-id&gt;
+
+Routing rules:
+- /capture: append a row to Inbox. Item field = the captured text. Don't search; go straight to the Inbox database.
+- /whats-next: query Next Actions where Status = Active, sorted by priority and Created. Don't search; go straight to Next Actions.
+- /process-inbox: walk Inbox rows, ask the GTD clarifying questions per item, then move the row to the right destination database.
+- /waiting-for: query Waiting For grouped by Person.
+- /delegate: append a row to Waiting For. Mark the original Next Action as Cancelled.
+- /tickler: append a row to Tickler with the Surface date set.
+
+Don't search Notion globally for any of these. Use the page IDs above.</code></pre>
+    </div>
+  </section>
+
+  <section class="slide slide-verify">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">How you know it worked</div>
+      <div class="slide-verify-body">
+        <pre><code>
+What's in my GTD inbox right now?
+</code></pre>
+<p>Expected: Claude lists Inbox items including the one you just captured. If it's empty or wrong, the routing in your <code>claude.md</code> may be off — your assistant checks.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-issues">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">If something breaks</div>
+      <div class="slide-issues-body">
+        <ul>
+<li><strong><code>/capture</code> writes to wrong place</strong> — vault path or Notion <code>claude.md</code> routing is off. Your assistant fixes.</li>
+<li><strong>Notion: Cowork can authenticate but can't read pages</strong> — you didn't share each database with the Claude connection. Open each Notion database → ··· → Connections → add Claude. Repeat for every database.</li>
+<li><strong>Notion: every GTD command takes long</strong> — <code>claude.md</code> doesn't have the database URLs. Add them per the Step 4 pattern above.</li>
+<li><strong>Vault: <code>/process-inbox</code> items stay in inbox after processing</strong> — Cowork doesn't have write permission to the vault. Re-mount or check filesystem permissions.</li>
+<li><strong>Higher-horizon files don't exist</strong> — run <code>/areas</code>, <code>/goals</code>, or <code>/vision</code> once with no args; the skill creates the file or database row with a stub.</li>
+</ul>
+      </div>
+    </div>
+  </section>
+
   <section class="slide slide-try">
     <div class="slide-inner">
       <div class="slide-eyebrow">Try this</div>
@@ -53,14 +119,19 @@
         <p><code>/capture remind me to follow up with the legal team on the trademark filing</code> in Cowork. Open your store (vault Inbox or Notion Inbox) — the item is there with <code>created:&lt;today&gt;</code>. You never opened the store yourself. Infrastructure-as-interface proof.</p>
 <p>The pattern repeats: capture from Cowork, process from Cowork, query from Cowork, review from Cowork.</p>
       </div>
+      
+        <div class="slide-next">
+          <div class="slide-next-label">What's next</div>
+          <div class="slide-next-title">M15 — Daily Command Center</div>
+          <div class="slide-next-meta">Type <code>/teach M15</code> in Cowork to dive in next.</div>
+        </div>
     </div>
   </section>
-
 </div>
 
 <div class="deck-chrome">
   <a href="../m14.html" class="deck-back">← Back to M14</a>
-  <div class="deck-counter"><span data-current>1</span> / <span data-total>4</span></div>
+  <div class="deck-counter"><span data-current>1</span> / <span data-total>1</span></div>
   <div class="deck-nav">
     <button data-prev aria-label="Previous slide">←</button>
     <button data-next aria-label="Next slide">→</button>

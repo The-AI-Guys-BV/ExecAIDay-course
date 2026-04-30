@@ -21,13 +21,22 @@
       <div class="title-eyebrow">Foundation</div>
       <h1 class="title-num">M02</h1>
       <h2 class="title-name">Open Obsidian, see your vault</h2>
+      <p class="title-outcome">Open Obsidian on the vault you mounted in M01 — same files Cowork sees.</p>
     </div>
   </section>
 
   <section class="slide slide-why">
     <div class="slide-inner">
-      <div class="slide-eyebrow">Why this module matters</div>
+      <div class="slide-eyebrow">Why this matters</div>
       <p class="slide-lede">Obsidian is your knowledge layer — free, local-first, and the same files Cowork reads. Daily notes, references, capture, all linked via <code>[[wikilinks]]</code>. Once Obsidian is open on the vault you mounted in M01, Claude can read and write every note in there from Cowork.</p>
+    </div>
+  </section>
+
+  <section class="slide slide-bigidea">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">The big idea</div>
+      <p class="slide-bigidea-p">You have a vault. It's a folder of plain-text notes. Cowork reads and writes them. Obsidian renders them as a knowledge graph with bidirectional links, search, and a navigable file tree.</p>
+<p class="slide-bigidea-p"><strong>Role split, important.</strong> Cowork is the active layer — it creates files, edits files, runs skills, builds artifacts. Obsidian is the viewer — it shows you what's in the vault, in a UI that's pleasant to read in. <strong>You don't install Obsidian plugins.</strong> Anything you'd want a plugin for (a dashboard, a calendar overview, a daily-note workflow), you build as a live artifact in Cowork instead. The vault stays plain markdown that any tool can read.</p>
     </div>
   </section>
 
@@ -44,20 +53,64 @@
     </div>
   </section>
 
+  <section class="slide slide-action">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">The move</div>
+      <p class="slide-action-setup">Try a few of these in Cowork now:</p><pre class="slide-prompt"><code>Write a 5-line journal entry about how the workshop is going so far,
+in journal voice. Save to today's daily note in my vault.</code></pre>
+    </div>
+  </section>
+
+  <section class="slide slide-verify">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">How you know it worked</div>
+      <div class="slide-verify-body">
+        <p>In Cowork:</p>
+<pre><code>
+What's in my Daily Notes folder for the past 7 days?
+</code></pre>
+<p>Expected: Claude lists files (probably just today's, plus any pre-existing). If Claude can't find <code>Daily Notes/</code>, the vault didn't mount correctly — check M01.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-issues">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">If something breaks</div>
+      <div class="slide-issues-body">
+        <ul>
+<li><strong>Obsidian doesn't see the files Claude wrote</strong> — Obsidian uses file watching; sometimes needs a manual refresh (right-click the file browser → Refresh).</li>
+<li><strong>Vault feels empty</strong> — that's correct on Day 1. Content accumulates over weeks.</li>
+</ul>
+      </div>
+    </div>
+  </section>
+
   <section class="slide slide-try">
     <div class="slide-inner">
       <div class="slide-eyebrow">Try this</div>
       <div class="slide-try-body">
         <p>In Cowork:</p>
+<pre><code>
+Write a paragraph reflecting on what you've learned in the workshop so far.
+Save it to today's daily note in my vault. Use journal voice — first person, reflective, brief.
+</code></pre>
+<p>Claude reads <code>Daily Notes/claude.md</code> (which says journal voice), writes the paragraph, saves to <code>&lt;vault&gt;/Daily Notes/&lt;today&gt;.md</code>.</p>
+<p>Watch Obsidian. The note updates live in front of you.</p>
       </div>
+      
+        <div class="slide-next">
+          <div class="slide-next-label">What's next</div>
+          <div class="slide-next-title">M03 — First Cowork Project: the Vault</div>
+          <div class="slide-next-meta">Type <code>/teach M03</code> in Cowork to dive in next.</div>
+        </div>
     </div>
   </section>
-
 </div>
 
 <div class="deck-chrome">
   <a href="../m02.html" class="deck-back">← Back to M02</a>
-  <div class="deck-counter"><span data-current>1</span> / <span data-total>4</span></div>
+  <div class="deck-counter"><span data-current>1</span> / <span data-total>1</span></div>
   <div class="deck-nav">
     <button data-prev aria-label="Previous slide">←</button>
     <button data-next aria-label="Next slide">→</button>

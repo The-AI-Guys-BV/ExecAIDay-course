@@ -21,13 +21,22 @@
       <div class="title-eyebrow">Connect</div>
       <h1 class="title-num">M10</h1>
       <h2 class="title-name">Connectors</h2>
+      <p class="title-outcome">Verify connectors: Gmail / M365, Calendar, Drive, Slack, plus your custom apps (Asana / Monday / Jira / Linear / SFDC / HubSpot / etc.).</p>
     </div>
   </section>
 
   <section class="slide slide-why">
     <div class="slide-inner">
-      <div class="slide-eyebrow">Why this module matters</div>
+      <div class="slide-eyebrow">Why this matters</div>
       <p class="slide-lede">The jaw-drop arc. Inbox, drafts, calendar — your real data, in Cowork, working immediately. Up to here, the workshop was setup and orientation. M10 is where the system becomes useful in your actual workflow.</p>
+    </div>
+  </section>
+
+  <section class="slide slide-bigidea">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">The big idea</div>
+      <p class="slide-bigidea-p">A connector is an authenticated bridge between Claude and your services, scoped to specific permissions. When Claude needs your inbox, it queries via the connector. When you ask "what's on my calendar today," same.</p>
+<p class="slide-bigidea-p">You don't authenticate per use. The connector is always-on once set up. Claude pulls fresh data per query — your inbox isn't continuously streaming to Anthropic, but Claude can fetch what it needs when relevant.</p>
     </div>
   </section>
 
@@ -44,24 +53,64 @@
     </div>
   </section>
 
-  <section class="slide slide-try">
+  <section class="slide slide-action">
     <div class="slide-inner">
-      <div class="slide-eyebrow">Try this</div>
-      <div class="slide-try-body">
-        <p>Walk through all three steps in order:
-1. Inbox read-back. Jaw-drop #1.
-2. Live drafts that appear in your actual email Drafts folder. Jaw-drop #2.
-3. Calendar + email chain narrative. Jaw-drop #3.</p>
-<p>By the end, "Cowork as a system" has become real to you.</p>
+      <div class="slide-eyebrow">The move</div>
+      <p class="slide-action-setup">Type:</p><pre class="slide-prompt"><code>What's in my inbox right now? Top 5, with one-line summaries.</code></pre>
+    </div>
+  </section>
+
+  <section class="slide slide-verify">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">How you know it worked</div>
+      <div class="slide-verify-body">
+        <pre><code>
+List the connectors active in this Cowork Project. For each, what scope is granted?
+</code></pre>
+<p>Expected: Claude lists Gmail/M365, Calendar, Drive, Slack, plus your custom apps. Scopes vary; key check is that nothing says "not connected." If something is disconnected, fix before continuing.</p>
       </div>
     </div>
   </section>
 
+  <section class="slide slide-issues">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">If something breaks</div>
+      <div class="slide-issues-body">
+        <ul>
+<li><strong>Inbox read-back returns nothing</strong> — connector scope might be wrong. Check Customize → Connectors.</li>
+<li><strong>Drafts not appearing in Outlook (M365)</strong> — Zapier MCP not set up. Your assistant will fix.</li>
+<li><strong>Slack returns DMs only when expected to return channels</strong> — connector scope is account-only by default; expand if needed.</li>
+<li><strong>Custom CRM connector slow</strong> — many CRMs have rate limits. Be patient or query smaller windows.</li>
+</ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-try">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Try this</div>
+      <div class="slide-try-body">
+        <p>Walk through all three steps in order:</p>
+<ol>
+<li>Inbox read-back. Jaw-drop #1.</li>
+<li>Live drafts that appear in your actual email Drafts folder. Jaw-drop #2.</li>
+<li>Calendar + email chain narrative. Jaw-drop #3.</li>
+</ol>
+<p>By the end, "Cowork as a system" has become real to you.</p>
+      </div>
+      
+        <div class="slide-next">
+          <div class="slide-next-label">What's next</div>
+          <div class="slide-next-title">M11 — Office Add-ins</div>
+          <div class="slide-next-meta">Type <code>/teach M11</code> in Cowork to dive in next.</div>
+        </div>
+    </div>
+  </section>
 </div>
 
 <div class="deck-chrome">
   <a href="../m10.html" class="deck-back">← Back to M10</a>
-  <div class="deck-counter"><span data-current>1</span> / <span data-total>4</span></div>
+  <div class="deck-counter"><span data-current>1</span> / <span data-total>1</span></div>
   <div class="deck-nav">
     <button data-prev aria-label="Previous slide">←</button>
     <button data-next aria-label="Next slide">→</button>

@@ -21,13 +21,22 @@
       <div class="title-eyebrow">Foundation</div>
       <h1 class="title-num">M01</h1>
       <h2 class="title-name">Welcome + Install</h2>
+      <p class="title-outcome">Verify your install (Cowork, Obsidian, the ExecAIDay plugin, your connectors).</p>
     </div>
   </section>
 
   <section class="slide slide-why">
     <div class="slide-inner">
-      <div class="slide-eyebrow">Why this module matters</div>
+      <div class="slide-eyebrow">Why this matters</div>
       <p class="slide-lede">You start the workshop with a working Cowork Project, a tutor (<code>/teach</code> — type that into Cowork and it walks any module of this course with you, on demand), and the vocabulary to follow everything that comes next. Without this hour, the rest of the workshop is button-pressing without understanding why each step matters. With it, every later module slots into a structure you understand.</p>
+    </div>
+  </section>
+
+  <section class="slide slide-bigidea">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">The big idea</div>
+      <p class="slide-bigidea-p"><strong>The software below should already be pre-installed on your machine before the workshop starts.</strong> This list is here for reference, not as a live install task. The links are useful if you want to verify, reinstall, or find the official sources later. If any item is missing when you sit down, tell your assistant — they install it now and you keep moving.</p>
+<p class="slide-bigidea-p">This module's job is to confirm all that has given you a usable workspace, and to give you the words for the next 15 modules. Most of what we cover here is vocabulary — concepts you'll hear used the whole workshop. We're not building anything yet; we're orienting.</p>
     </div>
   </section>
 
@@ -46,20 +55,50 @@
     </div>
   </section>
 
+  <section class="slide slide-verify">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">How you know it worked</div>
+      <div class="slide-verify-body">
+        <p>After the in-room work, a one-minute check: type the prompt below into your Cowork Project.</p>
+<pre><code>
+What folders am I currently mounting in this Cowork Project?
+</code></pre>
+<p>Expected: Claude lists both your vault and your work folder by name (the names you chose). If either is missing, the mount didn't take — flag your assistant.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-issues">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">If something breaks</div>
+      <div class="slide-issues-body">
+        <ul>
+<li><strong>Cowork Project doesn't see one of the folders.</strong> Re-mount it; confirm the path. Some MDM-managed laptops require explicit folder permission.</li>
+<li><strong><code>/teach</code> doesn't appear when you type it.</strong> The plugin didn't install or didn't load. Restart Cowork. If still missing, your assistant will reinstall the plugin from the marketplace.</li>
+</ul>
+      </div>
+    </div>
+  </section>
+
   <section class="slide slide-try">
     <div class="slide-inner">
       <div class="slide-eyebrow">Try this</div>
       <div class="slide-try-body">
         <p>Type <code>/teach</code> (no arguments). Claude lists the 16 modules. You pick one. Claude walks it patiently, one section at a time. The hallucination demo follows immediately as a trust-calibration moment — your instructor demonstrates Claude making something up confidently, then you watch it self-correct when given evidence.</p>
       </div>
+      
+        <div class="slide-next">
+          <div class="slide-next-label">What's next</div>
+          <div class="slide-next-title">M02 — Open Obsidian, see your vault</div>
+          <div class="slide-next-meta">Type <code>/teach M02</code> in Cowork to dive in next.</div>
+        </div>
     </div>
   </section>
-
 </div>
 
 <div class="deck-chrome">
   <a href="../m01.html" class="deck-back">← Back to M01</a>
-  <div class="deck-counter"><span data-current>1</span> / <span data-total>4</span></div>
+  <div class="deck-counter"><span data-current>1</span> / <span data-total>1</span></div>
   <div class="deck-nav">
     <button data-prev aria-label="Previous slide">←</button>
     <button data-next aria-label="Next slide">→</button>

@@ -262,22 +262,116 @@ def what_youll_do_from_md(md: str) -> str:
 
 
 def try_this_from_md(md: str) -> str:
-    """Pull the 'Try this' / 'Try these' section content as HTML."""
-    m = re.search(r"## Try (?:this|these)[^\n]*\n+(.*?)(?=\n##|\n---|$)", md, re.DOTALL)
+    """Pull the 'Try this' / 'Try these' section as full HTML (paragraphs, code blocks, lists)."""
+    m = re.search(r"## Try (?:this|these)[^\n]*\n+(.*?)(?=\n## |\n---|$)", md, re.DOTALL)
     if not m:
         return ""
     block = m.group(1).strip()
-    # Render the first paragraph as the slide content; keep simple.
-    paragraphs = [p.strip() for p in block.split("\n\n") if p.strip()]
+    return md_to_html(block)
+
+
+def outcome_from_md(md: str) -> str:
+    """Pull the first bullet of 'What you'll do' as a one-line outcome for the title slide."""
+    m = re.search(r"## What you'll do\s*\n+(.*?)(?=\n## |\n---)", md, re.DOTALL)
+    if not m:
+        return ""
+    block = m.group(1).strip()
+    for line in block.split("\n"):
+        line = line.strip()
+        if line.startswith("- "):
+            return inline(line[2:])
+    return ""
+
+
+def big_idea_from_md(md: str) -> str:
+    """Pull the first 1-2 prose paragraphs from the Introduction section."""
+    m = re.search(r"## Introduction\s*\n+(.*?)(?=\n## |\n---|$)", md, re.DOTALL)
+    if not m:
+        return ""
+    section = m.group(1).strip()
+    paragraphs = [p.strip() for p in section.split("\n\n") if p.strip()]
     out = []
-    for p in paragraphs[:2]:  # first two paragraphs at most
-        if p.startswith("- ") or p.startswith("**"):
-            out.append(f"<p>{inline(p)}</p>")
-        elif p.startswith("```"):
+    for p in paragraphs:
+        # Skip code blocks, bullet lists, and section headers.
+        if p.startswith("```") or p.startswith("- ") or p.startswith("#"):
             continue
-        else:
-            out.append(f"<p>{inline(p)}</p>")
-    return "\n".join(out)
+        # Treat ordered lists as not-prose.
+        if re.match(r"^\d+\. ", p):
+            continue
+        out.append(p)
+        if len(out) >= 2:
+            break
+    if not out:
+        return ""
+    return "\n".join(f'<p class="slide-bigidea-p">{inline(p)}</p>' for p in out)
+
+
+def action_from_md(md: str) -> str:
+    """Pull a meaningful action — the longest code block in 'Beginner' or 'Getting Started',
+    paired with the paragraph immediately preceding THAT block (its setup line).
+    Falls back to a short numbered-step list for UI-driven modules. Returns HTML or empty string."""
+    m = re.search(r"## Beginner[^\n]*\n+(.*?)(?=\n## |\n---|$)", md, re.DOTALL)
+    if not m:
+        m = re.search(r"## (?:Getting Started|How)[^\n]*\n+(.*?)(?=\n## |\n---|$)", md, re.DOTALL)
+    if not m:
+        return ""
+    section = m.group(1).strip()
+
+    # Walk every fenced code block in the section, capture its preceding setup paragraph,
+    # then choose the longest code block as the most substantive action prompt.
+    candidates = []
+    for match in re.finditer(r"```[^\n]*\n(.*?)\n```", section, re.DOTALL):
+        code_content = match.group(1)
+        before_text = section[: match.start()]
+        # Last non-empty paragraph immediately before this code block.
+        prev_blocks = [b.strip() for b in re.split(r"\n\s*\n", before_text) if b.strip()]
+        setup = ""
+        for p in reversed(prev_blocks):
+            # Skip headers, bullets, and prior code-block content (those are inside the section).
+            if p.startswith("#") or p.startswith("- ") or p.startswith("```"):
+                continue
+            if re.match(r"^\d+\. ", p):
+                continue
+            setup = p
+            break
+        candidates.append((len(code_content), setup, code_content))
+
+    if candidates:
+        candidates.sort(key=lambda x: x[0], reverse=True)
+        _, setup, code = candidates[0]
+        setup_html = f'<p class="slide-action-setup">{inline(setup)}</p>' if setup else ""
+        body_html = f'<pre class="slide-prompt"><code>{esc_for_pre(code)}</code></pre>'
+        return setup_html + body_html
+
+    # No code block — try a numbered step list (UI flows).
+    numbered = re.findall(r"^\d+\. (.+)$", section, re.MULTILINE)
+    if len(numbered) >= 3:
+        items = "\n".join(f'<li>{inline(item)}</li>' for item in numbered[:5])
+        return f'<ol class="slide-action-steps">{items}</ol>'
+    return ""
+
+
+def verify_from_md(md: str) -> str:
+    """Pull '## Verification checkpoint' content as HTML."""
+    m = re.search(r"## Verification(?:\s+checkpoint)?[^\n]*\n+(.*?)(?=\n## |\n---|$)", md, re.DOTALL)
+    if not m:
+        return ""
+    block = m.group(1).strip()
+    return md_to_html(block)
+
+
+def common_issues_from_md(md: str) -> str:
+    """Pull '## Common issues' content as HTML."""
+    m = re.search(r"## Common issues[^\n]*\n+(.*?)(?=\n## |\n---|$)", md, re.DOTALL)
+    if not m:
+        return ""
+    block = m.group(1).strip()
+    return md_to_html(block)
+
+
+def esc_for_pre(s: str) -> str:
+    """HTML-escape text destined for a <pre><code> block."""
+    return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
 SLIDES_TEMPLATE = """<!DOCTYPE html>
@@ -294,48 +388,12 @@ SLIDES_TEMPLATE = """<!DOCTYPE html>
 <body>
 
 <div class="deck" data-deck>
-
-  <section class="slide slide-title">
-    <div class="slide-inner">
-      <div class="title-icon" style="background: var(--{phase}-soft); color: var(--{phase});">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">{icon}</svg>
-      </div>
-      <div class="title-eyebrow">{phase_label}</div>
-      <h1 class="title-num">{num}</h1>
-      <h2 class="title-name">{title}</h2>
-    </div>
-  </section>
-
-  <section class="slide slide-why">
-    <div class="slide-inner">
-      <div class="slide-eyebrow">Why this module matters</div>
-      <p class="slide-lede">{lede}</p>
-    </div>
-  </section>
-
-  <section class="slide slide-what">
-    <div class="slide-inner">
-      <div class="slide-eyebrow">What you'll do</div>
-      <div class="slide-list">
-        {what}
-      </div>
-    </div>
-  </section>
-
-  <section class="slide slide-try">
-    <div class="slide-inner">
-      <div class="slide-eyebrow">Try this</div>
-      <div class="slide-try-body">
-        {try_this}
-      </div>
-    </div>
-  </section>
-
+{slides_html}
 </div>
 
 <div class="deck-chrome">
   <a href="../m{num_padded}.html" class="deck-back">← Back to {num}</a>
-  <div class="deck-counter"><span data-current>1</span> / <span data-total>4</span></div>
+  <div class="deck-counter"><span data-current>1</span> / <span data-total>1</span></div>
   <div class="deck-nav">
     <button data-prev aria-label="Previous slide">←</button>
     <button data-next aria-label="Next slide">→</button>
@@ -369,6 +427,141 @@ SLIDES_TEMPLATE = """<!DOCTYPE html>
 </body>
 </html>
 """
+
+
+def build_slides_html(num, title, phase, phase_label, icon, md, next_mod):
+    """Build the inner HTML for all slides in a single module deck.
+    Returns the concatenated <section class="slide ...">...</section> markup.
+    Each section is included only when its source content exists in the module."""
+    sections = []
+
+    # 1. Title slide — phase, number, title, optional outcome line.
+    outcome = outcome_from_md(md)
+    outcome_html = f'<p class="title-outcome">{outcome}</p>' if outcome else ""
+    sections.append(f"""
+  <section class="slide slide-title">
+    <div class="slide-inner">
+      <div class="title-icon" style="background: var(--{phase}-soft); color: var(--{phase});">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">{icon}</svg>
+      </div>
+      <div class="title-eyebrow">{phase_label}</div>
+      <h1 class="title-num">{num}</h1>
+      <h2 class="title-name">{title}</h2>
+      {outcome_html}
+    </div>
+  </section>""")
+
+    # 2. Why this matters — always present.
+    lede = lede_from_md(md)
+    if lede:
+        sections.append(f"""
+  <section class="slide slide-why">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Why this matters</div>
+      <p class="slide-lede">{lede}</p>
+    </div>
+  </section>""")
+
+    # 3. The big idea — first 1-2 prose paragraphs of the Introduction.
+    big_idea = big_idea_from_md(md)
+    if big_idea:
+        sections.append(f"""
+  <section class="slide slide-bigidea">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">The big idea</div>
+      {big_idea}
+    </div>
+  </section>""")
+
+    # 4. What you'll do — bullets.
+    what = what_youll_do_from_md(md)
+    if what:
+        sections.append(f"""
+  <section class="slide slide-what">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">What you'll do</div>
+      <div class="slide-list">
+        {what}
+      </div>
+    </div>
+  </section>""")
+
+    # 5. The action — actual prompt or numbered UI steps from Beginner section.
+    action = action_from_md(md)
+    if action:
+        sections.append(f"""
+  <section class="slide slide-action">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">The move</div>
+      {action}
+    </div>
+  </section>""")
+
+    # 6. Verify — verification checkpoint.
+    verify = verify_from_md(md)
+    if verify:
+        sections.append(f"""
+  <section class="slide slide-verify">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">How you know it worked</div>
+      <div class="slide-verify-body">
+        {verify}
+      </div>
+    </div>
+  </section>""")
+
+    # 7. Common issues — bullet list.
+    issues = common_issues_from_md(md)
+    if issues:
+        sections.append(f"""
+  <section class="slide slide-issues">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">If something breaks</div>
+      <div class="slide-issues-body">
+        {issues}
+      </div>
+    </div>
+  </section>""")
+
+    # 8. Try this + what's next — exercise, plus pointer to next module.
+    try_this = try_this_from_md(md)
+    if next_mod:
+        next_html = f"""
+        <div class="slide-next">
+          <div class="slide-next-label">What's next</div>
+          <div class="slide-next-title">{next_mod[0]} — {next_mod[1]}</div>
+          <div class="slide-next-meta">Type <code>/teach {next_mod[0]}</code> in Cowork to dive in next.</div>
+        </div>"""
+    else:
+        next_html = """
+        <div class="slide-next">
+          <div class="slide-next-label">Course complete</div>
+          <div class="slide-next-title">You finished the deck.</div>
+          <div class="slide-next-meta">Open the <a href="../index.html">course overview</a> to revisit any module — or use <code>/teach &lt;module&gt;</code> in Cowork.</div>
+        </div>"""
+
+    if try_this:
+        sections.append(f"""
+  <section class="slide slide-try">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Try this</div>
+      <div class="slide-try-body">
+        {try_this}
+      </div>
+      {next_html}
+    </div>
+  </section>""")
+    else:
+        # Modules without a Try this still get a closing 'next' slide.
+        sections.append(f"""
+  <section class="slide slide-next-only">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">What's next</div>
+      {next_html}
+    </div>
+  </section>""")
+
+    return "\n".join(sections)
 
 
 def main():
@@ -409,20 +602,22 @@ def main():
         out_path.write_text(html, encoding="utf-8")
         print(f"Wrote {out_path.name}")
 
-        # Slide deck for the module.
-        md = md_path.read_text(encoding="utf-8")
-        what = what_youll_do_from_md(md)
-        try_this = try_this_from_md(md)
-        slides_html = SLIDES_TEMPLATE.format(
+        # Slide deck for the module — content slides built dynamically based on what
+        # the module file actually contains, then wrapped in the deck chrome.
+        slides_html_inner = build_slides_html(
             num=num,
-            num_padded=num_padded,
             title=title,
             phase=phase,
             phase_label=PHASE_LABELS[phase],
             icon=icon,
-            lede=lede,
-            what=what,
-            try_this=try_this,
+            md=md,
+            next_mod=next_mod,
+        )
+        slides_html = SLIDES_TEMPLATE.format(
+            num=num,
+            num_padded=num_padded,
+            title=title,
+            slides_html=slides_html_inner,
         )
         slides_dir = OUT / "slides"
         slides_dir.mkdir(exist_ok=True)

@@ -21,13 +21,22 @@
       <div class="title-eyebrow">Connect</div>
       <h1 class="title-num">M12</h1>
       <h2 class="title-name">Work folder + /new-project</h2>
+      <p class="title-outcome">Learn the two folder shapes: project folders (bounded work, three buckets) vs stream folders (recurring, flat).</p>
     </div>
   </section>
 
   <section class="slide slide-why">
     <div class="slide-inner">
-      <div class="slide-eyebrow">Why this module matters</div>
+      <div class="slide-eyebrow">Why this matters</div>
       <p class="slide-lede">This is the structural module. Two folder shapes, two senses of "project," and one file (<code>claude.md</code>) that ties everything to context. Get this right and the rest of the workshop slots in. Get it wrong and you'll be confused about why Claude knows some things and not others.</p>
+    </div>
+  </section>
+
+  <section class="slide slide-bigidea">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">The big idea</div>
+      <p class="slide-bigidea-p">Cowork has built-in concepts; we have folder conventions; the two interlock. This is how:</p>
+<p class="slide-bigidea-p">That's the whole architecture. M12 makes it concrete.</p>
     </div>
   </section>
 
@@ -45,20 +54,63 @@
     </div>
   </section>
 
+  <section class="slide slide-action">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">The move</div>
+      <p class="slide-action-setup"><strong>Project folders</strong> (bounded work with deliverables):</p><pre class="slide-prompt"><code>&lt;work-folder&gt;/&lt;project-name&gt;/
+├── claude.md         # project-specific context
+├── memory.md         # patterns Cowork learns about this project
+├── Source Materials/ # incoming inputs
+├── Working Files/    # in-progress
+└── Deliverables/     # finished outputs</code></pre>
+    </div>
+  </section>
+
+  <section class="slide slide-verify">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">How you know it worked</div>
+      <div class="slide-verify-body">
+        <p>After running <code>/new-project</code>, type:</p>
+<pre><code>
+What's in my course/ project folder right now? Read the claude.md.
+</code></pre>
+<p>Expected: Claude reads the project's <code>claude.md</code> and reports the synthesized brief — outcome, stakeholders, timeline, format overrides, etc. — along with the bucket subfolders. If <code>claude.md</code> is empty or missing, the scaffold didn't complete; rerun <code>/new-project</code>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-issues">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">If something breaks</div>
+      <div class="slide-issues-body">
+        <ul>
+<li><strong>Project folder name conflicts</strong> — skill prompts for a different slug.</li>
+<li><strong>Synthesized <code>claude.md</code> looks generic</strong> — the interview was too short; rerun with more detail in answers.</li>
+<li><strong>Bucket subfolders empty</strong> — that's correct; they ship empty per the architecture.</li>
+</ul>
+      </div>
+    </div>
+  </section>
+
   <section class="slide slide-try">
     <div class="slide-inner">
       <div class="slide-eyebrow">Try this</div>
       <div class="slide-try-body">
         <p>Run <code>/new-project course</code> (or whatever name you prefer). Skill interviews you, scaffolds the folder, synthesizes a tailored <code>claude.md</code>, creates the GTD project entry as a vault file. First content pulled from this plugin into <code>course/Source Materials/</code>. You now have your first project folder, your first GTD project entry, and the muscle for <code>/new-project</code>.</p>
       </div>
+      
+        <div class="slide-next">
+          <div class="slide-next-label">What's next</div>
+          <div class="slide-next-title">M13 — Scheduled Tasks + Routines</div>
+          <div class="slide-next-meta">Type <code>/teach M13</code> in Cowork to dive in next.</div>
+        </div>
     </div>
   </section>
-
 </div>
 
 <div class="deck-chrome">
   <a href="../m12.html" class="deck-back">← Back to M12</a>
-  <div class="deck-counter"><span data-current>1</span> / <span data-total>4</span></div>
+  <div class="deck-counter"><span data-current>1</span> / <span data-total>1</span></div>
   <div class="deck-nav">
     <button data-prev aria-label="Previous slide">←</button>
     <button data-next aria-label="Next slide">→</button>

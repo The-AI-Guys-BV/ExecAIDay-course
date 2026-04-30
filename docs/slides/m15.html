@@ -21,13 +21,22 @@
       <div class="title-eyebrow">System</div>
       <h1 class="title-num">M15</h1>
       <h2 class="title-name">Daily Command Center</h2>
+      <p class="title-outcome">Expand the Day 1 morning-brief artifact with new sources now that GTD (M14) is live.</p>
     </div>
   </section>
 
   <section class="slide slide-why">
     <div class="slide-inner">
-      <div class="slide-eyebrow">Why this module matters</div>
+      <div class="slide-eyebrow">Why this matters</div>
       <p class="slide-lede">The morning-brief artifact you built Day 1 grows up. By end of M15 it's a full single-pane-of-glass dashboard pulling GTD + Obsidian + calendar + Slack + email. This is the artifact you'll open every morning for years.</p>
+    </div>
+  </section>
+
+  <section class="slide slide-bigidea">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">The big idea</div>
+      <p class="slide-bigidea-p">You built a simple live artifact in Day 1 closing — three panels: calendar, urgent email, Slack mentions. That artifact has been firing every morning since.</p>
+<p class="slide-bigidea-p">Today we expand it. Now that GTD is live (M14), we can add: top 5 next actions, stale waiting-fors, today's GTD-driven priorities. Now that Obsidian is your knowledge layer (M02), we can add: yesterday's reflection bubbling up to today.</p>
     </div>
   </section>
 
@@ -44,6 +53,32 @@
     </div>
   </section>
 
+  <section class="slide slide-verify">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">How you know it worked</div>
+      <div class="slide-verify-body">
+        <pre><code>
+Show me my Daily Command Center artifact. Walk through what each tile is pulling.
+</code></pre>
+<p>Expected: Claude opens the artifact, identifies the 7 (or more) tiles, and says where each pulls from. If a tile is broken or missing, fix now.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-issues">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">If something breaks</div>
+      <div class="slide-issues-body">
+        <ul>
+<li><strong>Tile shows stale data on reopen</strong> — live refresh isn't happening; ensure the tile prompt says "pull fresh on each open."</li>
+<li><strong>Layout broken on reflow</strong> — too many tiles for the column structure; reduce or move some to a second artifact.</li>
+<li><strong>Bug #28161</strong> (sidebar conflation) shows two artifacts mixed — close + reopen sidebar.</li>
+<li><strong>One source returns nothing</strong> — the connector might not be granted access to that source, or the query is off. Have your assistant fix per tile.</li>
+</ul>
+      </div>
+    </div>
+  </section>
+
   <section class="slide slide-try">
     <div class="slide-inner">
       <div class="slide-eyebrow">Try this</div>
@@ -51,14 +86,19 @@
         <p>The artifact built Day 1 has now grown into your actual every-morning view. Open it tomorrow morning — it's richer than today, fully personalized, all sources flowing into one pane.</p>
 <p>The realization: this is the workshop's flagship artifact. You'll open it every morning for years.</p>
       </div>
+      
+        <div class="slide-next">
+          <div class="slide-next-label">What's next</div>
+          <div class="slide-next-title">M16 — Meeting Notes</div>
+          <div class="slide-next-meta">Type <code>/teach M16</code> in Cowork to dive in next.</div>
+        </div>
     </div>
   </section>
-
 </div>
 
 <div class="deck-chrome">
   <a href="../m15.html" class="deck-back">← Back to M15</a>
-  <div class="deck-counter"><span data-current>1</span> / <span data-total>4</span></div>
+  <div class="deck-counter"><span data-current>1</span> / <span data-total>1</span></div>
   <div class="deck-nav">
     <button data-prev aria-label="Previous slide">←</button>
     <button data-next aria-label="Next slide">→</button>

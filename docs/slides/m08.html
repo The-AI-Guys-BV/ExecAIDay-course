@@ -21,13 +21,22 @@
       <div class="title-eyebrow">Sharpen</div>
       <h1 class="title-num">M08</h1>
       <h2 class="title-name">Artifacts</h2>
+      <p class="title-outcome">See the artifact kinds you'll actually use: documents, dashboards, diagrams.</p>
     </div>
   </section>
 
   <section class="slide slide-why">
     <div class="slide-inner">
-      <div class="slide-eyebrow">Why this module matters</div>
+      <div class="slide-eyebrow">Why this matters</div>
       <p class="slide-lede">Live artifacts (April 2026 headline) are how Claude becomes a persistent surface in your work, not a one-shot answer. A dashboard you build today reopens tomorrow with fresh data. That's the difference between asking Claude a question and having Claude maintain a view.</p>
+    </div>
+  </section>
+
+  <section class="slide slide-bigidea">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">The big idea</div>
+      <p class="slide-bigidea-p">An artifact is a generated output Claude renders inline alongside its text response. For executives, the kinds that matter are documents you can edit, dashboards you can re-open, and diagrams that explain a flow.</p>
+<p class="slide-bigidea-p">The 2026 headline: <strong>live artifacts</strong> auto-refresh on reopen. So the dashboard isn't a snapshot — it's a re-runnable view that pulls fresh data each time you open it. Daily morning brief, weekly status, project tracker — these become living surfaces, not stale screenshots.</p>
     </div>
   </section>
 
@@ -44,6 +53,41 @@
     </div>
   </section>
 
+  <section class="slide slide-action">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">The move</div>
+      <p class="slide-action-setup">Try one now. In Cowork:</p><pre class="slide-prompt"><code>Make me an interactive page showing the days of the week in a 2x4 grid, each in a
+different color, with today highlighted.</code></pre>
+    </div>
+  </section>
+
+  <section class="slide slide-verify">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">How you know it worked</div>
+      <div class="slide-verify-body">
+        <p>After building your first live artifact, type:</p>
+<pre><code>
+Show me the artifact I just built. What data source does it query?
+</code></pre>
+<p>Expected: Claude lists the artifact and identifies that it reads <vault>/gtd/inbox.md. If Claude says "I don't see an artifact," the artifact didn't save — try building again.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-issues">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">If something breaks</div>
+      <div class="slide-issues-body">
+        <ul>
+<li><strong>Bug #28161</strong> (sidebar conflation) — close + reopen sidebar.</li>
+<li><strong>Live artifact doesn't refresh</strong> — it might be a static artifact, not live. Ask Claude to "make this artifact live" and rebuild.</li>
+<li><strong>Artifact disappears on Cowork restart</strong> — check the artifacts list in the sidebar; sometimes the active artifact pointer resets but the artifact is still there.</li>
+<li><strong>Sharing isn't available</strong> — current limitation, not a bug.</li>
+</ul>
+      </div>
+    </div>
+  </section>
+
   <section class="slide slide-try">
     <div class="slide-inner">
       <div class="slide-eyebrow">Try this</div>
@@ -51,14 +95,19 @@
         <p>Build the GTD-Inbox live artifact above. With the artifact open, in another Cowork tab type <code>/capture remind me to test the live artifact</code>. Watch your new item appear in the artifact when it refreshes. That's "live" — not a screenshot, a surface that updates.</p>
 <p>In M15 you'll build the full version that pulls calendar, email, Slack, and your vault GTD together. For now, one live tile is enough to feel the difference.</p>
       </div>
+      
+        <div class="slide-next">
+          <div class="slide-next-label">What's next</div>
+          <div class="slide-next-title">M09 — Browser + Chrome</div>
+          <div class="slide-next-meta">Type <code>/teach M09</code> in Cowork to dive in next.</div>
+        </div>
     </div>
   </section>
-
 </div>
 
 <div class="deck-chrome">
   <a href="../m08.html" class="deck-back">← Back to M08</a>
-  <div class="deck-counter"><span data-current>1</span> / <span data-total>4</span></div>
+  <div class="deck-counter"><span data-current>1</span> / <span data-total>1</span></div>
   <div class="deck-nav">
     <button data-prev aria-label="Previous slide">←</button>
     <button data-next aria-label="Next slide">→</button>

@@ -21,13 +21,22 @@
       <div class="title-eyebrow">Connect</div>
       <h1 class="title-num">M11</h1>
       <h2 class="title-name">Office Add-ins</h2>
+      <p class="title-outcome">Verify Word, Excel, PowerPoint add-ins.</p>
     </div>
   </section>
 
   <section class="slide slide-why">
     <div class="slide-inner">
-      <div class="slide-eyebrow">Why this module matters</div>
+      <div class="slide-eyebrow">Why this matters</div>
       <p class="slide-lede">2026 killer feature: cross-app shared context. Analyze in Excel → build deck in PowerPoint → draft memo in Word — all remembering the analysis. The Excel → PPT → Word chain is what makes Office add-ins more than three independent assistants.</p>
+    </div>
+  </section>
+
+  <section class="slide slide-bigidea">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">The big idea</div>
+      <p class="slide-bigidea-p">You've used Word, Excel, PowerPoint for years. The Claude add-ins live INSIDE those apps. Open Word, click Claude in the ribbon, sidebar opens, you can ask Claude to help with the document.</p>
+<p class="slide-bigidea-p">What's new in 2026: cross-app shared context. Start an analysis in Excel. Ask PowerPoint Claude to "build slides from the Excel analysis." It does. Ask Word Claude to "draft a memo summarizing the Excel + PPT work." It does. The conversation persists across apps.</p>
     </div>
   </section>
 
@@ -44,20 +53,59 @@
     </div>
   </section>
 
+  <section class="slide slide-action">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">The move</div>
+      <p class="slide-action-setup">In Word, with the Claude sidebar open:</p><pre class="slide-prompt"><code>Rewrite this paragraph to be 30% shorter without losing factual content. Preserve formatting.</code></pre>
+    </div>
+  </section>
+
+  <section class="slide slide-verify">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">How you know it worked</div>
+      <div class="slide-verify-body">
+        <p>After the cross-app chain:</p>
+<pre><code>
+[In Word, with the memo open]: What's in the Excel analysis we did earlier in this session?
+</code></pre>
+<p>Expected: Claude in Word references the Excel analysis from earlier. If it can't, the cross-app shared context isn't working — restart Office, retry.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-issues">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">If something breaks</div>
+      <div class="slide-issues-body">
+        <ul>
+<li><strong>Add-in doesn't appear in ribbon</strong> — install from AppSource; verify license tier (Pro/Max/Team/Enterprise).</li>
+<li><strong>Template magic produces wrong colors</strong> — template's theme colors may not be set; check Theme Designer in PowerPoint.</li>
+<li><strong>Cross-app context lost</strong> — ensure same Claude account is signed in across all three apps. Different accounts = different context.</li>
+<li><strong>Word tracked changes don't appear</strong> — Word's Track Changes feature must be enabled (Review → Track Changes).</li>
+</ul>
+      </div>
+    </div>
+  </section>
+
   <section class="slide slide-try">
     <div class="slide-inner">
       <div class="slide-eyebrow">Try this</div>
       <div class="slide-try-body">
         <p>Pick a recent branded PowerPoint you have on hand (any topic, any age). Have Claude extract the visual style from it and build a 5-slide deck on a real topic of yours. The output looks like YOURS, not Claude's defaults: company colors, your logo placed correctly, on-brand fonts. That's the felt moment.</p>
       </div>
+      
+        <div class="slide-next">
+          <div class="slide-next-label">What's next</div>
+          <div class="slide-next-title">M12 — Work folder + /new-project</div>
+          <div class="slide-next-meta">Type <code>/teach M12</code> in Cowork to dive in next.</div>
+        </div>
     </div>
   </section>
-
 </div>
 
 <div class="deck-chrome">
   <a href="../m11.html" class="deck-back">← Back to M11</a>
-  <div class="deck-counter"><span data-current>1</span> / <span data-total>4</span></div>
+  <div class="deck-counter"><span data-current>1</span> / <span data-total>1</span></div>
   <div class="deck-nav">
     <button data-prev aria-label="Previous slide">←</button>
     <button data-next aria-label="Next slide">→</button>

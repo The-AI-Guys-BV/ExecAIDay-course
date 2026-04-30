@@ -21,13 +21,22 @@
       <div class="title-eyebrow">Personalize</div>
       <h1 class="title-num">M04</h1>
       <h2 class="title-name">Write your About Me brief</h2>
+      <p class="title-outcome">Run the chief-of-staff interview. Claude writes the brief into <code>About Me.md</code> in your vault.</p>
     </div>
   </section>
 
   <section class="slide slide-why">
     <div class="slide-inner">
-      <div class="slide-eyebrow">Why this module matters</div>
+      <div class="slide-eyebrow">Why this matters</div>
       <p class="slide-lede">Your chief-of-staff brief is the highest-leverage file in the workshop. Once it exists, every conversation in your Cowork Project inherits your voice, your preferences, your context. Skip this module and Claude works from defaults; do it well and Claude works for YOU specifically.</p>
+    </div>
+  </section>
+
+  <section class="slide slide-bigidea">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">The big idea</div>
+      <p class="slide-bigidea-p">You have a chief of staff right now. You probably don't think of them that way. They're whoever knows your priorities, your quirks, your stakeholders, the things you do and don't say in writing. They've earned that knowledge over years.</p>
+<p class="slide-bigidea-p">Claude doesn't have any of that yet. This module gives Claude a starter version — captured in writing, in your vault, accessible to every conversation.</p>
     </div>
   </section>
 
@@ -45,24 +54,68 @@
     </div>
   </section>
 
-  <section class="slide slide-try">
+  <section class="slide slide-action">
     <div class="slide-inner">
-      <div class="slide-eyebrow">Try this</div>
-      <div class="slide-try-body">
-        <p><strong>a. Recognition shock.</strong> Type:
-``<code>
-Read my About Me and the about-me/ folder. Surface 3 things you noticed about me that aren't obvious from what I just told you — pattern matches, implications, context I might not have spelled out.
-</code>``</p>
-<p>Claude responds with 3 specific, non-obvious observations. You feel seen. Most people get a "huh, yeah" reaction at least once. That's the moment the workshop pays off in a felt way.</p>
+      <div class="slide-eyebrow">The move</div>
+      <p class="slide-action-setup">In Cowork, paste this prompt:</p><pre class="slide-prompt"><code>Walk me through writing my chief-of-staff brief. Use the new-vault-claudemd pattern.
+Save the result to &lt;vault&gt;/About Me.md (create it if it doesn't exist).
+Then make sure &lt;vault&gt;/claude.md contains the one-line pointer:
+"Chief-of-staff brief: read About Me.md."</code></pre>
+    </div>
+  </section>
+
+  <section class="slide slide-verify">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">How you know it worked</div>
+      <div class="slide-verify-body">
+        <pre><code>
+Summarize back to me what you know about me from About Me.md and the about-me/ folder.
+3-5 sentences max.
+</code></pre>
+<p>Expected: a concise, accurate summary. If Claude can't summarize or includes wrong details, <code>About Me.md</code> or <code>about-me/</code> has gaps.</p>
       </div>
     </div>
   </section>
 
+  <section class="slide slide-issues">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">If something breaks</div>
+      <div class="slide-issues-body">
+        <ul>
+<li><strong>Claude defaults still showing through</strong> — your constraints in <code>writing-rules.md</code> aren't strong enough; add more "don't" rules.</li>
+<li><strong>Brief feels generic</strong> — interview was too short; rerun with more specific answers.</li>
+<li><strong>Claude mixes project-specific and general tone</strong> — check project <code>claude.md</code> overrides; make sure they're explicit deviations, not full restatements.</li>
+<li><strong>Cowork doesn't seem to be reading the brief</strong> — check <code>&lt;vault&gt;/claude.md</code> contains the one-line pointer to <code>About Me.md</code>. If <code>claude.md</code> is empty or missing, Cowork won't follow through.</li>
+<li><strong>about-me files lost on Cowork restart</strong> — they shouldn't disappear; check vault path is mounted in your Cowork Project.</li>
+</ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide-try">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Try this</div>
+      <div class="slide-try-body">
+        <p><strong>a. Recognition shock.</strong> Type:</p>
+<pre><code>
+Read my About Me and the about-me/ folder. Surface 3 things you noticed about me that aren't obvious from what I just told you — pattern matches, implications, context I might not have spelled out.
+</code></pre>
+<p>Claude responds with 3 specific, non-obvious observations. You feel seen. Most people get a "huh, yeah" reaction at least once. That's the moment the workshop pays off in a felt way.</p>
+<p><strong>b. Before/after email.</strong> Draft an email pre-brief (generic). Save the output. Then draft the SAME email post-brief. Compare. The post version sounds like you. Feels like a different tool.</p>
+      </div>
+      
+        <div class="slide-next">
+          <div class="slide-next-label">What's next</div>
+          <div class="slide-next-title">M05 — Companion knowledge files</div>
+          <div class="slide-next-meta">Type <code>/teach M05</code> in Cowork to dive in next.</div>
+        </div>
+    </div>
+  </section>
 </div>
 
 <div class="deck-chrome">
   <a href="../m04.html" class="deck-back">← Back to M04</a>
-  <div class="deck-counter"><span data-current>1</span> / <span data-total>4</span></div>
+  <div class="deck-counter"><span data-current>1</span> / <span data-total>1</span></div>
   <div class="deck-nav">
     <button data-prev aria-label="Previous slide">←</button>
     <button data-next aria-label="Next slide">→</button>
