@@ -78,7 +78,7 @@
 <p><strong>Project folder</strong> = the file-system shape inside your work folder. Folder with the bucket structure.</p>
 <p>These collide on the word "project." Both must be used together: a Cowork Project mounts your work folder, which contains your project folders.</p>
 <h3>Why every folder has <code>claude.md</code> + <code>memory.md</code></h3>
-<p>So Cowork has per-folder context. The vault root <code>claude.md</code> is a one-line pointer to your chief-of-staff brief in your vault (M07 sets this up). The work-folder root <code>claude.md</code> is your work-context defaults. Each project folder's <code>claude.md</code> adds project-specific overrides.</p>
+<p>So Cowork has per-folder context. The vault root <code>claude.md</code> is a one-line pointer to your chief-of-staff brief in your vault (M06 sets this up). The work-folder root <code>claude.md</code> is your work-context defaults. Each project folder's <code>claude.md</code> adds project-specific overrides.</p>
 <p>Closer-to-the-file wins. So when Claude works on a file at <code>[work-folder]/q3-deck/Working Files/draft.md</code>, it reads in this order, with later files overriding earlier ones:</p>
 <ol>
 <li><code>[vault]/claude.md</code> → which points to <code>[vault]/About Me.md</code> (chief-of-staff brief).</li>

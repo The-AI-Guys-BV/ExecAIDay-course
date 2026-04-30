@@ -132,7 +132,7 @@ Watch out: rate limits. Some sites flag unusual traffic. Don't run a 50-tab job 
 A skill can call into Chrome. Custom skill example:
 - `/customer-snapshot <name>` opens the customer's record in your CRM, pulls health scores, opens their public website, summarizes recent news, returns a one-page brief.
 
-You'll build skills in M06 with `/skill-creator`. Chrome integration is a natural extension.
+You'll build skills in M07 with `/skill-creator`. Chrome integration is a natural extension.
 
 ---
 
@@ -162,5 +162,5 @@ Expected: Claude lists the workflow(s) you saved during the module. If empty, th
 
 ## References
 
-- M06 — building custom skills with `/skill-creator` that can incorporate Chrome.
+- M07 — building custom skills with `/skill-creator` that can incorporate Chrome.
 - M12 — scheduled tasks (the scheduling layer for Chrome workflows).

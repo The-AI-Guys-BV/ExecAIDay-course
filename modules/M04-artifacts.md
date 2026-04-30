@@ -87,7 +87,7 @@ Useful when a Claude edit makes the artifact worse and you want to roll back.
 
 Artifacts compose with skills. A skill can produce an artifact as its output. Examples:
 - `/today` could output a brief artifact instead of text.
-- A skill you build later (M06) could maintain a project tracker artifact.
+- A skill you build later (M07) could maintain a project tracker artifact.
 
 The pattern: skill = trigger; artifact = persistent visible surface.
 

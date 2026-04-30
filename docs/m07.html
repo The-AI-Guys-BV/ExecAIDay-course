@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>M07 Chief of Staff Brief — ExecAIDay</title>
-<meta name="description" content="Chief of Staff Brief — module M07 of the ExecAIDay Claude Cowork training workshop.">
+<title>M07 Skills + Slash Commands — ExecAIDay</title>
+<meta name="description" content="Skills + Slash Commands — module M07 of the ExecAIDay Claude Cowork training workshop.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -24,146 +24,142 @@
 <header class="module-hero">
   <div class="container">
     <div class="module-hero-icon" style="background: var(--personalize-soft); color: var(--personalize);">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
     </div>
     <div class="eyebrow eyebrow-row">
       <span class="breadcrumb"><a href="index.html">All modules</a> &nbsp;/&nbsp; Personalize</span>
       <a class="hero-slides-link" href="slides/m07.html">▶ View slide deck</a>
     </div>
-    <h1>M07 — Chief of Staff Brief</h1>
-    <p class="lede">Your chief-of-staff brief is the highest-leverage file in the workshop. Once it exists, every conversation in your Cowork Project inherits your voice, your preferences, your context. Skip this module and Claude works from defaults; do it well and Claude works for YOU specifically.</p>
+    <h1>M07 — Skills + Slash Commands</h1>
+    <p class="lede">You've already used skills — <code>/teach</code> in M01, <code>/capture</code> in M04. This module names what they are, walks the 7 you'll use most, and shows you how to build your own with <code>/skill-creator</code>. After M07 you're not just a Cowork user — you can extend the system.</p>
   </div>
 </header>
 
 <main class="content container">
 <h2>What you'll do</h2>
 <ul>
-<li>Run the chief-of-staff interview. Claude writes the brief into <code>About Me.md</code> in your vault.</li>
-<li>Configure <code>&lt;vault&gt;/claude.md</code> as a one-line pointer to <code>About Me.md</code>.</li>
-<li>Watch Claude read <code>About Me.md</code> and surface 3 non-obvious things — recognition shock.</li>
-<li>Compare an email draft pre-brief (generic) vs post-brief (matches your voice).</li>
+<li>Walk through 7 core skills (all pre-installed via the ExecAIDay plugin from M01).</li>
+<li>Manually re-install <code>/help-me-prompt</code> once — pedagogical, so you've seen the install pattern in case you ever write a skill from outside the plugin.</li>
+<li>Tour Cowork's built-in slash commands.</li>
+<li>Try <code>/skill-creator</code> to build a NEW skill from scratch.</li>
 </ul>
 <h2>Introduction</h2>
-<p>You have a chief of staff right now. You probably don't think of them that way. They're whoever knows your priorities, your quirks, your stakeholders, the things you do and don't say in writing. They've earned that knowledge over years.</p>
-<p>Claude doesn't have any of that yet. This module gives Claude a starter version — captured in writing, in your vault, accessible to every conversation.</p>
-<p><strong>Where the brief lives.</strong> As a normal Obsidian note: <code>&lt;vault&gt;/About Me.md</code>. You can open it in Obsidian, edit it like any other note, link to it from daily notes. It's content, not config.</p>
-<p><strong>How Cowork finds it.</strong> A one-line pointer in <code>&lt;vault&gt;/claude.md</code> tells Cowork where to find it. Cowork auto-reads this file, follows the pointer, and picks up your brief. You don't touch this system file again — your editing happens in <code>About Me.md</code>.</p>
-<p>Roughly 30 lines, 4 sections. Written through an interactive interview.</p>
-<p>Once it exists: every email Claude drafts sounds more like you. Every analysis takes your priorities into account. Every artifact reflects your taste.</p>
+<p>A skill in 2026 Cowork is a slash command. Same thing, two names. <code>/teach</code> and "the teach skill" refer to the same file: <code>~/.claude/skills/teach/SKILL.md</code> (or in our case, the version inside this plugin's <code>skills/teach/</code>).</p>
+<p>Cowork auto-discovers skills from the filesystem. When you install a plugin, all the skills inside it become available. When you write a SKILL.md in <code>~/.claude/skills/&lt;name&gt;/SKILL.md</code>, that becomes a slash command too.</p>
+<p>The 7 core skills you'll use throughout the workshop and after:</p>
+<ol>
+<li><code>/teach</code> — patient tutor.</li>
+<li><code>/help-me-prompt</code> — R-C-T-F-C sharpener.</li>
+<li><code>/new-project</code> — scaffold a project + GTD entry + tailored claude.md.</li>
+<li><code>/meeting-prep</code> — pre-meeting brief.</li>
+<li><code>/weekly-review</code> — Monday morning GTD walkthrough.</li>
+<li><code>/drafts-inbox</code> — email drafts triage.</li>
+<li><code>/email-triage</code> — inbox classification.</li>
+</ol>
+<p>Plus 19 GTD skills (covered in M13) and Cowork built-ins (covered later in this module).</p>
 <h2>Beginner / Getting Started</h2>
-<h3>The interview</h3>
-<p>In Cowork, paste this prompt:</p>
+<h3>The 7 core skills, one demo each</h3>
+<p><strong><code>/teach &lt;module&gt;</code></strong> — already used. Walks any module.</p>
+<p><strong><code>/help-me-prompt &lt;draft&gt;</code></strong> — sharpens any prompt. You'll install this in Section 3.</p>
+<p><strong><code>/new-project &lt;name&gt;</code></strong> — already used in M09.</p>
+<p><strong><code>/meeting-prep &lt;meeting title or "next"&gt;</code></strong> — generates a pre-meeting brief. Try:</p>
 <pre><code>
-Walk me through writing my chief-of-staff brief. Use the new-vault-claudemd pattern.
-Save the result to &lt;vault&gt;/About Me.md (create it if it doesn't exist).
-Then make sure &lt;vault&gt;/claude.md contains the one-line pointer:
-"Chief-of-staff brief: read About Me.md."
+/meeting-prep next
 </code></pre>
-<p>Claude conducts an interview. Roughly 4 sections, several questions per section:</p>
-<p><strong>Section 1 — Who I am.</strong></p>
-<ul>
-<li>Role + company stage.</li>
-<li>What you spend most of your time on.</li>
-<li>Your most important stakeholders (board, investors, key customers, direct reports).</li>
-</ul>
-<p><strong>Section 2 — How I communicate.</strong></p>
-<ul>
-<li>Tone defaults (warm / neutral / direct / blunt).</li>
-<li>Length preferences (brief / measured / detailed).</li>
-<li>Words/phrases you avoid (some execs hate "leverage," "synergy," "circle back," etc.).</li>
-<li>Signature style.</li>
-</ul>
-<p><strong>Section 3 — What I value, what I avoid.</strong></p>
-<ul>
-<li>Working style preferences.</li>
-<li>Things that frustrate you (over-meetings, over-emailing, generic AI tells).</li>
-<li>What you DON'T want Claude doing on your behalf.</li>
-</ul>
-<p><strong>Section 4 — Context.</strong></p>
-<ul>
-<li>Industry / domain quirks.</li>
-<li>Confidentiality posture.</li>
-<li>Specific connectors or tools you rely on.</li>
-</ul>
-<p>Answer naturally. Don't over-engineer. The brief is meant to be ~30 lines — short and high-signal.</p>
-<h3>What gets written</h3>
-<p>Claude synthesizes your answers into <code>&lt;vault&gt;/About Me.md</code> and writes the one-line pointer into <code>&lt;vault&gt;/claude.md</code>. Watch Obsidian render <code>About Me.md</code> live as Claude writes it. Edit any line you don't like.</p>
+<p>Claude pulls the next event on your calendar, attendee context, prior notes, recent emails, related vault GTD projects. One-page brief.</p>
+<p><strong><code>/weekly-review</code></strong> — walks the GTD weekly review interactively. Try a quick run; you can exit anytime.</p>
+<p><strong><code>/drafts-inbox new</code></strong> — scans inbox for emails needing replies, drafts them. Try:</p>
+<pre><code>
+/drafts-inbox new
+</code></pre>
+<p><strong><code>/email-triage</code></strong> — classifies inbox into urgent / reply / read / archive / delete. Try:</p>
+<pre><code>
+/email-triage today
+</code></pre>
+<p>Each skill has comprehensive documentation available for you to read.</p>
 <h2>Intermediate</h2>
-<h3>Add the longer-form context</h3>
-<p><code>About Me.md</code> is the short brief. The vault also has a folder <code>about-me/</code> with two companion files for content that's too long for the brief:</p>
+<h3>The in-workshop install of <code>/help-me-prompt</code></h3>
+<p>Even though <code>/help-me-prompt</code> is already in this plugin, you'll do a manual install too — both for the pedagogy (you experience the install pattern) and as a fallback if the plugin path ever fails.</p>
+<p>Your assistant gives you the install prompt. Paste into Cowork:</p>
+<pre><code>
+Create a skill at ~/.claude/skills/help-me-prompt/SKILL.md with exactly this content:
+
+[full SKILL.md body — assistant pastes the rest]
+
+Confirm when the file is written and readable.
+</code></pre>
+<p>Claude writes the file. You confirm.</p>
+<p>Now <code>/help-me-prompt</code> is available two ways: from the plugin AND from your manual install. Use either. (If both exist, the most-recently-modified wins by Cowork's default.)</p>
+<p>Try it:</p>
+<pre><code>
+/help-me-prompt help me write an email to my CFO about the Q3 budget overage
+</code></pre>
+<p>Claude returns a sharpened R-C-T-F-C version. Compare to your draft.</p>
+<h3>Cowork's built-in slash commands</h3>
+<p>These ship with Cowork itself, not from any plugin. Available in any Cowork Project:</p>
 <ul>
-<li><code>about-me/long-form.md</code> — extended personal context (role history, work patterns, things you care about deeply).</li>
-<li><code>about-me/writing-rules.md</code> — specific tone and word rules (dos and don'ts).</li>
+<li><strong><code>/skill-creator</code></strong> — interviews you about a task, drafts a skill, generates test prompts, iterates. The HEADLINE built-in.</li>
+<li><strong><code>/simplify</code></strong> — simplify content (text, code, diagrams).</li>
+<li><strong><code>/review</code></strong> — review content (catch issues, suggest improvements).</li>
+<li><strong><code>/batch</code></strong> — apply a prompt to many similar items.</li>
+<li><strong><code>/loop</code></strong> — repeat a prompt at an interval within the session.</li>
+<li><strong><code>/debug</code></strong> — debugging assistance.</li>
+<li><strong>the Skills list (Customize → Skills)</strong> — list all available skills in this session.</li>
 </ul>
-<p>Populate them:</p>
-<pre><code>
-Based on what I told you for the chief-of-staff brief, expand
-about-me/long-form.md with the longer-form context. Include role history,
-current stakeholders, work patterns, things-I-care-about-deeply.
-</code></pre>
-<p>Claude expands. You edit. Same for <code>writing-rules.md</code>:</p>
-<pre><code>
-Pull out specific writing rules from our interview into about-me/writing-rules.md.
-Format as a list of dos and don'ts.
-</code></pre>
-<h3>Test the inheritance</h3>
-<p>In a new Cowork chat:</p>
-<pre><code>
-Draft a 3-paragraph email to my board chair updating them on the Q3 trajectory.
-Use what you know about me.
-</code></pre>
-<p>Watch the output. It should:</p>
+<p>Plus document built-ins:</p>
 <ul>
-<li>Use your tone (warm, direct, etc., per <code>About Me.md</code>).</li>
-<li>Avoid words you flagged.</li>
-<li>Match your length preference.</li>
-<li>Reference context from <code>about-me/long-form.md</code>.</li>
+<li><strong><code>/pdf</code></strong> — generate or process PDFs.</li>
+<li><strong><code>/docx</code></strong> — Word documents.</li>
+<li><strong><code>/pptx</code></strong> — PowerPoint.</li>
+<li><strong><code>/xlsx</code></strong> — Excel.</li>
+<li><strong><code>/canvas-design</code></strong> — drawing / illustration.</li>
+<li><strong><code>/algorithmic-art</code></strong> — generative visuals.</li>
 </ul>
-<p>If it doesn't, the brief isn't doing its job. Edit and retest.</p>
+<p>You don't need to memorize all of these. Type the Skills list (Customize → Skills) to see what's available right now.</p>
 <h2>Advanced</h2>
-<h3>Maintaining the brief over time</h3>
-<p>The chief-of-staff brief drifts. Things change. Your priorities shift. Stakeholders come and go. Quarterly:</p>
-<pre><code>
-Read my chief-of-staff brief. What feels stale? What's missing?
-</code></pre>
-<p>Claude surfaces likely-outdated lines. You decide what to update.</p>
-<p>Don't rewrite from scratch every quarter. The brief is durable.</p>
-<h3>When to update vs leave alone</h3>
+<h3><code>/skill-creator</code> — build a new skill</h3>
+<p>Pick something you do often that's not yet a skill. Examples:</p>
 <ul>
-<li>New role or major scope change → rewrite the role section.</li>
-<li>Tone preferences shifted (you hate a word now you didn't hate before) → update writing rules.</li>
-<li>New stakeholders → add them.</li>
-<li>Style of communication changes (you started running async-default standups) → update.</li>
+<li>A weekly customer status report with specific format.</li>
+<li>A specific email template you send often (specific kind of follow-up).</li>
+<li>A pre-1:1 brief you compose for each direct report.</li>
+<li>A specific kind of analysis you run on incoming data.</li>
 </ul>
-<p>Most quarters you change 2-3 lines.</p>
-<h3>Project-specific overrides</h3>
-<p>Project <code>claude.md</code> (the one <code>/new-project</code> writes per project folder) can override the chief-of-staff brief for project-specific tone. Example:</p>
-<ul>
-<li><code>About Me.md</code> says "warm, direct, default to brevity."</li>
-<li>Project <code>claude.md</code> for <code>q3-board-deck/</code> says "Format / tone for this project: more formal than my default; explicitly cite all sources because the board chair has flagged AI-content concerns."</li>
-<li>For files in <code>q3-board-deck/</code>, Claude uses the more formal tone. Everywhere else, default warm-direct-brief.</li>
-</ul>
-<p>This is the layered architecture in action. Don't pre-write project overrides; let <code>/new-project</code> interview each one.</p>
-<h2>Try these</h2>
-<p><strong>a. Recognition shock.</strong> Type:</p>
+<p>Run:</p>
 <pre><code>
-Read my About Me and the about-me/ folder. Surface 3 things you noticed about me that aren't obvious from what I just told you — pattern matches, implications, context I might not have spelled out.
+/skill-creator
 </code></pre>
-<p>Claude responds with 3 specific, non-obvious observations. You feel seen. Most people get a "huh, yeah" reaction at least once. That's the moment the workshop pays off in a felt way.</p>
-<p><strong>b. Before/after email.</strong> Draft an email pre-brief (generic). Save the output. Then draft the SAME email post-brief. Compare. The post version sounds like you. Feels like a different tool.</p>
+<p>The skill interviews you:</p>
+<ul>
+<li>What's the trigger? What command name?</li>
+<li>What inputs does it take?</li>
+<li>What does it do? (Walks the steps with you.)</li>
+<li>What's the output format?</li>
+<li>Edge cases / failure modes.</li>
+<li>Test cases (it generates test prompts to verify).</li>
+</ul>
+<p>At the end, it writes the SKILL.md to <code>~/.claude/skills/&lt;your-skill-name&gt;/SKILL.md</code>. Cowork auto-discovers. You have a new slash command.</p>
+<p>This is the autonomy moment. Post-workshop, you don't need to come back to Tijn's team to extend the system. <code>/skill-creator</code> is how you keep building.</p>
+<h3>Plugin namespacing</h3>
+<p>If a plugin's skill name collides with another, namespacing applies. E.g., <code>/teach@execaiday</code> vs <code>/teach@another-plugin</code>. Default: most-recently-modified wins (or use the explicit namespace to disambiguate).</p>
+<p>You won't usually hit this. If you do, your assistant flags.</p>
+<h3>Disabling skills you don't use</h3>
+<p>Customize → Skills. Toggle off skills you never call. Reduces clutter when typing <code>/</code>.</p>
+<p>You can disable plugin skills too — though disabling a workshop skill defeats the purpose.</p>
+<h2>Try this</h2>
+<p>All 7 core skills work in real demos. The in-workshop install of <code>/help-me-prompt</code> succeeded. You can see every available skill in Customize → Skills.</p>
+<p>"You're an executive with 7 custom Claude skills, plus the ability to build more on demand." Public commitment moment.</p>
 <h2>Verification checkpoint</h2>
 <pre><code>
-Summarize back to me what you know about me from About Me.md and the about-me/ folder.
-3-5 sentences max.
+Open Customize → Skills
 </code></pre>
-<p>Expected: a concise, accurate summary. If Claude can't summarize or includes wrong details, <code>About Me.md</code> or <code>about-me/</code> has gaps.</p>
+<p>Expected: lists all installed skills. Should include the 7 core, the 19 GTD (covered in M13 but already installed via this plugin), the Cowork built-ins, plus any custom skills you built via <code>/skill-creator</code>.</p>
+<p>If the Skills list (Customize → Skills) returns nothing or partial, the plugin may be incompletely installed.</p>
 <h2>Common issues</h2>
 <ul>
-<li><strong>Claude defaults still showing through</strong> — your constraints in <code>writing-rules.md</code> aren't strong enough; add more "don't" rules.</li>
-<li><strong>Brief feels generic</strong> — interview was too short; rerun with more specific answers.</li>
-<li><strong>Claude mixes project-specific and general tone</strong> — check project <code>claude.md</code> overrides; make sure they're explicit deviations, not full restatements.</li>
-<li><strong>Cowork doesn't seem to be reading the brief</strong> — check <code>&lt;vault&gt;/claude.md</code> contains the one-line pointer to <code>About Me.md</code>. If <code>claude.md</code> is empty or missing, Cowork won't follow through.</li>
-<li><strong>about-me files lost on Cowork restart</strong> — they shouldn't disappear; check vault path is mounted in your Cowork Project.</li>
+<li><strong>Install fumble: skill SKILL.md has wrong YAML frontmatter</strong> — file written but not auto-discovered. Restart Cowork; if still failing, check the frontmatter syntax matches <code>name:</code> and <code>description:</code> at minimum.</li>
+<li><strong>Skill works in plugin but not after manual install</strong> — path mismatch (e.g., <code>~/.claude/skills/foo.md</code> instead of <code>~/.claude/skills/foo/SKILL.md</code>). Skills must be in their own subfolder.</li>
+<li><strong><code>/skill-creator</code> doesn't run</strong> — it's a Cowork built-in; if missing, Cowork version may be older. Update.</li>
 </ul>
 
   <div class="slides-cta">
@@ -175,7 +171,7 @@ Summarize back to me what you know about me from About Me.md and the about-me/ f
   </div>
 
   <nav class="module-nav">
-    <a class="nav-link prev" href="m06.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M06 — Skills + Slash Commands</div></a>
+    <a class="nav-link prev" href="m06.html"><div class="nav-link-label">← Previous</div><div class="nav-link-title">M06 — Chief of Staff Brief</div></a>
     <a class="nav-link next" href="m08.html"><div class="nav-link-label">Next →</div><div class="nav-link-title">M08 — Obsidian</div></a>
   </nav>
 </main>

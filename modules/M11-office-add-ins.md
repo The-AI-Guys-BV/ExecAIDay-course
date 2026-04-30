@@ -128,7 +128,7 @@ Build me a 5-slide deck on [topic]. Use my brand:
 - Tone: one bold takeaway per slide, one supporting data point, no clutter.
 ```
 
-**Make this reusable.** Save the prompt (either path) as a custom skill (M06). Then `/branded-deck <topic>` always uses the right reference deck or brand specs without retyping.
+**Make this reusable.** Save the prompt (either path) as a custom skill (M07). Then `/branded-deck <topic>` always uses the right reference deck or brand specs without retyping.
 
 ## Advanced
 
@@ -192,5 +192,5 @@ Expected: Claude in Word references the Excel analysis from earlier. If it can't
 
 ## References
 
-- M06 — skills (the Office workflow can become a custom skill).
+- M07 — skills (the Office workflow can become a custom skill).
 - `references/what-not-to-use-claude-for.md` — math at scale caveat.

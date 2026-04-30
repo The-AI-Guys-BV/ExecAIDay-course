@@ -1,8 +1,8 @@
-# M06 — Skills + Slash Commands
+# M07 — Skills + Slash Commands
 
 ## Why this module matters
 
-You've already used skills — `/teach` in M01, `/capture` in M04. This module names what they are, walks the 7 you'll use most, and shows you how to build your own with `/skill-creator`. After M06 you're not just a Cowork user — you can extend the system.
+You've already used skills — `/teach` in M01, `/capture` in M04. This module names what they are, walks the 7 you'll use most, and shows you how to build your own with `/skill-creator`. After M07 you're not just a Cowork user — you can extend the system.
 
 ## What you'll do
 

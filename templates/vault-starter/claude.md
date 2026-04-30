@@ -1,11 +1,11 @@
 # Vault root claude.md
 
-Placeholder. M07 of the workshop replaces this file with a one-line pointer to your chief-of-staff brief.
+Placeholder. M06 of the workshop replaces this file with a one-line pointer to your chief-of-staff brief.
 
-After M07 this file will say:
+After M06 this file will say:
 
   Chief-of-staff brief: read About Me.md.
 
 Cowork reads this `claude.md` at the start of every conversation that happens in or under this folder. It points Cowork to `[[About Me]]` (your chief-of-staff brief) for context about you.
 
-Until M07: Cowork works without your brief; expect generic tone until you personalize. Personal long-form details live in `about-me/long-form.md`. Tone rules live in `about-me/writing-rules.md`.
+Until M06: Cowork works without your brief; expect generic tone until you personalize. Personal long-form details live in `about-me/long-form.md`. Tone rules live in `about-me/writing-rules.md`.

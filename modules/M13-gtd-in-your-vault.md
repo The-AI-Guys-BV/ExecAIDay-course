@@ -136,7 +136,7 @@ Without this step, Cowork can authenticate but can't read or write any pages.
 
 This is the key efficiency move. Without it, every GTD operation makes Cowork search your entire Notion. With it, Cowork targets the right database directly.
 
-Open `<vault>/claude.md` (the vault root file M07 set up). Add a Notion-GTD pointer block:
+Open `<vault>/claude.md` (the vault root file M06 set up). Add a Notion-GTD pointer block:
 
 ```
 GTD lives in Notion. Use the Notion connector for all GTD operations.

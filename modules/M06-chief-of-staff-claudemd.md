@@ -1,4 +1,4 @@
-# M07 — Chief of Staff Brief
+# M06 — Chief of Staff Brief
 
 ## Why this module matters
 

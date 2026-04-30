@@ -40,7 +40,7 @@ You start the workshop with a working Cowork Project, a tutor (`/teach` — type
 
 This module's job is to confirm all that has given you a usable workspace, and to give you the words for the next 15 modules. Most of what we cover here is vocabulary — concepts you'll hear used the whole workshop. We're not building anything yet; we're orienting.
 
-The single most important thing in this module: by the end, you'll have a Cowork Project (a workspace) with both your folders mounted, and `/teach` will walk you through any future module on command. That's your safety net. If you ever miss something or want to revisit, `/teach M07` or `/teach Skills` is permanent office hours.
+The single most important thing in this module: by the end, you'll have a Cowork Project (a workspace) with both your folders mounted, and `/teach` will walk you through any future module on command. That's your safety net. If you ever miss something or want to revisit, `/teach M06` or `/teach Skills` is permanent office hours.
 
 ## Beginner / Getting Started
 
