@@ -1,6 +1,6 @@
 {
   "name": "execaiday",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "ExecAIDay workshop plugin for Claude Cowork. 26 skills (/teach, /help-me-prompt, /new-project, /capture, /process-inbox, /whats-next, /waiting-for, /available-now, /someday, /today, /projects, /project, /delegate, /review-stale, /checkout, /horizons-review, /tickler, /reference-add, /reference-find, /areas, /goals, /vision, /meeting-prep, /weekly-review, /drafts-inbox, /email-triage), 16 module walkthroughs via /teach, starter templates, and reference materials.",
   "author": {
     "name": "Tijn van der Zant",

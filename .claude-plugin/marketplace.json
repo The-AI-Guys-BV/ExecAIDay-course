@@ -9,7 +9,7 @@
       "name": "execaiday",
       "source": "./",
       "description": "ExecAIDay workshop: 26 skills, 16 module walkthroughs (via /teach), starter templates, references. For Claude Cowork training of C-level executives.",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "strict": false
     }
   ]
