@@ -22,19 +22,35 @@ Most meeting bots (Otter, Fireflies, etc.) join the meeting as a separate partic
 
 Three tools dominate this space. Pick one.
 
-- **Granola** — the most popular. Lives on your laptop, captures audio from any meeting platform (Zoom, Meet, Teams, Webex), produces a transcript and AI-generated notes in real time. Mac only as of writing.
+- **Granola** — the most popular. Lives on your laptop, captures audio from any meeting platform (Zoom, Meet, Teams, Webex), produces a transcript and AI-generated notes in real time. Mac, Windows, and iOS. The iOS app handles in-person meetings (one-tap from the lock screen). Pricing: free tier; Business is around $14/seat/month.
 - **Bluedot** — Chrome extension. Records the meeting from your browser tab. Mac and Windows.
 - **Fellow** — has a bot mode and a no-bot mode. Bigger product (full meeting management). Use the no-bot mode here.
 
-Your tech team has installed one of these — most likely Granola — on your laptop before the workshop.
+Your tech team has installed one of these — most likely Granola — on your laptop before the workshop. The walkthrough below uses Granola.
 
-### 1.1 The chain
+### 1.1 Install and run Granola
+
+If you've not yet got it installed:
+
+1. Go to [granola.ai](https://www.granola.ai/) and download the desktop app for your platform.
+2. Run the installer. On Mac, drag Granola into Applications. On Windows, run the installer.
+3. Open Granola. Sign in (free account, or your team's account if your org has Granola).
+4. Grant **microphone access** and **system audio** permission. Both are required: microphone captures your voice; system audio captures the other side of the call without joining as a participant.
+5. Optional: connect your calendar so Granola auto-detects upcoming meetings.
+
+### 1.2 Run a test capture
+
+Open any meeting on your calendar — even a one-person test where you just talk to yourself for 60 seconds. Click **Start recording** in Granola. Talk for a minute. Click **Stop**.
+
+Granola produces a transcript and a structured set of notes. Find the transcript file on disk — usually under `~/Granola/` or accessible via Granola's export — that's the file the post-meeting routine below will read.
+
+### 1.3 The chain
 
 The chain is: meeting tool → transcript → Claude → structured notes in the vault → commitments to GTD inbox → email drafts for follow-up.
 
 You don't run all those steps by hand. You set up a small **post-meeting routine** that takes the transcript and processes it. Once configured, the routine fires automatically (or with one click) after every meeting.
 
-### 1.2 The post-meeting routine
+### 1.4 The post-meeting routine
 
 In your Vault Project (from Section 3), in a fresh chat, set up the routine:
 
@@ -60,11 +76,11 @@ Don't summarise back at me. Just do the four things and tell me when done.
 
 Claude does it.
 
-### 1.3 Streamline with a skill
+### 1.5 Streamline with a skill
 
 After running the routine once or twice, ask `/skill-creator` to package it as a skill — `/post-meeting <transcript-path>` — so you don't retype the prompt every meeting. Five-minute build, saves you hours.
 
-### 1.4 Gap analysis — the real value
+### 1.6 Gap analysis — the real value
 
 Beyond capturing what was said, ask Claude what was **missed**. In the same Vault chat, after meeting notes are saved:
 
@@ -77,7 +93,7 @@ Read the meeting notes you just wrote. Compare them against:
 What did we not cover that we should have? What commitments did we make that contradict commitments from prior meetings? Where did we duck a hard question?
 ```
 
-This kind of analysis used to take a chief of staff an hour and a coffee. Claude does it in 30 seconds. **This is where the system stops being a productivity tool and starts being a strategic asset.**
+This kind of analysis used to take a chief of staff an hour and a coffee. Claude does it in 30 seconds. The system has moved from productivity tool to strategic asset.
 
 ## 2. Meeting prep — `/meeting-prep`
 
@@ -308,7 +324,7 @@ For the Acme account, give me a snapshot of where things stand:
 Produce a one-page brief. Format: top section "current state in 3 sentences," then sections for each source, then "the question to land in our next call."
 ```
 
-A query like this used to require a junior to spend half a day pulling from five tools. Claude does it in 30 seconds. **This is the team-leverage move** — most executives don't have five-tool fluency, and most senior teams have moved beyond rolling up data by hand. This makes the rollup near-free.
+A query like this used to require a junior to spend half a day pulling from five tools. Claude does it in 30 seconds. **This is the team-leverage move.** Cross-tool rollups become near-free, and the rollup is a single query a senior can run themselves before any meeting.
 
 ### 6.3 Handoff patterns
 

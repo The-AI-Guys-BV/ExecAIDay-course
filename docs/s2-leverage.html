@@ -73,7 +73,7 @@ Don't summarise yet. Just interview.
 </code></pre>
 <p>Claude asks the first question. Answer it — properly, like you mean it. Do not abbreviate.</p>
 <p>Claude asks the next. Answer that one. Continue.</p>
-<p>Tip: <strong>use voice input</strong> for this part. (See section 4 below — voice tools.) Speaking your answers gives you longer, more honest responses than typing. The brief is only as good as what you put in.</p>
+<p>Type fully — the brief is only as good as what you put in. (Once you've installed a voice tool in section 4 below, you'll find dictating these answers is the natural way; for now, type.)</p>
 <h3 id="14-the-synthesis">1.4 The synthesis</h3>
 <p>After about ten or fifteen exchanges, when Claude has covered the ground, send:</p>
 <pre><code>
@@ -122,7 +122,7 @@ Draft a one-paragraph email to my board chair updating them on the most pressing
 </code></pre>
 <p><strong>Read the reply.</strong></p>
 <p>It will sound like you. It will reference your actual situation. It will not say "I hope this email finds you well." It will not pad. The voice match will not be perfect — but it will be startlingly close, after a fifteen-minute interview.</p>
-<p>This is the moment most people realise what Cowork is for.</p>
+<p>After a fifteen-minute interview, you have a brief that shapes every reply you'll get from this Project. That's the move.</p>
 <h2 id="2-roles-when-to-use-them-when-not-to">2. Roles — when to use them, when not to</h2>
 <p>A <strong>role</strong> is the first letter of R-C-T-F-C from Section 1. <em>"You are a senior strategy consultant."</em> It changes what Claude does.</p>
 <h3 id="21-when-roles-help">2.1 When roles help</h3>
@@ -167,24 +167,39 @@ Draft a one-paragraph email to my board chair updating them on the most pressing
 <p>Two reasons. First, you say more than you type. A typed prompt is two sentences and a question mark; a spoken prompt is half a paragraph of context, audience, constraint. Better prompts produce better output.</p>
 <p>Second, voice removes the friction of starting. The hardest part of using Claude well is opening the chat and writing the first line. Voice removes that friction.</p>
 <h3 id="42-the-four">4.2 The four</h3>
-<p>There are four worth knowing. Pick one that runs on your platform.</p>
+<p>There are four worth knowing.</p>
 <ul>
-<li><strong>Wispr Flow</strong> — Mac and Windows. Polished. Defaults that work out of the box. The most common pick in the workshop.</li>
-<li><strong>Superwhisper</strong> — Mac. Strong privacy posture (transcription can run locally). Good if you handle sensitive material.</li>
-<li><strong>Voibe</strong> — Mac. Lightweight.</li>
-<li><strong>FloWstay</strong> — Mac (Apple Silicon). Free. Good if you want to try voice without paying.</li>
+<li><strong>Wispr Flow</strong> — Mac, Windows, iOS, and Android. The only major dictation tool on all four platforms. Polished. Defaults that work out of the box. The default pick.</li>
+<li><strong>Superwhisper</strong> — Mac (and now iOS). Strong privacy posture; transcription can run fully on-device for sensitive content. Choose this if your work involves regulated material.</li>
+<li><strong>Voibe</strong> — Mac. Lightweight alternative.</li>
+<li><strong>FloWstay</strong> — Mac, Apple Silicon only. Free. Choose this if you want to try voice without paying first.</li>
 </ul>
-<p>If you're on Windows, your practical option is Wispr Flow. If you're on Mac, try Wispr Flow first; consider the others if you have specific reasons.</p>
-<h3 id="43-install-and-try">4.3 Install and try</h3>
-<p>Each of these has a download page on its own site. Install. Grant the microphone permission. Configure a hotkey (most use Fn or Caps Lock — pick one that doesn't conflict with anything you actually use).</p>
-<p>Test in your Cowork Project. Hold the hotkey, talk for thirty seconds, release. Your spoken words appear in the chat box.</p>
+<p>The default recommendation is <strong>Wispr Flow</strong> unless you have a specific reason otherwise (privacy → Superwhisper; budget → FloWstay).</p>
+<h3 id="43-install-wispr-flow-step-by-step">4.3 Install Wispr Flow — step by step</h3>
+<p>This walkthrough uses Wispr Flow because it covers the most platforms. Steps for the others are similar.</p>
+<ol>
+<li><strong>Download.</strong> Go to <a href="https://wisprflow.ai">wisprflow.ai</a>. Click <strong>Download</strong>. Pick the right installer (macOS or Windows).</li>
+<li><strong>Run the installer.</strong> On Mac, drag Flow into Applications. On Windows, run the installer.</li>
+<li><strong>Open Flow.</strong> First launch asks for permissions:</li>
+</ol>
+<ul>
+<li><strong>Microphone access.</strong> Required. Grant it.</li>
+<li><strong>Accessibility permission</strong> (Mac) or equivalent on Windows. Required so Flow can type into any text field. Grant it.</li>
+</ul>
+<ol>
+<li><strong>Sign in.</strong> Create an account or sign in. The free tier covers a lot; Pro is around $15/month if you go heavy.</li>
+<li><strong>Pick your hotkey.</strong> Flow asks. Default on Mac is <strong>Function (Fn)</strong>. Default on Windows is similar. Pick one you don't already use for something else. Caps Lock is a popular swap because most people don't use it.</li>
+<li><strong>Train (optional).</strong> Flow can learn your custom vocabulary — names of clients, company-specific terms — so it transcribes them right. Add a few you use weekly.</li>
+</ol>
+<h3 id="44-try-it-in-cowork">4.4 Try it in Cowork</h3>
+<p>Open your Cowork Project. Click in the chat box. <strong>Hold the hotkey</strong> (Fn or whatever you set). <strong>Speak</strong>. <strong>Release the hotkey</strong>. The spoken text appears in the chat box. Send.</p>
 <p>Try a real prompt this way. Hold the hotkey, say:</p>
 <blockquote>
 <p><em>"You are a chief of staff. I need to update my board on a tricky situation in our biggest customer account — we're at risk of losing them, and the renewal is in three weeks. Read the customer file in the Project, write me a five-bullet update for the board, leading with what's actually happening, then what we're doing about it. Don't sugarcoat."</em></p>
 </blockquote>
 <p>Release. The whole prompt is in the chat. Send.</p>
-<p>You'll find that voice prompts are usually better than typed ones — because you naturally include more context.</p>
-<h3 id="44-what-to-use-voice-for">4.4 What to use voice for</h3>
+<p>Voice prompts are usually richer than typed ones because you naturally include more context.</p>
+<h3 id="45-what-to-use-voice-for">4.5 What to use voice for</h3>
 <ul>
 <li>Long prompts with rich context.</li>
 <li>Drafting (not editing) — you'd dictate a memo to a colleague, you can dictate one to Claude.</li>
@@ -220,7 +235,7 @@ Search my Drive for documents about the Q3 board pack. Show me the three most re
 Look at my #leadership Slack channel for the last 48 hours. What's the most-discussed topic? What does the team seem to think?
 </code></pre>
 <p>If any of these throw a "no access" error, it's almost always a connector permission issue — re-authenticate from Customize → Connectors.</p>
-<p>This is the moment most executives realise Claude is no longer a chat box. It's reading your real data, in real time.</p>
+<p>Cowork is no longer a chat box. It's reading your real data, in real time.</p>
 <h2 id="6-email-drafts-connectors-at-work">6. Email drafts — connectors at work</h2>
 <p>The most-used connector move in practice: drafting replies.</p>
 <h3 id="61-the-basic-move">6.1 The basic move</h3>
@@ -270,7 +285,7 @@ Save the drafts. Don't send anything.
 <p>Sign in with the same Anthropic account you use for Cowork.</p>
 <h3 id="83-the-sidebar-shape">8.3 The sidebar shape</h3>
 <p>The sidebar in Word, Excel, and PowerPoint all follow the same shape: a chat box at the bottom, conversation history above. You type a prompt, Claude reads what's in the document and replies. Some prompts produce changes directly in the document — Claude inserts a paragraph, edits a slide, formats a table.</p>
-<p>The shared-context move is the killer feature: a conversation you start in Excel can be continued in PowerPoint. Numbers analysed in one app become slides in the next without copy-paste.</p>
+<p><strong>Shared context across the three apps</strong> is what makes this more than three separate sidebars: a conversation you start in Excel continues in PowerPoint and Word. Numbers you analyse in one app become slides or paragraphs in the next without copy-paste.</p>
 <h3 id="84-try-it-word">8.4 Try it — Word</h3>
 <p>In your Word document, type a prompt in the Claude sidebar:</p>
 <pre><code>
@@ -303,7 +318,7 @@ Build chart 1 in this sheet, on a new chart tab.
 <li><strong>You're already in the document.</strong> If you're staring at a Word draft and want to edit it, the sidebar is faster than switching to Cowork. Same for Excel and PowerPoint.</li>
 <li><strong>You want to coordinate across files and folders, not just one document.</strong> Cowork is better — it sees the whole folder, multiple files, your Project context, your connectors.</li>
 </ul>
-<p>Most executives end up using both, depending on what they're doing. The sidebars are tactical (one document at a time). Cowork is the workspace (the project, the folder, the live data).</p>
+<p>Both are useful depending on what you're doing. The sidebars are tactical (one document at a time). Cowork is the workspace (the project, the folder, the live data).</p>
 <h2 id="what-you-take-away">What you take away</h2>
 <ul>
 <li>A chief-of-staff brief — installed in your Project's instructions, sounding like you.</li>

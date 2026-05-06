@@ -120,14 +120,18 @@ Now look at q3.xlsx. Which line items moved more than 15 percent compared to las
 </ul>
 <p>Cowork picks a model for you most of the time. You can ask explicitly: <em>"Use Opus for this — it's a hard reasoning task."</em></p>
 <p>You don't need to memorize any of this. You need to know the words. So if Claude's replies get sluggish or confused, you can think <em>"context is probably full"</em> and start a new chat.</p>
-<h3 id="34-start-a-new-chat-and-notice-the-silence">3.4 Start a new chat — and notice the silence</h3>
+<h3 id="34-the-plan-approval-pattern">3.4 The plan-approval pattern</h3>
+<p>One thing you may notice early: when you ask Claude to do something with files (especially writes — saving a new version of a document, creating a folder, generating a chart), Cowork will sometimes show you a <strong>plan</strong> before doing it. <em>"I'm going to read brief.docx, write a summary to brief-summary.docx, and create a chart at /Deliverables/q3-revenue.png. Approve?"</em></p>
+<p>Approve or modify. This is deliberate. Cowork keeps you in the loop on anything with side effects so it doesn't quietly do the wrong thing in your file system. For pure read or single-step replies, the plan step is usually skipped; for multi-step writes it appears.</p>
+<p>Trust this pattern — it's how you avoid finding ten unwanted files in your folder later.</p>
+<h3 id="35-start-a-new-chat-and-notice-the-silence">3.5 Start a new chat — and notice the silence</h3>
 <p>In the Project's chat area there's usually a <strong>+ New chat</strong> button or a similar control to start a fresh conversation. <strong>Click it.</strong></p>
 <p>Now type:</p>
 <pre><code>
 What did we figure out about the Q3 spreadsheet?
 </code></pre>
 <p>Claude will tell you, politely, that there is no prior conversation in this chat — it doesn't remember. The Project remembers (through its instructions and mounted folders), but each chat is a clean slate.</p>
-<p>This is the single most important habit in the whole workshop: <strong>one task, one chat.</strong> Don't accumulate hours of unrelated conversation in one chat. When you switch tasks, switch chats. Keep them tight. Keep them fresh.</p>
+<p>This is the most important habit in the whole workshop: <strong>one task, one chat.</strong> Don't accumulate hours of unrelated conversation in one chat. When you switch tasks, switch chats. Keep them tight. Keep them fresh.</p>
 <p>The technical name for what goes wrong if you don't is <strong>context rot</strong> — quality drops as the chat gets bloated. New chat fixes it.</p>
 <h2 id="4-trust-calibration-the-hallucination-demo">4. Trust calibration — the hallucination demo</h2>
 <p>Stay in your new chat. This is the most important moment of the section.</p>

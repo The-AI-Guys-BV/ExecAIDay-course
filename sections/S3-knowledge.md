@@ -333,19 +333,27 @@ Capture only works if it's friction-free at the moment something hits you. The h
 
 The chain: phone → cloud sync → your laptop's vault folder → Cowork.
 
-### 7.2 Setup
+### 7.2 Setup — step by step
 
-Your assistant walks you through the install on your phone — under five minutes. Sign in to your cloud account (the same one your vault syncs through). Configure the destination as `gtd/inbox.md`. Set a hotkey or shortcut.
+Your workshop tech team handles the install on your phone — it takes under five minutes. The walkthrough below is what they do, so you know what's happening:
+
+1. **Install the app** from the App Store (iOS) or Play Store (Android). The workshop currently uses Dispatch — your assistant will tell you the exact app name if it's switched.
+2. **Sign in to your cloud account.** Whichever cloud sync your vault lives in (Dropbox, OneDrive, Google Drive, iCloud) — sign in to the same one on your phone. The app needs write access to the folder containing your vault.
+3. **Pick the destination file.** In the app's settings, set the destination to your vault's `gtd/inbox.md`. The app shows a file picker; navigate to your vault folder and pick the file.
+4. **Set the format.** Tell the app to append (not overwrite) — each capture becomes a new bullet at the end of the file.
+5. **Test the trigger.** Most apps offer a home-screen widget, a hotkey, or an iOS Shortcut. Pick whichever fits your phone.
 
 ### 7.3 Try it now
 
-Step out of the room. Speak something into the phone. Come back. Open `gtd/inbox.md` in Obsidian — it's there.
+Step out of the room. Trigger the app. Speak something into the phone — *"reminder, send the Q4 forecast to the CFO before Wednesday"* or whatever's actually on your mind. Wait a few seconds for the cloud to sync.
+
+Back at your laptop, open `gtd/inbox.md` in Obsidian. The captured item is there as a bullet at the end.
 
 The next time you process the inbox, this item is in scope.
 
 ### 7.4 Why this matters
 
-The discipline of GTD is capture-everything-now-process-later. Without mobile, you lose every idea that hits between meetings. With mobile, nothing escapes. Three weeks in, you'll find that your inbox is fed primarily from your phone — and the laptop is for processing, not capturing.
+The discipline of GTD is capture-everything-now-process-later. Without mobile, you lose every idea that hits between meetings. With mobile, nothing escapes. After a few weeks of using this, the laptop becomes the place where you *process* the inbox; the phone is where you *feed* it.
 
 ## 8. Work folder + `/new-project`
 

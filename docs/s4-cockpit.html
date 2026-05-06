@@ -44,15 +44,27 @@
 <p>Most meeting bots (Otter, Fireflies, etc.) join the meeting as a separate participant. Some people object to that. Some companies disallow it. <strong>Bot-less capture</strong> runs on your laptop, listens to the audio of the meeting, transcribes locally or to a vendor, and produces a transcript — without showing up as a participant in the meeting.</p>
 <p>Three tools dominate this space. Pick one.</p>
 <ul>
-<li><strong>Granola</strong> — the most popular. Lives on your laptop, captures audio from any meeting platform (Zoom, Meet, Teams, Webex), produces a transcript and AI-generated notes in real time. Mac only as of writing.</li>
+<li><strong>Granola</strong> — the most popular. Lives on your laptop, captures audio from any meeting platform (Zoom, Meet, Teams, Webex), produces a transcript and AI-generated notes in real time. Mac, Windows, and iOS. The iOS app handles in-person meetings (one-tap from the lock screen). Pricing: free tier; Business is around $14/seat/month.</li>
 <li><strong>Bluedot</strong> — Chrome extension. Records the meeting from your browser tab. Mac and Windows.</li>
 <li><strong>Fellow</strong> — has a bot mode and a no-bot mode. Bigger product (full meeting management). Use the no-bot mode here.</li>
 </ul>
-<p>Your tech team has installed one of these — most likely Granola — on your laptop before the workshop.</p>
-<h3 id="11-the-chain">1.1 The chain</h3>
+<p>Your tech team has installed one of these — most likely Granola — on your laptop before the workshop. The walkthrough below uses Granola.</p>
+<h3 id="11-install-and-run-granola">1.1 Install and run Granola</h3>
+<p>If you've not yet got it installed:</p>
+<ol>
+<li>Go to <a href="https://www.granola.ai/">granola.ai</a> and download the desktop app for your platform.</li>
+<li>Run the installer. On Mac, drag Granola into Applications. On Windows, run the installer.</li>
+<li>Open Granola. Sign in (free account, or your team's account if your org has Granola).</li>
+<li>Grant <strong>microphone access</strong> and <strong>system audio</strong> permission. Both are required: microphone captures your voice; system audio captures the other side of the call without joining as a participant.</li>
+<li>Optional: connect your calendar so Granola auto-detects upcoming meetings.</li>
+</ol>
+<h3 id="12-run-a-test-capture">1.2 Run a test capture</h3>
+<p>Open any meeting on your calendar — even a one-person test where you just talk to yourself for 60 seconds. Click <strong>Start recording</strong> in Granola. Talk for a minute. Click <strong>Stop</strong>.</p>
+<p>Granola produces a transcript and a structured set of notes. Find the transcript file on disk — usually under <code>~/Granola/</code> or accessible via Granola's export — that's the file the post-meeting routine below will read.</p>
+<h3 id="13-the-chain">1.3 The chain</h3>
 <p>The chain is: meeting tool → transcript → Claude → structured notes in the vault → commitments to GTD inbox → email drafts for follow-up.</p>
 <p>You don't run all those steps by hand. You set up a small <strong>post-meeting routine</strong> that takes the transcript and processes it. Once configured, the routine fires automatically (or with one click) after every meeting.</p>
-<h3 id="12-the-post-meeting-routine">1.2 The post-meeting routine</h3>
+<h3 id="14-the-post-meeting-routine">1.4 The post-meeting routine</h3>
 <p>In your Vault Project (from Section 3), in a fresh chat, set up the routine:</p>
 <pre><code>
 I just finished a meeting. The transcript is at [path your meeting tool exports to — e.g., ~/Granola/transcripts/2026-05-06-board-prep.md].
@@ -74,9 +86,9 @@ Do the following:
 Don't summarise back at me. Just do the four things and tell me when done.
 </code></pre>
 <p>Claude does it.</p>
-<h3 id="13-streamline-with-a-skill">1.3 Streamline with a skill</h3>
+<h3 id="15-streamline-with-a-skill">1.5 Streamline with a skill</h3>
 <p>After running the routine once or twice, ask <code>/skill-creator</code> to package it as a skill — <code>/post-meeting &lt;transcript-path&gt;</code> — so you don't retype the prompt every meeting. Five-minute build, saves you hours.</p>
-<h3 id="14-gap-analysis-the-real-value">1.4 Gap analysis — the real value</h3>
+<h3 id="16-gap-analysis-the-real-value">1.6 Gap analysis — the real value</h3>
 <p>Beyond capturing what was said, ask Claude what was <strong>missed</strong>. In the same Vault chat, after meeting notes are saved:</p>
 <pre><code>
 Read the meeting notes you just wrote. Compare them against:
@@ -86,7 +98,7 @@ Read the meeting notes you just wrote. Compare them against:
 
 What did we not cover that we should have? What commitments did we make that contradict commitments from prior meetings? Where did we duck a hard question?
 </code></pre>
-<p>This kind of analysis used to take a chief of staff an hour and a coffee. Claude does it in 30 seconds. <strong>This is where the system stops being a productivity tool and starts being a strategic asset.</strong></p>
+<p>This kind of analysis used to take a chief of staff an hour and a coffee. Claude does it in 30 seconds. The system has moved from productivity tool to strategic asset.</p>
 <h2 id="2-meeting-prep-meeting-prep">2. Meeting prep — <code>/meeting-prep</code></h2>
 <p>The flip side of capture: walking into a meeting prepared.</p>
 <p><code>/meeting-prep</code> is one of the GTD skills installed in Section 2. It pulls everything Cowork knows about the meeting and the attendees, and produces a one-page brief.</p>
@@ -258,7 +270,7 @@ For the Acme account, give me a snapshot of where things stand:
 
 Produce a one-page brief. Format: top section "current state in 3 sentences," then sections for each source, then "the question to land in our next call."
 </code></pre>
-<p>A query like this used to require a junior to spend half a day pulling from five tools. Claude does it in 30 seconds. <strong>This is the team-leverage move</strong> — most executives don't have five-tool fluency, and most senior teams have moved beyond rolling up data by hand. This makes the rollup near-free.</p>
+<p>A query like this used to require a junior to spend half a day pulling from five tools. Claude does it in 30 seconds. <strong>This is the team-leverage move.</strong> Cross-tool rollups become near-free, and the rollup is a single query a senior can run themselves before any meeting.</p>
 <h3 id="63-handoff-patterns">6.3 Handoff patterns</h3>
 <p>When you hand off a task to a team member, give them the Cowork Project. They open it with the same context, same instructions, same connectors. They pick up where you left off without a 30-minute briefing.</p>
 <p>Conversely, when you take a handoff, ask Claude:</p>

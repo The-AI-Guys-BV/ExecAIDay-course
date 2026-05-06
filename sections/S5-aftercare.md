@@ -10,7 +10,7 @@ walkout: A system that survives the workshop and evolves with you.
 
 Sections 1–4 built the system. This section is what keeps it alive over time.
 
-The half-life of a personal productivity system is about three months. Without intentional upkeep, your standing brief drifts, your References go stale, your skills accumulate without anyone using half of them, and the cockpit slowly starts showing yesterday's priorities instead of today's. Three or four people in the workshop's history have hit that wall. The pattern is preventable.
+The half-life of a personal productivity system is about three months. Without intentional upkeep, your standing brief drifts, your References go stale, your skills accumulate without anyone using half of them, and the cockpit slowly starts showing yesterday's priorities instead of today's. The pattern is preventable.
 
 This section is recurring, not a sequence. You don't do it once. You do it on a rhythm.
 
@@ -84,7 +84,7 @@ These are small, hands-on tweaks — minutes, not hours. Two paths.
 
 ### 2.1 With a workshop assistant
 
-Most workshop alumni keep a relationship with the workshop team. A 30-minute office-hours call once a month covers more than enough — your assistant can pair with you on whatever's broken or whatever you want to add.
+The workshop offers ongoing access to the tech team — typically a 30-minute office-hours call once a month, and ad-hoc Slack support. Use it for the things that are faster to pair on than to figure out alone.
 
 Use this when:
 
@@ -168,13 +168,13 @@ Three triggers:
 
 The system you built in Sections 1–4 is yours. It will outlast this workshop, your current company, and probably this version of Cowork. Treat it like any other long-lived asset: invest a little maintenance regularly, and it pays you back for years.
 
-## What aftercare looks like in practice
+## The rhythm in practice
 
-A typical alumnus, six months in:
+The system, used over months, settles into four cadences:
 
-- **Daily**: opens the cockpit. Reads the morning Slack DM with three priorities. Captures things to the inbox throughout the day. Drafts emails through Cowork. Uses Office sidebars when working in documents.
-- **Weekly**: runs `/weekly-review` Friday afternoon. Looks at the auto-generated review file before doing the manual review.
-- **Quarterly**: blocks 90 minutes. Walks the standing prompt. Refreshes the brief. Prunes References. Retires unused skills.
-- **As needed**: builds a new skill when a repeat task emerges. Pairs with the workshop team on bigger changes.
+- **Daily**: open the cockpit. Read the morning Slack DM with three priorities. Capture to the inbox throughout the day. Draft emails through Cowork. Use Office sidebars when working in documents.
+- **Weekly**: run `/weekly-review` Friday afternoon. Look at the auto-generated review file before doing the manual review.
+- **Quarterly**: block 90 minutes. Walk the standing prompt. Refresh the brief. Prune References. Retire unused skills.
+- **As needed**: build a new skill when a repeat task emerges. Pair with the workshop team on bigger changes.
 
-That's the rhythm. Once you're in it, the system maintains itself.
+Once these four cadences are in place, the system maintains itself.

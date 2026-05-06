@@ -52,9 +52,11 @@ Quick definitions, alphabetical. Each entry points to the section that introduce
 
 **FloWstay** *(Section 2)* — voice tool. Mac (Apple Silicon) only. Free.
 
+**Free / Pro / Max / Team / Enterprise** *(Sections 1, 2)* — Anthropic's plan tiers. Workshop assumes Max minimum (covers Cowork, plugins, Office add-ins).
+
 ## G
 
-**Granola** *(Section 4)* — bot-less meeting capture tool. Mac.
+**Granola** *(Section 4)* — bot-less meeting capture tool. Mac, Windows, and iOS.
 
 **GTD (Getting Things Done)** *(Section 3)* — David Allen's productivity system. The workshop wires GTD into your vault: inbox, next-actions, waiting-for, projects, someday, tickler.
 
@@ -110,7 +112,9 @@ Quick definitions, alphabetical. Each entry points to the section that introduce
 
 **Pin** *(Section 1)* — putting an extension or artifact in a permanent visible spot. Pin the Chrome extension to your toolbar; pin the cockpit artifact to your Cowork sidebar.
 
-**Plan** *(Section 1)* — your Anthropic plan: Free, Pro, Max, Team, Enterprise. Workshop assumes Max minimum.
+**Plan (Anthropic plan tier)** *(Section 1)* — Free, Pro, Max, Team, Enterprise. Workshop assumes Max minimum.
+
+**Plan (Cowork plan-approval)** *(Section 1)* — Cowork shows you the plan before performing multi-step or write actions, and waits for your approval. Keeps you in the loop on side effects.
 
 **Post-meeting routine** *(Section 4)* — the chain that takes a meeting transcript, writes structured notes to your vault, captures commitments to GTD inbox, and drafts follow-up emails.
 
@@ -172,7 +176,7 @@ Quick definitions, alphabetical. Each entry points to the section that introduce
 
 **Weekly review** *(Section 3)* — GTD discipline performed once a week: process inbox, review next-actions, projects, waiting-fors, calendar. The `/weekly-review` skill walks it.
 
-**Wispr Flow** *(Section 2)* — voice tool. Mac and Windows. Most common workshop pick.
+**Wispr Flow** *(Section 2)* — voice tool. Mac, Windows, iOS, and Android — the only major dictation tool on all four platforms. Default workshop pick.
 
 **Work folder** *(Sections 1, 3)* — the folder on your disk where active project work lives. Mounted to Cowork. Different from the vault — work folder is for outputs and deliverables; vault is for knowledge.
 

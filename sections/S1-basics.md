@@ -132,7 +132,15 @@ Cowork picks a model for you most of the time. You can ask explicitly: *"Use Opu
 
 You don't need to memorize any of this. You need to know the words. So if Claude's replies get sluggish or confused, you can think *"context is probably full"* and start a new chat.
 
-### 3.4 Start a new chat — and notice the silence
+### 3.4 The plan-approval pattern
+
+One thing you may notice early: when you ask Claude to do something with files (especially writes — saving a new version of a document, creating a folder, generating a chart), Cowork will sometimes show you a **plan** before doing it. *"I'm going to read brief.docx, write a summary to brief-summary.docx, and create a chart at /Deliverables/q3-revenue.png. Approve?"*
+
+Approve or modify. This is deliberate. Cowork keeps you in the loop on anything with side effects so it doesn't quietly do the wrong thing in your file system. For pure read or single-step replies, the plan step is usually skipped; for multi-step writes it appears.
+
+Trust this pattern — it's how you avoid finding ten unwanted files in your folder later.
+
+### 3.5 Start a new chat — and notice the silence
 
 In the Project's chat area there's usually a **+ New chat** button or a similar control to start a fresh conversation. **Click it.**
 
@@ -144,7 +152,7 @@ What did we figure out about the Q3 spreadsheet?
 
 Claude will tell you, politely, that there is no prior conversation in this chat — it doesn't remember. The Project remembers (through its instructions and mounted folders), but each chat is a clean slate.
 
-This is the single most important habit in the whole workshop: **one task, one chat.** Don't accumulate hours of unrelated conversation in one chat. When you switch tasks, switch chats. Keep them tight. Keep them fresh.
+This is the most important habit in the whole workshop: **one task, one chat.** Don't accumulate hours of unrelated conversation in one chat. When you switch tasks, switch chats. Keep them tight. Keep them fresh.
 
 The technical name for what goes wrong if you don't is **context rot** — quality drops as the chat gets bloated. New chat fixes it.
 
