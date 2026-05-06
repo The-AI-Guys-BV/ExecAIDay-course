@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Section 4 — the cockpit — ExecAIDay</title>
+<meta name="description" content="Output and automation. Where the system pays off.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="container topnav-inner">
+    <div class="brand"><a href="index.html"><span class="brand-mark">●</span> ExecAIDay</a></div>
+    <div class="nav-links">
+      <a href="index.html">All sections</a>
+      <a href="glossary.html">Glossary</a>
+    </div>
+  </div>
+</nav>
+
+<header class="section-hero s4">
+  <div class="container">
+    <div class="eyebrow">
+      <span><a href="index.html">All sections</a> &nbsp;/&nbsp; Section 4</span>
+    </div>
+    <h1>the cockpit</h1>
+    <p class="theme">Output and automation. Where the system pays off.</p>
+    <div class="walkout"><strong>Walk-out</strong>A personalised cockpit that opens every morning. Meetings captured automatically. Routines running on schedule. Team-collaboration patterns you can deploy this week.</div>
+  </div>
+</header>
+
+<div class="section-page">
+  <main class="content">
+    <h2 id="what-this-section-is">What this section is</h2>
+<p>Sections 1–3 built the engine. This section is what the engine runs.</p>
+<p>After this section, your morning starts the same way every day: you open one Claude artifact, and your priorities for the day are already laid out — calendar, urgent emails, drafts waiting for review, Slack mentions you missed, yesterday's reflection, this week's GTD next actions. You read it for two minutes. You go.</p>
+<p>You'll also have meeting capture wired up: every meeting you attend produces structured notes in your vault, captures commitments into your GTD inbox, and drafts follow-up emails for you to review. No bot in the meeting. No copy-paste afterwards.</p>
+<p>Plus: scheduled routines that run while you sleep, and the patterns for using Cowork in shared team contexts.</p>
+<h2 id="1-meeting-capture-bot-less">1. Meeting capture — bot-less</h2>
+<p>Most meeting bots (Otter, Fireflies, etc.) join the meeting as a separate participant. Some people object to that. Some companies disallow it. <strong>Bot-less capture</strong> runs on your laptop, listens to the audio of the meeting, transcribes locally or to a vendor, and produces a transcript — without showing up as a participant in the meeting.</p>
+<p>Three tools dominate this space. Pick one.</p>
+<ul>
+<li><strong>Granola</strong> — the most popular. Lives on your laptop, captures audio from any meeting platform (Zoom, Meet, Teams, Webex), produces a transcript and AI-generated notes in real time. Mac only as of writing.</li>
+<li><strong>Bluedot</strong> — Chrome extension. Records the meeting from your browser tab. Mac and Windows.</li>
+<li><strong>Fellow</strong> — has a bot mode and a no-bot mode. Bigger product (full meeting management). Use the no-bot mode here.</li>
+</ul>
+<p>Your tech team has installed one of these — most likely Granola — on your laptop before the workshop.</p>
+<h3 id="11-the-chain">1.1 The chain</h3>
+<p>The chain is: meeting tool → transcript → Claude → structured notes in the vault → commitments to GTD inbox → email drafts for follow-up.</p>
+<p>You don't run all those steps by hand. You set up a small <strong>post-meeting routine</strong> that takes the transcript and processes it. Once configured, the routine fires automatically (or with one click) after every meeting.</p>
+<h3 id="12-the-post-meeting-routine">1.2 The post-meeting routine</h3>
+<p>In your Vault Project (from Section 3), in a fresh chat, set up the routine:</p>
+<pre><code>
+I just finished a meeting. The transcript is at [path your meeting tool exports to — e.g., ~/Granola/transcripts/2026-05-06-board-prep.md].
+
+Do the following:
+
+1. Read the transcript.
+2. Write structured meeting notes. Save to &lt;vault&gt;/Meeting Notes/2026-05-06-board-prep.md. Format:
+   - Attendees (extracted from the transcript or ask me).
+   - One-paragraph summary of what was discussed.
+   - Key decisions, with one line each.
+   - Open questions, with one line each.
+   - Sentiment notes — anyone visibly disagreeing or hesitating, surface it.
+
+3. Extract every commitment — anything anyone said they'd do, with or without a clear deadline. Append each as a bullet to &lt;vault&gt;/gtd/inbox.md, in the format: "from [meeting]: [person] to [action] by [deadline if mentioned]". I'll process them later via /process-inbox.
+
+4. Identify any follow-up emails I should send (based on the meeting). For each, draft the email in my voice. Save the drafts to my Drafts folder via the email connector.
+
+Don't summarise back at me. Just do the four things and tell me when done.
+</code></pre>
+<p>Claude does it.</p>
+<h3 id="13-streamline-with-a-skill">1.3 Streamline with a skill</h3>
+<p>After running the routine once or twice, ask <code>/skill-creator</code> to package it as a skill — <code>/post-meeting &lt;transcript-path&gt;</code> — so you don't retype the prompt every meeting. Five-minute build, saves you hours.</p>
+<h3 id="14-gap-analysis-the-real-value">1.4 Gap analysis — the real value</h3>
+<p>Beyond capturing what was said, ask Claude what was <strong>missed</strong>. In the same Vault chat, after meeting notes are saved:</p>
+<pre><code>
+Read the meeting notes you just wrote. Compare them against:
+- The agenda I sent before the meeting (search my email for the meeting subject).
+- The standing context for this group (look in References/people/ for the attendees).
+- Past meetings with this group (search Meeting Notes/ for similar meetings in the last 6 months).
+
+What did we not cover that we should have? What commitments did we make that contradict commitments from prior meetings? Where did we duck a hard question?
+</code></pre>
+<p>This kind of analysis used to take a chief of staff an hour and a coffee. Claude does it in 30 seconds. <strong>This is where the system stops being a productivity tool and starts being a strategic asset.</strong></p>
+<h2 id="2-meeting-prep-meeting-prep">2. Meeting prep — <code>/meeting-prep</code></h2>
+<p>The flip side of capture: walking into a meeting prepared.</p>
+<p><code>/meeting-prep</code> is one of the GTD skills installed in Section 2. It pulls everything Cowork knows about the meeting and the attendees, and produces a one-page brief.</p>
+<h3 id="21-run-it-for-a-real-meeting">2.1 Run it for a real meeting</h3>
+<p>Pick a meeting on your calendar tomorrow. Don't pick a routine standup; pick one where prep would actually help — a sales call, a board prep, a hire interview, a difficult conversation.</p>
+<p>In Cowork:</p>
+<pre><code>
+/meeting-prep
+</code></pre>
+<p>The skill asks which meeting (or you can specify: <code>/meeting-prep "board prep with Diana, Tuesday"</code>). Then it:</p>
+<ul>
+<li>Reads the calendar event (title, attendees, agenda if any).</li>
+<li>Searches your inbox for related threads with the attendees.</li>
+<li>Searches your Meeting Notes/ for prior meetings with the same group.</li>
+<li>Reads References/people/ for what you have on each attendee.</li>
+<li>Reads the GTD project file if one matches the topic.</li>
+</ul>
+<p>It produces a one-page brief. Top: the meeting's purpose and three things you want out of it. Middle: each attendee, what you have on them, recent threads. Bottom: questions worth raising; things to be ready for.</p>
+<h3 id="22-read-it-on-the-way-to-the-meeting">2.2 Read it on the way to the meeting</h3>
+<p>Send it to yourself as an email if you'll be on a phone. Or open it in Obsidian on your laptop two minutes before joining. Either way: you walk into the meeting with the prep done.</p>
+<h2 id="3-artifacts-generated-refreshable">3. Artifacts — generated, refreshable</h2>
+<p>An <strong>artifact</strong> in Cowork is something Claude generates that opens in its own panel, separate from the chat. It can be a document, a chart, a small interactive HTML page, a plan, a deck. The crucial property: artifacts are <strong>refreshable</strong> — you can reopen one days later and Claude regenerates it against current data.</p>
+<h3 id="31-first-artifact-small-and-concrete">3.1 First artifact — small and concrete</h3>
+<p>In any Cowork chat:</p>
+<pre><code>
+Build me a one-page artifact showing my calendar for the next 5 working days. Group meetings by day. Colour-code by type (internal, external, 1:1). Show me at a glance where the day is heavy and where I have white space.
+</code></pre>
+<p>Claude generates an artifact — a small HTML page rendered inside Cowork. It looks like a calendar dashboard. Click around. Open and close it.</p>
+<p>Now reopen the same artifact tomorrow. Claude refreshes against your live calendar data via the connector. The artifact now reflects tomorrow's data.</p>
+<h3 id="32-what-artifacts-are-good-for">3.2 What artifacts are good for</h3>
+<ul>
+<li><strong>Always-fresh views</strong> — calendar, inbox, GTD lists, project status. The view doesn't go stale because it regenerates on open.</li>
+<li><strong>One-shot summaries</strong> — a one-page board update built from current data, regeneratable when the data updates.</li>
+<li><strong>Decision aids</strong> — pros/cons tables that recompute when you change inputs.</li>
+</ul>
+<p>What artifacts are not good for: anything that needs to be exactly the same forever (use a saved file). Anything heavily interactive (use a real app).</p>
+<h2 id="4-the-personalised-cockpit-your-flagship-artifact">4. The personalised cockpit — your flagship artifact</h2>
+<p>This is the deliverable that makes most of the rest of the workshop pay off. We build it together, end-to-end.</p>
+<h3 id="41-what-the-cockpit-shows">4.1 What the cockpit shows</h3>
+<p>The cockpit is a single-page artifact you open every morning. It shows:</p>
+<ul>
+<li><strong>Today's calendar</strong>, with what each meeting is for and any prep status.</li>
+<li><strong>Urgent emails</strong> from the last 24 hours — top three, with one-line summaries.</li>
+<li><strong>Drafts waiting</strong> — emails Claude has drafted overnight that you should review and send.</li>
+<li><strong>Slack mentions</strong> — what people pinged you about that you haven't responded to.</li>
+<li><strong>Yesterday's reflection</strong> — a one-paragraph "what got done, what didn't" pulled from yesterday's daily note.</li>
+<li><strong>This week's GTD</strong> — top 5 next actions, by your stated context (office, calls, low-energy, etc.).</li>
+<li><strong>One thing worth flagging</strong> — a single highlight or risk Claude surfaces from cross-checking everything else.</li>
+</ul>
+<p>It refreshes on open. Every morning, fresh.</p>
+<h3 id="42-build-it">4.2 Build it</h3>
+<p>In your Vault Project (the cockpit pulls from vault + connectors, so the Vault Project is the right home):</p>
+<pre><code>
+Build me a personalised executive cockpit as a single-page HTML artifact. The artifact should refresh against live data every time I open it.
+
+Contents, in this order, in clean visual blocks:
+
+1. TODAY — date, weather (skip if no weather connector), three lines.
+
+2. CALENDAR — today's meetings via the calendar connector. For each: time, title, attendees, one-line "what's it for" (look up in References/people/ if relevant). Flag any meeting where I have no prep.
+
+3. URGENT — top 3 emails from the last 24h via the email connector. One-sentence summary each. Mark which need a reply by EOD.
+
+4. DRAFTS WAITING — list any emails currently in my drafts folder. One line summary each.
+
+5. SLACK — mentions from the last 24h via the Slack connector. Channel + message.
+
+6. YESTERDAY — read yesterday's daily note from &lt;vault&gt;/Daily Notes/. If it doesn't exist, skip. One paragraph: what got done, what didn't.
+
+7. THIS WEEK — top 5 next actions from &lt;vault&gt;/gtd/next-actions.md, prioritised. If a context is implied (e.g., it's morning, I'm at the office), filter accordingly.
+
+8. ONE FLAG — based on cross-checking calendar / inbox / GTD / projects: what's the single most important thing I should know this morning? (Could be a risk, a deadline I'm missing, an attendee I haven't briefed for, anything.) One paragraph.
+
+Style: clean, generous spacing, restrained colours. Each block has a small header. No animations. No emoji. This is for a CEO at 7am, not a marketing site.
+
+Save it as an artifact. I'll open it every morning.
+</code></pre>
+<p>Claude builds it. The artifact opens. Look at it.</p>
+<h3 id="43-iterate">4.3 Iterate</h3>
+<p>The first version won't be perfect. Iterate:</p>
+<pre><code>
+The "Urgent" block pulled some recurring newsletters in. Filter those out — only treat human-sent emails as urgent.
+</code></pre>
+<pre><code>
+The "One flag" is being too cautious — it just summarises. Make it spicier — surface a real risk or contradiction, or say "nothing special today" if there isn't one.
+</code></pre>
+<pre><code>
+Add a "MOOD" block at the top that's just a plain reading of how loaded my day looks — light, normal, heavy, brutal — based on calendar density.
+</code></pre>
+<p>Each round tightens it.</p>
+<h3 id="44-pin-it">4.4 Pin it</h3>
+<p>In Cowork, artifacts can be pinned. Pin the cockpit so it's one click from your Cowork sidebar. From now on, every morning: click, read, go.</p>
+<h2 id="5-scheduled-tasks-claude-works-while-you-sleep">5. Scheduled tasks — Claude works while you sleep</h2>
+<p>The cockpit opens when you open it. Some things should run on a schedule, with no input from you.</p>
+<h3 id="51-where-to-set-them">5.1 Where to set them</h3>
+<p>In Cowork, go to <strong>Customize → Scheduled Tasks</strong> (sometimes labelled "Routines" depending on Cowork version). Click <strong>+ New scheduled task</strong>.</p>
+<p>A scheduled task has:</p>
+<ul>
+<li>A <strong>schedule</strong> — cron-style or a simple "every weekday at 8am" picker.</li>
+<li>A <strong>prompt</strong> — what Cowork should do.</li>
+<li>A <strong>destination</strong> — Slack DM, email draft, vault file, or a combination.</li>
+</ul>
+<h3 id="52-three-useful-schedules-to-set-up">5.2 Three useful schedules to set up</h3>
+<p><strong>The Monday morning brief</strong> — Mondays at 7:30am.</p>
+<pre><code>
+Schedule: Mondays at 7:30am.
+
+Prompt:
+Read my calendar for the upcoming week. Read my GTD next-actions and projects. Read any unfinished items in last week's daily notes.
+
+Produce a Monday morning brief covering:
+- The week ahead at a glance — heavy days vs light days.
+- Top 3 things I have to ship this week.
+- Anything stale that should have moved last week.
+- One question I should sit with this week.
+
+Destination: write it to &lt;vault&gt;/Daily Notes/[today].md as the first entry of the day.
+</code></pre>
+<p>When you open your laptop Monday morning, the brief is already in today's daily note.</p>
+<p><strong>Daily priorities</strong> — every weekday at 8am.</p>
+<pre><code>
+Schedule: weekdays at 8am.
+
+Prompt:
+Read today's calendar. Read GTD next-actions. Pick the 3 things that, if I do them today, will make today a win.
+
+Destination: send as a Slack DM to me.
+</code></pre>
+<p>Every morning, your phone gets a Slack DM with your three things. Two minutes of phone time replaces ten minutes of triage.</p>
+<p><strong>Friday afternoon wrap</strong> — Fridays at 4pm.</p>
+<pre><code>
+Schedule: Fridays at 4pm.
+
+Prompt:
+Walk the weekly review.
+
+- Read all daily notes from this week.
+- Read GTD lists.
+- Read meeting notes from this week.
+- Surface stale waiting-fors and projects without next actions.
+- List accomplishments worth noting.
+- Preview the upcoming week's calendar.
+
+Destination: write it to &lt;vault&gt;/Daily Notes/[today]-weekly-review.md.
+</code></pre>
+<p>Your weekly review is staged when you sit down to do it. The prep work is already done.</p>
+<h3 id="53-dont-over-schedule">5.3 Don't over-schedule</h3>
+<p>Two or three scheduled tasks is plenty. Beyond that, you stop reading them. Better one scheduled task you actually look at than five you ignore.</p>
+<h2 id="6-collaboration-shared-work-the-team-move">6. Collaboration & shared work — the team move</h2>
+<p>Cowork is built for individual leverage first. But teams use it too. The collaboration patterns are smaller in number and bigger in payoff.</p>
+<h3 id="61-shared-cowork-projects">6.1 Shared Cowork Projects</h3>
+<p>Cowork supports <strong>shared Projects</strong> (depending on your plan — Team or Enterprise). The pattern: you and your team mount the same shared folder; the Project's instructions and connectors are shared; everyone's edits land in the same place.</p>
+<p>Use cases:</p>
+<ul>
+<li>A shared Project for a deal or a board cycle. Every team member updates the same files. Everyone sees the same view.</li>
+<li>A shared Project for a customer account. CSM, AE, support, exec — all working from the same context.</li>
+</ul>
+<p>Setup goes through your tech team.</p>
+<h3 id="62-multi-connector-team-queries">6.2 Multi-connector team queries</h3>
+<p>Where Cowork really shines for teams is <strong>cross-connector queries</strong> — pulling from multiple services in one shot.</p>
+<pre><code>
+For the Acme account, give me a snapshot of where things stand:
+
+- Last 5 emails between Acme contacts and our team (email connector).
+- Active Slack threads mentioning Acme in the last week (Slack connector).
+- The Salesforce account record — current stage, ARR, next steps (Salesforce connector).
+- Any open Jira tickets tagged "acme-customer" (Jira connector).
+- The last meeting notes with Acme from &lt;vault&gt;/Meeting Notes/.
+
+Produce a one-page brief. Format: top section "current state in 3 sentences," then sections for each source, then "the question to land in our next call."
+</code></pre>
+<p>A query like this used to require a junior to spend half a day pulling from five tools. Claude does it in 30 seconds. <strong>This is the team-leverage move</strong> — most executives don't have five-tool fluency, and most senior teams have moved beyond rolling up data by hand. This makes the rollup near-free.</p>
+<h3 id="63-handoff-patterns">6.3 Handoff patterns</h3>
+<p>When you hand off a task to a team member, give them the Cowork Project. They open it with the same context, same instructions, same connectors. They pick up where you left off without a 30-minute briefing.</p>
+<p>Conversely, when you take a handoff, ask Claude:</p>
+<pre><code>
+I just inherited this Project. Read everything — the instructions, the mounted folders' claude.md files, the most recent chats, the project's GTD entry. Brief me as if I'm catching up cold. What's the project, what's done, what's next, what's at risk?
+</code></pre>
+<p>Five minutes replaces an hour of meetings.</p>
+<h2 id="what-you-take-away">What you take away</h2>
+<ul>
+<li>Meeting capture chain — transcript → notes → commitments → drafts. No bot in the meeting.</li>
+<li><code>/meeting-prep</code> for any real meeting. Walk in prepared.</li>
+<li>Artifacts as a tool — refreshable views you don't have to rebuild.</li>
+<li>A personalised cockpit, pinned. Open it every morning.</li>
+<li>Two or three scheduled tasks running while you sleep.</li>
+<li>Multi-connector queries for team rollups.</li>
+</ul>
+<p>Everything you've built — vault, work folder, connectors, skills, cockpit, routines — is now wired together. Section 5 is about keeping it healthy over time.</p>
+    <nav class="section-nav">
+      <a href="s3-knowledge.html" class="prev">
+        <div class="label">Previous</div>
+        <div class="title">Section 3 — Knowledge base & GTD</div>
+      </a>
+      <a href="s5-aftercare.html" class="next">
+        <div class="label">Next</div>
+        <div class="title">Section 5 — Aftercare & follow-up</div>
+      </a>
+    </nav>
+  </main>
+  <aside class="section-toc">
+    <h3>In this section</h3>
+    <ol>
+      <li><a href="#what-this-section-is">What this section is</a></li>
+      <li><a href="#1-meeting-capture-bot-less">1. Meeting capture — bot-less</a></li>
+      <li><a href="#2-meeting-prep-meeting-prep">2. Meeting prep — <code>/meeting-prep</code></a></li>
+      <li><a href="#3-artifacts-generated-refreshable">3. Artifacts — generated, refreshable</a></li>
+      <li><a href="#4-the-personalised-cockpit-your-flagship-artifact">4. The personalised cockpit — your flagship artifact</a></li>
+      <li><a href="#5-scheduled-tasks-claude-works-while-you-sleep">5. Scheduled tasks — Claude works while you sleep</a></li>
+      <li><a href="#6-collaboration-shared-work-the-team-move">6. Collaboration & shared work — the team move</a></li>
+      <li><a href="#what-you-take-away">What you take away</a></li>
+    </ol>
+  </aside>
+</div>
+
+<footer class="site-footer">
+  <div class="container site-footer-inner">
+    <div>ExecAIDay — Claude Cowork training for executives.</div>
+    <div>Tijn van der Zant, PhD · The AI Guys BV</div>
+  </div>
+</footer>
+
+</body>
+</html>

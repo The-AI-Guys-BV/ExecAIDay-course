@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Section 2 — Leveraging Claude in your work — ExecAIDay</title>
+<meta name="description" content="Personalize Claude. Connect to live data. Extend into the surfaces you already use.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="container topnav-inner">
+    <div class="brand"><a href="index.html"><span class="brand-mark">●</span> ExecAIDay</a></div>
+    <div class="nav-links">
+      <a href="index.html">All sections</a>
+      <a href="glossary.html">Glossary</a>
+    </div>
+  </div>
+</nav>
+
+<header class="section-hero s2">
+  <div class="container">
+    <div class="eyebrow">
+      <span><a href="index.html">All sections</a> &nbsp;/&nbsp; Section 2</span>
+    </div>
+    <h1>Leveraging Claude in your work</h1>
+    <p class="theme">Personalize Claude. Connect to live data. Extend into the surfaces you already use.</p>
+    <div class="walkout"><strong>Walk-out</strong>Cowork knows who you are. Live data flows in from Gmail, Calendar, Drive, Slack. Skills are running. Word, Excel, and PowerPoint each have a Claude sidebar wired in.</div>
+  </div>
+</header>
+
+<div class="section-page">
+  <main class="content">
+    <h2 id="what-this-section-is">What this section is</h2>
+<p>In Section 1 you used Claude with what was already on your laptop — files, the browser, a chat. That's the floor.</p>
+<p>This section adds three layers on top of that floor:</p>
+<ul>
+<li><strong>Personalisation.</strong> Cowork is going to learn who you are — your role, your context, how you write, what you care about. This single move makes most of the rest of the workshop feel like a different product.</li>
+<li><strong>Live data.</strong> Cowork connects to your Gmail (or Microsoft 365), Calendar, Drive, Slack, and the work apps you already pay for — Asana, Jira, Linear, Salesforce, whichever ones you use. After this section, when you ask Claude <em>"what's on my plate this week?"</em> it actually knows.</li>
+<li><strong>Extension.</strong> Skills (slash commands like <code>/skill-creator</code>) and the Claude sidebars inside Word, Excel, and PowerPoint. Claude moves out of just the Cowork chat and into the apps you already work in.</li>
+</ul>
+<p>Every step is spelled out. The setup pieces are heavier here than in Section 1 — your workshop tech team handles most of the install plumbing in advance, so you can focus on the actual moves.</p>
+<h2 id="1-the-chief-of-staff-brief-cowork-learns-who-you-are">1. The chief-of-staff brief — Cowork learns who you are</h2>
+<p>This is the recognition-shock moment of the workshop. Before this exercise, Cowork is generic. After it, Cowork sounds like it's been working with you for years.</p>
+<h3 id="11-what-were-doing">1.1 What we're doing</h3>
+<p>You're going to spend ten to fifteen minutes letting Claude interview you, like a chief of staff would on day one. Then Claude will write up a brief — a structured summary of who you are, what you do, who you work with, what you care about — and you'll paste that brief into your Cowork Project's instructions.</p>
+<p>From that moment on, every reply Claude gives you inside this Project is shaped by who you are.</p>
+<h3 id="12-where-the-brief-lives-for-now">1.2 Where the brief lives — for now</h3>
+<p>For this section, the brief lives in your Cowork Project's <strong>Instructions</strong> field — the same field you put a one-line note into in Section 1. You're going to replace that one-liner with a full brief.</p>
+<p>(In Section 3 we will move the brief out of the Project instructions and into a file in your Obsidian vault. That's a knowledge-architecture upgrade, not a different brief. For now, Project instructions is where it goes.)</p>
+<h3 id="13-run-the-interview">1.3 Run the interview</h3>
+<p>Open your Workshop Day 1 Project from Section 1. Start a fresh chat. Send this prompt:</p>
+<pre><code>
+You are a chief of staff who just joined me on day one. You need to understand my role, my company, my team, my priorities, my style — enough to be useful starting tomorrow morning.
+
+Interview me. Ask one question at a time. Wait for my answer before asking the next. Cover:
+
+- My role and what I'm actually accountable for.
+- The company — size, stage, sector, what we do.
+- My team — direct reports, peers, the people I depend on.
+- My boss / board / shareholders.
+- Three or four things on my plate right now.
+- Areas I want to grow in.
+- How I write — formal, plain, dry, warm. Examples.
+- What I do not want help with.
+- Anything else a great chief of staff would know on day one.
+
+Don't summarise yet. Just interview.
+</code></pre>
+<p>Claude asks the first question. Answer it — properly, like you mean it. Do not abbreviate.</p>
+<p>Claude asks the next. Answer that one. Continue.</p>
+<p>Tip: <strong>use voice input</strong> for this part. (See section 4 below — voice tools.) Speaking your answers gives you longer, more honest responses than typing. The brief is only as good as what you put in.</p>
+<h3 id="14-the-synthesis">1.4 The synthesis</h3>
+<p>After about ten or fifteen exchanges, when Claude has covered the ground, send:</p>
+<pre><code>
+We're done with the interview. Now write the brief. Format:
+
+# About me
+A working brief for Claude to read at the start of every conversation in this Project.
+
+## Role
+[2-3 sentences]
+
+## Company
+[2-3 sentences]
+
+## Team and people
+[bullet list]
+
+## What's on my plate
+[3-4 bullets, current priorities]
+
+## How I write
+[3-4 sentences with concrete examples]
+
+## What I don't want help with
+[bullet list]
+
+## Notes
+[anything else worth knowing]
+
+Make every line count. No padding. No corporate language. This is for an AI that will read it five hundred times.
+</code></pre>
+<p>Claude writes the brief.</p>
+<h3 id="15-install-the-brief">1.5 Install the brief</h3>
+<p>Read the brief. Edit anything wrong. Then:</p>
+<ul>
+<li>Open the right panel of your Project.</li>
+<li>Find the <strong>Instructions</strong> field.</li>
+<li><strong>Replace</strong> the one-line note from Section 1 with the full brief.</li>
+<li>Save.</li>
+</ul>
+<p>Now the brief is the standing context for every reply in this Project.</p>
+<h3 id="16-the-recognition-shock-test">1.6 The recognition-shock test</h3>
+<p>Start yet another fresh chat in the Project. Type:</p>
+<pre><code>
+Draft a one-paragraph email to my board chair updating them on the most pressing item on my plate this quarter. Match my voice.
+</code></pre>
+<p><strong>Read the reply.</strong></p>
+<p>It will sound like you. It will reference your actual situation. It will not say "I hope this email finds you well." It will not pad. The voice match will not be perfect — but it will be startlingly close, after a fifteen-minute interview.</p>
+<p>This is the moment most people realise what Cowork is for.</p>
+<h2 id="2-roles-when-to-use-them-when-not-to">2. Roles — when to use them, when not to</h2>
+<p>A <strong>role</strong> is the first letter of R-C-T-F-C from Section 1. <em>"You are a senior strategy consultant."</em> It changes what Claude does.</p>
+<h3 id="21-when-roles-help">2.1 When roles help</h3>
+<p>Roles help when:</p>
+<ul>
+<li>The default voice would be wrong. Generic helpful-assistant tone is wrong for half the work an executive does.</li>
+<li>The frame matters more than the words. <em>"You are a sceptical board member"</em> will produce different feedback than <em>"You are a supportive coach"</em> on the same memo.</li>
+<li>You want Claude to bring an expertise you don't want to spell out word-by-word. <em>"You are a securities lawyer reviewing this for compliance issues"</em> primes a whole stance you'd otherwise have to write out.</li>
+</ul>
+<h3 id="22-three-useful-roles-to-keep-in-your-back-pocket">2.2 Three useful roles to keep in your back pocket</h3>
+<ul>
+<li><em>"You are a chief of staff."</em> — synthesises, prioritises, surfaces what you're missing.</li>
+<li><em>"You are a sceptical investor reading this cold."</em> — pressure-tests claims. Catches puffery.</li>
+<li><em>"You are a senior editor at The Economist."</em> — tightens prose. Ruthless about flabby language.</li>
+</ul>
+<h3 id="23-where-roles-fail">2.3 Where roles fail</h3>
+<p>Roles are not magic. Two failure modes:</p>
+<ul>
+<li><strong>Caricature.</strong> <em>"You are the world's greatest CEO."</em> doesn't make Claude wiser; it makes Claude more grandiose. Avoid superlatives.</li>
+<li><strong>Overdose.</strong> Stacking five roles in one prompt — <em>"You are a CEO, a lawyer, a designer, and a sceptic"</em> — produces mush. Claude can hold one role well, sometimes two. Three is pushing it.</li>
+</ul>
+<p>The rule: one role at a time, specific enough to picture. <em>"You are a partner at a top-tier strategy firm reviewing a board deck for a Series C SaaS company."</em> — that picture works. <em>"You are an expert in everything"</em> — that picture doesn't.</p>
+<h2 id="3-anti-patterns-the-full-catalogue">3. Anti-patterns — the full catalogue</h2>
+<p>In Section 1 you saw three: no role, "make it good," wall of context with no task. Here is the full set. Most weak prompts hit one or more of these.</p>
+<h3 id="31-the-ten">3.1 The ten</h3>
+<ol>
+<li><strong>No role, no audience.</strong> Claude defaults to a generic helpful-assistant voice. → Add a role. Add an audience.</li>
+<li><strong>"Make it good."</strong> Subjective with no anchor. → Replace with concrete criteria. <em>"Tighten to under 150 words. Cut hedging language. Lead with the finding."</em></li>
+<li><strong>Wall of context, no task.</strong> Big paragraph of background, then nothing. → State the actual task as a verb. <em>"Summarise. Critique. Rewrite. Compare."</em></li>
+<li><strong>Asking Claude to "think about" something.</strong> Vague. → Replace with a concrete deliverable. <em>"List three angles a board member would press on. For each, give the pushback question they'd ask."</em></li>
+<li><strong>Negative-only framing.</strong> <em>"Don't be salesy. Don't pad. Don't waffle."</em> — Claude doesn't know what you DO want. → Pair every "don't" with a "do." <em>"Be direct. Lead with the point. Three sentences."</em></li>
+<li><strong>Asking for opinions on data Claude can't verify.</strong> <em>"What do you think about Q3's results?"</em> — Claude will produce a fluent-sounding take that may be unmoored. → Anchor in your data. <em>"Read q3.xlsx. Tell me what you actually see, supported by the numbers."</em></li>
+<li><strong>No format specified.</strong> Claude picks a format. You may not like it. → Be explicit. <em>"Bullets, max 5. Then 2 sentences of context."</em></li>
+<li><strong>Multi-question prompts that are really five prompts in a trench coat.</strong> <em>"What's the strategy, who should I hire, and what's the messaging?"</em> → Split into separate chats. One task, one chat. (Section 1, point 3.4.)</li>
+<li><strong>Anchoring to your existing answer.</strong> <em>"I think X. Don't you agree?"</em> — Claude will agree. → Ask neutrally. <em>"Pressure-test X. What's the strongest counter-argument?"</em></li>
+<li><strong>Forgetting to verify.</strong> Trusting a confident answer because it sounds confident. → Section 1, point 4. <strong>Verify any factual claim that matters.</strong></li>
+</ol>
+<p>These ten cover most of the ways prompts go wrong in real executive work. Re-read this list once a quarter. You'll catch yourself in three of them.</p>
+<h2 id="4-voice-speaking-instead-of-typing">4. Voice — speaking instead of typing</h2>
+<p>Voice tools transcribe what you say into whatever text field you're in. They are a quiet productivity unlock for prompting.</p>
+<h3 id="41-why-voice-matters-for-prompts">4.1 Why voice matters for prompts</h3>
+<p>Two reasons. First, you say more than you type. A typed prompt is two sentences and a question mark; a spoken prompt is half a paragraph of context, audience, constraint. Better prompts produce better output.</p>
+<p>Second, voice removes the friction of starting. The hardest part of using Claude well is opening the chat and writing the first line. Voice removes that friction.</p>
+<h3 id="42-the-four">4.2 The four</h3>
+<p>There are four worth knowing. Pick one that runs on your platform.</p>
+<ul>
+<li><strong>Wispr Flow</strong> — Mac and Windows. Polished. Defaults that work out of the box. The most common pick in the workshop.</li>
+<li><strong>Superwhisper</strong> — Mac. Strong privacy posture (transcription can run locally). Good if you handle sensitive material.</li>
+<li><strong>Voibe</strong> — Mac. Lightweight.</li>
+<li><strong>FloWstay</strong> — Mac (Apple Silicon). Free. Good if you want to try voice without paying.</li>
+</ul>
+<p>If you're on Windows, your practical option is Wispr Flow. If you're on Mac, try Wispr Flow first; consider the others if you have specific reasons.</p>
+<h3 id="43-install-and-try">4.3 Install and try</h3>
+<p>Each of these has a download page on its own site. Install. Grant the microphone permission. Configure a hotkey (most use Fn or Caps Lock — pick one that doesn't conflict with anything you actually use).</p>
+<p>Test in your Cowork Project. Hold the hotkey, talk for thirty seconds, release. Your spoken words appear in the chat box.</p>
+<p>Try a real prompt this way. Hold the hotkey, say:</p>
+<blockquote>
+<p><em>"You are a chief of staff. I need to update my board on a tricky situation in our biggest customer account — we're at risk of losing them, and the renewal is in three weeks. Read the customer file in the Project, write me a five-bullet update for the board, leading with what's actually happening, then what we're doing about it. Don't sugarcoat."</em></p>
+</blockquote>
+<p>Release. The whole prompt is in the chat. Send.</p>
+<p>You'll find that voice prompts are usually better than typed ones — because you naturally include more context.</p>
+<h3 id="44-what-to-use-voice-for">4.4 What to use voice for</h3>
+<ul>
+<li>Long prompts with rich context.</li>
+<li>Drafting (not editing) — you'd dictate a memo to a colleague, you can dictate one to Claude.</li>
+<li>Notes between meetings — drop ideas into a vault file the moment they hit you.</li>
+</ul>
+<p>What not to use voice for: short corrections, short factual questions. Typing is faster for those.</p>
+<h2 id="5-connectors-claude-reads-your-live-data">5. Connectors — Claude reads your live data</h2>
+<p>Connectors are bridges between Cowork and the services you already use — Gmail, Microsoft 365, Calendar, Drive, Slack, and the apps your team runs on (Asana, Jira, Linear, Salesforce, etc.).</p>
+<p>After connecting, when you ask Claude <em>"what did Diana send me yesterday about the Q3 board pack?"</em> — Claude actually reads your inbox and answers. Not from training data, not from guesses. From the actual email.</p>
+<h3 id="51-where-to-set-them-up">5.1 Where to set them up</h3>
+<p>In Cowork, in the left sidebar, click <strong>Customize</strong>. A panel opens. Inside, find <strong>Connectors</strong> (sometimes labelled "Apps" or "Integrations" depending on Cowork version).</p>
+<p>You'll see a list of available connectors. The big ones — Gmail, Google Calendar, Google Drive, Microsoft 365 (which covers Outlook, Teams, OneDrive, SharePoint), Slack — are at the top.</p>
+<h3 id="52-connecting-your-first-one">5.2 Connecting your first one</h3>
+<p>Pick the most important one. For most people that's email — Gmail or Outlook.</p>
+<p>Click <strong>Connect</strong>. A browser tab opens. You're asked to log in to your Google or Microsoft account. You log in. Then you're asked to <strong>grant permissions</strong> — read email, search email, draft email, and so on. Read the list.</p>
+<p>(Aside: this is a real authorization. Claude will be able to read every email in your account from the moment you grant this. Your IT / security team has likely vetted this scope already; if not, talk to them before clicking Allow. Cowork respects what your account permits — if your IT has scoped down what apps can access, those scopes apply.)</p>
+<p>Click Allow. The tab closes. Back in Cowork, the connector now shows <strong>Connected</strong> with a green check.</p>
+<p>Repeat for each connector you use. Your assistant is on hand for any that throw permission errors — those are usually account-policy issues that need an admin.</p>
+<h3 id="53-the-mcp-word">5.3 The MCP word</h3>
+<p>You'll occasionally see <strong>MCP</strong> (Model Context Protocol). MCP is the technical protocol underneath connectors — it's the wire format Cowork uses to talk to Gmail or Slack. You don't need to deal with it directly. If a connector you want isn't in the standard list, your tech team can build a custom MCP connector. That's normal in larger orgs.</p>
+<h3 id="54-test-the-connectors">5.4 Test the connectors</h3>
+<p>Start a fresh chat in your Project. Try a few prompts:</p>
+<pre><code>
+Search my inbox for emails from [a colleague] in the last two weeks. What are the three threads I most need to respond to? Don't draft replies yet — just tell me what's pending.
+</code></pre>
+<pre><code>
+What's on my calendar tomorrow? For each meeting, in one sentence, what's the meeting actually for? Flag any meeting I should reschedule based on the prep I'd need.
+</code></pre>
+<pre><code>
+Search my Drive for documents about the Q3 board pack. Show me the three most recent. Read the most recent and summarise it.
+</code></pre>
+<pre><code>
+Look at my #leadership Slack channel for the last 48 hours. What's the most-discussed topic? What does the team seem to think?
+</code></pre>
+<p>If any of these throw a "no access" error, it's almost always a connector permission issue — re-authenticate from Customize → Connectors.</p>
+<p>This is the moment most executives realise Claude is no longer a chat box. It's reading your real data, in real time.</p>
+<h2 id="6-email-drafts-connectors-at-work">6. Email drafts — connectors at work</h2>
+<p>The most-used connector move in practice: drafting replies.</p>
+<h3 id="61-the-basic-move">6.1 The basic move</h3>
+<pre><code>
+Read the latest email from [a colleague]. Draft a reply in my voice. Match the tone of the rest of the thread. Don't send — leave it as a draft in my drafts folder.
+</code></pre>
+<p>Claude reads, writes a draft, saves it. You open Gmail or Outlook, find the draft, edit if needed, hit send.</p>
+<h3 id="62-triaging-an-inbox">6.2 Triaging an inbox</h3>
+<pre><code>
+Look at my inbox over the last 24 hours. Group the unread mails into three buckets:
+
+1. Reply needed today — for each, draft a short reply in my voice.
+2. Reply needed this week — list with one-sentence summary each.
+3. FYI / archive — list, one line each.
+
+Save the drafts. Don't send anything.
+</code></pre>
+<p>Claude works through your inbox, drafts the urgent replies, tags the rest. You walk through Drafts in Gmail or Outlook, edit each one in 30 seconds, send. The whole inbox processed in 15 minutes.</p>
+<h3 id="63-boundaries">6.3 Boundaries</h3>
+<p>Two rules. <strong>Never auto-send.</strong> Always leave drafts for you to review. Voice and content matter; Claude gets close, never perfect. <strong>Watch for hallucination in factual claims.</strong> If Claude drafts <em>"As we discussed last week..."</em> and you didn't, the draft is wrong. Verify before sending.</p>
+<h2 id="7-skills-and-slash-commands">7. Skills and slash commands</h2>
+<p>A <strong>skill</strong> is a reusable prompt packaged so you can invoke it with a slash. <code>/help-me-prompt</code> is a skill that takes a draft prompt and rewrites it in R-C-T-F-C structure. <code>/skill-creator</code> is a skill that helps you build new skills.</p>
+<p>In this section you'll demo skills that ship with Cowork, install a small workshop skill pack, and create one of your own.</p>
+<h3 id="71-what-ships-with-cowork">7.1 What ships with Cowork</h3>
+<p>In any chat, type <code>/</code> (just the slash). A menu appears showing the skills available right now. Some of these are Cowork built-ins; some come from any plugins or skills you've installed.</p>
+<p>The Cowork built-ins change over time. The pattern is the same: type <code>/&lt;name&gt;</code>, optionally add an argument, the skill runs.</p>
+<h3 id="72-install-the-workshop-skill-pack">7.2 Install the workshop skill pack</h3>
+<p>Your assistant is going to install a small skill pack used in Sections 3 and 4 — the GTD skills (capture, process-inbox, weekly-review, and a few others). The install takes about a minute. Watch them do it once so you know how it's done — the path is <strong>Customize → Personal plugins → Add</strong> — but you don't need to handle the install yourself.</p>
+<p>After install, type <code>/</code> again. The new skills now appear in the menu.</p>
+<h3 id="73-build-your-own-skill">7.3 Build your own skill</h3>
+<p>The most useful muscle in this whole topic: building your own skill, in five minutes.</p>
+<p>In a fresh chat:</p>
+<pre><code>
+/skill-creator
+</code></pre>
+<p><code>/skill-creator</code> is a skill that interviews you about a skill you want to build, then writes the skill files for you. It asks questions like <em>"What's the skill for? What inputs does it take? What output should it produce?"</em></p>
+<p>A good first skill to build for yourself: <strong><code>/draft-update</code></strong> — takes a project name as an argument, reads the project's files in your Cowork Project, drafts a one-paragraph update for your boss in your voice.</p>
+<p>Run <code>/skill-creator</code>. Answer its questions. At the end, it produces the skill files. You install the skill (it'll tell you how — usually one click). From now on, <code>/draft-update [project name]</code> runs in any chat.</p>
+<p>You now know how to extend Cowork yourself.</p>
+<h2 id="8-office-add-ins-claude-inside-word-excel-powerpoint">8. Office add-ins — Claude inside Word, Excel, PowerPoint</h2>
+<p>The third surface, after Cowork and the browser. The <strong>Claude by Anthropic</strong> add-ins put a Claude sidebar inside Word, Excel, and PowerPoint. Sidebar is open, you work in the document, Claude is right there.</p>
+<h3 id="81-the-install-what-your-tech-team-has-done">8.1 The install — what your tech team has done</h3>
+<p>Your tech team has installed three add-ins on your machine before the workshop. Each comes from Microsoft AppSource, the official Microsoft add-in store, and is published by Anthropic.</p>
+<p>If you want to verify the install is in place: open Word, look at the <strong>Insert</strong> tab in the ribbon, find <strong>My Add-ins</strong>. Claude by Anthropic should be listed. Same in Excel and PowerPoint. If it's not, flag your assistant — they install it now.</p>
+<h3 id="82-open-the-sidebar-word-first">8.2 Open the sidebar — Word first</h3>
+<p>Open Word. Open any document — last quarter's board memo, a draft you have lying around. Look at the ribbon. There's a Claude icon (orange-and-white logo). <strong>Click it.</strong> A sidebar opens on the right side of the document.</p>
+<p>Sign in with the same Anthropic account you use for Cowork.</p>
+<h3 id="83-the-sidebar-shape">8.3 The sidebar shape</h3>
+<p>The sidebar in Word, Excel, and PowerPoint all follow the same shape: a chat box at the bottom, conversation history above. You type a prompt, Claude reads what's in the document and replies. Some prompts produce changes directly in the document — Claude inserts a paragraph, edits a slide, formats a table.</p>
+<p>The shared-context move is the killer feature: a conversation you start in Excel can be continued in PowerPoint. Numbers analysed in one app become slides in the next without copy-paste.</p>
+<h3 id="84-try-it-word">8.4 Try it — Word</h3>
+<p>In your Word document, type a prompt in the Claude sidebar:</p>
+<pre><code>
+Read this whole document. The current opening paragraph buries the lede. Rewrite it so the punchline is the first sentence, and the supporting context follows. Show me the rewrite — don't change the document yet.
+</code></pre>
+<p>Claude shows the rewrite in the sidebar. If you like it, click <strong>Insert</strong> — the rewrite replaces the paragraph in the document. If you don't, refine.</p>
+<h3 id="85-try-it-excel">8.5 Try it — Excel</h3>
+<p>Open the same <code>q3.xlsx</code> from Section 1. Open the Claude sidebar in Excel.</p>
+<pre><code>
+Read this sheet. Identify the three most surprising line items. For each, propose one chart that would land the point at a glance. Don't build the charts yet — describe them.
+</code></pre>
+<p>Claude reads, replies. Ask Claude to build one of the charts:</p>
+<pre><code>
+Build chart 1 in this sheet, on a new chart tab.
+</code></pre>
+<p>Claude inserts the chart.</p>
+<h3 id="86-the-branded-deck-workflow-inside-the-sidebars">8.6 The branded-deck workflow inside the sidebars</h3>
+<p>In Section 1 you built a branded deck via Cowork file ops + Chrome extension. Here is the same branded-deck shape, done <strong>inside the Office sidebars</strong> — different mechanics, same outcome.</p>
+<p>The flow:</p>
+<ol>
+<li><strong>Excel sidebar.</strong> <em>"Look at q3.xlsx. Find the three numbers I should lead with for the board. Save them as a small summary table at the top of a new sheet called 'For Deck'."</em></li>
+<li><strong>PowerPoint sidebar — open a new deck.</strong> <em>"I'm building a Q3 board deck. The three lead numbers are in the Excel file we were just on. The brand book is at [paste from Section 1 or new capture]. Apply the brand to titles and accents. Pull the three numbers from Excel into the first three slides."</em></li>
+<li><strong>Continued in PowerPoint sidebar.</strong> <em>"Slide 4 — what are we doing about it. Reference the strategic narrative in brief.docx (open in Word). Pull the relevant paragraph and adapt it for slide 4."</em></li>
+<li><strong>Word sidebar — same conversation.</strong> Once back in Word, the conversation context is shared. <em>"Take the deck we just built. Write a half-page memo that paraphrases the deck for the one board member who reads memos, not slides."</em></li>
+</ol>
+<p>The key move: the Claude conversation is persistent across the three Office apps. You don't restart the conversation each time you switch apps. The numbers you analysed in Excel are still in scope when you open PowerPoint. The narrative you built in PowerPoint is still in scope when you open Word.</p>
+<h3 id="87-when-to-use-the-sidebars-vs-cowork">8.7 When to use the sidebars vs. Cowork</h3>
+<p>A real question, not a settled one. Two practical answers:</p>
+<ul>
+<li><strong>You're already in the document.</strong> If you're staring at a Word draft and want to edit it, the sidebar is faster than switching to Cowork. Same for Excel and PowerPoint.</li>
+<li><strong>You want to coordinate across files and folders, not just one document.</strong> Cowork is better — it sees the whole folder, multiple files, your Project context, your connectors.</li>
+</ul>
+<p>Most executives end up using both, depending on what they're doing. The sidebars are tactical (one document at a time). Cowork is the workspace (the project, the folder, the live data).</p>
+<h2 id="what-you-take-away">What you take away</h2>
+<ul>
+<li>A chief-of-staff brief — installed in your Project's instructions, sounding like you.</li>
+<li>The vocabulary of roles and the ten anti-patterns. You can spot a weak prompt at a glance.</li>
+<li>A voice tool installed and working with Cowork.</li>
+<li>Connectors live — Cowork reads your inbox, calendar, drive, Slack.</li>
+<li>Email-drafts move down to muscle memory.</li>
+<li>Skills running, plus one you built yourself with <code>/skill-creator</code>.</li>
+<li>Claude sidebars wired into Word, Excel, PowerPoint, with shared context across the three.</li>
+</ul>
+<p>Section 3 takes the personalisation — the brief — and gives it a permanent home in a file you own. That's where the architecture starts.</p>
+    <nav class="section-nav">
+      <a href="s1-basics.html" class="prev">
+        <div class="label">Previous</div>
+        <div class="title">Section 1 — Basics</div>
+      </a>
+      <a href="s3-knowledge.html" class="next">
+        <div class="label">Next</div>
+        <div class="title">Section 3 — Knowledge base & GTD</div>
+      </a>
+    </nav>
+  </main>
+  <aside class="section-toc">
+    <h3>In this section</h3>
+    <ol>
+      <li><a href="#what-this-section-is">What this section is</a></li>
+      <li><a href="#1-the-chief-of-staff-brief-cowork-learns-who-you-are">1. The chief-of-staff brief — Cowork learns who you are</a></li>
+      <li><a href="#2-roles-when-to-use-them-when-not-to">2. Roles — when to use them, when not to</a></li>
+      <li><a href="#3-anti-patterns-the-full-catalogue">3. Anti-patterns — the full catalogue</a></li>
+      <li><a href="#4-voice-speaking-instead-of-typing">4. Voice — speaking instead of typing</a></li>
+      <li><a href="#5-connectors-claude-reads-your-live-data">5. Connectors — Claude reads your live data</a></li>
+      <li><a href="#6-email-drafts-connectors-at-work">6. Email drafts — connectors at work</a></li>
+      <li><a href="#7-skills-and-slash-commands">7. Skills and slash commands</a></li>
+      <li><a href="#8-office-add-ins-claude-inside-word-excel-powerpoint">8. Office add-ins — Claude inside Word, Excel, PowerPoint</a></li>
+      <li><a href="#what-you-take-away">What you take away</a></li>
+    </ol>
+  </aside>
+</div>
+
+<footer class="site-footer">
+  <div class="container site-footer-inner">
+    <div>ExecAIDay — Claude Cowork training for executives.</div>
+    <div>Tijn van der Zant, PhD · The AI Guys BV</div>
+  </div>
+</footer>
+
+</body>
+</html>

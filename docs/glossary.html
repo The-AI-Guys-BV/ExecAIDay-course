@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glossary — ExecAIDay</title>
+<meta name="description" content="Glossary for the ExecAIDay course. Alphabetical, with section pointers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="container topnav-inner">
+    <div class="brand"><a href="index.html"><span class="brand-mark">●</span> ExecAIDay</a></div>
+    <div class="nav-links">
+      <a href="index.html">All sections</a>
+    </div>
+  </div>
+</nav>
+
+<header class="section-hero">
+  <div class="container">
+    <div class="eyebrow">
+      <span><a href="index.html">All sections</a> &nbsp;/&nbsp; Glossary</span>
+    </div>
+    <h1>Glossary</h1>
+    <p class="theme">One-line definitions for the terms used across the course. Alphabetical. The introducing section is in parentheses.</p>
+  </div>
+</header>
+
+<main class="content container">
+  <h2 id="about-this-glossary">About this glossary</h2>
+<p>Quick definitions, alphabetical. Each entry points to the section that introduces it. Use this during the workshop to look up a word, and after the workshop as a refresh.</p>
+<h2 class="glossary-letter" id="a">A</h2>
+<p><strong>About Me.md</strong> <em>(Section 3)</em> — the file at the root of your vault that holds your chief-of-staff brief. Cowork reads it at the start of every conversation in any Project that mounts the vault.</p>
+<p><strong>Anti-pattern</strong> <em>(Section 1, expanded in Section 2)</em> — a common way of writing prompts that produces weak output. Section 2 lists the ten worst.</p>
+<p><strong>Artifact</strong> <em>(Section 4)</em> — generated output that Cowork renders in its own panel, separate from the chat. <strong>Live artifacts</strong> refresh against current data when reopened.</p>
+<h2 class="glossary-letter" id="b">B</h2>
+<p><strong>Bot-less meeting capture</strong> <em>(Section 4)</em> — recording and transcribing a meeting from your laptop's audio, without joining as a participant. Granola, Bluedot, and Fellow are the common tools.</p>
+<p><strong>Brief</strong> <em>(Section 2)</em> — short for the chief-of-staff brief — the standing summary of who you are and how you work, that Cowork reads at the start of every conversation. Lives in <code>About Me.md</code> from Section 3 onward.</p>
+<h2 class="glossary-letter" id="c">C</h2>
+<p><strong>Capture</strong> <em>(Section 3)</em> — the GTD discipline of noting something the moment it occurs to you, without processing it. The <code>/capture</code> skill appends a bullet to <code>gtd/inbox.md</code>.</p>
+<p><strong>Chief-of-staff brief</strong> — see Brief.</p>
+<p><strong><code>claude.md</code></strong> <em>(Section 3)</em> — the file Claude reads first in any folder. Per-folder context. Closer-to-the-file wins when multiple <code>claude.md</code> files apply.</p>
+<p><strong>Cockpit</strong> <em>(Section 4)</em> — the personalised executive dashboard built as a refreshable artifact. Opens every morning to a current view of calendar, urgent emails, drafts, GTD priorities, and one flag.</p>
+<p><strong>Connector</strong> <em>(Section 2)</em> — an authenticated bridge between Cowork and a service you use — Gmail, Microsoft 365, Calendar, Drive, Slack, Salesforce, etc. Set up under Customize → Connectors.</p>
+<p><strong>Context</strong> <em>(Section 1)</em> — what Claude considers when generating a reply: the conversation, the project instructions, mounted folder contents, connector data. Has a finite limit.</p>
+<p><strong>Context rot</strong> <em>(Section 1)</em> — quality degradation as a chat's context fills up. Fix: one task, one chat. Open a new chat when you switch tasks.</p>
+<p><strong>Cowork Project</strong> <em>(Section 1)</em> — Cowork's workspace concept. Mounts folders, holds standing instructions, has its own chat history. Different from a project folder (the file-system shape).</p>
+<h2 class="glossary-letter" id="d">D</h2>
+<p><strong>Daily note</strong> <em>(Sections 3, 4)</em> — one file per day in <code>&lt;vault&gt;/Daily Notes/</code>. Holds the day's capture, reflections, and Claude-generated briefs.</p>
+<p><strong>Dispatch</strong> <em>(Section 3)</em> — the phone app (or whichever current tool) that lets you capture spoken notes that land in your vault's inbox. Mobile capture.</p>
+<h2 class="glossary-letter" id="f">F</h2>
+<p><strong>FloWstay</strong> <em>(Section 2)</em> — voice tool. Mac (Apple Silicon) only. Free.</p>
+<h2 class="glossary-letter" id="g">G</h2>
+<p><strong>Granola</strong> <em>(Section 4)</em> — bot-less meeting capture tool. Mac.</p>
+<p><strong>GTD (Getting Things Done)</strong> <em>(Section 3)</em> — David Allen's productivity system. The workshop wires GTD into your vault: inbox, next-actions, waiting-for, projects, someday, tickler.</p>
+<h2 class="glossary-letter" id="h">H</h2>
+<p><strong>Hallucination</strong> <em>(Section 1)</em> — Claude generating fluent, plausible-sounding output that is not grounded in fact. Verify factual claims, especially names, numbers, and dates.</p>
+<h2 class="glossary-letter" id="i">I</h2>
+<p><strong>Inbox</strong> <em>(Section 3)</em> — the GTD inbox file at <code>&lt;vault&gt;/gtd/inbox.md</code>. Everything captured lands here for processing later.</p>
+<p><strong>Instructions</strong> <em>(Section 1)</em> — the standing brief Cowork reads at the start of every reply in a Project. Set in the Project's right panel. From Section 3 onward, the brief lives in <code>About Me.md</code> and the Instructions field is a one-liner pointing to it.</p>
+<h2 class="glossary-letter" id="k">K</h2>
+<p><strong>Knowledge cutoff</strong> <em>(Section 1)</em> — the date Claude's training data ends. Anything after that, Claude doesn't know unless you provide it.</p>
+<h2 class="glossary-letter" id="l">L</h2>
+<p><strong>Live artifact</strong> — see Artifact.</p>
+<p><strong>Long-form</strong> <em>(Section 3)</em> — the longer version of the brief, at <code>&lt;vault&gt;/about-me/long-form.md</code>. Read on request, not every conversation.</p>
+<h2 class="glossary-letter" id="m">M</h2>
+<p><strong>MCP (Model Context Protocol)</strong> <em>(Section 2)</em> — the wire format under connectors. You don't usually deal with it; your tech team uses it to build custom connectors for in-house tools.</p>
+<p><strong>Meeting prep</strong> <em>(Section 4)</em> — pre-meeting brief produced by <code>/meeting-prep</code>, drawing from calendar, inbox, prior meeting notes, and References.</p>
+<p><strong>Mobile capture</strong> — see Dispatch.</p>
+<p><strong>Model</strong> <em>(Section 1)</em> — the underlying Claude model. <strong>Opus</strong> (slow, deep), <strong>Sonnet</strong> (balanced default), <strong>Haiku</strong> (fast).</p>
+<p><strong>Mounted folder</strong> <em>(Section 1)</em> — a folder on your disk that you've added to a Cowork Project. Cowork can read and write files in mounted folders.</p>
+<h2 class="glossary-letter" id="n">N</h2>
+<p><strong><code>/new-project</code></strong> <em>(Section 3)</em> — the skill that scaffolds a new project — folder structure (Source Materials / Working Files / Deliverables), a tailored <code>claude.md</code>, and a matching GTD project entry.</p>
+<p><strong>Next action</strong> <em>(Section 3)</em> — GTD term for the concrete physical next thing required to move a project forward. Lives in <code>&lt;vault&gt;/gtd/next-actions.md</code>.</p>
+<h2 class="glossary-letter" id="o">O</h2>
+<p><strong>Office add-ins</strong> <em>(Section 2)</em> — Claude sidebars inside Word, Excel, and PowerPoint. Conversation context is shared across the three apps.</p>
+<p><strong>One task, one chat</strong> <em>(Section 1)</em> — the discipline of starting a new chat when you switch tasks, to avoid context rot.</p>
+<p><strong>Opus</strong> — see Model.</p>
+<p><strong>Overconfidence</strong> <em>(Section 1)</em> — Claude's default phrasing is assertive even when the underlying signal is weak. Push back: "how confident are you?"</p>
+<h2 class="glossary-letter" id="p">P</h2>
+<p><strong>Pin</strong> <em>(Section 1)</em> — putting an extension or artifact in a permanent visible spot. Pin the Chrome extension to your toolbar; pin the cockpit artifact to your Cowork sidebar.</p>
+<p><strong>Plan</strong> <em>(Section 1)</em> — your Anthropic plan: Free, Pro, Max, Team, Enterprise. Workshop assumes Max minimum.</p>
+<p><strong>Post-meeting routine</strong> <em>(Section 4)</em> — the chain that takes a meeting transcript, writes structured notes to your vault, captures commitments to GTD inbox, and drafts follow-up emails.</p>
+<p><strong>Process inbox</strong> <em>(Section 3)</em> — the GTD discipline of clarifying every captured item into action, project, waiting-for, or trash. The <code>/process-inbox</code> skill walks it.</p>
+<p><strong>Project folder</strong> <em>(Section 3)</em> — a folder inside your work folder, with the standard shape (Source Materials / Working Files / Deliverables / <code>claude.md</code>). Different from a Cowork Project.</p>
+<p><strong>Prompt</strong> <em>(Section 1)</em> — what you type to Claude. Good prompts have five elements: see R-C-T-F-C.</p>
+<h2 class="glossary-letter" id="r">R</h2>
+<p><strong>R-C-T-F-C</strong> <em>(Section 1)</em> — the five-element prompt structure: <strong>R</strong>ole, <strong>C</strong>ontext, <strong>T</strong>ask, <strong>F</strong>ormat, <strong>C</strong>onstraints.</p>
+<p><strong>References</strong> <em>(Section 3)</em> — the folder at <code>&lt;vault&gt;/References/</code> holding files about people, brands, tools, and products you work with. Claude reads them on demand.</p>
+<p><strong>Reflection</strong> <em>(Section 4)</em> — short evening (or morning-after) write-up in the daily note: what got done, what didn't.</p>
+<p><strong>Role</strong> <em>(Sections 1, 2)</em> — the "you are…" line at the start of a prompt that frames Claude's stance. <em>"You are a sceptical board member"</em> changes the output.</p>
+<p><strong>Routine</strong> — see Scheduled task.</p>
+<h2 class="glossary-letter" id="s">S</h2>
+<p><strong>Scheduled task</strong> <em>(Section 4)</em> — a Cowork prompt that runs on a schedule (Mondays at 7:30am, weekdays at 8am, etc.) and sends output to a destination (Slack DM, email draft, vault file). Set under Customize → Scheduled Tasks.</p>
+<p><strong>Session memory</strong> <em>(Section 1)</em> — what Claude remembers within one chat. Across chats, no memory; that's what mounted folders, instructions, and <code>claude.md</code> files are for.</p>
+<p><strong>Skill</strong> <em>(Section 2)</em> — a reusable, named prompt invoked with a slash. <code>/capture</code>, <code>/process-inbox</code>, <code>/meeting-prep</code>. Build your own with <code>/skill-creator</code>.</p>
+<p><strong><code>/skill-creator</code></strong> <em>(Section 2)</em> — the skill that interviews you about a new skill and writes it for you.</p>
+<p><strong>Slash command</strong> — see Skill. They're the same thing.</p>
+<p><strong>Sonnet</strong> — see Model.</p>
+<p><strong>Starter vault</strong> <em>(Section 3)</em> — the vault folder pre-installed on your laptop before the workshop, with the standard structure (claude.md, About Me.md, References/, gtd/, Daily Notes/, etc.).</p>
+<p><strong>Starter work folder</strong> <em>(Section 1)</em> — the work folder pre-installed on your laptop, with sample files for the Section 1 capstone.</p>
+<p><strong>Superwhisper</strong> <em>(Section 2)</em> — voice tool. Mac. Local-first transcription option for sensitive content.</p>
+<h2 class="glossary-letter" id="t">T</h2>
+<p><strong>Tickler</strong> <em>(Section 3)</em> — GTD list of things to defer to a future date. <code>&lt;vault&gt;/gtd/tickler.md</code>.</p>
+<p><strong>Token</strong> <em>(Section 1)</em> — Claude's unit of measurement, roughly four characters of English. You don't track tokens day-to-day, but context limits are measured in them.</p>
+<h2 class="glossary-letter" id="v">V</h2>
+<p><strong>Vault</strong> <em>(Section 3)</em> — your personal knowledge base on disk. A folder containing your standing brief, references, GTD lists, daily notes, meeting notes. Mounted to Cowork; viewed/edited in Obsidian.</p>
+<p><strong>Voibe</strong> <em>(Section 2)</em> — voice tool. Mac.</p>
+<p><strong>Voice tool</strong> <em>(Section 2)</em> — software that transcribes your speech into the active text field. Wispr Flow, Superwhisper, Voibe, or FloWstay.</p>
+<h2 class="glossary-letter" id="w">W</h2>
+<p><strong>Waiting-for</strong> <em>(Section 3)</em> — GTD list of things you're waiting on others for. <code>&lt;vault&gt;/gtd/waiting-for.md</code>.</p>
+<p><strong>Weekly review</strong> <em>(Section 3)</em> — GTD discipline performed once a week: process inbox, review next-actions, projects, waiting-fors, calendar. The <code>/weekly-review</code> skill walks it.</p>
+<p><strong>Wispr Flow</strong> <em>(Section 2)</em> — voice tool. Mac and Windows. Most common workshop pick.</p>
+<p><strong>Work folder</strong> <em>(Sections 1, 3)</em> — the folder on your disk where active project work lives. Mounted to Cowork. Different from the vault — work folder is for outputs and deliverables; vault is for knowledge.</p>
+<p><strong>Workshop tech team</strong> — the team behind the workshop. Handles installs, custom connector builds, and post-workshop support.</p>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer-inner">
+    <div>ExecAIDay — Claude Cowork training for executives.</div>
+    <div>Tijn van der Zant, PhD · The AI Guys BV</div>
+  </div>
+</footer>
+
+</body>
+</html>
