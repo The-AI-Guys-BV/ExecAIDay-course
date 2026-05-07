@@ -190,8 +190,9 @@ SECTION_TEMPLATE = """<!DOCTYPE html>
 
 <header class="section-hero {sclass}">
   <div class="container">
-    <div class="eyebrow">
+    <div class="eyebrow eyebrow-row">
       <span><a href="index.html">All sections</a> &nbsp;/&nbsp; Section {num}</span>
+      <a class="hero-slides-link" href="slides/{slide_path}">▶ View slide deck</a>
     </div>
     <h1>{title}</h1>
     <p class="theme">{theme}</p>
@@ -308,6 +309,7 @@ def build_section(idx, src, out, num, sclass):
     else:
         next_link = '<a href="glossary.html" class="next"><div class="label">→</div><div class="title">Glossary</div></a>'
 
+    slide_filename = f"s{num}-{Path(out).stem.split('-',1)[1]}.html"
     rendered = SECTION_TEMPLATE.format(
         num=num,
         sclass=sclass,
@@ -318,9 +320,217 @@ def build_section(idx, src, out, num, sclass):
         toc=toc,
         prev_link=prev_link,
         next_link=next_link,
+        slide_path=slide_filename,
     )
     (OUT_DIR / out).write_text(rendered)
     print(f"Wrote {out}")
+
+
+SLIDE_DECK_TEMPLATE = """<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Section {num} — {title} — Slides — ExecAIDay</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../slides.css">
+</head>
+<body>
+
+<div class="deck" data-deck>
+{slides}
+</div>
+
+<div class="deck-chrome">
+  <a href="../{section_html}" class="deck-back">← Back to Section {num}</a>
+  <div class="deck-counter"><span data-current>1</span> / <span data-total>1</span></div>
+  <div class="deck-nav">
+    <button data-prev aria-label="Previous slide">←</button>
+    <button data-next aria-label="Next slide">→</button>
+  </div>
+</div>
+
+<script>
+(function() {{
+  const slides = document.querySelectorAll('.slide');
+  const total = slides.length;
+  document.querySelector('[data-total]').textContent = total;
+  let idx = 0;
+  const counter = document.querySelector('[data-current]');
+  function show(n) {{
+    idx = Math.max(0, Math.min(total - 1, n));
+    slides.forEach((s, i) => s.classList.toggle('active', i === idx));
+    counter.textContent = idx + 1;
+    if (history.replaceState) history.replaceState(null, '', '#' + (idx + 1));
+  }}
+  const initial = parseInt((location.hash || '#1').slice(1), 10) - 1;
+  show(isNaN(initial) ? 0 : initial);
+  document.querySelector('[data-prev]').addEventListener('click', () => show(idx - 1));
+  document.querySelector('[data-next]').addEventListener('click', () => show(idx + 1));
+  document.addEventListener('keydown', (e) => {{
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {{ e.preventDefault(); show(idx + 1); }}
+    if (e.key === 'ArrowLeft' || e.key === 'PageUp') {{ e.preventDefault(); show(idx - 1); }}
+    if (e.key === 'Home') {{ show(0); }}
+    if (e.key === 'End') {{ show(total - 1); }}
+  }});
+}})();
+</script>
+
+</body>
+</html>
+"""
+
+
+def split_into_slide_chunks(body):
+    """Walk the markdown body, split into chunks bounded by h2 and h3.
+    Each chunk = (level, heading_text, body_lines)
+    level is 'h2' or 'h3'. Body_lines is the markdown lines between this heading and the next h2/h3.
+    """
+    chunks = []
+    current_h2_text = None
+    current_level = None
+    current_heading = None
+    current_lines = []
+
+    for line in body.split("\n"):
+        stripped = line.strip()
+        if stripped.startswith("## "):
+            if current_heading is not None:
+                chunks.append((current_level, current_h2_text, current_heading, current_lines))
+            current_h2_text = stripped[3:]
+            current_level = "h2"
+            current_heading = stripped[3:]
+            current_lines = []
+            continue
+        if stripped.startswith("### "):
+            if current_heading is not None:
+                chunks.append((current_level, current_h2_text, current_heading, current_lines))
+            current_level = "h3"
+            current_heading = stripped[4:]
+            current_lines = []
+            continue
+        current_lines.append(line)
+
+    if current_heading is not None:
+        chunks.append((current_level, current_h2_text, current_heading, current_lines))
+    return chunks
+
+
+def slide_html_from_chunk(chunk, sclass):
+    """Render one chunk as one slide section.
+    h2 with body → topic-intro slide.
+    h2 without body → topic divider slide (announcement of the topic before its h3 sub-steps).
+    h3 → step slide.
+    """
+    level, h2_parent, heading, lines = chunk
+    body_md = "\n".join(lines).strip()
+    body_html, _ = md_to_html(body_md) if body_md else ("", [])
+
+    if level == "h2":
+        if body_md:
+            return f'''  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Topic</div>
+      <h3 class="slide-section-subtitle">{inline(heading)}</h3>
+      <div class="slide-section-body">
+        {body_html}
+      </div>
+    </div>
+  </section>'''
+        else:
+            return f'''  <section class="slide slide-divider">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Topic</div>
+      <h2 class="slide-divider-title">{inline(heading)}</h2>
+    </div>
+  </section>'''
+    else:
+        eyebrow = inline(h2_parent) if h2_parent else "Step"
+        return f'''  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">{eyebrow}</div>
+      <h3 class="slide-section-subtitle">{inline(heading)}</h3>
+      <div class="slide-section-body">
+        {body_html}
+      </div>
+    </div>
+  </section>'''
+
+
+def build_slide_deck(idx, src, section_html, num, sclass):
+    md_text = (SECTIONS_DIR / src).read_text()
+    front, body = parse_frontmatter(md_text)
+
+    title_full = front.get("title", "")
+    title_only = title_full.split("—", 1)[-1].strip() if "—" in title_full else title_full
+    theme = front.get("theme", "")
+    walkout = front.get("walkout", "")
+
+    slides = []
+
+    # Title slide
+    slides.append(f'''  <section class="slide slide-title">
+    <div class="slide-inner">
+      <div class="title-icon" style="background: var(--{sclass}-soft); color: var(--{sclass});">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>
+      </div>
+      <div class="title-eyebrow">Section {num}</div>
+      <h1 class="title-num">S{num}</h1>
+      <h2 class="title-name">{inline(title_only)}</h2>
+      <p class="title-outcome">{inline(theme)}</p>
+    </div>
+  </section>''')
+
+    # Walk-out slide
+    slides.append(f'''  <section class="slide slide-bigidea">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Walk-out</div>
+      <p class="slide-bigidea-p">{inline(walkout)}</p>
+    </div>
+  </section>''')
+
+    # Body chunks
+    chunks = split_into_slide_chunks(body)
+    for chunk in chunks:
+        slides.append(slide_html_from_chunk(chunk, sclass))
+
+    # Next-section pointer
+    if idx < len(SECTIONS) - 1:
+        next_src = SECTIONS[idx + 1][0]
+        next_html = SECTIONS[idx + 1][1]
+        next_num = SECTIONS[idx + 1][2]
+        next_front, _ = parse_frontmatter((SECTIONS_DIR / next_src).read_text())
+        next_title = next_front.get("title", "").split("—", 1)[-1].strip()
+        slides.append(f'''  <section class="slide slide-next">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">What's next</div>
+      <h3 class="slide-next-subtitle">Section {next_num} — {inline(next_title)}</h3>
+      <p class="slide-next-meta">Open the <a href="../{next_html}">Section {next_num} page</a> or its <a href="s{next_num}-{Path(next_html).stem.split("-",1)[1]}.html">slide deck</a>.</p>
+    </div>
+  </section>''')
+    else:
+        slides.append('''  <section class="slide slide-next">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">End of section 5</div>
+      <h3 class="slide-next-subtitle">That's the course.</h3>
+      <p class="slide-next-meta">Browse the <a href="../glossary.html">glossary</a> or revisit any section from the <a href="../index.html">cover page</a>.</p>
+    </div>
+  </section>''')
+
+    rendered = SLIDE_DECK_TEMPLATE.format(
+        num=num,
+        title=inline(title_only),
+        section_html=section_html,
+        slides="\n".join(slides),
+    )
+
+    slides_dir = OUT_DIR / "slides"
+    slides_dir.mkdir(exist_ok=True)
+    out_path = slides_dir / f"s{num}-{Path(section_html).stem.split('-',1)[1]}.html"
+    out_path.write_text(rendered)
+    print(f"Wrote {out_path.relative_to(OUT_DIR)}")
 
 
 def build_glossary():
@@ -346,6 +556,7 @@ def main():
     OUT_DIR.mkdir(exist_ok=True)
     for idx, (src, out, num, sclass) in enumerate(SECTIONS):
         build_section(idx, src, out, num, sclass)
+        build_slide_deck(idx, src, out, num, sclass)
     build_glossary()
 
 

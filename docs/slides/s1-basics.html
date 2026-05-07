@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Section 1 — Claude Cowork in daily work — Slides — ExecAIDay</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../slides.css">
+</head>
+<body>
+
+<div class="deck" data-deck>
+  <section class="slide slide-title">
+    <div class="slide-inner">
+      <div class="title-icon" style="background: var(--s1-soft); color: var(--s1);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>
+      </div>
+      <div class="title-eyebrow">Section 1</div>
+      <h1 class="title-num">S1</h1>
+      <h2 class="title-name">Claude Cowork in daily work</h2>
+      <p class="title-outcome">Just Claude installed. No plugins, connectors, or Office add-ins.</p>
+    </div>
+  </section>
+  <section class="slide slide-bigidea">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Walk-out</div>
+      <p class="slide-bigidea-p">You're comfortable in Cowork, you've produced a real branded deliverable using only Cowork's file access, and you know when to trust Claude and when not to.</p>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Topic</div>
+      <h3 class="slide-section-subtitle">What this section is</h3>
+      <div class="slide-section-body">
+        <p>This is day one. You've never used Claude Cowork before. By the end of this section you will have:</p>
+<ul>
+<li>Opened Claude Desktop and found the Cowork tab.</li>
+<li>Created your first Cowork Project, mounted a folder, and started a chat inside it.</li>
+<li>Sent a dozen real prompts and watched Claude read your spreadsheets, your Word documents, and a website.</li>
+<li>Seen Claude be confidently wrong, and learned to push back.</li>
+<li>Built a branded PowerPoint deck end-to-end — your numbers, in someone else's voice — without using any plugins, connectors, or Office add-ins.</li>
+</ul>
+<p>Every step is spelled out. If you're reading this and thinking "but where exactly do I click?" — keep reading; the next sentence usually says.</p>
+<p>We are deliberately keeping things minimal in this section. No marketplace plugins. No connectors to your Gmail or Drive. No add-ins inside Word or Excel. Those layers come in Section 2 and 3. This section is the part of Claude you'll touch every day no matter what else gets stacked on top: a chat window, your local files, and a browser.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Topic</div>
+      <h3 class="slide-section-subtitle">1. Cowork is not ChatGPT</h3>
+      <div class="slide-section-body">
+        <p>Before clicking anything, the frame.</p>
+<p>You have probably used <strong>ChatGPT</strong>, or something like it. ChatGPT is a chat box. You type a question, you get an answer, you close the tab. The next time you open it, ChatGPT does not remember you. There is no shared workspace, no folder it can read, no document it has open. Every conversation starts from zero. This is fine for one-off questions. It is exhausting for real work, because you end up copy-pasting context into every new chat.</p>
+<p><strong>Claude Cowork</strong> is different. Cowork is a workspace.</p>
+<p>Concretely, that means: you create a thing called a <strong>Cowork Project</strong>, you give that project some standing instructions about your role and what you're working on, you point the project at folders on your computer (a "mounted folder"), and from that point on Claude can read those files, write new files into those folders, and remember the project's context across multiple chats.</p>
+<p>The shorthand: <strong>ChatGPT is a question machine. Cowork is a desk.</strong></p>
+<p>For this whole section you'll work inside one Cowork Project. Your spreadsheets sit in a folder Cowork can read. Your brief sits in another file. The deck you build sits in a third. None of that requires plugins, connectors, or add-ins — just Cowork and a folder on your computer.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-divider">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Topic</div>
+      <h2 class="slide-divider-title">2. Opening Cowork and creating your first Project</h2>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">2. Opening Cowork and creating your first Project</div>
+      <h3 class="slide-section-subtitle">2.1 Find Cowork</h3>
+      <div class="slide-section-body">
+        <p>On your laptop, open the <strong>Claude Desktop</strong> application. (If you cannot find it, look in your Applications folder on Mac or Start menu on Windows. If it isn't installed, ask your assistant — they install it now.)</p>
+<p>When Claude Desktop opens, you'll see a window with a chat in the middle. Look at the top of the window. There are tabs. One says <strong>Chat</strong>. One says <strong>Cowork</strong>.</p>
+<p><strong>Click the Cowork tab.</strong> You're now in Cowork. The window changes shape:</p>
+<ul>
+<li>A <strong>left sidebar</strong> with sections labelled <strong>Customize</strong>, <strong>Personal plugins</strong>, and <strong>Cowork Projects</strong>.</li>
+<li>A <strong>main area</strong> in the middle, currently empty or showing a "Welcome to Cowork" panel.</li>
+<li>A <strong>right panel</strong> that will fill up later — for now it's mostly empty.</li>
+</ul>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">2. Opening Cowork and creating your first Project</div>
+      <h3 class="slide-section-subtitle">2.2 Create a Project</h3>
+      <div class="slide-section-body">
+        <p>In the left sidebar, find <strong>Cowork Projects</strong>. There's a <strong>+</strong> button or "New Project" link next to it. <strong>Click it.</strong></p>
+<p>A small dialog asks for:</p>
+<ul>
+<li><strong>Name</strong> — type <code>Workshop Day 1</code>. (You can rename it later. Don't overthink it.)</li>
+<li><strong>Description</strong> (optional) — leave blank.</li>
+</ul>
+<p><strong>Click Create.</strong> The Project appears in the sidebar and is now selected. The middle area shows the Project's chat (empty) and the right panel shows the Project's settings — instructions, mounted folders, files in scope.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">2. Opening Cowork and creating your first Project</div>
+      <h3 class="slide-section-subtitle">2.3 Mount your starter work folder</h3>
+      <div class="slide-section-body">
+        <p>Your assistant has placed a folder on your computer called the <strong>starter work folder</strong> — a small folder with a spreadsheet, a Word brief, and an empty <code>Deliverables</code> subfolder. (Ask your assistant where the folder is on your machine if you don't know.)</p>
+<p>In the right panel of your Project, find the section labelled <strong>Folders</strong> or <strong>Files in scope</strong>. There's an <strong>Add folder</strong> button. <strong>Click it.</strong> A file picker opens. Navigate to the starter work folder, select it, click <strong>Add</strong>.</p>
+<p>The folder now appears in the project. Claude can now read every file in it, and will be able to write new files into it. You'll see something like:</p>
+<pre><code>
+Workshop Day 1
+└── starter-work-folder/
+    ├── q3.xlsx
+    ├── brief.docx
+    └── Deliverables/  (empty)
+</code></pre>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">2. Opening Cowork and creating your first Project</div>
+      <h3 class="slide-section-subtitle">2.4 Set the Project's instructions</h3>
+      <div class="slide-section-body">
+        <p>Still in the right panel, find the <strong>Instructions</strong> field at the top. This is the standing brief Claude reads before every reply inside this Project. Today, type something simple, like:</p>
+<pre><code>
+I'm running a Q3 board update. Be direct. Flag anything you're not sure about.
+Don't pad. Don't apologize.
+</code></pre>
+<p>Save. (Some versions auto-save; if there's a Save button, click it.)</p>
+<p>Your Project is now set up: name, mounted folder, instructions. You're ready to chat.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Topic</div>
+      <h3 class="slide-section-subtitle">3. Your first prompts</h3>
+      <div class="slide-section-body">
+        <p>Click in the main chat area. The cursor is in the chat box. You're going to send some real prompts and watch what happens.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">3. Your first prompts</div>
+      <h3 class="slide-section-subtitle">3.1 Read the brief</h3>
+      <div class="slide-section-body">
+        <p>Type, exactly:</p>
+<pre><code>
+Read brief.docx in the starter folder. Summarize it in five bullets. Then list three things in the brief that are unclear or need more information from me.
+</code></pre>
+<p><strong>Press Enter.</strong> (Or click the Send button.)</p>
+<p>Claude pauses. It opens the file. (You may see a small "Reading file…" indicator.) Then it replies — five bullets summarizing the brief, then a "what's unclear" list.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">3. Your first prompts</div>
+      <h3 class="slide-section-subtitle">3.2 Read the spreadsheet</h3>
+      <div class="slide-section-body">
+        <p>In the same chat, type:</p>
+<pre><code>
+Now look at q3.xlsx. Which line items moved more than 15 percent compared to last quarter? Group them by region.
+</code></pre>
+<p>Press Enter. Claude opens the spreadsheet. Computes. Replies with a grouped list.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">3. Your first prompts</div>
+      <h3 class="slide-section-subtitle">3.3 What just happened — the words</h3>
+      <div class="slide-section-body">
+        <p>Three things happened that you should be able to name. They will come up over and over.</p>
+<ul>
+<li>Claude has <strong>context</strong>. That is the conversation so far, the project instructions, and any files it has read in this chat. Context has a limit. As context fills up, the quality of replies degrades.</li>
+<li>Claude has <strong>session memory</strong> — within this Project's chat, it remembers what you've been doing. But each new chat is a fresh session. The chat you start tomorrow morning does not automatically know what this chat said today.</li>
+<li>Claude charges itself in <strong>tokens</strong>. A token is roughly four characters of English. You don't track tokens day to day, but you'll notice when context is full because the replies get worse.</li>
+</ul>
+<p>There are also <strong>models</strong> behind Claude. Different model means different speed and depth.</p>
+<ul>
+<li><strong>Opus</strong> is slow and deep — best for hard reasoning.</li>
+<li><strong>Sonnet</strong> is balanced — the default. Most of your day uses Sonnet without you thinking about it.</li>
+<li><strong>Haiku</strong> is fast — best for quick lookups.</li>
+</ul>
+<p>Cowork picks a model for you most of the time. You can ask explicitly: <em>"Use Opus for this — it's a hard reasoning task."</em></p>
+<p>You don't need to memorize any of this. You need to know the words. So if Claude's replies get sluggish or confused, you can think <em>"context is probably full"</em> and start a new chat.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">3. Your first prompts</div>
+      <h3 class="slide-section-subtitle">3.4 The plan-approval pattern</h3>
+      <div class="slide-section-body">
+        <p>One thing you may notice early: when you ask Claude to do something with files (especially writes — saving a new version of a document, creating a folder, generating a chart), Cowork will sometimes show you a <strong>plan</strong> before doing it. <em>"I'm going to read brief.docx, write a summary to brief-summary.docx, and create a chart at /Deliverables/q3-revenue.png. Approve?"</em></p>
+<p>Approve or modify. This is deliberate. Cowork keeps you in the loop on anything with side effects so it doesn't quietly do the wrong thing in your file system. For pure read or single-step replies, the plan step is usually skipped; for multi-step writes it appears.</p>
+<p>Trust this pattern — it's how you avoid finding ten unwanted files in your folder later.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">3. Your first prompts</div>
+      <h3 class="slide-section-subtitle">3.5 Start a new chat — and notice the silence</h3>
+      <div class="slide-section-body">
+        <p>In the Project's chat area there's usually a <strong>+ New chat</strong> button or a similar control to start a fresh conversation. <strong>Click it.</strong></p>
+<p>Now type:</p>
+<pre><code>
+What did we figure out about the Q3 spreadsheet?
+</code></pre>
+<p>Claude will tell you, politely, that there is no prior conversation in this chat — it doesn't remember. The Project remembers (through its instructions and mounted folders), but each chat is a clean slate.</p>
+<p>This is the most important habit in the whole workshop: <strong>one task, one chat.</strong> Don't accumulate hours of unrelated conversation in one chat. When you switch tasks, switch chats. Keep them tight. Keep them fresh.</p>
+<p>The technical name for what goes wrong if you don't is <strong>context rot</strong> — quality drops as the chat gets bloated. New chat fixes it.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Topic</div>
+      <h3 class="slide-section-subtitle">4. Trust calibration — the hallucination demo</h3>
+      <div class="slide-section-body">
+        <p>Stay in your new chat. This is the most important moment of the section.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">4. Trust calibration — the hallucination demo</div>
+      <h3 class="slide-section-subtitle">4.1 The setup</h3>
+      <div class="slide-section-body">
+        <p>Ask Claude something it cannot actually know. Pick something obscure, recent, or specific. Examples:</p>
+<pre><code>
+What were the headline numbers in [a small private company]'s Q3 2025 earnings call?
+</code></pre>
+<pre><code>
+Summarize the article that [a niche industry blog] published on March 14, 2025.
+</code></pre>
+<pre><code>
+What did the CEO of [a regional company] say at the analyst day last quarter?
+</code></pre>
+<p>Pick something where you actually know the answer (or know that no public answer exists).</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">4. Trust calibration — the hallucination demo</div>
+      <h3 class="slide-section-subtitle">4.2 What Claude does</h3>
+      <div class="slide-section-body">
+        <p>Claude will likely produce a fluent, confident paragraph. Names, numbers, quotes. It will sound right.</p>
+<p>Some of it might be right. <strong>Most of it, in this kind of question, is invented.</strong></p>
+<p>This is <strong>hallucination</strong> — the model generating plausible-sounding output that is not grounded in fact.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">4. Trust calibration — the hallucination demo</div>
+      <h3 class="slide-section-subtitle">4.3 Why it happens</h3>
+      <div class="slide-section-body">
+        <p>Three things, working together.</p>
+<ul>
+<li><strong>Knowledge cutoff.</strong> Claude was trained on data up to a certain date. Anything after that date, Claude does not know. But Claude is not always good at saying "I don't know."</li>
+<li><strong>Overconfidence.</strong> The model's default phrasing is assertive — "the company reported $42M in revenue" — even when the underlying signal is weak or absent.</li>
+<li><strong>Pattern completion.</strong> The model is mechanically a fluent-text generator. A confident, plausible fabrication is, structurally, the same shape as a confident, accurate recall. The model does both with the same machinery.</li>
+</ul>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">4. Trust calibration — the hallucination demo</div>
+      <h3 class="slide-section-subtitle">4.4 The discipline that follows</h3>
+      <div class="slide-section-body">
+        <p>This shapes how you use Claude for the rest of your career.</p>
+<ul>
+<li><strong>Verify any factual claim that matters.</strong> Especially names, numbers, and dates. Especially anything you'd put in front of a board, a client, or a regulator.</li>
+<li><strong>Push back on smooth phrasing.</strong> When a reply sounds too sure, ask: <em>"How confident are you in the [number]? What's it grounded in?"</em> Claude usually softens — and the softening tells you something.</li>
+<li><strong>Anchor in your data.</strong> Claude reading your spreadsheet is far more reliable than Claude recalling a fact from training. Whenever possible, point Claude at the source file rather than asking from memory.</li>
+<li><strong>The decision is yours.</strong> Claude is leverage, not authority. A confident answer is not a correct answer.</li>
+</ul>
+<p>You will be tempted to forget this in three weeks when Claude gets six things right in a row. Don't. The seventh one will be wrong, and it will look just as confident as the first six.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Topic</div>
+      <h3 class="slide-section-subtitle">5. Files Claude can read and write</h3>
+      <div class="slide-section-body">
+        <p>You've already had Claude read a Word document and a spreadsheet. The full picture: any file in a mounted folder is fair game. Word, Excel, PowerPoint, PDF, plain text, images.</p>
+<p>Try these in a fresh chat (start a new chat — <em>one task, one chat</em>).</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">5. Files Claude can read and write</div>
+      <h3 class="slide-section-subtitle">5.1 Edit a Word document</h3>
+      <div class="slide-section-body">
+        <pre><code>
+Open brief.docx. Rewrite the executive summary in three sentences — same meaning, sharper. Save the new version as brief-v2.docx in the same folder. Don't touch the rest of the document.
+</code></pre>
+<p>Claude opens the file, edits, saves. Open <code>brief-v2.docx</code> yourself in Word — the change is there.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">5. Files Claude can read and write</div>
+      <h3 class="slide-section-subtitle">5.2 Build a chart from Excel data</h3>
+      <div class="slide-section-body">
+        <pre><code>
+Look at q3.xlsx. Build a one-page summary chart of revenue by region. Make it clean and presentation-ready, not Excel default. Save it as q3-revenue-by-region.png in /Deliverables.
+</code></pre>
+<p>Claude reads the data, generates a chart, saves a PNG. Open the file from your file system to verify.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">5. Files Claude can read and write</div>
+      <h3 class="slide-section-subtitle">5.3 Pull commitments from a PDF</h3>
+      <div class="slide-section-body">
+        <p>Drop any PDF you have lying around (a contract, a meeting transcript, a report) into the starter work folder. Then:</p>
+<pre><code>
+Read the PDF I just dropped in. Pull out every commitment that has a date or an owner attached. Output as a list with three columns: who, what, when.
+</code></pre>
+<p>Claude reads the PDF and produces the list.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">5. Files Claude can read and write</div>
+      <h3 class="slide-section-subtitle">5.4 What this means</h3>
+      <div class="slide-section-body">
+        <p>Each of these is a complete, useful task — the kind of work that takes you ten minutes by hand and thirty seconds by asking. Notice that no plugin, no connector, no add-in was required. Just Cowork, the Project, and a folder on your computer.</p>
+<p>This is the floor. Everything later in the workshop adds to this floor; nothing replaces it.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Topic</div>
+      <h3 class="slide-section-subtitle">6. Prompt engineering — the parts you need today</h3>
+      <div class="slide-section-body">
+        <p>You will write hundreds of prompts this week. Two ideas, used well, beat memorising twenty rules.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">6. Prompt engineering — the parts you need today</div>
+      <h3 class="slide-section-subtitle">6.1 R-C-T-F-C — the five elements of a good prompt</h3>
+      <div class="slide-section-body">
+        <p>Every prompt has five parts. Drop any one of them, the output suffers.</p>
+<ul>
+<li><strong>R — Role.</strong> Who is Claude playing for this task? <em>"You are a senior strategy consultant."</em> This is not flair. It changes the tone, the structure, and the assumptions.</li>
+<li><strong>C — Context.</strong> What does Claude need to know? The brief. The audience. The constraint. The goal. <strong>Most weak prompts are weak here.</strong></li>
+<li><strong>T — Task.</strong> What exactly are you asking for? <em>"Draft a 200-word board update."</em> Use verbs. Use bounds.</li>
+<li><strong>F — Format.</strong> What shape should the output take? Bullets? Table? Markdown headings? Prose? Be explicit, or you'll get whatever Claude felt like.</li>
+<li><strong>C — Constraints.</strong> What is out of bounds? <em>"Don't speculate beyond the data. Flag anything you're unsure about. Don't use the word 'leverage' as a verb."</em></li>
+</ul>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">6. Prompt engineering — the parts you need today</div>
+      <h3 class="slide-section-subtitle">6.2 Worked example — the same idea, two prompts</h3>
+      <div class="slide-section-body">
+        <p><strong>Weak version.</strong> Try sending exactly this:</p>
+<pre><code>
+Help me with the board update.
+</code></pre>
+<p>Claude will produce something. It will be generic. It will not know what kind of board, what quarter, what tone, what length, or what file to read. You'll have to clarify three or four times to get anything useful.</p>
+<p><strong>Strong version.</strong> Now try:</p>
+<pre><code>
+You are a strategy partner reviewing a Q3 board update for a Series C SaaS company.
+
+Context: the deck is at /docs/board-q3.pptx in this Project. The audience is two technical board members and one financial board member who tends to ask sharp questions about margins.
+
+Task: rewrite slide 4 (the Q3 narrative slide) so the through-line is clearer. Lead with the punchline. Specifics second.
+
+Format: 4 sentences. No bullets. Plain language.
+
+Constraints: do not invent numbers; only use figures from /docs/q3.xlsx. Flag anything you'd want me to verify before sending.
+</code></pre>
+<p>Send both, in different chats. Compare the outputs. The second one is the same idea, ten times more useful. <strong>You can feel the difference.</strong></p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">6. Prompt engineering — the parts you need today</div>
+      <h3 class="slide-section-subtitle">6.3 The three worst anti-patterns</h3>
+      <div class="slide-section-body">
+        <p>(The full anti-pattern catalogue lives in Section 2. These are the three you'll run into first.)</p>
+<ul>
+<li><strong>No role, no audience.</strong> "Help me draft an email." → Claude defaults to a generic helpful-assistant voice. You'll get generic helpful-assistant output.</li>
+<li><strong>"Make it good."</strong> "Improve this paragraph." → Subjective with no anchor. Claude will produce <em>something</em>; you'll have no idea if it's right.</li>
+<li><strong>Wall of context, no task.</strong> Big paragraph of background, then "...thoughts?" → Claude will summarise it back at you instead of doing actual work.</li>
+</ul>
+<p>When you catch yourself about to send a prompt that hits one of these — pause. Add a role. Add a clear task. Add a format. The 30 seconds you spend doing that saves you three rounds of clarification later.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Topic</div>
+      <h3 class="slide-section-subtitle">7. Browser + Chrome extension</h3>
+      <div class="slide-section-body">
+        <p>The browser is the second surface where Claude operates, alongside Cowork. It's especially useful when the thing you care about lives on a website that Claude can't see otherwise.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">7. Browser + Chrome extension</div>
+      <h3 class="slide-section-subtitle">7.1 Pin the extension</h3>
+      <div class="slide-section-body">
+        <p>Open Chrome (or Brave, or Edge — any Chromium-based browser). Look at the top-right of the window for the puzzle-piece icon (extensions). Click it. Find <strong>Claude</strong> in the list. Click the pin next to it. The Claude icon now lives in your toolbar permanently.</p>
+<p>If Claude isn't in the list, the extension isn't installed yet. Ask your assistant.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">7. Browser + Chrome extension</div>
+      <h3 class="slide-section-subtitle">7.2 First use — read a page</h3>
+      <div class="slide-section-body">
+        <p>Navigate to any website you actually use. Try your own company's homepage, or a SaaS dashboard you log into.</p>
+<p><strong>Click the Claude icon in your toolbar.</strong> A side panel slides in from the right. Claude can now see what the page is showing.</p>
+<p>Try, in the side panel:</p>
+<pre><code>
+Read this page. What is this company actually selling, in one sentence? No marketing language.
+</code></pre>
+<p>Claude reads the page and answers.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">7. Browser + Chrome extension</div>
+      <h3 class="slide-section-subtitle">7.3 Capture testimonials</h3>
+      <div class="slide-section-body">
+        <p>On a page with customer testimonials or quotes:</p>
+<pre><code>
+Pull every customer testimonial off this page. Output as a list with three columns: name, company, the claim being made.
+</code></pre>
+<p>Claude extracts and structures.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">7. Browser + Chrome extension</div>
+      <h3 class="slide-section-subtitle">7.4 Capture a brand</h3>
+      <div class="slide-section-body">
+        <p>This one matters for the capstone in section 8 below. Go to a brand site — your own company's site, a brand you admire, a competitor.</p>
+<pre><code>
+This is the brand site for [Company]. Capture the brand. I want:
+- Primary and secondary colours, as hex codes if you can read them.
+- Typography feel (serif/sans, modern/classical, condensed/wide).
+- Tone of voice in five adjectives.
+- Three example sentences that sound like the brand.
+</code></pre>
+<p>Claude returns a brand book. <strong>You don't need a brand-guidelines PDF. You need a URL.</strong></p>
+<p>Save the brand book to your Project — copy the text into a file called <code>brand-book.md</code> (or paste it back to Cowork in the next step).</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Topic</div>
+      <h3 class="slide-section-subtitle">8. Capstone — branded PowerPoint, no add-ins</h3>
+      <div class="slide-section-body">
+        <p>The point of the section. You're going to build a real artifact end to end.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">8. Capstone — branded PowerPoint, no add-ins</div>
+      <h3 class="slide-section-subtitle">8.1 What you'll have at the end</h3>
+      <div class="slide-section-body">
+        <p>A 6-slide PowerPoint deck on Q3, drawn from your spreadsheet, written in your brief's voice, styled with the brand colours and tone you scraped from a website. Saved to your Deliverables folder. Opens in PowerPoint. Looks finished.</p>
+<p>Built without any plugins, any connectors, or any Office add-ins. Just Cowork's file access and the Chrome extension.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">8. Capstone — branded PowerPoint, no add-ins</div>
+      <h3 class="slide-section-subtitle">8.2 Setup</h3>
+      <div class="slide-section-body">
+        <p>In your Project you should have, in the mounted starter folder:</p>
+<ul>
+<li><code>q3.xlsx</code> — quarterly numbers.</li>
+<li><code>brief.docx</code> — the strategic context for Q3.</li>
+<li>A <code>Deliverables/</code> subfolder, currently empty.</li>
+</ul>
+<p>You also need a <strong>brand source</strong> — a website. Either your own company's site, a client's, or one you'd like to mimic. Have the URL ready.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">8. Capstone — branded PowerPoint, no add-ins</div>
+      <h3 class="slide-section-subtitle">8.3 Step-by-step</h3>
+      <div class="slide-section-body">
+        <p>Start a fresh chat in the Project. (One task, one chat.) Then run these prompts in sequence, one at a time, reading each reply before sending the next:</p>
+<p><strong>Step 1 — find the lead.</strong></p>
+<pre><code>
+Open q3.xlsx. Identify the three numbers I should lead with for a board update. For each one, give me one sentence on why it matters this quarter.
+</code></pre>
+<p><strong>Step 2 — reconcile against the brief.</strong></p>
+<pre><code>
+Now read brief.docx — that's the strategic context for Q3. Reconcile what you saw in the spreadsheet against the brief. What is the through-line for Q3? Two sentences.
+</code></pre>
+<p><strong>Step 3 — capture the brand.</strong> (Switch to your browser. Open the brand site. Click the Claude extension.)</p>
+<pre><code>
+Read this page. Capture the brand. Give me:
+- Primary and secondary colours, as hex codes.
+- Typography feel.
+- Tone of voice in five adjectives.
+- Three example sentences in that voice.
+</code></pre>
+<p>When Claude replies, copy the brand book.</p>
+<p><strong>Step 4 — back in Cowork.</strong></p>
+<pre><code>
+Here is the brand book I just captured from the company website:
+
+[paste the brand book here]
+
+Now build a 6-slide PowerPoint covering the Q3 through-line we just established.
+
+Apply the brand:
+- Use the primary brand colour for slide titles and accent lines.
+- Use the secondary colour for highlight numbers.
+- Match the tone of voice in the prose — not generic board-update language.
+
+Slide structure:
+1. Title slide.
+2. The Q3 through-line in one sentence.
+3. The three lead numbers with one-sentence context each.
+4. What's working (one slide).
+5. What needs attention (one slide).
+6. Q4 priorities, three bullets.
+
+Save as Deliverables/q3-board-update.pptx.
+</code></pre>
+<p>Claude builds the deck and saves it.</p>
+<p><strong>Step 5 — open and inspect.</strong></p>
+<p>Open <code>q3-board-update.pptx</code> in PowerPoint. Look at it. Read it like a board member would.</p>
+<p>Where is the brand right? Where is the prose still too generic? Be honest.</p>
+<p><strong>Step 6 — iterate.</strong></p>
+<p>Back in Cowork, type things like:</p>
+<pre><code>
+Slide 3 is too dense. Cut it to three lines max per number. Keep the punch.
+</code></pre>
+<pre><code>
+The voice on slide 4 is generic — sounds like an AI wrote it. Rewrite using the brand tone we captured. Punchier. More direct.
+</code></pre>
+<pre><code>
+The accent colour on titles isn't quite the hex we captured. Re-check and fix.
+</code></pre>
+<p>Each prompt edits the deck. Each iteration tightens it.</p>
+<p>By the end, you have a deck you'd actually walk into a board meeting with.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">8. Capstone — branded PowerPoint, no add-ins</div>
+      <h3 class="slide-section-subtitle">8.4 Why this works without any plugins</h3>
+      <div class="slide-section-body">
+        <p>Three things working together — and none of them required leaving Cowork or installing anything new:</p>
+<ul>
+<li><strong>Cowork's file access</strong> read the spreadsheet, the brief, and wrote the deck.</li>
+<li><strong>Claude's native handling of Office formats</strong> parsed Excel and produced PowerPoint.</li>
+<li><strong>The Chrome extension</strong> read the brand off a live website.</li>
+</ul>
+<p>That's the entire stack for this section.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-section">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">Topic</div>
+      <h3 class="slide-section-subtitle">What you take away</h3>
+      <div class="slide-section-body">
+        <ul>
+<li>A working Cowork Project you'll use through the whole workshop.</li>
+<li>A real branded PowerPoint, end-to-end, no plugins or add-ins.</li>
+<li>Trust calibrated — you've seen Claude be wrong, you know how to push back.</li>
+<li>The five-element prompt move (R-C-T-F-C) and the three worst anti-patterns.</li>
+<li>The vocabulary — context, tokens, models, session memory, hallucination, knowledge cutoff, context rot — landed through use, not lecture.</li>
+</ul>
+<p>Section 2 starts where Section 1 ends. The same Cowork Project. Now we layer on personalisation, live data, and skills.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide slide-next">
+    <div class="slide-inner">
+      <div class="slide-eyebrow">What's next</div>
+      <h3 class="slide-next-subtitle">Section 2 — Leveraging Claude in your work</h3>
+      <p class="slide-next-meta">Open the <a href="../s2-leverage.html">Section 2 page</a> or its <a href="s2-leverage.html">slide deck</a>.</p>
+    </div>
+  </section>
+</div>
+
+<div class="deck-chrome">
+  <a href="../s1-basics.html" class="deck-back">← Back to Section 1</a>
+  <div class="deck-counter"><span data-current>1</span> / <span data-total>1</span></div>
+  <div class="deck-nav">
+    <button data-prev aria-label="Previous slide">←</button>
+    <button data-next aria-label="Next slide">→</button>
+  </div>
+</div>
+
+<script>
+(function() {
+  const slides = document.querySelectorAll('.slide');
+  const total = slides.length;
+  document.querySelector('[data-total]').textContent = total;
+  let idx = 0;
+  const counter = document.querySelector('[data-current]');
+  function show(n) {
+    idx = Math.max(0, Math.min(total - 1, n));
+    slides.forEach((s, i) => s.classList.toggle('active', i === idx));
+    counter.textContent = idx + 1;
+    if (history.replaceState) history.replaceState(null, '', '#' + (idx + 1));
+  }
+  const initial = parseInt((location.hash || '#1').slice(1), 10) - 1;
+  show(isNaN(initial) ? 0 : initial);
+  document.querySelector('[data-prev]').addEventListener('click', () => show(idx - 1));
+  document.querySelector('[data-next]').addEventListener('click', () => show(idx + 1));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); show(idx + 1); }
+    if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(idx - 1); }
+    if (e.key === 'Home') { show(0); }
+    if (e.key === 'End') { show(total - 1); }
+  });
+})();
+</script>
+
+</body>
+</html>
