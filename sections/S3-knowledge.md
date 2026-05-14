@@ -327,6 +327,19 @@ GTD is now Cowork-resident. You never open Trello, Notion, or Todoist for it. Th
 
 Capture only works if it's friction-free at the moment something hits you. The hardest moments are between meetings, in cars, at lunch. You don't open your laptop. You should still capture.
 
+:::variant mobile_access
+:::case full
+**You use your phone a lot:** the mobile capture story below is the right path for you. Install once, use a hundred times a week. This is where most senior operators' inboxes actually get fed.
+:::case limited
+**You barely use your phone for work:** mobile capture is still useful for the moments where something hits you on the road or between meetings. Set it up lightly (one widget on the home screen) rather than building a habit you won't keep. If you have an executive assistant who handles your phone, also see the variant below.
+:::endvariant
+
+:::when has_assistant=true
+:::callout
+**You have an executive assistant** — the cleanest version of mobile capture for you: give your assistant access to write into your vault's inbox (via shared cloud sync). When you tell them *"capture this for me"*, they append to `gtd/inbox.md` exactly the way the app would. Some workshop alumni run capture mostly through their assistants this way and skip the phone app entirely.
+:::
+:::
+
 ### 7.1 What Dispatch is
 
 **Dispatch** (or whichever tool the workshop is using this season — your assistant will have the current pick) is a small phone app. You hit a button. Speak. The transcribed text gets appended to a file in your cloud sync — specifically, to `<vault>/gtd/inbox.md`.

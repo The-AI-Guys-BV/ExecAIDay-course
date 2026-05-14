@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="profile.css">
 </head>
 <body>
 
@@ -16,6 +17,7 @@
   <div class="container topnav-inner">
     <div class="brand"><a href="index.html"><span class="brand-mark">●</span> ExecAIDay</a></div>
     <div class="nav-links">
+      <span data-profile-chip></span>
       <a href="index.html">All sections</a>
       <a href="glossary.html">Glossary</a>
     </div>
@@ -258,6 +260,19 @@ gtd/
 <p>GTD is now Cowork-resident. You never open Trello, Notion, or Todoist for it. The lists live in your vault; the skills run them.</p>
 <h2 id="7-mobile-capture-dispatch">7. Mobile capture — Dispatch</h2>
 <p>Capture only works if it's friction-free at the moment something hits you. The hardest moments are between meetings, in cars, at lunch. You don't open your laptop. You should still capture.</p>
+<div data-variant-by="mobile_access">
+<div data-variant="full">
+<p><strong>You use your phone a lot:</strong> the mobile capture story below is the right path for you. Install once, use a hundred times a week. This is where most senior operators' inboxes actually get fed.</p>
+</div>
+<div data-variant="limited">
+<p><strong>You barely use your phone for work:</strong> mobile capture is still useful for the moments where something hits you on the road or between meetings. Set it up lightly (one widget on the home screen) rather than building a habit you won't keep. If you have an executive assistant who handles your phone, also see the variant below.</p>
+</div>
+</div>
+<div data-show-when="has_assistant:true">
+<div class="ec-callout">
+<p><strong>You have an executive assistant</strong> — the cleanest version of mobile capture for you: give your assistant access to write into your vault's inbox (via shared cloud sync). When you tell them <em>"capture this for me"</em>, they append to <code>gtd/inbox.md</code> exactly the way the app would. Some workshop alumni run capture mostly through their assistants this way and skip the phone app entirely.</p>
+</div>
+</div>
 <h3 id="71-what-dispatch-is">7.1 What Dispatch is</h3>
 <p><strong>Dispatch</strong> (or whichever tool the workshop is using this season — your assistant will have the current pick) is a small phone app. You hit a button. Speak. The transcribed text gets appended to a file in your cloud sync — specifically, to <code>&lt;vault&gt;/gtd/inbox.md</code>.</p>
 <p>The chain: phone → cloud sync → your laptop's vault folder → Cowork.</p>
@@ -395,5 +410,6 @@ Draft slide 1 for this deck. Save as Working Files/draft-v1.pptx.
   </div>
 </footer>
 
+<script src="profile.js"></script>
 </body>
 </html>

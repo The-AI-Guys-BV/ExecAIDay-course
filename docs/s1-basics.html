@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="profile.css">
 </head>
 <body>
 
@@ -16,6 +17,7 @@
   <div class="container topnav-inner">
     <div class="brand"><a href="index.html"><span class="brand-mark">●</span> ExecAIDay</a></div>
     <div class="nav-links">
+      <span data-profile-chip></span>
       <a href="index.html">All sections</a>
       <a href="glossary.html">Glossary</a>
     </div>
@@ -271,6 +273,26 @@ This is the brand site for [Company]. Capture the brand. I want:
 <li>A <code>Deliverables/</code> subfolder, currently empty.</li>
 </ul>
 <p>You also need a <strong>brand source</strong> — a website. Either your own company's site, a client's, or one you'd like to mimic. Have the URL ready.</p>
+<div data-variant-by="industry">
+<div data-variant="saas">
+<p><strong>SaaS context:</strong> if you're using your own company data, the numbers will be ARR, net retention, gross margin, CAC payback, logo growth. Pick three to lead with. If you're picking a brand source, try the homepage of a company whose voice you respect (Notion, Stripe, Linear all have crisp brand voice you can scrape).</p>
+</div>
+<div data-variant="finance">
+<p><strong>Finance / PE / VC context:</strong> numbers will be portfolio NAV, IRR, fund-level metrics, deployment pace. Privacy matters more here — use anonymised numbers in the workshop. Brand sources: think of a portfolio company's site, or a fund's own brand if it has one.</p>
+</div>
+<div data-variant="healthcare">
+<p><strong>Healthcare context:</strong> numbers might be patient throughput, NPS, readmission rate, payor mix. <strong>Don't put any PHI in this exercise.</strong> Use aggregate data only. Brand source: try a company in the regulated-but-marketed space (medical-device or digital-health companies have strong brand voice).</p>
+</div>
+<div data-variant="manufacturing">
+<p><strong>Manufacturing context:</strong> numbers might be OEE, on-time delivery, gross margin by SKU, working capital days. Brand sources: industrial brands that have invested in voice (some chemicals and equipment companies surprisingly well-branded).</p>
+</div>
+<div data-variant="retail">
+<p><strong>Retail / consumer context:</strong> numbers will be same-store sales, basket size, conversion, returns rate, inventory turn. Brand sources: there's no shortage of polished retail brand sites — pick one whose visual + voice you admire.</p>
+</div>
+<div data-variant="default">
+<p><strong>Generic context:</strong> if your industry isn't on this list, pick the three numbers from your last board update or quarterly review and use those. Brand source: any website whose look and voice you'd want to learn from.</p>
+</div>
+</div>
 <h3 id="83-step-by-step">8.3 Step-by-step</h3>
 <p>Start a fresh chat in the Project. (One task, one chat.) Then run these prompts in sequence, one at a time, reading each reply before sending the next:</p>
 <p><strong>Step 1 — find the lead.</strong></p>
@@ -379,5 +401,6 @@ The accent colour on titles isn't quite the hex we captured. Re-check and fix.
   </div>
 </footer>
 
+<script src="profile.js"></script>
 </body>
 </html>

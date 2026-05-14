@@ -51,8 +51,107 @@ def slugify(text):
     return text
 
 
+def preprocess_conditional_blocks(md_text):
+    """Translate ::: conditional blocks to <div> wrappers.
+
+    Supported:
+      :::when role=founder,cfo
+      ...content...
+      :::
+
+      :::unless mobile_access=full
+      ...content...
+      :::
+
+      :::variant role
+      :::case founder
+      ...
+      :::case investor
+      ...
+      :::case default
+      ...
+      :::endvariant
+
+      :::callout
+      ...content...
+      :::
+    """
+    lines = md_text.split("\n")
+    out = []
+    stack = []  # stack of "when" / "unless" / "variant" / "callout" / "case"
+
+    for raw in lines:
+        s = raw.strip()
+        if s.startswith(":::"):
+            tag = s[3:].strip()
+            if tag == "" or tag == "end":
+                if not stack:
+                    out.append(raw)
+                    continue
+                top = stack.pop()
+                if top in ("when", "unless", "callout"):
+                    out.append("</div>")
+                elif top == "case":
+                    out.append("</div>")
+                elif top == "variant":
+                    out.append("</div>")
+                continue
+            if tag == "endvariant":
+                while stack and stack[-1] == "case":
+                    out.append("</div>")
+                    stack.pop()
+                if stack and stack[-1] == "variant":
+                    out.append("</div>")
+                    stack.pop()
+                continue
+            m = re.match(r"^when\s+([a-z_]+)\s*=\s*([\w\-,|]+)$", tag)
+            if m:
+                key = m.group(1)
+                vals = m.group(2).replace(",", "|")
+                out.append(f'<div data-show-when="{key}:{vals}">')
+                stack.append("when")
+                continue
+            m = re.match(r"^unless\s+([a-z_]+)\s*=\s*([\w\-,|]+)$", tag)
+            if m:
+                key = m.group(1)
+                vals = m.group(2).replace(",", "|")
+                out.append(f'<div data-hide-when="{key}:{vals}">')
+                stack.append("unless")
+                continue
+            m = re.match(r"^variant\s+([a-z_]+)$", tag)
+            if m:
+                key = m.group(1)
+                out.append(f'<div data-variant-by="{key}">')
+                stack.append("variant")
+                continue
+            m = re.match(r"^case\s+([\w\-|]+)$", tag)
+            if m:
+                if stack and stack[-1] == "case":
+                    out.append("</div>")
+                    stack.pop()
+                val = m.group(1)
+                out.append(f'<div data-variant="{val}">')
+                stack.append("case")
+                continue
+            if tag == "callout":
+                out.append('<div class="ec-callout">')
+                stack.append("callout")
+                continue
+            # Unknown :::tag — pass through as-is
+            out.append(raw)
+            continue
+        out.append(raw)
+
+    while stack:
+        out.append("</div>")
+        stack.pop()
+
+    return "\n".join(out)
+
+
 def md_to_html(md_text, collect_h2=False):
     """Minimal markdown to HTML. Returns (html, h2_anchors)."""
+    md_text = preprocess_conditional_blocks(md_text)
     lines = md_text.split("\n")
     html = []
     h2_anchors = []
@@ -154,6 +253,12 @@ def md_to_html(md_text, collect_h2=False):
             close_list()
             continue
 
+        # Pass raw HTML block-level lines through (used by ::: preprocess output).
+        if stripped.startswith("<div") or stripped == "</div>":
+            close_list()
+            html.append(stripped)
+            continue
+
         close_list()
         html.append(f"<p>{inline(stripped)}</p>")
 
@@ -175,6 +280,7 @@ SECTION_TEMPLATE = """<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="profile.css">
 </head>
 <body>
 
@@ -182,6 +288,7 @@ SECTION_TEMPLATE = """<!DOCTYPE html>
   <div class="container topnav-inner">
     <div class="brand"><a href="index.html"><span class="brand-mark">●</span> ExecAIDay</a></div>
     <div class="nav-links">
+      <span data-profile-chip></span>
       <a href="index.html">All sections</a>
       <a href="glossary.html">Glossary</a>
     </div>
@@ -223,6 +330,7 @@ SECTION_TEMPLATE = """<!DOCTYPE html>
   </div>
 </footer>
 
+<script src="profile.js"></script>
 </body>
 </html>
 """
@@ -238,6 +346,7 @@ GLOSSARY_TEMPLATE = """<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="profile.css">
 </head>
 <body>
 
@@ -245,6 +354,7 @@ GLOSSARY_TEMPLATE = """<!DOCTYPE html>
   <div class="container topnav-inner">
     <div class="brand"><a href="index.html"><span class="brand-mark">●</span> ExecAIDay</a></div>
     <div class="nav-links">
+      <span data-profile-chip></span>
       <a href="index.html">All sections</a>
     </div>
   </div>
@@ -271,6 +381,7 @@ GLOSSARY_TEMPLATE = """<!DOCTYPE html>
   </div>
 </footer>
 
+<script src="profile.js"></script>
 </body>
 </html>
 """

@@ -363,6 +363,21 @@ In your Project you should have, in the mounted starter folder:
 
 You also need a **brand source** — a website. Either your own company's site, a client's, or one you'd like to mimic. Have the URL ready.
 
+:::variant industry
+:::case saas
+**SaaS context:** if you're using your own company data, the numbers will be ARR, net retention, gross margin, CAC payback, logo growth. Pick three to lead with. If you're picking a brand source, try the homepage of a company whose voice you respect (Notion, Stripe, Linear all have crisp brand voice you can scrape).
+:::case finance
+**Finance / PE / VC context:** numbers will be portfolio NAV, IRR, fund-level metrics, deployment pace. Privacy matters more here — use anonymised numbers in the workshop. Brand sources: think of a portfolio company's site, or a fund's own brand if it has one.
+:::case healthcare
+**Healthcare context:** numbers might be patient throughput, NPS, readmission rate, payor mix. **Don't put any PHI in this exercise.** Use aggregate data only. Brand source: try a company in the regulated-but-marketed space (medical-device or digital-health companies have strong brand voice).
+:::case manufacturing
+**Manufacturing context:** numbers might be OEE, on-time delivery, gross margin by SKU, working capital days. Brand sources: industrial brands that have invested in voice (some chemicals and equipment companies surprisingly well-branded).
+:::case retail
+**Retail / consumer context:** numbers will be same-store sales, basket size, conversion, returns rate, inventory turn. Brand sources: there's no shortage of polished retail brand sites — pick one whose visual + voice you admire.
+:::case default
+**Generic context:** if your industry isn't on this list, pick the three numbers from your last board update or quarterly review and use those. Brand source: any website whose look and voice you'd want to learn from.
+:::endvariant
+
 ### 8.3 Step-by-step
 
 Start a fresh chat in the Project. (One task, one chat.) Then run these prompts in sequence, one at a time, reading each reply before sending the next:

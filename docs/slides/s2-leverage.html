@@ -182,6 +182,27 @@ A working brief for Claude to read at the start of every conversation in this Pr
 <pre><code>
 
 Claude writes the brief.
+
+&lt;div data-variant-by="role"&gt;
+&lt;div data-variant="founder"&gt;
+**For founders / CEOs:** add a `## Cap table &amp; investors` section above `## Notes` — your current backers, your most recent round, your board's composition. Add a `## Customer concentration` line if any single customer is more than 10% of revenue. Founders' briefs leak through into how Claude talks about every deal and hire; the cap table and customer concentration are the two things that should always be in scope.
+&lt;/div&gt;
+&lt;div data-variant="partner"&gt;
+**For partners / investors:** swap `## Company` for `## Portfolio` — list each active investment one line, with stage, last check, board seat. Add `## Pipeline themes` listing the 3-4 theses you're currently writing against. Drop `## How I write` if you don't write much; add `## Memo conventions` covering how your firm formats investment memos.
+&lt;/div&gt;
+&lt;div data-variant="cfo"&gt;
+**For CFOs:** add `## Financial close cadence` listing month-end / quarter-end / year-end dates and what's owed to whom. Add `## Audit &amp; compliance` with your auditor, current SOX status (if applicable), key compliance dates. Strengthen `## Team and people` to call out the controller, FP&amp;A lead, and treasury function specifically.
+&lt;/div&gt;
+&lt;div data-variant="chro"&gt;
+**For CHROs:** add `## Headcount plan` (current vs target, by function). Add `## Comp &amp; benefits cycles` (review cycle dates, benefits renewal). Strengthen `## What's on my plate` to flag any open executive searches or active grievances under privilege.
+&lt;/div&gt;
+&lt;div data-variant="board-chair"&gt;
+**For board chairs / NEDs:** swap `## Team and people` for `## Boards I sit on` — one line per board, role (chair/lead independent/member), term end, what the board is currently wrestling with. Drop `## What's on my plate` — your plate is whatever's in the next board pack. Add `## Confidentiality boundaries` — what shouldn't be in any Cowork chat under any circumstances.
+&lt;/div&gt;
+&lt;div data-variant="default"&gt;
+**Generic brief:** the template above works as-is for most senior roles. After you've used it for a week, add or trim sections to match what Claude actually needs to know about you in practice.
+&lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
       </div>
     </div>
@@ -391,6 +412,20 @@ Draft a one-paragraph email to my board chair updating them on the most pressing
       <div class="slide-section-body">
         <p>Connectors are bridges between Cowork and the services you already use — Gmail, Microsoft 365, Calendar, Drive, Slack, and the apps your team runs on (Asana, Jira, Linear, Salesforce, etc.).</p>
 <p>After connecting, when you ask Claude <em>"what did Diana send me yesterday about the Q3 board pack?"</em> — Claude actually reads your inbox and answers. Not from training data, not from guesses. From the actual email.</p>
+<div data-variant-by="stack">
+<div data-variant="m365">
+<p><strong>Microsoft 365 stack:</strong> the primary connector for you is the <strong>Microsoft 365</strong> bundle — one connector authorises Outlook (mail + calendar), OneDrive, SharePoint, and Teams in one go. Set that up first; then add Slack (if used), Salesforce (if used), and any in-house apps your tech team has wired through MCP.</p>
+</div>
+<div data-variant="google">
+<p><strong>Google Workspace stack:</strong> authorise <strong>Gmail</strong>, <strong>Google Calendar</strong>, and <strong>Google Drive</strong> as three separate connectors. They share your Google account but each grants its own scope. Then add Slack and any other apps.</p>
+</div>
+<div data-variant="mixed">
+<p><strong>Mixed stack (M365 + Google):</strong> authorise both bundles — Microsoft 365 on the corporate side, Google on the side that uses it (often executive personal calendar or a board comms channel). Cowork can hold both at once. Document which is for what in your <code>&lt;vault&gt;/References/tools/</code> files.</p>
+</div>
+<div data-variant="neither">
+<p><strong>Neither M365 nor Google:</strong> you're on something less common (Zimbra, Fastmail self-hosted, custom). Standard connectors won't cover it; your tech team needs a custom MCP connector. Talk to them about which of your stack components are highest priority to wire up first.</p>
+</div>
+</div>
       </div>
     </div>
   </section>
@@ -549,7 +584,16 @@ Save the drafts. Don't send anything.
       <div class="slide-eyebrow">Topic</div>
       <h3 class="slide-section-subtitle">8. Office add-ins — Claude inside Word, Excel, PowerPoint</h3>
       <div class="slide-section-body">
-        <p>The third surface, after Cowork and the browser. The <strong>Claude by Anthropic</strong> add-ins put a Claude sidebar inside Word, Excel, and PowerPoint. Sidebar is open, you work in the document, Claude is right there.</p>
+        <div data-show-when="stack:m365|mixed">
+<p>The third surface, after Cowork and the browser. The <strong>Claude by Anthropic</strong> add-ins put a Claude sidebar inside Word, Excel, and PowerPoint. Sidebar is open, you work in the document, Claude is right there.</p>
+</div>
+<div data-hide-when="stack:m365|mixed">
+<div class="ec-callout">
+<p><strong>Heads up — your stack:</strong> if you don't use Microsoft Office at all, this section's add-ins are not relevant. Skim it to know what's available (the workflows transfer to Google Docs/Sheets/Slides via the Cowork-and-browser pattern from Section 1), but the install steps below assume you have Office installed. Skip to Section 3 if Word/Excel/PowerPoint aren't part of your day.</p>
+</div>
+</div>
+<div data-show-when="stack:m365|mixed">
+</div>
       </div>
     </div>
   </section>
@@ -641,6 +685,7 @@ Build chart 1 in this sheet, on a new chart tab.
 <li><strong>You want to coordinate across files and folders, not just one document.</strong> Cowork is better — it sees the whole folder, multiple files, your Project context, your connectors.</li>
 </ul>
 <p>Both are useful depending on what you're doing. The sidebars are tactical (one document at a time). Cowork is the workspace (the project, the folder, the live data).</p>
+<p>:::</p>
       </div>
     </div>
   </section>

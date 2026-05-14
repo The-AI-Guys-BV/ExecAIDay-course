@@ -98,6 +98,21 @@ Make every line count. No padding. No corporate language. This is for an AI that
 
 Claude writes the brief.
 
+:::variant role
+:::case founder
+**For founders / CEOs:** add a `## Cap table & investors` section above `## Notes` — your current backers, your most recent round, your board's composition. Add a `## Customer concentration` line if any single customer is more than 10% of revenue. Founders' briefs leak through into how Claude talks about every deal and hire; the cap table and customer concentration are the two things that should always be in scope.
+:::case partner
+**For partners / investors:** swap `## Company` for `## Portfolio` — list each active investment one line, with stage, last check, board seat. Add `## Pipeline themes` listing the 3-4 theses you're currently writing against. Drop `## How I write` if you don't write much; add `## Memo conventions` covering how your firm formats investment memos.
+:::case cfo
+**For CFOs:** add `## Financial close cadence` listing month-end / quarter-end / year-end dates and what's owed to whom. Add `## Audit & compliance` with your auditor, current SOX status (if applicable), key compliance dates. Strengthen `## Team and people` to call out the controller, FP&A lead, and treasury function specifically.
+:::case chro
+**For CHROs:** add `## Headcount plan` (current vs target, by function). Add `## Comp & benefits cycles` (review cycle dates, benefits renewal). Strengthen `## What's on my plate` to flag any open executive searches or active grievances under privilege.
+:::case board-chair
+**For board chairs / NEDs:** swap `## Team and people` for `## Boards I sit on` — one line per board, role (chair/lead independent/member), term end, what the board is currently wrestling with. Drop `## What's on my plate` — your plate is whatever's in the next board pack. Add `## Confidentiality boundaries` — what shouldn't be in any Cowork chat under any circumstances.
+:::case default
+**Generic brief:** the template above works as-is for most senior roles. After you've used it for a week, add or trim sections to match what Claude actually needs to know about you in practice.
+:::endvariant
+
 ### 1.5 Install the brief
 
 Read the brief. Edit anything wrong. Then:
@@ -229,6 +244,17 @@ Connectors are bridges between Cowork and the services you already use — Gmail
 
 After connecting, when you ask Claude *"what did Diana send me yesterday about the Q3 board pack?"* — Claude actually reads your inbox and answers. Not from training data, not from guesses. From the actual email.
 
+:::variant stack
+:::case m365
+**Microsoft 365 stack:** the primary connector for you is the **Microsoft 365** bundle — one connector authorises Outlook (mail + calendar), OneDrive, SharePoint, and Teams in one go. Set that up first; then add Slack (if used), Salesforce (if used), and any in-house apps your tech team has wired through MCP.
+:::case google
+**Google Workspace stack:** authorise **Gmail**, **Google Calendar**, and **Google Drive** as three separate connectors. They share your Google account but each grants its own scope. Then add Slack and any other apps.
+:::case mixed
+**Mixed stack (M365 + Google):** authorise both bundles — Microsoft 365 on the corporate side, Google on the side that uses it (often executive personal calendar or a board comms channel). Cowork can hold both at once. Document which is for what in your `<vault>/References/tools/` files.
+:::case neither
+**Neither M365 nor Google:** you're on something less common (Zimbra, Fastmail self-hosted, custom). Standard connectors won't cover it; your tech team needs a custom MCP connector. Talk to them about which of your stack components are highest priority to wire up first.
+:::endvariant
+
 ### 5.1 Where to set them up
 
 In Cowork, in the left sidebar, click **Customize**. A panel opens. Inside, find **Connectors** (sometimes labelled "Apps" or "Integrations" depending on Cowork version).
@@ -343,7 +369,21 @@ You now know how to extend Cowork yourself.
 
 ## 8. Office add-ins — Claude inside Word, Excel, PowerPoint
 
+:::when stack=m365,mixed
+
 The third surface, after Cowork and the browser. The **Claude by Anthropic** add-ins put a Claude sidebar inside Word, Excel, and PowerPoint. Sidebar is open, you work in the document, Claude is right there.
+
+:::
+
+:::unless stack=m365,mixed
+
+:::callout
+**Heads up — your stack:** if you don't use Microsoft Office at all, this section's add-ins are not relevant. Skim it to know what's available (the workflows transfer to Google Docs/Sheets/Slides via the Cowork-and-browser pattern from Section 1), but the install steps below assume you have Office installed. Skip to Section 3 if Word/Excel/PowerPoint aren't part of your day.
+:::
+
+:::
+
+:::when stack=m365,mixed
 
 ### 8.1 The install — what your tech team has done
 
@@ -410,6 +450,8 @@ A real question, not a settled one. Two practical answers:
 - **You want to coordinate across files and folders, not just one document.** Cowork is better — it sees the whole folder, multiple files, your Project context, your connectors.
 
 Both are useful depending on what you're doing. The sidebars are tactical (one document at a time). Cowork is the workspace (the project, the folder, the live data).
+
+:::
 
 ## What you take away
 

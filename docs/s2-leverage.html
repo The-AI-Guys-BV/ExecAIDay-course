@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="profile.css">
 </head>
 <body>
 
@@ -16,6 +17,7 @@
   <div class="container topnav-inner">
     <div class="brand"><a href="index.html"><span class="brand-mark">●</span> ExecAIDay</a></div>
     <div class="nav-links">
+      <span data-profile-chip></span>
       <a href="index.html">All sections</a>
       <a href="glossary.html">Glossary</a>
     </div>
@@ -107,6 +109,26 @@ A working brief for Claude to read at the start of every conversation in this Pr
 Make every line count. No padding. No corporate language. This is for an AI that will read it five hundred times.
 </code></pre>
 <p>Claude writes the brief.</p>
+<div data-variant-by="role">
+<div data-variant="founder">
+<p><strong>For founders / CEOs:</strong> add a <code>## Cap table &amp; investors</code> section above <code>## Notes</code> — your current backers, your most recent round, your board's composition. Add a <code>## Customer concentration</code> line if any single customer is more than 10% of revenue. Founders' briefs leak through into how Claude talks about every deal and hire; the cap table and customer concentration are the two things that should always be in scope.</p>
+</div>
+<div data-variant="partner">
+<p><strong>For partners / investors:</strong> swap <code>## Company</code> for <code>## Portfolio</code> — list each active investment one line, with stage, last check, board seat. Add <code>## Pipeline themes</code> listing the 3-4 theses you're currently writing against. Drop <code>## How I write</code> if you don't write much; add <code>## Memo conventions</code> covering how your firm formats investment memos.</p>
+</div>
+<div data-variant="cfo">
+<p><strong>For CFOs:</strong> add <code>## Financial close cadence</code> listing month-end / quarter-end / year-end dates and what's owed to whom. Add <code>## Audit &amp; compliance</code> with your auditor, current SOX status (if applicable), key compliance dates. Strengthen <code>## Team and people</code> to call out the controller, FP&A lead, and treasury function specifically.</p>
+</div>
+<div data-variant="chro">
+<p><strong>For CHROs:</strong> add <code>## Headcount plan</code> (current vs target, by function). Add <code>## Comp &amp; benefits cycles</code> (review cycle dates, benefits renewal). Strengthen <code>## What's on my plate</code> to flag any open executive searches or active grievances under privilege.</p>
+</div>
+<div data-variant="board-chair">
+<p><strong>For board chairs / NEDs:</strong> swap <code>## Team and people</code> for <code>## Boards I sit on</code> — one line per board, role (chair/lead independent/member), term end, what the board is currently wrestling with. Drop <code>## What's on my plate</code> — your plate is whatever's in the next board pack. Add <code>## Confidentiality boundaries</code> — what shouldn't be in any Cowork chat under any circumstances.</p>
+</div>
+<div data-variant="default">
+<p><strong>Generic brief:</strong> the template above works as-is for most senior roles. After you've used it for a week, add or trim sections to match what Claude actually needs to know about you in practice.</p>
+</div>
+</div>
 <h3 id="15-install-the-brief">1.5 Install the brief</h3>
 <p>Read the brief. Edit anything wrong. Then:</p>
 <ul>
@@ -210,6 +232,20 @@ Draft a one-paragraph email to my board chair updating them on the most pressing
 <h2 id="5-connectors-claude-reads-your-live-data">5. Connectors — Claude reads your live data</h2>
 <p>Connectors are bridges between Cowork and the services you already use — Gmail, Microsoft 365, Calendar, Drive, Slack, and the apps your team runs on (Asana, Jira, Linear, Salesforce, etc.).</p>
 <p>After connecting, when you ask Claude <em>"what did Diana send me yesterday about the Q3 board pack?"</em> — Claude actually reads your inbox and answers. Not from training data, not from guesses. From the actual email.</p>
+<div data-variant-by="stack">
+<div data-variant="m365">
+<p><strong>Microsoft 365 stack:</strong> the primary connector for you is the <strong>Microsoft 365</strong> bundle — one connector authorises Outlook (mail + calendar), OneDrive, SharePoint, and Teams in one go. Set that up first; then add Slack (if used), Salesforce (if used), and any in-house apps your tech team has wired through MCP.</p>
+</div>
+<div data-variant="google">
+<p><strong>Google Workspace stack:</strong> authorise <strong>Gmail</strong>, <strong>Google Calendar</strong>, and <strong>Google Drive</strong> as three separate connectors. They share your Google account but each grants its own scope. Then add Slack and any other apps.</p>
+</div>
+<div data-variant="mixed">
+<p><strong>Mixed stack (M365 + Google):</strong> authorise both bundles — Microsoft 365 on the corporate side, Google on the side that uses it (often executive personal calendar or a board comms channel). Cowork can hold both at once. Document which is for what in your <code>&lt;vault&gt;/References/tools/</code> files.</p>
+</div>
+<div data-variant="neither">
+<p><strong>Neither M365 nor Google:</strong> you're on something less common (Zimbra, Fastmail self-hosted, custom). Standard connectors won't cover it; your tech team needs a custom MCP connector. Talk to them about which of your stack components are highest priority to wire up first.</p>
+</div>
+</div>
 <h3 id="51-where-to-set-them-up">5.1 Where to set them up</h3>
 <p>In Cowork, in the left sidebar, click <strong>Customize</strong>. A panel opens. Inside, find <strong>Connectors</strong> (sometimes labelled "Apps" or "Integrations" depending on Cowork version).</p>
 <p>You'll see a list of available connectors. The big ones — Gmail, Google Calendar, Google Drive, Microsoft 365 (which covers Outlook, Teams, OneDrive, SharePoint), Slack — are at the top.</p>
@@ -277,7 +313,15 @@ Save the drafts. Don't send anything.
 <p>Run <code>/skill-creator</code>. Answer its questions. At the end, it produces the skill files. You install the skill (it'll tell you how — usually one click). From now on, <code>/draft-update [project name]</code> runs in any chat.</p>
 <p>You now know how to extend Cowork yourself.</p>
 <h2 id="8-office-add-ins-claude-inside-word-excel-powerpoint">8. Office add-ins — Claude inside Word, Excel, PowerPoint</h2>
+<div data-show-when="stack:m365|mixed">
 <p>The third surface, after Cowork and the browser. The <strong>Claude by Anthropic</strong> add-ins put a Claude sidebar inside Word, Excel, and PowerPoint. Sidebar is open, you work in the document, Claude is right there.</p>
+</div>
+<div data-hide-when="stack:m365|mixed">
+<div class="ec-callout">
+<p><strong>Heads up — your stack:</strong> if you don't use Microsoft Office at all, this section's add-ins are not relevant. Skim it to know what's available (the workflows transfer to Google Docs/Sheets/Slides via the Cowork-and-browser pattern from Section 1), but the install steps below assume you have Office installed. Skip to Section 3 if Word/Excel/PowerPoint aren't part of your day.</p>
+</div>
+</div>
+<div data-show-when="stack:m365|mixed">
 <h3 id="81-the-install-what-your-tech-team-has-done">8.1 The install — what your tech team has done</h3>
 <p>Your tech team has installed three add-ins on your machine before the workshop. Each comes from Microsoft AppSource, the official Microsoft add-in store, and is published by Anthropic.</p>
 <p>If you want to verify the install is in place: open Word, look at the <strong>Insert</strong> tab in the ribbon, find <strong>My Add-ins</strong>. Claude by Anthropic should be listed. Same in Excel and PowerPoint. If it's not, flag your assistant — they install it now.</p>
@@ -320,6 +364,7 @@ Build chart 1 in this sheet, on a new chart tab.
 <li><strong>You want to coordinate across files and folders, not just one document.</strong> Cowork is better — it sees the whole folder, multiple files, your Project context, your connectors.</li>
 </ul>
 <p>Both are useful depending on what you're doing. The sidebars are tactical (one document at a time). Cowork is the workspace (the project, the folder, the live data).</p>
+</div>
 <h2 id="what-you-take-away">What you take away</h2>
 <ul>
 <li>A chief-of-staff brief — installed in your Project's instructions, sounding like you.</li>
@@ -366,5 +411,6 @@ Build chart 1 in this sheet, on a new chart tab.
   </div>
 </footer>
 
+<script src="profile.js"></script>
 </body>
 </html>
