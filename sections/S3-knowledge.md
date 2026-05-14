@@ -6,6 +6,37 @@ theme: A vault you own. A GTD system Claude runs from. Layered context that scal
 walkout: You have a working second brain on your hard drive — your knowledge, your projects, your task system, your brief — and Cowork knows where to look for any of it.
 ---
 
+<div class="ec-install-ledger">
+<div class="ec-il-col">
+<div class="ec-il-head">We install</div>
+
+- Starter vault placed in your cloud sync, pre-tuned to your role/industry/stack via intake
+- `claude.md` pointers configured at vault root and project-folder defaults
+- Obsidian installed and opened on the vault
+- Mobile capture app pre-installed on your phone with the inbox file as destination
+
+</div>
+<div class="ec-il-col">
+<div class="ec-il-head">You provide</div>
+
+- Re-homing the brief from Project instructions into `About Me.md`
+- Three References to seed (a person, a brand, a tool you use, a product line)
+- One real project to scaffold via `/new-project`
+
+</div>
+<div class="ec-il-col">
+<div class="ec-il-head">By the end of this phase</div>
+
+- Your vault running on disk and mounted in Cowork
+- Brief, long-form, writing-rules files in place
+- GTD lists scaffolded and inbox flowing
+- Mobile capture wired and tested
+- One real project folder live with tailored `claude.md`
+- Layered `claude.md` context across vault → work → project
+
+</div>
+</div>
+
 ## What this section is
 
 In Section 1 you used Cowork on a folder. In Section 2 you taught Cowork who you are and connected it to your live data. This section gives Cowork a **persistent place** to keep things — a folder structure on your disk, designed for executive use, that holds:

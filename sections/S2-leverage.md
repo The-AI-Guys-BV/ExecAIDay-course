@@ -6,6 +6,36 @@ theme: Personalize Claude. Connect to live data. Extend into the surfaces you al
 walkout: Cowork knows who you are. Live data flows in from Gmail, Calendar, Drive, Slack. Skills are running. Word, Excel, and PowerPoint each have a Claude sidebar wired in.
 ---
 
+<div class="ec-install-ledger">
+<div class="ec-il-col">
+<div class="ec-il-head">We install</div>
+
+- The workshop skill pack (GTD skills you'll use in Phase 3)
+- Office add-ins pre-installed and pinned in Word, Excel, PowerPoint (Microsoft-stack participants)
+- A voice tool installed and hot-keyed (Wispr Flow by default)
+- Any custom MCP connectors your tech team has built for in-house apps
+
+</div>
+<div class="ec-il-col">
+<div class="ec-il-head">You provide</div>
+
+- 15-20 minutes sitting for the chief-of-staff brief interview
+- OAuth into your Gmail/M365, Calendar, Drive, Slack, plus the apps in your stack
+- A recent real email thread to test email-drafting on
+
+</div>
+<div class="ec-il-col">
+<div class="ec-il-head">By the end of this phase</div>
+
+- A standing brief installed and shaping every Cowork reply
+- Connectors reading your live inbox, calendar, drive, and Slack
+- Voice tool working in Cowork (and elsewhere)
+- One custom skill built via `/skill-creator`
+- Office sidebars active across Word/Excel/PowerPoint with shared context
+
+</div>
+</div>
+
 ## What this section is
 
 In Section 1 you used Claude with what was already on your laptop — files, the browser, a chat. That's the floor.

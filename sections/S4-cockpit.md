@@ -6,6 +6,35 @@ theme: Output and automation. Where the system pays off.
 walkout: A personalised cockpit that opens every morning. Meetings captured automatically. Routines running on schedule. Team-collaboration patterns you can deploy this week.
 ---
 
+<div class="ec-install-ledger">
+<div class="ec-il-col">
+<div class="ec-il-head">We install</div>
+
+- Meeting capture tool (Granola or equivalent) signed in and tested
+- Post-meeting routine drafted and ready to run
+- Three scheduled-task templates staged for your review
+- Cockpit scaffolding built per your intake answers
+
+</div>
+<div class="ec-il-col">
+<div class="ec-il-head">You provide</div>
+
+- A real upcoming meeting for `/meeting-prep` to demonstrate
+- Feedback on cockpit blocks — which to keep, swap, drop
+- Approval on each scheduled task before it fires for the first time
+
+</div>
+<div class="ec-il-col">
+<div class="ec-il-head">By the end of this phase</div>
+
+- Cockpit pinned and refreshing on every open
+- Meeting capture chain demonstrated end-to-end
+- Three scheduled tasks running (Monday brief, daily 8am, Friday review)
+- Multi-connector team-query pattern demonstrated
+
+</div>
+</div>
+
 ## What this section is
 
 Sections 1–3 built the engine. This section is what the engine runs.

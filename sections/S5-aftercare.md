@@ -6,6 +6,37 @@ theme: Keeping the system healthy. Recurring, not a sequence.
 walkout: A system that survives the workshop and evolves with you.
 ---
 
+<div class="ec-install-ledger">
+<div class="ec-il-col">
+<div class="ec-il-head">Standard contract</div>
+
+- 90 days of setup support — free, included with install
+- Quarterly cockpit review (30 min, video) — 12 months
+- On-call for connector breakage — email + Slack
+- Skill / artifact tweaks via ticket
+
+</div>
+<div class="ec-il-col">
+<div class="ec-il-head">Premium contract</div>
+
+- Everything in Standard
+- Monthly group office hours (60 min)
+- Priority lane for new connector builds
+- Annual cockpit refresh (half-day session)
+- Alumni community access
+
+</div>
+<div class="ec-il-col">
+<div class="ec-il-head">Your side</div>
+
+- Read the contract before day 2 wrap
+- Decide Standard or Premium before the install team leaves
+- Keep the cockpit open every morning — the system maintains itself when used
+- Flag breakage early — most things fix in a single message
+
+</div>
+</div>
+
 ## What this section is
 
 Sections 1–4 built the system. This section is what keeps it alive over time.
