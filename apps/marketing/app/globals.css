@@ -73,3 +73,39 @@ body {
 .hairline {
   border-color: rgba(26, 26, 26, 0.12);
 }
+
+/* Honor prefers-reduced-motion: reduce.
+ *
+ * Framer Motion sets inline `style="opacity:0;transform:..."` for animation
+ * initial states. We use attribute selectors to override those inline styles
+ * (which beat external CSS unless we use !important). This avoids the SSR/CSR
+ * hydration mismatch that the JS-based useReducedMotion() approach causes:
+ * server and client now render identical HTML, and the CSS kicks in pre-paint
+ * for users with the preference set.
+ */
+@media (prefers-reduced-motion: reduce) {
+  /* Cut animation + transition durations to near-zero everywhere. */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Override Framer Motion's initial opacity: 0 inline styles. */
+  [style*="opacity: 0"],
+  [style*="opacity:0"] {
+    opacity: 1 !important;
+  }
+
+  /* Override Framer Motion's initial transform inline styles
+   * (translateY for section reveals, scale for the image cards). */
+  [style*="transform: translateY"],
+  [style*="transform:translateY"],
+  [style*="transform: scale"],
+  [style*="transform:scale"] {
+    transform: none !important;
+  }
+}
