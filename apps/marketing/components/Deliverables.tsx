@@ -1,17 +1,46 @@
 import SectionReveal from "./motion/SectionReveal";
 import { Stagger, StaggerItem } from "./motion/Stagger";
 
-const deliverables = [
-  "A personalized cockpit running in your Claude Cowork desktop",
-  "Your working vault populated with [X categories — TBD per current cohort]",
-  "At least 4 connectors live (mail, calendar, drive, one of CRM / deal-room / accounting — TBD)",
-  "At least 3 scheduled routines running on cadence",
-  "Office sidebars active in Word, Excel, Outlook",
-  "Meeting-prep workflow tested across at least 2 real meetings",
-  "Inbox-triage workflow tested on a real week",
-  "A chief-of-staff brief on yourself, your week, and your team",
-  "At least 1 custom skill built for your specific recurring task",
-  "90 days of aftercare access (email, scheduled cockpit refresh, in-person fallback)",
+const deliverables: { lead: string; body?: string }[] = [
+  {
+    lead: "Drive your week from a single window",
+    body: "your cockpit, set up around your work.",
+  },
+  {
+    lead: "Find any prior decision in seconds",
+    body: "your vault, populated with the context that matters, sharper every week.",
+  },
+  {
+    lead: "Ask one question across your calendar, mail, drive, and one of your CRM / deal room / accounting",
+    body: "without leaving the cockpit.",
+  },
+  {
+    lead: "Wake up to your routines already written",
+    body: "Monday leadership digest, monthly board summary, quarterly check-in, all on schedule.",
+  },
+  {
+    lead: "Draft, edit, summarize inside Word, Excel, and Outlook",
+    body: "without switching apps.",
+  },
+  {
+    lead: "Walk into meetings with a brief that's been pressure-tested in your real week",
+    body: "workflow proven on at least two of your real meetings.",
+  },
+  {
+    lead: "Clear your inbox in fifteen minutes",
+    body: "triage workflow tuned to your priorities, proven on a real week.",
+  },
+  {
+    lead: "Hand anyone a brief on yourself, your week, and your team in under a minute.",
+  },
+  {
+    lead: "Run one of your most recurring tasks at the press of a button",
+    body: "a skill built specifically for your situation.",
+  },
+  {
+    lead: "Reach us for the first ninety days",
+    body: "when your cockpit needs to evolve — email, scheduled refresh, in-person fallback.",
+  },
 ];
 
 export default function Deliverables() {
@@ -23,7 +52,7 @@ export default function Deliverables() {
             Deliverables
           </p>
           <h2 className="font-serif text-[36px] font-normal leading-[1.1] tracking-[-0.01em] text-[color:var(--color-charcoal)] md:text-[48px] lg:text-[56px]">
-            By the end of session four, you have:
+            By the end of session four, you can:
           </h2>
         </div>
 
@@ -33,22 +62,24 @@ export default function Deliverables() {
           className="grid grid-cols-1 gap-x-12 gap-y-5 md:grid-cols-2 md:gap-y-6"
         >
           {deliverables.map((item) => (
-            <StaggerItem as="li" key={item} className="flex items-start gap-5">
+            <StaggerItem
+              as="li"
+              key={item.lead}
+              className="flex items-start gap-5"
+            >
               <span
                 aria-hidden
                 className="mt-[10px] inline-block h-3.5 w-3.5 flex-shrink-0 border border-[color:var(--color-charcoal)]/40"
               />
               <span className="text-[17px] leading-[1.55] text-[color:var(--color-charcoal)]/85 md:text-[18px]">
-                {item}
+                <strong className="font-semibold text-[color:var(--color-charcoal)]">
+                  {item.lead}
+                </strong>
+                {item.body ? <> &mdash; {item.body}</> : null}
               </span>
             </StaggerItem>
           ))}
         </Stagger>
-
-        <p className="mt-14 max-w-[68ch] text-[14px] italic leading-[1.6] text-[color:var(--color-charcoal)]/55 md:mt-16 md:text-[15px]">
-          Final checklist to be tightened based on current-cohort install
-          reality.
-        </p>
       </div>
     </SectionReveal>
   );

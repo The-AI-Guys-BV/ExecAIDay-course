@@ -4,28 +4,28 @@ import CockpitImagery from "./CockpitImagery";
 
 const items = [
   {
-    title: "Meeting prep that's already done when you sit down.",
-    body: "Briefs on attendees, prior context, open threads, recommended angles.",
+    title: "Walk into every meeting already prepared.",
+    body: "The brief is on screen when you sit down — attendees, history, open threads, the angle you should push, the questions to land.",
   },
   {
-    title: "Inbox triage that respects your priorities.",
-    body: "Not generic auto-categorization — your priorities, your relationships, your tolerance for which threads matter.",
+    title: "Clear your inbox in fifteen minutes.",
+    body: "Claude reads what landed overnight, surfaces what needs you, suggests what to delegate, archives the noise. The ninety-minute morning is gone.",
   },
   {
-    title: "A working vault that gets sharper every week.",
-    body: "Decisions, notes, context, references. Searchable, connected, yours.",
+    title: "Decide faster, with the receipts.",
+    body: "Every prior decision, every note, every conversation — searchable in plain English. The vault gets sharper the more you use it.",
   },
   {
-    title: "Scheduled routines that run before you ask.",
-    body: "The weekly leadership-team digest, the monthly board summary, the quarterly check-in prompt.",
+    title: "Get your routines written before you ask.",
+    body: "The Monday leadership digest, the monthly board summary, the quarterly check-in prompt — running on a schedule, ready when you are.",
   },
   {
-    title: "Connectors into the systems you already use.",
-    body: "Calendar, mail, drive, CRM, deal room. Pulled into the cockpit on demand, never living somewhere you don't control.",
+    title: "Ask one question across all your systems.",
+    body: "Calendar, mail, drive, CRM, deal room — the cockpit pulls from wherever the answer lives. You stop hunting.",
   },
   {
-    title: "Office sidebars where your team already writes.",
-    body: "Claude inside Word, Excel, Outlook — not a different app to remember to open.",
+    title: "Work in the apps you already use.",
+    body: "Claude in the sidebar of every doc, every spreadsheet, every email your team writes. Not another app to open — the same Word and Outlook, with your context.",
   },
 ];
 
@@ -41,12 +41,12 @@ export default function Cockpit() {
             The Executive Cockpit
           </p>
           <h2 className="font-serif text-[36px] font-normal leading-[1.1] tracking-[-0.01em] md:text-[48px] lg:text-[56px]">
-            What gets installed
+            What changes on Monday morning.
           </h2>
           <p className="mt-8 max-w-[58ch] text-[18px] leading-[1.7] text-[color:var(--color-ivory)]/80 md:text-[19px]">
-            The Executive Cockpit is a personalized command surface that lives
-            inside your Claude Cowork desktop app. Built around the way you
-            actually work, it gives you:
+            The cockpit isn&apos;t a tool you learn. It&apos;s the way your week
+            runs once we&apos;ve installed it. Six things you do that you
+            don&apos;t do today:
           </p>
         </div>
 
@@ -77,9 +77,8 @@ export default function Cockpit() {
 
         <div className="mt-16 max-w-[68ch] md:mt-20">
           <p className="text-[18px] leading-[1.7] text-[color:var(--color-ivory)]/85 md:text-[19px]">
-            Everything sits inside one Cowork window. Everything works in plain
-            English. You drive it the way you&apos;d direct a chief of staff who
-            already understands your business.
+            One window. Plain English. You drive it the way you&apos;d direct a
+            chief of staff who already knows your business.
           </p>
         </div>
       </div>

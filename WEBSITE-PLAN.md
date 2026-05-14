@@ -113,18 +113,18 @@ Four-step visual structure (numbered, horizontal on desktop, stacked on mobile).
 
 The named deliverable. This section anchors the value proposition.
 
-> **What gets installed**
+> **What changes on Monday morning.**
 >
-> The Executive Cockpit is a personalized command surface that lives inside your Claude Cowork desktop app. Built around the way you actually work, it gives you:
+> The cockpit isn't a tool you learn. It's the way your week runs once we've installed it. Six things you do that you don't do today:
 >
-> - **Meeting prep that's already done when you sit down.** Briefs on attendees, prior context, open threads, recommended angles.
-> - **Inbox triage that respects your priorities.** Not generic auto-categorization — your priorities, your relationships, your tolerance for which threads matter.
-> - **A working vault that gets sharper every week.** Decisions, notes, context, references. Searchable, connected, yours.
-> - **Scheduled routines that run before you ask.** The weekly leadership-team digest, the monthly board summary, the quarterly check-in prompt.
-> - **Connectors into the systems you already use.** Calendar, mail, drive, CRM, deal room. Pulled into the cockpit on demand, never living somewhere you don't control.
-> - **Office sidebars where your team already writes.** Claude inside Word, Excel, Outlook — not a different app to remember to open.
+> - **Walk into every meeting already prepared.** The brief is on screen when you sit down — attendees, history, open threads, the angle you should push, the questions to land.
+> - **Clear your inbox in fifteen minutes.** Claude reads what landed overnight, surfaces what needs you, suggests what to delegate, archives the noise. The ninety-minute morning is gone.
+> - **Decide faster, with the receipts.** Every prior decision, every note, every conversation — searchable in plain English. The vault gets sharper the more you use it.
+> - **Get your routines written before you ask.** The Monday leadership digest, the monthly board summary, the quarterly check-in prompt — running on a schedule, ready when you are.
+> - **Ask one question across all your systems.** Calendar, mail, drive, CRM, deal room — the cockpit pulls from wherever the answer lives. You stop hunting.
+> - **Work in the apps you already use.** Claude in the sidebar of every doc, every spreadsheet, every email your team writes. Not another app to open — the same Word and Outlook, with your context.
 >
-> Everything sits inside one Cowork window. Everything works in plain English. You drive it the way you'd direct a chief of staff who already understands your business.
+> One window. Plain English. You drive it the way you'd direct a chief of staff who already knows your business.
 
 ---
 
@@ -132,20 +132,18 @@ The named deliverable. This section anchors the value proposition.
 
 Per the competitor research: deliverables should be a verifiable checklist, not prose claims. Scannable. ~15 items.
 
-> **By the end of session four, you have:**
+> **By the end of session four, you can:**
 >
-> ☐ A personalized cockpit running in your Claude Cowork desktop
-> ☐ Your working vault populated with [X categories — TBD per current cohort]
-> ☐ At least 4 connectors live (mail, calendar, drive, one of CRM / deal-room / accounting — TBD)
-> ☐ At least 3 scheduled routines running on cadence
-> ☐ Office sidebars active in Word, Excel, Outlook
-> ☐ Meeting-prep workflow tested across at least 2 real meetings
-> ☐ Inbox-triage workflow tested on a real week
-> ☐ A chief-of-staff brief on yourself, your week, and your team
-> ☐ At least 1 custom skill built for your specific recurring task
-> ☐ 90 days of aftercare access (email, scheduled cockpit refresh, in-person fallback)
->
-> *[Final checklist to be tightened based on current-cohort install reality — see §8]*
+> ☐ **Drive your week from a single window** — your cockpit, set up around your work.
+> ☐ **Find any prior decision in seconds** — your vault, populated with the context that matters, sharper every week.
+> ☐ **Ask one question across your calendar, mail, drive, and one of your CRM / deal room / accounting** — without leaving the cockpit.
+> ☐ **Wake up to your routines already written** — Monday leadership digest, monthly board summary, quarterly check-in, all on schedule.
+> ☐ **Draft, edit, summarize inside Word, Excel, and Outlook** — without switching apps.
+> ☐ **Walk into meetings with a brief that's been pressure-tested in your real week** — workflow proven on at least two of your real meetings.
+> ☐ **Clear your inbox in fifteen minutes** — triage workflow tuned to your priorities, proven on a real week.
+> ☐ **Hand anyone a brief on yourself, your week, and your team in under a minute.**
+> ☐ **Run one of your most recurring tasks at the press of a button** — a skill built specifically for your situation.
+> ☐ **Reach us for the first ninety days** when your cockpit needs to evolve — email, scheduled refresh, in-person fallback.
 
 ---
 
