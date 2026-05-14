@@ -1,5 +1,6 @@
 import SectionReveal from "./motion/SectionReveal";
 import { Stagger, StaggerItem } from "./motion/Stagger";
+import CockpitImagery from "./CockpitImagery";
 
 const items = [
   {
@@ -32,25 +33,25 @@ export default function Cockpit() {
   return (
     <SectionReveal
       id="cockpit"
-      className="border-t border-[color:var(--color-charcoal)]/10 bg-[color:var(--color-charcoal)] text-[color:var(--color-ivory)]"
+      className="relative border-t border-[color:var(--color-claret)] border-b border-b-[color:var(--color-claret)] bg-[color:var(--color-charcoal)] text-[color:var(--color-ivory)]"
     >
-      <div className="mx-auto max-w-7xl px-6 py-24 md:px-10 md:py-36">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-16">
-          <div className="md:col-span-5">
-            <p className="mb-6 text-[13px] font-medium uppercase tracking-[0.2em] text-[color:var(--color-ivory)]/60">
-              The Executive Cockpit
-            </p>
-            <h2 className="font-serif text-[36px] font-normal leading-[1.1] tracking-[-0.01em] md:text-[48px] lg:text-[56px]">
-              What gets installed
-            </h2>
-            <p className="mt-8 max-w-[48ch] text-[18px] leading-[1.7] text-[color:var(--color-ivory)]/80 md:text-[19px]">
-              The Executive Cockpit is a personalized command surface that
-              lives inside your Claude Cowork desktop app. Built around the
-              way you actually work, it gives you:
-            </p>
-          </div>
+      <div className="mx-auto max-w-7xl px-6 pt-32 pb-24 md:px-10 md:pt-48 md:pb-40">
+        <div className="mb-14 max-w-3xl md:mb-20">
+          <p className="mb-8 text-[13px] font-medium uppercase tracking-[0.2em] text-[color:var(--color-ivory)]/60">
+            The Executive Cockpit
+          </p>
+          <h2 className="font-serif text-[36px] font-normal leading-[1.1] tracking-[-0.01em] md:text-[48px] lg:text-[56px]">
+            What gets installed
+          </h2>
+          <p className="mt-8 max-w-[58ch] text-[18px] leading-[1.7] text-[color:var(--color-ivory)]/80 md:text-[19px]">
+            The Executive Cockpit is a personalized command surface that lives
+            inside your Claude Cowork desktop app. Built around the way you
+            actually work, it gives you:
+          </p>
+        </div>
 
-          <div className="md:col-span-7">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-16">
+          <div className="md:col-span-6">
             <Stagger
               as="ul"
               stagger={0.08}
@@ -67,6 +68,10 @@ export default function Cockpit() {
                 </StaggerItem>
               ))}
             </Stagger>
+          </div>
+
+          <div className="md:col-span-6">
+            <CockpitImagery />
           </div>
         </div>
 

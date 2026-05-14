@@ -48,7 +48,7 @@ export default function Footer() {
 
         <div className="mt-20 border-t border-[color:var(--color-ivory)]/15 pt-8">
           <p className="text-[13px] leading-[1.6] text-[color:var(--color-ivory)]/50 md:text-[14px]">
-            © 2026 The AI Guys BV · KvK [number] · VAT NL[number]B01 · Wassenaar, the Netherlands
+            © 2026 The AI Guys BV · Wassenaar, the Netherlands
           </p>
         </div>
       </div>

@@ -123,7 +123,7 @@ export default function Faq() {
     >
       <div className="mx-auto max-w-7xl px-6 py-24 md:px-10 md:py-36">
         <div className="mb-16 max-w-3xl md:mb-20">
-          <p className="mb-6 text-[13px] font-medium uppercase tracking-[0.2em] text-[color:var(--color-claret)]">
+          <p className="mb-8 text-[13px] font-medium uppercase tracking-[0.2em] text-[color:var(--color-claret)]">
             Frequently asked questions
           </p>
           <h2 className="font-serif text-[36px] font-normal leading-[1.1] tracking-[-0.01em] text-[color:var(--color-charcoal)] md:text-[48px] lg:text-[56px]">

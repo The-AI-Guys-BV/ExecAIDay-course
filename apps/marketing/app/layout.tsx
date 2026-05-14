@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   description:
     "A personal install programme from The AI Guys. In four afternoons we build you a personalized cockpit inside Claude Cowork — tailored to your week, your inbox, your meetings, your decisions.",
   metadataBase: new URL("https://execaiday.com"),
+  icons: {
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+  },
   openGraph: {
     title: "ExecAIDay — An AI cockpit, built around your actual work.",
     description:

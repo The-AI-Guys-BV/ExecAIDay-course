@@ -9,28 +9,28 @@ export default function Pricing() {
       id="pricing"
       className="border-t border-[color:var(--color-charcoal)]/10 bg-[color:var(--color-ivory)]"
     >
-      <div className="mx-auto max-w-7xl px-6 py-24 md:px-10 md:py-36">
-        <div className="mb-16 max-w-3xl md:mb-20">
-          <p className="mb-6 text-[13px] font-medium uppercase tracking-[0.2em] text-[color:var(--color-claret)]">
+      <div className="mx-auto max-w-7xl px-6 pt-32 pb-24 md:px-10 md:pt-44 md:pb-36">
+        <div className="mb-12 max-w-3xl md:mb-14">
+          <p className="mb-8 text-[13px] font-medium uppercase tracking-[0.2em] text-[color:var(--color-claret)]">
             Pricing
           </p>
-          <h2 className="font-serif text-[40px] font-normal leading-[1.05] tracking-[-0.015em] text-[color:var(--color-charcoal)] md:text-[56px] lg:text-[72px]">
+          <h2 className="font-serif text-[40px] font-normal leading-[1.05] tracking-[-0.015em] text-[color:var(--color-charcoal)] md:text-[56px] lg:text-[64px]">
             One number. One decision. One outcome.
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-16">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-14">
           <div className="md:col-span-6">
             <p className="text-[14px] font-medium uppercase tracking-[0.18em] text-[color:var(--color-charcoal)]/55">
               The install
             </p>
-            <p className="mt-4 font-serif text-[72px] font-normal leading-none tracking-[-0.02em] text-[color:var(--color-claret)] md:text-[96px] tabular-nums">
+            <p className="mt-3 font-serif text-[64px] font-normal leading-none tracking-[-0.02em] text-[color:var(--color-claret)] md:text-[80px] lg:text-[88px] tabular-nums">
               <CountUp to={9500} prefix="€" />
             </p>
             <p className="mt-3 text-[15px] font-medium text-[color:var(--color-charcoal)]/60">
               one-time
             </p>
-            <p className="mt-8 max-w-[58ch] text-[18px] leading-[1.7] text-[color:var(--color-charcoal)]/85 md:text-[19px]">
+            <p className="mt-6 max-w-[58ch] text-[17px] leading-[1.65] text-[color:var(--color-charcoal)]/85 md:text-[18px]">
               That covers your intake, four afternoons spaced every two weeks,
               your bespoke cockpit built across those sessions, the technical
               install of every layer (Cowork, plugins, connectors, Office
@@ -39,17 +39,17 @@ export default function Pricing() {
             </p>
           </div>
 
-          <div className="md:col-span-6 md:border-l md:border-[color:var(--color-charcoal)]/10 md:pl-16">
+          <div className="md:col-span-6 md:border-l md:border-[color:var(--color-charcoal)]/10 md:pl-14">
             <p className="text-[14px] font-medium uppercase tracking-[0.18em] text-[color:var(--color-charcoal)]/55">
               Ongoing aftercare
             </p>
-            <p className="mt-4 font-serif text-[72px] font-normal leading-none tracking-[-0.02em] text-[color:var(--color-charcoal)] md:text-[96px] tabular-nums">
+            <p className="mt-3 font-serif text-[64px] font-normal leading-none tracking-[-0.02em] text-[color:var(--color-charcoal)] md:text-[80px] lg:text-[88px] tabular-nums">
               <CountUp to={6000} prefix="€" />
             </p>
             <p className="mt-3 text-[15px] font-medium text-[color:var(--color-charcoal)]/60">
               per year, from day 91
             </p>
-            <p className="mt-8 max-w-[58ch] text-[18px] leading-[1.7] text-[color:var(--color-charcoal)]/85 md:text-[19px]">
+            <p className="mt-6 max-w-[58ch] text-[17px] leading-[1.65] text-[color:var(--color-charcoal)]/85 md:text-[18px]">
               It covers cockpit rebuilds when your work shifts, in-person
               fallback when remote support isn&apos;t enough, and
               refresh-on-demand so the cockpit stays the cockpit you started
@@ -61,7 +61,7 @@ export default function Pricing() {
           </div>
         </div>
 
-        <div className="mt-16 max-w-[72ch] border-t border-[color:var(--color-charcoal)]/10 pt-8 md:mt-20">
+        <div className="mt-14 max-w-[72ch] border-t border-[color:var(--color-charcoal)]/10 pt-8 md:mt-16">
           <p className="text-[15px] leading-[1.65] text-[color:var(--color-charcoal)]/70 md:text-[16px]">
             Claude Cowork access is a separate subscription with Anthropic —
             typically €175–€200 / month. We help you set this up during the
@@ -69,7 +69,7 @@ export default function Pricing() {
           </p>
         </div>
 
-        <div className="mt-14 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-8">
+        <div className="mt-12 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-8">
           <MagneticCta href={DISCOVERY_CTA_HREF} ariaLabel={PRIMARY_CTA_LABEL}>
             {PRIMARY_CTA_LABEL}
           </MagneticCta>

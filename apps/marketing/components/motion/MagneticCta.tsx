@@ -101,10 +101,23 @@ export default function MagneticCta({
       <span>{children}</span>
       <motion.span
         aria-hidden
-        className="ml-2 inline-block"
+        className="ml-2 inline-flex"
         style={{ x: arrowX }}
       >
-        →
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 14 14"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden
+        >
+          <path d="M2 7h9.5" />
+          <path d="M8 3.5 11.5 7 8 10.5" />
+        </svg>
       </motion.span>
     </motion.a>
   );
