@@ -884,3 +884,180 @@ main.content.container {
   background: var(--accent);
   color: #fff !important;
 }
+
+/* How-it-works cards on cover */
+.howit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 900px) {
+  .howit-grid { grid-template-columns: 1fr; }
+}
+.howit-card {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 28px 28px 24px;
+  display: flex;
+  flex-direction: column;
+}
+.howit-num {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  margin-bottom: 14px;
+}
+.howit-title {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+.howit-body {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.55;
+  flex-grow: 1;
+  margin-bottom: 16px;
+}
+.howit-cta { margin-top: auto; }
+.howit-button {
+  display: inline-block;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 100px;
+  padding: 8px 16px;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: background 0.15s, color 0.15s;
+}
+.howit-button:hover {
+  background: var(--accent);
+  color: #fff !important;
+}
+
+/* Outcomes blocks — what's running by end of day 2 */
+.outcomes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+@media (max-width: 700px) {
+  .outcomes-grid { grid-template-columns: 1fr; }
+}
+.outcomes-block {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 24px 28px;
+}
+.outcomes-head {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+.outcomes-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.outcomes-block li {
+  font-size: 14.5px;
+  color: var(--ink);
+  line-height: 1.45;
+  padding: 7px 0 7px 22px;
+  position: relative;
+}
+.outcomes-block li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 14px;
+}
+.outcomes-block li code {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.88em;
+  background: var(--bg);
+  padding: 1px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--line);
+}
+
+/* Install ledger — appears near the top of each section page */
+.ec-install-ledger {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 32px 0 40px;
+  padding: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+}
+@media (max-width: 800px) {
+  .ec-install-ledger { grid-template-columns: 1fr; gap: 24px; }
+}
+.ec-il-col {
+  display: flex;
+  flex-direction: column;
+}
+.ec-il-head {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--line);
+}
+.ec-il-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.ec-il-col li {
+  font-size: 13.5px;
+  color: var(--ink);
+  line-height: 1.45;
+  padding: 5px 0 5px 16px;
+  position: relative;
+}
+.ec-il-col li::before {
+  content: "›";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  color: var(--muted);
+  font-weight: 700;
+}
+.ec-il-col li code {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.85em;
+  background: var(--bg);
+  padding: 1px 5px;
+  border-radius: 4px;
+  border: 1px solid var(--line);
+}
+.ec-il-col p {
+  font-size: 13.5px;
+  margin: 0;
+  line-height: 1.45;
+}

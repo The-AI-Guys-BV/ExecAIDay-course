@@ -236,8 +236,8 @@
     const banner = document.createElement("div");
     banner.className = "profile-banner";
     banner.innerHTML = `<div class="container">
-      <span class="profile-banner-text">This course adapts to your role and stack — examples, templates, and recommendations all change. <strong>Set your profile</strong> to see tailored content.</span>
-      <button type="button" class="profile-banner-button" data-open-profile>Set profile</button>
+      <span class="profile-banner-text"><strong>Before the workshop:</strong> spend 10 minutes on the intake. Your install team uses it to pre-tune your vault, connectors, brief template, and cockpit before day one.</span>
+      <button type="button" class="profile-banner-button" data-open-profile>Start intake</button>
       <button type="button" class="profile-banner-dismiss" data-dismiss-banner aria-label="Dismiss">×</button>
     </div>`;
     topnav.insertAdjacentElement("afterend", banner);
@@ -269,19 +269,19 @@
       return "";
     }).join("");
     return `<div class="profile-modal-backdrop" data-close-profile></div>
-      <div class="profile-modal" role="dialog" aria-modal="true" aria-label="Customize this course">
+      <div class="profile-modal" role="dialog" aria-modal="true" aria-label="Pre-workshop intake">
         <div class="profile-modal-head">
-          <h2>Customize this course for your situation</h2>
-          <p>The brief template, connector recommendations, examples, and several other parts of the course adapt to what you tell us here.</p>
+          <h2>Pre-workshop intake</h2>
+          <p><strong>Your install team uses this to pre-tune your setup</strong> — vault structure, connector recommendations, brief template, cockpit blocks — before day one. Filling this in is the single highest-leverage thing you can do before we arrive. Takes about 10 minutes.</p>
         </div>
         <form class="profile-form" data-profile-form>
           ${fieldsHTML}
         </form>
         <div class="profile-modal-foot">
           <button type="button" class="profile-button-secondary" data-reset-profile>Reset</button>
-          <button type="button" class="profile-button-secondary" data-export-profile>Export JSON</button>
           <div class="profile-modal-foot-spacer"></div>
           <button type="button" class="profile-button-secondary" data-close-profile>Cancel</button>
+          <button type="button" class="profile-button-secondary" data-export-profile>Download for install team</button>
           <button type="button" class="profile-button-primary" data-save-profile>Save &amp; apply</button>
         </div>
       </div>`;

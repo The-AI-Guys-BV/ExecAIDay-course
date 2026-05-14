@@ -6,6 +6,34 @@ theme: Just Claude installed. No plugins, connectors, or Office add-ins.
 walkout: You're comfortable in Cowork, you've produced a real branded deliverable using only Cowork's file access, and you know when to trust Claude and when not to.
 ---
 
+<div class="ec-install-ledger">
+<div class="ec-il-col">
+<div class="ec-il-head">We install</div>
+
+- Claude Cowork on your laptop, signed in to your Anthropic Max account
+- Starter work folder placed at a known path (spreadsheet, Word brief, `Deliverables/` subfolder)
+- Chromium browser with the Claude extension pinned to your toolbar
+- Any plan upgrades you'd need to follow Section 2's add-ins later
+
+</div>
+<div class="ec-il-col">
+<div class="ec-il-head">You provide</div>
+
+- A real document you'd want Claude to read or edit
+- A real spreadsheet you'd want analysed
+- A brand website to scrape for the capstone (your own, a client's, or one you'd like to mimic)
+
+</div>
+<div class="ec-il-col">
+<div class="ec-il-head">By the end of this phase</div>
+
+- Your first Cowork Project mounted on the work folder
+- Trust calibrated against the hallucination demo
+- A real branded PowerPoint shipped end-to-end — your numbers, in another company's voice — without any plugins or add-ins
+
+</div>
+</div>
+
 ## What this section is
 
 This is day one. You've never used Claude Cowork before. By the end of this section you will have:
