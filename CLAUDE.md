@@ -17,7 +17,6 @@ The course is structured as **5 themed sections** (see `HANDOFF.md` for the full
 - **No comments on workshop pacing or exec psychology.** Tijn has run hundreds of workshops for C-level execs; he knows the room.
 - **No invented behavioral narratives** about participants or assistants.
 - **Tone:** tight, real trade-offs, no padded prose. Adult voice for a sophisticated audience.
-- **Sandbox cannot push.** After every commit, give Tijn a one-line `cd ~/Code/ExecAIDay-course && git push` he can paste.
 
 ## Section structure (locked 2026-04-29)
 
@@ -44,6 +43,5 @@ For full topic breakdown and decisions log, see `HANDOFF.md`.
 ## Working pattern
 
 - Commit after each material change with a clear message.
-- Remind Tijn to push after each commit (sandbox can't push).
 - Keep responses tight. End-of-turn summary is one or two sentences.
 - When a structural decision needs making, surface trade-offs first; do not infer scope.
