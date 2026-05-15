@@ -17,11 +17,28 @@ import { DISCOVERY_CTA_HREF, NAV_LINKS, PRIMARY_CTA_LABEL } from "@/lib/constant
 export default function Nav() {
   const { scrollY } = useScroll();
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // Scroll-driven behaviors:
+  //   1. Color flip: nav commits to charcoal once we've scrolled past ~80vh.
+  //   2. Hide on scroll-down / reveal on scroll-up past a small threshold
+  //      (premium-editorial pattern — chrome gets out of the way while
+  //      reading and returns the moment the user reverses direction).
   useMotionValueEvent(scrollY, "change", (latest) => {
     const threshold = typeof window !== "undefined" ? window.innerHeight * 0.8 : 600;
     setScrolled(latest > threshold);
+
+    const previous = scrollY.getPrevious() ?? 0;
+    const delta = latest - previous;
+    // Ignore tiny jitters; require a real direction signal.
+    if (Math.abs(delta) < 6) return;
+    // Always show near the top of the page.
+    if (latest < 80) {
+      setHidden(false);
+      return;
+    }
+    setHidden(delta > 0);
   });
 
   // Lock body scroll while the mobile sheet is open.
@@ -52,12 +69,17 @@ export default function Nav() {
       <motion.header
         initial={false}
         animate={{
+          y: hidden && !menuOpen ? "-100%" : "0%",
           backgroundColor: scrolled ? "rgba(26,26,26,0.92)" : "rgba(245,242,236,0)",
           borderBottomColor: scrolled ? "rgba(245,242,236,0.25)" : "rgba(26,26,26,0.00)",
         }}
-        transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+        transition={{
+          y: { duration: 0.35, ease: [0.16, 1, 0.3, 1] },
+          backgroundColor: { duration: 0.3, ease: [0.16, 1, 0.3, 1] },
+          borderBottomColor: { duration: 0.3, ease: [0.16, 1, 0.3, 1] },
+        }}
         className="sticky top-0 z-50 w-full border-b backdrop-blur-md"
-        style={{ willChange: "background-color" }}
+        style={{ willChange: "transform, background-color" }}
       >
         <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 md:px-10">
           <Link
