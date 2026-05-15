@@ -113,10 +113,10 @@ export default function Hero() {
             Built by
           </p>
           <p className="max-w-[80ch] text-[14px] italic leading-[1.6] text-[color:var(--color-charcoal)]/70 md:text-[15px]">
-            Tijn van der Zant &mdash; PhD generative AI, AI architect.
+            Tijn van der Zant &mdash; PhD generative AI, AI architect, co-founder The AI Guys.
           </p>
           <p className="max-w-[80ch] text-[14px] italic leading-[1.6] text-[color:var(--color-charcoal)]/70 md:text-[15px]">
-            Dirk Meuleman &mdash; Chairman Phenix Capital, CFA + CAIA.
+            Dirk Meuleman &mdash; Chairman Phenix Capital, CFA + CAIA, co-founder The AI Guys.
           </p>
         </motion.div>
 
