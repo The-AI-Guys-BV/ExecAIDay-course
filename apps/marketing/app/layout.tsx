@@ -18,17 +18,17 @@ const newsreader = Newsreader({
 });
 
 export const metadata: Metadata = {
-  title: "ExecAIDay — An AI cockpit, built around your actual work.",
+  title: "ExecAIDay — Do more in less time.",
   description:
-    "A personal install programme from The AI Guys. In four afternoons we build you a personalized cockpit inside Claude Cowork — tailored to your week, your inbox, your meetings, your decisions.",
+    "A personal AI-powered cockpit for C-level executives. In four afternoons we build you a tailor-made cockpit inside Claude Cowork — the capabilities of a chief of staff who knows your business, and four to eight hours back per week.",
   metadataBase: new URL("https://execaiday.com"),
   icons: {
     icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
   },
   openGraph: {
-    title: "ExecAIDay — An AI cockpit, built around your actual work.",
+    title: "ExecAIDay — Do more in less time.",
     description:
-      "A personal install programme from The AI Guys. Four afternoons. Your real work. A system built around it.",
+      "A personal AI-powered cockpit for C-level executives. Four afternoons. Tailor-made. The capabilities of a chief of staff.",
     type: "website",
     locale: "en_US",
     siteName: "ExecAIDay",
