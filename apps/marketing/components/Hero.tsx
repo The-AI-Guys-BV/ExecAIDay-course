@@ -113,9 +113,10 @@ export default function Hero() {
             Built by
           </p>
           <p className="max-w-[80ch] text-[14px] italic leading-[1.6] text-[color:var(--color-charcoal)]/70 md:text-[15px]">
-            An AI researcher (PhD generative AI, Groningen 2009; co-founder
-            RoboCup@Home) and the Chairman of an impact-investment advisory
-            firm (CFA · CAIA · 11 years in capital allocation).
+            Tijn van der Zant &mdash; PhD generative AI, AI architect.
+          </p>
+          <p className="max-w-[80ch] text-[14px] italic leading-[1.6] text-[color:var(--color-charcoal)]/70 md:text-[15px]">
+            Dirk Meuleman &mdash; Chairman Phenix Capital, CFA + CAIA.
           </p>
         </motion.div>
 
