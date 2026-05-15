@@ -99,7 +99,7 @@ Four-step visual structure (numbered, horizontal on desktop, stacked on mobile).
 > Before session one, we send a short structured intake. You walk us through how your week actually runs — your meetings, your inbox, your decisions, your team. We use it to pre-build the foundations of your cockpit.
 >
 > **2. Four afternoons, spaced every two weeks.**
-> Each session is on site with you. Your cockpit is built and refined in front of you. You see how it takes shape, you push back on what doesn't fit, we adjust live.
+> Each afternoon is three hours, on-site. Ninety minutes of strategic framing — how to think about AI as personal leverage. Then ninety minutes hands-on with your real work. During the strategic block, our install team configures the next layer on your laptop in parallel — so by the time we move to hands-on, everything you need is already running. Four afternoons, four layers: Foundation, Context, Connection, Mastery.
 >
 > **3. Between sessions: you use it for real.**
 > Real meetings, real inbox, real decisions. You notice what works and what doesn't. The next session opens with your feedback. By the fourth afternoon the cockpit has been through two full feedback cycles in your actual week.
